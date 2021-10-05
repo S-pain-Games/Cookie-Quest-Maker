@@ -1,5 +1,5 @@
 {
-    "name": "PlayTests",
+    "name": "CCM.Scripts.PlayTests",
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
