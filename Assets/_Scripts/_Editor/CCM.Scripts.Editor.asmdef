@@ -1,0 +1,19 @@
+{
+    "name": "CCM.Scripts.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f50a3eb283b63874a92ac1cde4bf5c54",
+        "GUID:85ce4cd2f09b9a4489ee1777437b7f34"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

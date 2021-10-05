@@ -1,0 +1,16 @@
+{
+    "name": "CCM.Scripts.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f50a3eb283b63874a92ac1cde4bf5c54"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
