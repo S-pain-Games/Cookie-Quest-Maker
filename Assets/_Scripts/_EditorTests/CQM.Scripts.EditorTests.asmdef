@@ -1,5 +1,5 @@
 {
-    "name": "CCM.Scripts.PlayTests",
+    "name": "CQM.Scripts.EditorTests",
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
@@ -7,7 +7,9 @@
         "CCM.Engine.Runtime",
         "CCM.Scripts.Runtime"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
