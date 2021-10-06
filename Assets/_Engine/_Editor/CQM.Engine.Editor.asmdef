@@ -1,5 +1,5 @@
 {
-    "name": "CCM.Engine.Editor",
+    "name": "CQM.Engine.Editor",
     "rootNamespace": "",
     "references": [
         "GUID:f50a3eb283b63874a92ac1cde4bf5c54"
