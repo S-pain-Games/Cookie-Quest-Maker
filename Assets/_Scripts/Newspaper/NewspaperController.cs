@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/*
+ * NOT COMPLETE
+ */
 public class NewspaperController : MonoBehaviour
 {
     // TO-DO Add functionality to store and retrieve images created at runtime for the main article

@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+/// <summary>
+/// Used to add custom controls to the default unity MonoBehaviour inspector
+/// </summary>
 [CustomEditor(typeof(MonoBehaviour), true)]
 public class CustomMonoBehaviourEditor : Editor
 {
@@ -13,6 +16,9 @@ public class CustomMonoBehaviourEditor : Editor
         DrawMethodButtons();
     }
 
+    /// <summary>
+    /// Create Buttons to invoke the marked methods in the MonoBehaviour script
+    /// </summary>
     private void DrawMethodButtons()
     {
         // We should definitely not be doing this every IMGUI frame, but it works
