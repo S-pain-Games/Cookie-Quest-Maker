@@ -5,7 +5,8 @@
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "CQM.Engine.Runtime",
-        "CQM.Scripts.Runtime"
+        "CQM.Scripts.Runtime",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [
         "Editor"
