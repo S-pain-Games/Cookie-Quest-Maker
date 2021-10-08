@@ -9,7 +9,6 @@ namespace Debugging
     /// <para>Debug Logger that uses the <see cref="Diagnostics.ConditionalAttribute"/> to disable the log calls in RELEASE</para>
     /// <para>This allows the user to leave the debug calls in its code for future use without worrying them being called in the final build</para>
     /// </summary>
-    [InitializeOnLoad]
     public static class Logger
     {
         private const string _compilationSymbol = "UNITY_EDITOR";
@@ -70,11 +69,7 @@ namespace Debugging
             }
         }
 
-        static Logger()
-        {
-            LoadConfig();
-        }
-
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void LoadConfig()
         {
             _settings = AssetDatabase.LoadAssetAtPath<LoggerSettings>("Assets/_Engine/Logger/LoggerSettings.asset");
