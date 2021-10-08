@@ -77,7 +77,9 @@ namespace Debugging
 
         private static void LoadConfig()
         {
-            _settings = AssetDatabase.LoadAssetAtPath<LoggerSettings>("Assets/Engine/Logger/LoggerSettings.asset");
+            _settings = AssetDatabase.LoadAssetAtPath<LoggerSettings>("Assets/_Engine/Logger/LoggerSettings.asset");
+            if (_settings == null)
+                Debug.LogError("Logger couldn't initialize because it didn't found the settings asset");
         }
 
         private static void TryAppendPriorityAndFilter(ref StringBuilder sb, int priority, string filterName)
@@ -88,7 +90,7 @@ namespace Debugging
                 else
                     _sb.Append($"[P:{priority}]");
 
-            if (_settings.showFilter && filterName.Length > 0)
+            if (_settings.showFilter && filterName != null)
                 _sb.Append($"[F:{filterName}]");
         }
 

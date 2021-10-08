@@ -2,9 +2,9 @@
     "name": "CQM.Engine.Editor",
     "rootNamespace": "",
     "references": [
-        "GUID:f50a3eb283b63874a92ac1cde4bf5c54",
         "GUID:6055be8ebefd69e48b49212b09b47b2f",
-        "GUID:6546d7765b4165b40850b3667f981c26"
+        "GUID:6546d7765b4165b40850b3667f981c26",
+        "GUID:f50a3eb283b63874a92ac1cde4bf5c54"
     ],
     "includePlatforms": [
         "Editor"
