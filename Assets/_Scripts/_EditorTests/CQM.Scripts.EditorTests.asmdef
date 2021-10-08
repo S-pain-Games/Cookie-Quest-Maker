@@ -4,8 +4,8 @@
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "CCM.Engine.Runtime",
-        "CCM.Scripts.Runtime"
+        "CQM.Engine.Runtime",
+        "CQM.Scripts.Runtime"
     ],
     "includePlatforms": [
         "Editor"
