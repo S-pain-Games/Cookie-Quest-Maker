@@ -6,7 +6,7 @@ namespace Debugging
     [CreateAssetMenu()]
     public class LoggerSettings : ScriptableObject
     {
-        public int minPriority = 3;
+        public int minPriority = 0;
 
         public bool showPriority = true;
         public bool showFilter = true;

@@ -11,8 +11,9 @@ namespace Debugging
     /// </summary>
     public static class Logger
     {
+        public static LoggerSettings settings = ScriptableObject.CreateInstance<LoggerSettings>();
+
         private const string _compilationSymbol = "UNITY_EDITOR";
-        private static LoggerSettings _settings;
         private static StringBuilder _sb = new StringBuilder();
 
         [Conditional(_compilationSymbol)]
@@ -22,7 +23,7 @@ namespace Debugging
         {
             bool filteredOut = CheckFilteredOut(filterName);
 
-            if (priority >= _settings.minPriority && !filteredOut)
+            if (priority >= settings.minPriority && !filteredOut)
             {
                 _sb.Clear();
                 TryAppendPriorityAndFilter(ref _sb, priority, filterName);
@@ -40,7 +41,7 @@ namespace Debugging
         {
             bool filteredOut = CheckFilteredOut(filterName);
 
-            if (priority >= _settings.minPriority && !filteredOut)
+            if (priority >= settings.minPriority && !filteredOut)
             {
                 _sb.Clear();
                 _sb.Append($"[{user}]");
@@ -59,7 +60,7 @@ namespace Debugging
         {
             bool filteredOut = CheckFilteredOut(filterName);
 
-            if (priority >= _settings.minPriority && !filteredOut)
+            if (priority >= settings.minPriority && !filteredOut)
             {
                 _sb.Clear();
                 TryAppendPriorityAndFilter(ref _sb, priority, filterName);
@@ -69,30 +70,34 @@ namespace Debugging
             }
         }
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+        [ExecuteAlways]
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
         private static void LoadConfig()
         {
-            _settings = AssetDatabase.LoadAssetAtPath<LoggerSettings>("Assets/_Engine/Logger/LoggerSettings.asset");
-            if (_settings == null)
+            if (settings != null)
+                Object.Destroy(settings);
+
+            settings = AssetDatabase.LoadAssetAtPath<LoggerSettings>("Assets/_Engine/_Editor/Logger/LoggerSettings.asset");
+            if (settings == null)
                 Debug.LogError("Logger couldn't initialize because it didn't found the settings asset");
         }
 
         private static void TryAppendPriorityAndFilter(ref StringBuilder sb, int priority, string filterName)
         {
-            if (_settings.showPriority)
+            if (settings.showPriority)
                 if (priority == int.MaxValue)
                     _sb.Append($"[P:MAX]");
                 else
                     _sb.Append($"[P:{priority}]");
 
-            if (_settings.showFilter && filterName != null)
+            if (settings.showFilter && filterName != null)
                 _sb.Append($"[F:{filterName}]");
         }
 
         private static bool CheckFilteredOut(string filterName)
         {
-            if (_settings.useFilters && filterName != null)
-                return _settings.filters.Find((f) => f.name == filterName).active;
+            if (settings.useFilters && filterName != null)
+                return settings.filters.Find((f) => f.name == filterName).active;
             else
                 return false;
         }
