@@ -23,7 +23,6 @@ public class TileBasedAStarPathfinder : ITileBasedPathfinder
         return SetupPlanFromNode(endNode);
     }
 
-
     private Vector3 ParsePositionToTileCenter(Vector3 position)
     {
         return new Vector3(Mathf.Floor(position.x) + _tileOffset, Mathf.Floor(position.y) + _tileOffset);
@@ -37,7 +36,7 @@ public class TileBasedAStarPathfinder : ITileBasedPathfinder
         PathfindingNode firstNode = new PathfindingNode(start);
         open.Add(firstNode);
 
-        int tries = 1000;
+        int tries = 30;
 
         while (open.Count > 0 && tries > 0)
         {

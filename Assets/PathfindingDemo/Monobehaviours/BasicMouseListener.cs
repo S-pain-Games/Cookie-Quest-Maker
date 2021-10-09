@@ -18,7 +18,7 @@ public class BasicMouseListener : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            _agent.MoveTowardsTarget(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            _agent.MoveTowardsTargetReceiver(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         }
     }
 }
