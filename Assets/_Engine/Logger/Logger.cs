@@ -11,7 +11,7 @@ namespace Debugging
     /// </summary>
     public static class Logger
     {
-        public static LoggerSettings settings = ScriptableObject.CreateInstance<LoggerSettings>();
+        public static LoggerSettings settings;
 
         private const string _compilationSymbol = "UNITY_EDITOR";
         private static StringBuilder _sb = new StringBuilder();
@@ -70,14 +70,16 @@ namespace Debugging
             }
         }
 
+        static Logger()
+        {
+            LoadConfig();
+        }
+
         [ExecuteAlways]
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
         private static void LoadConfig()
         {
-            if (settings != null)
-                Object.Destroy(settings);
-
-            settings = AssetDatabase.LoadAssetAtPath<LoggerSettings>("Assets/_Engine/_Editor/Logger/LoggerSettings.asset");
+            settings = AssetDatabase.LoadAssetAtPath<LoggerSettings>("Assets/_Engine/Logger/LoggerSettings.asset");
             if (settings == null)
                 Debug.LogError("Logger couldn't initialize because it didn't found the settings asset");
         }

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e5339071d4827c47a454010398e7f25, type: 3}
   m_Name: LoggerSettings
   m_EditorClassIdentifier: 
-  minPriority: 0
-  showPriority: 1
-  showFilter: 1
+  minPriority: 3
+  showPriority: 0
+  showFilter: 0
   useFilters: 0
   filters:
   - name: Test
