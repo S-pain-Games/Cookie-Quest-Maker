@@ -9,7 +9,7 @@ namespace Debugging
     /// <para>Debug Logger that uses the <see cref="Diagnostics.ConditionalAttribute"/> to disable the log calls in RELEASE</para>
     /// <para>This allows the user to leave the debug calls in its code for future use without worrying them being called in the final build</para>
     /// </summary>
-    public static class Logger
+    public static class Logg
     {
         public static LoggerSettings settings;
 
@@ -70,7 +70,7 @@ namespace Debugging
             }
         }
 
-        static Logger()
+        static Logg()
         {
             LoadConfig();
         }

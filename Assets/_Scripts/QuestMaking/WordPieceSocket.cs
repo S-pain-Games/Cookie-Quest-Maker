@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class WordPieceSocket : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool Filled { get => _filled; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private bool _filled;
+    private WordPiece _currentPiece;
 }

@@ -2,7 +2,7 @@ using System.IO;
 using UnityEngine;
 using UnityEditor;
 
-namespace EventSystem
+namespace Events
 {
     public class EventTypeCreatorEditor : EditorWindow
     {

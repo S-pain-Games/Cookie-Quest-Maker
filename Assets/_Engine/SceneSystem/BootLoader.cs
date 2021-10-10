@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using EventSystem;
+using Events;
 
 public class BootLoader : MonoBehaviour
 {

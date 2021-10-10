@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace EventSystem
+namespace Events
 {
     public class EventHandle<T> : ScriptableObject
     {

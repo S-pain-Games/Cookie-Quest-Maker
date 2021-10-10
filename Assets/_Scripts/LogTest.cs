@@ -7,6 +7,6 @@ public class LogTest : MonoBehaviour
 {
     void Update()
     {
-        Debugging.Logger.Log("Message", priority: 3, filterName: "Test");
+        Debugging.Logg.Log("Message", priority: 3, filterName: "Test");
     }
 }
