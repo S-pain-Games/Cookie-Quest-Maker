@@ -1,7 +1,151 @@
 fileFormatVersion: 2
 guid: 7cc9466e46917a64d9c8f453e68f03cb
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4689595623605497416
+    second: Hio_idleCycle_0
+  - first:
+      213: -7678110145772279035
+    second: Hio_idleCycle_1
+  - first:
+      213: 6824513225904693074
+    second: Hio_idleCycle_2
+  - first:
+      213: -1963393435196420488
+    second: Hio_idleCycle_3
+  - first:
+      213: 1762436242166957720
+    second: Hio_idleCycle_4
+  - first:
+      213: -2873770666517896286
+    second: Hio_idleCycle_5
+  - first:
+      213: 8617827308705864163
+    second: Hio_idleCycle_6
+  - first:
+      213: 2154581717847831983
+    second: Hio_idleCycle_7
+  - first:
+      213: 6046250333455646898
+    second: Hio_idleCycle_8
+  - first:
+      213: -2010390867761043849
+    second: Hio_idleCycle_9
+  - first:
+      213: 7597804039804721674
+    second: Hio_idleCycle_10
+  - first:
+      213: 6340526272021795817
+    second: Hio_idleCycle_11
+  - first:
+      213: 437356240061308609
+    second: Hio_idleCycle_12
+  - first:
+      213: 1042484548694914802
+    second: Hio_idleCycle_13
+  - first:
+      213: 4195629439409617117
+    second: Hio_idleCycle_14
+  - first:
+      213: -4484717010679804163
+    second: Hio_idleCycle_15
+  - first:
+      213: -4692091264126500896
+    second: Hio_idleCycle_16
+  - first:
+      213: -8163234875112255359
+    second: Hio_idleCycle_17
+  - first:
+      213: 7253491516941476609
+    second: Hio_idleCycle_18
+  - first:
+      213: 2772758253335766742
+    second: Hio_idleCycle_19
+  - first:
+      213: 3699526712200615421
+    second: Hio_idleCycle_20
+  - first:
+      213: 2531909587722281482
+    second: Hio_idleCycle_21
+  - first:
+      213: -3831065084674995395
+    second: Hio_idleCycle_22
+  - first:
+      213: -4076659534066469845
+    second: Hio_idleCycle_23
+  - first:
+      213: -684418895299261378
+    second: Hio_idleCycle_24
+  - first:
+      213: -5781175551409258346
+    second: Hio_idleCycle_25
+  - first:
+      213: -8786524432461243018
+    second: Hio_idleCycle_26
+  - first:
+      213: -940708028442727704
+    second: Hio_idleCycle_27
+  - first:
+      213: 3780594634906564150
+    second: Hio_idleCycle_28
+  - first:
+      213: -7357344708824307695
+    second: Hio_idleCycle_29
+  - first:
+      213: 246960716473694837
+    second: Hio_idleCycle_30
+  - first:
+      213: -6814030564481109319
+    second: Hio_idleCycle_31
+  - first:
+      213: -2724849154038932303
+    second: Hio_idleCycle_32
+  - first:
+      213: -5710088705884418772
+    second: Hio_idleCycle_33
+  - first:
+      213: -464844192748583506
+    second: Hio_idleCycle_34
+  - first:
+      213: -76173354867221108
+    second: Hio_idleCycle_35
+  - first:
+      213: 1059400473307681414
+    second: Hio_idleCycle_36
+  - first:
+      213: -2281377438421489789
+    second: Hio_idleCycle_37
+  - first:
+      213: -27026679679699584
+    second: Hio_idleCycle_38
+  - first:
+      213: -6026446456620588750
+    second: Hio_idleCycle_39
+  - first:
+      213: 1506912049245424506
+    second: Hio_idleCycle_40
+  - first:
+      213: -7707103131057610338
+    second: Hio_idleCycle_41
+  - first:
+      213: -1971373250647147980
+    second: Hio_idleCycle_42
+  - first:
+      213: 597539649932804414
+    second: Hio_idleCycle_43
+  - first:
+      213: -5847689358408821748
+    second: Hio_idleCycle_44
+  - first:
+      213: 4470083531916711585
+    second: Hio_idleCycle_45
+  - first:
+      213: 2858680438684800771
+    second: Hio_idleCycle_46
+  - first:
+      213: 685683339580713256
+    second: Hio_idleCycle_47
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +185,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 68
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +219,1041 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Hio_idleCycle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 425
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e6b358f5ac41140800000000000000
+      internalID: 4689595623605497416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 425
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50babe6b08fd17590800000000000000
+      internalID: -7678110145772279035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 425
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f11030f9a85be50800000000000000
+      internalID: 6824513225904693074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 425
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e88ccb210a0c4e0800000000000000
+      internalID: -1963393435196420488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_4
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 425
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896c2a9ac6e657810800000000000000
+      internalID: 1762436242166957720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_5
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 425
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a363400ec05e18d0800000000000000
+      internalID: -2873770666517896286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_6
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 425
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9d21f274ca89770800000000000000
+      internalID: 8617827308705864163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_7
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 425
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5fedb28ac96ed10800000000000000
+      internalID: 2154581717847831983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 340
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b006b4d4a898e350800000000000000
+      internalID: 6046250333455646898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_9
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 340
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776e9634828a914e0800000000000000
+      internalID: -2010390867761043849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_10
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 340
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a9691f482d07960800000000000000
+      internalID: 7597804039804721674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_11
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 340
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e314e40d031ef750800000000000000
+      internalID: 6340526272021795817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_12
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 340
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce9721ee2dc11600800000000000000
+      internalID: 437356240061308609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_13
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 340
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f63bc87c26a77e00800000000000000
+      internalID: 1042484548694914802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_14
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 340
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd87e29eebed93a30800000000000000
+      internalID: 4195629439409617117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_15
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 340
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe474cc3a513c1c0800000000000000
+      internalID: -4484717010679804163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 255
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0efb604ead752eeb0800000000000000
+      internalID: -4692091264126500896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_17
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 255
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1809adab12d56be80800000000000000
+      internalID: -8163234875112255359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_18
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 255
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1032b90aa1499a460800000000000000
+      internalID: 7253491516941476609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_19
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 255
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d66c12d0f0da7620800000000000000
+      internalID: 2772758253335766742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_20
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 255
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df559cd91fb575330800000000000000
+      internalID: 3699526712200615421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_21
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 255
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02a79bfa56232320800000000000000
+      internalID: 2531909587722281482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_22
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 255
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b8b847a9255dac0800000000000000
+      internalID: -3831065084674995395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_23
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 255
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2432c9b0cbcc67c0800000000000000
+      internalID: -4076659534066469845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c4f1414a47086f0800000000000000
+      internalID: -684418895299261378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_25
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 170
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690041a477325cfa0800000000000000
+      internalID: -5781175551409258346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_26
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 170
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d5bd8e49eff0680800000000000000
+      internalID: -8786524432461243018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_27
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 170
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea205f380fe1f2f0800000000000000
+      internalID: -940708028442727704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_28
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 170
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6367a5d3ace577430800000000000000
+      internalID: 3780594634906564150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_29
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 170
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1186d6cd7f575e990800000000000000
+      internalID: -7357344708824307695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_30
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 170
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57af3e296716d6300800000000000000
+      internalID: 246960716473694837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_31
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 170
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2f27bcd43bf61a0800000000000000
+      internalID: -6814030564481109319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 85
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc5cfa91246f2ad0800000000000000
+      internalID: -2724849154038932303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_33
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 85
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d0ac94390b1c0b0800000000000000
+      internalID: -5710088705884418772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_34
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 85
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea541576baa8c89f0800000000000000
+      internalID: -464844192748583506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_35
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 85
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d1ac1ccb061fef0800000000000000
+      internalID: -76173354867221108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_36
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 85
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68292661e1fb3be00800000000000000
+      internalID: 1059400473307681414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_37
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 85
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387eb489e4be650e0800000000000000
+      internalID: -2281377438421489789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_38
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 85
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 085bb36c06bff9ff0800000000000000
+      internalID: -27026679679699584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_39
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 85
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 231e73f80e2cd5ca0800000000000000
+      internalID: -6026446456620588750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b870b5680a9e410800000000000000
+      internalID: 1506912049245424506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_41
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e91a20a498eda0590800000000000000
+      internalID: -7707103131057610338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_42
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a387b297644a4e0800000000000000
+      internalID: -1971373250647147980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_43
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 0
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31c47d4523ea4800800000000000000
+      internalID: 597539649932804414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_44
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04d53bc285d8dea0800000000000000
+      internalID: -5847689358408821748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_45
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6183ce94de80e30800000000000000
+      internalID: 4470083531916711585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_46
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 0
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3075a2a86b21ca720800000000000000
+      internalID: 2858680438684800771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_idleCycle_47
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 0
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829ac1c4d59048900800000000000000
+      internalID: 685683339580713256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
