@@ -3,8 +3,7 @@ using UnityEngine;
 
 namespace Debugging
 {
-    [CreateAssetMenu()]
-    public class LoggerSettings : ScriptableObject
+    public class LoggerSettings
     {
         public int minPriority = 0;
 

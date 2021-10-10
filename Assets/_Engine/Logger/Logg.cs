@@ -11,7 +11,7 @@ namespace Debugging
     /// </summary>
     public static class Logg
     {
-        public static LoggerSettings settings;
+        public static LoggerSettings settings = new LoggerSettings();
 
         private const string _compilationSymbol = "UNITY_EDITOR";
         private static StringBuilder _sb = new StringBuilder();
@@ -79,9 +79,9 @@ namespace Debugging
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
         private static void LoadConfig()
         {
-            settings = AssetDatabase.LoadAssetAtPath<LoggerSettings>("Assets/_Engine/Logger/LoggerSettings.asset");
-            if (settings == null)
-                Debug.LogError("Logger couldn't initialize because it didn't found the settings asset");
+            //settings = AssetDatabase.LoadAssetAtPath<LoggerSettings>("Assets/_Engine/Logger/LoggerSettings.asset");
+            //if (settings == null)
+            //    Debug.LogError("Logger couldn't initialize because it didn't found the settings asset");
         }
 
         private static void TryAppendPriorityAndFilter(ref StringBuilder sb, int priority, string filterName)

@@ -5,8 +5,6 @@ using UnityEditor;
 
 public class SpritesImporter : AssetPostprocessor
 {
-
-
     void OnPostprocessSprites(Texture2D texture, Sprite[] sprites)
     {
         TextureImporter textureImporter = assetImporter as TextureImporter;
