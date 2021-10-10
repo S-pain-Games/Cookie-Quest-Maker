@@ -9,6 +9,7 @@ public class TilebasedPathfindingAgent : MonoBehaviour
     [SerializeField] private float _tileOffset = 0.5f;
     [SerializeField] private int _maxAttemps;
     [SerializeField] private int _nodePoolSize = 50;
+    [SerializeField] private int _loopAttemps = 100;
     private int _triesLeft;
 
     [SerializeField] private PathFindingMethod _pathMethod;
@@ -36,7 +37,7 @@ public class TilebasedPathfindingAgent : MonoBehaviour
     void Start()
     {
         _pathFinderA = new TileBasedAStarPathfinder(_distanceBetweenTiles, _tileOffset);
-        _pathFinderB = new TileBasedHillClimbingPathFinder(_distanceBetweenTiles, _tileOffset, _searchDepth, _nodePoolSize);
+        _pathFinderB = new TileBasedHillClimbingPathFinder(_distanceBetweenTiles, _tileOffset, _searchDepth, _nodePoolSize, _loopAttemps);
 
         _path = new Stack<Vector3>();
 

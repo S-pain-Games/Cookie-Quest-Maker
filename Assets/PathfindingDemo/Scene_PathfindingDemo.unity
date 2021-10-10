@@ -3536,9 +3536,10 @@ MonoBehaviour:
   _tileOffset: 0.5
   _maxAttemps: 5
   _nodePoolSize: 50
+  _loopAttemps: 100
   _pathMethod: 1
   _diagonalMovement: 1
-  _searchDepth: 10
+  _searchDepth: 5
 --- !u!212 &1898334554
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3598,7 +3599,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898334552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: -5.5, y: 4.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}

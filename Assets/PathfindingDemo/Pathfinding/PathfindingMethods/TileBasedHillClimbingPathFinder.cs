@@ -7,7 +7,9 @@ public class TileBasedHillClimbingPathFinder : ITileBasedPathfinder
     private float _tileSeparation;
     private float _tileOffset;
     private int _maxDepth;
+    private int _loopAttemps;
     private bool _diagonal;
+    
 
     private PathfindingNodePool _nodePool;
 
@@ -19,11 +21,12 @@ public class TileBasedHillClimbingPathFinder : ITileBasedPathfinder
 
     private Vector3[] _movementDirections;
 
-    public TileBasedHillClimbingPathFinder(float tileSeparation, float tileOffset, int maxDepth, int nodePoolSize)
+    public TileBasedHillClimbingPathFinder(float tileSeparation, float tileOffset, int maxDepth, int nodePoolSize, int loopAttemps)
     {
         _tileSeparation = tileSeparation;
         _tileOffset = tileOffset;
         _maxDepth = maxDepth;
+        _loopAttemps = loopAttemps;
 
         _nodePool = new PathfindingNodePool(nodePoolSize);
 
@@ -90,11 +93,11 @@ public class TileBasedHillClimbingPathFinder : ITileBasedPathfinder
 
         _open.Add(firstNode);
 
-        int tries = 30;
+        int remainingTries = _loopAttemps;
 
         PathfindingNode best = _open[0];
 
-        while (_open.Count > 0 && tries > 0)
+        while (_open.Count > 0 && remainingTries > 0)
         {
             if (best.h < _open[0].h)
                 best = _open[0];
@@ -109,7 +112,7 @@ public class TileBasedHillClimbingPathFinder : ITileBasedPathfinder
                 return node;
             }
 
-            Debug.Log("node: "+node.position+", open: " + _open.Count + ", closed: " + _closed.Count + ", intentos: " + tries);
+            Debug.Log("node: "+node.position+", open: " + _open.Count + ", closed: " + _closed.Count + ", intentos: " + remainingTries);
 
             if (node.position == goal)
                 return node;
@@ -128,7 +131,7 @@ public class TileBasedHillClimbingPathFinder : ITileBasedPathfinder
             _walkableNeighbours.Clear();
             _open = SortListByCost(_open);
 
-            tries--;
+            remainingTries--;
         }
 
         Debug.Log("No se ha encontrado un camino, devolviendo la última mejor ruta");
