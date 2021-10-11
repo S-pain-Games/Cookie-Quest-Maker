@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu()]
-public class WordPiece : ScriptableObject
+public class Word : ScriptableObject
 {
-    public string Word { get => _word; }
+    public string WordText { get => _wordText; }
     public WordType Type { get => _type; }
 
-    [SerializeField] private string _word = "Unnamed";
+    [SerializeField] private string _wordText = "Unnamed";
     [SerializeField] private WordType _type = WordType.Action;
 
     public enum WordType

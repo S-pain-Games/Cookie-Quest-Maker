@@ -13,10 +13,10 @@ using System;
 [RequireComponent(typeof(RectTransform))]
 public class WordBehaviour : MonoBehaviour
 {
-    public WordPiece Piece { get => _piece; }
+    public Word Piece { get => _piece; }
 
     [Header("Piece Settings")]
-    [SerializeField] private WordPiece _piece;
+    [SerializeField] private Word _piece;
 
     [Header("UI Dependencies")]
     [SerializeField] private Canvas _canvas;
@@ -29,7 +29,6 @@ public class WordBehaviour : MonoBehaviour
     // Private Dependencies
     private RectTransform _rect;
     private UIDraggable _draggable;
-    private UIPressable _pressable;
 
     // Raycast
     private GraphicRaycaster _raycaster;
@@ -37,14 +36,13 @@ public class WordBehaviour : MonoBehaviour
 
     // We use a bool to avoid null-checking Unity Objects
     private bool _socketed = false;
-    private WordPieceSocket _currentSocket;
+    private WordSocketBehaviour _currentSocket;
 
     private void Awake()
     {
         _raycaster = _canvas.GetComponent<GraphicRaycaster>();
         _draggable = GetComponent<UIDraggable>();
         _rect = GetComponent<RectTransform>();
-        _pressable = GetComponent<UIPressable>();
     }
 
     private void OnEnable()
@@ -67,7 +65,7 @@ public class WordBehaviour : MonoBehaviour
             // but given that this is the only place where it should be
             // modified it would just increase complexity
             _currentSocket.filled = false;
-            _currentSocket.currentPiece = null;
+            _currentSocket.piece = null;
 
             _currentSocket = null;
             _socketed = false;
@@ -89,7 +87,7 @@ public class WordBehaviour : MonoBehaviour
         for (int i = 0; i < _results.Count; i++)
         {
             // For every result check if we found a socket
-            if (_results[i].gameObject.TryGetComponent(out WordPieceSocket socket))
+            if (_results[i].gameObject.TryGetComponent(out WordSocketBehaviour socket))
             {
                 // Check if the Socket is already filled or the Word required is differentn
                 if (!socket.filled && socket.requiredType == _piece.Type)
@@ -100,7 +98,7 @@ public class WordBehaviour : MonoBehaviour
 
                     _currentSocket = socket;
                     _currentSocket.filled = true;
-                    _currentSocket.currentPiece = _piece;
+                    _currentSocket.piece = _piece;
 
                     OnSocketCorrectly?.Invoke();
                 }

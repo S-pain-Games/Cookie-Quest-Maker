@@ -517,8 +517,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f76e1291c34c74e8fd7ded849f825c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filled: 0
-  _currentPiece: {fileID: 0}
+  requiredType: 0
+  filled: 0
+  piece: {fileID: 0}
 --- !u!1 &390334671
 GameObject:
   m_ObjectHideFlags: 3
@@ -1264,8 +1265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59126d7fec31fbc43bef214d81fd99b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _verbSocket: {fileID: 371032690}
-  _personSocket: {fileID: 2000594928}
+  _actionSocket: {fileID: 371032690}
+  _targetSocket: {fileID: 2000594928}
 --- !u!1 &1822321873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,8 +1397,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f76e1291c34c74e8fd7ded849f825c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _filled: 0
-  _currentPiece: {fileID: 0}
+  requiredType: 1
+  filled: 0
+  piece: {fileID: 0}
 --- !u!114 &2000594929
 MonoBehaviour:
   m_ObjectHideFlags: 0
