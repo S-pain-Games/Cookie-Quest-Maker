@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2e14931fcba47c44b5b8820564a2449, type: 3}
-  m_Name: Bakery
+  m_Name: BakingTable
   m_EditorClassIdentifier: 
-  _sceneID: 3
+  _sceneID: 2
   _persistent: 0
-  _sceneAsset: {fileID: 102900000, guid: fe44c34b3109ee0488809be42f4495db, type: 3}
+  _sceneAsset: {fileID: 102900000, guid: c6ec8662c8b294e4b9d14f3ea2d2a12c, type: 3}
