@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class QuestPhrase
+public class QuestPhrase : MonoBehaviour
 {
-    public WordPiece verb;
-    public WordPiece person;
-    public WordPiece location;
+    [SerializeField] private WordPieceSocket _verbSocket;
+    [SerializeField] private WordPieceSocket _personSocket;
 }
