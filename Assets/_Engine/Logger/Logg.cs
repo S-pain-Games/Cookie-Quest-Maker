@@ -3,7 +3,7 @@ using System.Text;
 using UnityEngine;
 using UnityEditor;
 
-namespace Debugging
+namespace UnityEngine
 {
     /// <summary>
     /// <para>Debug Logger that uses the <see cref="Diagnostics.ConditionalAttribute"/> to disable the log calls in RELEASE</para>
@@ -17,74 +17,32 @@ namespace Debugging
         private static StringBuilder _sb = new StringBuilder();
 
         [Conditional(_compilationSymbol)]
-        public static void Log(string message,
-                               int priority = int.MaxValue,
-                               string filterName = null)
+        public static void Log(string message)
         {
-            bool filteredOut = CheckFilteredOut(filterName);
-
-            if (priority >= settings.minPriority && !filteredOut)
-            {
-                _sb.Clear();
-                TryAppendPriorityAndFilter(ref _sb, priority, filterName);
-                _sb.Append($" {message}");
-
-                Debug.Log(_sb.ToString());
-            }
+            _sb.Clear();
+            _sb.Append($" {message}");
+            Debug.Log(_sb.ToString());
         }
 
         [Conditional(_compilationSymbol)]
-        public static void Log(string message,
-                               string user,
-                               int priority = int.MaxValue,
-                               string filterName = null)
+        public static void Log(string message, string user)
         {
-            bool filteredOut = CheckFilteredOut(filterName);
-
-            if (priority >= settings.minPriority && !filteredOut)
-            {
-                _sb.Clear();
-                _sb.Append($"[{user}]");
-                TryAppendPriorityAndFilter(ref _sb, priority, filterName);
-                _sb.Append($" {message}");
-
-                Debug.Log(_sb.ToString());
-            }
+            _sb.Clear();
+            _sb.Append($"[{user}]");
+            _sb.Append($" {message}");
+            Debug.Log(_sb.ToString());
         }
 
         [Conditional(_compilationSymbol)]
-        public static void Log(string message,
-                               Object context,
-                               int priority = int.MaxValue,
-                               string filterName = null)
+        public static void Log(string message, string user, Object context)
         {
-            bool filteredOut = CheckFilteredOut(filterName);
-
-            if (priority >= settings.minPriority && !filteredOut)
-            {
-                _sb.Clear();
-                TryAppendPriorityAndFilter(ref _sb, priority, filterName);
-                _sb.Append($" {message}");
-
-                Debug.Log(_sb.ToString(), context);
-            }
+            _sb.Clear();
+            _sb.Append($"[{user}]");
+            _sb.Append($" {message}");
+            Debug.Log(_sb.ToString(), context);
         }
 
-        static Logg()
-        {
-            LoadConfig();
-        }
-
-        [ExecuteAlways]
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
-        private static void LoadConfig()
-        {
-            //settings = AssetDatabase.LoadAssetAtPath<LoggerSettings>("Assets/_Engine/Logger/LoggerSettings.asset");
-            //if (settings == null)
-            //    Debug.LogError("Logger couldn't initialize because it didn't found the settings asset");
-        }
-
-        private static void TryAppendPriorityAndFilter(ref StringBuilder sb, int priority, string filterName)
+        private static void AppendExtras(ref StringBuilder sb, int priority, string filterName)
         {
             if (settings.showPriority)
                 if (priority == int.MaxValue)

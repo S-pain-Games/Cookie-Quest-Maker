@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Debugging
+namespace UnityEngine
 {
     public class LoggerSettings
     {
-        public int minPriority = 0;
+        //public LogVerbosity minPriority = LogVerbosity.Medium;
 
-        public bool showPriority = true;
-        public bool showFilter = true;
+        public bool showPriority = false;
+        public bool showFilter = false;
 
         public bool useFilters = false;
         public List<LogFilter> filters = new List<LogFilter>();

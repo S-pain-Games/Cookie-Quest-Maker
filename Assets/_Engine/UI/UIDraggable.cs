@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using Debugging;
 
 [RequireComponent(typeof(RectTransform))]
 public class UIDraggable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
@@ -13,10 +12,8 @@ public class UIDraggable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
     public event Action<PointerEventData> OnDragEvent;
 
     [SerializeField] private Canvas _canvas;
-    [SerializeField] private float _holdScale = 1.2f;
 
     private RectTransform _rect;
-    private Vector3 _startScale;
 
     #region UNITY_EDITOR
 #if UNITY_EDITOR
@@ -36,7 +33,7 @@ public class UIDraggable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
         #region UNITY_EDITOR
 #if UNITY_EDITOR
         if (_enableLogs)
-            Logg.Log("OnBeginDrag", gameObject, filterName: "UI");
+            Logg.Log("OnBeginDrag", gameObject.name, gameObject);
 #endif
         #endregion
     }
@@ -48,7 +45,7 @@ public class UIDraggable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
         #region UNITY_EDITOR
 #if UNITY_EDITOR
         if (_enableLogs)
-            Logg.Log("OnEndDrag", gameObject, filterName: "UI");
+            Logg.Log("OnEndDrag", gameObject.name, gameObject);
 #endif
         #endregion
     }
@@ -61,7 +58,7 @@ public class UIDraggable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
         #region UNITY_EDITOR
 #if UNITY_EDITOR
         if (_enableLogs)
-            Logg.Log("OnDrag", gameObject, filterName: "UI");
+            Logg.Log("OnDrag", gameObject.name, gameObject);
 #endif
         #endregion
     }

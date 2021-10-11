@@ -14,14 +14,23 @@ public class SceneSystem : MonoBehaviour
         StartCoroutine(LoadSceneCoroutine(sceneData));
     }
 
+    // We assume that we wont try to load multiple scenes at the same time
     private IEnumerator LoadSceneCoroutine(SceneData sceneData)
     {
+        Logg.Log($"Start Loading Scene [{sceneData.name}]", "Scene System");
+
         if (sceneData.Persistent)
+        {
             yield return SceneManager.LoadSceneAsync(sceneData.SceneIndex, LoadSceneMode.Additive);
+
+            Logg.Log($"Loading Persistent [{sceneData.name}] Finished", "Scene System");
+        }
         else
         {
             yield return SceneManager.LoadSceneAsync(sceneData.SceneIndex, LoadSceneMode.Additive);
             SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(sceneData.SceneIndex));
+
+            Logg.Log($"Loading [{sceneData.name}] Finished", "Scene System");
         }
     }
 

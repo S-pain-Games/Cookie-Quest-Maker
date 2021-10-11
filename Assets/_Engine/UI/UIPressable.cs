@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using Debugging;
 
 public class UIPressable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
@@ -24,7 +23,7 @@ public class UIPressable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         #region UNITY_EDITOR
 #if UNITY_EDITOR
         if (_enableLogs)
-            Logg.Log("OnPointerDown", gameObject, filterName: "UI");
+            Logg.Log("OnPointerDown", gameObject.name, gameObject);
 #endif
         #endregion
     }
@@ -36,7 +35,7 @@ public class UIPressable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         #region UNITY_EDITOR
 #if UNITY_EDITOR
         if (_enableLogs)
-            Logg.Log("OnPointerUp", gameObject, filterName: "UI");
+            Logg.Log("OnPointerUp", gameObject.name, gameObject);
 #endif
         #endregion
     }
