@@ -63,7 +63,7 @@ public class EditorHierarchy
 
     private static void DrawToggleActive(Rect rect, GameObject gameObject)
     {
-        rect.x += rect.width - 20;
+        rect.x += rect.width - 40;
         rect.width = 20;
         bool toggled = EditorGUI.Toggle(rect, gameObject.activeSelf);
         if (toggled != gameObject.activeSelf)
