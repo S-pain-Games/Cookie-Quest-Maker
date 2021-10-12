@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,4 +15,6 @@ public class Word : ScriptableObject
         Action,
         Target
     }
+
+    public List<TagIntensity> TagList = new List<TagIntensity>();
 }

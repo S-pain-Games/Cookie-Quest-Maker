@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82d2f8f20045a684da26c05c2c22e9e2, type: 3}
-  m_Name: Attack
+  m_Script: {fileID: 11500000, guid: 06dadc676d5754e49a61bed94439032e, type: 3}
+  m_Name: Convince
   m_EditorClassIdentifier: 
-  _wordText: Attack
-  _type: 0
-  TagList:
-  - _tag: {fileID: 11400000, guid: 30e82cb6f9e399f499f2bda7231de83e, type: 2}
-    _intensity: 1
+  _tagName: Unnamed
