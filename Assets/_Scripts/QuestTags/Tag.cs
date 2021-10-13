@@ -3,6 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu()]
+public class Tag : ScriptableObject
+{
+    public string TagName { get => _tagName; }
+    [SerializeField] private string _tagName = "Unnamed";
+}
+
 [Serializable]
 public struct TagIntensity
 {
@@ -11,11 +18,4 @@ public struct TagIntensity
 
     public int Intensity { get => _intensity; }
     [SerializeField] private int _intensity;
-}
-
-[CreateAssetMenu()]
-public class Tag : ScriptableObject
-{
-    public string TagName { get => _tagName; }
-    [SerializeField] private string _tagName = "Unnamed";
 }
