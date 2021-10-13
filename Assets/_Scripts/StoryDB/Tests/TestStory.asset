@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e98148d1f70b646b6fd0ead7ed1bbe, type: 3}
+  m_Name: TestStory
+  m_EditorClassIdentifier: 
+  m_IntroductionPhrase: Intro
+  m_BranchOptions:
+  - m_Condition:
+      m_Tag: {fileID: 11400000, guid: 30e82cb6f9e399f499f2bda7231de83e, type: 2}
+      m_LogicOp: 0
+      m_Value: 3
+    m_Result: Harm3
+    m_Ending: {fileID: 0}
+  - m_Condition:
+      m_Tag: {fileID: 11400000, guid: 30e82cb6f9e399f499f2bda7231de83e, type: 2}
+      m_LogicOp: 0
+      m_Value: 0
+    m_Result: Harm0
+    m_Ending: {fileID: 0}
+  - m_Condition:
+      m_Tag: {fileID: 11400000, guid: 198c0a40521a62f40a12f7d2d4b09fea, type: 2}
+      m_LogicOp: 0
+      m_Value: 1
+    m_Result: Con1
+    m_Ending: {fileID: 0}
+  - m_Condition:
+      m_Tag: {fileID: 11400000, guid: 198c0a40521a62f40a12f7d2d4b09fea, type: 2}
+      m_LogicOp: 2
+      m_Value: 2
+    m_Result: Con2
+    m_Ending: {fileID: 0}
+  - m_Condition:
+      m_Tag: {fileID: 11400000, guid: 027ba1b418e91524eb95cbf491852e09, type: 2}
+      m_LogicOp: 1
+      m_Value: 0
+    m_Result: Help0
+    m_Ending: {fileID: 0}
