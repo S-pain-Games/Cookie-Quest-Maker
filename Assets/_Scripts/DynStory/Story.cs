@@ -59,7 +59,7 @@ public class BranchOption : IComparable<BranchOption>
     private string m_Result = "";
 
     [SerializeField]
-    private FinalEnding m_Ending;
+    private StoryRepercusion m_Ending;
 
     public bool Check(Tag tag, int value, out string result)
     {
