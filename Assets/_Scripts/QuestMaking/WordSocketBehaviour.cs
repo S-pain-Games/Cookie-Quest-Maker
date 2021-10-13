@@ -6,5 +6,5 @@ public class WordSocketBehaviour : MonoBehaviour
 {
     public Word.WordType requiredType = Word.WordType.Action;
     public bool filled = false;
-    public Word piece;
+    public Word word;
 }

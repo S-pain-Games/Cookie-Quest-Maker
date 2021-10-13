@@ -62,7 +62,7 @@ public class WordBehaviour : MonoBehaviour
             // but given that this is the only place where it should be
             // modified it would just increase complexity
             _currentSocket.filled = false;
-            _currentSocket.piece = null;
+            _currentSocket.word = null;
 
             _currentSocket = null;
             _socketed = false;
@@ -95,7 +95,7 @@ public class WordBehaviour : MonoBehaviour
 
                     _currentSocket = socket;
                     _currentSocket.filled = true;
-                    _currentSocket.piece = _piece;
+                    _currentSocket.word = _piece;
 
                     OnSocketCorrectly?.Invoke();
                 }

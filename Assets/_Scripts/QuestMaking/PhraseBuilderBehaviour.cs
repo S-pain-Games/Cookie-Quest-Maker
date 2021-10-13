@@ -5,15 +5,35 @@ using UnityEngine;
 [System.Serializable]
 public class PhraseBuilderBehaviour : MonoBehaviour
 {
-    [SerializeField] private WordSocketBehaviour _actionSocket;
-    [SerializeField] private WordSocketBehaviour _targetSocket;
+    [SerializeField] private WordSocketBehaviour m_ActionSocket;
+    [SerializeField] private WordSocketBehaviour m_TargetSocket;
 
     [MethodButton]
     private void LogCurrentPhrase()
     {
-        if (_actionSocket.filled && _targetSocket.filled)
+        if (m_ActionSocket.filled && m_TargetSocket.filled)
         {
-            Logg.Log($"[{_actionSocket.piece.WordText}][{_targetSocket.piece.WordText}]");
+            Logg.Log($"[{m_ActionSocket.word.WordText}][{m_TargetSocket.word.WordText}]");
         }
+    }
+
+    private Phrase GetPhrase()
+    {
+        return new Phrase(m_ActionSocket.word, m_TargetSocket.word);
+    }
+}
+
+public struct Phrase
+{
+    public Word Action { get => m_Action; }
+    public Word Target { get => m_Target; }
+
+    private Word m_Action;
+    private Word m_Target;
+
+    public Phrase(Word action, Word target)
+    {
+        m_Action = action;
+        m_Target = target;
     }
 }

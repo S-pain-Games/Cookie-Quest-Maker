@@ -128,6 +128,53 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 676083519397461253, guid: c7bbe7d70eda1524d81035f16b699b82, type: 3}
   m_PrefabInstance: {fileID: 676083519441663048}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &224796546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224796548}
+  - component: {fileID: 224796547}
+  m_Layer: 0
+  m_Name: StorySystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &224796547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224796546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef02b90002545749a0082302bc2acfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PhraseBuilder: {fileID: 0}
+  m_Story: {fileID: 11400000, guid: e0e11e07c19cfe2478a4c80dc4e9ef74, type: 2}
+  m_Tag: {fileID: 11400000, guid: 30e82cb6f9e399f499f2bda7231de83e, type: 2}
+  m_Value: 0
+--- !u!4 &224796548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224796546}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.7004874, y: 0.45767716, z: -25.072208}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &255267230
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,7 +398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredType: 0
   filled: 0
-  piece: {fileID: 0}
+  word: {fileID: 0}
 --- !u!1 &390334671
 GameObject:
   m_ObjectHideFlags: 3
@@ -991,7 +1038,7 @@ GameObject:
   - component: {fileID: 1643103423}
   - component: {fileID: 1643103424}
   m_Layer: 5
-  m_Name: Phrase
+  m_Name: PhraseBuilderSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1030,8 +1077,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59126d7fec31fbc43bef214d81fd99b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _actionSocket: {fileID: 371032690}
-  _targetSocket: {fileID: 2000594928}
+  m_ActionSocket: {fileID: 0}
+  m_TargetSocket: {fileID: 0}
 --- !u!1 &1822321873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,7 +1211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredType: 1
   filled: 0
-  piece: {fileID: 0}
+  word: {fileID: 0}
 --- !u!114 &2000594929
 MonoBehaviour:
   m_ObjectHideFlags: 0
