@@ -160,7 +160,7 @@ MonoBehaviour:
   m_PhraseBuilder: {fileID: 0}
   m_Story: {fileID: 11400000, guid: e0e11e07c19cfe2478a4c80dc4e9ef74, type: 2}
   m_Tag: {fileID: 11400000, guid: 30e82cb6f9e399f499f2bda7231de83e, type: 2}
-  m_Value: 0
+  m_Value: 2
 --- !u!4 &224796548
 Transform:
   m_ObjectHideFlags: 0
