@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 646e73e6f2f9bc34a808c5fd2461c80c, type: 3}
-  m_Name: Event_LoadScene
+  m_Name: Evt_LoadScene
   m_EditorClassIdentifier: 
   _lastMessage: {fileID: 0}
   _dispatchers: []

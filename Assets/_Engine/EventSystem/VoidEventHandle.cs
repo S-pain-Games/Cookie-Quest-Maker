@@ -1,16 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 namespace Events
 {
+    [CreateAssetMenu(menuName = "Event System/Void Event Handle")]
     public class VoidEventHandle : ScriptableObject
     {
         public event Action OnEvent;
-
-        [SerializeField] private List<GameObject> _dispatchers;
-        [SerializeField] private List<GameObject> _recievers;
 
         #region UNITY_EDITOR
 #if UNITY_EDITOR
@@ -26,7 +25,7 @@ namespace Events
             #region UNITY_EDITOR
 #if UNITY_EDITOR
             if (_logOnDispatch)
-                Debug.Log($"Event [{name}] dispatched by [{dispatcher.name}]", dispatcher);
+                UnityEngine.Debug.Log($"Event [{name}] dispatched by [{dispatcher.name}]", dispatcher);
             if (_logOnRecieve)
                 LogRecievers(dispatcher.name);
 #endif
@@ -40,52 +39,23 @@ namespace Events
             #region UNITY_EDITOR
 #if UNITY_EDITOR
             if (_logOnDispatch)
-                Debug.Log($"Event [{name}] dispatched by [{debugName}]");
+                UnityEngine.Debug.Log($"Event [{name}] dispatched by [{debugName}]");
             if (_logOnRecieve)
                 LogRecievers(debugName);
 #endif
             #endregion
         }
 
-        /// <summary>
-        /// Only useful for debugging purposes
-        /// </summary>
-        public void AddDispatcher(GameObject dispatcher)
-        {
-            if (!_dispatchers.Contains(dispatcher))
-                _dispatchers.Add(dispatcher);
-        }
-
-        public void RemoveDispatcher(GameObject dispatcher)
-        {
-            _dispatchers.Remove(dispatcher);
-        }
-
-        /// <summary>
-        /// Only useful for debugging purposes
-        /// </summary>
-        public void AddReciever(GameObject reciever)
-        {
-            if (!_recievers.Contains(reciever))
-                _recievers.Add(reciever);
-        }
-
-        public void RemoveReciever(GameObject reciever)
-        {
-            _recievers.Remove(reciever);
-        }
-
-        private void OnEnable()
-        {
-            _dispatchers = new List<GameObject>();
-            _recievers = new List<GameObject>();
-        }
-
         private void LogRecievers(string dispacherName)
         {
-            foreach (var reciever in _recievers)
+            var invocationList = OnEvent.GetInvocationList();
+            foreach (Delegate d in invocationList)
             {
-                Debug.Log($"Event [{name}] Recieved By [{reciever.name}] from [{dispacherName}]", reciever);
+                MonoBehaviour m = d.Target as MonoBehaviour;
+                if (m != null)
+                {
+                    UnityEngine.Debug.Log($"Event [{name}] Recieved By [{m.gameObject.name}] from [{dispacherName}]", m.gameObject);
+                }
             }
         }
     }

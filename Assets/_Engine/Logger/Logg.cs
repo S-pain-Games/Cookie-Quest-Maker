@@ -35,7 +35,17 @@ namespace UnityEngine
         }
 
         [Conditional(_compilationSymbol)]
-        public static void Log(string message, string user, Object context)
+        public static void Log(string message, GameObject context)
+        {
+            _sb.Clear();
+            _sb.Append($"[{context.gameObject.name}]");
+            _sb.Append($" {message}");
+            Debug.Log(_sb.ToString(), context);
+        }
+
+
+        [Conditional(_compilationSymbol)]
+        public static void Log(string message, string user, GameObject context)
         {
             _sb.Clear();
             _sb.Append($"[{user}]");

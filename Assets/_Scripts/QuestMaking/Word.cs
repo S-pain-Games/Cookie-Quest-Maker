@@ -22,6 +22,7 @@ public class Word : ScriptableObject
         Action,
         Target,
         Modifier,
-        Object
+        Object,
+        Cookie
     }
 }

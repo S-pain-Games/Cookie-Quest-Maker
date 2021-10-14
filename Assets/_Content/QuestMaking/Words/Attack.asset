@@ -10,12 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 82d2f8f20045a684da26c05c2c22e9e2, type: 3}
-  m_Name: Baddie
+  m_Name: Attack
   m_EditorClassIdentifier: 
-  _wordText: Baddie
-  _type: 1
-  TagList:
-  - _tag: {fileID: 11400000, guid: 198c0a40521a62f40a12f7d2d4b09fea, type: 2}
-    _intensity: 1
-  - _tag: {fileID: 11400000, guid: 30e82cb6f9e399f499f2bda7231de83e, type: 2}
-    _intensity: 2
+  m_WordText: Attack
+  m_Type: 0
+  m_Tags: []

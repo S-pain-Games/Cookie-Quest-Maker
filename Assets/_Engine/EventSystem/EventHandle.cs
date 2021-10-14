@@ -19,6 +19,21 @@ namespace Events
 #endif
         #endregion
 
+        public void Dispatch(T message)
+        {
+            _lastMessage = message;
+            OnEvent?.Invoke(message);
+
+            #region UNITY_EDITOR
+#if UNITY_EDITOR
+            if (_logOnDispatch)
+                Debug.Log($"Event [{name}] dispatched]");
+            if (_logOnRecieve)
+                LogRecievers("Unknown");
+#endif
+            #endregion
+        }
+
         public void Dispatch(T message, GameObject dispatcher)
         {
             _lastMessage = message;

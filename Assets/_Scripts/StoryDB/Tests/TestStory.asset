@@ -15,32 +15,32 @@ MonoBehaviour:
   m_IntroductionPhrase: Intro
   m_BranchOptions:
   - m_Condition:
-      m_Tag: {fileID: 11400000, guid: 30e82cb6f9e399f499f2bda7231de83e, type: 2}
+      m_Tag: {fileID: 11400000, guid: 370026212bb1fea4ca3db99e7937357d, type: 2}
       m_LogicOp: 0
       m_Value: 3
-    m_Result: Harm3
+    m_Result: T1-3
     m_Ending: {fileID: 0}
   - m_Condition:
-      m_Tag: {fileID: 11400000, guid: 30e82cb6f9e399f499f2bda7231de83e, type: 2}
+      m_Tag: {fileID: 11400000, guid: c411618cab6ba4644a5463ed80d5e073, type: 2}
       m_LogicOp: 0
-      m_Value: 0
-    m_Result: Harm0
+      m_Value: 3
+    m_Result: T2-3
     m_Ending: {fileID: 0}
   - m_Condition:
-      m_Tag: {fileID: 11400000, guid: 198c0a40521a62f40a12f7d2d4b09fea, type: 2}
+      m_Tag: {fileID: 11400000, guid: c411618cab6ba4644a5463ed80d5e073, type: 2}
       m_LogicOp: 0
       m_Value: 1
-    m_Result: Con1
+    m_Result: T2-1
     m_Ending: {fileID: 0}
   - m_Condition:
-      m_Tag: {fileID: 11400000, guid: 198c0a40521a62f40a12f7d2d4b09fea, type: 2}
-      m_LogicOp: 2
-      m_Value: 2
-    m_Result: Con2
-    m_Ending: {fileID: 0}
-  - m_Condition:
-      m_Tag: {fileID: 11400000, guid: 027ba1b418e91524eb95cbf491852e09, type: 2}
+      m_Tag: {fileID: 11400000, guid: 38c55cbc91cef1f4da42bee466acd80d, type: 2}
       m_LogicOp: 1
       m_Value: 0
-    m_Result: Help0
+    m_Result: T3-1
+    m_Ending: {fileID: 0}
+  - m_Condition:
+      m_Tag: {fileID: 11400000, guid: 370026212bb1fea4ca3db99e7937357d, type: 2}
+      m_LogicOp: 0
+      m_Value: 0
+    m_Result: T1-1
     m_Ending: {fileID: 0}

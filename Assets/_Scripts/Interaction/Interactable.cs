@@ -9,18 +9,18 @@ public class Interactable : MonoBehaviour
     public event Action OnInteract;
 
     #region UNITY_EDITOR
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
     [SerializeField] private bool showLog;
-    #endif
+#endif
     #endregion
 
     public void Interact(GameObject obj)
     {
         #region UNITY_EDITOR
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         if (showLog)
             Debug.Log(obj.name + " is interacting with: " + gameObject.name, gameObject);
-        #endif
+#endif
         #endregion
 
         OnInteract?.Invoke();

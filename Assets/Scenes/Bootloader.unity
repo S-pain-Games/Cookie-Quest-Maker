@@ -168,4 +168,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadSceneHandle: {fileID: 11400000, guid: a02cffe7cdb787645b26dc295bee20de, type: 2}
   _persistentScene: {fileID: 11400000, guid: 58308b17907d5264a81c6b1bc0cde80c, type: 2}
-  _startingScene: {fileID: 11400000, guid: a29ba9170b469b640b8177c0854d6d21, type: 2}
+  _startingScene: {fileID: 11400000, guid: 7b32f694992a78641a1577e3598622f5, type: 2}

@@ -7,7 +7,10 @@ using Events;
 public class SceneSystem : MonoBehaviour
 {
     [Header("Listening To")]
-    [SerializeField] private SceneDataEventHandle _loadSceneHandle;
+    [SerializeField]
+    private SceneDataEventHandle _loadSceneHandle;
+    [SerializeField]
+    private Scene _currentMainScene;
 
     public void LoadScene(SceneData sceneData)
     {
@@ -27,12 +30,39 @@ public class SceneSystem : MonoBehaviour
         }
         else
         {
+            // Unload existing main scene
+            if (_currentMainScene.IsValid())
+            {
+                yield return SceneManager.UnloadSceneAsync(_currentMainScene);
+            }
+
+            // Load new scene
             yield return SceneManager.LoadSceneAsync(sceneData.SceneIndex, LoadSceneMode.Additive);
-            SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(sceneData.SceneIndex));
+
+            // Load new scene
+            _currentMainScene = SceneManager.GetSceneByBuildIndex(sceneData.SceneIndex);
+            SceneManager.SetActiveScene(_currentMainScene);
 
             Logg.Log($"Loading [{sceneData.name}] Finished", "Scene System");
         }
     }
+
+#if UNITY_EDITOR
+    // This way of loading might be very bad but its only in the editor so its not that bad
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    private static void ColdStart()
+    {
+        // If the current scene is not the boot scene
+        if (!SceneManager.GetSceneByName("Bootloader").IsValid())
+        {
+            Logg.Log("Setting up hot game start", "Editor");
+            SceneManager.LoadSceneAsync("Persistent_Systems", LoadSceneMode.Additive).completed += (a) =>
+            {
+                FindObjectOfType<SceneSystem>()._currentMainScene = SceneManager.GetActiveScene();
+            };
+        }
+    }
+#endif
 
     private void OnEnable()
     {

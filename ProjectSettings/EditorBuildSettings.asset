@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bakery.unity
     guid: fe44c34b3109ee0488809be42f4495db
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 7ca08f7d71808cf4f87362cc0430cb7c
   m_configObjects: {}

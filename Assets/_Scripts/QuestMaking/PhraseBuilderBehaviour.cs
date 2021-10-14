@@ -7,6 +7,7 @@ using UnityEngine;
 [Serializable]
 public class PhraseBuilderBehaviour : MonoBehaviour
 {
+    [SerializeField] private WordSocketBehaviour _cookieSocket;
     [SerializeField] private WordSocketBehaviour _modifierSocket;
     [SerializeField] private WordSocketBehaviour _actionSocket;
     [SerializeField] private WordSocketBehaviour _targetSocket;
@@ -26,6 +27,8 @@ public class PhraseBuilderBehaviour : MonoBehaviour
         // GC Alloc (Low)
         Phrase phrase = new Phrase();
 
+        if (_cookieSocket.filled)
+            phrase.SetWord(_cookieSocket.word);
         if (_modifierSocket.filled)
             phrase.SetWord(_modifierSocket.word);
         if (_actionSocket.filled)
@@ -42,12 +45,14 @@ public class PhraseBuilderBehaviour : MonoBehaviour
 [Serializable]
 public class Phrase
 {
+    public Word Cookie => m_Cookie;
     public Word Modifier => m_Modifier;
     public Word Action => m_Action;
     public Word Target => m_Target;
     public Word Object => m_Object;
 
     private List<Word> m_WordsList = new List<Word>();
+    private Word m_Cookie;
     private Word m_Modifier;
     private Word m_Action;
     private Word m_Target;
@@ -70,6 +75,9 @@ public class Phrase
                 break;
             case Word.WordType.Object:
                 SetSpecificWord(m_Object, word);
+                break;
+            case Word.WordType.Cookie:
+                SetSpecificWord(m_Cookie, word);
                 break;
             default:
                 break;
