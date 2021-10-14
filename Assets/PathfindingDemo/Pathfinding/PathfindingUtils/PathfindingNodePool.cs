@@ -40,7 +40,7 @@ public class PathfindingNodePool
 
     public void CleanAndRefillNodePool()
     {
-        Debug.Log("Antes de limpiar: " + _nodePool.Count);
+        //Debug.Log("Antes de limpiar: " + _nodePool.Count);
         _nodePool.Clear();
 
         foreach (PathfindingNode n in _nodeReferences)
@@ -48,6 +48,7 @@ public class PathfindingNodePool
             n.ClearInfo();
             _nodePool.Push(n);
         }
-        Debug.Log("Después de limpiar: " + _nodePool.Count);
+
+        //Debug.Log("Después de limpiar: " + _nodePool.Count);
     }
 }

@@ -3538,7 +3538,7 @@ MonoBehaviour:
   _nodePoolSize: 50
   _loopAttemps: 100
   _pathMethod: 1
-  _diagonalMovement: 1
+  _diagonalMovement: 0
   _searchDepth: 5
 --- !u!212 &1898334554
 SpriteRenderer:

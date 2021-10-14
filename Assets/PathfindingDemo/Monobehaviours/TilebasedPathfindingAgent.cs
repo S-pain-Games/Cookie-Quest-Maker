@@ -49,15 +49,19 @@ public class TilebasedPathfindingAgent : MonoBehaviour
 
     public void MoveTowardsTargetReceiver(Vector3 targetPosition)
     {
+        targetPosition = ParsePositionToTileCenter(targetPosition);
+
+        if (targetPosition == _currentTarget)
+            return;
+
         _triesLeft = _maxAttemps;
+
 
         MoveTowardsTarget(targetPosition);
     }
 
     private void MoveTowardsTarget(Vector3 targetPosition)
     {
-        targetPosition.z = 0;
-
         _currentTarget = targetPosition;
 
         if (pathGenerated)
@@ -75,6 +79,11 @@ public class TilebasedPathfindingAgent : MonoBehaviour
             _agentMovement.StartMovingAlongPath(_path);
         else
             Debug.Log("No se ha podido encontrar un camino hacia " + targetPosition);
+    }
+
+    private Vector3 ParsePositionToTileCenter(Vector3 position)
+    {
+        return new Vector3(Mathf.Floor(position.x) + _tileOffset, Mathf.Floor(position.y) + _tileOffset, 0);
     }
 
     private Stack<Vector3> GeneratePath(Vector3 targetPosition)

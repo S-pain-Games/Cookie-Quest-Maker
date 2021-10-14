@@ -25,7 +25,7 @@ public class TileBasedAStarPathfinder : ITileBasedPathfinder
 
     private Vector3 ParsePositionToTileCenter(Vector3 position)
     {
-        return new Vector3(Mathf.Floor(position.x) + _tileOffset, Mathf.Floor(position.y) + _tileOffset);
+        return new Vector3(Mathf.Floor(position.x) + _tileOffset, Mathf.Floor(position.y) + _tileOffset, 0);
     }
 
     private PathfindingNode GeneratePathTowardsPosition(Vector3 start, Vector3 goal)
