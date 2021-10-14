@@ -1,60 +1,94 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
+// WIP
+[Serializable]
 public class PhraseBuilderBehaviour : MonoBehaviour
 {
-    [SerializeField] private WordSocketBehaviour m_ActionSocket;
-    [SerializeField] private WordSocketBehaviour m_TargetSocket;
+    [SerializeField] private WordSocketBehaviour _modifierSocket;
+    [SerializeField] private WordSocketBehaviour _actionSocket;
+    [SerializeField] private WordSocketBehaviour _targetSocket;
+    [SerializeField] private WordSocketBehaviour _objectSocket;
 
     [MethodButton]
     private void LogCurrentPhrase()
     {
-        if (m_ActionSocket.filled && m_TargetSocket.filled)
+        if (_actionSocket.filled && _targetSocket.filled)
         {
-            Logg.Log($"[{m_ActionSocket.word.WordText}][{m_TargetSocket.word.WordText}]");
+            Logg.Log($"[{_actionSocket.word.WordText}][{_targetSocket.word.WordText}]");
         }
     }
 
     private Phrase GetPhrase()
     {
-        return new Phrase(m_ActionSocket.word, m_TargetSocket.word);
+        // GC Alloc (Low)
+        Phrase phrase = new Phrase();
+
+        if (_modifierSocket.filled)
+            phrase.SetWord(_modifierSocket.word);
+        if (_actionSocket.filled)
+            phrase.SetWord(_actionSocket.word);
+        if (_targetSocket.filled)
+            phrase.SetWord(_targetSocket.word);
+        if (_objectSocket.filled)
+            phrase.SetWord(_objectSocket.word);
+
+        return phrase;
     }
 }
 
-[System.Serializable]
-public struct Phrase
+[Serializable]
+public class Phrase
 {
     public Word Modifier => m_Modifier;
     public Word Action => m_Action;
     public Word Target => m_Target;
     public Word Object => m_Object;
 
+    private List<Word> m_WordsList = new List<Word>();
     private Word m_Modifier;
     private Word m_Action;
     private Word m_Target;
     private Word m_Object;
 
-    public Phrase(Word action, Word target)
+    // It would probably definitely be easier and better to have a function
+    // for each type of word
+    public void SetWord(Word word)
     {
-        m_Modifier = null;
-        m_Action = action;
-        m_Target = target;
-        m_Object = null;
+        switch (word.Type)
+        {
+            case Word.WordType.Action:
+                SetSpecificWord(m_Action, word);
+                break;
+            case Word.WordType.Target:
+                SetSpecificWord(m_Target, word);
+                break;
+            case Word.WordType.Modifier:
+                SetSpecificWord(m_Modifier, word);
+                break;
+            case Word.WordType.Object:
+                SetSpecificWord(m_Object, word);
+                break;
+            default:
+                break;
+        }
     }
 
-    public List<Word> ToList()
+    public IReadOnlyList<Word> GetList()
     {
-        List<Word> words = new List<Word>();
+        return m_WordsList;
+    }
 
-        // These null checks on unity objects are really expensive
-        // We should use a bitmask
-        if (m_Action != null)
-            words.Add(m_Action);
-        if (m_Target != null)
-            words.Add(m_Target);
+    private void SetSpecificWord(Word privateWord, Word word)
+    {
+        // Handles the case where the new word type has already been added
+        // It should never happen though
+        if (privateWord != null)
+            m_WordsList.Remove(privateWord);
 
-        return words;
+        privateWord = word;
+        m_WordsList.Add(privateWord);
     }
 }

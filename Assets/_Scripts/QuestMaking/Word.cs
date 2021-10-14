@@ -20,6 +20,8 @@ public class Word : ScriptableObject
     public enum WordType
     {
         Action,
-        Target
+        Target,
+        Modifier,
+        Object
     }
 }
