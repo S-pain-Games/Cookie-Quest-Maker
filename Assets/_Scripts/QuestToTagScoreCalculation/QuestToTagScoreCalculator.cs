@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class QuestToTagScoreCalculator
 {
-    /*
-     * Recibo una serie de entradas con Tags
-     * 
-     * Desglosar y contabilizar Tags
-     * 
-     * Devolver el Tag con mayor valor
-     * 
-     * Dar prioridad al Tag perteneciente al verbo
-    */
+
+    //INPUT: Phrase object
+    //OUTPUT: TagResult containing the Tag of Action Word and its added value from all Words.
 
     //Phrase Examples:
     //              [Attack]    [Mayor]     [Baseball Bat]
@@ -43,7 +37,6 @@ public class QuestToTagScoreCalculator
         //Word adjective = questPhrase.Adjective;
         //Word tool = questPhrase.Tool;
 
-
         //Contabilizar los tags de las palabras
         RecountTagValuesFromWord(action);
         RecountTagValuesFromWord(target);
@@ -51,9 +44,11 @@ public class QuestToTagScoreCalculator
         //RecountTagValuesFromWord(tool);
 
         //Seleccionar el tag con prioridad y devolver su valor total
+        Tag selectedTag = action.m_Tags[0].Tag;
+        int selectedTagTotalValue = GetTotalValueOfWordTag(action);
 
-        Debug.Log("Priority Tag: "+ action.m_Tags[0].Tag.TagName+", Value: "+GetTotalValueOfWordTag(action));
-        return GenerateTagResult(action.m_Tags[0].Tag, GetTotalValueOfWordTag(action));
+        Debug.Log("Priority Tag: "+ selectedTag.TagName+", Value: "+ selectedTagTotalValue);
+        return GenerateTagResult(selectedTag, selectedTagTotalValue);
     }
 
     private void RecountTagValuesFromWord(Word w)
