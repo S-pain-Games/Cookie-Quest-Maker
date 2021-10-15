@@ -9,38 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66e98148d1f70b646b6fd0ead7ed1bbe, type: 3}
+  m_Script: {fileID: 11500000, guid: c6de2684d9cb9ef4580f85fe16447a6f, type: 3}
   m_Name: TestStory
   m_EditorClassIdentifier: 
-  m_IntroductionPhrase: Intro
-  m_BranchOptions:
-  - m_Condition:
-      m_Tag: {fileID: 11400000, guid: 370026212bb1fea4ca3db99e7937357d, type: 2}
-      m_LogicOp: 0
-      m_Value: 3
-    m_Result: T1-3
-    m_Ending: {fileID: 0}
-  - m_Condition:
-      m_Tag: {fileID: 11400000, guid: c411618cab6ba4644a5463ed80d5e073, type: 2}
-      m_LogicOp: 0
-      m_Value: 3
-    m_Result: T2-3
-    m_Ending: {fileID: 0}
-  - m_Condition:
-      m_Tag: {fileID: 11400000, guid: c411618cab6ba4644a5463ed80d5e073, type: 2}
-      m_LogicOp: 0
-      m_Value: 1
-    m_Result: T2-1
-    m_Ending: {fileID: 0}
-  - m_Condition:
-      m_Tag: {fileID: 11400000, guid: 38c55cbc91cef1f4da42bee466acd80d, type: 2}
-      m_LogicOp: 1
-      m_Value: 0
-    m_Result: T3-1
-    m_Ending: {fileID: 0}
-  - m_Condition:
-      m_Tag: {fileID: 11400000, guid: 370026212bb1fea4ca3db99e7937357d, type: 2}
-      m_LogicOp: 0
-      m_Value: 0
-    m_Result: T1-1
-    m_Ending: {fileID: 0}
+  m_IntroductionPhrase: 
+  m_BranchOptions: []

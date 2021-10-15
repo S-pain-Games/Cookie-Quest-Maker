@@ -3,12 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// WIP
+// This just builds a quest made of pieces, Every quest must have valid targets 
+// that are specified by the story data
+// For simplicity this class doesnt check if the quest targets
+// are the correct ones for the given story
+// all those checks must be made elsewhere
 [Serializable]
 public class QuestBuilder
 {
-    [SerializeField]
-    private List<Quest> m_Quests = new List<Quest>();
+    // Quest maker listens to this
+    public event Action<Quest> OnQuestFinished;
+
     [SerializeField]
     private Quest m_CurrentQuest = new Quest();
 
@@ -29,7 +34,7 @@ public class QuestBuilder
 
     public void FinishMakingQuest()
     {
-        m_Quests.Add(m_CurrentQuest);
+        OnQuestFinished.Invoke(m_CurrentQuest);
     }
 }
 
@@ -37,6 +42,7 @@ public class QuestBuilder
 public class Quest
 {
     public IReadOnlyList<QuestPiece> Pieces => m_PiecesList;
+
     [SerializeField]
     private List<QuestPiece> m_PiecesList = new List<QuestPiece>();
 
@@ -44,9 +50,9 @@ public class Quest
 
     public void RemovePiece(QuestPiece piece) => m_PiecesList.Remove(piece);
 
-    public void GetValue(out QuestTagType highestTagType, out int highestValue)
+    public void GetValue(out QuestPieceTagType highestTagType, out int highestValue)
     {
-        Dictionary<QuestTagType, int> values = new Dictionary<QuestTagType, int>();
+        Dictionary<QuestPieceTagType, int> values = new Dictionary<QuestPieceTagType, int>();
 
         // Count all the tags values
         for (int i = 0; i < m_PiecesList.Count; i++)
@@ -78,5 +84,11 @@ public class Quest
                 highestTagType = tagType;
             }
         }
+    }
+
+    public QuestPiece GetTarget()
+    {
+        // This might be questionable but it works and its easy to change
+        return m_PiecesList.Find((q) => q.Type == QuestPiece.PieceType.Target);
     }
 }

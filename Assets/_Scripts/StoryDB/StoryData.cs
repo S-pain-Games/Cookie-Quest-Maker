@@ -3,18 +3,26 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+/// <summary>
+/// Data that describes the persistent designer-authored state of a story
+/// </summary>
 [CreateAssetMenu()]
-public class Story : ScriptableObject
+public class StoryData : ScriptableObject
 {
+    public string Title => m_Title;
+    public string IntroductionPhrase => m_IntroductionPhrase;
+    public QuestPiece Targets => null;
+
+    [SerializeField]
+    private string m_Title = "";
     [SerializeField]
     private string m_IntroductionPhrase = "";
-
     [SerializeField]
     private List<BranchOption> m_BranchOptions = new List<BranchOption>();
 
     // Check all the options and return the story string result
     // of the one that matches the given input best
-    public void Check(QuestTagType tag, int value, out string result)
+    public void Check(QuestPieceTagType tag, int value, out string result)
     {
         result = "";
         bool match = false;
@@ -61,7 +69,7 @@ public class BranchOption : IComparable<BranchOption>
     [SerializeField]
     private StoryRepercusion m_Ending;
 
-    public bool Check(QuestTagType tag, int value, out string result)
+    public bool Check(QuestPieceTagType tag, int value, out string result)
     {
         bool match = m_Condition.Check(tag, value);
         if (match)
@@ -84,14 +92,19 @@ public class BranchOption : IComparable<BranchOption>
     }
 }
 
+// We should take into account the target
 [Serializable]
 public class BranchCondition
 {
-    public QuestTagType Tag { get => m_Tag; }
+    public QuestPiece Target { get => m_Target; }
+    public QuestPieceTagType Tag { get => m_Tag; }
     public int Value { get => m_Value; }
 
     [SerializeField]
-    private QuestTagType m_Tag;
+    public QuestPiece m_Target;
+
+    [SerializeField]
+    private QuestPieceTagType m_Tag;
 
     [SerializeField]
     private LogicOperation m_LogicOp = LogicOperation.BiggerOrEqual;
@@ -102,26 +115,26 @@ public class BranchCondition
     private enum LogicOperation
     {
         BiggerOrEqual,
-        Bigger,
-        Equal,
+        //Bigger,
+        //Equal,
     }
 
-    public bool Check(QuestTagType tag, int value)
+    public bool Check(QuestPieceTagType tag, int value)
     {
         if (tag == m_Tag)
         {
             switch (m_LogicOp)
             {
-                case LogicOperation.Equal:
-                    if (value == m_Value)
-                        return true;
-                    else
-                        return false;
-                case LogicOperation.Bigger:
-                    if (value > m_Value)
-                        return true;
-                    else
-                        return false;
+                //case LogicOperation.Equal:
+                //    if (value == m_Value)
+                //        return true;
+                //    else
+                //        return false;
+                //case LogicOperation.Bigger:
+                //    if (value > m_Value)
+                //        return true;
+                //    else
+                //        return false;
                 case LogicOperation.BiggerOrEqual:
                     if (value >= m_Value)
                         return true;

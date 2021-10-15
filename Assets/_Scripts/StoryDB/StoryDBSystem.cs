@@ -8,10 +8,10 @@ public class StoryDBSystem : MonoBehaviour
     private QuestBuilder m_PhraseBuilder;
 
     [SerializeField]
-    private Story m_Story;
+    private StoryData m_Story;
 
     [SerializeField]
-    private QuestTagType m_Tag;
+    private QuestPieceTagType m_Tag;
 
     [SerializeField]
     private int m_Value;
@@ -22,7 +22,7 @@ public class StoryDBSystem : MonoBehaviour
         GetStoryPhrase(m_Story, m_Tag, m_Value);
     }
 
-    public void GetStoryPhrase(Story story, QuestTagType tag, int value)
+    public void GetStoryPhrase(StoryData story, QuestPieceTagType tag, int value)
     {
         story.Check(tag, value, out string result);
         Logg.Log(result, "StoryDB");

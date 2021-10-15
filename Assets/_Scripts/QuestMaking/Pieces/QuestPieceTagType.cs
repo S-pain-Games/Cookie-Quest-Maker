@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu()]
-public class QuestTagType : ScriptableObject
+public class QuestPieceTagType : ScriptableObject
 {
     public string TagName { get => m_TagName; }
     [SerializeField] private string m_TagName = "Unnamed";
@@ -13,8 +13,8 @@ public class QuestTagType : ScriptableObject
 [Serializable]
 public class QuestPieceTag
 {
-    public QuestTagType Type { get => m_TagType; }
-    [SerializeField] private QuestTagType m_TagType;
+    public QuestPieceTagType Type { get => m_TagType; }
+    [SerializeField] private QuestPieceTagType m_TagType;
 
     public int Value { get => m_Value; }
     [SerializeField] private int m_Value;
