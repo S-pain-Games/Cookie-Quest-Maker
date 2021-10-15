@@ -12,14 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6de2684d9cb9ef4580f85fe16447a6f, type: 3}
   m_Name: MayorsWolf
   m_EditorClassIdentifier: 
+  m_Title: 
   m_IntroductionPhrase: Introducted
   m_BranchOptions:
   - m_Condition:
       m_Target: {fileID: 0}
       m_Tag: {fileID: 11400000, guid: 30e82cb6f9e399f499f2bda7231de83e, type: 2}
       m_LogicOp: 0
+      m_Value: 7
+    m_Result: EXTREMELLY HARMED!!!
+    m_Ending: {fileID: 0}
+  - m_Condition:
+      m_Target: {fileID: 0}
+      m_Tag: {fileID: 11400000, guid: 30e82cb6f9e399f499f2bda7231de83e, type: 2}
+      m_LogicOp: 0
+      m_Value: 5
+    m_Result: Very Harmed
+    m_Ending: {fileID: 0}
+  - m_Condition:
+      m_Target: {fileID: 0}
+      m_Tag: {fileID: 11400000, guid: 027ba1b418e91524eb95cbf491852e09, type: 2}
+      m_LogicOp: 0
       m_Value: 1
-    m_Result: Harmed
+    m_Result: Helped
     m_Ending: {fileID: 0}
   - m_Condition:
       m_Target: {fileID: 0}
@@ -30,8 +45,8 @@ MonoBehaviour:
     m_Ending: {fileID: 0}
   - m_Condition:
       m_Target: {fileID: 0}
-      m_Tag: {fileID: 11400000, guid: 027ba1b418e91524eb95cbf491852e09, type: 2}
+      m_Tag: {fileID: 11400000, guid: 30e82cb6f9e399f499f2bda7231de83e, type: 2}
       m_LogicOp: 0
       m_Value: 1
-    m_Result: Helped
+    m_Result: Harmed
     m_Ending: {fileID: 0}

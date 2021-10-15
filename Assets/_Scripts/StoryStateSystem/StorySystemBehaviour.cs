@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoryStateSystemBehaviour : MonoBehaviour
+public class StorySystemBehaviour : MonoBehaviour
 {
     public StorySystem System => m_StoryStateSystem;
 

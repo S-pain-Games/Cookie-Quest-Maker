@@ -6,6 +6,7 @@ using Events;
 [RequireComponent(typeof(Interactable))]
 public class QuestMakingTableBehaviour : MonoBehaviour
 {
+    [Header("Broadcasting To")]
     [SerializeField]
     private VoidEventHandle _openQuestMakingTable;
     private Interactable _interactable;

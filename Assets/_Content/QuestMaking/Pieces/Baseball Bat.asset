@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PieceName: Baseball Bat
   m_Type: 3
-  m_Tags: []
+  m_Tags:
+  - m_TagType: {fileID: 11400000, guid: 30e82cb6f9e399f499f2bda7231de83e, type: 2}
+    m_Value: 2

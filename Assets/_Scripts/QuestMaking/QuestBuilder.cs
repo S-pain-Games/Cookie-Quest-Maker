@@ -50,7 +50,25 @@ public class Quest
 
     public void RemovePiece(QuestPiece piece) => m_PiecesList.Remove(piece);
 
-    public void GetValue(out QuestPieceTagType highestTagType, out int highestValue)
+    public void GetOverallTag(out QuestPieceTagType highestTagType, out int highestValue)
+    {
+        Dictionary<QuestPieceTagType, int> values = CountAllTags();
+
+        // Search for the highest valued tag
+        highestValue = 0;
+        highestTagType = null;
+        foreach (var tagType in values.Keys)
+        {
+            int tagTypeValue = values[tagType];
+            if (tagTypeValue > highestValue)
+            {
+                highestValue = tagTypeValue;
+                highestTagType = tagType;
+            }
+        }
+    }
+
+    private Dictionary<QuestPieceTagType, int> CountAllTags()
     {
         Dictionary<QuestPieceTagType, int> values = new Dictionary<QuestPieceTagType, int>();
 
@@ -72,18 +90,7 @@ public class Quest
             }
         }
 
-        // Search for the highest valued tag
-        highestValue = 0;
-        highestTagType = null;
-        foreach (var tagType in values.Keys)
-        {
-            int tagTypeValue = values[tagType];
-            if (tagTypeValue > highestValue)
-            {
-                highestValue = tagTypeValue;
-                highestTagType = tagType;
-            }
-        }
+        return values;
     }
 
     public QuestPiece GetTarget()

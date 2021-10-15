@@ -14,9 +14,9 @@ public class QuestMakingTests
     [OneTimeSetUp]
     public void Initialize()
     {
-        m_StoryStateSystem = new StorySystem();
-        m_QuestMaker = new QuestMaker();
-        m_QuestBuilder = new QuestBuilder();
+        //m_StoryStateSystem = new StorySystem();
+        //m_QuestBuilder = new QuestBuilder();
+        //m_QuestMaker = new QuestMaker(m_StoryStateSystem, m_QuestBuilder);
     }
 
     [Test]
