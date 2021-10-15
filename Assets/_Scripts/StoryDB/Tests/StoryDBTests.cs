@@ -8,9 +8,9 @@ using NUnit.Framework;
 public class StoryDBTests
 {
     private Story _story;
-    private Tag _tag1;
-    private Tag _tag2;
-    private Tag _tag3;
+    private QuestTagType _tag1;
+    private QuestTagType _tag2;
+    private QuestTagType _tag3;
 
     [SetUp]
     public void Setup()
@@ -19,9 +19,9 @@ public class StoryDBTests
         string path = AssetDatabase.GUIDToAssetPath(guids[0]);
         path = path.Remove(path.LastIndexOf("/") + 1);
         _story = AssetDatabase.LoadAssetAtPath<Story>(path + "TestStory.asset");
-        _tag1 = AssetDatabase.LoadAssetAtPath<Tag>(path + "TestTags/xTest_Tag1.asset");
-        _tag2 = AssetDatabase.LoadAssetAtPath<Tag>(path + "TestTags/xTest_Tag2.asset");
-        _tag3 = AssetDatabase.LoadAssetAtPath<Tag>(path + "TestTags/xTest_Tag3.asset");
+        _tag1 = AssetDatabase.LoadAssetAtPath<QuestTagType>(path + "TestTags/xTest_Tag1.asset");
+        _tag2 = AssetDatabase.LoadAssetAtPath<QuestTagType>(path + "TestTags/xTest_Tag2.asset");
+        _tag3 = AssetDatabase.LoadAssetAtPath<QuestTagType>(path + "TestTags/xTest_Tag3.asset");
     }
 
     [Test]

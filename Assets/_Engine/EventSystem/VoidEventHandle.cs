@@ -18,7 +18,7 @@ namespace Events
 #endif
         #endregion
 
-        public void Dispatch(GameObject dispatcher)
+        public void Invoke(GameObject dispatcher)
         {
             OnEvent?.Invoke();
 

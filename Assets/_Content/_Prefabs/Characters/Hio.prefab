@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fcbd0c33852b1c429773567c8367e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onInteractInput: {fileID: 11400000, guid: baea1257061089c4fa13f8d6093464f9, type: 2}
 --- !u!61 &1980825830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -166,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MovSpeed: 3.5
-  m_MinMovDistance: 0.25
+  m_MinMovDistance: 0.3
   m_MovDir: {x: 0, y: 0}
 --- !u!114 &3635051552492066967
 MonoBehaviour:

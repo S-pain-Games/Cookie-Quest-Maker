@@ -27,6 +27,6 @@ public class QuestMakingTableBehaviour : MonoBehaviour
 
     private void OnInteract()
     {
-        _openQuestMakingTable.Dispatch(gameObject);
+        _openQuestMakingTable.Invoke(gameObject);
     }
 }

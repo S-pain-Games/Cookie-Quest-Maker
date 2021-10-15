@@ -14,7 +14,7 @@ public class Story : ScriptableObject
 
     // Check all the options and return the story string result
     // of the one that matches the given input best
-    public void Check(Tag tag, int value, out string result)
+    public void Check(QuestTagType tag, int value, out string result)
     {
         result = "";
         bool match = false;
@@ -61,7 +61,7 @@ public class BranchOption : IComparable<BranchOption>
     [SerializeField]
     private StoryRepercusion m_Ending;
 
-    public bool Check(Tag tag, int value, out string result)
+    public bool Check(QuestTagType tag, int value, out string result)
     {
         bool match = m_Condition.Check(tag, value);
         if (match)
@@ -87,11 +87,11 @@ public class BranchOption : IComparable<BranchOption>
 [Serializable]
 public class BranchCondition
 {
-    public Tag Tag { get => m_Tag; }
+    public QuestTagType Tag { get => m_Tag; }
     public int Value { get => m_Value; }
 
     [SerializeField]
-    private Tag m_Tag;
+    private QuestTagType m_Tag;
 
     [SerializeField]
     private LogicOperation m_LogicOp = LogicOperation.BiggerOrEqual;
@@ -106,7 +106,7 @@ public class BranchCondition
         Equal,
     }
 
-    public bool Check(Tag tag, int value)
+    public bool Check(QuestTagType tag, int value)
     {
         if (tag == m_Tag)
         {

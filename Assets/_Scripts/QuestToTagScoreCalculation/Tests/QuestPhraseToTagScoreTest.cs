@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class QuestPhraseToTagScoreTest: MonoBehaviour
-{
-    private void Start()
-    {
-        QuestToTagScoreCalculator qsc = new QuestToTagScoreCalculator();
+//public class QuestPhraseToTagScoreTest: MonoBehaviour
+//{
+//    private void Start()
+//    {
+//        QuestToTagScoreCalculator qsc = new QuestToTagScoreCalculator();
 
 
-        Word action = new Word();
-        //action.WordText = "Attack";
+//        QuestPiece action = new QuestPiece();
+//        //action.WordText = "Attack";
 
 
-        Phrase p = new Phrase();
+//        Quest p = new Quest();
         
 
-    }
+//    }
 
     
-}
+//}
