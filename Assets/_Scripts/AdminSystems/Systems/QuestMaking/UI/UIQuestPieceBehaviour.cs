@@ -12,26 +12,24 @@ public class UIQuestPieceBehaviour : MonoBehaviour
 {
     // Events
     public event Action<Vector3> OnSocketCorrectly;
-    public event Action OnSocketFailed;
-    public event Action OnUnsocketed;
+    public event Action<QuestPiece> OnSocketFailed;
+    public event Action<QuestPiece> OnUnsocketed;
+    public event Action<QuestPiece> OnSelected;
 
-    public QuestPiece Piece { get => _piece; }
+    [HideInInspector]
+    public UIDraggable draggable;
+    [HideInInspector]
+    public UIPressable pressable;
 
-    [Header("Piece Settings")]
+    public QuestPiece Piece { get => m_Piece; }
+
     [SerializeField]
-    private QuestPiece _piece;
-
-    [Header("UI Dependencies")]
+    private QuestPiece m_Piece;
     [SerializeField]
     private Canvas _canvas;
-
-    // Private Dependencies
-    private UIDraggable _draggable;
-
     // Raycast
     private GraphicRaycaster _raycaster;
     private List<RaycastResult> m_Results = new List<RaycastResult>();
-
     // We use a bool to avoid null-checking Unity Objects
     private bool m_Socketed = false;
     private PieceSocketBehaviour _currentSocket;
@@ -50,7 +48,7 @@ public class UIQuestPieceBehaviour : MonoBehaviour
             // For every result check if we found a socket
             if (m_Results[i].gameObject.TryGetComponent(out PieceSocketBehaviour socket))
             {
-                if (socket.TryToSetPiece(_piece))
+                if (socket.TryToSetPiece(m_Piece))
                 {
                     m_Socketed = true;
                     _currentSocket = socket;
@@ -58,7 +56,7 @@ public class UIQuestPieceBehaviour : MonoBehaviour
                 }
                 else
                 {
-                    OnSocketFailed?.Invoke();
+                    OnSocketFailed?.Invoke(m_Piece);
                 }
 
                 //// We only check the first socket that we find
@@ -74,25 +72,33 @@ public class UIQuestPieceBehaviour : MonoBehaviour
             _currentSocket.RemovePiece();
             _currentSocket = null;
             m_Socketed = false;
-            OnUnsocketed?.Invoke();
+            OnUnsocketed?.Invoke(m_Piece);
         }
     }
 
     private void Awake()
     {
         _raycaster = _canvas.GetComponent<GraphicRaycaster>();
-        _draggable = GetComponent<UIDraggable>();
+        draggable = GetComponent<UIDraggable>();
+        pressable = GetComponent<UIPressable>();
     }
 
     private void OnEnable()
     {
-        _draggable.OnBeginDragEvent += TryToUnsocket;
-        _draggable.OnEndDragEvent += TryToFitInSocket;
+        draggable.OnBeginDragEvent += TryToUnsocket;
+        draggable.OnEndDragEvent += TryToFitInSocket;
+        pressable.OnPointerDownEvent += OnSelectedHandle;
+    }
+
+    private void OnSelectedHandle(PointerEventData obj)
+    {
+        OnSelected?.Invoke(m_Piece);
     }
 
     private void OnDisable()
     {
-        _draggable.OnBeginDragEvent -= TryToUnsocket;
-        _draggable.OnEndDragEvent -= TryToFitInSocket;
+        draggable.OnBeginDragEvent -= TryToUnsocket;
+        draggable.OnEndDragEvent -= TryToFitInSocket;
+        pressable.OnPointerDownEvent -= OnSelectedHandle;
     }
 }

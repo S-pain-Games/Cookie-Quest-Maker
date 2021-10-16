@@ -3,33 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using Events;
 
-public class UIQuestBuilderBehaviour : MonoBehaviour
+public class UIQuestSystemBehaviour : MonoBehaviour
 {
-    [Header("Broadcasting To")]
     [SerializeField]
-    private VoidEventHandle _startMakingQuest;
-    [SerializeField]
-    private QuestPieceEventHandle _addPiece;
-    [SerializeField]
-    private QuestPieceEventHandle _removePiece;
-    [SerializeField]
-    private VoidEventHandle _finishMakingQuest;
-
     private List<PieceSocketBehaviour> _sockets = new List<PieceSocketBehaviour>();
+    [SerializeField]
+    private List<UIQuestPieceBehaviour> _questPieces = new List<UIQuestPieceBehaviour>();
+
+    private QuestMakerSystem _questMakerSystem;
 
     private void Awake()
     {
-        GetComponentsInChildren(_sockets);
+        _questMakerSystem = Admin.g_Instance.questMakerSystem;
     }
 
     private void OnEnable()
     {
-        _startMakingQuest.Invoke(gameObject);
-
         for (int i = 0; i < _sockets.Count; i++)
         {
             _sockets[i].OnPieceAdded += OnPieceAdded;
             _sockets[i].OnPieceRemoved += OnPieceRemoved;
+        }
+
+        for (int i = 0; i < _questPieces.Count; i++)
+        {
+            _questPieces[i].OnSelected += OnPieceSelected;
         }
     }
 
@@ -40,15 +38,22 @@ public class UIQuestBuilderBehaviour : MonoBehaviour
             _sockets[i].OnPieceAdded -= OnPieceAdded;
             _sockets[i].OnPieceRemoved -= OnPieceRemoved;
         }
+
+
     }
 
     private void OnPieceAdded(QuestPiece piece)
     {
-        _addPiece.Invoke(piece);
+        _questMakerSystem.AddPiece(piece);
     }
 
     private void OnPieceRemoved(QuestPiece piece)
     {
-        _removePiece.Invoke(piece);
+        _questMakerSystem.RemovePiece(piece);
+    }
+
+    private void OnPieceSelected(QuestPiece piece)
+    {
+
     }
 }

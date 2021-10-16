@@ -21,6 +21,8 @@ public class QuestMakerSystem : MonoBehaviour
 
     public void StartBuildingQuest()
     {
+        if (_currentStory == null)
+            throw new MissingReferenceException();
         m_CurrentQuest = new Quest();
     }
 

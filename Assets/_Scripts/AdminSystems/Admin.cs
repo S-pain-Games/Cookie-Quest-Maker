@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(StorySystem))]
 [RequireComponent(typeof(GameStateSystem))]
 [RequireComponent(typeof(TownSystem))]
+[RequireComponent(typeof(QuestMakerSystem))]
 public class Admin : MonoBehaviour
 {
     public static Admin g_Instance;
@@ -18,10 +19,20 @@ public class Admin : MonoBehaviour
     [HideInInspector]
     public TownSystem townSystem;
 
-    private void Awake()
+    [HideInInspector]
+    public QuestMakerSystem questMakerSystem;
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    private static void Init()
     {
-        g_Instance = this;
+        g_Instance = FindObjectOfType<Admin>();
+        g_Instance.Initialize();
+    }
+
+    private void Initialize()
+    {
         storySystem = GetComponent<StorySystem>();
         gameStateSystem = GetComponent<GameStateSystem>();
+        questMakerSystem = GetComponent<QuestMakerSystem>();
     }
 }
