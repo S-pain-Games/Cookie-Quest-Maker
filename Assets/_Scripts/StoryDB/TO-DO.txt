@@ -1,6 +1,0 @@
--Document Functionality and Architecture
-
--Compact Condition Editor
--Editor to create stories and consecuences
-
--Tests (Hard)

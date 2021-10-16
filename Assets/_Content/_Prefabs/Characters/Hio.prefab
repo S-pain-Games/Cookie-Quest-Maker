@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1980825828}
-  - component: {fileID: 1980825829}
   - component: {fileID: 1980825830}
   m_Layer: 0
   m_Name: InteractionTrigger
@@ -32,19 +31,6 @@ Transform:
   m_Father: {fileID: 4945650314530242200}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1980825829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980825827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fcbd0c33852b1c429773567c8367e9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _onInteractInput: {fileID: 11400000, guid: baea1257061089c4fa13f8d6093464f9, type: 2}
 --- !u!61 &1980825830
 BoxCollider2D:
   m_ObjectHideFlags: 0

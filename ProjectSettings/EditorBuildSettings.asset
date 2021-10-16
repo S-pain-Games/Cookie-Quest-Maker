@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/BakingTable.unity
     guid: c6ec8662c8b294e4b9d14f3ea2d2a12c
   - enabled: 1
-    path: Assets/Scenes/Bakery.unity
+    path: Assets/Scenes/Game.unity
     guid: fe44c34b3109ee0488809be42f4495db
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
