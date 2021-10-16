@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu()]
-public class QuestPieceTagType : ScriptableObject
+public enum QuestPieceTagType
 {
-    public string TagName { get => m_TagName; }
-    [SerializeField] private string m_TagName = "Unnamed";
+    Harm,
+    Convince,
+    Help
 }
 
 [Serializable]

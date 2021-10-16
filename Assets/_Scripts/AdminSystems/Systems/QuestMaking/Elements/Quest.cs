@@ -20,7 +20,7 @@ public class Quest
 
         // Search for the highest valued tag
         highestValue = 0;
-        highestTagType = null;
+        highestTagType = QuestPieceTagType.Convince; // Counts as null
         foreach (var tagType in values.Keys)
         {
             int tagTypeValue = values[tagType];
