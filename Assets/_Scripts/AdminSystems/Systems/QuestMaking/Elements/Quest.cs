@@ -23,14 +23,54 @@ public class Quest
         // Search for the highest valued tag
         highestValue = 0;
         highestTagType = QuestPieceTagType.Convince; // Counts as null
+        List<QuestPieceTagType> highestTagsTypes = new List<QuestPieceTagType>(3);
         foreach (var tagType in values.Keys)
         {
             int tagTypeValue = values[tagType];
             if (tagTypeValue > highestValue)
             {
                 highestValue = tagTypeValue;
-                highestTagType = tagType;
+                highestTagsTypes.Clear();
+                highestTagsTypes.Add(tagType);
             }
+            else if (tagTypeValue == highestValue)
+            {
+                highestTagsTypes.Add(tagType);
+            }
+        }
+
+        if (highestTagsTypes.Count == 1)
+            highestTagType = highestTagsTypes[0];
+        else
+        {
+            QuestPiece action = GetPieceOfType(QuestPiece.PieceType.Action);
+            bool match = false;
+
+            // We iterate over all the tags of the action (They are sorted from highest value to lowest)
+            for (int i = 0; i < action.Tags.Count; i++)
+            {
+                QuestPieceTagType tagType = action.Tags[i].Type;
+                // We check if the tag is the one used 
+                for (int j = 0; j < highestTagsTypes.Count; j++)
+                {
+                    // If we find that the action tag is one
+                    // of the highest tags in a tie
+                    if (tagType == highestTagsTypes[j])
+                    {
+                        match = true;
+                        highestTagType = tagType;
+                        break;
+                    }
+                }
+
+                if (match)
+                    break;
+            }
+
+            // If the Action doesn't have any of the highest valued tags
+            // we select one of the highest tag types at "Random"
+            if (!match)
+                highestTagType = highestTagsTypes[0];
         }
     }
 
@@ -151,12 +191,12 @@ public class Quest
     //Obtener una lista de índices marcando los QuestPieceTagType que formen parte de Acción
     private List<int> GetActionTagValuesList(List<KeyValuePair<QuestPieceTagType, int>> tieList)
     {
-        QuestPiece actionPiece = GetTarget(QuestPiece.PieceType.Action);
+        QuestPiece actionPiece = GetPieceOfType(QuestPiece.PieceType.Action);
         List<QuestPieceTagType> actionPieceTagTypes = new List<QuestPieceTagType>();
 
-        for(int i = 0; i < actionPiece.m_Tags.Count; i++)
+        for (int i = 0; i < actionPiece.Tags.Count; i++)
         {
-            actionPieceTagTypes.Add(actionPiece.m_Tags[i].Type);
+            actionPieceTagTypes.Add(actionPiece.Tags[i].Type);
         }
 
         List<int> actionTags = new List<int>();
@@ -172,7 +212,7 @@ public class Quest
         return actionTags;
     }
 
-    public QuestPiece GetTarget(QuestPiece.PieceType pieceType)
+    public QuestPiece GetPieceOfType(QuestPiece.PieceType pieceType)
     {
         return m_PiecesList.Find((q) => q.Type == pieceType);
     }

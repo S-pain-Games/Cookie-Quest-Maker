@@ -13,7 +13,7 @@ public class QuestPiece : ScriptableObject
     [SerializeField]
     private PieceType m_Type = PieceType.Action;
     [SerializeField]
-    public List<QuestPieceTag> m_Tags = new List<QuestPieceTag>();
+    private List<QuestPieceTag> m_Tags = new List<QuestPieceTag>();
 
     // Saving the type as an enum/int allows us to check the type
     // way faster than using .GetType()

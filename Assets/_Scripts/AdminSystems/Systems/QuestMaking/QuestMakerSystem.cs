@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Entry point to the Quest Making Gameplay
-public class QuestMakerSystem
+public class QuestMakerSystem : MonoBehaviour
 {
-    [SerializeField]
     private StorySystem _storySystem;
-
-    [SerializeField]
     private Quest m_CurrentQuest = new Quest();
     private Story _currentStory;
 
-    public QuestMakerSystem()
+    public void Awake()
     {
         _storySystem = Admin.g_Instance.storySystem;
     }

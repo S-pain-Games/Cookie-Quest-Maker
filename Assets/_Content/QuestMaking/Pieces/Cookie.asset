@@ -15,7 +15,7 @@ MonoBehaviour:
   m_PieceName: Cookie
   m_Type: 4
   m_Tags:
-  - m_TagType: {fileID: 11400000, guid: 30e82cb6f9e399f499f2bda7231de83e, type: 2}
+  - m_TagType: 1
+    m_Value: 3
+  - m_TagType: 0
     m_Value: 2
-  - m_TagType: {fileID: 11400000, guid: 198c0a40521a62f40a12f7d2d4b09fea, type: 2}
-    m_Value: 1

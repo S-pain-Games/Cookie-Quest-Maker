@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6429135644975704831}
-  - component: {fileID: 8986479181680361690}
   m_Layer: 5
   m_Name: UI_QuestBuilder
   m_TagString: Untagged
@@ -41,22 +40,6 @@ RectTransform:
   m_AnchoredPosition: {x: -26, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8986479181680361690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6429135644975704830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07f0cc78f12562c48b4a8c40a86089fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _startMakingQuest: {fileID: 11400000, guid: 0c7f8dda2f9fbc94095bb9b927bb3f36, type: 2}
-  _addPiece: {fileID: 11400000, guid: 520ee8a2598ea90439077e48f9dc33c9, type: 2}
-  _removePiece: {fileID: 11400000, guid: ca9acd46ad10a1b4e85a247af9a26dcb, type: 2}
-  _finishMakingQuest: {fileID: 11400000, guid: f7cf8e2678d53ac4f876be14c0e6b081, type: 2}
 --- !u!1001 &953644455527941515
 PrefabInstance:
   m_ObjectHideFlags: 0
