@@ -25,11 +25,11 @@ public class UIQuestPieceEffects : MonoBehaviour
         _behaviour.OnUnsocketed += OnUnsocketed;
     }
 
-    private void OnUnsocketed()
+    private void OnUnsocketed(QuestPiece questPiece)
     {
     }
 
-    private void OnSocketedFailed()
+    private void OnSocketedFailed(QuestPiece questPiece)
     {
     }
 
