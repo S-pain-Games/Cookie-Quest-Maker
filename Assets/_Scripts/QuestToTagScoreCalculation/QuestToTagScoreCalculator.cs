@@ -1,92 +1,164 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-//public class QuestToTagScoreCalculator
-//{
+public class QuestToTagScoreCalculator
+{
 
-//    //INPUT: Phrase object
-//    //OUTPUT: TagResult containing the Tag of Action Word and its added value from all Words.
+    //INPUT: Phrase object
+    //OUTPUT: TagResult containing the highest Tag value added from all Words in Phrase.
 
-//    //Phrase Examples:
-//    //              [Attack]    [Mayor]     [Baseball Bat]
-//    //[Brutally]    [Attack]    [Mayor]     [Baseball Bat]
-//    //[Adjective]   [Action]    [Target]    [Tool]
+    //Phrase Examples:
+    //              [Attack]    [Mayor]     [Baseball Bat]
+    //[Brutally]    [Attack]    [Mayor]     [Baseball Bat]
+    //[Modifier]    [Action]    [Target]    [Object]
 
-//    //[Opt]         [Req]       [Req]       [Opt]
+    //[Opt]         [Req]       [Req]       [Opt]
+    /*
+    private Dictionary<TagIntensity, int> tagValueRecount;
 
-//    private Dictionary<string, int> tagValueRecount;
+    public QuestToTagScoreCalculator()
+    {
+        tagValueRecount = new Dictionary<TagIntensity, int>();
+    }
 
-//    public QuestToTagScoreCalculator()
-//    {
-//        tagValueRecount = new Dictionary<string, int>();
-//    }
+    //Recibir conjunto
+    public TagResult ParseQuestPhrase(Phrase questPhrase)
+    {
+        tagValueRecount.Clear();
 
-//    //Recibir conjunto
-//    public TagResult ParseQuestPhrase(Quest questPhrase)
-//    {
-//        tagValueRecount.Clear();
+        //Contabilizar los tags de las palabras
+        RecountTagValuesFromWord(questPhrase.Action);
+        RecountTagValuesFromWord(questPhrase.Target);
 
-//        //Lo suyo es que la Phrase contenga una lista de Words o algo
+        //Optional words
+        if (questPhrase.Modifier != null)
+            RecountTagValuesFromWord(questPhrase.Modifier);
 
-//        //Required words
-//        QuestPiece action = questPhrase.Action;
-//        QuestPiece target = questPhrase.Target;
+        if (questPhrase.Modifier != null)
+            RecountTagValuesFromWord(questPhrase.Object);
 
-//        //Optional words
-//        //Word adjective = questPhrase.Adjective;
-//        //Word tool = questPhrase.Tool;
+        return GenerateTagResult(questPhrase.Action);
+    }
 
-//        //Contabilizar los tags de las palabras
-//        RecountTagValuesFromWord(action);
-//        RecountTagValuesFromWord(target);
-//        //RecountTagValuesFromWord(adjective);
-//        //RecountTagValuesFromWord(tool);
+    private void RecountTagValuesFromWord(Word w)
+    {
+        foreach (TagIntensity tagi in w.m_Tags)
+        {
+            if (!tagValueRecount.ContainsKey(tagi))
+            {
+                tagValueRecount.Add(tagi, tagi.Intensity);
+            }
+            else
+            {
+                tagValueRecount[tagi] += tagi.Intensity;
+            }
+        }
+    }
 
-//        //Seleccionar el tag con prioridad y devolver su valor total
-//        QuestTagType selectedTag = action.m_Tags[0].Type;
-//        int selectedTagTotalValue = GetTotalValueOfWordTag(action);
+    private TagResult GenerateTagResult(Word action)
+    {
 
-//        Debug.Log("Priority Tag: "+ selectedTag.TagName+", Value: "+ selectedTagTotalValue);
-//        return GenerateTagResult(selectedTag, selectedTagTotalValue);
-//    }
+        //TO DO: ASEGURARSE DE QUE EFECTIVAMENTE LA LISTA ESTÁ ORDENADA
 
-//    private void RecountTagValuesFromWord(QuestPiece w)
-//    {
-//        foreach (QuestPieceTag tagi in w.m_Tags)
-//        {
-//            if (!tagValueRecount.ContainsKey(tagi.Type.TagName))
-//            {
-//                tagValueRecount.Add(tagi.Type.TagName, tagi.Value);
-//            }
-//            else
-//            {
-//                tagValueRecount[tagi.Type.TagName] += tagi.Value;
-//            }
-//        }
-//    }
+        tagValueRecount.OrderByDescending(key => key.Value);
 
-//    private int GetTotalValueOfWordTag(QuestPiece w)
-//    {
-//        //Dado que un Word puede contener varios tags, asumimos que el principal
-//        //es el primero de ellos.
+        var sortedDict = from entry in tagValueRecount orderby entry.Value descending select entry;
+        List<KeyValuePair<TagIntensity, int>> sortedList = sortedDict.ToList();
 
-//        return tagValueRecount[w.m_Tags[0].Type.TagName];
-//    }
+        KeyValuePair<TagIntensity, int> selected;
 
-//    public struct TagResult
-//    {
-//        public QuestTagType Tag;
-//        public int Value;
-//    }
+        //¿Sólo hay un elemento en la lista?
+        if (sortedList.Count == 1)
+        {
+            selected = sortedList[0];
+        }
+        //¿Hay empate entre la primera y segunda posición en la lista?
+        else if (sortedList[0].Value == sortedList[1].Value)
+        {
+            List<KeyValuePair<TagIntensity, int>> tieTagValues = GetTieTagValuesList(sortedList);
+            int selectedTagIndex = SelectTagIndexFromList(tieTagValues, action);
+            selected = sortedList[selectedTagIndex];
+        }
+        else
+        {
+            selected = sortedList[0];
+        }
 
-//    private TagResult GenerateTagResult(QuestTagType tag, int value)
-//    {
-//        TagResult tr = new TagResult
-//        {
-//            Tag = tag,
-//            Value = value
-//        };
-//        return tr;
-//    } 
-//}
+        return SetupTagResultWithTagAndValue(selected.Key.Tag, selected.Value);
+    }
+
+    private List<KeyValuePair<TagIntensity, int>> GetTieTagValuesList(List<KeyValuePair<TagIntensity, int>> sortedList)
+    {
+        List<KeyValuePair<TagIntensity, int>> tieValues = new List<KeyValuePair<TagIntensity, int>>();
+
+        int highestValue = sortedList[0].Value;
+
+        for (int i = 0; i < sortedList.Count; i++)
+        {
+            //Recorrer la lista añadiendo los Tags con el mismo valor
+            if (sortedList[i].Value == highestValue)
+            {
+                tieValues.Add(sortedList[i]);
+            }
+            else
+            {
+                break;
+            }
+        }
+
+        return tieValues;
+    }
+
+    private int SelectTagIndexFromList(List<KeyValuePair<TagIntensity, int>> tieTagValues, Word action)
+    {
+        List<int> actionTags = GetActionTagValuesList(tieTagValues, action);
+        if (actionTags.Count == 1)
+        {
+            return actionTags[0];
+        }
+        else if (actionTags.Count >= 1)
+        {
+            //Seleccionar aleatoriamente entre las acciones
+            return actionTags[Random.Range(0, actionTags.Count - 1)];
+        }
+        else
+        {
+            //Seleccionar aleatoriamente de la lista general
+            return Random.Range(0, tieTagValues.Count - 1);
+        }
+    }
+
+    private List<int> GetActionTagValuesList(List<KeyValuePair<TagIntensity, int>> tieList, Word action)
+    {
+        List<int> actionTags = new List<int>();
+
+        for (int i = 0; i < tieList.Count; i++)
+        {
+            if (action.m_Tags.Contains(tieList[i].Key))
+            {
+                actionTags.Add(i);
+            }
+        }
+
+        return actionTags;
+    }
+
+
+    private TagResult SetupTagResultWithTagAndValue(Tag tag, int value)
+    {
+        return new TagResult
+        {
+            Tag = tag,
+            Value = value
+        };
+    }
+
+    public struct TagResult
+    {
+        public Tag Tag;
+        public int Value;
+    }
+    */
+}
