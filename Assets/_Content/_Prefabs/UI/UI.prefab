@@ -112,6 +112,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Gameplay
       objectReference: {fileID: 0}
+    - target: {fileID: 4265434107107166167, guid: 2503c69490199f0459344a0abed57e1a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4265434107107166168, guid: 2503c69490199f0459344a0abed57e1a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -337,10 +341,6 @@ PrefabInstance:
     - target: {fileID: 8359491086150262351, guid: 94a9ebf5cb612bb4eba455d9a92fc869, type: 3}
       propertyPath: m_Name
       value: UI_QuestMakingTable
-      objectReference: {fileID: 0}
-    - target: {fileID: 8359491086150262351, guid: 94a9ebf5cb612bb4eba455d9a92fc869, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94a9ebf5cb612bb4eba455d9a92fc869, type: 3}

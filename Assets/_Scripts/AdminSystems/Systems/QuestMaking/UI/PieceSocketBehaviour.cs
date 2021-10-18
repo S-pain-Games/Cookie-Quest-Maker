@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PieceSocketBehaviour : MonoBehaviour
 {
     public bool Filled => m_Filled;
     public QuestPiece CurrentPiece => m_CurrentPiece;
+    public QuestPiece.PieceType RequiredType => m_RequiredType;
 
     public event Action<QuestPiece> OnPieceAdded;
     public event Action<QuestPiece> OnPieceRemoved;
@@ -35,5 +37,15 @@ public class PieceSocketBehaviour : MonoBehaviour
         m_Filled = false;
         OnPieceRemoved?.Invoke(m_CurrentPiece);
         m_CurrentPiece = null;
+    }
+
+    public void OnMatchingPieceSelectedHandle()
+    {
+        GetComponent<Image>().color = Color.blue;
+    }
+
+    public void OnMatchingPieceUnselectedHandle()
+    {
+        GetComponent<Image>().color = Color.red;
     }
 }

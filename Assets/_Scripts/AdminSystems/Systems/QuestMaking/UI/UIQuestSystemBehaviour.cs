@@ -21,13 +21,14 @@ public class UIQuestSystemBehaviour : MonoBehaviour
     {
         for (int i = 0; i < _sockets.Count; i++)
         {
-            _sockets[i].OnPieceAdded += OnPieceAdded;
-            _sockets[i].OnPieceRemoved += OnPieceRemoved;
+            _sockets[i].OnPieceAdded += OnPieceAddedHandle;
+            _sockets[i].OnPieceRemoved += OnPieceRemovedHandle;
         }
 
         for (int i = 0; i < _questPieces.Count; i++)
         {
-            _questPieces[i].OnSelected += OnPieceSelected;
+            _questPieces[i].OnSelected += OnPieceSelectedHandle;
+            _questPieces[i].OnUnselect += OnPieceUnselectedHandle;
         }
     }
 
@@ -35,25 +36,38 @@ public class UIQuestSystemBehaviour : MonoBehaviour
     {
         for (int i = 0; i < _sockets.Count; i++)
         {
-            _sockets[i].OnPieceAdded -= OnPieceAdded;
-            _sockets[i].OnPieceRemoved -= OnPieceRemoved;
+            _sockets[i].OnPieceAdded -= OnPieceAddedHandle;
+            _sockets[i].OnPieceRemoved -= OnPieceRemovedHandle;
         }
 
-
+        for (int i = 0; i < _questPieces.Count; i++)
+        {
+            _questPieces[i].OnSelected -= OnPieceSelectedHandle;
+            _questPieces[i].OnUnselect -= OnPieceUnselectedHandle;
+        }
     }
 
-    private void OnPieceAdded(QuestPiece piece)
+    private void OnPieceAddedHandle(QuestPiece piece)
     {
         _questMakerSystem.AddPiece(piece);
     }
 
-    private void OnPieceRemoved(QuestPiece piece)
+    private void OnPieceRemovedHandle(QuestPiece piece)
     {
         _questMakerSystem.RemovePiece(piece);
     }
 
-    private void OnPieceSelected(QuestPiece piece)
+    private void OnPieceSelectedHandle(UIQuestPieceBehaviour uiPiece)
     {
+        var matchingSocket = _sockets.Find((s) => { return s.RequiredType == uiPiece.Piece.Type; });
+        if (!matchingSocket.Filled)
+            matchingSocket.OnMatchingPieceSelectedHandle();
+    }
 
+    private void OnPieceUnselectedHandle(UIQuestPieceBehaviour uiPiece)
+    {
+        var matchingSocket = _sockets.Find((s) => { return s.RequiredType == uiPiece.Piece.Type; });
+        if (!matchingSocket.Filled)
+            matchingSocket.OnMatchingPieceUnselectedHandle();
     }
 }

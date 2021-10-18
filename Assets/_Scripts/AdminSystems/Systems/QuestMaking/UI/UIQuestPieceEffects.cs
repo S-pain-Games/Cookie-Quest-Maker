@@ -25,16 +25,16 @@ public class UIQuestPieceEffects : MonoBehaviour
         _behaviour.OnUnsocketed += OnUnsocketed;
     }
 
-    private void OnUnsocketed(QuestPiece questPiece)
+    private void OnUnsocketed(UIQuestPieceBehaviour piece)
     {
     }
 
-    private void OnSocketedFailed(QuestPiece questPiece)
+    private void OnSocketedFailed(UIQuestPieceBehaviour piece)
     {
     }
 
-    private void OnSocketedCorrectly(Vector3 pos)
+    private void OnSocketedCorrectly(UIQuestPieceBehaviour piece, PieceSocketBehaviour socket)
     {
-        transform.position = pos;
+        transform.position = socket.transform.position;
     }
 }

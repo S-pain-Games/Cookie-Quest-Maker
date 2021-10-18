@@ -11,10 +11,11 @@ using UnityEngine.EventSystems;
 public class UIQuestPieceBehaviour : MonoBehaviour
 {
     // Events
-    public event Action<Vector3> OnSocketCorrectly;
-    public event Action<QuestPiece> OnSocketFailed;
-    public event Action<QuestPiece> OnUnsocketed;
-    public event Action<QuestPiece> OnSelected;
+    public event Action<UIQuestPieceBehaviour, PieceSocketBehaviour> OnSocketCorrectly;
+    public event Action<UIQuestPieceBehaviour> OnSocketFailed;
+    public event Action<UIQuestPieceBehaviour> OnUnsocketed;
+    public event Action<UIQuestPieceBehaviour> OnSelected;
+    public event Action<UIQuestPieceBehaviour> OnUnselect;
 
     [HideInInspector]
     public UIDraggable draggable;
@@ -52,11 +53,11 @@ public class UIQuestPieceBehaviour : MonoBehaviour
                 {
                     m_Socketed = true;
                     _currentSocket = socket;
-                    OnSocketCorrectly?.Invoke(socket.transform.position);
+                    OnSocketCorrectly?.Invoke(this, socket);
                 }
                 else
                 {
-                    OnSocketFailed?.Invoke(m_Piece);
+                    OnSocketFailed?.Invoke(this);
                 }
 
                 //// We only check the first socket that we find
@@ -72,7 +73,7 @@ public class UIQuestPieceBehaviour : MonoBehaviour
             _currentSocket.RemovePiece();
             _currentSocket = null;
             m_Socketed = false;
-            OnUnsocketed?.Invoke(m_Piece);
+            OnUnsocketed?.Invoke(this);
         }
     }
 
@@ -88,11 +89,7 @@ public class UIQuestPieceBehaviour : MonoBehaviour
         draggable.OnBeginDragEvent += TryToUnsocket;
         draggable.OnEndDragEvent += TryToFitInSocket;
         pressable.OnPointerDownEvent += OnSelectedHandle;
-    }
-
-    private void OnSelectedHandle(PointerEventData obj)
-    {
-        OnSelected?.Invoke(m_Piece);
+        pressable.OnPointerUpEvent += OnUnselectedHandle;
     }
 
     private void OnDisable()
@@ -100,5 +97,15 @@ public class UIQuestPieceBehaviour : MonoBehaviour
         draggable.OnBeginDragEvent -= TryToUnsocket;
         draggable.OnEndDragEvent -= TryToFitInSocket;
         pressable.OnPointerDownEvent -= OnSelectedHandle;
+    }
+
+    private void OnSelectedHandle(PointerEventData obj)
+    {
+        OnSelected?.Invoke(this);
+    }
+
+    private void OnUnselectedHandle(PointerEventData obj)
+    {
+        OnUnselect?.Invoke(this);
     }
 }
