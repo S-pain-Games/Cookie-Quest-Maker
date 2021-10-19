@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Events;
+using UnityEditor;
 
 public class UIQuestSystemBehaviour : MonoBehaviour
 {
     [SerializeField]
-    private List<PieceSocketBehaviour> _sockets = new List<PieceSocketBehaviour>();
+    private List<UIPieceSocketBehaviour> _sockets = new List<UIPieceSocketBehaviour>();
     [SerializeField]
     private List<UIQuestPieceBehaviour> _questPieces = new List<UIQuestPieceBehaviour>();
 
@@ -19,52 +19,65 @@ public class UIQuestSystemBehaviour : MonoBehaviour
 
     private void OnEnable()
     {
+        // Register Sockets Events
         for (int i = 0; i < _sockets.Count; i++)
         {
-            _sockets[i].OnPieceAdded += OnPieceAddedHandle;
-            _sockets[i].OnPieceRemoved += OnPieceRemovedHandle;
+            _sockets[i].OnPieceSocketed += OnPieceSocketedHandle;
+            _sockets[i].OnPieceUnsocketed += OnPieceUnsocketedHandle;
         }
 
+        // Register Pieces Events
         for (int i = 0; i < _questPieces.Count; i++)
         {
-            _questPieces[i].OnSelected += OnPieceSelectedHandle;
-            _questPieces[i].OnUnselect += OnPieceUnselectedHandle;
+            _questPieces[i].OnSelected += OnPieceSelectedBroadcast;
+            _questPieces[i].OnUnselect += OnPieceUnselectedBroadcast;
         }
     }
 
     private void OnDisable()
     {
+        // Unregister Socket Events
         for (int i = 0; i < _sockets.Count; i++)
         {
-            _sockets[i].OnPieceAdded -= OnPieceAddedHandle;
-            _sockets[i].OnPieceRemoved -= OnPieceRemovedHandle;
+            _sockets[i].OnPieceSocketed -= OnPieceSocketedHandle;
+            _sockets[i].OnPieceUnsocketed -= OnPieceUnsocketedHandle;
         }
 
+        // Unregister Pieces Events
         for (int i = 0; i < _questPieces.Count; i++)
         {
-            _questPieces[i].OnSelected -= OnPieceSelectedHandle;
-            _questPieces[i].OnUnselect -= OnPieceUnselectedHandle;
+            _questPieces[i].OnSelected -= OnPieceSelectedBroadcast;
+            _questPieces[i].OnUnselect -= OnPieceUnselectedBroadcast;
         }
     }
 
-    private void OnPieceAddedHandle(QuestPiece piece)
+    [MethodButton]
+    private void GetSocketsAndPieces()
+    {
+        SerializedObject so = new SerializedObject(this);
+        GetComponentsInChildren(true, _sockets);
+        GetComponentsInChildren(true, _questPieces);
+        so.ApplyModifiedProperties();
+    }
+
+    private void OnPieceSocketedHandle(QuestPiece piece)
     {
         _questMakerSystem.AddPiece(piece);
     }
 
-    private void OnPieceRemovedHandle(QuestPiece piece)
+    private void OnPieceUnsocketedHandle(QuestPiece piece)
     {
         _questMakerSystem.RemovePiece(piece);
     }
 
-    private void OnPieceSelectedHandle(UIQuestPieceBehaviour uiPiece)
+    private void OnPieceSelectedBroadcast(UIQuestPieceBehaviour uiPiece)
     {
         var matchingSocket = _sockets.Find((s) => { return s.RequiredType == uiPiece.Piece.Type; });
         if (!matchingSocket.Filled)
             matchingSocket.OnMatchingPieceSelectedHandle();
     }
 
-    private void OnPieceUnselectedHandle(UIQuestPieceBehaviour uiPiece)
+    private void OnPieceUnselectedBroadcast(UIQuestPieceBehaviour uiPiece)
     {
         var matchingSocket = _sockets.Find((s) => { return s.RequiredType == uiPiece.Piece.Type; });
         if (!matchingSocket.Filled)

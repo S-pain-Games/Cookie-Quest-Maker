@@ -5,6 +5,7 @@ using UnityEngine;
 
 public enum QuestPieceTagType
 {
+    // It might be a horrible idea to serialize an enum
     Harm,
     Convince,
     Help

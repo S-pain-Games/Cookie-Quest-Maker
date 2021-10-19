@@ -11,7 +11,8 @@ public class UIDraggable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
     public event Action<PointerEventData> OnEndDragEvent;
     public event Action<PointerEventData> OnDragEvent;
 
-    [SerializeField] private Canvas _canvas;
+    [SerializeField]
+    private Canvas _canvas;
 
     private RectTransform _rect;
 

@@ -14,6 +14,9 @@ public class QuestMakerSystem : MonoBehaviour
         _storySystem = Admin.g_Instance.storySystem;
     }
 
+    // These methods have to be called in a specific order
+    // SelectStory -> StartBuildingQuest -> Add/Remove Pieces -> Finish Making Quest
+
     public void SelectStory(int index)
     {
         _currentStory = _storySystem.OngoingStories[index];

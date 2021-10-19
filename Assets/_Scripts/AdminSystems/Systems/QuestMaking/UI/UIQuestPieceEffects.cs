@@ -33,7 +33,7 @@ public class UIQuestPieceEffects : MonoBehaviour
     {
     }
 
-    private void OnSocketedCorrectly(UIQuestPieceBehaviour piece, PieceSocketBehaviour socket)
+    private void OnSocketedCorrectly(UIQuestPieceBehaviour piece, UIPieceSocketBehaviour socket)
     {
         transform.position = socket.transform.position;
     }

@@ -10,44 +10,61 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(RectTransform))]
 public class UIQuestPieceBehaviour : MonoBehaviour
 {
+    public QuestPiece Piece { get => m_Piece; }
+    public UIDraggable Draggable { get => _draggable; set => _draggable = value; }
+    public UIPressable Pressable { get => _pressable; set => _pressable = value; }
+
     // Events
-    public event Action<UIQuestPieceBehaviour, PieceSocketBehaviour> OnSocketCorrectly;
+    public event Action<UIQuestPieceBehaviour, UIPieceSocketBehaviour> OnSocketCorrectly;
     public event Action<UIQuestPieceBehaviour> OnSocketFailed;
     public event Action<UIQuestPieceBehaviour> OnUnsocketed;
     public event Action<UIQuestPieceBehaviour> OnSelected;
     public event Action<UIQuestPieceBehaviour> OnUnselect;
 
-    [HideInInspector]
-    public UIDraggable draggable;
-    [HideInInspector]
-    public UIPressable pressable;
-
-    public QuestPiece Piece { get => m_Piece; }
-
     [SerializeField]
     private QuestPiece m_Piece;
     [SerializeField]
     private Canvas _canvas;
-    // Raycast
+
+    private bool m_Socketed = false;
+    private UIPieceSocketBehaviour _currentSocket;
+    private UIDraggable _draggable;
+    private UIPressable _pressable;
     private GraphicRaycaster _raycaster;
     private List<RaycastResult> m_Results = new List<RaycastResult>();
-    // We use a bool to avoid null-checking Unity Objects
-    private bool m_Socketed = false;
-    private PieceSocketBehaviour _currentSocket;
+
+    private void Awake()
+    {
+        _raycaster = _canvas.GetComponent<GraphicRaycaster>();
+        _draggable = GetComponent<UIDraggable>();
+        _pressable = GetComponent<UIPressable>();
+    }
+
+    private void OnEnable()
+    {
+        _draggable.OnBeginDragEvent += TryToUnsocket;
+        _draggable.OnEndDragEvent += TryToFitInSocket;
+        _pressable.OnPointerDownEvent += OnSelectedHandle;
+        _pressable.OnPointerUpEvent += OnUnselectedHandle;
+    }
+
+    private void OnDisable()
+    {
+        _draggable.OnBeginDragEvent -= TryToUnsocket;
+        _draggable.OnEndDragEvent -= TryToFitInSocket;
+        _pressable.OnPointerDownEvent -= OnSelectedHandle;
+    }
 
     // We assume there are no overlaping sockets
     private void TryToFitInSocket(PointerEventData pointerEventData)
     {
-        PointerEventData pData = new PointerEventData(_canvas.GetComponent<EventSystem>());
-        pData.position = Input.mousePosition;
-
-        m_Results.Clear(); // We use a predefined list to somewhat avoid GC
-        _raycaster.Raycast(pData, m_Results);
+        //Fill the results array with raycast hits
+        FillRaycastData(Input.mousePosition);
 
         for (int i = 0; i < m_Results.Count; i++)
         {
             // For every result check if we found a socket
-            if (m_Results[i].gameObject.TryGetComponent(out PieceSocketBehaviour socket))
+            if (m_Results[i].gameObject.TryGetComponent(out UIPieceSocketBehaviour socket))
             {
                 if (socket.TryToSetPiece(m_Piece))
                 {
@@ -66,6 +83,15 @@ public class UIQuestPieceBehaviour : MonoBehaviour
         }
     }
 
+    private void FillRaycastData(Vector2 pos)
+    {
+        PointerEventData pData = new PointerEventData(_canvas.GetComponent<EventSystem>());
+        pData.position = pos;
+
+        m_Results.Clear();
+        _raycaster.Raycast(pData, m_Results);
+    }
+
     private void TryToUnsocket(PointerEventData obj)
     {
         if (m_Socketed)
@@ -77,30 +103,9 @@ public class UIQuestPieceBehaviour : MonoBehaviour
         }
     }
 
-    private void Awake()
-    {
-        _raycaster = _canvas.GetComponent<GraphicRaycaster>();
-        draggable = GetComponent<UIDraggable>();
-        pressable = GetComponent<UIPressable>();
-    }
-
-    private void OnEnable()
-    {
-        draggable.OnBeginDragEvent += TryToUnsocket;
-        draggable.OnEndDragEvent += TryToFitInSocket;
-        pressable.OnPointerDownEvent += OnSelectedHandle;
-        pressable.OnPointerUpEvent += OnUnselectedHandle;
-    }
-
-    private void OnDisable()
-    {
-        draggable.OnBeginDragEvent -= TryToUnsocket;
-        draggable.OnEndDragEvent -= TryToFitInSocket;
-        pressable.OnPointerDownEvent -= OnSelectedHandle;
-    }
-
     private void OnSelectedHandle(PointerEventData obj)
     {
+        // Somewhat redundant right now
         OnSelected?.Invoke(this);
     }
 

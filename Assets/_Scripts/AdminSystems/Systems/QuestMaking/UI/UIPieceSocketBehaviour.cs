@@ -4,29 +4,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PieceSocketBehaviour : MonoBehaviour
+public class UIPieceSocketBehaviour : MonoBehaviour
 {
     public bool Filled => m_Filled;
-    public QuestPiece CurrentPiece => m_CurrentPiece;
+    public QuestPiece CurrentPiece => _currentPiece;
     public QuestPiece.PieceType RequiredType => m_RequiredType;
 
-    public event Action<QuestPiece> OnPieceAdded;
-    public event Action<QuestPiece> OnPieceRemoved;
+    public event Action<QuestPiece> OnPieceSocketed;
+    public event Action<QuestPiece> OnPieceUnsocketed;
 
     [SerializeField]
     private bool m_Filled = false;
     [SerializeField]
-    private QuestPiece m_CurrentPiece;
-    [SerializeField]
     private QuestPiece.PieceType m_RequiredType = QuestPiece.PieceType.Action;
+    [SerializeField]
+    private QuestPiece _currentPiece;
 
     public bool TryToSetPiece(QuestPiece piece)
     {
         if (!m_Filled && piece.Type == m_RequiredType)
         {
-            m_CurrentPiece = piece;
+            _currentPiece = piece;
             m_Filled = true;
-            OnPieceAdded?.Invoke(piece);
+            OnPieceSocketed?.Invoke(piece);
             return true;
         }
         return false;
@@ -35,8 +35,8 @@ public class PieceSocketBehaviour : MonoBehaviour
     public void RemovePiece()
     {
         m_Filled = false;
-        OnPieceRemoved?.Invoke(m_CurrentPiece);
-        m_CurrentPiece = null;
+        OnPieceUnsocketed?.Invoke(_currentPiece);
+        _currentPiece = null;
     }
 
     public void OnMatchingPieceSelectedHandle()

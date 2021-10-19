@@ -5,19 +5,19 @@ using UnityEngine;
 [System.Serializable]
 public class QuestPiecesStorage
 {
-    public List<QuestPiece> AvailablePieces => m_AvaliablePieces;
+    public List<QuestPiece> AvailablePieces => m_AvailablePieces;
 
     [SerializeField]
-    private List<QuestPiece> m_AvaliablePieces = new List<QuestPiece>();
+    private List<QuestPiece> m_AvailablePieces = new List<QuestPiece>();
 
     public void AddPiece(QuestPiece piece)
     {
-        if (!m_AvaliablePieces.Contains(piece))
-            m_AvaliablePieces.Add(piece);
+        if (!m_AvailablePieces.Contains(piece))
+            m_AvailablePieces.Add(piece);
     }
 
     public void RemovePiece(QuestPiece piece)
     {
-        m_AvaliablePieces.Remove(piece);
+        m_AvailablePieces.Remove(piece);
     }
 }
