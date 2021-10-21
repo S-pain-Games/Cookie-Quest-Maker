@@ -22,7 +22,7 @@ public class UIPieceSocketBehaviour : MonoBehaviour
 
     public bool TryToSetPiece(QuestPiece piece)
     {
-        if (!m_Filled && piece.Type == m_RequiredType)
+        if (!m_Filled && piece.m_Type == m_RequiredType)
         {
             _currentPiece = piece;
             m_Filled = true;

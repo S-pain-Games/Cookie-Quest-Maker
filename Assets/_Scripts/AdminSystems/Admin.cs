@@ -5,22 +5,24 @@ using UnityEngine;
 [RequireComponent(typeof(StorySystem))]
 [RequireComponent(typeof(GameStateSystem))]
 [RequireComponent(typeof(TownSystem))]
-[RequireComponent(typeof(QuestMakerSystem))]
+[RequireComponent(typeof(QMGameplaySystem))]
 public class Admin : MonoBehaviour
 {
     public static Admin g_Instance;
 
     [HideInInspector]
     public StorySystem storySystem;
+    public StoryDB storyDB = new StoryDB();
+
+    [HideInInspector]
+    public QMGameplaySystem questMakerSystem;
+    public QuestDB questDB = new QuestDB();
 
     [HideInInspector]
     public GameStateSystem gameStateSystem;
 
     [HideInInspector]
     public TownSystem townSystem;
-
-    [HideInInspector]
-    public QuestMakerSystem questMakerSystem;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Init()
@@ -32,7 +34,12 @@ public class Admin : MonoBehaviour
     private void Initialize()
     {
         storySystem = GetComponent<StorySystem>();
+        storySystem.storyDB = storyDB;
+
         gameStateSystem = GetComponent<GameStateSystem>();
-        questMakerSystem = GetComponent<QuestMakerSystem>();
+
+        questMakerSystem = GetComponent<QMGameplaySystem>();
+        questMakerSystem.storySystem = storySystem;
+        questMakerSystem.storyDB = storyDB;
     }
 }

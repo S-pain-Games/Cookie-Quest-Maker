@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class QuestGetValueTest : MonoBehaviour
 {
-    public Quest quest;
+    public QuestData quest;
+    private QuestSystem qs = new QuestSystem();
 
     [MethodButton]
     public void LogValue()
     {
-        quest.GetOverallTag(out var t1, out int t1v);
-        quest.GetOverallTagV2(out var t2, out int t2v);
+        qs.GetOverallTag(quest.m_PiecesList, out var t1, out int t1v);
+        //qs.GetOverallTag(quest.m_PiecesList, out var t2, out int t2v);
 
         Debug.Log($"V1 : {t1} -> {t1v}");
-        Debug.Log($"V2 : {t2} -> {t2v}");
+        //Debug.Log($"V2 : {t2} -> {t2v}");
     }
 }

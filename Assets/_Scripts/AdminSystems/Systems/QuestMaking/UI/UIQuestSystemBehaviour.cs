@@ -12,7 +12,7 @@ namespace CQM.QuestMaking.UI
         [SerializeField]
         private List<UIQuestPieceBehaviour> _questPieces = new List<UIQuestPieceBehaviour>();
 
-        private QuestMakerSystem _questMakerSystem;
+        private QMGameplaySystem _questMakerSystem;
 
         private void Awake()
         {
@@ -74,14 +74,14 @@ namespace CQM.QuestMaking.UI
 
         private void OnPieceSelectedBroadcast(UIQuestPieceBehaviour uiPiece)
         {
-            var matchingSocket = _sockets.Find((s) => { return s.RequiredType == uiPiece.Piece.Type; });
+            var matchingSocket = _sockets.Find((s) => { return s.RequiredType == uiPiece.Piece.m_Type; });
             if (!matchingSocket.Filled)
                 matchingSocket.OnMatchingPieceSelectedHandle();
         }
 
         private void OnPieceUnselectedBroadcast(UIQuestPieceBehaviour uiPiece)
         {
-            var matchingSocket = _sockets.Find((s) => { return s.RequiredType == uiPiece.Piece.Type; });
+            var matchingSocket = _sockets.Find((s) => { return s.RequiredType == uiPiece.Piece.m_Type; });
             if (!matchingSocket.Filled)
                 matchingSocket.OnMatchingPieceUnselectedHandle();
         }
