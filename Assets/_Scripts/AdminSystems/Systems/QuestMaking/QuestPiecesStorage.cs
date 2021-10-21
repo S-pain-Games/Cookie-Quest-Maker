@@ -2,22 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class QuestPiecesStorage
+namespace CQM.QuestMaking
 {
-    public List<QuestPiece> AvailablePieces => m_AvailablePieces;
-
-    [SerializeField]
-    private List<QuestPiece> m_AvailablePieces = new List<QuestPiece>();
-
-    public void AddPiece(QuestPiece piece)
+    [System.Serializable]
+    public class QuestPiecesStorage
     {
-        if (!m_AvailablePieces.Contains(piece))
-            m_AvailablePieces.Add(piece);
-    }
+        public List<QuestPiece> AvailablePieces => m_AvailablePieces;
 
-    public void RemovePiece(QuestPiece piece)
-    {
-        m_AvailablePieces.Remove(piece);
+        [SerializeField]
+        private List<QuestPiece> m_AvailablePieces = new List<QuestPiece>();
+
+        public void AddPiece(QuestPiece piece)
+        {
+            if (!m_AvailablePieces.Contains(piece))
+                m_AvailablePieces.Add(piece);
+        }
+
+        public void RemovePiece(QuestPiece piece)
+        {
+            m_AvailablePieces.Remove(piece);
+        }
     }
 }
