@@ -35,7 +35,7 @@ public class MouseListener : MonoBehaviour
         if (hit.collider != null)
         {
             Debug.Log("He clickado en algo");
-            if (hit.transform.name == "walkable")
+            if (hit.transform.name == "Walkable")
             {
                 Debug.Log("Allé que voy");
                 agent.SetDestination(hit.point);
