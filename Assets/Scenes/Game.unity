@@ -6304,6 +6304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quest:
+    m_ID: -1
     m_PiecesList: []
 --- !u!4 &1008651117
 Transform:
@@ -8426,6 +8427,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852418534}
   m_CullTransparentMesh: 1
+--- !u!1 &1853599474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1853599476}
+  - component: {fileID: 1853599475}
+  m_Layer: 0
+  m_Name: QuestSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1853599475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853599474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: babfbfbd0475de9428ad78de9959aba7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest:
+    m_ID: -1
+    m_PiecesList:
+    - {fileID: 11400000, guid: fed4e92acf7c237459273d476448146b, type: 2}
+    - {fileID: 11400000, guid: 918d128d471db0643abfff57bfcbea2f, type: 2}
+    - {fileID: 11400000, guid: e23b9d3a20cbc204abd897778f434a3e, type: 2}
+    - {fileID: 11400000, guid: 6400d838d39c1374089efcfc5f381457, type: 2}
+--- !u!4 &1853599476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853599474}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 306.78476, y: 195.94652, z: -162.38174}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1855184709
 GameObject:
   m_ObjectHideFlags: 0
@@ -10390,6 +10441,7 @@ GameObject:
   - component: {fileID: 2081751218}
   - component: {fileID: 2081751219}
   - component: {fileID: 2081751222}
+  - component: {fileID: 2081751221}
   m_Layer: 0
   m_Name: Admin
   m_TagString: Untagged
@@ -10424,9 +10476,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storySystem: {fileID: 0}
+  questMakerSystem: {fileID: 0}
   gameStateSystem: {fileID: 0}
   townSystem: {fileID: 0}
-  questMakerSystem: {fileID: 0}
 --- !u!114 &2081751218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10464,6 +10516,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CurrentState: 0
+--- !u!114 &2081751221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081751215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412d670e91408c742a7c3e2a9ef31ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _storySystem: {fileID: 0}
 --- !u!114 &2081751222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10476,6 +10541,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733971da790876e4284d135a11effa35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _storySystem: {fileID: 0}
+  m_CurrentQuest:
+    m_PiecesList: []
+  _currentStory: {m_StoryData: {fileID: 0}, m_Completed: 0, m_Quest:
+      m_PiecesList: []
+, m_QuestResult: }
 --- !u!1 &2147292767
 GameObject:
   m_ObjectHideFlags: 0

@@ -77,7 +77,6 @@ public class EventSys : MonoBehaviour
             evt.Invoke(2);
         }
     }
-
 }
 
 public class Event<T>
