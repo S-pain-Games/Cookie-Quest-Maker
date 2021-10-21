@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-// Entry point to the Quest Making Gameplay
+// Entry point to the Quest Making Gameplay System
 public class QMGameplaySystem : MonoBehaviour
 {
     // Initialized through Admin
@@ -22,9 +22,16 @@ public class QMGameplaySystem : MonoBehaviour
         m_Data.m_StoryID = storyId;
     }
 
+    [MethodButton]
     public void StartBuildingQuest()
     {
         m_Data.m_CurrentQuest = new QuestData();
+    }
+
+    [MethodButton]
+    public void StartStory()
+    {
+        SelectStory("test".GetHashCode());
     }
 
     public void AddPiece(QuestPiece piece)
@@ -37,6 +44,7 @@ public class QMGameplaySystem : MonoBehaviour
         m_Data.m_CurrentQuest.m_PiecesList.Remove(piece);
     }
 
+    [MethodButton]
     public void FinishMakingQuest()
     {
         storySystem.CompleteStory(m_Data.m_StoryID, m_Data.m_CurrentQuest);

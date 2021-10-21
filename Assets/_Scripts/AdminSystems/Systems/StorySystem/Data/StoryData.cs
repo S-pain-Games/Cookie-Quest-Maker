@@ -10,7 +10,7 @@ public class StoryData
     public string m_IntroductionPhrase = "";
     public List<BranchOption> m_BranchOptions = new List<BranchOption>();
 
-    private void OnEnable()
+    public void Build()
     {
         // [Anthony] We have to sort by value descending because
         // we brute force search through all the options

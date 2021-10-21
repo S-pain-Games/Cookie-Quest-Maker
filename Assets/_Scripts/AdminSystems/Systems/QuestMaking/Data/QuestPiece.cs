@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class QuestPiece
 {
     public string m_PieceName = "Unnamed";

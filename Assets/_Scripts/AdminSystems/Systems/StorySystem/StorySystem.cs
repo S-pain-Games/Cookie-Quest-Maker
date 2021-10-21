@@ -12,7 +12,7 @@ public class StorySystem : MonoBehaviour
     [HideInInspector]
     public StoryDB storyDB;
     [HideInInspector]
-    public QuestSystem questSystem;
+    public QuestSystem questSystem = new QuestSystem();
 
     // Called by some in-game conversation that starts
     // a story with the given data
@@ -112,17 +112,56 @@ public class StoryDB
         LoadStoryRepercusions();
 
         Story s = new Story();
-        StoryData sData = new StoryData();
-        sData.m_Title = "The Introductory Madness";
-        sData.m_IntroductionPhrase = "Test Story Introduction";
-        BranchOption bOpt = new BranchOption();
-        bOpt.m_Repercusion = m_Repercusions["center_wolf_dead".GetHashCode()];
-        bOpt.m_Result = "Test Story Totally Completed Convincingly";
-        BranchCondition bCon = new BranchCondition();
-        bCon.m_Tag = QPTag.TagType.Convince;
-        bCon.m_Value = 1;
+        StoryData sData = new StoryData
+        {
+            m_Title = "The Introductory Madness",
+            m_IntroductionPhrase = "Test Story Introduction"
+        };
+
+        // Convince Condition
+        BranchOption bOpt = new BranchOption
+        {
+            m_Repercusion = m_Repercusions["center_wolf_dead".GetHashCode()],
+            m_Result = "Test Story Totally Completed Convincingly"
+        };
+        BranchCondition bCon = new BranchCondition
+        {
+            m_Tag = QPTag.TagType.Convince,
+            m_Value = 1
+        };
         bOpt.m_Condition = bCon;
         sData.m_BranchOptions.Add(bOpt);
+
+        // Help Condition
+        bOpt = new BranchOption
+        {
+            m_Repercusion = m_Repercusions["center_wolf_dead".GetHashCode()],
+            m_Result = "Test Story Totally Completed Helpingly"
+        };
+        bCon = new BranchCondition
+        {
+            m_Tag = QPTag.TagType.Help,
+            m_Value = 1
+        };
+        bOpt.m_Condition = bCon;
+        sData.m_BranchOptions.Add(bOpt);
+
+        // Harm Condition
+        bOpt = new BranchOption
+        {
+            m_Repercusion = m_Repercusions["center_wolf_dead".GetHashCode()],
+            m_Result = "Test Story Totally Completed Harmingly"
+        };
+        bCon = new BranchCondition
+        {
+            m_Tag = QPTag.TagType.Harm,
+            m_Value = 1
+        };
+        bOpt.m_Condition = bCon;
+        sData.m_BranchOptions.Add(bOpt);
+
+        s.m_StoryData = sData;
+        sData.Build();
 
         m_StoriesDB.Add("test".GetHashCode(), s);
     }

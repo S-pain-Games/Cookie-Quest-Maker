@@ -12,10 +12,6 @@ namespace CQM.QuestMaking.UI
     [RequireComponent(typeof(RectTransform))]
     public class UIQuestPieceBehaviour : MonoBehaviour
     {
-        public QuestPiece Piece { get => m_Piece; }
-        public UIDraggable Draggable { get => _draggable; set => _draggable = value; }
-        public UIPressable Pressable { get => _pressable; set => _pressable = value; }
-
         // Events
         public event Action<UIQuestPieceBehaviour, UIPieceSocketBehaviour> OnSocketCorrectly;
         public event Action<UIQuestPieceBehaviour> OnSocketFailed;
@@ -23,8 +19,8 @@ namespace CQM.QuestMaking.UI
         public event Action<UIQuestPieceBehaviour> OnSelected;
         public event Action<UIQuestPieceBehaviour> OnUnselect;
 
-        [SerializeField]
-        private QuestPiece m_Piece;
+        public string questPieceName;
+        public QuestPiece Piece;
         [SerializeField]
         private Canvas _canvas;
 
@@ -40,6 +36,7 @@ namespace CQM.QuestMaking.UI
             _raycaster = _canvas.GetComponent<GraphicRaycaster>();
             _draggable = GetComponent<UIDraggable>();
             _pressable = GetComponent<UIPressable>();
+            Piece = Admin.g_Instance.questDB.m_QPiecesDB[questPieceName.GetHashCode()];
         }
 
         private void OnEnable()
@@ -68,7 +65,7 @@ namespace CQM.QuestMaking.UI
                 // For every result check if we found a socket
                 if (m_Results[i].gameObject.TryGetComponent(out UIPieceSocketBehaviour socket))
                 {
-                    if (socket.TryToSetPiece(m_Piece))
+                    if (socket.TryToSetPiece(Piece))
                     {
                         m_Socketed = true;
                         _currentSocket = socket;
