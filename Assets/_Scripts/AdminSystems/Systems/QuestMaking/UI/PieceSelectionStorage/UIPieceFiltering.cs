@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace CQM.QuestMaking.UI
 {
-    public class UIPieceTypeSelectionMenu : MonoBehaviour
+    public class UIPieceFiltering : MonoBehaviour
     {
         public event Action<QuestPiece.PieceType> OnTypeSelected;
 

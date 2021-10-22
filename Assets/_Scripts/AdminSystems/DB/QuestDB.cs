@@ -14,48 +14,50 @@ namespace CQM.QuestMaking
 
         public void LoadData()
         {
+            var pIds = Admin.g_Instance.ID.pieces;
+
             QuestPiece qp = new QuestPiece();
             qp.m_PieceName = "Mayor";
             qp.m_Type = QuestPiece.PieceType.Target;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Help, m_Value = 1 });
-            m_QPiecesDB.Add(qp.m_PieceName.GetHashCode(), qp);
+            m_QPiecesDB.Add(pIds.mayor, qp);
 
             qp = new QuestPiece();
             qp.m_PieceName = "Attack";
             qp.m_Type = QuestPiece.PieceType.Action;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Harm, m_Value = 1 });
-            m_QPiecesDB.Add(qp.m_PieceName.GetHashCode(), qp);
+            m_QPiecesDB.Add(pIds.attack, qp);
 
             qp = new QuestPiece();
             qp.m_PieceName = "Assist";
             qp.m_Type = QuestPiece.PieceType.Action;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Help, m_Value = 1 });
-            m_QPiecesDB.Add(qp.m_PieceName.GetHashCode(), qp);
+            m_QPiecesDB.Add(pIds.assist, qp);
 
             qp = new QuestPiece();
             qp.m_PieceName = "Plain Cookie";
             qp.m_Type = QuestPiece.PieceType.Cookie;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Help, m_Value = 1 });
-            m_QPiecesDB.Add(qp.m_PieceName.GetHashCode(), qp);
+            m_QPiecesDB.Add(pIds.plain_cookie, qp);
 
             qp = new QuestPiece();
             qp.m_PieceName = "Brutally";
             qp.m_Type = QuestPiece.PieceType.Modifier;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Harm, m_Value = 1 });
-            m_QPiecesDB.Add(qp.m_PieceName.GetHashCode(), qp);
+            m_QPiecesDB.Add(pIds.brutally, qp);
 
             qp = new QuestPiece();
             qp.m_PieceName = "Kindly";
             qp.m_Type = QuestPiece.PieceType.Modifier;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Help, m_Value = 1 });
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Convince, m_Value = 1 });
-            m_QPiecesDB.Add(qp.m_PieceName.GetHashCode(), qp);
+            m_QPiecesDB.Add(pIds.kindly, qp);
 
             qp = new QuestPiece();
             qp.m_PieceName = "Baseball Bat";
             qp.m_Type = QuestPiece.PieceType.Object;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Harm, m_Value = 1 });
-            m_QPiecesDB.Add(qp.m_PieceName.GetHashCode(), qp);
+            m_QPiecesDB.Add(pIds.baseball_bat, qp);
         }
     }
 }

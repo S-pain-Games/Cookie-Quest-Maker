@@ -18,9 +18,9 @@ namespace CQM.QuestMaking
 
             // Development Init
             var qpDB = Admin.g_Instance.questDB;
-            m_Storage.Add(qpDB.m_QPiecesDB["Attack".GetHashCode()]);
-            m_Storage.Add(qpDB.m_QPiecesDB["Assist".GetHashCode()]);
-            m_Storage.Add(qpDB.m_QPiecesDB["Plain Cookie".GetHashCode()]);
+            m_Storage.Add(qpDB.m_QPiecesDB["attack".GetHashCode()]);
+            m_Storage.Add(qpDB.m_QPiecesDB["assist".GetHashCode()]);
+            m_Storage.Add(qpDB.m_QPiecesDB["plain_cookie".GetHashCode()]);
         }
     }
 }

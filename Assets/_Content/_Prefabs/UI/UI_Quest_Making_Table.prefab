@@ -1893,6 +1893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 214046996edee864595d62def113e306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _usePieceButton: {fileID: 981822224699440578}
   elementPrefab: {fileID: 4268874464596314010, guid: ceaaf49e13e315840bb7dfeabeb14893, type: 3}
 --- !u!1 &6805515914652588677
 GameObject:
@@ -2153,8 +2154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SelectedType: 0
-  _typeSelectionMenu: {fileID: 5977345680005447131}
-  _pieceStoragePanel: {fileID: 6436417832929187731}
+  _pieceFiltering: {fileID: 5977345680005447131}
+  _pieceSelector: {fileID: 6436417832929187731}
 --- !u!1 &8137308218377062409
 GameObject:
   m_ObjectHideFlags: 0
@@ -2340,8 +2341,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2009f93ffd9c343b44c3d324eab5a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questBuilding: {fileID: 3357964181116984691}
-  pieceStorage: {fileID: 7917835236941455739}
+  questBuilding: {fileID: 1579977950392787764}
+  pieceStorage: {fileID: 4670513893420986197}
 --- !u!1 &8359491086384177585
 GameObject:
   m_ObjectHideFlags: 0
@@ -2799,7 +2800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1951300516118146679, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
       propertyPath: questPieceName
-      value: Attack
+      value: attack
       objectReference: {fileID: 0}
     - target: {fileID: 6691497578398086120, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
       propertyPath: m_text
@@ -2932,7 +2933,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1951300516118146679, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
       propertyPath: questPieceName
-      value: Mayor
+      value: mayor
       objectReference: {fileID: 0}
     - target: {fileID: 6691497578398086120, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
       propertyPath: m_text
@@ -3065,7 +3066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1951300516118146679, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
       propertyPath: questPieceName
-      value: Baseball Bat
+      value: baseball_bat
       objectReference: {fileID: 0}
     - target: {fileID: 6691497578398086120, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
       propertyPath: m_text
@@ -3202,7 +3203,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: e23b9d3a20cbc204abd897778f434a3e, type: 2}
     - target: {fileID: 1951300516118146679, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
       propertyPath: questPieceName
-      value: Plain Cookie
+      value: plain_cookie
       objectReference: {fileID: 0}
     - target: {fileID: 6691497578398086120, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
       propertyPath: m_text
@@ -3500,7 +3501,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 6400d838d39c1374089efcfc5f381457, type: 2}
     - target: {fileID: 1951300516118146679, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
       propertyPath: questPieceName
-      value: Brutally
+      value: brutally
       objectReference: {fileID: 0}
     - target: {fileID: 6691497578398086120, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
       propertyPath: m_text
