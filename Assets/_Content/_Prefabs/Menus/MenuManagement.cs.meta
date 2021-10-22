@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c1fcea5fa6c412b428381fd302bb9a96
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - mainMenuAsset: {fileID: 3229752513453813309, guid: b4c47e997f1ad7b448a4068c2565f1b3, type: 3}
+  - optionsMenuAsset: {fileID: 85544775193067793, guid: 37cb75b35a3860c45a4488c3d3e9516a, type: 3}
+  - creditsMenuAsset: {fileID: 3614422331886971115, guid: 4bb1f71c81ce1434e8adb344f3a63472, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
