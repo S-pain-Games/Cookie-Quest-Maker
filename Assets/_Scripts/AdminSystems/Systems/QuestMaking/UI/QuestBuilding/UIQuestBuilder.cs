@@ -5,7 +5,7 @@ using UnityEditor;
 
 namespace CQM.QuestMaking.UI
 {
-    public class UIQuestSystemBehaviour : MonoBehaviour
+    public class UIQuestBuilder : MonoBehaviour
     {
         [SerializeField]
         private List<UIPieceSocketBehaviour> _sockets = new List<UIPieceSocketBehaviour>();
@@ -75,14 +75,14 @@ namespace CQM.QuestMaking.UI
         private void OnPieceSelectedBroadcast(UIQuestPieceBehaviour uiPiece)
         {
             var matchingSocket = _sockets.Find((s) => { return s.RequiredType == uiPiece.Piece.m_Type; });
-            if (!matchingSocket.Filled)
+            if (!matchingSocket.m_Filled)
                 matchingSocket.OnMatchingPieceSelectedHandle();
         }
 
         private void OnPieceUnselectedBroadcast(UIQuestPieceBehaviour uiPiece)
         {
             var matchingSocket = _sockets.Find((s) => { return s.RequiredType == uiPiece.Piece.m_Type; });
-            if (!matchingSocket.Filled)
+            if (!matchingSocket.m_Filled)
                 matchingSocket.OnMatchingPieceUnselectedHandle();
         }
     }
