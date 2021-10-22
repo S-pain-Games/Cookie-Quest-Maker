@@ -6,8 +6,6 @@ namespace CQM.QuestMaking.UI
 {
     public class UIPieceStorage : MonoBehaviour
     {
-        private QuestPiecesStorage _storage = new QuestPiecesStorage();
-
         [SerializeField]
         private UIPieceTypeSelectionMenu _typeSelectionMenu;
         private QuestPiece.PieceType m_SelectedType;

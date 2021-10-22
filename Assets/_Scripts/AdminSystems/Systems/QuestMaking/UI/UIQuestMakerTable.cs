@@ -23,6 +23,6 @@ public class UIQuestMakerTable : MonoBehaviour
 
     public void SpawnPieceInQuestBuilding(int pieceID)
     {
-
+        Logg.Log("Spawn Piece " + pieceID);
     }
 }

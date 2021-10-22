@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 // Processes quest data
 public class QuestSystem
@@ -86,115 +87,115 @@ public class QuestSystem
         return values;
     }
 
-    // [TO-DO] FIX ERRORS AFTER DOD
+    // [TO-DO] FIX ORDER BY ERROR AFTER DOD REDESIGN
     // =================================================
     // NEW
     // =================================================
 
-    //public void GetOverallTagV2(out QuestPieceTagType highestTagType, out int highestValue)
-    //{
-    //    Dictionary<QuestPieceTagType, int> valuesDict = CountAllTags();
+    public void GetOverallTagV2(List<QuestPiece> pieces, out QPTag.TagType highestTagType, out int highestValue)
+    {
+        Dictionary<QPTag.TagType, int> valuesDict = CountAllTags(pieces);
 
-    //    // Search for the highest valued tag
-    //    highestValue = 0;
-    //    highestTagType = QuestPieceTagType.Convince; // Counts as null
+        // Search for the highest valued tag
+        highestValue = 0;
+        highestTagType = QPTag.TagType.Convince; // Counts as null
 
 
-    //    //TO DO: ASEGURARSE DE QUE, EFECTIVAMENTE, LA LISTA ESTÉ ORDENADA
-    //    var sortedDict = from entry in valuesDict orderby entry.Value descending select entry;
-    //    List<KeyValuePair<QuestPieceTagType, int>> sortedList = sortedDict.ToList();
+        //TO DO: ASEGURARSE DE QUE, EFECTIVAMENTE, LA LISTA ESTÉ ORDENADA
+        //var sortedDict = from entry in valuesDict orderby entry.Value descending select entry;
+        //List<KeyValuePair<QPTag.TagType, int>> sortedList = sortedDict.ToList();
 
-    //    KeyValuePair<QuestPieceTagType, int> selected;
+        //KeyValuePair<QPTag.TagType, int> selected;
 
-    //    //¿Sólo hay un elemento en la lista?
-    //    if (sortedList.Count == 1)
-    //    {
-    //        selected = sortedList[0];
-    //    }
-    //    //¿Hay empate entre la primera y segunda posición en la lista?
-    //    else if (sortedList[0].Value == sortedList[1].Value)
-    //    {
-    //        List<KeyValuePair<QuestPieceTagType, int>> tieTagValues = GetTieTagValuesList(sortedList);
-    //        int selectedTagIndex = SelectTagIndexFromList(tieTagValues);
-    //        selected = tieTagValues[selectedTagIndex];
-    //    }
-    //    else
-    //    {
-    //        selected = sortedList[0];
-    //    }
+        ////¿Sólo hay un elemento en la lista?
+        //if (sortedList.Count == 1)
+        //{
+        //    selected = sortedList[0];
+        //}
+        ////¿Hay empate entre la primera y segunda posición en la lista?
+        //else if (sortedList[0].Value == sortedList[1].Value)
+        //{
+        //    List<KeyValuePair<QPTag.TagType, int>> tieTagValues = GetTieTagValuesList(sortedList);
+        //    int selectedTagIndex = SelectTagIndexFromList(pieces, tieTagValues);
+        //    selected = tieTagValues[selectedTagIndex];
+        //}
+        //else
+        //{
+        //    selected = sortedList[0];
+        //}
 
-    //    //Tag y valor seleccionado
-    //    highestValue = selected.Value;
-    //    highestTagType = selected.Key;
-    //}
+        ////Tag y valor seleccionado
+        //highestValue = selected.Value;
+        //highestTagType = selected.Key;
+    }
 
-    //private List<KeyValuePair<QuestPieceTagType, int>> GetTieTagValuesList(List<KeyValuePair<QuestPieceTagType, int>> sortedList)
-    //{
-    //    List<KeyValuePair<QuestPieceTagType, int>> tieValues = new List<KeyValuePair<QuestPieceTagType, int>>();
+    private List<KeyValuePair<QPTag.TagType, int>> GetTieTagValuesList(List<KeyValuePair<QPTag.TagType, int>> sortedList)
+    {
+        List<KeyValuePair<QPTag.TagType, int>> tieValues = new List<KeyValuePair<QPTag.TagType, int>>();
 
-    //    int highestValue = sortedList[0].Value;
+        int highestValue = sortedList[0].Value;
 
-    //    //Recorrer la lista añadiendo los Tags con el mismo valor
-    //    for (int i = 0; i < sortedList.Count; i++)
-    //    {
-    //        if (sortedList[i].Value == highestValue)
-    //        {
-    //            tieValues.Add(sortedList[i]);
-    //        }
-    //        else
-    //        {
-    //            break;
-    //        }
-    //    }
+        //Recorrer la lista añadiendo los Tags con el mismo valor
+        for (int i = 0; i < sortedList.Count; i++)
+        {
+            if (sortedList[i].Value == highestValue)
+            {
+                tieValues.Add(sortedList[i]);
+            }
+            else
+            {
+                break;
+            }
+        }
 
-    //    return tieValues;
-    //}
+        return tieValues;
+    }
 
-    //private int SelectTagIndexFromList(List<KeyValuePair<QuestPieceTagType, int>> tieTagValues)
-    //{
-    //    List<int> actionTagsIndex = GetActionTagValuesList(tieTagValues);
-    //    if (actionTagsIndex.Count == 1)
-    //    {
-    //        return actionTagsIndex[0];
-    //    }
-    //    else if (actionTagsIndex.Count >= 1)
-    //    {
-    //        //Seleccionar aleatoriamente entre las acciones
-    //        return actionTagsIndex[Random.Range(0, actionTagsIndex.Count - 1)];
-    //    }
-    //    else
-    //    {
-    //        //Seleccionar aleatoriamente de la lista general
-    //        return Random.Range(0, tieTagValues.Count - 1);
-    //    }
-    //}
+    private int SelectTagIndexFromList(List<QuestPiece> pieces, List<KeyValuePair<QPTag.TagType, int>> tieTagValues)
+    {
+        List<int> actionTagsIndex = GetActionTagValuesList(pieces, tieTagValues);
+        if (actionTagsIndex.Count == 1)
+        {
+            return actionTagsIndex[0];
+        }
+        else if (actionTagsIndex.Count >= 1)
+        {
+            //Seleccionar aleatoriamente entre las acciones
+            return actionTagsIndex[Random.Range(0, actionTagsIndex.Count - 1)];
+        }
+        else
+        {
+            //Seleccionar aleatoriamente de la lista general
+            return Random.Range(0, tieTagValues.Count - 1);
+        }
+    }
 
-    ////Obtener una lista de índices marcando los QuestPieceTagType que formen parte de Acción
-    //private List<int> GetActionTagValuesList(List<KeyValuePair<QuestPieceTagType, int>> tieList)
-    //{
-    //    QuestPiece actionPiece = GetPieceOfType(QuestPiece.PieceType.Action);
-    //    List<QuestPieceTagType> actionPieceTagTypes = new List<QuestPieceTagType>();
+    //Obtener una lista de índices marcando los QuestPieceTagType que formen parte de Acción
+    private List<int> GetActionTagValuesList(List<QuestPiece> pieces, List<KeyValuePair<QPTag.TagType, int>> tieList)
+    {
+        QuestPiece actionPiece = GetPieceOfType(pieces, QuestPiece.PieceType.Action);
+        List<QPTag.TagType> actionPieceTagTypes = new List<QPTag.TagType>();
 
-    //    for (int i = 0; i < actionPiece.m_Tags.Count; i++)
-    //    {
-    //        actionPieceTagTypes.Add(actionPiece.m_Tags[i].Type);
-    //    }
+        for (int i = 0; i < actionPiece.m_Tags.Count; i++)
+        {
+            actionPieceTagTypes.Add(actionPiece.m_Tags[i].m_Type);
+        }
 
-    //    List<int> actionTags = new List<int>();
+        List<int> actionTags = new List<int>();
 
-    //    for (int i = 0; i < tieList.Count; i++)
-    //    {
-    //        if (actionPieceTagTypes.Contains(tieList[i].Key))
-    //        {
-    //            actionTags.Add(i);
-    //        }
-    //    }
+        for (int i = 0; i < tieList.Count; i++)
+        {
+            if (actionPieceTagTypes.Contains(tieList[i].Key))
+            {
+                actionTags.Add(i);
+            }
+        }
 
-    //    return actionTags;
-    //}
+        return actionTags;
+    }
 
-    //public QuestPiece GetPieceOfType(QuestPiece.PieceType pieceType)
-    //{
-    //    return m_PiecesList.Find((q) => q.m_Type == pieceType);
-    //}
+    public QuestPiece GetPieceOfType(List<QuestPiece> pieces, QuestPiece.PieceType pieceType)
+    {
+        return pieces.Find((q) => q.m_Type == pieceType);
+    }
 }
