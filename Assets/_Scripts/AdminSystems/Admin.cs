@@ -1,3 +1,4 @@
+using CQM.QuestMaking;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,19 +11,20 @@ public class Admin : MonoBehaviour
 {
     public static Admin g_Instance;
 
-    [HideInInspector]
+    public GameDataIDs ID = new GameDataIDs();
+
+    // Game Data Storage
+    public StoryDB storyDB;
+    public QuestDB questDB;
+
+    // Game Systems
     public StorySystem storySystem;
-    public StoryDB storyDB = new StoryDB();
-
-    [HideInInspector]
     public QMGameplaySystem questMakerSystem;
-    public QuestDB questDB = new QuestDB();
-
-    [HideInInspector]
     public GameStateSystem gameStateSystem;
-
-    [HideInInspector]
     public TownSystem townSystem;
+
+    // Player Systems
+    public PlayerPieceStorage playerPieceStorage;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Init()
@@ -33,13 +35,30 @@ public class Admin : MonoBehaviour
 
     private void Initialize()
     {
+        // INITIALIZATION ORDER MATTERS
+
+        // Get Game Systems Components
         storySystem = GetComponent<StorySystem>();
-        storySystem.storyDB = storyDB;
-
         gameStateSystem = GetComponent<GameStateSystem>();
-
         questMakerSystem = GetComponent<QMGameplaySystem>();
+
+        // Create DBs
+        storyDB = new StoryDB();
+        questDB = new QuestDB();
+
+        // Load Data
+        storyDB.LoadData();
+        questDB.LoadData();
+
+        // Initialize Game Systems References
+        storySystem.storyDB = storyDB;
         questMakerSystem.storySystem = storySystem;
         questMakerSystem.storyDB = storyDB;
+
+        // Create Player Systems
+        playerPieceStorage = new PlayerPieceStorage();
+
+        // Initialize Player Systems
+        playerPieceStorage.Initialize();
     }
 }

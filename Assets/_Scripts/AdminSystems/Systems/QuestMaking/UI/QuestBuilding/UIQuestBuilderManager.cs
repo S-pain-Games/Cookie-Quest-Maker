@@ -5,7 +5,7 @@ using UnityEditor;
 
 namespace CQM.QuestMaking.UI
 {
-    public class UIQuestBuilder : MonoBehaviour
+    public class UIQuestBuilderManager : MonoBehaviour
     {
         [SerializeField]
         private List<UIPieceSocketBehaviour> _sockets = new List<UIPieceSocketBehaviour>();
@@ -56,10 +56,8 @@ namespace CQM.QuestMaking.UI
         [MethodButton]
         private void GetSocketsAndPieces()
         {
-            SerializedObject so = new SerializedObject(this);
             GetComponentsInChildren(true, _sockets);
             GetComponentsInChildren(true, _questPieces);
-            so.ApplyModifiedProperties();
         }
 
         private void OnPieceSocketedHandle(QuestPiece piece)
