@@ -51,9 +51,8 @@ public class Admin : MonoBehaviour
         questDB.LoadData();
 
         // Initialize Game Systems References
-        storySystem.storyDB = storyDB;
-        questMakerSystem.storySystem = storySystem;
-        questMakerSystem.storyDB = storyDB;
+        storySystem.Initialize(storyDB);
+        questMakerSystem.Initialize(storySystem, storyDB);
 
         // Create Player Systems
         playerPieceStorage = new PlayerPieceStorage();

@@ -11,11 +11,55 @@ namespace CQM.QuestMaking
         public Dictionary<int, QuestData> m_QuestDataDB = new Dictionary<int, QuestData>();
         // Contains all quest pieces in the game
         public Dictionary<int, QuestPiece> m_QPiecesDB = new Dictionary<int, QuestPiece>();
+        // Contains all the UI Data of each quest piece
+        public Dictionary<int, UIQuestPieceData> m_UIQuestPieces = new Dictionary<int, UIQuestPieceData>();
 
         public void LoadData()
         {
             var pIds = Admin.g_Instance.ID.pieces;
 
+            LoadQuestPieces(pIds);
+            LoadUIQuestPieces(pIds);
+        }
+
+        private void LoadUIQuestPieces(IDQuestPieces pIds)
+        {
+            UIQuestPieceData qpd = new UIQuestPieceData
+            {
+                sprite = null,
+                name = "Mayor",
+                description = "A very respected man in town (by some)"
+            };
+            m_UIQuestPieces.Add(pIds.mayor, qpd);
+
+            qpd = new UIQuestPieceData
+            {
+                sprite = null,
+                name = "Plain Cookie",
+                description = "Very plain"
+            };
+            m_UIQuestPieces.Add(pIds.plain_cookie, qpd);
+
+            qpd = new UIQuestPieceData
+            {
+                sprite = null,
+                name = "Attack",
+                description = "Sometimes violence IS the answer -Evil Cookie Goddess"
+            };
+            m_UIQuestPieces.Add(pIds.attack, qpd);
+
+            qpd = new UIQuestPieceData
+            {
+                sprite = null,
+                name = "Assist",
+                description = "Being able to assist someone in need is very gud -Angelic Cookie God"
+            };
+            m_UIQuestPieces.Add(pIds.assist, qpd);
+        }
+
+
+        private void LoadQuestPieces(IDQuestPieces pIds)
+        {
             QuestPiece qp = new QuestPiece();
             qp.m_PieceName = "Mayor";
             qp.m_Type = QuestPiece.PieceType.Target;

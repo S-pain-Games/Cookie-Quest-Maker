@@ -8,8 +8,8 @@ namespace CQM.QuestMaking
     // Storage of all the unlocked pieces and cookies that the player has
     public class PlayerPieceStorage
     {
-        // List of unlocked pieces for the player
-        public List<QuestPiece> m_Storage = new List<QuestPiece>();
+        // List of unlocked pieces IDs for the player
+        public List<int> m_Storage = new List<int>();
 
         public void Initialize()
         {
@@ -18,9 +18,9 @@ namespace CQM.QuestMaking
 
             // Development Init
             var qpDB = Admin.g_Instance.questDB;
-            m_Storage.Add(qpDB.m_QPiecesDB["attack".GetHashCode()]);
-            m_Storage.Add(qpDB.m_QPiecesDB["assist".GetHashCode()]);
-            m_Storage.Add(qpDB.m_QPiecesDB["plain_cookie".GetHashCode()]);
+            m_Storage.Add("attack".GetHashCode());
+            m_Storage.Add("assist".GetHashCode());
+            m_Storage.Add("plain_cookie".GetHashCode());
         }
     }
 }

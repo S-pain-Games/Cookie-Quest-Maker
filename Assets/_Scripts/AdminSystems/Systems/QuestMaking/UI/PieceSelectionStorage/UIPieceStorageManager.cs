@@ -9,37 +9,35 @@ namespace CQM.QuestMaking.UI
     // important data
     public class UIPieceStorageManager : MonoBehaviour
     {
-        public event Action<QuestPiece> OnUsePiece;
+        public event Action<int> OnUsePiece;
 
         public QuestPiece.PieceType m_SelectedType;
 
-        [SerializeField]
-        private UIPieceFiltering _pieceFiltering;
-        [SerializeField]
-        private UIPieceSelection _pieceSelector;
+        [SerializeField] private PieceFilteringMenu _pieceFiltering;
+        [SerializeField] private UIPieceSelection _pieceSelector;
 
         private void OnEnable()
         {
-            _pieceFiltering.OnTypeSelected += TypeSelectionMenu_OnTypeSelected;
+            _pieceFiltering.OnFilterSelected += PieceFiltering_OnFilterSelected;
             _pieceSelector.OnUsePiece += PieceSelection_OnUsePiece;
         }
 
         private void OnDisable()
         {
-            _pieceFiltering.OnTypeSelected -= TypeSelectionMenu_OnTypeSelected;
+            _pieceFiltering.OnFilterSelected -= PieceFiltering_OnFilterSelected;
             _pieceSelector.OnUsePiece -= PieceSelection_OnUsePiece;
         }
 
-        private void TypeSelectionMenu_OnTypeSelected(QuestPiece.PieceType type)
+        private void PieceFiltering_OnFilterSelected(QuestPiece.PieceType type)
         {
             m_SelectedType = type;
             _pieceSelector.Refresh(type);
         }
 
         // Called by the Use UI button
-        private void PieceSelection_OnUsePiece(QuestPiece piece)
+        private void PieceSelection_OnUsePiece(int pieceID)
         {
-            OnUsePiece?.Invoke(piece);
+            OnUsePiece?.Invoke(pieceID);
         }
     }
 }

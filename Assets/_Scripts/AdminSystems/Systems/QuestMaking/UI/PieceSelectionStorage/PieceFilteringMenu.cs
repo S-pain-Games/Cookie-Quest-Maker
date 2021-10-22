@@ -5,9 +5,9 @@ using UnityEngine;
 
 namespace CQM.QuestMaking.UI
 {
-    public class UIPieceFiltering : MonoBehaviour
+    public class PieceFilteringMenu : MonoBehaviour
     {
-        public event Action<QuestPiece.PieceType> OnTypeSelected;
+        public event Action<QuestPiece.PieceType> OnFilterSelected;
 
         [SerializeField]
         private List<UIPieceTypeSelectionButton> m_Buttons = new List<UIPieceTypeSelectionButton>();
@@ -30,7 +30,7 @@ namespace CQM.QuestMaking.UI
 
         private void ButtonClickedHandle(QuestPiece.PieceType type)
         {
-            OnTypeSelected?.Invoke(type);
+            OnFilterSelected?.Invoke(type);
         }
     }
 }

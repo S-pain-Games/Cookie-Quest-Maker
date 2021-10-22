@@ -6,31 +6,35 @@ using System;
 [RequireComponent(typeof(UIPressable))]
 public class UIStorageElement : MonoBehaviour
 {
-    public event Action<QuestPiece> OnSelected;
+    public event Action<int> OnSelected;
 
     public RectTransform m_RectTransf;
-    public string elemName = "Unnamed";
-    public QuestPiece questPiece;
+    public int pieceID; // Used as an ID
 
     private TextMeshProUGUI _textComp;
-    private UIPressable pressable;
+    private UIPressable _pressable;
 
     private void Awake()
     {
-        pressable = GetComponent<UIPressable>();
+        _pressable = GetComponent<UIPressable>();
         _textComp = GetComponentInChildren<TextMeshProUGUI>();
     }
 
     private void OnEnable()
     {
-        pressable.OnPointerDownEvent += OnPointerDown;
-        pressable.OnPointerUpEvent += OnPointerUpEvent;
+        _pressable.OnPointerDownEvent += OnPointerDown;
+        _pressable.OnPointerUpEvent += OnPointerUpEvent;
     }
 
     private void OnDisable()
     {
-        pressable.OnPointerDownEvent -= OnPointerDown;
-        pressable.OnPointerUpEvent -= OnPointerUpEvent;
+        _pressable.OnPointerDownEvent -= OnPointerDown;
+        _pressable.OnPointerUpEvent -= OnPointerUpEvent;
+    }
+
+    public void Build()
+    {
+        //_textComp.text = elemName;
     }
 
     private void OnPointerUpEvent(PointerEventData obj)
@@ -39,11 +43,6 @@ public class UIStorageElement : MonoBehaviour
 
     private void OnPointerDown(PointerEventData obj)
     {
-        OnSelected?.Invoke(questPiece);
-    }
-
-    public void Build()
-    {
-        _textComp.text = elemName;
+        OnSelected?.Invoke(pieceID);
     }
 }

@@ -8,18 +8,21 @@ using UnityEngine;
 public class StorySystem : MonoBehaviour
 {
     // Initialized Through Admin
-    [HideInInspector]
-    public StoryDB storyDB;
-    [HideInInspector]
-    public QuestSystem questSystem = new QuestSystem(); // This could be refactored
+    private StoryDB _storyDB;
+    private QuestSystem _questSystem = new QuestSystem(); // This could be refactored
+
+    public void Initialize(StoryDB storyDb)
+    {
+        _storyDB = storyDb;
+    }
 
     // Called by some in-game conversation that starts
     // a story with the given data
     public void StartStory(int storyId)
     {
-        Story story = storyDB.m_StoriesDB[storyId];
+        Story story = _storyDB.m_StoriesDB[storyId];
         story.m_State = Story.State.InProgress;
-        storyDB.m_OngoingStories.Add(story);
+        _storyDB.m_OngoingStories.Add(story);
     }
 
     // We assume that the quest passed here 
@@ -28,11 +31,11 @@ public class StorySystem : MonoBehaviour
     // has definitely decided that the quest is final
     public void CompleteStory(int storyId, QuestData questData)
     {
-        Story story = storyDB.m_StoriesDB[storyId];
-        storyDB.m_OngoingStories.Remove(story);
-        storyDB.m_CompletedStories.Add(story);
+        Story story = _storyDB.m_StoriesDB[storyId];
+        _storyDB.m_OngoingStories.Remove(story);
+        _storyDB.m_CompletedStories.Add(story);
 
-        questSystem.GetOverallTag(questData.m_PiecesList, out QPTag.TagType tagType, out int value);
+        _questSystem.GetOverallTag(questData.m_PiecesList, out QPTag.TagType tagType, out int value);
         ProcessStoryData(story.m_StoryData, tagType, value, out string result);
         story.m_QuestResult = result;
         story.m_State = Story.State.Completed;

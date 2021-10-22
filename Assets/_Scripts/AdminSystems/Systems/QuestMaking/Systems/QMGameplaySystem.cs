@@ -6,13 +6,17 @@ using UnityEngine;
 // Entry point to the Quest Making Gameplay System
 public class QMGameplaySystem : MonoBehaviour
 {
-    // Initialized through Admin
-    [HideInInspector]
-    public StorySystem storySystem;
-    [HideInInspector]
-    public StoryDB storyDB;
+    // References to Systems and Dbs
+    private StorySystem _storySystem;
+    private StoryDB _storyDB;
 
     private QMGameplayData m_Data = new QMGameplayData();
+
+    public void Initialize(StorySystem storySys, StoryDB storyDb)
+    {
+        _storySystem = storySys;
+        _storyDB = storyDb;
+    }
 
     // These methods have to be called in a specific order
     // SelectStory -> StartBuildingQuest -> Add/Remove Pieces -> Finish Making Quest
@@ -47,7 +51,7 @@ public class QMGameplaySystem : MonoBehaviour
     [MethodButton]
     public void FinishMakingQuest()
     {
-        storySystem.CompleteStory(m_Data.m_StoryID, m_Data.m_CurrentQuest);
+        _storySystem.CompleteStory(m_Data.m_StoryID, m_Data.m_CurrentQuest);
     }
 }
 

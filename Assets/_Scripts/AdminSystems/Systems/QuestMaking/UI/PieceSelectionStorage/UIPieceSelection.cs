@@ -4,20 +4,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 // Handles the UI that shows all the available pieces of the selected type
 public class UIPieceSelection : MonoBehaviour
 {
     // Use Piece Handling
-    public event Action<QuestPiece> OnUsePiece;
-    private QuestPiece m_SelectedPiece;
+    public event Action<int> OnUsePiece;
 
-    [SerializeField]
-    private Button _usePieceButton;
+    private int m_SelectedPieceID;
+
+    [SerializeField] private Button _usePieceButton;
+    [SerializeField] private UISelectedPiece _uiSelectedPiece;
 
     // Managing Piece UI Elements variables
-    [SerializeField]
-    private GameObject elementPrefab;
+    [SerializeField] private GameObject elementPrefab;
     private RectTransform rectTransf;
     private List<UIStorageElement> m_Elements = new List<UIStorageElement>();
 
@@ -54,32 +55,58 @@ public class UIPieceSelection : MonoBehaviour
         var storage = Admin.g_Instance.playerPieceStorage.m_Storage;
         for (int i = 0; i < storage.Count; i++)
         {
-            if (storage[i].m_Type == pieceType)
+            var questPiece = Admin.g_Instance.questDB.m_QPiecesDB[storage[i]];
+            if (questPiece.m_Type == pieceType)
             {
                 // Create and position corresponding elements in UI
                 pos += new Vector3(250, 0, 0);
-                var elem = Instantiate(elementPrefab, pos, Quaternion.identity, transform).GetComponent<UIStorageElement>();
-                elem.transform.localPosition = pos;
+                var UIstorageElem = Instantiate(elementPrefab, pos, Quaternion.identity, transform).GetComponent<UIStorageElement>();
+                UIstorageElem.transform.localPosition = pos;
 
                 // Initialize Element Data and Events
-                elem.elemName = storage[i].m_PieceName;
-                elem.questPiece = storage[i];
-                elem.OnSelected += StoragePiece_OnClicked;
+                UIstorageElem.pieceID = storage[i];
+                UIstorageElem.OnSelected += StoragePiece_OnClicked;
 
                 // Build UI Element using previously initialized data
-                elem.Build();
-                m_Elements.Add(elem);
+                UIstorageElem.Build();
+                m_Elements.Add(UIstorageElem);
             }
         }
     }
 
-    private void StoragePiece_OnClicked(QuestPiece piece)
+    private void StoragePiece_OnClicked(int questPieceID)
     {
-        m_SelectedPiece = piece;
+        m_SelectedPieceID = questPieceID;
+        // Update UI
+        var UIPieceData = Admin.g_Instance.questDB.m_UIQuestPieces[m_SelectedPieceID];
+        _uiSelectedPiece.UpdateUI(UIPieceData.sprite, UIPieceData.name, UIPieceData.description);
     }
 
     public void UsePieceButton_OnClick()
     {
-        OnUsePiece?.Invoke(m_SelectedPiece);
+        OnUsePiece?.Invoke(m_SelectedPieceID);
     }
+}
+
+[Serializable]
+public class UISelectedPiece
+{
+    [SerializeField] private Image _image;
+    [SerializeField] private TextMeshProUGUI _nameTextComp;
+    [SerializeField] private TextMeshProUGUI _descTextComp;
+
+    public void UpdateUI(Sprite sprite, string name, string description)
+    {
+        _image.sprite = sprite;
+        _nameTextComp.text = name;
+        _descTextComp.text = description;
+    }
+}
+
+[Serializable]
+public class UIQuestPieceData
+{
+    public Sprite sprite;
+    public string name;
+    public string description;
 }

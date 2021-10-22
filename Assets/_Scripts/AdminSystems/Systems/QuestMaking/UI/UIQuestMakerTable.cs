@@ -22,9 +22,10 @@ public class UIQuestMakerTable : MonoBehaviour
         pieceStorage.OnUsePiece -= PieceStorage_OnUsePiece;
     }
 
-    private void PieceStorage_OnUsePiece(QuestPiece obj)
+    private void PieceStorage_OnUsePiece(int pieceID)
     {
         EnableQuestBuilding();
+        // [TO-DO] Spawn quest piece in quest building view
     }
 
     public void EnableQuestBuilding()
