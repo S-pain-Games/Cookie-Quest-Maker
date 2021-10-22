@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Handles changing between the building and the storage
+// and also communication between those 2
 public class UIQuestMakerTable : MonoBehaviour
 {
     [SerializeField]

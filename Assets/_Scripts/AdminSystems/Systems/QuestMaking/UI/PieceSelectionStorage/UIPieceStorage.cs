@@ -4,11 +4,15 @@ using UnityEngine;
 
 namespace CQM.QuestMaking.UI
 {
+    // Handles over all the Storage UI and functionality
     public class UIPieceStorage : MonoBehaviour
     {
+        public QuestPiece.PieceType m_SelectedType;
+
         [SerializeField]
         private UIPieceTypeSelectionMenu _typeSelectionMenu;
-        private QuestPiece.PieceType m_SelectedType;
+        [SerializeField]
+        private UIPieceStorageOfType _pieceStoragePanel;
 
         private void OnEnable()
         {
@@ -23,6 +27,7 @@ namespace CQM.QuestMaking.UI
         private void PieceTypeSelectedHandle(QuestPiece.PieceType type)
         {
             m_SelectedType = type;
+            _pieceStoragePanel.Refresh(type);
         }
     }
 }
