@@ -23,16 +23,22 @@ public class StateManager : MonoBehaviour
         {
             lc.CalculateLocationState();
             newHappiness += lc.locationvalue;
-            if(showLog)
+
+#if UNITY_EDITOR
+            if (showLog)
                 Debug.Log("Value added from location: " + lc.locationvalue);
+#endif
         }
     }
 
     private void setHappiness()
     {
         happy.pointsHappiness(newHappiness);
+
+#if UNITY_EDITOR
         if (showLog)
             Debug.Log("Happiness to add: " + newHappiness);
+#endif
     }
 
     [MethodButton]

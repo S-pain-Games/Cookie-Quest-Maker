@@ -3558,7 +3558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &383978647
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3786,7 +3786,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.59, y: 1.42}
+    oldSize: {x: 4.046875, y: 2.21875}
     newSize: {x: 5.36, y: 1.67}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4115,7 +4115,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.84, y: 1.99}
+    oldSize: {x: 4.4375, y: 3.109375}
     newSize: {x: 5.36, y: 1.67}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5743,6 +5743,17 @@ MonoBehaviour:
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
   m_NavMeshData: {fileID: 23800000, guid: 9ac51ecae575e864b912ea3de4299fa7, type: 2}
+--- !u!114 &692701241 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3948000491956167736, guid: 32b5c94f88e14f640bb26c66f4127cf2, type: 3}
+  m_PrefabInstance: {fileID: 404580703142594426}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b81d7c368d40f4db7bb9eae7385a08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &701266096
 GameObject:
   m_ObjectHideFlags: 0
@@ -5845,7 +5856,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.59, y: 1.42}
+    oldSize: {x: 4.046875, y: 2.21875}
     newSize: {x: 5.36, y: 1.67}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6181,7 +6192,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.36, y: 1.67}
+    oldSize: {x: 8.375, y: 2.609375}
     newSize: {x: 5.36, y: 1.67}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6818,6 +6829,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316454008}
   m_CullTransparentMesh: 1
+--- !u!114 &1326925394 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2200348695108212178, guid: 32b5c94f88e14f640bb26c66f4127cf2, type: 3}
+  m_PrefabInstance: {fileID: 404580703142594426}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2786612c9eb98b248a987e41aea5c522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1408579793
 GameObject:
   m_ObjectHideFlags: 0
@@ -9282,7 +9304,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.94, y: 1.54}
+    oldSize: {x: 9.28125, y: 2.40625}
     newSize: {x: 5.36, y: 1.67}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -10816,9 +10838,7 @@ GameObject:
   - component: {fileID: 2081751216}
   - component: {fileID: 2081751217}
   - component: {fileID: 2081751220}
-  - component: {fileID: 2081751218}
   - component: {fileID: 2081751219}
-  - component: {fileID: 2081751222}
   - component: {fileID: 2081751221}
   - component: {fileID: 2081751223}
   m_Layer: 0
@@ -10858,18 +10878,8 @@ MonoBehaviour:
   questMakerSystem: {fileID: 0}
   gameStateSystem: {fileID: 0}
   townSystem: {fileID: 0}
---- !u!114 &2081751218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2081751215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6db80420f41ded7498add944a4d26e04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  playerPieceStorage:
+    m_Storage: []
 --- !u!114 &2081751219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10908,18 +10918,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storySystem: {fileID: 0}
---- !u!114 &2081751222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2081751215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 733971da790876e4284d135a11effa35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2081751223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11155,10 +11153,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 404580704988885907, guid: 32b5c94f88e14f640bb26c66f4127cf2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 7237998497240026856, guid: 32b5c94f88e14f640bb26c66f4127cf2, type: 3}
+      propertyPath: _sockets.Array.data[5]
+      value: 
+      objectReference: {fileID: 692701241}
+    - target: {fileID: 7237998497240026856, guid: 32b5c94f88e14f640bb26c66f4127cf2, type: 3}
+      propertyPath: _questPieces.Array.data[5]
+      value: 
+      objectReference: {fileID: 1326925394}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32b5c94f88e14f640bb26c66f4127cf2, type: 3}
 --- !u!224 &404580703142594427 stripped

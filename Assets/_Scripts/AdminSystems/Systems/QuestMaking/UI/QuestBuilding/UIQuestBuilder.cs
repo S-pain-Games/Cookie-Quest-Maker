@@ -56,10 +56,8 @@ namespace CQM.QuestMaking.UI
         [MethodButton]
         private void GetSocketsAndPieces()
         {
-            SerializedObject so = new SerializedObject(this);
             GetComponentsInChildren(true, _sockets);
             GetComponentsInChildren(true, _questPieces);
-            so.ApplyModifiedProperties();
         }
 
         private void OnPieceSocketedHandle(QuestPiece piece)
