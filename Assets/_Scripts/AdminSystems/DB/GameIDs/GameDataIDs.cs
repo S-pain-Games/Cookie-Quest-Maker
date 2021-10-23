@@ -5,6 +5,7 @@ public class GameDataIDs
     public readonly IDsRepercusions repercusions = new IDsRepercusions();
     public readonly IDStories stories = new IDStories();
     public readonly IDQuestPieces pieces = new IDQuestPieces();
+    public readonly IDLocalization localization = new IDLocalization();
 }
 
 public class IDsRepercusions
@@ -27,4 +28,9 @@ public class IDQuestPieces
     public readonly int brutally = "brutally".GetHashCode();
     public readonly int kindly = "kindly".GetHashCode();
     public readonly int baseball_bat = "baseball_bat".GetHashCode();
+}
+
+public class IDLocalization
+{
+    public readonly int mainmenu_button_play = "mainmenu_button_play".GetHashCode();
 }

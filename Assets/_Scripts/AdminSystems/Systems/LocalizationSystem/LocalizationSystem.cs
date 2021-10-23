@@ -48,8 +48,10 @@ public class LocalizationSystem : MonoBehaviour
 
     public void LoadData()
     {
-        m_Spanish.Add("mainmenu_button_play".GetHashCode(), "Jugar");
-        m_English.Add("mainmenu_button_play".GetHashCode(), "Play");
+        var ids = Admin.g_Instance.ID.localization;
+
+        m_Spanish.Add(ids.mainmenu_button_play, "Jugar");
+        m_English.Add(ids.mainmenu_button_play, "Play");
     }
 
     public enum Language
