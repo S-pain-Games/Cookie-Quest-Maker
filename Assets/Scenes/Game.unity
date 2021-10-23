@@ -3552,13 +3552,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 383978647}
+  - component: {fileID: 383978648}
   m_Layer: 5
   m_Name: UI_CookieMaking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &383978647
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3587,6 +3588,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &383978648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383978646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893f9443a3ba55443b7f1a52184c6c54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt_CookieName: {fileID: 857012482}
+  txt_CookieDescription: {fileID: 54243465}
+  txt_CookieStats: {fileID: 0}
 --- !u!1 &455186553
 GameObject:
   m_ObjectHideFlags: 0
@@ -8603,85 +8619,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4945650314530242200, guid: 79ccb0a3311bda649bf088b82c1ae85c, type: 3}
   m_PrefabInstance: {fileID: 1843700737}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1852418534
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1852418535}
-  - component: {fileID: 1852418537}
-  - component: {fileID: 1852418536}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1852418535
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852418534}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1916396177}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1852418536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852418534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Button
---- !u!222 &1852418537
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852418534}
-  m_CullTransparentMesh: 1
 --- !u!1 &1853599474
 GameObject:
   m_ObjectHideFlags: 0
@@ -8821,7 +8758,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1855184712}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 383978648}
+        m_TargetAssemblyTypeName: CookieMakingUI, CQM.Scripts.Runtime
+        m_MethodName: SelectRecipe
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1473648501
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1855184712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8889,8 +8838,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1852418535}
+  m_Children: []
   m_Father: {fileID: 383978647}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8942,7 +8890,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1916396179}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 383978648}
+        m_TargetAssemblyTypeName: CookieMakingUI, CQM.Scripts.Runtime
+        m_MethodName: CreateCookie
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1916396179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9196,7 +9156,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2046442348}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 383978648}
+        m_TargetAssemblyTypeName: CookieMakingUI, CQM.Scripts.Runtime
+        m_MethodName: SelectRecipe
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2046442348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10874,6 +10846,8 @@ GameObject:
   - component: {fileID: 2081751219}
   - component: {fileID: 2081751221}
   - component: {fileID: 2081751223}
+  - component: {fileID: 2081751218}
+  - component: {fileID: 2081751222}
   m_Layer: 0
   m_Name: Admin
   m_TagString: Untagged
@@ -10907,12 +10881,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef87ea3ff5678442b39938ba47c5bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questDBRef: {fileID: 0}
   storySystem: {fileID: 0}
   questMakerSystem: {fileID: 0}
   gameStateSystem: {fileID: 0}
   townSystem: {fileID: 0}
+  cookieMakingSystem: {fileID: 0}
   playerPieceStorage:
-    m_Storage: []
+    m_Storage: 
+--- !u!114 &2081751218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081751215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce4443a2f72006644b0f1d920dd13119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuestBuildingPiecePrefabs: []
 --- !u!114 &2081751219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10950,7 +10939,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 412d670e91408c742a7c3e2a9ef31ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storySystem: {fileID: 0}
+--- !u!114 &2081751222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081751215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27cca9ba5739e064ab6b1be06747e886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selectedRecipe: -1
 --- !u!114 &2081751223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10975,6 +10976,7 @@ GameObject:
   - component: {fileID: 2147292771}
   - component: {fileID: 2147292770}
   - component: {fileID: 2147292769}
+  - component: {fileID: 2147292772}
   m_Layer: 5
   m_Name: Btn_Cookie_1
   m_TagString: Untagged
@@ -11044,7 +11046,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2147292770}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 383978648}
+        m_TargetAssemblyTypeName: CookieMakingUI, CQM.Scripts.Runtime
+        m_MethodName: SelectRecipe
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 390974588
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2147292770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11083,6 +11097,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2147292767}
   m_CullTransparentMesh: 1
+--- !u!114 &2147292772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147292767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799e42d6a4043b141bbfc105394df387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipeID: 0
 --- !u!1001 &404580703142594426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11184,6 +11211,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 404580703654454805, guid: 32b5c94f88e14f640bb26c66f4127cf2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 404580704988885907, guid: 32b5c94f88e14f640bb26c66f4127cf2, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7237998497240026856, guid: 32b5c94f88e14f640bb26c66f4127cf2, type: 3}

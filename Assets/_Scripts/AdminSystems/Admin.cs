@@ -8,6 +8,7 @@ using UnityEngine;
 [RequireComponent(typeof(TownSystem))]
 [RequireComponent(typeof(QMGameplaySystem))]
 [RequireComponent(typeof(QuestDBUnityReferences))]
+[RequireComponent(typeof(CookieMakingSystem))]
 public class Admin : MonoBehaviour
 {
     public static Admin g_Instance;
@@ -17,6 +18,7 @@ public class Admin : MonoBehaviour
     // Game Data Storage
     public StoryDB storyDB;
     public QuestDB questDB;
+    public CookieDB cookieDB;
     [SerializeField] private QuestDBUnityReferences questDBRef;
 
     // Game Systems
@@ -24,6 +26,7 @@ public class Admin : MonoBehaviour
     public QMGameplaySystem questMakerSystem;
     public GameStateSystem gameStateSystem;
     public TownSystem townSystem;
+    public CookieMakingSystem cookieMakingSystem;
 
     // Player Systems
     public PlayerPieceStorage playerPieceStorage;
@@ -43,10 +46,12 @@ public class Admin : MonoBehaviour
         storySystem = GetComponent<StorySystem>();
         gameStateSystem = GetComponent<GameStateSystem>();
         questMakerSystem = GetComponent<QMGameplaySystem>();
+        cookieMakingSystem = GetComponent<CookieMakingSystem>();
 
         // Create DBs
         storyDB = new StoryDB();
         questDB = new QuestDB();
+        cookieDB = new CookieDB();
 
         // Get DBs Unity References Adapters
         questDBRef = GetComponent<QuestDBUnityReferences>();
@@ -54,6 +59,7 @@ public class Admin : MonoBehaviour
         // Load Data
         storyDB.LoadData();
         questDB.LoadData(questDBRef);
+        cookieDB.LoadData();
 
         // Initialize Game Systems References
         storySystem.Initialize(storyDB);

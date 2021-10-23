@@ -24,6 +24,7 @@ public class IDQuestPieces
     public readonly int attack = "attack".GetHashCode();
     public readonly int assist = "assist".GetHashCode();
     public readonly int plain_cookie = "plain_cookie".GetHashCode();
+    public readonly int plain_cookie_2 = "plain_cookie_2".GetHashCode();
     public readonly int brutally = "brutally".GetHashCode();
     public readonly int kindly = "kindly".GetHashCode();
     public readonly int baseball_bat = "baseball_bat".GetHashCode();

@@ -20,7 +20,10 @@ namespace CQM.QuestMaking
             var qpDB = Admin.g_Instance.questDB;
             m_Storage.Add("attack".GetHashCode());
             m_Storage.Add("assist".GetHashCode());
+            /*
             m_Storage.Add("plain_cookie".GetHashCode());
+            m_Storage.Add("plain_cookie_2".GetHashCode());
+            */
         }
     }
 }
