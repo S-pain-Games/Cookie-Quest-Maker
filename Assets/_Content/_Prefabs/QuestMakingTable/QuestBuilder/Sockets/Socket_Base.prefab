@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8997704054166966155}
   - component: {fileID: 1062433823678737928}
   m_Layer: 5
-  m_Name: UI_Socket_Base
+  m_Name: Socket_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

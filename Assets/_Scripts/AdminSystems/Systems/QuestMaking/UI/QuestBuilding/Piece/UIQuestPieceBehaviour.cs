@@ -19,7 +19,6 @@ namespace CQM.QuestMaking.UI
         public event Action<UIQuestPieceBehaviour> OnSelected;
         public event Action<UIQuestPieceBehaviour> OnUnselect;
 
-        public string questPieceName;
         public QuestPiece Piece;
         [SerializeField]
         private Canvas _canvas;
@@ -31,12 +30,18 @@ namespace CQM.QuestMaking.UI
         private GraphicRaycaster _raycaster;
         private List<RaycastResult> m_Results = new List<RaycastResult>();
 
+        public void Initialize(Canvas canvas, int pieceId)
+        {
+            _canvas = canvas;
+            _raycaster = canvas.GetComponent<GraphicRaycaster>();
+            Piece = Admin.g_Instance.questDB.m_QPiecesDB[pieceId];
+            _draggable.Initialize(canvas);
+        }
+
         private void Awake()
         {
-            _raycaster = _canvas.GetComponent<GraphicRaycaster>();
             _draggable = GetComponent<UIDraggable>();
             _pressable = GetComponent<UIPressable>();
-            Piece = Admin.g_Instance.questDB.m_QPiecesDB[questPieceName.GetHashCode()];
         }
 
         private void OnEnable()

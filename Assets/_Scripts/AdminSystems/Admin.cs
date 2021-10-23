@@ -7,6 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(GameStateSystem))]
 [RequireComponent(typeof(TownSystem))]
 [RequireComponent(typeof(QMGameplaySystem))]
+[RequireComponent(typeof(QuestDBUnityReferences))]
 public class Admin : MonoBehaviour
 {
     public static Admin g_Instance;
@@ -16,6 +17,7 @@ public class Admin : MonoBehaviour
     // Game Data Storage
     public StoryDB storyDB;
     public QuestDB questDB;
+    [SerializeField] private QuestDBUnityReferences questDBRef;
 
     // Game Systems
     public StorySystem storySystem;
@@ -46,9 +48,12 @@ public class Admin : MonoBehaviour
         storyDB = new StoryDB();
         questDB = new QuestDB();
 
+        // Get DBs Unity References Adapters
+        questDBRef = GetComponent<QuestDBUnityReferences>();
+
         // Load Data
         storyDB.LoadData();
-        questDB.LoadData();
+        questDB.LoadData(questDBRef);
 
         // Initialize Game Systems References
         storySystem.Initialize(storyDB);

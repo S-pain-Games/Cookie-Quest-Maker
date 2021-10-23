@@ -15,7 +15,7 @@ public class UIPieceSelection : MonoBehaviour
     private int m_SelectedPieceID;
 
     [SerializeField] private Button _usePieceButton;
-    [SerializeField] private UISelectedPiece _uiSelectedPiece;
+    [SerializeField] private UISelectedPieceView _uiSelectedPieceView;
 
     // Managing Piece UI Elements variables
     [SerializeField] private GameObject elementPrefab;
@@ -79,7 +79,7 @@ public class UIPieceSelection : MonoBehaviour
         m_SelectedPieceID = questPieceID;
         // Update UI
         var UIPieceData = Admin.g_Instance.questDB.m_UIQuestPieces[m_SelectedPieceID];
-        _uiSelectedPiece.UpdateUI(UIPieceData.sprite, UIPieceData.name, UIPieceData.description);
+        _uiSelectedPieceView.UpdateUI(UIPieceData.sprite, UIPieceData.name, UIPieceData.description);
     }
 
     public void UsePieceButton_OnClick()
@@ -89,7 +89,7 @@ public class UIPieceSelection : MonoBehaviour
 }
 
 [Serializable]
-public class UISelectedPiece
+public class UISelectedPieceView
 {
     [SerializeField] private Image _image;
     [SerializeField] private TextMeshProUGUI _nameTextComp;

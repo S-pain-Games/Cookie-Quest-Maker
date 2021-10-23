@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,17 +10,29 @@ namespace CQM.QuestMaking
     {
         // Contains all quests made in the playthrough
         public Dictionary<int, QuestData> m_QuestDataDB = new Dictionary<int, QuestData>();
-        // Contains all quest pieces in the game
+        // Contains all functional quest pieces in the game
         public Dictionary<int, QuestPiece> m_QPiecesDB = new Dictionary<int, QuestPiece>();
+        // Contains all the Prefabs to instantiate quest pieces in the Quest Builder UI
+        public Dictionary<int, GameObject> m_QuestBuildingPiecesPrefabs = new Dictionary<int, GameObject>();
         // Contains all the UI Data of each quest piece
         public Dictionary<int, UIQuestPieceData> m_UIQuestPieces = new Dictionary<int, UIQuestPieceData>();
 
-        public void LoadData()
+        public void LoadData(QuestDBUnityReferences unityReferences)
         {
             var pIds = Admin.g_Instance.ID.pieces;
 
             LoadQuestPieces(pIds);
             LoadUIQuestPieces(pIds);
+            LoadQuestPiecesPrefabs(pIds, unityReferences);
+        }
+
+        private void LoadQuestPiecesPrefabs(IDQuestPieces pIds, QuestDBUnityReferences uRef)
+        {
+            for (int i = 0; i < uRef.QuestBuildingPiecePrefabs.Count; i++)
+            {
+                var pieceRef = uRef.QuestBuildingPiecePrefabs[i];
+                m_QuestBuildingPiecesPrefabs.Add(pieceRef.m_NameID.GetHashCode(), pieceRef.m_Prefab);
+            }
         }
 
         private void LoadUIQuestPieces(IDQuestPieces pIds)
@@ -56,7 +69,6 @@ namespace CQM.QuestMaking
             };
             m_UIQuestPieces.Add(pIds.assist, qpd);
         }
-
 
         private void LoadQuestPieces(IDQuestPieces pIds)
         {

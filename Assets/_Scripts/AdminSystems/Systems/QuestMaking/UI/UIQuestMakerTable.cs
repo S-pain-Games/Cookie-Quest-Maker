@@ -8,6 +8,8 @@ using CQM.QuestMaking.UI;
 public class UIQuestMakerTable : MonoBehaviour
 {
     [SerializeField]
+    private Canvas canvas;
+    [SerializeField]
     private UIQuestBuilderManager questBuilding;
     [SerializeField]
     private UIPieceStorageManager pieceStorage;
@@ -26,6 +28,9 @@ public class UIQuestMakerTable : MonoBehaviour
     {
         EnableQuestBuilding();
         // [TO-DO] Spawn quest piece in quest building view
+        var piecePrefab = Admin.g_Instance.questDB.m_QuestBuildingPiecesPrefabs[pieceID];
+        var pieceBehaviour = Instantiate(piecePrefab, questBuilding.pieceSpawnPosition).GetComponent<UIQuestPieceBehaviour>();
+        pieceBehaviour.Initialize(canvas, pieceID);
     }
 
     public void EnableQuestBuilding()

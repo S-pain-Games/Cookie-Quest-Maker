@@ -7,6 +7,8 @@ namespace CQM.QuestMaking.UI
 {
     public class UIQuestBuilderManager : MonoBehaviour
     {
+        public RectTransform pieceSpawnPosition;
+
         [SerializeField]
         private List<UIPieceSocketBehaviour> _sockets = new List<UIPieceSocketBehaviour>();
         [SerializeField]
