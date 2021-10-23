@@ -8,6 +8,7 @@ using UnityEngine;
 [RequireComponent(typeof(TownSystem))]
 [RequireComponent(typeof(QMGameplaySystem))]
 [RequireComponent(typeof(QuestDBUnityReferences))]
+[RequireComponent(typeof(LocalizationSystem))]
 public class Admin : MonoBehaviour
 {
     public static Admin g_Instance;
@@ -24,6 +25,7 @@ public class Admin : MonoBehaviour
     public QMGameplaySystem questMakerSystem;
     public GameStateSystem gameStateSystem;
     public TownSystem townSystem;
+    public LocalizationSystem localizationSystem;
 
     // Player Systems
     public PlayerPieceStorage playerPieceStorage;
@@ -43,6 +45,7 @@ public class Admin : MonoBehaviour
         storySystem = GetComponent<StorySystem>();
         gameStateSystem = GetComponent<GameStateSystem>();
         questMakerSystem = GetComponent<QMGameplaySystem>();
+        localizationSystem = GetComponent<LocalizationSystem>();
 
         // Create DBs
         storyDB = new StoryDB();
@@ -58,6 +61,7 @@ public class Admin : MonoBehaviour
         // Initialize Game Systems References
         storySystem.Initialize(storyDB);
         questMakerSystem.Initialize(storySystem, storyDB);
+        localizationSystem.LoadData();
 
         // Create Player Systems
         playerPieceStorage = new PlayerPieceStorage();
