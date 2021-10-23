@@ -8,11 +8,8 @@ using UnityEngine;
 [RequireComponent(typeof(TownSystem))]
 [RequireComponent(typeof(QMGameplaySystem))]
 [RequireComponent(typeof(QuestDBUnityReferences))]
-<<<<<<< HEAD
 [RequireComponent(typeof(CookieMakingSystem))]
-=======
 [RequireComponent(typeof(LocalizationSystem))]
->>>>>>> f8f052379887edc517764749e799018f0091f6a9
 public class Admin : MonoBehaviour
 {
     public static Admin g_Instance;
@@ -30,11 +27,8 @@ public class Admin : MonoBehaviour
     public QMGameplaySystem questMakerSystem;
     public GameStateSystem gameStateSystem;
     public TownSystem townSystem;
-<<<<<<< HEAD
     public CookieMakingSystem cookieMakingSystem;
-=======
     public LocalizationSystem localizationSystem;
->>>>>>> f8f052379887edc517764749e799018f0091f6a9
 
     // Player Systems
     public PlayerPieceStorage playerPieceStorage;
@@ -54,11 +48,8 @@ public class Admin : MonoBehaviour
         storySystem = GetComponent<StorySystem>();
         gameStateSystem = GetComponent<GameStateSystem>();
         questMakerSystem = GetComponent<QMGameplaySystem>();
-<<<<<<< HEAD
         cookieMakingSystem = GetComponent<CookieMakingSystem>();
-=======
         localizationSystem = GetComponent<LocalizationSystem>();
->>>>>>> f8f052379887edc517764749e799018f0091f6a9
 
         // Create DBs
         storyDB = new StoryDB();
