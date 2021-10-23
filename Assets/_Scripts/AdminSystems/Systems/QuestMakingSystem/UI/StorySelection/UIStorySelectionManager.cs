@@ -32,7 +32,6 @@ public class UIStorySelectionManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        _cardContents.sprite =
     }
 
     private void NextStory()
