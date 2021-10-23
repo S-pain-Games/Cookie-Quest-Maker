@@ -1,9 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class StoryDB
 {
     // All the Stories in the game
     public Dictionary<int, Story> m_StoriesDB = new Dictionary<int, Story>();
+    // [TO-DO] add an adapter to this like the one for the questDB
+    public Dictionary<int, StoryUIData> m_StoriesUI = new Dictionary<int, StoryUIData>();
     public List<Story> m_OngoingStories = new List<Story>();
     public List<Story> m_CompletedStories = new List<Story>();
 
@@ -75,4 +78,9 @@ public class StoryDB
         m_Repercusions.Add(Admin.g_Instance.ID.repercusions.center_wolf_dead, rep);
         m_Repercusions.Add(Admin.g_Instance.ID.repercusions.center_wolf_alive, rep);
     }
+}
+
+public class StoryUIData
+{
+    public Sprite m_Sprite;
 }

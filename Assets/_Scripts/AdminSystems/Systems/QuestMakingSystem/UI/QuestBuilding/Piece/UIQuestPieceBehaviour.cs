@@ -19,6 +19,7 @@ namespace CQM.QuestMaking.UI
         public event Action<UIQuestPieceBehaviour> OnSelected;
         public event Action<UIQuestPieceBehaviour> OnUnselect;
 
+        [HideInInspector]
         public QuestPiece Piece;
         [SerializeField]
         private Canvas _canvas;

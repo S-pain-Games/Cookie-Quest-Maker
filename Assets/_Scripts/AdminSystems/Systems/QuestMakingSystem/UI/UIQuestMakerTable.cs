@@ -10,6 +10,8 @@ public class UIQuestMakerTable : MonoBehaviour
     [SerializeField]
     private Canvas canvas;
     [SerializeField]
+    private UIStorySelectionManager storySelection;
+    [SerializeField]
     private UIQuestBuilderManager questBuilding;
     [SerializeField]
     private UIPieceStorageManager pieceStorage;
