@@ -17,6 +17,9 @@ public class IDsRepercusions
 public class IDStories
 {
     public readonly int test = "test".GetHashCode();
+    public readonly int mayors_problem = "mayors_problem".GetHashCode();
+    public readonly int out_of_lactose = "out_of_lactose".GetHashCode();
+    public readonly int the_birds_and_the_bees = "the_birds_and_the_bees".GetHashCode();
 }
 
 public class IDQuestPieces

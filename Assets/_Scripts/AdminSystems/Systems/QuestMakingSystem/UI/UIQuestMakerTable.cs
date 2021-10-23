@@ -16,23 +16,59 @@ public class UIQuestMakerTable : MonoBehaviour
     [SerializeField]
     private UIPieceStorageManager pieceStorage;
 
+    private QMGameplaySystem questMakingSys;
+
+    private void Awake()
+    {
+        questMakingSys = Admin.g_Instance.questMakerSystem;
+    }
+
     private void OnEnable()
     {
         pieceStorage.OnUsePiece += PieceStorage_OnUsePiece;
+        storySelection.OnStorySelected += StorySelection_OnStorySelected;
+        questBuilding.OnAddQuestPiece += QuestBuilding_OnAddQuestPiece;
+        questBuilding.OnRemoveQuestPiece += QuestBuilding_OnRemoveQuestPiece;
     }
 
     private void OnDisable()
     {
         pieceStorage.OnUsePiece -= PieceStorage_OnUsePiece;
+        storySelection.OnStorySelected -= StorySelection_OnStorySelected;
+        questBuilding.OnAddQuestPiece -= QuestBuilding_OnAddQuestPiece;
+        questBuilding.OnRemoveQuestPiece -= QuestBuilding_OnRemoveQuestPiece;
+    }
+
+    private void StorySelection_OnStorySelected(int storyId)
+    {
+        EnableQuestBuilding();
+        questMakingSys.SelectStory(storyId);
+    }
+
+    private void QuestBuilding_OnRemoveQuestPiece(QuestPiece piece)
+    {
+        questMakingSys.RemovePiece(piece);
+    }
+
+    private void QuestBuilding_OnAddQuestPiece(QuestPiece piece)
+    {
+        questMakingSys.AddPiece(piece);
     }
 
     private void PieceStorage_OnUsePiece(int pieceID)
     {
         EnableQuestBuilding();
-        // [TO-DO] Spawn quest piece in quest building view
+
+        // Spawn selected piece from storage in quest builder
         var piecePrefab = Admin.g_Instance.questDB.m_QuestBuildingPiecesPrefabs[pieceID];
         var pieceBehaviour = Instantiate(piecePrefab, questBuilding.pieceSpawnPosition).GetComponent<UIQuestPieceBehaviour>();
         pieceBehaviour.Initialize(canvas, pieceID);
+    }
+
+    public void EnableStorySelection()
+    {
+        questBuilding.gameObject.SetActive(false);
+        storySelection.gameObject.SetActive(true);
     }
 
     public void EnableQuestBuilding()
@@ -45,10 +81,5 @@ public class UIQuestMakerTable : MonoBehaviour
     {
         questBuilding.gameObject.SetActive(false);
         pieceStorage.gameObject.SetActive(true);
-    }
-
-    public void SpawnPieceInQuestBuilding(int pieceID)
-    {
-        Logg.Log("Spawn Piece " + pieceID);
     }
 }

@@ -7,8 +7,9 @@ public class StoryDB
     public Dictionary<int, Story> m_StoriesDB = new Dictionary<int, Story>();
     // [TO-DO] add an adapter to this like the one for the questDB
     public Dictionary<int, StoryUIData> m_StoriesUI = new Dictionary<int, StoryUIData>();
-    public List<Story> m_OngoingStories = new List<Story>();
-    public List<Story> m_CompletedStories = new List<Story>();
+
+    public List<int> m_OngoingStories = new List<int>();
+    public List<int> m_CompletedStories = new List<int>();
 
     // All the repercusions in the game
     public Dictionary<int, StoryRepercusion> m_Repercusions = new Dictionary<int, StoryRepercusion>();
@@ -16,6 +17,13 @@ public class StoryDB
     public void LoadData()
     {
         LoadStoryRepercusions();
+        LoadStoryUIData();
+        LoadStoryData();
+    }
+
+    private void LoadStoryData()
+    {
+        var ids = Admin.g_Instance.ID.stories;
 
         Story s = new Story();
         StoryData sData = new StoryData
@@ -69,7 +77,12 @@ public class StoryDB
         s.m_StoryData = sData;
         sData.Build();
 
-        m_StoriesDB.Add("test".GetHashCode(), s);
+        m_StoriesDB.Add(ids.test, s);
+
+        // This is for testing only
+        m_StoriesDB.Add(ids.mayors_problem, s);
+        m_StoriesDB.Add(ids.out_of_lactose, s);
+        m_StoriesDB.Add(ids.the_birds_and_the_bees, s);
     }
 
     private void LoadStoryRepercusions()
@@ -78,9 +91,31 @@ public class StoryDB
         m_Repercusions.Add(Admin.g_Instance.ID.repercusions.center_wolf_dead, rep);
         m_Repercusions.Add(Admin.g_Instance.ID.repercusions.center_wolf_alive, rep);
     }
+
+    private void LoadStoryUIData()
+    {
+        var ids = Admin.g_Instance.ID.stories;
+
+        var s = new StoryUIData();
+        s.m_Title = "Test Story";
+        m_StoriesUI.Add(ids.test, s);
+
+        s = new StoryUIData();
+        s.m_Title = "Mayor's Problem";
+        m_StoriesUI.Add(ids.mayors_problem, s);
+
+        s = new StoryUIData();
+        s.m_Title = "Out of Lactose";
+        m_StoriesUI.Add(ids.out_of_lactose, s);
+
+        s = new StoryUIData();
+        s.m_Title = "The Birds & Bees";
+        m_StoriesUI.Add(ids.the_birds_and_the_bees, s);
+    }
 }
 
 public class StoryUIData
 {
     public Sprite m_Sprite;
+    public string m_Title;
 }

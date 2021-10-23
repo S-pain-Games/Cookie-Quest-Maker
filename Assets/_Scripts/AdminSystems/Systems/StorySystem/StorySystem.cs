@@ -14,15 +14,21 @@ public class StorySystem : MonoBehaviour
     public void Initialize(StoryDB storyDb)
     {
         _storyDB = storyDb;
+
+        // Development Only
+        StartStory(Admin.g_Instance.ID.stories.test);
+        StartStory(Admin.g_Instance.ID.stories.mayors_problem);
+        StartStory(Admin.g_Instance.ID.stories.out_of_lactose);
+        StartStory(Admin.g_Instance.ID.stories.the_birds_and_the_bees);
     }
 
     // Called by some in-game conversation that starts
-    // a story with the given data
+    // a story with the given ID
     public void StartStory(int storyId)
     {
         Story story = _storyDB.m_StoriesDB[storyId];
         story.m_State = Story.State.InProgress;
-        _storyDB.m_OngoingStories.Add(story);
+        _storyDB.m_OngoingStories.Add(storyId);
     }
 
     // We assume that the quest passed here 
@@ -31,9 +37,14 @@ public class StorySystem : MonoBehaviour
     // has definitely decided that the quest is final
     public void CompleteStory(int storyId, QuestData questData)
     {
+#if UNITY_EDITOR
+        if (!_storyDB.m_OngoingStories.Contains(storyId))
+            throw new System.Exception("Trying to complete a story that isnt ongoing");
+#endif
+
         Story story = _storyDB.m_StoriesDB[storyId];
-        _storyDB.m_OngoingStories.Remove(story);
-        _storyDB.m_CompletedStories.Add(story);
+        _storyDB.m_OngoingStories.Remove(storyId);
+        _storyDB.m_CompletedStories.Add(storyId);
 
         _questSystem.GetOverallTag(questData.m_PiecesList, out QPTag.TagType tagType, out int value);
         ProcessStoryData(story.m_StoryData, tagType, value, out string result);

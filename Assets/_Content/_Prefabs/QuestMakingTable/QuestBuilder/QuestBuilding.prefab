@@ -150,7 +150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4410157404288975095
 RectTransform:
   m_ObjectHideFlags: 0
@@ -193,12 +193,7 @@ MonoBehaviour:
   - {fileID: 7152522387949508969}
   - {fileID: 6853005698387930784}
   - {fileID: 8764450655645290391}
-  _questPieces:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _questPieces: []
 --- !u!1 &1434215691594926375
 GameObject:
   m_ObjectHideFlags: 0
