@@ -49,12 +49,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questDBRef: {fileID: 0}
+  storyDBRef: {fileID: 0}
+  calendarData:
+    m_Year: 0
+    m_Month: 0
+    m_Day: 0
+  playerPieceStorage:
+    m_Storage: 
   storySystem: {fileID: 0}
   questMakerSystem: {fileID: 0}
   gameStateSystem: {fileID: 0}
   townSystem: {fileID: 0}
-  playerPieceStorage:
-    m_Storage: 
+  cookieMakingSystem: {fileID: 0}
+  localizationSystem: {fileID: 0}
 --- !u!114 &2041105134198296799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,6 +75,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CurrentState: 0
+  m_Bakery:
+  - {fileID: 0}
+  - {fileID: 0}
+  m_MainMenu: {fileID: 0}
+  m_QuestMaking: {fileID: 0}
+  m_CookieMaking: {fileID: 0}
 --- !u!114 &2041105134198296792
 MonoBehaviour:
   m_ObjectHideFlags: 0

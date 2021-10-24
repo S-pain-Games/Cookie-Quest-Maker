@@ -31,6 +31,8 @@ public class UIQuestMakerTable : MonoBehaviour
         storySelection.OnStorySelected += StorySelection_OnStorySelected;
         questBuilding.OnAddQuestPiece += QuestBuilding_OnAddQuestPiece;
         questBuilding.OnRemoveQuestPiece += QuestBuilding_OnRemoveQuestPiece;
+
+        EnableStorySelection();
     }
 
     private void OnDisable()

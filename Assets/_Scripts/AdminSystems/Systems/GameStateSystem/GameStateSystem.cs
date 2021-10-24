@@ -8,10 +8,13 @@ public class GameStateSystem : MonoBehaviour
 
     public event Action OnStartMainMenu;
     public event Action OnStopMainMenu;
+
     public event Action OnStartBakery;
     public event Action OnStopBakery;
+
     public event Action OnStartQuestMaking;
     public event Action OnStopQuestMaking;
+
     public event Action OnStartCookieMaking;
     public event Action OnStopCookieMaking;
 
@@ -20,7 +23,7 @@ public class GameStateSystem : MonoBehaviour
 
     [Header("Prefabs")]
     [SerializeField]
-    private GameObject m_Bakery;
+    private List<GameObject> m_Bakery;
     [SerializeField]
     private GameObject m_MainMenu;
     [SerializeField]
@@ -36,12 +39,67 @@ public class GameStateSystem : MonoBehaviour
         CookieMaking
     }
 
+    private void OnEnable()
+    {
+        OnStartMainMenu += GameStateSystem_OnStartMainMenu;
+        OnStopMainMenu += GameStateSystem_OnStopMainMenu;
+
+        OnStartBakery += GameStateSystem_OnStartBakery;
+        OnStopBakery += GameStateSystem_OnStopBakery;
+
+        OnStartQuestMaking += GameStateSystem_OnStartQuestMaking;
+        OnStopQuestMaking += GameStateSystem_OnStopQuestMaking;
+
+        OnStartCookieMaking += GameStateSystem_OnStartCookieMaking;
+        OnStopCookieMaking += GameStateSystem_OnStopCookieMaking;
+    }
+
+    private void OnDisable()
+    {
+        OnStartMainMenu -= GameStateSystem_OnStartMainMenu;
+        OnStopMainMenu -= GameStateSystem_OnStopMainMenu;
+
+        OnStartBakery -= GameStateSystem_OnStartBakery;
+        OnStopBakery -= GameStateSystem_OnStopBakery;
+
+        OnStartQuestMaking -= GameStateSystem_OnStartQuestMaking;
+        OnStopQuestMaking -= GameStateSystem_OnStopQuestMaking;
+
+        OnStartCookieMaking -= GameStateSystem_OnStartCookieMaking;
+        OnStopCookieMaking -= GameStateSystem_OnStopCookieMaking;
+    }
+
     public void SetState(State state)
     {
         OnExitCurrentState();
         m_CurrentState = state;
         OnEnterCurrentState();
     }
+
+    private void GameStateSystem_OnStopMainMenu() => m_MainMenu.SetActive(false);
+    private void GameStateSystem_OnStartMainMenu() => m_MainMenu.SetActive(true);
+
+    private void GameStateSystem_OnStopCookieMaking() => m_CookieMaking.SetActive(false);
+    private void GameStateSystem_OnStartCookieMaking() => m_CookieMaking.SetActive(true);
+
+    private void GameStateSystem_OnStopQuestMaking() => m_QuestMaking.SetActive(false);
+    private void GameStateSystem_OnStartQuestMaking() => m_QuestMaking.SetActive(true);
+
+    private void GameStateSystem_OnStopBakery()
+    {
+        for (int i = 0; i < m_Bakery.Count; i++)
+        {
+            m_Bakery[i].SetActive(false);
+        }
+    }
+    private void GameStateSystem_OnStartBakery()
+    {
+        for (int i = 0; i < m_Bakery.Count; i++)
+        {
+            m_Bakery[i].SetActive(true);
+        }
+    }
+
 
     private void OnExitCurrentState()
     {
