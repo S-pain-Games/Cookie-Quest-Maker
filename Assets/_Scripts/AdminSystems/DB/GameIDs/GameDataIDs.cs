@@ -17,6 +17,9 @@ public class IDsRepercusions
 public class IDStories
 {
     public readonly int test = "test".GetHashCode();
+    public readonly int mayors_problem = "mayors_problem".GetHashCode();
+    public readonly int out_of_lactose = "out_of_lactose".GetHashCode();
+    public readonly int the_birds_and_the_bees = "the_birds_and_the_bees".GetHashCode();
 }
 
 public class IDQuestPieces
@@ -25,6 +28,7 @@ public class IDQuestPieces
     public readonly int attack = "attack".GetHashCode();
     public readonly int assist = "assist".GetHashCode();
     public readonly int plain_cookie = "plain_cookie".GetHashCode();
+    public readonly int plain_cookie_2 = "plain_cookie_2".GetHashCode();
     public readonly int brutally = "brutally".GetHashCode();
     public readonly int kindly = "kindly".GetHashCode();
     public readonly int baseball_bat = "baseball_bat".GetHashCode();

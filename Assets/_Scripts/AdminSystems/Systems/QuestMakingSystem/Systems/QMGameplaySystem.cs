@@ -19,23 +19,12 @@ public class QMGameplaySystem : MonoBehaviour
     }
 
     // These methods have to be called in a specific order
-    // SelectStory -> StartBuildingQuest -> Add/Remove Pieces -> Finish Making Quest
+    // SelectStory -> Add/Remove Pieces -> Finish Making Quest
 
     public void SelectStory(int storyId)
     {
         m_Data.m_StoryID = storyId;
-    }
-
-    [MethodButton]
-    public void StartBuildingQuest()
-    {
         m_Data.m_CurrentQuest = new QuestData();
-    }
-
-    [MethodButton]
-    public void StartStory()
-    {
-        SelectStory("test".GetHashCode());
     }
 
     public void AddPiece(QuestPiece piece)

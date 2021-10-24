@@ -56,6 +56,14 @@ namespace CQM.QuestMaking
             qpd = new UIQuestPieceData
             {
                 sprite = null,
+                name = "Plain Cookie 2",
+                description = "Very plain 2"
+            };
+            m_UIQuestPieces.Add(pIds.plain_cookie_2, qpd);
+
+            qpd = new UIQuestPieceData
+            {
+                sprite = null,
                 name = "Attack",
                 description = "Sometimes violence IS the answer -Evil Cookie Goddess"
             };
@@ -95,6 +103,12 @@ namespace CQM.QuestMaking
             qp.m_Type = QuestPiece.PieceType.Cookie;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Help, m_Value = 1 });
             m_QPiecesDB.Add(pIds.plain_cookie, qp);
+
+            qp = new QuestPiece();
+            qp.m_PieceName = "Plain Cookie 2";
+            qp.m_Type = QuestPiece.PieceType.Cookie;
+            qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Convince, m_Value = 1 });
+            m_QPiecesDB.Add(pIds.plain_cookie_2, qp);
 
             qp = new QuestPiece();
             qp.m_PieceName = "Brutally";

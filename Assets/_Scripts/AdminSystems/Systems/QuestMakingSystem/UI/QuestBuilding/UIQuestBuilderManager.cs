@@ -2,24 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System;
 
 namespace CQM.QuestMaking.UI
 {
     public class UIQuestBuilderManager : MonoBehaviour
     {
+        public event Action<QuestPiece> OnAddQuestPiece;
+        public event Action<QuestPiece> OnRemoveQuestPiece;
+
         public RectTransform pieceSpawnPosition;
 
         [SerializeField]
         private List<UIPieceSocketBehaviour> _sockets = new List<UIPieceSocketBehaviour>();
         [SerializeField]
         private List<UIQuestPieceBehaviour> _questPieces = new List<UIQuestPieceBehaviour>();
-
-        private QMGameplaySystem _questMakerSystem;
-
-        private void Awake()
-        {
-            _questMakerSystem = Admin.g_Instance.questMakerSystem;
-        }
 
         private void OnEnable()
         {
@@ -64,12 +61,12 @@ namespace CQM.QuestMaking.UI
 
         private void OnPieceSocketedHandle(QuestPiece piece)
         {
-            _questMakerSystem.AddPiece(piece);
+            OnAddQuestPiece?.Invoke(piece);
         }
 
         private void OnPieceUnsocketedHandle(QuestPiece piece)
         {
-            _questMakerSystem.RemovePiece(piece);
+            OnRemoveQuestPiece?.Invoke(piece);
         }
 
         private void OnPieceSelectedBroadcast(UIQuestPieceBehaviour uiPiece)
