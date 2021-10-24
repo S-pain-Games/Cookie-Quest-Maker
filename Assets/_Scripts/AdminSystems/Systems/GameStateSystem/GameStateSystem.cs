@@ -87,19 +87,26 @@ public class GameStateSystem : MonoBehaviour
 
     private void GameStateSystem_OnStopBakery()
     {
-        for (int i = 0; i < m_Bakery.Count; i++)
-        {
-            m_Bakery[i].SetActive(false);
-        }
-    }
-    private void GameStateSystem_OnStartBakery()
-    {
-        for (int i = 0; i < m_Bakery.Count; i++)
-        {
-            m_Bakery[i].SetActive(true);
-        }
+        //Desactivar todo lo que debería desactivarse
+
+
+        //Desabilitar listener de movimiento
+        m_Bakery[0].GetComponent<AgentMouseListener>().SetListenerEnabled(false);
+
+        //Desactivar escenario
+        m_Bakery[1].SetActive(false);
     }
 
+    private void GameStateSystem_OnStartBakery()
+    {
+        //Activar todo lo que debería activarse
+
+        //Habilitar listener de movimiento
+        m_Bakery[0].GetComponent<AgentMouseListener>().SetListenerEnabled(true);
+
+        //Activar escenario
+        m_Bakery[1].SetActive(true);
+    }
 
     private void OnExitCurrentState()
     {

@@ -8,6 +8,8 @@ public class InteractableFurnace : MonoBehaviour, IInteractableEntity
     public void OnInteract()
     {
         Debug.Log("Interacción con horno");
+
+        Admin.g_Instance.gameStateSystem.SetState(GameStateSystem.State.CookieMaking);
     }
 
 }
