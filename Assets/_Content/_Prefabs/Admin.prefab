@@ -11,10 +11,12 @@ GameObject:
   - component: {fileID: 2041105134198296795}
   - component: {fileID: 2041105134198296794}
   - component: {fileID: 2041105134198296799}
-  - component: {fileID: 2041105134198296792}
   - component: {fileID: 2041105134198296798}
   - component: {fileID: 2041105134198296796}
   - component: {fileID: 3180401619160224539}
+  - component: {fileID: 5370908183021347996}
+  - component: {fileID: 5950021498337157384}
+  - component: {fileID: 3944887534205473024}
   m_Layer: 0
   m_Name: Admin
   m_TagString: Untagged
@@ -59,7 +61,6 @@ MonoBehaviour:
   storySystem: {fileID: 0}
   questMakerSystem: {fileID: 0}
   gameStateSystem: {fileID: 0}
-  townSystem: {fileID: 0}
   cookieMakingSystem: {fileID: 0}
   localizationSystem: {fileID: 0}
 --- !u!114 &2041105134198296799
@@ -81,18 +82,6 @@ MonoBehaviour:
   m_MainMenu: {fileID: 0}
   m_QuestMaking: {fileID: 0}
   m_CookieMaking: {fileID: 0}
---- !u!114 &2041105134198296792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc9d67d1c2dbd414bb0232d3e2353fb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2041105134198296798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,3 +125,41 @@ MonoBehaviour:
     m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
   - m_NameID: mayor
     m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+--- !u!114 &5370908183021347996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01756391b5f2aca4692cfbf337722357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StorySelectionUICards: []
+--- !u!114 &5950021498337157384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27cca9ba5739e064ab6b1be06747e886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selectedRecipe: -1
+--- !u!114 &3944887534205473024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52594a2e524df84587b21ada9460959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

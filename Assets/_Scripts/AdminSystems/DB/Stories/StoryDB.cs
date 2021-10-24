@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 public class StoryDB
 {
-    // All the Stories in the game
+    // All the Stories Data in the game
     public Dictionary<int, Story> m_StoriesDB = new Dictionary<int, Story>();
-    // TODO: add an adapter to this like the one for the questDB
     public Dictionary<int, StoryUIData> m_StoriesUI = new Dictionary<int, StoryUIData>();
 
     public List<int> m_OngoingStories = new List<int>();
@@ -89,9 +88,21 @@ public class StoryDB
 
     private void LoadStoryRepercusions()
     {
+        var ids = Admin.g_Instance.ID.repercusions;
+
+        AddRepercusion(ids.center_wolf_dead, 10);
+        AddRepercusion(ids.center_wolf_alive, -15);
+        AddRepercusion(ids.towncenter_mayor_celebration_happened, 10);
+        AddRepercusion(ids.towncenter_mayor_celebration_didnt_happen, -10);
+        AddRepercusion(ids.towncenter_in_ruins, -20);
+        AddRepercusion(ids.towncenter_not_in_ruins, +20);
+    }
+
+    private void AddRepercusion(int id, int value)
+    {
         var rep = new StoryRepercusion();
-        m_Repercusions.Add(Admin.g_Instance.ID.repercusions.center_wolf_dead, rep);
-        m_Repercusions.Add(Admin.g_Instance.ID.repercusions.center_wolf_alive, rep);
+        rep.m_Value = value;
+        m_Repercusions.Add(id, rep);
     }
 
     private void LoadStoryUIData(StoryDBUnityReferences unityRefs)

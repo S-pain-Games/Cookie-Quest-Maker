@@ -5,7 +5,6 @@ using UnityEngine;
 
 [RequireComponent(typeof(StorySystem))]
 [RequireComponent(typeof(GameStateSystem))]
-[RequireComponent(typeof(TownSystem))]
 [RequireComponent(typeof(QMGameplaySystem))]
 [RequireComponent(typeof(QuestDBUnityReferences))]
 [RequireComponent(typeof(StoryDBUnityReferences))]
@@ -23,7 +22,9 @@ public class Admin : MonoBehaviour
     public CookieDB cookieDB;
     [SerializeField] private QuestDBUnityReferences questDBRef;
     [SerializeField] private StoryDBUnityReferences storyDBRef;
+
     public CalendarData calendarData;
+    public TownDB townData;
 
     // Player Data
     public PlayerUnlockedPieces playerPieceStorage;
@@ -59,6 +60,7 @@ public class Admin : MonoBehaviour
         questMakerSystem = GetComponent<QMGameplaySystem>();
         cookieMakingSystem = GetComponent<CookieMakingSystem>();
         localizationSystem = GetComponent<LocalizationSystem>();
+        townSystem = new TownSystem();
         calendarSystem = new CalendarSystem();
         reputationSystem = new ReputationSystem();
         ingredientsSystem = new IngredientsSystem();
@@ -68,6 +70,7 @@ public class Admin : MonoBehaviour
         questDB = new QuestDB();
         cookieDB = new CookieDB();
         calendarData = new CalendarData();
+        townData = new TownDB();
 
         // Create Player Data Containers
         playerPieceStorage = new PlayerUnlockedPieces();
@@ -81,15 +84,19 @@ public class Admin : MonoBehaviour
         // Load Data
         storyDB.LoadData(storyDBRef);
         questDB.LoadData(questDBRef);
+        townData.LoadData(storyDB);
         cookieDB.LoadData();
 
         // Initialize Game Systems References
         storySystem.Initialize(storyDB);
         questMakerSystem.Initialize(storySystem, storyDB);
+        cookieMakingSystem.Initialize(cookieDB);
+        localizationSystem.LoadData();
+
+        townSystem.Initialize(townData);
         calendarSystem.Initialize(calendarData);
         reputationSystem.Initialize(playerReputation);
         ingredientsSystem.Initialize(playerBakingIngredients);
-        localizationSystem.LoadData();
 
         // Initialize Player Data Containers
         playerPieceStorage.Initialize();

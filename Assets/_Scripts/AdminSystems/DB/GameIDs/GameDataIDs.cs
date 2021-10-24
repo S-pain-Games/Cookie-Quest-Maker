@@ -6,12 +6,17 @@ public class GameDataIDs
     public readonly IDStories stories = new IDStories();
     public readonly IDQuestPieces pieces = new IDQuestPieces();
     public readonly IDLocalization localization = new IDLocalization();
+    public readonly IDTownLocations townLocations = new IDTownLocations();
 }
 
 public class IDsRepercusions
 {
-    public readonly int center_wolf_dead = "center_wolf_dead".GetHashCode();
-    public readonly int center_wolf_alive = "center_wolf_alive".GetHashCode();
+    public readonly int center_wolf_dead = "towncenter_wolf_dead".GetHashCode();
+    public readonly int center_wolf_alive = "towncenter_wolf_alive".GetHashCode();
+    public readonly int towncenter_mayor_celebration_happened = "towncenter_mayor_celebration_happened".GetHashCode();
+    public readonly int towncenter_mayor_celebration_didnt_happen = "towncenter_mayor_celebration_didnt_happen".GetHashCode();
+    public readonly int towncenter_in_ruins = "towncenter_in_ruins".GetHashCode();
+    public readonly int towncenter_not_in_ruins = "towncenter_not_in_ruins".GetHashCode();
 }
 
 public class IDStories
@@ -47,4 +52,9 @@ public class IDLocalization
 
     public readonly int dialoguebox_text = "dialoguebox_text".GetHashCode();
     public readonly int dialoguebox_button_next = "dialoguebox_button_next".GetHashCode();
+}
+
+public class IDTownLocations
+{
+    public readonly int town_center = "town_center".GetHashCode();
 }

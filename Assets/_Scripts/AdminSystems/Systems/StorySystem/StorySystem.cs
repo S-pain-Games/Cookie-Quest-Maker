@@ -41,22 +41,33 @@ public class StorySystem : MonoBehaviour
         _storyDB.m_CompletedStories.Add(storyId);
 
         _questSystem.GetOverallTag(questData.m_PiecesList, out QPTag.TagType tagType, out int value);
-        ProcessStoryData(story.m_StoryData, tagType, value, out string result);
-        story.m_QuestResult = result;
+        ProcessStoryData(story.m_StoryData, tagType, value, out string result, out StoryRepercusion rep);
         story.m_State = Story.State.Completed;
         story.m_QuestData = questData;
+        story.m_QuestResult = result;
+        story.m_QuestRepercusion = rep;
 
         Debug.Log(story.m_QuestResult);
     }
 
+    // This is called when the Dialogue System or the newspaper shows
+    // the player the "Ending"(text) of the story
+    public void FinalizeStory(int storyId)
+    {
+        Story story = _storyDB.m_StoriesDB[storyId];
+        _storyDB.m_CompletedStories.Remove(storyId);
+        _storyDB.m_FinalizedStories.Add(storyId);
+    }
+
     // Process a story with the given tag and value and get the result
-    private void ProcessStoryData(StoryData data, QPTag.TagType tag, int value, out string result)
+    private void ProcessStoryData(StoryData data, QPTag.TagType tag, int value, out string result, out StoryRepercusion rep)
     {
         result = "";
+        rep = null;
         bool match = false;
         for (int i = 0; i < data.m_BranchOptions.Count; i++)
         {
-            if (ProcessBranchOption(data.m_BranchOptions[i], tag, value, out result)) //data.m_BranchOptions[i].Check(tag, value, out result))
+            if (ProcessBranchOption(data.m_BranchOptions[i], tag, value, out result, out rep))
             {
                 match = true;
                 break;
@@ -74,13 +85,19 @@ public class StorySystem : MonoBehaviour
     }
 
     // Process a Branch Option
-    private bool ProcessBranchOption(BranchOption branchOpt, QPTag.TagType tag, int value, out string result)
+    private bool ProcessBranchOption(BranchOption branchOpt, QPTag.TagType tag, int value, out string result, out StoryRepercusion rep)
     {
         bool match = CheckCondition(branchOpt.m_Condition, tag, value);
         if (match)
+        {
             result = branchOpt.m_Result;
+            rep = branchOpt.m_Repercusion;
+        }
         else
+        {
             result = "";
+            rep = null;
+        }
         return match;
     }
 

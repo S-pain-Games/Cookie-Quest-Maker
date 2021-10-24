@@ -14,7 +14,7 @@ public class LocationState : ScriptableObject
     {
         foreach (StoryRepercusion _sr in StoryRepercusionList)
         {
-            if (_sr.m_Archieved)
+            if (_sr.m_Active)
             {
                 locationvalue += _sr.m_Value;
             }
