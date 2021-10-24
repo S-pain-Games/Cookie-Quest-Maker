@@ -23,6 +23,7 @@ public class Admin : MonoBehaviour
     public CookieDB cookieDB;
     [SerializeField] private QuestDBUnityReferences questDBRef;
     [SerializeField] private StoryDBUnityReferences storyDBRef;
+    public CalendarData calendarData;
 
     // Game Systems
     public StorySystem storySystem;
@@ -31,6 +32,7 @@ public class Admin : MonoBehaviour
     public TownSystem townSystem;
     public CookieMakingSystem cookieMakingSystem;
     public LocalizationSystem localizationSystem;
+    public CalendarSystem calendarSystem;
 
     // Player Systems
     public PlayerPieceStorage playerPieceStorage;
@@ -46,17 +48,19 @@ public class Admin : MonoBehaviour
     {
         // INITIALIZATION ORDER MATTERS
 
-        // Get Game Systems Components
+        // Get or create Game Systems
         storySystem = GetComponent<StorySystem>();
         gameStateSystem = GetComponent<GameStateSystem>();
         questMakerSystem = GetComponent<QMGameplaySystem>();
         cookieMakingSystem = GetComponent<CookieMakingSystem>();
         localizationSystem = GetComponent<LocalizationSystem>();
+        calendarSystem = new CalendarSystem();
 
-        // Create DBs
+        // Create DBs and data objects
         storyDB = new StoryDB();
         questDB = new QuestDB();
         cookieDB = new CookieDB();
+        calendarData = new CalendarData();
 
         // Get DBs Unity References Adapters
         questDBRef = GetComponent<QuestDBUnityReferences>();
@@ -70,6 +74,7 @@ public class Admin : MonoBehaviour
         // Initialize Game Systems References
         storySystem.Initialize(storyDB);
         questMakerSystem.Initialize(storySystem, storyDB);
+        calendarSystem.Initialize(calendarData);
         localizationSystem.LoadData();
 
         // Create Player Systems
