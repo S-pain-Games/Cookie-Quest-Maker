@@ -10,6 +10,7 @@ using UnityEngine;
 [RequireComponent(typeof(StoryDBUnityReferences))]
 [RequireComponent(typeof(CookieMakingSystem))]
 [RequireComponent(typeof(LocalizationSystem))]
+[RequireComponent(typeof(NpcSystem))]
 public class Admin : MonoBehaviour
 {
     public static Admin g_Instance;
@@ -20,11 +21,12 @@ public class Admin : MonoBehaviour
     public StoryDB storyDB;
     public QuestDB questDB;
     public CookieDB cookieDB;
+    public NpcDB npcDB;
+    public TownDB townData;
     [SerializeField] private QuestDBUnityReferences questDBRef;
     [SerializeField] private StoryDBUnityReferences storyDBRef;
 
     public CalendarData calendarData;
-    public TownDB townData;
 
     // Player Data
     public PlayerUnlockedPieces playerPieceStorage;
@@ -39,6 +41,7 @@ public class Admin : MonoBehaviour
     public CookieMakingSystem cookieMakingSystem;
     public LocalizationSystem localizationSystem;
     public CalendarSystem calendarSystem;
+    public NpcSystem npcSystem;
 
     public ReputationSystem reputationSystem;
     public IngredientsSystem ingredientsSystem;
@@ -64,11 +67,13 @@ public class Admin : MonoBehaviour
         calendarSystem = new CalendarSystem();
         reputationSystem = new ReputationSystem();
         ingredientsSystem = new IngredientsSystem();
+        npcSystem = GetComponent<NpcSystem>();
 
         // Create DBs and data objects
         storyDB = new StoryDB();
         questDB = new QuestDB();
         cookieDB = new CookieDB();
+        npcDB = new NpcDB();
         calendarData = new CalendarData();
         townData = new TownDB();
 
@@ -91,6 +96,7 @@ public class Admin : MonoBehaviour
         storySystem.Initialize(storyDB);
         questMakerSystem.Initialize(storySystem, storyDB);
         cookieMakingSystem.Initialize(cookieDB);
+        npcSystem.Initialize(storyDB, npcDB);
         localizationSystem.LoadData();
 
         townSystem.Initialize(townData);

@@ -7,8 +7,13 @@ public class StoryDB
     public Dictionary<int, Story> m_StoriesDB = new Dictionary<int, Story>();
     public Dictionary<int, StoryUIData> m_StoriesUI = new Dictionary<int, StoryUIData>();
 
+    // IDs of the stories in the order in which they will be started
+    // We could randomize this in the future
+    public List<int> m_StoriesToStart = new List<int>();
     public List<int> m_OngoingStories = new List<int>();
     // Stories which were completed with a quest but the player hasnt seen the result yet
+    // At the start of the day the system that handles the spawning of the NPCs must assign
+    // them 
     public List<int> m_CompletedStories = new List<int>();
     public List<int> m_FinalizedStories = new List<int>();
 
@@ -20,6 +25,17 @@ public class StoryDB
         LoadStoryRepercusions();
         LoadStoryUIData(unityRefs);
         LoadStoryData();
+        LoadStoriesOrder();
+    }
+
+    private void LoadStoriesOrder()
+    {
+        // Loads the order in which the stories will be
+        // presented to the player
+        var ids = Admin.g_Instance.ID.stories;
+        m_StoriesToStart.Add(ids.mayors_problem);
+        m_StoriesToStart.Add(ids.the_birds_and_the_bees);
+        m_StoriesToStart.Add(ids.out_of_lactose);
     }
 
     private void LoadStoryData()
