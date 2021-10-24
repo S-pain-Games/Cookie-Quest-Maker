@@ -153,6 +153,17 @@ Transform:
   m_Father: {fileID: 263704884}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &16332625 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3441915749908728343, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
+  m_PrefabInstance: {fileID: 2058168741}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &106575178
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,7 +824,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.59, y: 1.42}
+    oldSize: {x: 4.046875, y: 2.21875}
     newSize: {x: 5.36, y: 1.67}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1143,7 +1154,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.84, y: 1.99}
+    oldSize: {x: 4.4375, y: 3.109375}
     newSize: {x: 5.36, y: 1.67}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1535,7 +1546,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.59, y: 1.42}
+    oldSize: {x: 4.046875, y: 2.21875}
     newSize: {x: 5.36, y: 1.67}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1796,7 +1807,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.36, y: 1.67}
+    oldSize: {x: 8.375, y: 2.609375}
     newSize: {x: 5.36, y: 1.67}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2010,6 +2021,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1335440607 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8775486175927347048, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
+  m_PrefabInstance: {fileID: 2058168741}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6b6d094e8869a4c85bb3b74a109faf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1408579793
 GameObject:
   m_ObjectHideFlags: 0
@@ -3969,7 +3991,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.94, y: 1.54}
+    oldSize: {x: 9.28125, y: 2.40625}
     newSize: {x: 5.36, y: 1.67}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4022,13 +4044,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 404580703142594427}
     m_Modifications:
+    - target: {fileID: 3441915749908728343, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441915749908728343, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
+      propertyPath: m_fontSize
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441915749908728343, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 3889425810653348078, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4245336346168930763, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
       propertyPath: m_Name
       value: UI_DialogueBox
       objectReference: {fileID: 0}
     - target: {fileID: 4245336346168930763, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7693750526769192092, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
       propertyPath: m_Pivot.x
@@ -4113,6 +4151,54 @@ PrefabInstance:
     - target: {fileID: 7693750526769192092, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775486175927347048, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
+      propertyPath: textDialogue
+      value: 
+      objectReference: {fileID: 16332625}
+    - target: {fileID: 8775486175927347048, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
+      propertyPath: sentences.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775486175927347048, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
+      propertyPath: sentences.Array.data[0]
+      value: Hola muy buenas a todos
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775486175927347048, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
+      propertyPath: sentences.Array.data[1]
+      value: Estamos aqui para charlar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775486175927347048, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
+      propertyPath: sentences.Array.data[2]
+      value: Ahora me despido, adios
+      objectReference: {fileID: 0}
+    - target: {fileID: 9059710173460511413, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9059710173460511413, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9059710173460511413, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1335440607}
+    - target: {fileID: 9059710173460511413, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9059710173460511413, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: nextLine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9059710173460511413, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Dialogue, CQM.Scripts.Runtime
+      objectReference: {fileID: 0}
+    - target: {fileID: 9059710173460511413, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b4fe0b43ce6cb4187dff994c779e31, type: 3}
