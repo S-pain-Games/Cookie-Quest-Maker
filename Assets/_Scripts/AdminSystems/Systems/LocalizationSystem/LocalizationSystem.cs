@@ -50,8 +50,31 @@ public class LocalizationSystem : MonoBehaviour
     {
         var ids = Admin.g_Instance.ID.localization;
 
+        //Main menu
+        m_Spanish.Add(ids.mainmenu_title, "Menú");
+        m_English.Add(ids.mainmenu_title, "Menu");
         m_Spanish.Add(ids.mainmenu_button_play, "Jugar");
         m_English.Add(ids.mainmenu_button_play, "Play");
+        m_Spanish.Add(ids.mainmenu_button_options, "Opciones");
+        m_English.Add(ids.mainmenu_button_options, "Options");
+        m_Spanish.Add(ids.mainmenu_button_credits, "Créditos");
+        m_English.Add(ids.mainmenu_button_credits, "Credits");
+
+        //Options menu
+        m_Spanish.Add(ids.optionsmenu_title, "Opciones");
+        m_English.Add(ids.optionsmenu_title, "Options");
+
+        //Credits menu
+        m_Spanish.Add(ids.creditsmenu_title, "Créditos");
+        m_English.Add(ids.creditsmenu_title, "Credits");
+
+        //Dialogue box
+        m_Spanish.Add(ids.dialoguebox_text, "Hola");
+        m_English.Add(ids.dialoguebox_text, "Hi");
+        m_Spanish.Add(ids.dialoguebox_button_next, "Siguiente");
+        m_English.Add(ids.dialoguebox_button_next, "Next");
+
+
     }
 
     public enum Language

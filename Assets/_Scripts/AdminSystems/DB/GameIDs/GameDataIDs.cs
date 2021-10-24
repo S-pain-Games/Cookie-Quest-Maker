@@ -36,5 +36,15 @@ public class IDQuestPieces
 
 public class IDLocalization
 {
+    public readonly int mainmenu_title = "mainmenu_title".GetHashCode();
     public readonly int mainmenu_button_play = "mainmenu_button_play".GetHashCode();
+    public readonly int mainmenu_button_options = "mainmenu_button_options".GetHashCode();
+    public readonly int mainmenu_button_credits = "mainmenu_button_credits".GetHashCode();
+
+    public readonly int optionsmenu_title = "optionsmenu_title".GetHashCode();
+
+    public readonly int creditsmenu_title = "creditsmenu_title".GetHashCode();
+
+    public readonly int dialoguebox_text = "dialoguebox_text".GetHashCode();
+    public readonly int dialoguebox_button_next = "dialoguebox_button_next".GetHashCode();
 }
