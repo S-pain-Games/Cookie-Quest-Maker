@@ -9,6 +9,8 @@ public class UIQuestMakerTable : MonoBehaviour
 {
     [SerializeField]
     private Canvas canvas;
+
+    [Header("Menus")]
     [SerializeField]
     private UIStorySelectionManager storySelection;
     [SerializeField]

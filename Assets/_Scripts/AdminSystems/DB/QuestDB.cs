@@ -10,6 +10,7 @@ namespace CQM.QuestMaking
     {
         // Contains all quests made in the playthrough
         public Dictionary<int, QuestData> m_QuestDataDB = new Dictionary<int, QuestData>();
+
         // Contains all functional quest pieces in the game
         public Dictionary<int, QuestPiece> m_QPiecesDB = new Dictionary<int, QuestPiece>();
         // Contains all the Prefabs to instantiate quest pieces in the Quest Builder UI

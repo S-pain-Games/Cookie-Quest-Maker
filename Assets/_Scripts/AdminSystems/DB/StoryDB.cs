@@ -5,7 +5,7 @@ public class StoryDB
 {
     // All the Stories in the game
     public Dictionary<int, Story> m_StoriesDB = new Dictionary<int, Story>();
-    // [TO-DO] add an adapter to this like the one for the questDB
+    // TODO: add an adapter to this like the one for the questDB
     public Dictionary<int, StoryUIData> m_StoriesUI = new Dictionary<int, StoryUIData>();
 
     public List<int> m_OngoingStories = new List<int>();
@@ -14,10 +14,10 @@ public class StoryDB
     // All the repercusions in the game
     public Dictionary<int, StoryRepercusion> m_Repercusions = new Dictionary<int, StoryRepercusion>();
 
-    public void LoadData()
+    public void LoadData(StoryDBUnityReferences unityRefs)
     {
         LoadStoryRepercusions();
-        LoadStoryUIData();
+        LoadStoryUIData(unityRefs);
         LoadStoryData();
     }
 
@@ -92,7 +92,7 @@ public class StoryDB
         m_Repercusions.Add(Admin.g_Instance.ID.repercusions.center_wolf_alive, rep);
     }
 
-    private void LoadStoryUIData()
+    private void LoadStoryUIData(StoryDBUnityReferences unityRefs)
     {
         var ids = Admin.g_Instance.ID.stories;
 

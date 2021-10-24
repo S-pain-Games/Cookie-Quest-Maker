@@ -24,7 +24,9 @@ public class QMGameplaySystem : MonoBehaviour
     public void SelectStory(int storyId)
     {
         m_Data.m_StoryID = storyId;
-        m_Data.m_CurrentQuest = new QuestData();
+        // We generate garbage when selecting a story multiple times
+        // but wachugonadu
+        m_Data.m_CurrentQuest = new QuestData(); 
     }
 
     public void AddPiece(QuestPiece piece)

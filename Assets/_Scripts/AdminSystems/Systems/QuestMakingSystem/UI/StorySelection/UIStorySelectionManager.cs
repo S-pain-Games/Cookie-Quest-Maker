@@ -10,11 +10,13 @@ public class UIStorySelectionManager : MonoBehaviour
     public event Action<int> OnStorySelected;
 
     // Ui Controls
+    [Header("Buttons")]
     [SerializeField] private Button _nextStoryButton;
     [SerializeField] private Button _previousStoryButton;
     [SerializeField] private Button _selectStoryButton;
 
     // Story View
+    [Header("Story Card")]
     [SerializeField] private Image _cardContents;
     [SerializeField] private TextMeshProUGUI _cardTitle;
 

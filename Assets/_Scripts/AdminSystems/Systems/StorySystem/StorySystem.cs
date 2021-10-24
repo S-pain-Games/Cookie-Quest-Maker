@@ -14,12 +14,6 @@ public class StorySystem : MonoBehaviour
     public void Initialize(StoryDB storyDb)
     {
         _storyDB = storyDb;
-
-        // Development Only
-        StartStory(Admin.g_Instance.ID.stories.test);
-        StartStory(Admin.g_Instance.ID.stories.mayors_problem);
-        StartStory(Admin.g_Instance.ID.stories.out_of_lactose);
-        StartStory(Admin.g_Instance.ID.stories.the_birds_and_the_bees);
     }
 
     // Called by some in-game conversation that starts
