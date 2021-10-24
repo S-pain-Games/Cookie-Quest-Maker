@@ -20,7 +20,27 @@ public class ReputationSystem
     }
 
     public void AddGoodCookieRep(int amount) => _res.m_GoodCookieReputation += amount;
-    public void RemoveGoodCookieRep(int amount) => _res.m_GoodCookieReputation -= amount;
+    public bool RemoveGoodCookieRep(int amount)
+    {
+        if (_res.m_GoodCookieReputation - amount >= 0)
+        {
+            _res.m_GoodCookieReputation -= amount;
+            return true;
+        }
+        else
+            return false;
+            
+    }
     public void AddEvilCookieRep(int amount) => _res.m_EvilCookieReputation += amount;
-    public void RemoveEvilCookieRep(int amount) => _res.m_EvilCookieReputation -= amount;
+    public bool RemoveEvilCookieRep(int amount)
+    {
+        if (_res.m_EvilCookieReputation - amount >= 0)
+        {
+            _res.m_EvilCookieReputation -= amount;
+            return true;
+        }
+        else
+            return false;
+            
+    }
 }

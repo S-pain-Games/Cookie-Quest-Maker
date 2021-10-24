@@ -6,8 +6,13 @@ public class CookieDB
 {
     //Contains all the cookie recipes
     public Dictionary<int, RecipeData> m_RecipeDataDB = new Dictionary<int, RecipeData>();
+    public List<RecipeData> m_RecipeDataList = new List<RecipeData>();
     //Contains all the data for the cookies
     public Dictionary<int, CookieData> m_CookieDataDB = new Dictionary<int, CookieData>();
+
+    //Contains all the bought cookie recipes
+    public Dictionary<int, RecipeData> m_BoughtRecipeDataDB = new Dictionary<int, RecipeData>();
+    public List<RecipeData> m_BoughtRecipeDataList = new List<RecipeData>();
 
     public void LoadData()
     {
@@ -24,13 +29,19 @@ public class CookieDB
         recipe.m_RecipeName = "Plain Cookie Recipe";
         recipe.m_RecipeDescription = "Plain Cookie recipe description.";
         recipe.m_CookieID = pIds.plain_cookie;
+        recipe.m_Reputation = Reputation.GoodCookieReputation;
+        recipe.price = 50;
         m_RecipeDataDB.Add(pIds.plain_cookie, recipe);
+        m_RecipeDataList.Add(recipe);
 
         recipe = new RecipeData();
         recipe.m_RecipeName = "Plain Cookie 2 Recipe";
         recipe.m_RecipeDescription = "Plain Cookie 2 recipe description.";
         recipe.m_CookieID = pIds.plain_cookie_2;
+        recipe.m_Reputation = Reputation.EvilCookieReputation;
+        recipe.price = 50;
         m_RecipeDataDB.Add(pIds.plain_cookie_2, recipe);
+        m_RecipeDataList.Add(recipe);
     }
 
     private void LoadCookies(IDQuestPieces pIds)
