@@ -6,7 +6,7 @@ namespace CQM.QuestMaking
 {
     [System.Serializable]
     // Storage of all the unlocked pieces and cookies that the player has
-    public class PlayerPieceStorage
+    public class PlayerUnlockedPieces
     {
         // List of unlocked pieces IDs for the player
         public List<int> m_Storage = new List<int>();

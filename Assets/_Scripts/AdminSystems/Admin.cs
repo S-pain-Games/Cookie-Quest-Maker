@@ -25,6 +25,11 @@ public class Admin : MonoBehaviour
     [SerializeField] private StoryDBUnityReferences storyDBRef;
     public CalendarData calendarData;
 
+    // Player Data
+    public PlayerUnlockedPieces playerPieceStorage;
+    public PlayerBakingIngredients playerBakingIngredients;
+    public PlayerReputation playerReputation;
+
     // Game Systems
     public StorySystem storySystem;
     public QMGameplaySystem questMakerSystem;
@@ -34,8 +39,8 @@ public class Admin : MonoBehaviour
     public LocalizationSystem localizationSystem;
     public CalendarSystem calendarSystem;
 
-    // Player Systems
-    public PlayerPieceStorage playerPieceStorage;
+    public ReputationSystem reputationSystem;
+    public IngredientsSystem ingredientsSystem;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Init()
@@ -55,12 +60,19 @@ public class Admin : MonoBehaviour
         cookieMakingSystem = GetComponent<CookieMakingSystem>();
         localizationSystem = GetComponent<LocalizationSystem>();
         calendarSystem = new CalendarSystem();
+        reputationSystem = new ReputationSystem();
+        ingredientsSystem = new IngredientsSystem();
 
         // Create DBs and data objects
         storyDB = new StoryDB();
         questDB = new QuestDB();
         cookieDB = new CookieDB();
         calendarData = new CalendarData();
+
+        // Create Player Data Containers
+        playerPieceStorage = new PlayerUnlockedPieces();
+        playerReputation = new PlayerReputation();
+        playerBakingIngredients = new PlayerBakingIngredients();
 
         // Get DBs Unity References Adapters
         questDBRef = GetComponent<QuestDBUnityReferences>();
@@ -75,12 +87,11 @@ public class Admin : MonoBehaviour
         storySystem.Initialize(storyDB);
         questMakerSystem.Initialize(storySystem, storyDB);
         calendarSystem.Initialize(calendarData);
+        reputationSystem.Initialize(playerReputation);
+        ingredientsSystem.Initialize(playerBakingIngredients);
         localizationSystem.LoadData();
 
-        // Create Player Systems
-        playerPieceStorage = new PlayerPieceStorage();
-
-        // Initialize Player Systems
+        // Initialize Player Data Containers
         playerPieceStorage.Initialize();
     }
 }
