@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 [RequireComponent(typeof(CharacterNavMeshAgentHandler))]
 public class AgentMouseListener : MonoBehaviour
 {
@@ -55,8 +56,6 @@ public class AgentMouseListener : MonoBehaviour
             _agent.SetTarget(mouseWorldPosition);
 
     }
-
-
 
     public bool IsListenerEnabled()
     {

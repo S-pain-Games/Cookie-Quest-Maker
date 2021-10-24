@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractableNPC : MonoBehaviour
+public class InteractableNPC : MonoBehaviour, IInteractableEntity
 {
-    // Start is called before the first frame update
-    void Start()
+    public void OnInteract()
     {
-        
+        Debug.Log("Interacción con "+name);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

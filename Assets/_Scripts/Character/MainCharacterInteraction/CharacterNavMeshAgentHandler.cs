@@ -7,8 +7,6 @@ using UnityEngine.AI;
 public class CharacterNavMeshAgentHandler : MonoBehaviour
 {
     private NavMeshAgent _agent;
-
-    private Vector3 _targetToReach;
     private GameObject _interactableEntity;
 
 
@@ -22,41 +20,43 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
         _agent.updateUpAxis = false;
 
         _movingTowardsTarget = false;
+        _interactableEntity = null;
     }
 
+    //Move towards position
     public void SetTarget(Vector3 target)
     {
-        _agent.SetDestination(target);
-        _targetToReach = target;
+        SetupAgent(target);
 
-        _agent.isStopped = false;
-        _movingTowardsTarget = true;
+        _interactableEntity = null;
     }
 
+    //Move towards position, then interact with object
     public void SetTarget(Vector3 target, GameObject interactableEntity)
     {
-        _agent.SetDestination(target);
-        _targetToReach = target;
-
-        _agent.isStopped = false;
-        _movingTowardsTarget = true;
-
+        SetupAgent(target);
         _interactableEntity = interactableEntity;
     }
 
-    private float _lastVelocity;
+    private void SetupAgent(Vector3 target)
+    {
+        _agent.SetDestination(target);
+        _agent.isStopped = false;
+        _movingTowardsTarget = true;
+    }
 
     void Update()
     {
         if (!_movingTowardsTarget)
             return;
 
+        if (_agent.pathPending)
+            return;
+
         if (_agent.remainingDistance == 0)
         {
             OnTargetReached();
         }
-
-        
     }
 
     private void OnTargetReached()
