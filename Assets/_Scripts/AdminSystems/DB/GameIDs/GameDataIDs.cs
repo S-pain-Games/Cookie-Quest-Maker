@@ -47,6 +47,9 @@ public class IDLocalization
     public readonly int mainmenu_button_credits = "mainmenu_button_credits".GetHashCode();
 
     public readonly int optionsmenu_title = "optionsmenu_title".GetHashCode();
+    public readonly int optionsmenu_text_volume_music = "optionsmenu_text_volume_music".GetHashCode();
+    public readonly int optionsmenu_text_volume_effects = "optionsmenu_text_volume_effects".GetHashCode();
+    public readonly int optionsmenu_text_language = "optionsmenu_text_language".GetHashCode();
 
     public readonly int creditsmenu_title = "creditsmenu_title".GetHashCode();
 

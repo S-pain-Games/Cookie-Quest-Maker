@@ -63,6 +63,12 @@ public class LocalizationSystem : MonoBehaviour
         //Options menu
         m_Spanish.Add(ids.optionsmenu_title, "Opciones");
         m_English.Add(ids.optionsmenu_title, "Options");
+        m_Spanish.Add(ids.optionsmenu_text_volume_music, "Volumen de música");
+        m_English.Add(ids.optionsmenu_text_volume_music, "Music volume");
+        m_Spanish.Add(ids.optionsmenu_text_volume_effects, "Volumen de efectos");
+        m_English.Add(ids.optionsmenu_text_volume_effects, "Effects volume");
+        m_Spanish.Add(ids.optionsmenu_text_language, "IDIOMA");
+        m_English.Add(ids.optionsmenu_text_language, "LANGUAGE");
 
         //Credits menu
         m_Spanish.Add(ids.creditsmenu_title, "Créditos");
