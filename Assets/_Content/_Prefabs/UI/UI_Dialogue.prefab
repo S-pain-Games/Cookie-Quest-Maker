@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6b6d094e8869a4c85bb3b74a109faf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogueBoxContainer: {fileID: 0}
+  _dialogueBoxContainer: {fileID: 1693811375846806772}
   _characterNameComp: {fileID: 1358749074003600818}
   _lineTextComp: {fileID: 640952731166273355}
   _dialogueLines: []
