@@ -52,6 +52,9 @@ public class GameStateSystem : MonoBehaviour
 
         OnStartCookieMaking += GameStateSystem_OnStartCookieMaking;
         OnStopCookieMaking += GameStateSystem_OnStopCookieMaking;
+
+        // We assume we start in the main menu
+        m_CurrentState = State.MainMenu;
     }
 
     private void OnDisable()
