@@ -40,7 +40,7 @@ public class AgentMouseListener : MonoBehaviour
         {
             if (hit.transform.GetComponent<IInteractableEntity>() != null)
             {
-                Debug.Log("He clickado en " + hit.transform.gameObject.name);
+                //Debug.Log("He clickado en " + hit.transform.gameObject.name);
                 interactableObject = hit.transform.gameObject;
             }
             else if(hit.transform.name == "Walkable")

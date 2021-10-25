@@ -8,6 +8,7 @@ using UnityEngine;
 [RequireComponent(typeof(QMGameplaySystem))]
 [RequireComponent(typeof(QuestDBUnityReferences))]
 [RequireComponent(typeof(StoryDBUnityReferences))]
+[RequireComponent(typeof(NpcDBUnityReferences))]
 [RequireComponent(typeof(CookieMakingSystem))]
 [RequireComponent(typeof(LocalizationSystem))]
 [RequireComponent(typeof(NpcSystem))]
@@ -26,6 +27,7 @@ public class Admin : MonoBehaviour
     public DialogueDB dialogueDB;
     [SerializeField] private QuestDBUnityReferences questDBRef;
     [SerializeField] private StoryDBUnityReferences storyDBRef;
+    [SerializeField] private NpcDBUnityReferences npcDBRef;
 
     public CalendarData calendarData;
 
@@ -70,7 +72,7 @@ public class Admin : MonoBehaviour
         reputationSystem = new ReputationSystem();
         ingredientsSystem = new IngredientsSystem();
         npcSystem = GetComponent<NpcSystem>();
-        dialogueSystem = FindObjectOfType<DialogueSystem>(); // This might be questionable
+        dialogueSystem = FindObjectOfType<DialogueSystem>(true); // This might be questionable
 
         // Create DBs and data objects
         storyDB = new StoryDB();
@@ -89,6 +91,7 @@ public class Admin : MonoBehaviour
         // Get DBs Unity References Adapters
         questDBRef = GetComponent<QuestDBUnityReferences>();
         storyDBRef = GetComponent<StoryDBUnityReferences>();
+        npcDBRef = GetComponent<NpcDBUnityReferences>();
 
         // Load Data
         storyDB.LoadData(storyDBRef);
@@ -96,6 +99,7 @@ public class Admin : MonoBehaviour
         townData.LoadData(storyDB);
         cookieDB.LoadData();
         dialogueDB.LoadData();
+        npcDB.LoadData(npcDBRef);
 
         // Initialize Game Systems References
         storySystem.Initialize(storyDB);
@@ -105,7 +109,7 @@ public class Admin : MonoBehaviour
         localizationSystem.LoadData();
 
         townSystem.Initialize(townData);
-        calendarSystem.Initialize(calendarData);
+        calendarSystem.Initialize(calendarData, storyDB);
         reputationSystem.Initialize(playerReputation);
         ingredientsSystem.Initialize(playerBakingIngredients);
 

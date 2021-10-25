@@ -7,7 +7,10 @@ public class CalendarSystem
 {
     private CalendarData _data;
 
-    public void Initialize(CalendarData data)
+    // TODO: Remove dependecy with event system
+    private StoryDB _storyDb;
+
+    public void Initialize(CalendarData data, StoryDB storyBd)
     {
         _data = data;
     }

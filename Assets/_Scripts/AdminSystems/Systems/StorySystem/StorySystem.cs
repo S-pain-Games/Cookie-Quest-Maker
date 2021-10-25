@@ -21,6 +21,10 @@ public class StorySystem : MonoBehaviour
     public void StartStory(int storyId)
     {
         Story story = _storyDB.m_StoriesDB[storyId];
+
+        if (story.m_State != Story.State.NotStarted)
+            Debug.LogError("Tried to start a story that is already in progress or completed");
+
         story.m_State = Story.State.InProgress;
         _storyDB.m_OngoingStories.Add(storyId);
     }
@@ -39,6 +43,7 @@ public class StorySystem : MonoBehaviour
         Story story = _storyDB.m_StoriesDB[storyId];
         _storyDB.m_OngoingStories.Remove(storyId);
         _storyDB.m_CompletedStories.Add(storyId);
+        _storyDB.OnStoryCompleted?.Invoke(_storyDB.m_CompletedStories.Count);
 
         _questSystem.GetOverallTag(questData.m_PiecesList, out QPTag.TagType tagType, out int value);
         ProcessStoryData(story.m_StoryData, tagType, value, out string result, out StoryRepercusion rep);

@@ -221,10 +221,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Dialogue
       objectReference: {fileID: 0}
-    - target: {fileID: 2146895226871911575, guid: 86145d1ad5d95aa47b8730e04f46a6cf, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5612763218185812416, guid: 86145d1ad5d95aa47b8730e04f46a6cf, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -553,10 +549,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuPrefab
       objectReference: {fileID: 0}
-    - target: {fileID: 7478927676519029679, guid: a2f92c45b0c3b084bb38be52c0bc6f49, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7478927676894366547, guid: a2f92c45b0c3b084bb38be52c0bc6f49, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -726,6 +718,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 404580703654454805}
     m_Modifications:
+    - target: {fileID: 1481310465375297609, guid: 94a9ebf5cb612bb4eba455d9a92fc869, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 404580703654454804}
     - target: {fileID: 3357964181116984691, guid: 94a9ebf5cb612bb4eba455d9a92fc869, type: 3}
       propertyPath: m_IsActive
       value: 0

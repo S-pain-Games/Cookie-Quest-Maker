@@ -61,7 +61,7 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
 
     private void OnTargetReached()
     {
-        Debug.Log("Target reached");
+        //Debug.Log("Target reached");
         _agent.isStopped = true;
 
         //Si el target era interactuable, llamar a su método

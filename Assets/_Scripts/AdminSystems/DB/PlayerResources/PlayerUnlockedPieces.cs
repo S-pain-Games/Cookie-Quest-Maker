@@ -17,9 +17,14 @@ namespace CQM.QuestMaking
             // the player save game file
 
             // Development Init
+            // TODO: Init this correctly from file
             var qpDB = Admin.g_Instance.questDB;
-            m_Storage.Add("attack".GetHashCode());
-            m_Storage.Add("assist".GetHashCode());
+            var ids = Admin.g_Instance.ID.pieces;
+
+            m_Storage.Add(ids.attack);
+            m_Storage.Add(ids.assist);
+            m_Storage.Add(ids.baseball_bat);
+            m_Storage.Add(ids.brutally);
             /*
             m_Storage.Add("plain_cookie".GetHashCode());
             m_Storage.Add("plain_cookie_2".GetHashCode());

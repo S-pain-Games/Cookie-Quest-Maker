@@ -6,6 +6,8 @@
 [System.Serializable]
 public class Story
 {
+    // WRITE TO THIS DATA ONLY FROM THE STORY SYSTEM
+
     public StoryData m_StoryData; // Persistent Story Data
     public QuestData m_QuestData; // The quest that was created to complete the story
     public State m_State = State.NotStarted;

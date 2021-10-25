@@ -77,6 +77,22 @@ namespace CQM.QuestMaking
                 description = "Being able to assist someone in need is very gud -Angelic Cookie God"
             };
             m_UIQuestPieces.Add(pIds.assist, qpd);
+
+            qpd = new UIQuestPieceData
+            {
+                sprite = null,
+                name = "Brutally",
+                description = "Very Brutally"
+            };
+            m_UIQuestPieces.Add(pIds.brutally, qpd);
+
+            qpd = new UIQuestPieceData
+            {
+                sprite = null,
+                name = "Baseball Bat",
+                description = "Its a bat, from baseball"
+            };
+            m_UIQuestPieces.Add(pIds.baseball_bat, qpd);
         }
 
         private void LoadQuestPieces(IDQuestPieces pIds)

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class InteractableNPC : MonoBehaviour, IInteractableEntity
 {
+
     public void OnInteract()
     {
         Debug.Log("Interacción con "+name);
     }
-
 }

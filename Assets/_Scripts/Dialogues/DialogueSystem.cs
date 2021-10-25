@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -18,14 +19,26 @@ public class DialogueSystem : MonoBehaviour
     private List<string> _dialogueLines;
 
     private int _lineIndex = 0;
+    private Action _callbackOnDialogueEnd;
+
+    public void ShowDialogue(List<string> dialogue, string characterName, Action callback)
+    {
+        _dialogueBoxContainer.SetActive(true);
+        _dialogueLines = dialogue;
+
+        _characterNameComp.text = characterName;
+        _lineTextComp.text = _dialogueLines[_lineIndex];
+        _callbackOnDialogueEnd = callback;
+    }
 
     public void ShowDialogue(List<string> dialogue, string characterName)
     {
+        _dialogueBoxContainer.SetActive(true);
         _dialogueLines = dialogue;
-        _characterNameComp.text = characterName;
 
-        _lineTextComp.text = string.Empty;
+        _characterNameComp.text = characterName;
         _lineTextComp.text = _dialogueLines[_lineIndex];
+        _callbackOnDialogueEnd = null;
     }
 
     public void NextLine()
@@ -39,6 +52,12 @@ public class DialogueSystem : MonoBehaviour
         {
             _dialogueBoxContainer.SetActive(false);
             _lineIndex = 0;
+
+            if (_callbackOnDialogueEnd != null)
+            {
+                _callbackOnDialogueEnd.Invoke();
+                _callbackOnDialogueEnd = null;
+            }
         }
     }
 }

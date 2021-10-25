@@ -18,6 +18,9 @@ public class GameStateSystem : MonoBehaviour
     public event Action OnStartCookieMaking;
     public event Action OnStopCookieMaking;
 
+    public event Action OnStartBakeryNight;
+    public event Action OnStopBakeryNight;
+
     [SerializeField]
     private State m_CurrentState = State.Bakery;
 
@@ -30,13 +33,16 @@ public class GameStateSystem : MonoBehaviour
     private GameObject m_QuestMaking;
     [SerializeField]
     private GameObject m_CookieMaking;
+    [SerializeField]
+    private GameObject m_BakeryNight;
 
     public enum State
     {
         MainMenu,
         Bakery,
         QuestMaking,
-        CookieMaking
+        CookieMaking,
+        BakeryNight
     }
 
     private void OnEnable()
