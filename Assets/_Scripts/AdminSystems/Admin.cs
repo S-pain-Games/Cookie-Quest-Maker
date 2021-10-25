@@ -23,6 +23,7 @@ public class Admin : MonoBehaviour
     public CookieDB cookieDB;
     public NpcDB npcDB;
     public TownDB townData;
+    public DialogueDB dialogueDB;
     [SerializeField] private QuestDBUnityReferences questDBRef;
     [SerializeField] private StoryDBUnityReferences storyDBRef;
 
@@ -42,6 +43,7 @@ public class Admin : MonoBehaviour
     public LocalizationSystem localizationSystem;
     public CalendarSystem calendarSystem;
     public NpcSystem npcSystem;
+    public DialogueSystem dialogueSystem;
 
     public ReputationSystem reputationSystem;
     public IngredientsSystem ingredientsSystem;
@@ -68,12 +70,14 @@ public class Admin : MonoBehaviour
         reputationSystem = new ReputationSystem();
         ingredientsSystem = new IngredientsSystem();
         npcSystem = GetComponent<NpcSystem>();
+        dialogueSystem = FindObjectOfType<DialogueSystem>(); // This might be questionable
 
         // Create DBs and data objects
         storyDB = new StoryDB();
         questDB = new QuestDB();
         cookieDB = new CookieDB();
         npcDB = new NpcDB();
+        dialogueDB = new DialogueDB();
         calendarData = new CalendarData();
         townData = new TownDB();
 
@@ -91,6 +95,7 @@ public class Admin : MonoBehaviour
         questDB.LoadData(questDBRef);
         townData.LoadData(storyDB);
         cookieDB.LoadData();
+        dialogueDB.LoadData();
 
         // Initialize Game Systems References
         storySystem.Initialize(storyDB);
