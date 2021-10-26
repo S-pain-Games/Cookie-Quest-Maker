@@ -8,8 +8,7 @@ using TMPro;
  */
 public class NewspaperController : MonoBehaviour
 {
-    // TODO Add functionality to store and retrieve images created at runtime for the main article
-
+    // TODO: Convert this into system
     [SerializeField] private TextMeshProUGUI _mainTitleText;
     [SerializeField] private List<TextMeshPro> _articleTitlesText = new List<TextMeshPro>();
 

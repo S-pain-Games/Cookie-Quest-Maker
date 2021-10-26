@@ -21,9 +21,6 @@ public class StoryDB
     // Stories that have been completely finished
     public List<int> m_FinalizedStories = new List<int>();
 
-    // TODO: Move to event system
-    public Action<int> OnStoryCompleted;
-
     // All the repercusions in the game (Persistent)
     public Dictionary<int, StoryRepercusion> m_Repercusions = new Dictionary<int, StoryRepercusion>();
 

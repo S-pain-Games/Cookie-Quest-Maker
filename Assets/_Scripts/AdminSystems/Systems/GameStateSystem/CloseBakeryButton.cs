@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class CloseBakeryButton : MonoBehaviour
 {
-    private StoryDB _storyDb;
-    private GameStateSystem _gameStateSystem; //TODO: event system
+    private GameEventSystem _messaging;
+    private Event<int> onStoryCompleted;
+    private Event<GameStateSystem.State> SetGameState;
 
     [SerializeField]
     private GameObject _buttonGameObject;
@@ -15,31 +16,30 @@ public class CloseBakeryButton : MonoBehaviour
 
     private void Awake()
     {
-        _storyDb = Admin.g_Instance.storyDB;
+        var ids = Admin.g_Instance.ID.events;
+        _messaging.StoryCallbacks.GetEvent(ids.on_story_completed, out onStoryCompleted);
+        _messaging.StoryCallbacks.GetEvent(ids.set_game_state, out SetGameState);
+
         _button = _buttonGameObject.GetComponent<Button>();
         _button.onClick.AddListener(() =>
         {
-            _gameStateSystem.SetState(GameStateSystem.State.BakeryNight);
+            SetGameState.Invoke(GameStateSystem.State.BakeryNight);
             _buttonGameObject.SetActive(false);
         });
     }
 
     private void OnEnable()
     {
-        _storyDb.OnStoryCompleted += TryToEnableButton;
+        onStoryCompleted.OnInvoked += TryToEnableButton;
     }
 
     private void OnDisable()
     {
-        _storyDb.OnStoryCompleted -= TryToEnableButton;
+        onStoryCompleted.OnInvoked -= TryToEnableButton;
     }
 
-    private void TryToEnableButton(int numCompletedMissions)
+    private void TryToEnableButton(int storyId)
     {
-        if (numCompletedMissions == 3)
-        {
-            _buttonGameObject.SetActive(true);
-
-        }
+        _buttonGameObject.SetActive(true);
     }
 }

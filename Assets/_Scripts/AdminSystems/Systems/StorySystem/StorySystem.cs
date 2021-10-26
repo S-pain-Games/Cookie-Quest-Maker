@@ -9,11 +9,22 @@ public class StorySystem : MonoBehaviour
 {
     // Initialized Through Admin
     private StoryDB _storyDB;
+    private GameEventSystem _eventSystem;
     private QuestSystem _questSystem = new QuestSystem(); // This could be refactored
 
-    public void Initialize(StoryDB storyDb)
+    private Event<int> OnStoryStarted;
+    private Event<int> OnStoryCompleted;
+    private Event<int> OnStoryFinalized;
+
+    public void Initialize(StoryDB storyDb, GameEventSystem evtSystem)
     {
+        var evtIds = Admin.g_Instance.ID.events;
+
         _storyDB = storyDb;
+        _eventSystem = evtSystem;
+        _eventSystem.StoryCallbacks.GetEvent(evtIds.on_story_started, out OnStoryStarted);
+        _eventSystem.StoryCallbacks.GetEvent(evtIds.on_story_completed, out OnStoryCompleted);
+        _eventSystem.StoryCallbacks.GetEvent(evtIds.on_story_finalized, out OnStoryFinalized);
     }
 
     // Called by some in-game conversation that starts
@@ -27,6 +38,8 @@ public class StorySystem : MonoBehaviour
 
         story.m_State = Story.State.InProgress;
         _storyDB.m_OngoingStories.Add(storyId);
+
+        OnStoryStarted.Invoke(storyId);
     }
 
     // We assume that the quest passed here 
@@ -39,11 +52,9 @@ public class StorySystem : MonoBehaviour
         if (!_storyDB.m_OngoingStories.Contains(storyId))
             throw new System.Exception("Trying to complete a story that isnt ongoing");
 #endif
-
         Story story = _storyDB.m_StoriesDB[storyId];
         _storyDB.m_OngoingStories.Remove(storyId);
         _storyDB.m_CompletedStories.Add(storyId);
-        _storyDB.OnStoryCompleted?.Invoke(_storyDB.m_CompletedStories.Count);
 
         _questSystem.GetOverallTag(questData.m_PiecesList, out QPTag.TagType tagType, out int value);
         ProcessStoryData(story.m_StoryData, tagType, value, out string result, out StoryRepercusion rep);
@@ -51,6 +62,8 @@ public class StorySystem : MonoBehaviour
         story.m_QuestData = questData;
         story.m_QuestResult = result;
         story.m_QuestRepercusion = rep;
+
+        OnStoryCompleted.Invoke(storyId);
 
         Debug.Log(story.m_QuestResult);
     }
@@ -62,6 +75,8 @@ public class StorySystem : MonoBehaviour
         Story story = _storyDB.m_StoriesDB[storyId];
         _storyDB.m_CompletedStories.Remove(storyId);
         _storyDB.m_FinalizedStories.Add(storyId);
+
+        OnStoryFinalized.Invoke(storyId);
     }
 
     // Process a story with the given tag and value and get the result

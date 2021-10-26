@@ -7,6 +7,7 @@ public class GameDataIDs
     public readonly IDQuestPieces pieces = new IDQuestPieces();
     public readonly IDLocalization localization = new IDLocalization();
     public readonly IDTownLocations townLocations = new IDTownLocations();
+    public readonly IDEvents events = new IDEvents();
 }
 
 public class IDsRepercusions
@@ -60,4 +61,21 @@ public class IDLocalization
 public class IDTownLocations
 {
     public readonly int town_center = "town_center".GetHashCode();
+}
+
+public class IDEvents
+{
+    // CALLBACKS
+    public readonly int on_story_started = "story_completed".GetHashCode();
+    public readonly int on_story_completed = "story_completed".GetHashCode();
+    public readonly int on_story_finalized = "story_completed".GetHashCode();
+
+    public readonly int on_day_ended = "day_ended".GetHashCode();
+
+    // COMMANDS
+    public readonly int start_story = "start_story".GetHashCode();
+
+    public readonly int show_dialogue = "show_dialogue".GetHashCode();
+
+    public readonly int set_game_state = "set_game_state".GetHashCode();
 }

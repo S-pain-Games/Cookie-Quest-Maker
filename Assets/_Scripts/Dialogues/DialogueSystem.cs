@@ -21,6 +21,7 @@ public class DialogueSystem : MonoBehaviour
     private int _lineIndex = 0;
     private Action _callbackOnDialogueEnd;
 
+    // TODO: Add behaviour to stack dialogues
     public void ShowDialogue(List<string> dialogue, string characterName, Action callback)
     {
         _dialogueBoxContainer.SetActive(true);
@@ -29,16 +30,6 @@ public class DialogueSystem : MonoBehaviour
         _characterNameComp.text = characterName;
         _lineTextComp.text = _dialogueLines[_lineIndex];
         _callbackOnDialogueEnd = callback;
-    }
-
-    public void ShowDialogue(List<string> dialogue, string characterName)
-    {
-        _dialogueBoxContainer.SetActive(true);
-        _dialogueLines = dialogue;
-
-        _characterNameComp.text = characterName;
-        _lineTextComp.text = _dialogueLines[_lineIndex];
-        _callbackOnDialogueEnd = null;
     }
 
     public void NextLine()
@@ -64,6 +55,7 @@ public class DialogueSystem : MonoBehaviour
 
 public class DialogueDB
 {
+    // TODO: Complete this
     // Contains all the random dialogue lines id's (for localization) said by secondary non-story NPCs
     public Dictionary<int, List<int>> m_RandomDialogue = new Dictionary<int, List<int>>(); // List?
 

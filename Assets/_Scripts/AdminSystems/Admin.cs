@@ -37,6 +37,7 @@ public class Admin : MonoBehaviour
     public PlayerReputation playerReputation;
 
     // Game Systems
+    public GameEventSystem gameEventSystem;
     public StorySystem storySystem;
     public QMGameplaySystem questMakerSystem;
     public GameStateSystem gameStateSystem;
@@ -62,6 +63,7 @@ public class Admin : MonoBehaviour
         // INITIALIZATION ORDER MATTERS
 
         // Get or create Game Systems
+        gameEventSystem = new GameEventSystem();
         storySystem = GetComponent<StorySystem>();
         gameStateSystem = GetComponent<GameStateSystem>();
         questMakerSystem = GetComponent<QMGameplaySystem>();
@@ -101,8 +103,10 @@ public class Admin : MonoBehaviour
         dialogueDB.LoadData();
         npcDB.LoadData(npcDBRef);
 
-        // Initialize Game Systems References
-        storySystem.Initialize(storyDB);
+        // Initialize Game Systems
+        gameEventSystem.Initialize();
+        gameEventSystem.LinkCommandEvents(this);
+        storySystem.Initialize(storyDB, gameEventSystem);
         questMakerSystem.Initialize(storySystem, storyDB);
         cookieMakingSystem.Initialize(cookieDB);
         npcSystem.Initialize(storyDB, npcDB);
