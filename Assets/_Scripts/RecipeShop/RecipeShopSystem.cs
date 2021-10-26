@@ -10,12 +10,18 @@ public class RecipeShopSystem : MonoBehaviour
     [SerializeField] private List<GameObject> currentRecipes;
     [SerializeField] private Transform recipeListParent;
 
+    private Admin admin;
+
+    private void Awake()
+    {
+        admin = Admin.g_Instance;
+    }
 
     private void OnEnable()
     {
         if (currentRecipes.Count == 0)
         {
-            List<RecipeData> recipes = Admin.g_Instance.cookieDB.m_RecipeDataList;
+            List<RecipeData> recipes = admin.cookieDB.m_RecipeDataList;
             foreach (RecipeData r in recipes)
             {
                 GameObject newRecipeUI = Instantiate(pref_Recipe, recipeListParent);
@@ -47,11 +53,11 @@ public class RecipeShopSystem : MonoBehaviour
         selectedRecipe = id;
     }
 
+    //TODO: Update cookie making available recipes
     public void BuyRecipe()
     {
         if(selectedRecipe != -1)
         {
-            Admin admin = Admin.g_Instance;
             RecipeData recipe;
             admin.cookieDB.m_RecipeDataDB.TryGetValue(selectedRecipe, out recipe);
 
@@ -64,8 +70,7 @@ public class RecipeShopSystem : MonoBehaviour
                         bool bought = admin.reputationSystem.RemoveGoodCookieRep(recipe.price);
                         if(bought)
                         {
-                            admin.cookieDB.m_BoughtRecipeDataDB.Add(recipe.m_CookieID, recipe);
-                            recipe.bought = true;
+                            admin.cookieDB.AddBoughtCookie(recipe.m_CookieID, recipe);
                         }
                         
                     }
@@ -74,8 +79,7 @@ public class RecipeShopSystem : MonoBehaviour
                         bool bought = admin.reputationSystem.RemoveEvilCookieRep(recipe.price);
                         if (bought)
                         {
-                            admin.cookieDB.m_BoughtRecipeDataDB.Add(recipe.m_CookieID, recipe);
-                            recipe.bought = true;
+                            admin.cookieDB.AddBoughtCookie(recipe.m_CookieID, recipe);
                         } 
                     }
                 }

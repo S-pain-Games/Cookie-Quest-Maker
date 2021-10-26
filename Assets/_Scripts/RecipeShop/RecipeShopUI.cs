@@ -10,9 +10,21 @@ public class RecipeShopUI : MonoBehaviour
 
     public event Action<int> OnSelectRecipe;
 
+    private Button button;
+
     private void Awake()
     {
-        GetComponent<Button>().onClick.AddListener(SelectMyRecipe);
+        button = GetComponent<Button>();
+    }
+
+    private void OnEnable()
+    {
+        button.onClick.AddListener(SelectMyRecipe);
+    }
+
+    private void OnDisable()
+    {
+        button.onClick.RemoveListener(SelectMyRecipe);
     }
 
     private void SelectMyRecipe()

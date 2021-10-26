@@ -33,6 +33,7 @@ public class CookieDB
         recipe.price = 50;
         m_RecipeDataDB.Add(pIds.plain_cookie, recipe);
         m_RecipeDataList.Add(recipe);
+        AddBoughtCookie(recipe.m_CookieID, recipe);
 
         recipe = new RecipeData();
         recipe.m_RecipeName = "Plain Cookie 2 Recipe";
@@ -42,6 +43,7 @@ public class CookieDB
         recipe.price = 50;
         m_RecipeDataDB.Add(pIds.plain_cookie_2, recipe);
         m_RecipeDataList.Add(recipe);
+        AddBoughtCookie(recipe.m_CookieID, recipe);
     }
 
     private void LoadCookies(IDQuestPieces pIds)
@@ -55,5 +57,12 @@ public class CookieDB
         cookie.m_CookieName = "Plain Cookie 2";
         cookie.m_CookieDescription = "Plain Cookie 2 description";
         m_CookieDataDB.Add(pIds.plain_cookie_2, cookie);
+    }
+
+    public void AddBoughtCookie(int id, RecipeData recipe)
+    {
+        m_BoughtRecipeDataDB.Add(id, recipe);
+        m_BoughtRecipeDataList.Add(recipe);
+        recipe.bought = true;
     }
 }
