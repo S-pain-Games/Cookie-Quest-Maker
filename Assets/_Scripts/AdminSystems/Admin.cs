@@ -3,15 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(StorySystem))]
+[RequireComponent(typeof(LocalizationSystem))]
 [RequireComponent(typeof(GameStateSystem))]
+
+[RequireComponent(typeof(StorySystem))]
 [RequireComponent(typeof(QMGameplaySystem))]
+[RequireComponent(typeof(CookieMakingSystem))]
+[RequireComponent(typeof(NpcSystem))]
+
 [RequireComponent(typeof(QuestDBUnityReferences))]
 [RequireComponent(typeof(StoryDBUnityReferences))]
 [RequireComponent(typeof(NpcDBUnityReferences))]
-[RequireComponent(typeof(CookieMakingSystem))]
-[RequireComponent(typeof(LocalizationSystem))]
-[RequireComponent(typeof(NpcSystem))]
 public class Admin : MonoBehaviour
 {
     public static Admin g_Instance;
@@ -38,15 +40,17 @@ public class Admin : MonoBehaviour
 
     // Game Systems
     public GameEventSystem gameEventSystem;
+    public GameStateSystem gameStateSystem;
+    public LocalizationSystem localizationSystem;
+
     public StorySystem storySystem;
     public QMGameplaySystem questMakerSystem;
-    public GameStateSystem gameStateSystem;
-    public TownSystem townSystem;
     public CookieMakingSystem cookieMakingSystem;
-    public LocalizationSystem localizationSystem;
-    public CalendarSystem calendarSystem;
-    public NpcSystem npcSystem;
     public DialogueSystem dialogueSystem;
+    
+    public NpcSystem npcSystem;
+    public TownSystem townSystem;
+    public CalendarSystem calendarSystem;
 
     public ReputationSystem reputationSystem;
     public IngredientsSystem ingredientsSystem;
@@ -64,17 +68,19 @@ public class Admin : MonoBehaviour
 
         // Get or create Game Systems
         gameEventSystem = new GameEventSystem();
-        storySystem = GetComponent<StorySystem>();
         gameStateSystem = GetComponent<GameStateSystem>();
+        localizationSystem = GetComponent<LocalizationSystem>();
+
+        storySystem = GetComponent<StorySystem>();
+        dialogueSystem = FindObjectOfType<DialogueSystem>(true); // This might be questionable
         questMakerSystem = GetComponent<QMGameplaySystem>();
         cookieMakingSystem = GetComponent<CookieMakingSystem>();
-        localizationSystem = GetComponent<LocalizationSystem>();
+        npcSystem = GetComponent<NpcSystem>();
+
         townSystem = new TownSystem();
         calendarSystem = new CalendarSystem();
         reputationSystem = new ReputationSystem();
         ingredientsSystem = new IngredientsSystem();
-        npcSystem = GetComponent<NpcSystem>();
-        dialogueSystem = FindObjectOfType<DialogueSystem>(true); // This might be questionable
 
         // Create DBs and data objects
         storyDB = new StoryDB();
@@ -106,11 +112,12 @@ public class Admin : MonoBehaviour
         // Initialize Game Systems
         gameEventSystem.Initialize();
         gameEventSystem.LinkCommandEvents(this);
+        localizationSystem.LoadData();
+
         storySystem.Initialize(storyDB, gameEventSystem);
         questMakerSystem.Initialize(storySystem, storyDB);
         cookieMakingSystem.Initialize(cookieDB);
         npcSystem.Initialize(storyDB, npcDB);
-        localizationSystem.LoadData();
 
         townSystem.Initialize(townData);
         calendarSystem.Initialize(calendarData, storyDB);
