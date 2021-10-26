@@ -40,6 +40,7 @@ public class EventSys
         else
         {
             evt = null;
+            Debug.LogError("Event not found");
             return false;
         }
     }
@@ -54,6 +55,7 @@ public class EventSys
         else
         {
             evt = null;
+            Debug.LogError("Event not found");
             return false;
         }
     }
