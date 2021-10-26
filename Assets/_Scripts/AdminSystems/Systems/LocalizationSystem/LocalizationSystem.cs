@@ -34,7 +34,7 @@ public class LocalizationSystem : MonoBehaviour
                 else
                     return "NOT LOCALIZED";
             case Language.English:
-                if (m_Spanish.TryGetValue(lineKey, out string lineEnglish))
+                if (m_English.TryGetValue(lineKey, out string lineEnglish))
                     return lineEnglish;
                 else
                     return "NOT LOCALIZED";
@@ -82,10 +82,10 @@ public class LocalizationSystem : MonoBehaviour
 
 
     }
+}
 
-    public enum Language
-    {
-        Spanish,
-        English
-    }
+public enum Language
+{
+    Spanish,
+    English
 }
