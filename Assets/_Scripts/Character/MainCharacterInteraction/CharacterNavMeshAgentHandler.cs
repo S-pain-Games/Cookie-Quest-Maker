@@ -11,6 +11,7 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
 
 
     private bool _movingTowardsTarget;
+    private bool _interactingWithNpc;
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
         _agent.updateUpAxis = false;
 
         _movingTowardsTarget = false;
+        _interactingWithNpc = false;
         _interactableEntity = null;
     }
 
@@ -27,7 +29,6 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
     public void SetTarget(Vector3 target)
     {
         SetupAgent(target);
-
         _interactableEntity = null;
     }
 
@@ -36,6 +37,7 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
     {
         SetupAgent(target);
         _interactableEntity = interactableEntity;
+        _interactingWithNpc = _interactableEntity.GetComponent<NPCBehaviour>() != null;
     }
 
     private void SetupAgent(Vector3 target)
@@ -53,7 +55,12 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
         if (_agent.pathPending)
             return;
 
-        if (_agent.remainingDistance == 0)
+
+        if(_interactingWithNpc && _agent.remainingDistance <= 1)
+        {
+            OnTargetReached();
+        }
+        else if (_agent.remainingDistance <= 0.5f)
         {
             OnTargetReached();
         }
@@ -61,8 +68,8 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
 
     private void OnTargetReached()
     {
-        //Debug.Log("Target reached");
         _agent.isStopped = true;
+        _agent.velocity = Vector3.zero;
 
         //Si el target era interactuable, llamar a su método
         if(_interactableEntity != null)
@@ -72,7 +79,7 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
 
         _interactableEntity = null;
         _movingTowardsTarget = false;
-
+        _interactingWithNpc = false;
     }
 
 }
