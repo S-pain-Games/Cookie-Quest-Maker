@@ -49,6 +49,14 @@ namespace CQM.QuestMaking
             qpd = new UIQuestPieceData
             {
                 sprite = null,
+                name = "Molly",
+                description = "Friendly owner of the cow farm in town"
+            };
+            m_UIQuestPieces.Add(pIds.molly, qpd);
+
+            qpd = new UIQuestPieceData
+            {
+                sprite = null,
                 name = "Plain Cookie",
                 description = "Very plain"
             };
@@ -102,6 +110,12 @@ namespace CQM.QuestMaking
             qp.m_Type = QuestPiece.PieceType.Target;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Help, m_Value = 1 });
             m_QPiecesDB.Add(pIds.mayor, qp);
+
+            qp = new QuestPiece();
+            qp.m_PieceName = "Molly";
+            qp.m_Type = QuestPiece.PieceType.Target;
+            qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Help, m_Value = 1 });
+            m_QPiecesDB.Add(pIds.molly, qp);
 
             qp = new QuestPiece();
             qp.m_PieceName = "Attack";

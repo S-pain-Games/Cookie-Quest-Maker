@@ -87,7 +87,7 @@ public class StoryDB
         AddBranchToStoryData(sData, repIds.center_wolf_alive, "Apparently yesterday some small creatures tried to approach Molly at the night.", QPTag.TagType.Help, 1);
         AddBranchToStoryData(sData, repIds.center_wolf_dead, "Molly's cows were actually kidnaped, she is devastated.", QPTag.TagType.Harm, 1);
         s.m_StoryData = sData;
-        sData.m_Target = piecesIds.mayor;
+        sData.m_Target = piecesIds.molly;
         sData.Build();
         m_StoriesDB.Add(ids.out_of_lactose, s);
 

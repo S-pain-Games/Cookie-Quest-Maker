@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 5370908183021347996}
   - component: {fileID: 5950021498337157384}
   - component: {fileID: 3944887534205473024}
+  - component: {fileID: 2513911811145284846}
+  - component: {fileID: 5158373641497342288}
   m_Layer: 0
   m_Name: Admin
   m_TagString: Untagged
@@ -137,6 +139,8 @@ MonoBehaviour:
     m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
   - m_NameID: baseball_bat
     m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  - m_NameID: molly
+    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
 --- !u!114 &5370908183021347996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,3 +179,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f52594a2e524df84587b21ada9460959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2513911811145284846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa65cfa82464a874da6a4a73cad70b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5158373641497342288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 695f5dd0342ffaa4c8a11d77260311d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NpcBehaviour: []

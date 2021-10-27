@@ -38,6 +38,7 @@ public class IDQuestPieces
     public readonly int brutally = "brutally".GetHashCode();
     public readonly int kindly = "kindly".GetHashCode();
     public readonly int baseball_bat = "baseball_bat".GetHashCode();
+    public readonly int molly = "molly".GetHashCode();
 }
 
 public class IDLocalization
