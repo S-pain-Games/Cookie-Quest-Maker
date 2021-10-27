@@ -59,9 +59,13 @@ public class GameStateSystem : MonoBehaviour
         OnStartCookieMaking += GameStateSystem_OnStartCookieMaking;
         OnStopCookieMaking += GameStateSystem_OnStopCookieMaking;
 
+        OnStartBakeryNight += GameStateSystem_OnStartBakeryNight;
+        OnStopBakeryNight += GameStateSystem_OnStopBakeryNight;
+
         // We assume we start in the main menu
         m_CurrentState = State.MainMenu;
     }
+
 
     private void OnDisable()
     {
@@ -76,6 +80,9 @@ public class GameStateSystem : MonoBehaviour
 
         OnStartCookieMaking -= GameStateSystem_OnStartCookieMaking;
         OnStopCookieMaking -= GameStateSystem_OnStopCookieMaking;
+
+        OnStartBakeryNight -= GameStateSystem_OnStartBakeryNight;
+        OnStopBakeryNight -= GameStateSystem_OnStopBakeryNight;
     }
 
     public void SetState(State state)
@@ -93,6 +100,10 @@ public class GameStateSystem : MonoBehaviour
 
     private void GameStateSystem_OnStopQuestMaking() => m_QuestMaking.SetActive(false);
     private void GameStateSystem_OnStartQuestMaking() => m_QuestMaking.SetActive(true);
+
+
+    private void GameStateSystem_OnStopBakeryNight() => m_BakeryNight.SetActive(false);
+    private void GameStateSystem_OnStartBakeryNight() => m_BakeryNight.SetActive(true);
 
     private void GameStateSystem_OnStopBakery()
     {
@@ -133,6 +144,9 @@ public class GameStateSystem : MonoBehaviour
             case State.CookieMaking:
                 OnStopCookieMaking?.Invoke();
                 break;
+            case State.BakeryNight:
+                OnStopBakeryNight?.Invoke();
+                break;
             default:
                 break;
         }
@@ -153,6 +167,9 @@ public class GameStateSystem : MonoBehaviour
                 break;
             case State.CookieMaking:
                 OnStartCookieMaking?.Invoke();
+                break;
+            case State.BakeryNight:
+                OnStartBakeryNight?.Invoke();
                 break;
             default:
                 break;

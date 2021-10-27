@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using System;
+using UnityEngine.UI;
 
 namespace CQM.QuestMaking.UI
 {
@@ -10,8 +11,11 @@ namespace CQM.QuestMaking.UI
     {
         public event Action<QuestPiece> OnAddQuestPiece;
         public event Action<QuestPiece> OnRemoveQuestPiece;
+        public event Action OnFinishQuest;
 
         public RectTransform pieceSpawnPosition;
+        [SerializeField]
+        private Button finishQuestButton;
 
         [SerializeField]
         private List<UIPieceSocketBehaviour> _sockets = new List<UIPieceSocketBehaviour>();
@@ -30,10 +34,12 @@ namespace CQM.QuestMaking.UI
             // Register Pieces Events
             for (int i = 0; i < _questPieces.Count; i++)
             {
-                _questPieces[i].OnSelected += OnPieceSelectedBroadcast;
-                _questPieces[i].OnUnselect += OnPieceUnselectedBroadcast;
+                InitializeQuestPieceBehaviour(_questPieces[i]);
             }
+
+            finishQuestButton.onClick.AddListener(OnFinishQuestButtonClicked);
         }
+
 
         private void OnDisable()
         {
@@ -50,6 +56,19 @@ namespace CQM.QuestMaking.UI
                 _questPieces[i].OnSelected -= OnPieceSelectedBroadcast;
                 _questPieces[i].OnUnselect -= OnPieceUnselectedBroadcast;
             }
+
+            finishQuestButton.onClick.RemoveListener(OnFinishQuestButtonClicked);
+        }
+
+        public void SpawnPiece(int pieceID, Canvas canvas)
+        {
+            // Spawn selected piece from storage in quest builder
+            var piecePrefab = Admin.g_Instance.questDB.m_QuestBuildingPiecesPrefabs[pieceID];
+            var pieceBehaviour = Instantiate(piecePrefab, pieceSpawnPosition).GetComponent<UIQuestPieceBehaviour>();
+            pieceBehaviour.Initialize(canvas, pieceID);
+
+            _questPieces.Add(pieceBehaviour);
+            InitializeQuestPieceBehaviour(pieceBehaviour);
         }
 
         [MethodButton]
@@ -57,6 +76,11 @@ namespace CQM.QuestMaking.UI
         {
             GetComponentsInChildren(true, _sockets);
             GetComponentsInChildren(true, _questPieces);
+        }
+
+        private void OnFinishQuestButtonClicked()
+        {
+            OnFinishQuest?.Invoke();
         }
 
         private void OnPieceSocketedHandle(QuestPiece piece)
@@ -81,6 +105,12 @@ namespace CQM.QuestMaking.UI
             var matchingSocket = _sockets.Find((s) => { return s.RequiredType == uiPiece.Piece.m_Type; });
             if (!matchingSocket.m_Filled)
                 matchingSocket.OnMatchingPieceUnselectedHandle();
+        }
+
+        private void InitializeQuestPieceBehaviour(UIQuestPieceBehaviour pieceBehaviour)
+        {
+            pieceBehaviour.OnSelected += OnPieceSelectedBroadcast;
+            pieceBehaviour.OnUnselect += OnPieceUnselectedBroadcast;
         }
     }
 }

@@ -27,6 +27,7 @@ public class Admin : MonoBehaviour
     public NpcDB npcDB;
     public TownDB townData;
     public DialogueDB dialogueDB;
+    public DayData dayData;
     [SerializeField] private QuestDBUnityReferences questDBRef;
     [SerializeField] private StoryDBUnityReferences storyDBRef;
     [SerializeField] private NpcDBUnityReferences npcDBRef;
@@ -43,11 +44,12 @@ public class Admin : MonoBehaviour
     public GameStateSystem gameStateSystem;
     public LocalizationSystem localizationSystem;
 
+    public DaySystem daySystem;
     public StorySystem storySystem;
     public QMGameplaySystem questMakerSystem;
     public CookieMakingSystem cookieMakingSystem;
     public DialogueSystem dialogueSystem;
-    
+
     public NpcSystem npcSystem;
     public TownSystem townSystem;
     public CalendarSystem calendarSystem;
@@ -71,6 +73,7 @@ public class Admin : MonoBehaviour
         gameStateSystem = GetComponent<GameStateSystem>();
         localizationSystem = GetComponent<LocalizationSystem>();
 
+        daySystem = new DaySystem();
         storySystem = GetComponent<StorySystem>();
         dialogueSystem = FindObjectOfType<DialogueSystem>(true); // This might be questionable
         questMakerSystem = GetComponent<QMGameplaySystem>();
@@ -90,6 +93,7 @@ public class Admin : MonoBehaviour
         dialogueDB = new DialogueDB();
         calendarData = new CalendarData();
         townData = new TownDB();
+        dayData = new DayData();
 
         // Create Player Data Containers
         playerPieceStorage = new PlayerUnlockedPieces();
@@ -114,6 +118,7 @@ public class Admin : MonoBehaviour
         gameEventSystem.LinkCommandEvents(this);
         localizationSystem.LoadData();
 
+        daySystem.Initialize(gameEventSystem, dayData);
         storySystem.Initialize(storyDB, gameEventSystem);
         questMakerSystem.Initialize(storySystem, storyDB);
         cookieMakingSystem.Initialize(cookieDB);
@@ -123,6 +128,7 @@ public class Admin : MonoBehaviour
         calendarSystem.Initialize(calendarData, storyDB);
         reputationSystem.Initialize(playerReputation);
         ingredientsSystem.Initialize(playerBakingIngredients);
+
 
         // Initialize Player Data Containers
         playerPieceStorage.Initialize();

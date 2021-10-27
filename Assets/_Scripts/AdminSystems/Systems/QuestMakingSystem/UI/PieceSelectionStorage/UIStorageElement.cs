@@ -8,7 +8,6 @@ public class UIStorageElement : MonoBehaviour
 {
     public event Action<int> OnSelected;
 
-    public RectTransform m_RectTransf;
     public int pieceID; // Used as an ID
 
     private TextMeshProUGUI _textComp;
@@ -32,9 +31,9 @@ public class UIStorageElement : MonoBehaviour
         _pressable.OnPointerUpEvent -= OnPointerUpEvent;
     }
 
-    public void Build()
+    public void Build(QuestPiece piece)
     {
-        //_textComp.text = elemName;
+        _textComp.text = piece.m_PieceName;
     }
 
     private void OnPointerUpEvent(PointerEventData obj)

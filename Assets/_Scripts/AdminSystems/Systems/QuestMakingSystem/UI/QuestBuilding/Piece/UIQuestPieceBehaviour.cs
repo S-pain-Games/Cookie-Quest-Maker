@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 namespace CQM.QuestMaking.UI
 {
@@ -19,9 +20,10 @@ namespace CQM.QuestMaking.UI
         public event Action<UIQuestPieceBehaviour> OnSelected;
         public event Action<UIQuestPieceBehaviour> OnUnselect;
 
+        [SerializeField]
+        private TextMeshProUGUI _textComp;
         [HideInInspector]
         public QuestPiece Piece;
-        [SerializeField]
         private Canvas _canvas;
 
         private bool m_Socketed = false;
@@ -37,6 +39,7 @@ namespace CQM.QuestMaking.UI
             _raycaster = canvas.GetComponent<GraphicRaycaster>();
             Piece = Admin.g_Instance.questDB.m_QPiecesDB[pieceId];
             _draggable.Initialize(canvas);
+            _textComp.text = Piece.m_PieceName;
         }
 
         private void Awake()

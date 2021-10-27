@@ -9,6 +9,7 @@ public class StoryData
     public string m_Title = "";
     public string m_IntroductionPhrase = "";
     public List<BranchOption> m_BranchOptions = new List<BranchOption>();
+    public int m_Target; // TODO
 
     public void Build()
     {

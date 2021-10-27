@@ -35,7 +35,7 @@ public class NpcSystem : MonoBehaviour
         // In this code we also assume that we might have more stories to show than npcs
         // so we have to "cache" and take into account the remaining unshown stories
         // to show them the next day
-        List<Story> completedStories = SelectCompletedStoriesToTryToShow(completedStoriesIDList, storiesDB);
+        List<int> completedStories = SelectCompletedStoriesToTryToShow(completedStoriesIDList, storiesDB);
         List<int> toStartStories = SelectStoriesToTryToStart();
 
         for (int i = 0; i < _npcDB.m_NpcBehaviour.Count; i++)
@@ -49,7 +49,10 @@ public class NpcSystem : MonoBehaviour
             // only if there are remaining stories to show
             if (completedStories.Count > 0)
             {
-                npcData.m_Dialogue.Add(completedStories[0].m_QuestResult);
+                Story s = _storyDB.m_StoriesDB[completedStories[0]];
+                npcData.m_Dialogue.Add(s.m_QuestResult);
+                npcData.m_StoryIDToFinalizeOnInteract = completedStories[0];
+
                 completedStories.RemoveAt(0);
                 npcData.m_Dialogue.Add("Anyways...");
             }
@@ -78,25 +81,27 @@ public class NpcSystem : MonoBehaviour
         return sStory;
     }
 
-    private List<Story> SelectCompletedStoriesToTryToShow(List<int> completedStoriesIDList, Dictionary<int, Story> storiesDB)
+    private List<int> SelectCompletedStoriesToTryToShow(List<int> completedStoriesIDList, Dictionary<int, Story> storiesDB)
     {
         int avaliableCompletedStories = Mathf.Min(completedStoriesIDList.Count, 3);
-        List<Story> cStories = new List<Story>();
+        List<int> cStoriesIds = new List<int>(); // Completed Stories Ids
         for (int i = 0; i < avaliableCompletedStories; i++)
         {
-            cStories.Add(storiesDB[completedStoriesIDList[i]]);
+            cStoriesIds.Add(completedStoriesIDList[i]);
         }
 
-        return cStories;
+        return cStoriesIds;
     }
 }
 
 public class NPCData
 {
-    // Contains information like the dialogue that it has to say
+    // Dialogue lines that the npc has to say
     public List<string> m_Dialogue = new List<string>();
     // The ID of the story that will start when the player interacts with the NPC
     public int m_StoryIDToStartOnInteract;
+    // ID of the story to finalize on dialogue
+    public int m_StoryIDToFinalizeOnInteract;
 
     public bool m_AlreadySpokenTo;
     public List<string> m_AlreadySpokenToDialogue = new List<string> { "I have nothing more to say" };

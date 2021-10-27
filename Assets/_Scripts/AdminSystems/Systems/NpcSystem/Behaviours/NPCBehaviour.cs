@@ -4,28 +4,29 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
 {
     public NPCData m_NpcData = new NPCData();
 
-    private GameEventSystem _messagingSystem;
+    private GameEventSystem _eventSystem;
     private Event<GameEventSystem.ShowDialogueEvtArgs> showDialogueEvt;
     private Event<int> startStoryEvt;
+    private Event<int> finalizeStoryEvt;
 
     private void Awake()
     {
-        _messagingSystem = Admin.g_Instance.gameEventSystem;
+        _eventSystem = Admin.g_Instance.gameEventSystem;
 
         var evtIds = Admin.g_Instance.ID.events;
-        _messagingSystem.DialogueSystemMessaging.GetEvent(evtIds.show_dialogue, out showDialogueEvt);
-        _messagingSystem.StorySystemMessaging.GetEvent(evtIds.start_story, out startStoryEvt);
+        _eventSystem.DialogueSystemMessaging.GetEvent(evtIds.show_dialogue, out showDialogueEvt);
+        _eventSystem.StorySystemMessaging.GetEvent(evtIds.start_story, out startStoryEvt);
+        _eventSystem.StorySystemMessaging.GetEvent(evtIds.finalize_story, out finalizeStoryEvt);
     }
 
     public void OnInteract()
     {
         if (!m_NpcData.m_AlreadySpokenTo)
         {
-
             showDialogueEvt.Invoke(new GameEventSystem.ShowDialogueEvtArgs(
                 m_NpcData.m_Dialogue,
                 "Mamarrachus",
-                () => { StartStoryFromNpcData(); }));
+                () => { DialogueWithNpcFinishedCallback(); }));
 
             m_NpcData.m_AlreadySpokenTo = true;
         }
@@ -38,8 +39,9 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
         }
     }
 
-    private void StartStoryFromNpcData()
+    private void DialogueWithNpcFinishedCallback()
     {
+        finalizeStoryEvt.Invoke(m_NpcData.m_StoryIDToFinalizeOnInteract);
         startStoryEvt.Invoke(m_NpcData.m_StoryIDToStartOnInteract);
 
         // Please do not write lines this horrible in production code, this is only for debugging

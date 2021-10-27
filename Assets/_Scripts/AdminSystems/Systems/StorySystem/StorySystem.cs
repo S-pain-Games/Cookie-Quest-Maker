@@ -38,6 +38,7 @@ public class StorySystem : MonoBehaviour
 
         story.m_State = Story.State.InProgress;
         _storyDB.m_OngoingStories.Add(storyId);
+        _storyDB.m_StoriesToStart.Remove(storyId);
 
         OnStoryStarted.Invoke(storyId);
     }
@@ -72,7 +73,6 @@ public class StorySystem : MonoBehaviour
     // the player the "Ending"(text) of the story
     public void FinalizeStory(int storyId)
     {
-        Story story = _storyDB.m_StoriesDB[storyId];
         _storyDB.m_CompletedStories.Remove(storyId);
         _storyDB.m_FinalizedStories.Add(storyId);
 

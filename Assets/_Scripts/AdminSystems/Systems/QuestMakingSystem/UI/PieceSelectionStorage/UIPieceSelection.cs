@@ -67,8 +67,8 @@ public class UIPieceSelection : MonoBehaviour
                 UIstorageElem.pieceID = storage[i];
                 UIstorageElem.OnSelected += StoragePiece_OnClicked;
 
-                // Build UI Element using previously initialized data
-                UIstorageElem.Build();
+                // Initialzie UI element with piece data
+                UIstorageElem.Build(questPiece);
                 m_Elements.Add(UIstorageElem);
             }
         }

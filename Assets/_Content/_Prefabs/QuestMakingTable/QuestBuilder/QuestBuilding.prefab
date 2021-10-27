@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieceSpawnPosition: {fileID: 719660439656077714}
+  finishQuestButton: {fileID: 8547471632557232042}
   _sockets:
   - {fileID: 3249411332131652533}
   - {fileID: 5292951747338417552}
@@ -654,19 +655,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7179146304374324603}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: f7cf8e2678d53ac4f876be14c0e6b081, type: 2}
-        m_TargetAssemblyTypeName: Events.VoidEventHandle, CQM.Engine.Runtime
-        m_MethodName: Dispatch
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Btn_FinishQuest
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &5401738901764712386
 GameObject:
   m_ObjectHideFlags: 0

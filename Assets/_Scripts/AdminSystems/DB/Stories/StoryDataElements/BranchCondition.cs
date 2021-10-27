@@ -5,7 +5,6 @@ using UnityEngine;
 [Serializable]
 public class BranchCondition
 {
-    public QuestPiece m_Target;
     public QPTag.TagType m_Tag;
     public int m_Value = 1;
 }

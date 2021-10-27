@@ -47,6 +47,7 @@ public class StoryDB
     {
         var ids = Admin.g_Instance.ID.stories;
         var repIds = Admin.g_Instance.ID.repercusions;
+        var piecesIds = Admin.g_Instance.ID.pieces;
 
         Story s = new Story();
         StoryData sData = new StoryData
@@ -58,6 +59,7 @@ public class StoryDB
         AddBranchToStoryData(sData, repIds.center_wolf_alive, "Test Story Totally Completed Helpingly", QPTag.TagType.Help, 1);
         AddBranchToStoryData(sData, repIds.center_wolf_dead, "Test Story Totally Completed Harmingly", QPTag.TagType.Harm, 1);
         s.m_StoryData = sData;
+        sData.m_Target = piecesIds.mayor;
         sData.Build();
         m_StoriesDB.Add(ids.test, s);
 
@@ -71,6 +73,7 @@ public class StoryDB
         AddBranchToStoryData(sData, repIds.center_wolf_alive, "The Mayor is happy", QPTag.TagType.Help, 1);
         AddBranchToStoryData(sData, repIds.center_wolf_dead, "The Mayor is sad", QPTag.TagType.Harm, 1);
         s.m_StoryData = sData;
+        sData.m_Target = piecesIds.mayor;
         sData.Build();
         m_StoriesDB.Add(ids.mayors_problem, s);
 

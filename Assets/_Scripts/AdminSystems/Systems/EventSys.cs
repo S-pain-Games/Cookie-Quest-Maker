@@ -11,6 +11,13 @@ public class EventSys
 
     public Event<T> AddEvent<T>(int evtId) where T : new()
     {
+#if UNITY_EDITOR
+        if (m_Events.ContainsKey(evtId))
+        {
+            Debug.LogError("Collision between event id's");
+        }
+#endif
+
         Event<T> evt = new Event<T>();
         m_Events.Add(evtId, evt);
         return evt;
