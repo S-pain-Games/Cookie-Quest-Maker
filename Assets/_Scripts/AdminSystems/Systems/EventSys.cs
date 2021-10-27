@@ -3,37 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class EventSys : MonoBehaviour
+public class EventSys
 {
+    // We have to be careful with boxing and unboxing
+    // It "should" work with this design without generating much garbage
     private Dictionary<int, object> m_Events = new Dictionary<int, object>();
 
-    public Event<T> AddEvent<T>(string evtName) where T : new()
+    public Event<T> AddEvent<T>(int evtId) where T : new()
     {
+#if UNITY_EDITOR
+        if (m_Events.ContainsKey(evtId))
+        {
+            Debug.LogError("Collision between event id's");
+        }
+#endif
+
         Event<T> evt = new Event<T>();
-        m_Events.Add(evtName.GetHashCode(), evt);
+        m_Events.Add(evtId, evt);
         return evt;
     }
 
-    public EventVoid AddEvent(string evtName)
+    public EventVoid AddEvent(int evtId)
     {
-        int id = evtName.GetHashCode();
-
 #if UNITY_EDITOR
-        if (m_Events.ContainsKey(id))
+        if (m_Events.ContainsKey(evtId))
         {
             Debug.LogError("Collision between event id's");
         }
 #endif
 
         EventVoid evt = new EventVoid();
-        m_Events.Add(evtName.GetHashCode(), evt);
+        m_Events.Add(evtId.GetHashCode(), evt);
         return evt;
     }
 
-    public bool GetEvent<T>(string evtName, out T evt) where T : class
+    public bool GetEvent<T>(int evtId, out T evt) where T : class
     {
-        int id = evtName.GetHashCode();
-        if (m_Events.TryGetValue(id, out object evtObj))
+        if (m_Events.TryGetValue(evtId, out object evtObj))
         {
             evt = evtObj as T;
             return true;
@@ -41,14 +47,14 @@ public class EventSys : MonoBehaviour
         else
         {
             evt = null;
+            Debug.LogError("Event not found");
             return false;
         }
     }
 
-    public bool GetEvent(string evtName, out EventVoid evt)
+    public bool GetEvent(int evtId, out EventVoid evt)
     {
-        int id = evtName.GetHashCode();
-        if (m_Events.TryGetValue(id, out object evtObj))
+        if (m_Events.TryGetValue(evtId, out object evtObj))
         {
             evt = evtObj as EventVoid;
             return true;
@@ -56,28 +62,28 @@ public class EventSys : MonoBehaviour
         else
         {
             evt = null;
+            Debug.LogError("Event not found");
             return false;
         }
     }
 
-    private void Start()
-    {
-        AddEvent<int>("Evt1");
+    //private void Start()
+    //{
+    //    AddEvent<int>("Evt1");
 
-        if (GetEvent("Evt1", out Event<int> evt))
-        {
-            evt.OnInvoked += (args) => { args += 3; };
-        }
-    }
+    //    if (GetEvent("Evt1", out Event<int> evt))
+    //    {
+    //        evt.OnInvoked += (args) => { args += 3; };
+    //    }
+    //}
 
-    private void Update()
-    {
-        if (GetEvent("Evt1", out Event<int> evt))
-        {
-            evt.Invoke(2);
-        }
-    }
-
+    //private void Update()
+    //{
+    //    if (GetEvent("Evt1", out Event<int> evt))
+    //    {
+    //        evt.Invoke(2);
+    //    }
+    //}
 }
 
 public class Event<T>

@@ -22,6 +22,12 @@ public class UIDraggable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
 #endif
     #endregion
 
+    // Initialize canvas when gameobject instanciated
+    public void Initialize(Canvas canvas)
+    {
+        _canvas = canvas;
+    }
+
     private void Start()
     {
         _rect = GetComponent<RectTransform>();

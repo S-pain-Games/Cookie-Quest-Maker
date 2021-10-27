@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2041105134198296772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2041105134198296795}
+  - component: {fileID: 2041105134198296794}
+  - component: {fileID: 2041105134198296799}
+  - component: {fileID: 2041105134198296798}
+  - component: {fileID: 2041105134198296796}
+  - component: {fileID: 3180401619160224539}
+  - component: {fileID: 5370908183021347996}
+  - component: {fileID: 5950021498337157384}
+  - component: {fileID: 3944887534205473024}
+  m_Layer: 0
+  m_Name: Admin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2041105134198296795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2041105134198296794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ef87ea3ff5678442b39938ba47c5bda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questDBRef: {fileID: 0}
+  storyDBRef: {fileID: 0}
+  npcDBRef: {fileID: 0}
+  calendarData:
+    m_Year: 0
+    m_Month: 0
+    m_Day: 0
+  playerPieceStorage:
+    m_Storage: 
+  gameStateSystem: {fileID: 0}
+  localizationSystem: {fileID: 0}
+  storySystem: {fileID: 0}
+  questMakerSystem: {fileID: 0}
+  cookieMakingSystem: {fileID: 0}
+  dialogueSystem: {fileID: 0}
+  npcSystem: {fileID: 0}
+--- !u!114 &2041105134198296799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c6f112303e68b4fbb44dae8bc89fde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CurrentState: 1
+  m_Bakery:
+  - {fileID: 0}
+  - {fileID: 0}
+  m_MainMenu: {fileID: 0}
+  m_QuestMaking: {fileID: 0}
+  m_CookieMaking: {fileID: 0}
+  m_BakeryNight: {fileID: 0}
+--- !u!114 &2041105134198296798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412d670e91408c742a7c3e2a9ef31ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2041105134198296796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f40ab6060b8b64fa22815e254defef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3180401619160224539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce4443a2f72006644b0f1d920dd13119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuestBuildingPiecePrefabs:
+  - m_NameID: attack
+    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  - m_NameID: assist
+    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  - m_NameID: mayor
+    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  - m_NameID: plain_cookie
+    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  - m_NameID: brutally
+    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  - m_NameID: kindly
+    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  - m_NameID: baseball_bat
+    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+--- !u!114 &5370908183021347996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01756391b5f2aca4692cfbf337722357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StorySelectionUICards: []
+--- !u!114 &5950021498337157384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27cca9ba5739e064ab6b1be06747e886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selectedRecipe: -1
+--- !u!114 &3944887534205473024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52594a2e524df84587b21ada9460959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
