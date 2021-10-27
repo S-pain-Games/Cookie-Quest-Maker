@@ -40,8 +40,13 @@ namespace CQM.QuestMaking.UI
             finishQuestButton.onClick.AddListener(OnFinishQuestButtonClicked);
         }
 
-
         private void OnDisable()
+        {
+            UnregisterPiecesAndSocketsEvents();
+            finishQuestButton.onClick.RemoveListener(OnFinishQuestButtonClicked);
+        }
+
+        private void UnregisterPiecesAndSocketsEvents()
         {
             // Unregister Socket Events
             for (int i = 0; i < _sockets.Count; i++)
@@ -56,8 +61,20 @@ namespace CQM.QuestMaking.UI
                 _questPieces[i].OnSelected -= OnPieceSelectedBroadcast;
                 _questPieces[i].OnUnselect -= OnPieceUnselectedBroadcast;
             }
+        }
 
-            finishQuestButton.onClick.RemoveListener(OnFinishQuestButtonClicked);
+        public void ClearAllPieces()
+        {
+            UnregisterPiecesAndSocketsEvents();
+            for (int i = 0; i < _sockets.Count; i++)
+            {
+                _sockets[i].Clear();
+            }
+            for (int i = 0; i < _questPieces.Count; i++)
+            {
+                Destroy(_questPieces[i].gameObject); // Pooling?
+            }
+            _questPieces.Clear();
         }
 
         public void SpawnPiece(int pieceID, Canvas canvas)
@@ -69,13 +86,6 @@ namespace CQM.QuestMaking.UI
 
             _questPieces.Add(pieceBehaviour);
             InitializeQuestPieceBehaviour(pieceBehaviour);
-        }
-
-        [MethodButton]
-        private void GetSocketsAndPieces()
-        {
-            GetComponentsInChildren(true, _sockets);
-            GetComponentsInChildren(true, _questPieces);
         }
 
         private void OnFinishQuestButtonClicked()

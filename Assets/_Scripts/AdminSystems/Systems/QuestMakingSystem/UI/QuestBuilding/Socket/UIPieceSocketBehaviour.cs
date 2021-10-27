@@ -13,6 +13,12 @@ public class UIPieceSocketBehaviour : MonoBehaviour
     public QuestPiece.PieceType RequiredType = QuestPiece.PieceType.Action;
     public QuestPiece m_CurrentPiece;
 
+    public void Clear()
+    {
+        m_Filled = false;
+        m_CurrentPiece = null;
+    }
+
     public bool TryToSetPiece(QuestPiece piece)
     {
         if (!m_Filled && piece.m_Type == RequiredType)

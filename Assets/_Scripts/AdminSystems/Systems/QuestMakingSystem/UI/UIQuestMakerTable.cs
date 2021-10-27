@@ -70,6 +70,7 @@ public class UIQuestMakerTable : MonoBehaviour
     {
         if (_questMakingSys.TryFinishMakingQuest())
         {
+            _questBuilding.ClearAllPieces();
             _changeGameStateEvt.Invoke(GameStateSystem.State.Bakery);
         }
     }
