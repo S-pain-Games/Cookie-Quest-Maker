@@ -114,8 +114,7 @@ public class Admin : MonoBehaviour
         npcDB.LoadData(npcDBRef);
 
         // Initialize Game Systems
-        gameEventSystem.Initialize();
-        gameEventSystem.LinkCommandEvents(this);
+        gameEventSystem.Initialize(this);
         localizationSystem.LoadData();
 
         daySystem.Initialize(gameEventSystem, dayData);

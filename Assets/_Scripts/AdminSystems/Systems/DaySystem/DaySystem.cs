@@ -18,12 +18,10 @@ public class DaySystem
         // Setup Callbacks and Commands
         var ids = Admin.g_Instance.ID.events;
         _eventSystem = eventSystem;
-        _dayStartedCallbacks = _eventSystem.DayCallbacks.AddEvent(ids.on_day_started);
-        _dayEndedCallbacks = _eventSystem.DayCallbacks.AddEvent(ids.on_day_ended);
-        _dailyStoriesCompleted = _eventSystem.DayCallbacks.AddEvent(ids.on_daily_stories_completed);
 
-        _startNewDayCommand = _eventSystem.DaySystemCommands.AddEvent(ids.start_new_day);
-        _startNewDayCommand.OnInvoked += StartNewDay;
+        _eventSystem.DayCallbacks.GetEvent(ids.on_day_started, out _dayStartedCallbacks);
+        _eventSystem.DayCallbacks.GetEvent(ids.on_day_ended, out _dayEndedCallbacks);
+        _eventSystem.DayCallbacks.GetEvent(ids.on_daily_stories_completed, out _dailyStoriesCompleted);
 
         // Subscribe to Events
         _eventSystem.StoryCallbacks.GetEvent(ids.on_story_completed, out Event<int> evt);
