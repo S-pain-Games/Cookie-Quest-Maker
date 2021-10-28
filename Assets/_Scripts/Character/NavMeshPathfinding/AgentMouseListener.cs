@@ -31,6 +31,8 @@ public class AgentMouseListener : MonoBehaviour
     {
         Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
+        mouseWorldPosition.z = 0;
+
         RaycastHit2D[] hits = Physics2D.RaycastAll(mouseWorldPosition, Vector2.zero);
 
         GameObject interactableObject = null;
