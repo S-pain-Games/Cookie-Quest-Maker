@@ -56,11 +56,17 @@ public class NpcSystem : MonoBehaviour
                     npcData.m_Dialogue.Add(s.m_QuestResult[c]);
                 }
 
+                npcData.m_HasToFinalizeAStory = true;
                 npcData.m_StoryIDToFinalizeOnInteract = completedStories[0];
 
                 completedStories.RemoveAt(0);
                 npcData.m_Dialogue.Add("Anyways...");
             }
+            else
+            {
+                npcData.m_HasToFinalizeAStory = false;
+            }
+
 
             // Append a new story dialogue
             // only if there are new stories to append
@@ -72,8 +78,13 @@ public class NpcSystem : MonoBehaviour
                     npcData.m_Dialogue.Add(introductionDialogue[j]);
                 }
 
+                npcData.m_HasToStartAStory = true;
                 npcData.m_StoryIDToStartOnInteract = toStartStories[0];
                 toStartStories.RemoveAt(0);
+            }
+            else
+            {
+                npcData.m_HasToStartAStory = false;
             }
         }
     }
@@ -109,8 +120,10 @@ public class NPCData
     // Dialogue lines that the npc has to say
     public List<string> m_Dialogue = new List<string>();
     // The ID of the story that will start when the player interacts with the NPC
+    public bool m_HasToStartAStory;
     public int m_StoryIDToStartOnInteract;
     // ID of the story to finalize on dialogue
+    public bool m_HasToFinalizeAStory;
     public int m_StoryIDToFinalizeOnInteract;
 
     public bool m_AlreadySpokenTo;

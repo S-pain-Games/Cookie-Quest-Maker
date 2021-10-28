@@ -16,6 +16,8 @@ public class StorySystem : MonoBehaviour
     private Event<int> OnStoryStarted;
     private Event<int> OnStoryCompleted;
     private Event<int> OnStoryFinalized;
+    private EventVoid OnAllStoriesCompleted;
+    private EventVoid OnAllStoriesFinalized;
 
     public void Initialize(StoryDB storyDb, GameEventSystem evtSystem)
     {
@@ -26,6 +28,8 @@ public class StorySystem : MonoBehaviour
         _eventSystem.StoryCallbacks.GetEvent(evtIds.on_story_started, out OnStoryStarted);
         _eventSystem.StoryCallbacks.GetEvent(evtIds.on_story_completed, out OnStoryCompleted);
         _eventSystem.StoryCallbacks.GetEvent(evtIds.on_story_finalized, out OnStoryFinalized);
+        _eventSystem.StoryCallbacks.GetEvent(evtIds.on_all_stories_completed, out OnAllStoriesCompleted);
+        _eventSystem.StoryCallbacks.GetEvent(evtIds.on_all_stories_finalized, out OnAllStoriesFinalized);
     }
 
     // Called by some in-game conversation that starts
@@ -66,6 +70,13 @@ public class StorySystem : MonoBehaviour
         story.m_QuestRepercusion = rep;
 
         OnStoryCompleted.Invoke(storyId);
+
+        if (_storyDB.m_StoriesToStart.Count == 0
+            && _storyDB.m_OngoingStories.Count == 0)
+        {
+            OnAllStoriesCompleted.OnInvoked += () => { Debug.Log("All Stories Completed"); };
+            OnAllStoriesCompleted.Invoke();
+        }
     }
 
     // This is called when the Dialogue System or the newspaper shows
@@ -76,6 +87,14 @@ public class StorySystem : MonoBehaviour
         _storyDB.m_FinalizedStories.Add(storyId);
 
         OnStoryFinalized.Invoke(storyId);
+
+        if (_storyDB.m_StoriesToStart.Count == 0
+            && _storyDB.m_OngoingStories.Count == 0
+            && _storyDB.m_CompletedStories.Count == 0)
+        {
+            OnAllStoriesFinalized.OnInvoked += () => { Debug.Log("All Stories Finalized"); };
+            OnAllStoriesFinalized.Invoke();
+        }
     }
 
     // Process a story with the given tag and value and get the result

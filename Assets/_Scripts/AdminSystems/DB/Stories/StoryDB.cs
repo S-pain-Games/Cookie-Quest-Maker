@@ -40,7 +40,7 @@ public class StoryDB
         //m_StoriesToStart.Add(ids.test);
         m_StoriesToStart.Add(ids.mayors_problem);
         m_StoriesToStart.Add(ids.out_of_lactose);
-        m_StoriesToStart.Add(ids.the_birds_and_the_bees);
+        //m_StoriesToStart.Add(ids.the_birds_and_the_bees);
     }
 
     private void LoadStoryData()

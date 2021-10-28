@@ -63,6 +63,8 @@ public class GameEventSystem
         StoryCallbacks.AddEvent<int>(ids.on_story_started);
         StoryCallbacks.AddEvent<int>(ids.on_story_completed);
         StoryCallbacks.AddEvent<int>(ids.on_story_finalized);
+        StoryCallbacks.AddEvent(ids.on_all_stories_completed);
+        StoryCallbacks.AddEvent(ids.on_all_stories_finalized);
 
         // Commands
         var evt = StorySystemMessaging.AddEvent<int>(ids.start_story);
