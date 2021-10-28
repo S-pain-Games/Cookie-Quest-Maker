@@ -30,6 +30,7 @@ public class GameEventSystem
     public EventSys StoryCallbacks = new EventSys();
     public EventSys DayCallbacks = new EventSys();
     public EventSys NpcCallbacks = new EventSys();
+    public EventSys GameStateCallbacks = new EventSys();
 
     public void Initialize(Admin admin)
     {

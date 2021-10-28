@@ -3,23 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-
 [RequireComponent(typeof(CharacterNavMeshAgentHandler))]
 public class AgentMouseListener : MonoBehaviour
 {
-
     [SerializeField]
     private bool _enabledListener;
 
+    [Header("Game State System Callbacks")]
+    [SerializeField] private string _enableCallbackID;
+    [SerializeField] private string _disableCallbackID;
+
     private CharacterNavMeshAgentHandler _agent;
 
+    private GameEventSystem _evtSys;
+    private EventVoid _onBakeryStateEnter;
+    private EventVoid _onBakeryStateExit;
 
-    void Start()
+    private void Awake()
     {
         _agent = GetComponent<CharacterNavMeshAgentHandler>();
+        _evtSys = Admin.g_Instance.gameEventSystem;
+        _evtSys.GameStateCallbacks.GetEvent(_enableCallbackID.GetHashCode(), out _onBakeryStateEnter);
+        _evtSys.GameStateCallbacks.GetEvent(_disableCallbackID.GetHashCode(), out _onBakeryStateExit);
     }
 
-    void Update()
+    private void OnEnable()
+    {
+        _onBakeryStateEnter.OnInvoked += EnableMouseInput;
+        _onBakeryStateExit.OnInvoked += DisableMouseInput;
+    }
+
+    private void OnDisable()
+    {
+        _onBakeryStateEnter.OnInvoked -= EnableMouseInput;
+        _onBakeryStateExit.OnInvoked -= DisableMouseInput;
+    }
+
+    private void Update()
     {
         if (Input.GetMouseButtonDown(0) && _enabledListener)
         {
@@ -45,7 +65,7 @@ public class AgentMouseListener : MonoBehaviour
                 //Debug.Log("He clickado en " + hit.transform.gameObject.name);
                 interactableObject = hit.transform.gameObject;
             }
-            else if(hit.transform.name == "Walkable")
+            else if (hit.transform.name == "Walkable")
             {
                 clickedOnWalkable = true;
             }
@@ -59,14 +79,6 @@ public class AgentMouseListener : MonoBehaviour
 
     }
 
-    public bool IsListenerEnabled()
-    {
-        return _enabledListener;
-    }
-
-    public void SetListenerEnabled(bool state)
-    {
-        _enabledListener = state;
-    }
-
+    private void EnableMouseInput() => _enabledListener = true;
+    private void DisableMouseInput() => _enabledListener = false;
 }

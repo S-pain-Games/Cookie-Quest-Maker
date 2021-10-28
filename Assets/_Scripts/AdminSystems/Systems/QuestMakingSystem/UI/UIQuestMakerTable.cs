@@ -79,7 +79,6 @@ public class UIQuestMakerTable : MonoBehaviour
     {
         EnableQuestBuilding();
         _questBuilding.SpawnPiece(pieceID, _canvas);
-
     }
 
     public void EnableStorySelection()

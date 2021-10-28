@@ -33,11 +33,11 @@ namespace CQM.QuestMaking.UI
         private GraphicRaycaster _raycaster;
         private List<RaycastResult> m_Results = new List<RaycastResult>();
 
-        public void Initialize(Canvas canvas, int pieceId)
+        public void Initialize(Canvas canvas, QuestPiece piece)
         {
             _canvas = canvas;
             _raycaster = canvas.GetComponent<GraphicRaycaster>();
-            Piece = Admin.g_Instance.questDB.m_QPiecesDB[pieceId];
+            Piece = piece;
             _draggable.Initialize(canvas);
             _textComp.text = Piece.m_PieceName;
         }
@@ -100,7 +100,7 @@ namespace CQM.QuestMaking.UI
             _raycaster.Raycast(pData, m_Results);
         }
 
-        private void TryToUnsocket(PointerEventData obj)
+        public void TryToUnsocket(PointerEventData obj)
         {
             if (m_Socketed)
             {

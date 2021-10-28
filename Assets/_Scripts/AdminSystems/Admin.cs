@@ -115,6 +115,7 @@ public class Admin : MonoBehaviour
 
         // Initialize Game Systems
         gameEventSystem.Initialize(this);
+        gameStateSystem.Initialize(gameEventSystem);
         localizationSystem.LoadData();
 
         daySystem.Initialize(gameEventSystem, dayData);

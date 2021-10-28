@@ -52,9 +52,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef87ea3ff5678442b39938ba47c5bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questDBRef: {fileID: 0}
-  storyDBRef: {fileID: 0}
-  npcDBRef: {fileID: 0}
+  questDBRef: {fileID: 3180401619160224539}
+  storyDBRef: {fileID: 5370908183021347996}
+  npcDBRef: {fileID: 5158373641497342288}
   calendarData:
     m_Year: 0
     m_Month: 0
@@ -80,14 +80,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c6f112303e68b4fbb44dae8bc89fde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CurrentState: 1
   m_Bakery:
-  - {fileID: 0}
   - {fileID: 0}
   m_MainMenu: {fileID: 0}
   m_QuestMaking: {fileID: 0}
   m_CookieMaking: {fileID: 0}
-  m_BakeryNight: {fileID: 0}
+  m_BakeryNight:
+  - {fileID: 0}
 --- !u!114 &2041105134198296798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,4 +202,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 695f5dd0342ffaa4c8a11d77260311d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NpcBehaviour: []
+  m_NpcBehaviour:
+  - {fileID: 0}

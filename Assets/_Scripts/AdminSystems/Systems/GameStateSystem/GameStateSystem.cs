@@ -4,25 +4,8 @@ using UnityEngine;
 
 public class GameStateSystem : MonoBehaviour
 {
-    public State CurrentState => m_CurrentState;
-
-    public event Action OnStartMainMenu;
-    public event Action OnStopMainMenu;
-
-    public event Action OnStartBakery;
-    public event Action OnStopBakery;
-
-    public event Action OnStartQuestMaking;
-    public event Action OnStopQuestMaking;
-
-    public event Action OnStartCookieMaking;
-    public event Action OnStopCookieMaking;
-
-    public event Action OnStartBakeryNight;
-    public event Action OnStopBakeryNight;
-
-    [SerializeField]
-    private State m_CurrentState = State.Bakery;
+    private Dictionary<State, GameState> m_States = new Dictionary<State, GameState>();
+    private GameState m_State;
 
     [Header("Prefabs")]
     [SerializeField]
@@ -34,7 +17,46 @@ public class GameStateSystem : MonoBehaviour
     [SerializeField]
     private GameObject m_CookieMaking;
     [SerializeField]
-    private GameObject m_BakeryNight;
+    private List<GameObject> m_BakeryNight;
+
+    private class GameState
+    {
+        private EventVoid m_OnStateEnter;
+        private EventVoid m_OnStateExit;
+        private List<GameObject> m_Prefabs;
+
+        public GameState(EventVoid onStateEnter, EventVoid onStateExit, List<GameObject> prefabs)
+        {
+            m_OnStateEnter = onStateEnter;
+            m_OnStateExit = onStateExit;
+            m_Prefabs = prefabs;
+        }
+
+        public GameState(EventVoid onStateEnter, EventVoid onStateExit, GameObject prefabs)
+        {
+            m_OnStateEnter = onStateEnter;
+            m_OnStateExit = onStateExit;
+            m_Prefabs = new List<GameObject>() { prefabs };
+        }
+
+        public void OnStateEnter()
+        {
+            for (int i = 0; i < m_Prefabs.Count; i++)
+            {
+                m_Prefabs[i].SetActive(true);
+            }
+            m_OnStateEnter.Invoke();
+        }
+
+        public void OnStateExit()
+        {
+            m_OnStateExit.Invoke();
+            for (int i = 0; i < m_Prefabs.Count; i++)
+            {
+                m_Prefabs[i].SetActive(false);
+            }
+        }
+    }
 
     public enum State
     {
@@ -45,134 +67,44 @@ public class GameStateSystem : MonoBehaviour
         BakeryNight
     }
 
-    private void OnEnable()
+    public void Initialize(GameEventSystem evtSys)
     {
-        OnStartMainMenu += GameStateSystem_OnStartMainMenu;
-        OnStopMainMenu += GameStateSystem_OnStopMainMenu;
+        var gs = new GameState(evtSys.GameStateCallbacks.AddEvent("on_bakery_enter".GetHashCode()),
+            evtSys.GameStateCallbacks.AddEvent("on_bakery_exit".GetHashCode()),
+            m_Bakery);
+        m_States.Add(State.Bakery, gs);
 
-        OnStartBakery += GameStateSystem_OnStartBakery;
-        OnStopBakery += GameStateSystem_OnStopBakery;
+        gs = new GameState(evtSys.GameStateCallbacks.AddEvent("on_main_menu_enter".GetHashCode()),
+            evtSys.GameStateCallbacks.AddEvent("on_main_menu_exit".GetHashCode()),
+            m_MainMenu);
+        m_States.Add(State.MainMenu, gs);
 
-        OnStartQuestMaking += GameStateSystem_OnStartQuestMaking;
-        OnStopQuestMaking += GameStateSystem_OnStopQuestMaking;
+        gs = new GameState(evtSys.GameStateCallbacks.AddEvent("on_quest_making_enter".GetHashCode()),
+            evtSys.GameStateCallbacks.AddEvent("on_quest_making_exit".GetHashCode()),
+            m_QuestMaking);
+        m_States.Add(State.QuestMaking, gs);
 
-        OnStartCookieMaking += GameStateSystem_OnStartCookieMaking;
-        OnStopCookieMaking += GameStateSystem_OnStopCookieMaking;
+        gs = new GameState(evtSys.GameStateCallbacks.AddEvent("on_cookie_making_enter".GetHashCode()),
+            evtSys.GameStateCallbacks.AddEvent("on_cookie_making_exit".GetHashCode()),
+            m_CookieMaking);
+        m_States.Add(State.CookieMaking, gs);
 
-        OnStartBakeryNight += GameStateSystem_OnStartBakeryNight;
-        OnStopBakeryNight += GameStateSystem_OnStopBakeryNight;
-
-        // We assume we start in the main menu
-        m_CurrentState = State.MainMenu;
+        gs = new GameState(evtSys.GameStateCallbacks.AddEvent("on_bakery_night_enter".GetHashCode()),
+            evtSys.GameStateCallbacks.AddEvent("on_bakery_night_exit".GetHashCode()),
+            m_BakeryNight);
+        m_States.Add(State.BakeryNight, gs);
     }
 
-
-    private void OnDisable()
+    private void Start()
     {
-        OnStartMainMenu -= GameStateSystem_OnStartMainMenu;
-        OnStopMainMenu -= GameStateSystem_OnStopMainMenu;
-
-        OnStartBakery -= GameStateSystem_OnStartBakery;
-        OnStopBakery -= GameStateSystem_OnStopBakery;
-
-        OnStartQuestMaking -= GameStateSystem_OnStartQuestMaking;
-        OnStopQuestMaking -= GameStateSystem_OnStopQuestMaking;
-
-        OnStartCookieMaking -= GameStateSystem_OnStartCookieMaking;
-        OnStopCookieMaking -= GameStateSystem_OnStopCookieMaking;
-
-        OnStartBakeryNight -= GameStateSystem_OnStartBakeryNight;
-        OnStopBakeryNight -= GameStateSystem_OnStopBakeryNight;
+        m_State = m_States[State.MainMenu];
+        m_State.OnStateEnter();
     }
 
     public void SetState(State state)
     {
-        OnExitCurrentState();
-        m_CurrentState = state;
-        OnEnterCurrentState();
-    }
-
-    private void GameStateSystem_OnStopMainMenu() => m_MainMenu.SetActive(false);
-    private void GameStateSystem_OnStartMainMenu() => m_MainMenu.SetActive(true);
-
-    private void GameStateSystem_OnStopCookieMaking() => m_CookieMaking.SetActive(false);
-    private void GameStateSystem_OnStartCookieMaking() => m_CookieMaking.SetActive(true);
-
-    private void GameStateSystem_OnStopQuestMaking() => m_QuestMaking.SetActive(false);
-    private void GameStateSystem_OnStartQuestMaking() => m_QuestMaking.SetActive(true);
-
-
-    private void GameStateSystem_OnStopBakeryNight() => m_BakeryNight.SetActive(false);
-    private void GameStateSystem_OnStartBakeryNight() => m_BakeryNight.SetActive(true);
-
-    private void GameStateSystem_OnStopBakery()
-    {
-        //Desactivar todo lo que debería desactivarse
-
-
-        //Desabilitar listener de movimiento
-        m_Bakery[0].GetComponent<AgentMouseListener>().SetListenerEnabled(false);
-
-        //Desactivar escenario
-        m_Bakery[1].SetActive(false);
-    }
-
-    private void GameStateSystem_OnStartBakery()
-    {
-        //Activar todo lo que debería activarse
-
-        //Habilitar listener de movimiento
-        m_Bakery[0].GetComponent<AgentMouseListener>().SetListenerEnabled(true);
-
-        //Activar escenario
-        m_Bakery[1].SetActive(true);
-    }
-
-    private void OnExitCurrentState()
-    {
-        switch (m_CurrentState)
-        {
-            case State.Bakery:
-                OnStopBakery?.Invoke();
-                break;
-            case State.QuestMaking:
-                OnStopQuestMaking?.Invoke();
-                break;
-            case State.MainMenu:
-                OnStopMainMenu?.Invoke();
-                break;
-            case State.CookieMaking:
-                OnStopCookieMaking?.Invoke();
-                break;
-            case State.BakeryNight:
-                OnStopBakeryNight?.Invoke();
-                break;
-            default:
-                break;
-        }
-    }
-
-    private void OnEnterCurrentState()
-    {
-        switch (m_CurrentState)
-        {
-            case State.Bakery:
-                OnStartBakery?.Invoke();
-                break;
-            case State.QuestMaking:
-                OnStartQuestMaking?.Invoke();
-                break;
-            case State.MainMenu:
-                OnStartMainMenu?.Invoke();
-                break;
-            case State.CookieMaking:
-                OnStartCookieMaking?.Invoke();
-                break;
-            case State.BakeryNight:
-                OnStartBakeryNight?.Invoke();
-                break;
-            default:
-                break;
-        }
+        m_State.OnStateExit();
+        m_State = m_States[state];
+        m_State.OnStateEnter();
     }
 }
