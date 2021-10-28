@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class CloseBakeryButton : MonoBehaviour
 {
     private GameEventSystem _eventSystem;
-    private EventVoid _onDailyStoriesCompleted;
+    private EventVoid _onDailyStoriesCompletedCallback;
+    private Event<GameStateSystem.State> _setGameStateCommand;
 
     [SerializeField]
     private GameObject _buttonGameObject;
@@ -15,28 +16,28 @@ public class CloseBakeryButton : MonoBehaviour
 
     private void Awake()
     {
+        // Subscribe to Callbacks and get Commands
         var ids = Admin.g_Instance.ID.events;
         _eventSystem = Admin.g_Instance.gameEventSystem;
-        _eventSystem.DayCallbacks.GetEvent(ids.on_daily_stories_completed, out _onDailyStoriesCompleted);
+        _eventSystem.DayCallbacks.GetEvent(ids.on_daily_stories_completed, out _onDailyStoriesCompletedCallback);
+        _eventSystem.GameStateSystemMessaging.GetEvent(ids.set_game_state, out _setGameStateCommand);
 
         _button = _buttonGameObject.GetComponent<Button>();
     }
 
     private void OnEnable()
     {
-        _onDailyStoriesCompleted.OnInvoked += TryToEnableButton;
+        _onDailyStoriesCompletedCallback.OnInvoked += TryToEnableButton;
         _button.onClick.AddListener(() =>
         {
-            // TODO
-            Admin.g_Instance.gameStateSystem.SetState(GameStateSystem.State.BakeryNight);
-            //_startNewDayCommand.Invoke();
+            _setGameStateCommand.Invoke(GameStateSystem.State.BakeryNight);
             _buttonGameObject.SetActive(false);
         });
     }
 
     private void OnDisable()
     {
-        _onDailyStoriesCompleted.OnInvoked -= TryToEnableButton;
+        _onDailyStoriesCompletedCallback.OnInvoked -= TryToEnableButton;
         _button.onClick.RemoveAllListeners();
     }
 
