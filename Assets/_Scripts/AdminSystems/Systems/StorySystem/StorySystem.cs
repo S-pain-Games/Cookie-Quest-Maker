@@ -1,6 +1,7 @@
 using System.Linq;
 using System.Collections;
 using UnityEngine;
+using System.Collections.Generic;
 
 
 // Handles all the ongoing/completed stories
@@ -58,15 +59,13 @@ public class StorySystem : MonoBehaviour
         _storyDB.m_CompletedStories.Add(storyId);
 
         _questSystem.GetOverallTag(questData.m_PiecesList, out QPTag.TagType tagType, out int value);
-        ProcessStoryData(story.m_StoryData, tagType, value, out string result, out StoryRepercusion rep);
+        ProcessStoryData(story.m_StoryData, tagType, value, out List<string> result, out StoryRepercusion rep);
         story.m_State = Story.State.Completed;
         story.m_QuestData = questData;
         story.m_QuestResult = result;
         story.m_QuestRepercusion = rep;
 
         OnStoryCompleted.Invoke(storyId);
-
-        Debug.Log(story.m_QuestResult);
     }
 
     // This is called when the Dialogue System or the newspaper shows
@@ -80,9 +79,9 @@ public class StorySystem : MonoBehaviour
     }
 
     // Process a story with the given tag and value and get the result
-    private void ProcessStoryData(StoryData data, QPTag.TagType tag, int value, out string result, out StoryRepercusion rep)
+    private void ProcessStoryData(StoryData data, QPTag.TagType tag, int value, out List<string> result, out StoryRepercusion rep)
     {
-        result = "";
+        result = null;
         rep = null;
         bool match = false;
         for (int i = 0; i < data.m_BranchOptions.Count; i++)
@@ -105,7 +104,7 @@ public class StorySystem : MonoBehaviour
     }
 
     // Process a Branch Option
-    private bool ProcessBranchOption(BranchOption branchOpt, QPTag.TagType tag, int value, out string result, out StoryRepercusion rep)
+    private bool ProcessBranchOption(BranchOption branchOpt, QPTag.TagType tag, int value, out List<string> result, out StoryRepercusion rep)
     {
         bool match = CheckCondition(branchOpt.m_Condition, tag, value);
         if (match)
@@ -115,7 +114,7 @@ public class StorySystem : MonoBehaviour
         }
         else
         {
-            result = "";
+            result = null;
             rep = null;
         }
         return match;
