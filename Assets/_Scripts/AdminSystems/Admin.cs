@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(LocalizationSystem))]
 [RequireComponent(typeof(GameStateSystem))]
 
+[RequireComponent(typeof(CameraSystem))]
 [RequireComponent(typeof(StorySystem))]
 [RequireComponent(typeof(QMGameplaySystem))]
 [RequireComponent(typeof(CookieMakingSystem))]
@@ -44,6 +45,7 @@ public class Admin : MonoBehaviour
     public GameStateSystem gameStateSystem;
     public LocalizationSystem localizationSystem;
 
+    public CameraSystem camSystem;
     public DaySystem daySystem;
     public StorySystem storySystem;
     public QMGameplaySystem questMakerSystem;
@@ -73,6 +75,7 @@ public class Admin : MonoBehaviour
         gameStateSystem = GetComponent<GameStateSystem>();
         localizationSystem = GetComponent<LocalizationSystem>();
 
+        camSystem = GetComponent<CameraSystem>();
         daySystem = new DaySystem();
         storySystem = GetComponent<StorySystem>();
         dialogueSystem = FindObjectOfType<DialogueSystem>(true); // This might be questionable
@@ -118,6 +121,7 @@ public class Admin : MonoBehaviour
         gameStateSystem.Initialize(gameEventSystem);
         localizationSystem.LoadData();
 
+        camSystem.Initialize(gameEventSystem);
         daySystem.Initialize(gameEventSystem, dayData);
         storySystem.Initialize(storyDB, gameEventSystem);
         questMakerSystem.Initialize(storySystem, storyDB);

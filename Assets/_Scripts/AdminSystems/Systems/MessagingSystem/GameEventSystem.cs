@@ -25,6 +25,7 @@ public class GameEventSystem
     public EventSys GameStateSystemMessaging = new EventSys();
     public EventSys DaySystemCommands = new EventSys();
     public EventSys NpcSystemCommands = new EventSys();
+    public EventSys CameraSystemCommands = new EventSys();
 
     // CALLBACKS FROM SYSTEMS
     public EventSys StoryCallbacks = new EventSys();
@@ -40,6 +41,7 @@ public class GameEventSystem
         GameStateSystemEvents(ids, admin.gameStateSystem);
         DaySystemEvents(ids, admin.daySystem);
         NpcSystemEvents(ids, admin.npcSystem);
+        CameraSystemEvents(ids, admin.camSystem);
     }
 
     private void GameStateSystemEvents(IDEvents ids, GameStateSystem gameStateSys)
@@ -91,5 +93,11 @@ public class GameEventSystem
         // Commands
         var evt = NpcSystemCommands.AddEvent("cmd_populate_npcs".GetHashCode());
         evt.OnInvoked += npcSys.PopulateNpcsData;
+    }
+
+    private void CameraSystemEvents(IDEvents ids, CameraSystem camSys)
+    {
+        var evt = CameraSystemCommands.AddEvent<Transform>("retarget_cmd".GetHashCode());
+        evt.OnInvoked += camSys.Retarget;
     }
 }

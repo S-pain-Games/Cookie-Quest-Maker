@@ -63,6 +63,7 @@ MonoBehaviour:
     m_Storage: 
   gameStateSystem: {fileID: 0}
   localizationSystem: {fileID: 0}
+  camSystem: {fileID: 0}
   storySystem: {fileID: 0}
   questMakerSystem: {fileID: 0}
   cookieMakingSystem: {fileID: 0}

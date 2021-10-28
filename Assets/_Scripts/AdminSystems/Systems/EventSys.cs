@@ -9,7 +9,7 @@ public class EventSys
     // It "should" work with this design without generating much garbage
     private Dictionary<int, object> m_Events = new Dictionary<int, object>();
 
-    public Event<T> AddEvent<T>(int evtId) where T : new()
+    public Event<T> AddEvent<T>(int evtId)
     {
 #if UNITY_EDITOR
         if (m_Events.ContainsKey(evtId))

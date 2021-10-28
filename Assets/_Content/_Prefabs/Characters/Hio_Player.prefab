@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 3635051552492066967}
   - component: {fileID: 8441935883364366355}
   - component: {fileID: 8441935883364366357}
+  - component: {fileID: 3354668487230449059}
+  - component: {fileID: 4074793922864399253}
   m_Layer: 0
   m_Name: Hio_Player
   m_TagString: Untagged
@@ -121,6 +123,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enabledListener: 0
+  _enableCallbackID: on_bakery_enter
+  _disableCallbackID: on_bakery_exit
+--- !u!114 &3354668487230449059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4945650314530242199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a1417ca7e35e2c4dafd6662af68cf0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4074793922864399253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4945650314530242199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ec0864a7bbe65b4d88468c57cc034ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4945650314893789376
 GameObject:
   m_ObjectHideFlags: 0
