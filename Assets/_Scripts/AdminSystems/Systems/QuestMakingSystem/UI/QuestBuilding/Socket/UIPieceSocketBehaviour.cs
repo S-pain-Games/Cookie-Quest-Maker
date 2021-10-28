@@ -13,10 +13,18 @@ public class UIPieceSocketBehaviour : MonoBehaviour
     public QuestPiece.PieceType RequiredType = QuestPiece.PieceType.Action;
     public QuestPiece m_CurrentPiece;
 
+    private Color m_BaseColor;
+
+    private void Start()
+    {
+        m_BaseColor = GetComponent<Image>().color;
+    }
+
     public void Clear()
     {
         m_Filled = false;
         m_CurrentPiece = null;
+        GetComponent<Image>().color = m_BaseColor;
     }
 
     public bool TryToSetPiece(QuestPiece piece)
@@ -45,6 +53,6 @@ public class UIPieceSocketBehaviour : MonoBehaviour
 
     public void OnMatchingPieceUnselectedHandle()
     {
-        GetComponent<Image>().color = Color.red;
+        GetComponent<Image>().color = m_BaseColor;
     }
 }

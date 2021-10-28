@@ -84,6 +84,7 @@ public class UIQuestMakerTable : MonoBehaviour
 
     public void EnableStorySelection()
     {
+        _questBuilding.ClearAllPieces();
         _questBuilding.gameObject.SetActive(false);
         _storySelection.gameObject.SetActive(true);
     }
