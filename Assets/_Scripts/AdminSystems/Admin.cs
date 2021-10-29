@@ -36,9 +36,7 @@ public class Admin : MonoBehaviour
     public CalendarData calendarData;
 
     // Player Data
-    public PlayerUnlockedPieces playerPieceStorage;
-    public PlayerBakingIngredients playerBakingIngredients;
-    public PlayerReputation playerReputation;
+    public InventoryData inventoryData;
 
     // Game Systems
     public GameEventSystem gameEventSystem;
@@ -51,13 +49,11 @@ public class Admin : MonoBehaviour
     public QMGameplaySystem questMakerSystem;
     public CookieMakingSystem cookieMakingSystem;
     public DialogueSystem dialogueSystem;
+    public InventorySystem inventorySystem;
 
     public NpcSystem npcSystem;
     public TownSystem townSystem;
     public CalendarSystem calendarSystem;
-
-    public ReputationSystem reputationSystem;
-    public IngredientsSystem ingredientsSystem;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Init()
@@ -85,8 +81,7 @@ public class Admin : MonoBehaviour
 
         townSystem = new TownSystem();
         calendarSystem = new CalendarSystem();
-        reputationSystem = new ReputationSystem();
-        ingredientsSystem = new IngredientsSystem();
+        inventorySystem = new InventorySystem();
 
         // Create DBs and data objects
         storyDB = new StoryDB();
@@ -99,9 +94,7 @@ public class Admin : MonoBehaviour
         dayData = new DayData();
 
         // Create Player Data Containers
-        playerPieceStorage = new PlayerUnlockedPieces();
-        playerReputation = new PlayerReputation();
-        playerBakingIngredients = new PlayerBakingIngredients();
+        inventoryData = new InventoryData();
 
         // Get DBs Unity References Adapters
         questDBRef = GetComponent<QuestDBUnityReferences>();
@@ -130,11 +123,9 @@ public class Admin : MonoBehaviour
 
         townSystem.Initialize(townData);
         calendarSystem.Initialize(calendarData, storyDB);
-        reputationSystem.Initialize(playerReputation);
-        ingredientsSystem.Initialize(playerBakingIngredients);
-
+        inventorySystem.Initialize(inventoryData);
 
         // Initialize Player Data Containers
-        playerPieceStorage.Initialize();
+        inventoryData.Initialize();
     }
 }

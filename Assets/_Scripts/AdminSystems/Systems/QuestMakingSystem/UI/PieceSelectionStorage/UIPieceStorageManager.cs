@@ -12,6 +12,7 @@ namespace CQM.QuestMaking.UI
         public event Action<int> OnUsePiece;
 
         public QuestPiece.PieceType m_SelectedType;
+        public int selectedStoryId; // used to populate UI with story targets
 
         [SerializeField] private PieceFilteringMenu _pieceFiltering;
         [SerializeField] private UIPieceSelection _pieceSelector;
@@ -32,6 +33,11 @@ namespace CQM.QuestMaking.UI
         {
             m_SelectedType = type;
             _pieceSelector.Refresh(type);
+        }
+
+        public void OnStorySelected(int storyID)
+        {
+            _pieceSelector.m_CurrentStoryID = storyID;
         }
 
         // Called by the Use UI button

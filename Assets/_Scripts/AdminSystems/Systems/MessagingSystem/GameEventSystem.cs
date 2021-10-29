@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CQM.QuestMaking;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,7 @@ public class GameEventSystem
     public EventSys DaySystemCommands = new EventSys();
     public EventSys NpcSystemCommands = new EventSys();
     public EventSys CameraSystemCommands = new EventSys();
+    public EventSys InventorySystemCommands = new EventSys();
 
     // CALLBACKS FROM SYSTEMS
     public EventSys StoryCallbacks = new EventSys();
@@ -42,6 +44,7 @@ public class GameEventSystem
         DaySystemEvents(ids, admin.daySystem);
         NpcSystemEvents(ids, admin.npcSystem);
         CameraSystemEvents(ids, admin.camSystem);
+        InventorySystemEvents(ids, admin.inventorySystem);
     }
 
     private void GameStateSystemEvents(IDEvents ids, GameStateSystem gameStateSys)
@@ -99,5 +102,13 @@ public class GameEventSystem
     {
         var evt = CameraSystemCommands.AddEvent<Transform>("retarget_cmd".GetHashCode());
         evt.OnInvoked += camSys.Retarget;
+    }
+
+    private void InventorySystemEvents(IDEvents ids, InventorySystem invSys)
+    {
+        var evt = InventorySystemCommands.AddEvent<ItemData>("add_cookie".GetHashCode());
+        evt.OnInvoked += (args) => invSys.AddCookieToInventory(args.m_ItemID, args.m_Amount);
+        evt = InventorySystemCommands.AddEvent<ItemData>("remove_cookie".GetHashCode());
+        evt.OnInvoked += (args) => invSys.RemoveCookieFromInventory(args.m_ItemID, args.m_Amount);
     }
 }

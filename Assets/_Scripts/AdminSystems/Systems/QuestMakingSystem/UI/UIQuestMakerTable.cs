@@ -54,6 +54,7 @@ public class UIQuestMakerTable : MonoBehaviour
     {
         EnableQuestBuilding();
         _questMakingSys.SelectStory(storyId);
+        _pieceStorage.OnStorySelected(storyId);
     }
 
     private void QuestBuilding_OnRemoveQuestPiece(QuestPiece piece)

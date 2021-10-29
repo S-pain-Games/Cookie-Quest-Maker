@@ -3,24 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using CQM.QuestMaking;
 
 public class CookieMakingSystem : MonoBehaviour
 {
-    private CookieDB _cookieDB; 
+    private CookieDB _cookieDB;
+
     public int _selectedRecipe = -1;
 
     public event Action<int> OnCreateCookie;
 
-    Admin admin;
-
-    private void Awake()
-    {
-        admin = Admin.g_Instance;
-    }
+    private Event<ItemData> _addCookieCommand;
 
     public void Initialize(CookieDB cookieDB)
     {
         _cookieDB = cookieDB;
+        var evtSys = Admin.g_Instance.gameEventSystem;
+        evtSys.InventorySystemCommands.GetEvent("add_cookie".GetHashCode(), out _addCookieCommand);
     }
 
     public void SelectRecipe(int recipeId)
@@ -34,9 +33,9 @@ public class CookieMakingSystem : MonoBehaviour
         RecipeData recipe;
         _cookieDB.m_RecipeDataDB.TryGetValue(_selectedRecipe, out recipe);
 
-        if(recipe != null && !recipe.fabricated)
+        if (recipe != null && !recipe.fabricated)
         {
-            admin.playerPieceStorage.m_Storage.Add(_selectedRecipe);
+            _addCookieCommand.Invoke(new ItemData(_selectedRecipe, 1));
             recipe.fabricated = true;
         }
     }

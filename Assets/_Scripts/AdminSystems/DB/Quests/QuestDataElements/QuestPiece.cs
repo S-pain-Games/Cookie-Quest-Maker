@@ -4,6 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class QuestPiece
 {
+    public int m_ID = 0;
     public string m_PieceName = "Unnamed";
     public PieceType m_Type = PieceType.Action;
     public List<QPTag> m_Tags = new List<QPTag>();

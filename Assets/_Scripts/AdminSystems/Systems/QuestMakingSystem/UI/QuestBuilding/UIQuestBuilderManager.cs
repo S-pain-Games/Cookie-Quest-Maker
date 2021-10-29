@@ -72,6 +72,13 @@ namespace CQM.QuestMaking.UI
             }
             for (int i = 0; i < _questPieces.Count; i++)
             {
+                // TODO: >:[
+                if (_questPieces[i].Piece.m_Type == QuestPiece.PieceType.Cookie)
+                {
+                    Admin.g_Instance.gameEventSystem.InventorySystemCommands.GetEvent("add_cookie".GetHashCode(), out Event<ItemData> evt);
+                    evt.Invoke(new ItemData(_questPieces[i].Piece.m_ID, 1));
+                }
+
                 Destroy(_questPieces[i].gameObject); // Pooling?
             }
             _questPieces.Clear();
@@ -89,8 +96,22 @@ namespace CQM.QuestMaking.UI
                     _questPieces[i].TryToUnsocket(null);
                     Destroy(_questPieces[i].gameObject);
                     _questPieces.RemoveAt(i);
+
+                    // TODO: oh god
+                    if (_questPieces[i].Piece.m_Type == QuestPiece.PieceType.Cookie)
+                    {
+                        Admin.g_Instance.gameEventSystem.InventorySystemCommands.GetEvent("add_cookie".GetHashCode(), out Event<ItemData> evt);
+                        evt.Invoke(new ItemData(_questPieces[i].Piece.m_ID, 1));
+                    }
                     break;
                 }
+            }
+
+            // TODO: oh lord
+            if (questPiece.m_Type == QuestPiece.PieceType.Cookie)
+            {
+                Admin.g_Instance.gameEventSystem.InventorySystemCommands.GetEvent("remove_cookie".GetHashCode(), out Event<ItemData> evt);
+                evt.Invoke(new ItemData(pieceID, 1));
             }
 
             // Spawn selected piece from storage in quest builder

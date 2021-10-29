@@ -106,48 +106,56 @@ namespace CQM.QuestMaking
         private void LoadQuestPieces(IDQuestPieces pIds)
         {
             QuestPiece qp = new QuestPiece();
+            qp.m_ID = pIds.mayor;
             qp.m_PieceName = "Mayor";
             qp.m_Type = QuestPiece.PieceType.Target;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Help, m_Value = 1 });
             m_QPiecesDB.Add(pIds.mayor, qp);
 
             qp = new QuestPiece();
+            qp.m_ID = pIds.molly;
             qp.m_PieceName = "Molly";
             qp.m_Type = QuestPiece.PieceType.Target;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Help, m_Value = 1 });
             m_QPiecesDB.Add(pIds.molly, qp);
 
             qp = new QuestPiece();
+            qp.m_ID = pIds.attack;
             qp.m_PieceName = "Attack";
             qp.m_Type = QuestPiece.PieceType.Action;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Harm, m_Value = 1 });
             m_QPiecesDB.Add(pIds.attack, qp);
 
             qp = new QuestPiece();
+            qp.m_ID = pIds.assist;
             qp.m_PieceName = "Assist";
             qp.m_Type = QuestPiece.PieceType.Action;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Help, m_Value = 1 });
             m_QPiecesDB.Add(pIds.assist, qp);
 
             qp = new QuestPiece();
+            qp.m_ID = pIds.plain_cookie;
             qp.m_PieceName = "Plain Cookie";
             qp.m_Type = QuestPiece.PieceType.Cookie;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Help, m_Value = 1 });
             m_QPiecesDB.Add(pIds.plain_cookie, qp);
 
             qp = new QuestPiece();
+            qp.m_ID = pIds.plain_cookie_2;
             qp.m_PieceName = "Plain Cookie 2";
             qp.m_Type = QuestPiece.PieceType.Cookie;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Convince, m_Value = 1 });
             m_QPiecesDB.Add(pIds.plain_cookie_2, qp);
 
             qp = new QuestPiece();
+            qp.m_ID = pIds.brutally;
             qp.m_PieceName = "Brutally";
             qp.m_Type = QuestPiece.PieceType.Modifier;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Harm, m_Value = 1 });
             m_QPiecesDB.Add(pIds.brutally, qp);
 
             qp = new QuestPiece();
+            qp.m_ID = pIds.kindly;
             qp.m_PieceName = "Kindly";
             qp.m_Type = QuestPiece.PieceType.Modifier;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Help, m_Value = 1 });
@@ -155,6 +163,7 @@ namespace CQM.QuestMaking
             m_QPiecesDB.Add(pIds.kindly, qp);
 
             qp = new QuestPiece();
+            qp.m_ID = pIds.baseball_bat;
             qp.m_PieceName = "Baseball Bat";
             qp.m_Type = QuestPiece.PieceType.Object;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Harm, m_Value = 1 });

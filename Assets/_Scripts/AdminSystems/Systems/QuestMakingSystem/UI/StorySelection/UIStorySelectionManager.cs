@@ -91,14 +91,6 @@ public class UIStorySelectionManager : MonoBehaviour
         {
             int storyId = storyDB.m_OngoingStories[currentStoryIndex];
             OnStorySelected?.Invoke(storyId);
-
-            // TODO: Fix this
-            if (previousTarget != 0)
-            {
-                Admin.g_Instance.playerPieceStorage.m_Storage.Remove(previousTarget);
-            }
-            previousTarget = Admin.g_Instance.storyDB.m_StoriesDB[storyId].m_StoryData.m_Target;
-            Admin.g_Instance.playerPieceStorage.m_Storage.Add(previousTarget);
         }
     }
 }

@@ -67,7 +67,7 @@ public class RecipeShopSystem : MonoBehaviour
                 {
                     if (recipe.m_Reputation == Reputation.GoodCookieReputation)
                     {
-                        bool bought = admin.reputationSystem.RemoveGoodCookieRep(recipe.price);
+                        bool bought = admin.inventorySystem.RemoveGoodCookieRep(recipe.price);
                         if(bought)
                         {
                             admin.cookieDB.AddBoughtCookie(recipe.m_CookieID, recipe);
@@ -76,7 +76,7 @@ public class RecipeShopSystem : MonoBehaviour
                     }
                     else if (recipe.m_Reputation == Reputation.EvilCookieReputation)
                     {
-                        bool bought = admin.reputationSystem.RemoveEvilCookieRep(recipe.price);
+                        bool bought = admin.inventorySystem.RemoveEvilCookieRep(recipe.price);
                         if (bought)
                         {
                             admin.cookieDB.AddBoughtCookie(recipe.m_CookieID, recipe);
