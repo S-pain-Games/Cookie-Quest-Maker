@@ -10,16 +10,17 @@ public class TownSystem
         _data = data;
     }
 
-    public void CalculateHappiness()
+    public void CalculateTownHappiness()
     {
+        var repDb = Admin.g_Instance.storyDB.m_Repercusions;
         List<Location> locList = _data.m_LocationsList;
         int globalHappiness = 0;
         for (int i = 0; i < locList.Count; i++)
         {
             int locHappiness = 0;
-            for (int j = 0; j < locList[i].m_StoryRepercusions.Count; j++)
+            for (int j = 0; j < locList[i].m_StoryRepercusionsIDs.Count; j++)
             {
-                StoryRepercusion rep = locList[i].m_StoryRepercusions[j];
+                StoryRepercusion rep = repDb[locList[i].m_StoryRepercusionsIDs[j]];
                 if (rep.m_Active)
                     locHappiness += rep.m_Value;
             }
@@ -27,6 +28,18 @@ public class TownSystem
             globalHappiness += locHappiness;
         }
         _data.m_GlobalHappiness = globalHappiness;
+    }
+
+    public void SetBuildingRepercusion(int repercusionID, bool activated)
+    {
+        List<Location> locList = _data.m_LocationsList;
+        for (int i = 0; i < locList.Count; i++)
+        {
+            if (locList[i].m_StoryRepercusionsIDs[i] == repercusionID)
+            {
+
+            }
+        }
     }
 }
 
@@ -46,12 +59,12 @@ public class TownDB
         Location loc = new Location();
         loc.m_LocName = "Town Center";
         loc.m_LocDesc = "Desc";
-        loc.m_StoryRepercusions.Add(rep[repIds.center_wolf_alive]);
-        loc.m_StoryRepercusions.Add(rep[repIds.center_wolf_dead]);
-        loc.m_StoryRepercusions.Add(rep[repIds.towncenter_in_ruins]);
-        loc.m_StoryRepercusions.Add(rep[repIds.towncenter_not_in_ruins]);
-        loc.m_StoryRepercusions.Add(rep[repIds.towncenter_mayor_celebration_happened]);
-        loc.m_StoryRepercusions.Add(rep[repIds.towncenter_mayor_celebration_didnt_happen]);
+        loc.m_StoryRepercusionsIDs.Add(repIds.center_wolf_alive);
+        loc.m_StoryRepercusionsIDs.Add(repIds.center_wolf_dead);
+        loc.m_StoryRepercusionsIDs.Add(repIds.towncenter_in_ruins);
+        loc.m_StoryRepercusionsIDs.Add(repIds.towncenter_not_in_ruins);
+        loc.m_StoryRepercusionsIDs.Add(repIds.towncenter_mayor_celebration_happened);
+        loc.m_StoryRepercusionsIDs.Add(repIds.towncenter_mayor_celebration_didnt_happen);
 
         m_Locations.Add(townIds.town_center, loc);
         m_LocationsList.Add(loc);
@@ -64,5 +77,5 @@ public class Location
     public string m_LocDesc;
 
     public int m_Happiness;
-    public List<StoryRepercusion> m_StoryRepercusions = new List<StoryRepercusion>();
+    public List<int> m_StoryRepercusionsIDs = new List<int>();
 }

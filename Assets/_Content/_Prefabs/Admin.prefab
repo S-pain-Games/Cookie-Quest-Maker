@@ -71,6 +71,7 @@ MonoBehaviour:
   cookieMakingSystem: {fileID: 0}
   dialogueSystem: {fileID: 0}
   npcSystem: {fileID: 0}
+  popupSystem: {fileID: 0}
 --- !u!114 &2041105134198296799
 MonoBehaviour:
   m_ObjectHideFlags: 0

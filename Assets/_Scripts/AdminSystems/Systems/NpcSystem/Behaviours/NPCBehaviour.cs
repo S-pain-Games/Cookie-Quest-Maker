@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class NPCBehaviour : MonoBehaviour, IInteractableEntity
 {
@@ -38,9 +39,9 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
         else
         {
             showDialogueEvt.Invoke(new GameEventSystem.ShowDialogueEvtArgs(
-               m_NpcData.m_AlreadySpokenToDialogue,
+               new List<string> { m_NpcData.m_AlreadySpokenToDialogue[Random.Range(0, m_NpcData.m_AlreadySpokenToDialogue.Count)] }, // TODO: Fix this atrocity
                "Mamarrachus",
-               null));
+               () => m_Interacting = false));
         }
     }
 

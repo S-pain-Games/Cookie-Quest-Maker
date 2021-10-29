@@ -127,5 +127,5 @@ public class NPCData
     public int m_StoryIDToFinalizeOnInteract;
 
     public bool m_AlreadySpokenTo;
-    public List<string> m_AlreadySpokenToDialogue = new List<string> { "I have nothing more to say" };
+    public List<string> m_AlreadySpokenToDialogue = new List<string> { "I have nothing more to say", "This is a really nice bakery", "Such a nice weather today" };
 }

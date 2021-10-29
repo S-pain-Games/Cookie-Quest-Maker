@@ -96,6 +96,7 @@ namespace CQM.QuestMaking.UI
                     _questPieces[i].TryToUnsocket(null);
                     Destroy(_questPieces[i].gameObject);
                     _questPieces.RemoveAt(i);
+                    i--;
 
                     // TODO: oh god
                     if (_questPieces[i].Piece.m_Type == QuestPiece.PieceType.Cookie)

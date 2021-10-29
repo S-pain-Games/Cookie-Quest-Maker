@@ -11,6 +11,7 @@ using UnityEngine;
 [RequireComponent(typeof(QMGameplaySystem))]
 [RequireComponent(typeof(CookieMakingSystem))]
 [RequireComponent(typeof(NpcSystem))]
+[RequireComponent(typeof(PopupSystem))]
 
 [RequireComponent(typeof(QuestDBUnityReferences))]
 [RequireComponent(typeof(StoryDBUnityReferences))]
@@ -42,8 +43,8 @@ public class Admin : MonoBehaviour
     public GameEventSystem gameEventSystem;
     public GameStateSystem gameStateSystem;
     public LocalizationSystem localizationSystem;
-
     public CameraSystem camSystem;
+
     public DaySystem daySystem;
     public StorySystem storySystem;
     public QMGameplaySystem questMakerSystem;
@@ -54,6 +55,7 @@ public class Admin : MonoBehaviour
     public NpcSystem npcSystem;
     public TownSystem townSystem;
     public CalendarSystem calendarSystem;
+    public PopupSystem popupSystem;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Init()
@@ -82,6 +84,7 @@ public class Admin : MonoBehaviour
         townSystem = new TownSystem();
         calendarSystem = new CalendarSystem();
         inventorySystem = new InventorySystem();
+        popupSystem = GetComponent<PopupSystem>();
 
         // Create DBs and data objects
         storyDB = new StoryDB();

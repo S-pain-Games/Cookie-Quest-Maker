@@ -28,6 +28,7 @@ public class GameEventSystem
     public EventSys NpcSystemCommands = new EventSys();
     public EventSys CameraSystemCommands = new EventSys();
     public EventSys InventorySystemCommands = new EventSys();
+    public EventSys PopupSystemCommands = new EventSys();
 
     // CALLBACKS FROM SYSTEMS
     public EventSys StoryCallbacks = new EventSys();
@@ -45,6 +46,7 @@ public class GameEventSystem
         NpcSystemEvents(ids, admin.npcSystem);
         CameraSystemEvents(ids, admin.camSystem);
         InventorySystemEvents(ids, admin.inventorySystem);
+        PopupSystemEvents(ids, admin.popupSystem);
     }
 
     private void GameStateSystemEvents(IDEvents ids, GameStateSystem gameStateSys)
@@ -112,4 +114,10 @@ public class GameEventSystem
         evt.OnInvoked += (args) => invSys.RemoveCookieFromInventory(args.m_ItemID, args.m_Amount);
     }
 
+    private void PopupSystemEvents(IDEvents ids, PopupSystem popSys)
+    {
+        // Commands
+        var evt = PopupSystemCommands.AddEvent<PopupData>("show_popup".GetHashCode());
+        evt.OnInvoked += (args) => popSys.ShowPopup(args);
+    }
 }
