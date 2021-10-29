@@ -27,18 +27,25 @@ public class CookieMakingUI : MonoBehaviour
     private void OnEnable()
     {
         cookieMakingSystem.OnCreateCookie += UpdateUI;
+        cookieMakingSystem.OnBuyRecipe -= UpdateCookieRecipesUI;
+        cookieMakingSystem.OnBuyRecipe += UpdateCookieRecipesUI;
 
         if (currentRecipes.Count == 0)
         {
+            /*
             List<RecipeData> recipes = admin.cookieDB.m_BoughtRecipeDataList;
             foreach (RecipeData r in recipes)
             {
                 GameObject newRecipeUI = Instantiate(pref_Recipe, recipeListParent);
                 RecipeShopUI ui = newRecipeUI.GetComponent<RecipeShopUI>();
-                ui.myRecipe = r;
+                ui.SetRecipe(r);
                 ui.OnSelectRecipe += SelectRecipe;
                 currentRecipes.Add(newRecipeUI);
             }
+            if (recipes.Count > 0)
+                cookieMakingSystem.SelectRecipe(recipes[0].m_CookieID);
+            */
+            CreateCookiePrefabs();
         }
         else
         {
@@ -57,6 +64,7 @@ public class CookieMakingUI : MonoBehaviour
         }
 
         cookieMakingSystem.OnCreateCookie -= UpdateUI;
+        //cookieMakingSystem.OnBuyRecipe -= UpdateCookieRecipesUI;
     }
 
     public void SelectRecipe(int id)
@@ -76,8 +84,39 @@ public class CookieMakingUI : MonoBehaviour
         {
             txt_CookieName.text = cookieData.m_CookieName;
             txt_CookieDescription.text = cookieData.m_CookieDescription;
-
+            List<QPTag> tags = admin.questDB.m_QPiecesDB[id].m_Tags;
+            txt_CookieStats.text = "Hero Stats: \n";
+            foreach (QPTag q in tags)
+            {
+                txt_CookieStats.text += q.m_Type.ToString() + ": " + q.m_Value + "\n";
+            }
         }
         
+    }
+
+    private void UpdateCookieRecipesUI()
+    {
+        Debug.Log("Entra update");
+        foreach(GameObject g in currentRecipes)
+        {
+            Destroy(g);
+        }
+        //currentRecipes.Clear();
+        CreateCookiePrefabs();
+    }
+
+    private void CreateCookiePrefabs()
+    {
+        List<RecipeData> recipes = admin.cookieDB.m_BoughtRecipeDataList;
+        foreach (RecipeData r in recipes)
+        {
+            GameObject newRecipeUI = Instantiate(pref_Recipe, recipeListParent);
+            RecipeShopUI ui = newRecipeUI.GetComponent<RecipeShopUI>();
+            ui.SetRecipe(r);
+            ui.OnSelectRecipe += SelectRecipe;
+            currentRecipes.Add(newRecipeUI);
+        }
+        if (recipes.Count > 0)
+            cookieMakingSystem.SelectRecipe(recipes[0].m_CookieID);
     }
 }

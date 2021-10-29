@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class RecipeShopUI : MonoBehaviour
 {
@@ -11,10 +12,12 @@ public class RecipeShopUI : MonoBehaviour
     public event Action<int> OnSelectRecipe;
 
     private Button button;
+    private TextMeshProUGUI myText;
 
     private void Awake()
     {
         button = GetComponent<Button>();
+        myText = GetComponentInChildren<TextMeshProUGUI>();
     }
 
     private void OnEnable()
@@ -30,5 +33,11 @@ public class RecipeShopUI : MonoBehaviour
     private void SelectMyRecipe()
     {
         OnSelectRecipe?.Invoke(myRecipe.m_CookieID);
+    }
+
+    public void SetRecipe(RecipeData recipe)
+    {
+        myRecipe = recipe;
+        myText.text = recipe.m_RecipeName;
     }
 }

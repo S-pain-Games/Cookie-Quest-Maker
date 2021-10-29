@@ -111,4 +111,5 @@ public class GameEventSystem
         evt = InventorySystemCommands.AddEvent<ItemData>("remove_cookie".GetHashCode());
         evt.OnInvoked += (args) => invSys.RemoveCookieFromInventory(args.m_ItemID, args.m_Amount);
     }
+
 }

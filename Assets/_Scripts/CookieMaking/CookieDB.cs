@@ -43,7 +43,7 @@ public class CookieDB
         recipe.price = 50;
         m_RecipeDataDB.Add(pIds.plain_cookie_2, recipe);
         m_RecipeDataList.Add(recipe);
-        AddBoughtCookie(recipe.m_CookieID, recipe);
+        //AddBoughtCookie(recipe.m_CookieID, recipe);
     }
 
     private void LoadCookies(IDQuestPieces pIds)

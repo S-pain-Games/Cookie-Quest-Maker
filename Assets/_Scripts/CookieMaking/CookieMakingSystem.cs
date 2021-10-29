@@ -12,6 +12,7 @@ public class CookieMakingSystem : MonoBehaviour
     public int _selectedRecipe = -1;
 
     public event Action<int> OnCreateCookie;
+    public event Action OnBuyRecipe;
 
     private Event<ItemData> _addCookieCommand;
 
@@ -36,5 +37,10 @@ public class CookieMakingSystem : MonoBehaviour
         {
             _addCookieCommand.Invoke(new ItemData(_selectedRecipe, 1));
         }
+    }
+
+    public void BuyRecipe()
+    {
+        OnBuyRecipe?.Invoke();
     }
 }

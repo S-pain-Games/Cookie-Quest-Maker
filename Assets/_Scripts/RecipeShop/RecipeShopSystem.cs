@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class RecipeShopSystem : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class RecipeShopSystem : MonoBehaviour
     [SerializeField] private Transform recipeListParent;
 
     private Admin admin;
+
+    private Event<ItemData> _addCookieCommand;
+
+    [SerializeField] private TextMeshProUGUI textGoodR;
+    [SerializeField] private TextMeshProUGUI textEvilR;
+    [SerializeField] private TextMeshProUGUI textPrice;
 
     private void Awake()
     {
@@ -26,7 +33,7 @@ public class RecipeShopSystem : MonoBehaviour
             {
                 GameObject newRecipeUI = Instantiate(pref_Recipe, recipeListParent);
                 RecipeShopUI ui = newRecipeUI.GetComponent<RecipeShopUI>();
-                ui.myRecipe = r;
+                ui.SetRecipe(r);
                 ui.OnSelectRecipe += SelectRecipe;
                 currentRecipes.Add(newRecipeUI);
             }
@@ -38,6 +45,7 @@ public class RecipeShopSystem : MonoBehaviour
                 r.GetComponent<RecipeShopUI>().OnSelectRecipe += SelectRecipe;
             }
         }
+        UpdateTexts();
     }
 
     private void OnDisable()
@@ -51,6 +59,7 @@ public class RecipeShopSystem : MonoBehaviour
     public void SelectRecipe(int id)
     {
         selectedRecipe = id;
+        UpdatePrice();
     }
 
     //TODO: Update cookie making available recipes
@@ -71,6 +80,8 @@ public class RecipeShopSystem : MonoBehaviour
                         if(bought)
                         {
                             admin.cookieDB.AddBoughtCookie(recipe.m_CookieID, recipe);
+                            admin.cookieMakingSystem.BuyRecipe();
+                            UpdateTexts();
                         }
                         
                     }
@@ -80,10 +91,29 @@ public class RecipeShopSystem : MonoBehaviour
                         if (bought)
                         {
                             admin.cookieDB.AddBoughtCookie(recipe.m_CookieID, recipe);
+                            admin.cookieMakingSystem.BuyRecipe();
+                            UpdateTexts();
                         } 
                     }
                 }
             }
         }
+    }
+
+    private void UpdateTexts()
+    {
+        textGoodR.text = "Good Reputation: " + admin.inventoryData.m_GoodCookieReputation;
+        textEvilR.text = "Evil Reputation: " + admin.inventoryData.m_EvilCookieReputation;
+        UpdatePrice();
+    }
+
+    private void UpdatePrice()
+    {
+        RecipeData recipe;
+        admin.cookieDB.m_RecipeDataDB.TryGetValue(selectedRecipe, out recipe);
+        if (recipe != null)
+            textPrice.text = "Price: " + recipe.price;
+        else
+            textPrice.text = "";
     }
 }

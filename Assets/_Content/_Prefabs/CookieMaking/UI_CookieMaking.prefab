@@ -1014,7 +1014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txt_CookieName: {fileID: 8780013810668869265}
   txt_CookieDescription: {fileID: 8780013810936078106}
-  txt_CookieStats: {fileID: 0}
+  txt_CookieStats: {fileID: 8780013810041917929}
   selectedRecipe: -1
   pref_Recipe: {fileID: 9115097231823487589, guid: 3b370a205b5fad546b15354e88a85af2, type: 3}
   currentRecipes: []

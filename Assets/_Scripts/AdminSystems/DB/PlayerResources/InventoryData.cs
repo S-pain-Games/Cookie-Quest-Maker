@@ -36,6 +36,9 @@ public class InventoryData
         m_Ingredients.Add(new InventoryItem("cookie_dough".GetHashCode(), 1));
         m_Ingredients.Add(new InventoryItem("chocolate_chips".GetHashCode(), 1));
         m_Ingredients.Add(new InventoryItem("red_jelly".GetHashCode(), 1));
+
+        m_GoodCookieReputation += 100;
+        m_EvilCookieReputation += 100;
     }
 }
 
