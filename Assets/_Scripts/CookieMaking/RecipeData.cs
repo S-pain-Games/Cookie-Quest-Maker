@@ -16,5 +16,4 @@ public class RecipeData
     public Reputation m_Reputation = Reputation.GoodCookieReputation;
     public int price;
     public bool bought = false;
-    public bool fabricated = false; //TODO: set to false all created cookies on new day
 }

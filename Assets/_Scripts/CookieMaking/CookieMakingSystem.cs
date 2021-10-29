@@ -30,13 +30,11 @@ public class CookieMakingSystem : MonoBehaviour
 
     public void CreateCookie()
     {
-        RecipeData recipe;
-        _cookieDB.m_RecipeDataDB.TryGetValue(_selectedRecipe, out recipe);
+        _cookieDB.m_RecipeDataDB.TryGetValue(_selectedRecipe, out RecipeData recipe);
 
-        if (recipe != null && !recipe.fabricated)
+        if (recipe != null)
         {
             _addCookieCommand.Invoke(new ItemData(_selectedRecipe, 1));
-            recipe.fabricated = true;
         }
     }
 }

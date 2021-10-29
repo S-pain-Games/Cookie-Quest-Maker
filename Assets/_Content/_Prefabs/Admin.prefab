@@ -59,7 +59,9 @@ MonoBehaviour:
     m_Year: 0
     m_Month: 0
     m_Day: 0
-  playerPieceStorage:
+  inventoryData:
+    m_GoodCookieReputation: 0
+    m_EvilCookieReputation: 0
     m_Storage: 
   gameStateSystem: {fileID: 0}
   localizationSystem: {fileID: 0}
@@ -140,6 +142,8 @@ MonoBehaviour:
   - m_NameID: baseball_bat
     m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
   - m_NameID: molly
+    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  - m_NameID: plain_cookie_2
     m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
 --- !u!114 &5370908183021347996
 MonoBehaviour:
