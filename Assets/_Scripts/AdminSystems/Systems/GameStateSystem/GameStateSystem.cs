@@ -56,6 +56,14 @@ public class GameStateSystem : MonoBehaviour
                 m_Prefabs[i].SetActive(false);
             }
         }
+
+        public void DisableAllGameobjects()
+        {
+            for (int i = 0; i < m_Prefabs.Count; i++)
+            {
+                m_Prefabs[i].SetActive(false);
+            }
+        }
     }
 
     public enum State
@@ -93,6 +101,12 @@ public class GameStateSystem : MonoBehaviour
             evtSys.GameStateCallbacks.AddEvent("on_bakery_night_exit".GetHashCode()),
             m_BakeryNight);
         m_States.Add(State.BakeryNight, gs);
+
+        // Disable All States Except for the starting one (Maybe Bug prone?)
+        foreach (GameState state in m_States.Values)
+        {
+            state.DisableAllGameobjects();
+        }
     }
 
     private void Start()
