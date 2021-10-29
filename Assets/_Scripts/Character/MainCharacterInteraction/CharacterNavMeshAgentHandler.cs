@@ -12,6 +12,7 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
 
     private bool _movingTowardsTarget;
     private bool _interactingWithNpc;
+    private bool _movingTowardsObject;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
         _agent.updateUpAxis = false;
 
         _movingTowardsTarget = false;
+        _movingTowardsObject = false;
         _interactingWithNpc = false;
         _interactableEntity = null;
     }
@@ -30,6 +32,7 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
     {
         SetupAgent(target);
         _interactableEntity = null;
+        _movingTowardsObject = false;
     }
 
     //Move towards position, then interact with object
@@ -38,6 +41,8 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
         SetupAgent(target);
         _interactableEntity = interactableEntity;
         _interactingWithNpc = _interactableEntity.GetComponent<NPCBehaviour>() != null;
+        _movingTowardsTarget = true;
+        _movingTowardsObject = true;
     }
 
     private void SetupAgent(Vector3 target)
@@ -49,18 +54,23 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
 
     void Update()
     {
-        if (!_movingTowardsTarget)
-            return;
-
-        if (_agent.pathPending)
+        if (!_movingTowardsTarget || _agent.pathPending)
             return;
 
 
-        if(_interactingWithNpc && _agent.remainingDistance <= 1)
+        //Moving towards Interactable Object
+        if (_movingTowardsObject)
         {
-            OnTargetReached();
+            if (_interactingWithNpc && _agent.remainingDistance <= 1)
+            {
+                OnTargetReached();
+            }
+            else if (_agent.remainingDistance <= 0.5f)
+            {
+                OnTargetReached();
+            }
         }
-        else if (_agent.remainingDistance <= 0.5f)
+        else if(_agent.remainingDistance == 0)
         {
             OnTargetReached();
         }
