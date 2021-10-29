@@ -8,28 +8,31 @@ public class LoadGameStateButton : MonoBehaviour
 {
     [SerializeField]
     private GameStateSystem.State m_TargetState;
-    private Button b;
+    private Button button;
 
-    private GameStateSystem gameStateSystem;
+    private GameEventSystem _eventSys;
+    private Event<GameStateSystem.State> _setGameStateCommand;
 
     private void Awake()
     {
-        b = GetComponent<Button>();
-        gameStateSystem = Admin.g_Instance.gameStateSystem;
+        var ids = Admin.g_Instance.ID.events;
+        button = GetComponent<Button>();
+        _eventSys = Admin.g_Instance.gameEventSystem;
+        _eventSys.GameStateSystemMessaging.GetEvent(ids.set_game_state, out _setGameStateCommand);
     }
 
     private void OnEnable()
     {
-        b.onClick.AddListener(LoadGameState);
+        button.onClick.AddListener(LoadGameState);
     }
 
     private void OnDisable()
     {
-        b.onClick.RemoveListener(LoadGameState);
+        button.onClick.RemoveListener(LoadGameState);
     }
 
     private void LoadGameState()
     {
-        gameStateSystem.SetState(m_TargetState);
+        _setGameStateCommand.Invoke(m_TargetState);
     }
 }

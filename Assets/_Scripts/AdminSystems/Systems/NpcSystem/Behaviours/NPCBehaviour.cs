@@ -4,6 +4,8 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
 {
     public NPCData m_NpcData = new NPCData();
 
+    private bool m_Interacting = false;
+
     private GameEventSystem _eventSystem;
     private Event<GameEventSystem.ShowDialogueEvtArgs> showDialogueEvt;
     private Event<int> startStoryEvt;
@@ -21,6 +23,9 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
 
     public void OnInteract()
     {
+        if (m_Interacting) return;
+
+        m_Interacting = true;
         if (!m_NpcData.m_AlreadySpokenTo)
         {
             showDialogueEvt.Invoke(new GameEventSystem.ShowDialogueEvtArgs(
@@ -41,10 +46,14 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
 
     private void DialogueWithNpcFinishedCallback()
     {
-        finalizeStoryEvt.Invoke(m_NpcData.m_StoryIDToFinalizeOnInteract);
-        startStoryEvt.Invoke(m_NpcData.m_StoryIDToStartOnInteract);
-
-        // Please do not write lines this horrible in production code, this is only for debugging
-        Debug.Log("Started Story : " + Admin.g_Instance.storyDB.m_StoriesDB[m_NpcData.m_StoryIDToStartOnInteract].m_StoryData.m_Title);
+        if (m_NpcData.m_HasToFinalizeAStory)
+            finalizeStoryEvt.Invoke(m_NpcData.m_StoryIDToFinalizeOnInteract);
+        if (m_NpcData.m_HasToStartAStory)
+        {
+            // Please do not write lines this horrible in production code, this is only for debugging
+            Debug.Log("Started Story : " + Admin.g_Instance.storyDB.m_StoriesDB[m_NpcData.m_StoryIDToStartOnInteract].m_StoryData.m_Title);
+            startStoryEvt.Invoke(m_NpcData.m_StoryIDToStartOnInteract);
+        }
+        m_Interacting = false;
     }
 }

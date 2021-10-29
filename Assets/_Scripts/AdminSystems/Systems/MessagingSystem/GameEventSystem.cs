@@ -24,18 +24,24 @@ public class GameEventSystem
     public EventSys DialogueSystemMessaging = new EventSys();
     public EventSys GameStateSystemMessaging = new EventSys();
     public EventSys DaySystemCommands = new EventSys();
+    public EventSys NpcSystemCommands = new EventSys();
+    public EventSys CameraSystemCommands = new EventSys();
 
     // CALLBACKS FROM SYSTEMS
     public EventSys StoryCallbacks = new EventSys();
     public EventSys DayCallbacks = new EventSys();
+    public EventSys NpcCallbacks = new EventSys();
+    public EventSys GameStateCallbacks = new EventSys();
 
     public void Initialize(Admin admin)
     {
         var ids = admin.ID.events;
         StorySystemEvents(ids, admin.storySystem);
         DialogueSystemEvents(ids, admin.dialogueSystem);
-        GameStateSystemEvents(ids,admin.gameStateSystem);
+        GameStateSystemEvents(ids, admin.gameStateSystem);
         DaySystemEvents(ids, admin.daySystem);
+        NpcSystemEvents(ids, admin.npcSystem);
+        CameraSystemEvents(ids, admin.camSystem);
     }
 
     private void GameStateSystemEvents(IDEvents ids, GameStateSystem gameStateSys)
@@ -60,6 +66,8 @@ public class GameEventSystem
         StoryCallbacks.AddEvent<int>(ids.on_story_started);
         StoryCallbacks.AddEvent<int>(ids.on_story_completed);
         StoryCallbacks.AddEvent<int>(ids.on_story_finalized);
+        StoryCallbacks.AddEvent(ids.on_all_stories_completed);
+        StoryCallbacks.AddEvent(ids.on_all_stories_finalized);
 
         // Commands
         var evt = StorySystemMessaging.AddEvent<int>(ids.start_story);
@@ -78,5 +86,18 @@ public class GameEventSystem
         // Commands
         var evt = DaySystemCommands.AddEvent(ids.start_new_day);
         evt.OnInvoked += daySystem.StartNewDay;
+    }
+
+    private void NpcSystemEvents(IDEvents ids, NpcSystem npcSys)
+    {
+        // Commands
+        var evt = NpcSystemCommands.AddEvent("cmd_populate_npcs".GetHashCode());
+        evt.OnInvoked += npcSys.PopulateNpcsData;
+    }
+
+    private void CameraSystemEvents(IDEvents ids, CameraSystem camSys)
+    {
+        var evt = CameraSystemCommands.AddEvent<Transform>("retarget_cmd".GetHashCode());
+        evt.OnInvoked += camSys.Retarget;
     }
 }

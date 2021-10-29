@@ -79,10 +79,24 @@ namespace CQM.QuestMaking.UI
 
         public void SpawnPiece(int pieceID, Canvas canvas)
         {
+            var questPiece = Admin.g_Instance.questDB.m_QPiecesDB[pieceID];
+
+            // Destroy existing piece type
+            for (int i = 0; i < _questPieces.Count; i++)
+            {
+                if (_questPieces[i].Piece.m_Type == questPiece.m_Type)
+                {
+                    _questPieces[i].TryToUnsocket(null);
+                    Destroy(_questPieces[i].gameObject);
+                    _questPieces.RemoveAt(i);
+                    break;
+                }
+            }
+
             // Spawn selected piece from storage in quest builder
             var piecePrefab = Admin.g_Instance.questDB.m_QuestBuildingPiecesPrefabs[pieceID];
             var pieceBehaviour = Instantiate(piecePrefab, pieceSpawnPosition).GetComponent<UIQuestPieceBehaviour>();
-            pieceBehaviour.Initialize(canvas, pieceID);
+            pieceBehaviour.Initialize(canvas, questPiece);
 
             _questPieces.Add(pieceBehaviour);
             InitializeQuestPieceBehaviour(pieceBehaviour);

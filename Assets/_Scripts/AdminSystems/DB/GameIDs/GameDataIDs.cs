@@ -71,6 +71,9 @@ public class IDEvents
     public readonly int on_story_started = "on_story_started".GetHashCode();
     public readonly int on_story_completed = "on_story_completed".GetHashCode();
     public readonly int on_story_finalized = "on_story_finalized".GetHashCode();
+    public readonly int on_all_stories_completed = "on_all_stories_completed".GetHashCode();
+    public readonly int on_all_stories_finalized = "on_all_stories_finalized".GetHashCode();
+
     public readonly int on_daily_stories_completed = "on_daily_stories_completed".GetHashCode();
     // Commands
     public readonly int start_story = "start_story".GetHashCode();

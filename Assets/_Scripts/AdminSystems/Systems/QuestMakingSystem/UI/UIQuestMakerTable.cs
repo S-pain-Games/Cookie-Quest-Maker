@@ -79,11 +79,11 @@ public class UIQuestMakerTable : MonoBehaviour
     {
         EnableQuestBuilding();
         _questBuilding.SpawnPiece(pieceID, _canvas);
-
     }
 
     public void EnableStorySelection()
     {
+        _questBuilding.ClearAllPieces();
         _questBuilding.gameObject.SetActive(false);
         _storySelection.gameObject.SetActive(true);
     }

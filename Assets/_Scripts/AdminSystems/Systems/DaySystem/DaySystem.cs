@@ -7,11 +7,14 @@ public class DaySystem
     private GameEventSystem _eventSystem;
     private DayData _dayData;
 
+    // Own Callbacks
     private EventVoid _dayStartedCallbacks;
     private EventVoid _dayEndedCallbacks;
     private EventVoid _dailyStoriesCompleted;
 
-    private EventVoid _startNewDayCommand;
+    // External Commands
+    private Event<GameStateSystem.State> _setGameStateCommand;
+    private EventVoid _populateNpcsCommand;
 
     public void Initialize(GameEventSystem eventSystem, DayData dayData)
     {
@@ -19,13 +22,18 @@ public class DaySystem
         var ids = Admin.g_Instance.ID.events;
         _eventSystem = eventSystem;
 
+        // Initialize own callbacks
         _eventSystem.DayCallbacks.GetEvent(ids.on_day_started, out _dayStartedCallbacks);
         _eventSystem.DayCallbacks.GetEvent(ids.on_day_ended, out _dayEndedCallbacks);
         _eventSystem.DayCallbacks.GetEvent(ids.on_daily_stories_completed, out _dailyStoriesCompleted);
 
-        // Subscribe to Events
+        // Subscribe to Callbacks
         _eventSystem.StoryCallbacks.GetEvent(ids.on_story_completed, out Event<int> evt);
         evt.OnInvoked += StoryCompletedCallback;
+
+        // Initialize external Commands
+        _eventSystem.GameStateSystemMessaging.GetEvent(ids.set_game_state, out _setGameStateCommand);
+        _eventSystem.NpcSystemCommands.GetEvent("cmd_populate_npcs".GetHashCode(), out _populateNpcsCommand);
 
         _dayData = dayData;
     }
@@ -42,8 +50,8 @@ public class DaySystem
     public void StartNewDay()
     {
         _dayEndedCallbacks.Invoke();
-        Admin.g_Instance.npcSystem.PopulateNpcsData();
-        Admin.g_Instance.gameStateSystem.SetState(GameStateSystem.State.Bakery);
+        _populateNpcsCommand.Invoke();
+        _setGameStateCommand.Invoke(GameStateSystem.State.Bakery);
         _dayStartedCallbacks.Invoke();
     }
 }
