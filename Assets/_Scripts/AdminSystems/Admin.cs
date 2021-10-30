@@ -39,22 +39,22 @@ public class Admin : MonoBehaviour
     [HideInInspector] public InventoryData inventoryData;
 
     // Game Systems
-    [HideInInspector] public GameEventSystem gameEventSystem;
-    [HideInInspector] public GameStateSystem gameStateSystem;
-    [HideInInspector] public LocalizationSystem localizationSystem;
-    [HideInInspector] public CameraSystem camSystem;
-
-    [HideInInspector] public DaySystem daySystem;
-    [HideInInspector] public StorySystem storySystem;
     [HideInInspector] public QuestMakingSystem questMakerSystem;
     [HideInInspector] public CookieMakingSystem cookieMakingSystem;
-    [HideInInspector] public DialogueSystem dialogueSystem;
     [HideInInspector] public InventorySystem inventorySystem;
+    [HideInInspector] public GameEventSystem gameEventSystem;
+    [HideInInspector] public LocalizationSystem localizationSystem;
 
-    [HideInInspector] public NpcSystem npcSystem;
-    [HideInInspector] public TownSystem townSystem;
-    [HideInInspector] public CalendarSystem calendarSystem;
-    [HideInInspector] public PopupSystem popupSystem;
+    private GameStateSystem gameStateSystem;
+    private CameraSystem camSystem;
+    private DaySystem daySystem;
+    private StorySystem storySystem;
+    private DialogueSystem dialogueSystem;
+
+    private NpcSystem npcSystem;
+    private TownSystem townSystem;
+    private CalendarSystem calendarSystem;
+    private PopupSystem popupSystem;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Init()

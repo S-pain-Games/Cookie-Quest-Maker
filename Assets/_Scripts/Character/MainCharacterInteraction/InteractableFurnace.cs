@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class InteractableFurnace : MonoBehaviour, IInteractableEntity
 {
+    public Event<GameStateSystem.State> _setStateCmd;
+
+    public void Awake()
+    {
+        var evtSys = Admin.g_Instance.gameEventSystem;
+        _setStateCmd = evtSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
+    }
 
     public void OnInteract()
     {
-        Debug.Log("Interacción con horno");
-
-        Admin.g_Instance.gameStateSystem.SetState(GameStateSystem.State.CookieMaking);
+        _setStateCmd.Invoke(GameStateSystem.State.CookieMaking);
     }
 
 }

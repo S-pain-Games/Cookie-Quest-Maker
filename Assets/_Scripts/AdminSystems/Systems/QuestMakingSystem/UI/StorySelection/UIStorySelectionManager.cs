@@ -20,7 +20,6 @@ public class UIStorySelectionManager : MonoBehaviour
     [SerializeField] private Image _cardContents;
     [SerializeField] private TextMeshProUGUI _cardTitle;
 
-    private StorySystem storySys;
     private StoryDB storyDB;
 
     private int currentStoryIndex = 0;
@@ -28,7 +27,6 @@ public class UIStorySelectionManager : MonoBehaviour
 
     private void Awake()
     {
-        storySys = Admin.g_Instance.storySystem;
         storyDB = Admin.g_Instance.storyDB;
     }
 
