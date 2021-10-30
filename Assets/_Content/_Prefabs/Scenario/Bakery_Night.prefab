@@ -1095,6 +1095,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2010566240349271679}
     m_Modifications:
+    - target: {fileID: 4135710749828100333, guid: 79ccb0a3311bda649bf088b82c1ae85c, type: 3}
+      propertyPath: _enableCallbackID
+      value: bakery_night_enter
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135710749828100333, guid: 79ccb0a3311bda649bf088b82c1ae85c, type: 3}
+      propertyPath: _disableCallbackID
+      value: bakery_night_exit
+      objectReference: {fileID: 0}
     - target: {fileID: 4945650314530242199, guid: 79ccb0a3311bda649bf088b82c1ae85c, type: 3}
       propertyPath: m_Name
       value: Hio_Player

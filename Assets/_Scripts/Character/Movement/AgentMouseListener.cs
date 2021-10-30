@@ -9,37 +9,12 @@ public class AgentMouseListener : MonoBehaviour
     [SerializeField]
     private bool _enabledListener;
 
-    [Header("Game State System Callbacks")]
-    [SerializeField] private string _enableCallbackID;
-    [SerializeField] private string _disableCallbackID;
-
-    private EventVoid _onBakeryStateEnter;
-    private EventVoid _onBakeryStateExit;
-
-    private EventVoid _enableCharacterMovement;
-    private EventVoid _disableCharacterMovement;
-
     private CharacterNavMeshAgentHandler _agent;
 
     private void Awake()
     {
         _agent = GetComponent<CharacterNavMeshAgentHandler>();
-        var evtSys = Admin.g_Instance.gameEventSystem;
 
-        _onBakeryStateEnter = evtSys.GetCallbackByName<EventVoid>("game_state_sys", _enableCallbackID);
-        _onBakeryStateExit = evtSys.GetCallbackByName<EventVoid>("game_state_sys", _disableCallbackID);
-    }
-
-    private void OnEnable()
-    {
-        _onBakeryStateEnter.OnInvoked += EnableMouseInput;
-        _onBakeryStateExit.OnInvoked += DisableMouseInput;
-    }
-
-    private void OnDisable()
-    {
-        _onBakeryStateEnter.OnInvoked -= EnableMouseInput;
-        _onBakeryStateExit.OnInvoked -= DisableMouseInput;
     }
 
     private void Update()
@@ -48,6 +23,11 @@ public class AgentMouseListener : MonoBehaviour
         {
             OnClick();
         }
+    }
+
+    public void SetInputActivated(bool activated)
+    {
+        _enabledListener = activated;
     }
 
     private void OnClick()
@@ -81,7 +61,4 @@ public class AgentMouseListener : MonoBehaviour
             _agent.SetTarget(mouseWorldPosition);
 
     }
-
-    private void EnableMouseInput() => _enabledListener = true;
-    private void DisableMouseInput() => _enabledListener = false;
 }
