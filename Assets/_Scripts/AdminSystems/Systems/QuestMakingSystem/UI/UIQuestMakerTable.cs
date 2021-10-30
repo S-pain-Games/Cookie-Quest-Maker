@@ -18,7 +18,7 @@ public class UIQuestMakerTable : MonoBehaviour
     [SerializeField]
     private UIPieceStorageManager _pieceStorage;
 
-    private QMGameplaySystem _questMakingSys;
+    private QuestMakingSystem _questMakingSys;
     private GameEventSystem _eventSystem;
     private Event<GameStateSystem.State> _changeGameStateEvt;
 

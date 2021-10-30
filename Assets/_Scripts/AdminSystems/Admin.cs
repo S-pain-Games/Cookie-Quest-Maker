@@ -8,7 +8,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(CameraSystem))]
 [RequireComponent(typeof(StorySystem))]
-[RequireComponent(typeof(QMGameplaySystem))]
+[RequireComponent(typeof(QuestMakingSystem))]
 [RequireComponent(typeof(CookieMakingSystem))]
 [RequireComponent(typeof(NpcSystem))]
 [RequireComponent(typeof(PopupSystem))]
@@ -47,7 +47,7 @@ public class Admin : MonoBehaviour
 
     public DaySystem daySystem;
     public StorySystem storySystem;
-    public QMGameplaySystem questMakerSystem;
+    public QuestMakingSystem questMakerSystem;
     public CookieMakingSystem cookieMakingSystem;
     public DialogueSystem dialogueSystem;
     public InventorySystem inventorySystem;
@@ -77,7 +77,7 @@ public class Admin : MonoBehaviour
         daySystem = new DaySystem();
         storySystem = GetComponent<StorySystem>();
         dialogueSystem = FindObjectOfType<DialogueSystem>(true); // This might be questionable
-        questMakerSystem = GetComponent<QMGameplaySystem>();
+        questMakerSystem = GetComponent<QuestMakingSystem>();
         cookieMakingSystem = GetComponent<CookieMakingSystem>();
         npcSystem = GetComponent<NpcSystem>();
 
