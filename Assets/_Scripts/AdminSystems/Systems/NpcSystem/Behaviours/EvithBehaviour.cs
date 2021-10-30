@@ -21,9 +21,8 @@ public class EvithBehaviour : MonoBehaviour, IInteractableEntity
 
     public void OnInteract()
     {
-
         _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(
-           new List<string>() { "Well well if it isn't the baker here" },
+           new List<string>() { "Well well if it isn't the baker here", "Would you like too see my evil cookie recipes" },
             "Evith",
             () => { DialogueWithNpcFinishedCallback(); }));
     }

@@ -108,7 +108,7 @@ public class Admin : MonoBehaviour
         storySystem.Initialize(storyDB);
         questMakerSystem.Initialize(storySystem, storyDB);
         cookieMakingSystem.Initialize(cookieDB);
-        npcSystem.Initialize(storyDB, npcDB);
+        npcSystem.Initialize(storyDB, npcDB, gameEventSystem);
         dialogueSystem.Initialize(gameEventSystem);
         townSystem.Initialize(townData);
         calendarSystem.Initialize(calendarData, storyDB);

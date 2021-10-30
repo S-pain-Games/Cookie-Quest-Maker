@@ -12,6 +12,8 @@ public class NpcSystem : MonoBehaviour, ISystemEvents
     public StoryDB _storyDB;
     public NpcDB _npcDB;
 
+    public Event<PopupData> _showPopupCmd;
+
     public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
     {
         commands = new EventSys();
@@ -23,11 +25,12 @@ public class NpcSystem : MonoBehaviour, ISystemEvents
         evt.OnInvoked += PopulateNpcsData;
     }
 
-    public void Initialize(StoryDB storyDb, NpcDB npcDB)
+    public void Initialize(StoryDB storyDb, NpcDB npcDB, GameEventSystem evtSys)
     {
         _storyDB = storyDb;
         _npcDB = npcDB;
 
+        _showPopupCmd = evtSys.GetCommandByName<Event<PopupData>>("popup_sys", "show_popup");
         // DEV ONLY
         PopulateNpcsData();
     }
@@ -96,6 +99,7 @@ public class NpcSystem : MonoBehaviour, ISystemEvents
             else
             {
                 npcData.m_HasToStartAStory = false;
+                _showPopupCmd.Invoke(new PopupData { m_Text = "You have completed all stories, thank you for playing the alpha", m_TimeAlive = 999999999 });
             }
         }
     }
