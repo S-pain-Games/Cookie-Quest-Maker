@@ -10,7 +10,9 @@ using UnityEngine;
 public class NpcSystem : MonoBehaviour, ISystemEvents
 {
     public StoryDB _storyDB;
-    public NpcDB _npcDB;
+
+    [SerializeField]
+    private List<NPCBehaviour> m_NpcBehaviour = new List<NPCBehaviour>();
 
     public Event<PopupData> _showPopupCmd;
 
@@ -25,10 +27,9 @@ public class NpcSystem : MonoBehaviour, ISystemEvents
         evt.OnInvoked += PopulateNpcsData;
     }
 
-    public void Initialize(StoryDB storyDb, NpcDB npcDB, GameEventSystem evtSys)
+    public void Initialize(StoryDB storyDb, GameEventSystem evtSys)
     {
         _storyDB = storyDb;
-        _npcDB = npcDB;
 
         _showPopupCmd = evtSys.GetCommandByName<Event<PopupData>>("popup_sys", "show_popup");
         // DEV ONLY
@@ -52,9 +53,9 @@ public class NpcSystem : MonoBehaviour, ISystemEvents
         List<int> completedStories = SelectCompletedStoriesToTryToShow(completedStoriesIDList, storiesDB);
         List<int> toStartStories = SelectStoriesToTryToStart();
 
-        for (int i = 0; i < _npcDB.m_NpcBehaviour.Count; i++)
+        for (int i = 0; i < m_NpcBehaviour.Count; i++)
         {
-            NPCData npcData = _npcDB.m_NpcBehaviour[i].m_NpcData;
+            NPCData npcData = m_NpcBehaviour[i].m_NpcData;
 
             npcData.m_AlreadySpokenTo = false;
             npcData.m_Dialogue.Clear();

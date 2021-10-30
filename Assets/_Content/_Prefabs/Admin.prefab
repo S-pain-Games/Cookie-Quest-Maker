@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2041105134198296794}
   - component: {fileID: 3180401619160224539}
   - component: {fileID: 5370908183021347996}
-  - component: {fileID: 5158373641497342288}
   - component: {fileID: 2041105134198296799}
   - component: {fileID: 2041105134198296796}
   - component: {fileID: 5950021498337157384}
@@ -54,14 +53,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef87ea3ff5678442b39938ba47c5bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcDB:
-    m_NpcBehaviour:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
   questDBRef: {fileID: 3180401619160224539}
   storyDBRef: {fileID: 5370908183021347996}
-  npcDBRef: {fileID: 5158373641497342288}
   calendarData:
     m_Year: 0
     m_Month: 0
@@ -119,20 +112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StorySelectionUICards: []
---- !u!114 &5158373641497342288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 695f5dd0342ffaa4c8a11d77260311d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_NpcBehaviour:
-  - {fileID: 0}
 --- !u!114 &2041105134198296799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,8 +168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa65cfa82464a874da6a4a73cad70b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _npcDB:
-    m_NpcBehaviour: []
+  m_NpcBehaviour:
+  - {fileID: 0}
 --- !u!114 &120580767631800667
 MonoBehaviour:
   m_ObjectHideFlags: 0

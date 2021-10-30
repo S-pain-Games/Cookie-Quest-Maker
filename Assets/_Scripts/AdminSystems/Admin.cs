@@ -14,7 +14,6 @@ using UnityEngine;
 
 [RequireComponent(typeof(QuestDBUnityReferences))]
 [RequireComponent(typeof(StoryDBUnityReferences))]
-[RequireComponent(typeof(NpcDBUnityReferences))]
 public class Admin : MonoBehaviour
 {
     public static Admin g_Instance;
@@ -28,13 +27,11 @@ public class Admin : MonoBehaviour
     public StoryDB storyDB;
     public QuestDB questDB;
     public CookieDB cookieDB;
-    public NpcDB npcDB;
     public TownDB townData;
     public DialogueDB dialogueDB;
     public DayData dayData;
     [SerializeField] private QuestDBUnityReferences questDBRef;
     [SerializeField] private StoryDBUnityReferences storyDBRef;
-    [SerializeField] private NpcDBUnityReferences npcDBRef;
 
     [HideInInspector] public CalendarData calendarData;
 
@@ -111,7 +108,7 @@ public class Admin : MonoBehaviour
         storySystem.Initialize(storyDB);
         questMakerSystem.Initialize(storySystem, storyDB);
         cookieMakingSystem.Initialize(cookieDB);
-        npcSystem.Initialize(storyDB, npcDB, gameEventSystem);
+        npcSystem.Initialize(storyDB, gameEventSystem);
         dialogueSystem.Initialize(gameEventSystem);
         townSystem.Initialize(townData);
         calendarSystem.Initialize(calendarData, storyDB);
@@ -124,7 +121,6 @@ public class Admin : MonoBehaviour
         storyDB = new StoryDB();
         questDB = new QuestDB();
         cookieDB = new CookieDB();
-        npcDB = new NpcDB();
         dialogueDB = new DialogueDB();
         calendarData = new CalendarData();
         townData = new TownDB();
@@ -136,7 +132,6 @@ public class Admin : MonoBehaviour
         // Get DBs Unity References Adapters
         questDBRef = GetComponent<QuestDBUnityReferences>();
         storyDBRef = GetComponent<StoryDBUnityReferences>();
-        npcDBRef = GetComponent<NpcDBUnityReferences>();
 
         // Load Data
         storyDB.LoadData(storyDBRef);
@@ -144,7 +139,6 @@ public class Admin : MonoBehaviour
         townData.LoadData(storyDB);
         cookieDB.LoadData();
         dialogueDB.LoadData();
-        npcDB.LoadData(npcDBRef);
 
         // Initialize Player Data Containers
         inventoryData.Initialize();
