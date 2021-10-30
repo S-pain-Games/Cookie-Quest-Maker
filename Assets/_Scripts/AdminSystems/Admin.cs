@@ -21,6 +21,9 @@ public class Admin : MonoBehaviour
 
     public GameDataIDs ID = new GameDataIDs();
 
+    /*
+     *  TODO Refactor entire data accessing system after alpha
+     */
     // Game Data Storage
     public StoryDB storyDB;
     public QuestDB questDB;

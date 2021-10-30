@@ -40,7 +40,6 @@ public class StoryDB
         //m_StoriesToStart.Add(ids.test);
         m_StoriesToStart.Add(ids.mayors_problem);
         m_StoriesToStart.Add(ids.out_of_lactose);
-        //m_StoriesToStart.Add(ids.the_birds_and_the_bees);
     }
 
     private void LoadStoryData()
@@ -71,7 +70,12 @@ public class StoryDB
         };
         AddBranchToStoryData_DEPRECATED_DONT_USE(sData, repIds.center_wolf_dead, "Did you hear what happened?? apparently somebody saw some small creatures talk with the wolves at night and just after that they just left.", QPTag.TagType.Convince, 1);
         AddBranchToStoryData_DEPRECATED_DONT_USE(sData, repIds.center_wolf_alive, "Apparently yesterday some small creatures tried to approach the Mayor at night, the mayor obviously ran away screaming help.", QPTag.TagType.Help, 1);
-        AddBranchToStoryData_DEPRECATED_DONT_USE(sData, repIds.center_wolf_dead, "Did you hear that the mayor was attacked just this night?? It is horrible for the town.", QPTag.TagType.Harm, 1);
+        AddBranchToStoryData_DEPRECATED_DONT_USE(sData, repIds.center_wolf_dead, "Did you hear that the mayor was attacked just this night?? It is horrible for the town.", QPTag.TagType.Harm, 3);
+        AddBranchToStoryData(sData,
+                             repIds.center_wolf_dead,
+                             new List<string>() { "Did you hear what happened to the poor mayor?", "He woke up with an incredible head pain", "He says had dreams of little beings slapping his forehead repeatedly" },
+                             QPTag.TagType.Harm,
+                             1);
         s.m_StoryData = sData;
         sData.m_Target = piecesIds.mayor;
         sData.Build();
@@ -83,16 +87,13 @@ public class StoryDB
             m_Title = "Out of Lactose",
             m_IntroductionDialogue = new List<string>() { "Did you hear that Molly is having problems with her cows? apparently they aren't producing any milk, such a shame i wont be able to buy milk for my morning cereal." }
         };
-        AddBranchToStoryData_DEPRECATED_DONT_USE(sData, repIds.center_wolf_dead, "Some weird being were like 'speaking?' or something with the cows? this really sounds crazy but now the cows produce milk so i dont see any problems.", QPTag.TagType.Convince, 1);
-        AddBranchToStoryData_DEPRECATED_DONT_USE(sData, repIds.center_wolf_alive, "Apparently yesterday some small creatures tried to approach Molly at the night.", QPTag.TagType.Help, 1);
+        AddBranchToStoryData_DEPRECATED_DONT_USE(sData, repIds.center_wolf_dead, "Some weird beings were like 'speaking?' or something with the cows? this really sounds crazy but now the cows produce milk so i dont see any problems.", QPTag.TagType.Convince, 1);
+        AddBranchToStoryData_DEPRECATED_DONT_USE(sData, repIds.center_wolf_alive, "Did you know that aparently Molly woke up in the middle of the night hearing weird sounds", QPTag.TagType.Help, 1);
         AddBranchToStoryData_DEPRECATED_DONT_USE(sData, repIds.center_wolf_dead, "Molly's cows were actually kidnaped, she is devastated.", QPTag.TagType.Harm, 1);
         s.m_StoryData = sData;
         sData.m_Target = piecesIds.molly;
         sData.Build();
         m_StoriesDB.Add(ids.out_of_lactose, s);
-
-
-        m_StoriesDB.Add(ids.the_birds_and_the_bees, s);
     }
 
     private void AddBranchToStoryData_DEPRECATED_DONT_USE(StoryData sData, int repercusionID, string result, QPTag.TagType tag, int tagValue)

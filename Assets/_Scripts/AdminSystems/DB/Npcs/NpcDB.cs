@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
 
+[System.Serializable]
 public class NpcDB
 {
     // Populated in the inspector

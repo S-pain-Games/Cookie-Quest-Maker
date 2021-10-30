@@ -30,6 +30,7 @@ public class InventoryData
         m_Storage.Add(ids.baseball_bat);
         m_Storage.Add(ids.brutally);
         m_Storage.Add(ids.kindly);
+        m_Storage.Add("dialogate".GetHashCode());
 
         m_Cookies.Add(new InventoryItem { m_ItemID = ids.plain_cookie, m_Amount = 1 });
 

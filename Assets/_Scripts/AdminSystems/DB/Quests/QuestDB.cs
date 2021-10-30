@@ -89,10 +89,26 @@ namespace CQM.QuestMaking
             qpd = new UIQuestPieceData
             {
                 sprite = null,
+                name = "Talk",
+                description = "Im not sure if somebody will understand a cookie tho"
+            };
+            m_UIQuestPieces.Add("dialogate".GetHashCode(), qpd);
+
+            qpd = new UIQuestPieceData
+            {
+                sprite = null,
                 name = "Brutally",
                 description = "Very Brutally"
             };
             m_UIQuestPieces.Add(pIds.brutally, qpd);
+
+            qpd = new UIQuestPieceData
+            {
+                sprite = null,
+                name = "Kindly",
+                description = "Very Kind"
+            };
+            m_UIQuestPieces.Add(pIds.kindly, qpd);
 
             qpd = new UIQuestPieceData
             {
@@ -132,6 +148,13 @@ namespace CQM.QuestMaking
             qp.m_Type = QuestPiece.PieceType.Action;
             qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Help, m_Value = 1 });
             m_QPiecesDB.Add(pIds.assist, qp);
+
+            qp = new QuestPiece();
+            qp.m_ID = "dialogate".GetHashCode();
+            qp.m_PieceName = "Talk";
+            qp.m_Type = QuestPiece.PieceType.Action;
+            qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Convince, m_Value = 1 });
+            m_QPiecesDB.Add("dialogate".GetHashCode(), qp);
 
             qp = new QuestPiece();
             qp.m_ID = pIds.plain_cookie;

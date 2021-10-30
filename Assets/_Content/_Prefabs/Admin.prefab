@@ -54,6 +54,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef87ea3ff5678442b39938ba47c5bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcDB:
+    m_NpcBehaviour:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   questDBRef: {fileID: 3180401619160224539}
   storyDBRef: {fileID: 5370908183021347996}
   npcDBRef: {fileID: 5158373641497342288}
@@ -98,6 +103,8 @@ MonoBehaviour:
   - m_NameID: molly
     m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
   - m_NameID: plain_cookie_2
+    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  - m_NameID: dialogate
     m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
 --- !u!114 &5370908183021347996
 MonoBehaviour:
@@ -182,6 +189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa65cfa82464a874da6a4a73cad70b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _npcDB:
+    m_NpcBehaviour: []
 --- !u!114 &120580767631800667
 MonoBehaviour:
   m_ObjectHideFlags: 0
