@@ -1105,7 +1105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4945650314530242199, guid: 79ccb0a3311bda649bf088b82c1ae85c, type: 3}
       propertyPath: m_Name
-      value: Hio_Player
+      value: Hio_Player_Night
       objectReference: {fileID: 0}
     - target: {fileID: 4945650314530242200, guid: 79ccb0a3311bda649bf088b82c1ae85c, type: 3}
       propertyPath: m_RootOrder

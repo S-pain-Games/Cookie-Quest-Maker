@@ -55,12 +55,13 @@ public class DialogueSystem : MonoBehaviour, ISystemEvents
             _dialogueBoxContainer.SetActive(false);
             _lineIndex = 0;
 
+            _enableCharMovementCmd.Invoke();
+
             if (_callbackOnDialogueEnd != null)
             {
                 _callbackOnDialogueEnd.Invoke();
                 _callbackOnDialogueEnd = null;
             }
-            _enableCharMovementCmd.Invoke();
         }
     }
 

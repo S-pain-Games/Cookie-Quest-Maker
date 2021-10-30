@@ -19,13 +19,20 @@ public class RecipeShopSystem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textEvilR;
     [SerializeField] private TextMeshProUGUI textPrice;
 
+    private EventVoid _enableCharMovCmd;
+    private EventVoid _disableCharMovCmd;
+
     private void Awake()
     {
         admin = Admin.g_Instance;
+        _enableCharMovCmd = admin.gameEventSystem.GetCommandByName<EventVoid>("character_sys", "enable_movement");
+        _disableCharMovCmd = admin.gameEventSystem.GetCommandByName<EventVoid>("character_sys", "disable_movement");
     }
 
     private void OnEnable()
     {
+        _disableCharMovCmd.Invoke();
+
         if (currentRecipes.Count == 0)
         {
             List<RecipeData> recipes = admin.cookieDB.m_RecipeDataList;
@@ -50,6 +57,7 @@ public class RecipeShopSystem : MonoBehaviour
 
     private void OnDisable()
     {
+        _enableCharMovCmd.Invoke();
         foreach (GameObject r in currentRecipes)
         {
             r.GetComponent<RecipeShopUI>().OnSelectRecipe -= SelectRecipe;
@@ -65,25 +73,25 @@ public class RecipeShopSystem : MonoBehaviour
     //TODO: Update cookie making available recipes
     public void BuyRecipe()
     {
-        if(selectedRecipe != -1)
+        if (selectedRecipe != -1)
         {
             RecipeData recipe;
             admin.cookieDB.m_RecipeDataDB.TryGetValue(selectedRecipe, out recipe);
 
-            if(recipe != null)
+            if (recipe != null)
             {
-                if(!recipe.bought)
+                if (!recipe.bought)
                 {
                     if (recipe.m_Reputation == Reputation.GoodCookieReputation)
                     {
                         bool bought = admin.inventorySystem.RemoveGoodCookieRep(recipe.price);
-                        if(bought)
+                        if (bought)
                         {
                             admin.cookieDB.AddBoughtCookie(recipe.m_CookieID, recipe);
                             admin.cookieMakingSystem.BuyRecipe();
                             UpdateTexts();
                         }
-                        
+
                     }
                     else if (recipe.m_Reputation == Reputation.EvilCookieReputation)
                     {
@@ -93,7 +101,7 @@ public class RecipeShopSystem : MonoBehaviour
                             admin.cookieDB.AddBoughtCookie(recipe.m_CookieID, recipe);
                             admin.cookieMakingSystem.BuyRecipe();
                             UpdateTexts();
-                        } 
+                        }
                     }
                 }
             }
