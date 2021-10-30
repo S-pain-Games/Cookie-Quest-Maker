@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DaySystem : ISystemEvents
 {
-    private GameEventSystem _eventSystem;
     private DayData _dayData;
 
     // Own Callbacks
@@ -30,19 +29,15 @@ public class DaySystem : ISystemEvents
         evt.OnInvoked += StartNewDay;
     }
 
-    public void Initialize(GameEventSystem eventSystem, DayData dayData)
+    public void Initialize(GameEventSystem evtSys, DayData dayData)
     {
-        // Setup Callbacks and Commands
-        var ids = Admin.g_Instance.ID.events;
-        _eventSystem = eventSystem;
-
         // Subscribe to Callbacks
-        Event<int> evt = _eventSystem.GetCallback<Event<int>>("story_sys".GetHashCode(), "story_completed".GetHashCode());
+        Event<int> evt = evtSys.GetCallback<Event<int>>("story_sys".GetHashCode(), "story_completed".GetHashCode());
         evt.OnInvoked += StoryCompletedCallback;
 
         // Initialize external Commands
-        _setGameStateCommand = _eventSystem.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
-        _populateNpcsCommand = _eventSystem.GetCommandByName<EventVoid>("npc_sys", "cmd_populate_npcs");
+        _setGameStateCommand = evtSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
+        _populateNpcsCommand = evtSys.GetCommandByName<EventVoid>("npc_sys", "cmd_populate_npcs");
 
         _dayData = dayData;
     }

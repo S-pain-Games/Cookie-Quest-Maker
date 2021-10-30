@@ -7,7 +7,6 @@ public class GameDataIDs
     public readonly IDQuestPieces pieces = new IDQuestPieces();
     public readonly IDLocalization localization = new IDLocalization();
     public readonly IDTownLocations townLocations = new IDTownLocations();
-    public readonly IDEvents events = new IDEvents();
 }
 
 public class IDsRepercusions
@@ -62,38 +61,4 @@ public class IDLocalization
 public class IDTownLocations
 {
     public readonly int town_center = "town_center".GetHashCode();
-}
-
-public class IDEvents
-{
-    // Story System
-    // Callbacks
-    public readonly int on_story_started = "on_story_started".GetHashCode();
-    public readonly int on_story_completed = "on_story_completed".GetHashCode();
-    public readonly int on_story_finalized = "on_story_finalized".GetHashCode();
-    public readonly int on_all_stories_completed = "on_all_stories_completed".GetHashCode();
-    public readonly int on_all_stories_finalized = "on_all_stories_finalized".GetHashCode();
-
-    public readonly int on_daily_stories_completed = "on_daily_stories_completed".GetHashCode();
-    // Commands
-    public readonly int start_story = "start_story".GetHashCode();
-    public readonly int finalize_story = "finalize_story".GetHashCode();
-
-
-    // Day system
-    // Callbacks
-    public readonly int on_day_started = "day_started".GetHashCode();
-    public readonly int on_day_ended = "day_ended".GetHashCode();
-    // Commands
-    public readonly int start_new_day = "start_new_day".GetHashCode();
-
-
-    // Dialogue System
-    // Commands
-    public readonly int show_dialogue = "show_dialogue".GetHashCode();
-
-
-    // Game State System
-    // Commands
-    public readonly int set_game_state = "set_game_state".GetHashCode();
 }
