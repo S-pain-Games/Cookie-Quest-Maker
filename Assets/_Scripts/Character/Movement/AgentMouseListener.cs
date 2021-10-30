@@ -16,6 +16,9 @@ public class AgentMouseListener : MonoBehaviour
     private EventVoid _onBakeryStateEnter;
     private EventVoid _onBakeryStateExit;
 
+    private EventVoid _enableCharacterMovement;
+    private EventVoid _disableCharacterMovement;
+
     private CharacterNavMeshAgentHandler _agent;
 
     private void Awake()
