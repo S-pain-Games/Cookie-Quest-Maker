@@ -8,15 +8,14 @@ using UnityEngine.UI;
 public class NextDayButton : MonoBehaviour
 {
     private Button _button;
-    private GameEventSystem _eventSystem;
     private EventVoid _startNewDayCommand;
 
     private void Awake()
     {
-        var ids = Admin.g_Instance.ID.events;
         _button = GetComponent<Button>();
-        _eventSystem = Admin.g_Instance.gameEventSystem;
-        _eventSystem.DaySystemCommands.GetEvent(ids.start_new_day, out _startNewDayCommand);
+
+        var evtSys = Admin.g_Instance.gameEventSystem;
+        _startNewDayCommand = evtSys.GetCommandByName<EventVoid>("day_sys", "start_new_day");
     }
 
     private void OnEnable()

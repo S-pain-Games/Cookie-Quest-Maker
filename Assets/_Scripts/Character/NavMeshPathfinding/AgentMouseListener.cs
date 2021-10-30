@@ -13,18 +13,18 @@ public class AgentMouseListener : MonoBehaviour
     [SerializeField] private string _enableCallbackID;
     [SerializeField] private string _disableCallbackID;
 
-    private CharacterNavMeshAgentHandler _agent;
-
-    private GameEventSystem _evtSys;
     private EventVoid _onBakeryStateEnter;
     private EventVoid _onBakeryStateExit;
+
+    private CharacterNavMeshAgentHandler _agent;
 
     private void Awake()
     {
         _agent = GetComponent<CharacterNavMeshAgentHandler>();
-        _evtSys = Admin.g_Instance.gameEventSystem;
-        _evtSys.GameStateCallbacks.GetEvent(_enableCallbackID.GetHashCode(), out _onBakeryStateEnter);
-        _evtSys.GameStateCallbacks.GetEvent(_disableCallbackID.GetHashCode(), out _onBakeryStateExit);
+        var evtSys = Admin.g_Instance.gameEventSystem;
+
+        _onBakeryStateEnter = evtSys.GetCallbackByName<EventVoid>("game_state_sys", _enableCallbackID);
+        _onBakeryStateExit = evtSys.GetCallbackByName<EventVoid>("game_state_sys", _disableCallbackID);
     }
 
     private void OnEnable()

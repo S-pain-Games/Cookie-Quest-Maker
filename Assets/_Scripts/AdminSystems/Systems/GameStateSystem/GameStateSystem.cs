@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameStateSystem : MonoBehaviour
+public class GameStateSystem : MonoBehaviour, ISystemEvents
 {
     private Dictionary<State, GameState> m_States = new Dictionary<State, GameState>();
     private GameState m_State;
@@ -77,31 +77,6 @@ public class GameStateSystem : MonoBehaviour
 
     public void Initialize(GameEventSystem evtSys)
     {
-        var gs = new GameState(evtSys.GameStateCallbacks.AddEvent("on_bakery_enter".GetHashCode()),
-            evtSys.GameStateCallbacks.AddEvent("on_bakery_exit".GetHashCode()),
-            m_Bakery);
-        m_States.Add(State.Bakery, gs);
-
-        gs = new GameState(evtSys.GameStateCallbacks.AddEvent("on_main_menu_enter".GetHashCode()),
-            evtSys.GameStateCallbacks.AddEvent("on_main_menu_exit".GetHashCode()),
-            m_MainMenu);
-        m_States.Add(State.MainMenu, gs);
-
-        gs = new GameState(evtSys.GameStateCallbacks.AddEvent("on_quest_making_enter".GetHashCode()),
-            evtSys.GameStateCallbacks.AddEvent("on_quest_making_exit".GetHashCode()),
-            m_QuestMaking);
-        m_States.Add(State.QuestMaking, gs);
-
-        gs = new GameState(evtSys.GameStateCallbacks.AddEvent("on_cookie_making_enter".GetHashCode()),
-            evtSys.GameStateCallbacks.AddEvent("on_cookie_making_exit".GetHashCode()),
-            m_CookieMaking);
-        m_States.Add(State.CookieMaking, gs);
-
-        gs = new GameState(evtSys.GameStateCallbacks.AddEvent("on_bakery_night_enter".GetHashCode()),
-            evtSys.GameStateCallbacks.AddEvent("on_bakery_night_exit".GetHashCode()),
-            m_BakeryNight);
-        m_States.Add(State.BakeryNight, gs);
-
         // Disable All States Except for the starting one (Maybe Bug prone?)
         foreach (GameState state in m_States.Values)
         {
@@ -120,5 +95,40 @@ public class GameStateSystem : MonoBehaviour
         m_State.OnStateExit();
         m_State = m_States[state];
         m_State.OnStateEnter();
+    }
+
+    public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+    {
+        callbacks = new EventSys();
+        commands = new EventSys();
+        sysID = "game_state_sys".GetHashCode();
+
+        var gs = new GameState(callbacks.AddEvent("bakery_enter".GetHashCode()),
+            callbacks.AddEvent("bakery_exit".GetHashCode()),
+            m_Bakery);
+        m_States.Add(State.Bakery, gs);
+
+        gs = new GameState(callbacks.AddEvent("main_menu_enter".GetHashCode()),
+            callbacks.AddEvent("main_menu_exit".GetHashCode()),
+            m_MainMenu);
+        m_States.Add(State.MainMenu, gs);
+
+        gs = new GameState(callbacks.AddEvent("quest_making_enter".GetHashCode()),
+            callbacks.AddEvent("quest_making_exit".GetHashCode()),
+            m_QuestMaking);
+        m_States.Add(State.QuestMaking, gs);
+
+        gs = new GameState(callbacks.AddEvent("cookie_making_enter".GetHashCode()),
+            callbacks.AddEvent("cookie_making_exit".GetHashCode()),
+            m_CookieMaking);
+        m_States.Add(State.CookieMaking, gs);
+
+        gs = new GameState(callbacks.AddEvent("bakery_night_enter".GetHashCode()),
+            callbacks.AddEvent("bakery_night_exit".GetHashCode()),
+            m_BakeryNight);
+        m_States.Add(State.BakeryNight, gs);
+
+        var evt = commands.AddEvent<State>("set_game_state".GetHashCode());
+        evt.OnInvoked += SetState;
     }
 }

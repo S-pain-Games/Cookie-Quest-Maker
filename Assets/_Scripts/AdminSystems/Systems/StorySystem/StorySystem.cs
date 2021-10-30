@@ -6,11 +6,10 @@ using System.Collections.Generic;
 
 // Handles all the ongoing/completed stories
 // It is responsable of starting and finishing all the stories
-public class StorySystem : MonoBehaviour
+public class StorySystem : MonoBehaviour, ISystemEvents
 {
     // Initialized Through Admin
     private StoryDB _storyDB;
-    private GameEventSystem _eventSystem;
     private QuestSystem _questSystem = new QuestSystem(); // This could be refactored
 
     private Event<int> OnStoryStarted;
@@ -19,17 +18,27 @@ public class StorySystem : MonoBehaviour
     private EventVoid OnAllStoriesCompleted;
     private EventVoid OnAllStoriesFinalized;
 
-    public void Initialize(StoryDB storyDb, GameEventSystem evtSystem)
+    public void Initialize(StoryDB storyDb)
     {
-        var evtIds = Admin.g_Instance.ID.events;
-
         _storyDB = storyDb;
-        _eventSystem = evtSystem;
-        _eventSystem.StoryCallbacks.GetEvent(evtIds.on_story_started, out OnStoryStarted);
-        _eventSystem.StoryCallbacks.GetEvent(evtIds.on_story_completed, out OnStoryCompleted);
-        _eventSystem.StoryCallbacks.GetEvent(evtIds.on_story_finalized, out OnStoryFinalized);
-        _eventSystem.StoryCallbacks.GetEvent(evtIds.on_all_stories_completed, out OnAllStoriesCompleted);
-        _eventSystem.StoryCallbacks.GetEvent(evtIds.on_all_stories_finalized, out OnAllStoriesFinalized);
+    }
+
+    public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+    {
+        commands = new EventSys();
+        callbacks = new EventSys();
+        sysID = "story_sys".GetHashCode();
+
+        OnStoryStarted = callbacks.AddEvent<int>("story_started".GetHashCode());
+        OnStoryCompleted = callbacks.AddEvent<int>("story_completed".GetHashCode());
+        OnStoryFinalized = callbacks.AddEvent<int>("story_finalized".GetHashCode());
+        OnAllStoriesCompleted = callbacks.AddEvent("all_stories_completed".GetHashCode());
+        OnAllStoriesFinalized = callbacks.AddEvent("all_stories_finalized".GetHashCode());
+
+        var evt = commands.AddEvent<int>("start_story".GetHashCode());
+        evt.OnInvoked += StartStory;
+        evt = commands.AddEvent<int>("finalize_story".GetHashCode());
+        evt.OnInvoked += FinalizeStory;
     }
 
     // Called by some in-game conversation that starts
@@ -81,7 +90,7 @@ public class StorySystem : MonoBehaviour
 
     // This is called when the Dialogue System or the newspaper shows
     // the player the "Ending"(text) of the story
-    public void FinalizeStory(int storyId)
+    private void FinalizeStory(int storyId)
     {
         _storyDB.m_CompletedStories.Remove(storyId);
         _storyDB.m_FinalizedStories.Add(storyId);

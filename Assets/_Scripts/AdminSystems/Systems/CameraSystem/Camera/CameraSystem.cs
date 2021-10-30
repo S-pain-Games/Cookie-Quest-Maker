@@ -4,22 +4,26 @@ using UnityEngine;
 using Cinemachine;
 using System;
 
-public class CameraSystem : MonoBehaviour
+public class CameraSystem : MonoBehaviour, ISystemEvents
 {
     [SerializeField]
     private CinemachineVirtualCamera _mainCam;
 
-    private GameEventSystem _evtSys;
-    private Event<Transform> _retargetCommand;
-
-    public void Initialize(GameEventSystem evtSys)
+    public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
     {
-        _evtSys = evtSys;
-        _evtSys.CameraSystemCommands.GetEvent("retarget_cmd".GetHashCode(), out _retargetCommand);
-        _retargetCommand.OnInvoked += Retarget;
+        commands = new EventSys();
+        callbacks = new EventSys();
+        sysID = "camera_sys".GetHashCode();
+
+        var evt = commands.AddEvent<Transform>("retarget_cmd".GetHashCode());
+        evt.OnInvoked += Retarget;
     }
 
-    public void Retarget(Transform target)
+    public void Initialize()
+    {
+    }
+
+    private void Retarget(Transform target)
     {
         _mainCam.Follow = target;
     }

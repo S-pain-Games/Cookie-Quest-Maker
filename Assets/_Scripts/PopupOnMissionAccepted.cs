@@ -11,8 +11,8 @@ public class PopupOnMissionAccepted : MonoBehaviour
     private void Awake()
     {
         var evtSys = Admin.g_Instance.gameEventSystem;
-        evtSys.StoryCallbacks.GetEvent("on_story_started".GetHashCode(), out _storyStartedCallback);
-        evtSys.PopupSystemCommands.GetEvent("show_popup".GetHashCode(), out _showPopupCommand);
+        _storyStartedCallback = evtSys.GetCallbackByName<Event<int>>("story_sys", "story_started");
+        _showPopupCommand = evtSys.GetCommandByName<Event<PopupData>>("popup_sys", "show_popup");
     }
 
     private void OnEnable()

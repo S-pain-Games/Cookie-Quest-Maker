@@ -19,14 +19,14 @@ public class UIQuestMakerTable : MonoBehaviour
     private UIPieceStorageManager _pieceStorage;
 
     private QuestMakingSystem _questMakingSys;
-    private GameEventSystem _eventSystem;
-    private Event<GameStateSystem.State> _changeGameStateEvt;
+    private GameEventSystem evtSys;
+    private Event<GameStateSystem.State> _changeGameStateCmd;
 
     private void Awake()
     {
         _questMakingSys = Admin.g_Instance.questMakerSystem;
-        _eventSystem = Admin.g_Instance.gameEventSystem;
-        _eventSystem.GameStateSystemMessaging.GetEvent("change_state".GetHashCode(), out _changeGameStateEvt);
+        evtSys = Admin.g_Instance.gameEventSystem;
+        _changeGameStateCmd = evtSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
     }
 
     private void OnEnable()
@@ -72,7 +72,7 @@ public class UIQuestMakerTable : MonoBehaviour
         if (_questMakingSys.TryFinishMakingQuest())
         {
             _questBuilding.ClearAllPieces();
-            _changeGameStateEvt.Invoke(GameStateSystem.State.Bakery);
+            _changeGameStateCmd.Invoke(GameStateSystem.State.Bakery);
         }
     }
 

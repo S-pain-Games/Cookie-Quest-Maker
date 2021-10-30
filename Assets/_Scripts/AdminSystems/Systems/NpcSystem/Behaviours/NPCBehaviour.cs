@@ -7,19 +7,16 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
 
     private bool m_Interacting = false;
 
-    private GameEventSystem _eventSystem;
-    private Event<GameEventSystem.ShowDialogueEvtArgs> showDialogueEvt;
-    private Event<int> startStoryEvt;
+    private Event<ShowDialogueEvtArgs> _showDialogueCmd;
+    private Event<int> _startStoryCmd;
     private Event<int> finalizeStoryEvt;
 
     private void Awake()
     {
-        _eventSystem = Admin.g_Instance.gameEventSystem;
-
-        var evtIds = Admin.g_Instance.ID.events;
-        _eventSystem.DialogueSystemMessaging.GetEvent(evtIds.show_dialogue, out showDialogueEvt);
-        _eventSystem.StorySystemMessaging.GetEvent(evtIds.start_story, out startStoryEvt);
-        _eventSystem.StorySystemMessaging.GetEvent(evtIds.finalize_story, out finalizeStoryEvt);
+        var evtSys = Admin.g_Instance.gameEventSystem;
+        _showDialogueCmd = evtSys.GetCommandByName<Event<ShowDialogueEvtArgs>>("dialogue_sys", "show_dialogue");
+        _startStoryCmd = evtSys.GetCommandByName<Event<int>>("story_sys", "start_story");
+        finalizeStoryEvt = evtSys.GetCommandByName<Event<int>>("story_sys", "finalize_story");
     }
 
     public void OnInteract()
@@ -29,7 +26,7 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
         m_Interacting = true;
         if (!m_NpcData.m_AlreadySpokenTo)
         {
-            showDialogueEvt.Invoke(new GameEventSystem.ShowDialogueEvtArgs(
+            _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(
                 m_NpcData.m_Dialogue,
                 "Mamarrachus",
                 () => { DialogueWithNpcFinishedCallback(); }));
@@ -38,7 +35,7 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
         }
         else
         {
-            showDialogueEvt.Invoke(new GameEventSystem.ShowDialogueEvtArgs(
+            _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(
                new List<string> { m_NpcData.m_AlreadySpokenToDialogue[Random.Range(0, m_NpcData.m_AlreadySpokenToDialogue.Count)] }, // TODO: Fix this atrocity
                "Mamarrachus",
                () => m_Interacting = false));
@@ -53,7 +50,7 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
         {
             // Please do not write lines this horrible in production code, this is only for debugging
             Debug.Log("Started Story : " + Admin.g_Instance.storyDB.m_StoriesDB[m_NpcData.m_StoryIDToStartOnInteract].m_StoryData.m_Title);
-            startStoryEvt.Invoke(m_NpcData.m_StoryIDToStartOnInteract);
+            _startStoryCmd.Invoke(m_NpcData.m_StoryIDToStartOnInteract);
         }
         m_Interacting = false;
     }

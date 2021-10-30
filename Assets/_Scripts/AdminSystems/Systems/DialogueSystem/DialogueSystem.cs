@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using System;
 
-public class DialogueSystem : MonoBehaviour
+public class DialogueSystem : MonoBehaviour, ISystemEvents
 {
     [SerializeField]
     private GameObject _dialogueBoxContainer;
@@ -50,6 +50,31 @@ public class DialogueSystem : MonoBehaviour
                 _callbackOnDialogueEnd = null;
             }
         }
+    }
+
+    public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+    {
+        commands = new EventSys();
+        callbacks = new EventSys();
+        sysID = "dialogue_sys".GetHashCode();
+
+        // Commands
+        var evt = commands.AddEvent<ShowDialogueEvtArgs>("show_dialogue".GetHashCode());
+        evt.OnInvoked += (args) => ShowDialogue(args.dialogue, args.charName, args.callback);
+    }
+}
+
+public struct ShowDialogueEvtArgs
+{
+    public List<string> dialogue;
+    public string charName;
+    public Action callback;
+
+    public ShowDialogueEvtArgs(List<string> dialogue, string charName, Action callback)
+    {
+        this.dialogue = dialogue;
+        this.charName = charName;
+        this.callback = callback;
     }
 }
 

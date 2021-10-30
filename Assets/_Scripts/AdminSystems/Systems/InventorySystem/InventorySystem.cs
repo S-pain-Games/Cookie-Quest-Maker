@@ -2,16 +2,28 @@
 using System.Collections;
 using UnityEngine;
 
-public class InventorySystem
+public class InventorySystem : ISystemEvents
 {
     private InventoryData _inventoryData;
+
+    public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+    {
+        commands = new EventSys();
+        callbacks = new EventSys();
+        sysID = "inventory_sys".GetHashCode();
+
+        var evt = commands.AddEvent<ItemData>("add_cookie".GetHashCode());
+        evt.OnInvoked += (args) => AddCookieToInventory(args.m_ItemID, args.m_Amount);
+        evt = commands.AddEvent<ItemData>("remove_cookie".GetHashCode());
+        evt.OnInvoked += (args) => RemoveCookieFromInventory(args.m_ItemID, args.m_Amount);
+    }
 
     public void Initialize(InventoryData data)
     {
         _inventoryData = data;
     }
 
-    public void AddCookieToInventory(int cookieID, int amount)
+    private void AddCookieToInventory(int cookieID, int amount)
     {
         InventoryItem item = _inventoryData.m_Cookies.Find(i => i.m_ItemID == cookieID);
         if (item != null)
@@ -20,7 +32,7 @@ public class InventorySystem
             _inventoryData.m_Cookies.Add(new InventoryItem(cookieID, amount));
     }
 
-    public void RemoveCookieFromInventory(int cookieID, int amount)
+    private void RemoveCookieFromInventory(int cookieID, int amount)
     {
         InventoryItem item = _inventoryData.m_Cookies.Find(i => i.m_ItemID == cookieID);
         if (item != null)

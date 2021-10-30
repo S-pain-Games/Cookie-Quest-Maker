@@ -75,7 +75,8 @@ namespace CQM.QuestMaking.UI
                 // TODO: >:[
                 if (_questPieces[i].Piece.m_Type == QuestPiece.PieceType.Cookie)
                 {
-                    Admin.g_Instance.gameEventSystem.InventorySystemCommands.GetEvent("add_cookie".GetHashCode(), out Event<ItemData> evt);
+                    var evtSys = Admin.g_Instance.gameEventSystem;
+                    var evt = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_cookie");
                     evt.Invoke(new ItemData(_questPieces[i].Piece.m_ID, 1));
                 }
 
@@ -101,7 +102,8 @@ namespace CQM.QuestMaking.UI
                     // TODO: oh god
                     if (_questPieces[i].Piece.m_Type == QuestPiece.PieceType.Cookie)
                     {
-                        Admin.g_Instance.gameEventSystem.InventorySystemCommands.GetEvent("add_cookie".GetHashCode(), out Event<ItemData> evt);
+                        var evtSys = Admin.g_Instance.gameEventSystem;
+                        var evt = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_cookie");
                         evt.Invoke(new ItemData(_questPieces[i].Piece.m_ID, 1));
                     }
                     break;
@@ -111,7 +113,8 @@ namespace CQM.QuestMaking.UI
             // TODO: oh lord
             if (questPiece.m_Type == QuestPiece.PieceType.Cookie)
             {
-                Admin.g_Instance.gameEventSystem.InventorySystemCommands.GetEvent("remove_cookie".GetHashCode(), out Event<ItemData> evt);
+                var evtSys = Admin.g_Instance.gameEventSystem;
+                var evt = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "remove_cookie");
                 evt.Invoke(new ItemData(pieceID, 1));
             }
 

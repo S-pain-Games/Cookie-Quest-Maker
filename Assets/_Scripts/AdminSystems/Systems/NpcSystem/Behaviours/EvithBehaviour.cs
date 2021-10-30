@@ -5,10 +5,7 @@ using UnityEngine.Events;
 
 public class EvithBehaviour : MonoBehaviour, IInteractableEntity
 {
-    private GameEventSystem _eventSystem;
-    private Event<GameEventSystem.ShowDialogueEvtArgs> showDialogueEvt;
-    private Event<int> startStoryEvt;
-    private Event<int> finalizeStoryEvt;
+    private Event<ShowDialogueEvtArgs> _showDialogueCmd;
 
     // HACK
     // HACK
@@ -18,18 +15,14 @@ public class EvithBehaviour : MonoBehaviour, IInteractableEntity
 
     private void Awake()
     {
-        _eventSystem = Admin.g_Instance.gameEventSystem;
-
-        var evtIds = Admin.g_Instance.ID.events;
-        _eventSystem.DialogueSystemMessaging.GetEvent(evtIds.show_dialogue, out showDialogueEvt);
-        _eventSystem.StorySystemMessaging.GetEvent(evtIds.start_story, out startStoryEvt);
-        _eventSystem.StorySystemMessaging.GetEvent(evtIds.finalize_story, out finalizeStoryEvt);
+        var evtSys = Admin.g_Instance.gameEventSystem;
+        _showDialogueCmd = evtSys.GetCommandByName<Event<ShowDialogueEvtArgs>>("dialogue_sys", "show_dialogue");
     }
 
     public void OnInteract()
     {
 
-        showDialogueEvt.Invoke(new GameEventSystem.ShowDialogueEvtArgs(
+        _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(
            new List<string>() { "Well well if it isn't the baker here" },
             "Evith",
             () => { DialogueWithNpcFinishedCallback(); }));

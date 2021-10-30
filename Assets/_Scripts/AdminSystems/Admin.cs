@@ -67,12 +67,16 @@ public class Admin : MonoBehaviour
     private void Initialize()
     {
         // INITIALIZATION ORDER MATTERS
+        InitializeData();
+        InitializeSystems();
+    }
 
+    private void InitializeSystems()
+    {
         // Get or create Game Systems
         gameEventSystem = new GameEventSystem();
         gameStateSystem = GetComponent<GameStateSystem>();
         localizationSystem = GetComponent<LocalizationSystem>();
-
         camSystem = GetComponent<CameraSystem>();
         daySystem = new DaySystem();
         storySystem = GetComponent<StorySystem>();
@@ -80,12 +84,36 @@ public class Admin : MonoBehaviour
         questMakerSystem = GetComponent<QuestMakingSystem>();
         cookieMakingSystem = GetComponent<CookieMakingSystem>();
         npcSystem = GetComponent<NpcSystem>();
-
         townSystem = new TownSystem();
         calendarSystem = new CalendarSystem();
         inventorySystem = new InventorySystem();
         popupSystem = GetComponent<PopupSystem>();
 
+        // Initialize Events System
+        gameEventSystem.RegisterSystem(gameStateSystem);
+        gameEventSystem.RegisterSystem(camSystem);
+        gameEventSystem.RegisterSystem(daySystem);
+        gameEventSystem.RegisterSystem(storySystem);
+        gameEventSystem.RegisterSystem(dialogueSystem);
+        gameEventSystem.RegisterSystem(npcSystem);
+        gameEventSystem.RegisterSystem(inventorySystem);
+        gameEventSystem.RegisterSystem(popupSystem);
+        gameEventSystem.Initialize();
+
+        gameStateSystem.Initialize(gameEventSystem);
+        localizationSystem.LoadData();
+        daySystem.Initialize(gameEventSystem, dayData);
+        storySystem.Initialize(storyDB);
+        questMakerSystem.Initialize(storySystem, storyDB);
+        cookieMakingSystem.Initialize(cookieDB);
+        npcSystem.Initialize(storyDB, npcDB);
+        townSystem.Initialize(townData);
+        calendarSystem.Initialize(calendarData, storyDB);
+        inventorySystem.Initialize(inventoryData);
+    }
+
+    private void InitializeData()
+    {
         // Create DBs and data objects
         storyDB = new StoryDB();
         questDB = new QuestDB();
@@ -111,22 +139,6 @@ public class Admin : MonoBehaviour
         cookieDB.LoadData();
         dialogueDB.LoadData();
         npcDB.LoadData(npcDBRef);
-
-        // Initialize Game Systems
-        gameEventSystem.Initialize(this);
-        gameStateSystem.Initialize(gameEventSystem);
-        localizationSystem.LoadData();
-
-        camSystem.Initialize(gameEventSystem);
-        daySystem.Initialize(gameEventSystem, dayData);
-        storySystem.Initialize(storyDB, gameEventSystem);
-        questMakerSystem.Initialize(storySystem, storyDB);
-        cookieMakingSystem.Initialize(cookieDB);
-        npcSystem.Initialize(storyDB, npcDB);
-
-        townSystem.Initialize(townData);
-        calendarSystem.Initialize(calendarData, storyDB);
-        inventorySystem.Initialize(inventoryData);
 
         // Initialize Player Data Containers
         inventoryData.Initialize();

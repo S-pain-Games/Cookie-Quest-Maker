@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class SetCamTargetOnEnable : MonoBehaviour
 {
-    private GameEventSystem _evtSys;
     private Event<Transform> _retargetCommand;
 
     private void Awake()
     {
-        _evtSys = Admin.g_Instance.gameEventSystem;
-        _evtSys.CameraSystemCommands.GetEvent("retarget_cmd".GetHashCode(), out _retargetCommand);
+        var _evtSys = Admin.g_Instance.gameEventSystem;
+        _retargetCommand = _evtSys.GetCommandByName<Event<Transform>>("camera_sys", "retarget_cmd");
     }
 
     private void OnEnable()

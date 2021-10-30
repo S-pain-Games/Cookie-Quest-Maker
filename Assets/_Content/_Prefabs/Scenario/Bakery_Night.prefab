@@ -1145,11 +1145,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8441935883364366357, guid: 79ccb0a3311bda649bf088b82c1ae85c, type: 3}
       propertyPath: _enableCallbackID
-      value: on_bakery_night_enter
+      value: bakery_night_enter
       objectReference: {fileID: 0}
     - target: {fileID: 8441935883364366357, guid: 79ccb0a3311bda649bf088b82c1ae85c, type: 3}
       propertyPath: _disableCallbackID
-      value: on_bakery_night_exit
+      value: bakery_night_exit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79ccb0a3311bda649bf088b82c1ae85c, type: 3}

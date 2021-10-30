@@ -7,10 +7,21 @@ using UnityEngine;
 // are always in the tavern and "Random" NPCs that just say
 // random facts or sneaky game tips like
 // (I've heard there will be a surplus of X ingredient in 2 days)
-public class NpcSystem : MonoBehaviour
+public class NpcSystem : MonoBehaviour, ISystemEvents
 {
     public StoryDB _storyDB;
     public NpcDB _npcDB;
+
+    public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+    {
+        commands = new EventSys();
+        callbacks = new EventSys();
+        sysID = "npc_sys".GetHashCode();
+
+        // Commands
+        var evt = commands.AddEvent("cmd_populate_npcs".GetHashCode());
+        evt.OnInvoked += PopulateNpcsData;
+    }
 
     public void Initialize(StoryDB storyDb, NpcDB npcDB)
     {

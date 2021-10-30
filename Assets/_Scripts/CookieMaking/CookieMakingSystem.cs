@@ -20,7 +20,7 @@ public class CookieMakingSystem : MonoBehaviour
     {
         _cookieDB = cookieDB;
         var evtSys = Admin.g_Instance.gameEventSystem;
-        evtSys.InventorySystemCommands.GetEvent("add_cookie".GetHashCode(), out _addCookieCommand);
+        _addCookieCommand = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_cookie");
     }
 
     public void SelectRecipe(int recipeId)

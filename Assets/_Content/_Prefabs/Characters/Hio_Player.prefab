@@ -123,8 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enabledListener: 0
-  _enableCallbackID: on_bakery_enter
-  _disableCallbackID: on_bakery_exit
+  _enableCallbackID: bakery_enter
+  _disableCallbackID: bakery_exit
 --- !u!114 &3354668487230449059
 MonoBehaviour:
   m_ObjectHideFlags: 0

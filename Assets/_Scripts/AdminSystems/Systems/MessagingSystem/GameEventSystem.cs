@@ -6,118 +6,52 @@ using UnityEngine;
 
 public class GameEventSystem
 {
-    public struct ShowDialogueEvtArgs
-    {
-        public List<string> dialogue;
-        public string charName;
-        public Action callback;
+    private Dictionary<int, EventSys> m_Commands = new Dictionary<int, EventSys>();
+    private Dictionary<int, EventSys> m_Callbacks = new Dictionary<int, EventSys>();
 
-        public ShowDialogueEvtArgs(List<string> dialogue, string charName, Action callback)
+    private List<ISystemEvents> m_RegisteredSystems = new List<ISystemEvents>();
+
+    public void RegisterSystem(ISystemEvents sys)
+    {
+        m_RegisteredSystems.Add(sys);
+    }
+
+    public void Initialize()
+    {
+        for (int i = 0; i < m_RegisteredSystems.Count; i++)
         {
-            this.dialogue = dialogue;
-            this.charName = charName;
-            this.callback = callback;
+            m_RegisteredSystems[i].RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks);
+            m_Commands.Add(sysID, commands);
+            m_Callbacks.Add(sysID, callbacks);
         }
     }
 
-    // COMMANDS TO SYSTEMS
-    public EventSys StorySystemMessaging = new EventSys();
-    public EventSys DialogueSystemMessaging = new EventSys();
-    public EventSys GameStateSystemMessaging = new EventSys();
-    public EventSys DaySystemCommands = new EventSys();
-    public EventSys NpcSystemCommands = new EventSys();
-    public EventSys CameraSystemCommands = new EventSys();
-    public EventSys InventorySystemCommands = new EventSys();
-    public EventSys PopupSystemCommands = new EventSys();
-
-    // CALLBACKS FROM SYSTEMS
-    public EventSys StoryCallbacks = new EventSys();
-    public EventSys DayCallbacks = new EventSys();
-    public EventSys NpcCallbacks = new EventSys();
-    public EventSys GameStateCallbacks = new EventSys();
-
-    public void Initialize(Admin admin)
+    public T GetCommand<T>(int sysID, int cmdID) where T : class
     {
-        var ids = admin.ID.events;
-        StorySystemEvents(ids, admin.storySystem);
-        DialogueSystemEvents(ids, admin.dialogueSystem);
-        GameStateSystemEvents(ids, admin.gameStateSystem);
-        DaySystemEvents(ids, admin.daySystem);
-        NpcSystemEvents(ids, admin.npcSystem);
-        CameraSystemEvents(ids, admin.camSystem);
-        InventorySystemEvents(ids, admin.inventorySystem);
-        PopupSystemEvents(ids, admin.popupSystem);
+        m_Commands[sysID].GetEvent(cmdID, out T cmd);
+        return cmd;
     }
 
-    private void GameStateSystemEvents(IDEvents ids, GameStateSystem gameStateSys)
+    public T GetCallback<T>(int sysID, int callbackID) where T : class
     {
-        // Commands
-        var evt = GameStateSystemMessaging.AddEvent<GameStateSystem.State>("change_state".GetHashCode()); // LEFT ONLY IN CASE
-        evt.OnInvoked += gameStateSys.SetState;
-        evt = GameStateSystemMessaging.AddEvent<GameStateSystem.State>(ids.set_game_state);
-        evt.OnInvoked += gameStateSys.SetState;
+        m_Callbacks[sysID].GetEvent(callbackID, out T callback);
+        return callback;
     }
 
-    private void DialogueSystemEvents(IDEvents ids, DialogueSystem dialogueSys)
+    public T GetCommandByName<T>(string sysID, string cmdID) where T : class
     {
-        // Commands
-        var evt = DialogueSystemMessaging.AddEvent<ShowDialogueEvtArgs>(ids.show_dialogue);
-        evt.OnInvoked += (args) => dialogueSys.ShowDialogue(args.dialogue, args.charName, args.callback);
+        m_Commands[sysID.GetHashCode()].GetEvent(cmdID.GetHashCode(), out T cmd);
+        return cmd;
     }
 
-    private void StorySystemEvents(IDEvents ids, StorySystem storySys)
+    public T GetCallbackByName<T>(string sysID, string callbackID) where T : class
     {
-        // Callbacks
-        StoryCallbacks.AddEvent<int>(ids.on_story_started);
-        StoryCallbacks.AddEvent<int>(ids.on_story_completed);
-        StoryCallbacks.AddEvent<int>(ids.on_story_finalized);
-        StoryCallbacks.AddEvent(ids.on_all_stories_completed);
-        StoryCallbacks.AddEvent(ids.on_all_stories_finalized);
-
-        // Commands
-        var evt = StorySystemMessaging.AddEvent<int>(ids.start_story);
-        evt.OnInvoked += storySys.StartStory;
-        evt = StorySystemMessaging.AddEvent<int>(ids.finalize_story);
-        evt.OnInvoked += storySys.FinalizeStory;
+        m_Callbacks[sysID.GetHashCode()].GetEvent(callbackID.GetHashCode(), out T callback);
+        return callback;
     }
+}
 
-    private void DaySystemEvents(IDEvents ids, DaySystem daySystem)
-    {
-        // Callbacks
-        DayCallbacks.AddEvent(ids.on_day_started);
-        DayCallbacks.AddEvent(ids.on_day_ended);
-        DayCallbacks.AddEvent(ids.on_daily_stories_completed);
-
-        // Commands
-        var evt = DaySystemCommands.AddEvent(ids.start_new_day);
-        evt.OnInvoked += daySystem.StartNewDay;
-    }
-
-    private void NpcSystemEvents(IDEvents ids, NpcSystem npcSys)
-    {
-        // Commands
-        var evt = NpcSystemCommands.AddEvent("cmd_populate_npcs".GetHashCode());
-        evt.OnInvoked += npcSys.PopulateNpcsData;
-    }
-
-    private void CameraSystemEvents(IDEvents ids, CameraSystem camSys)
-    {
-        var evt = CameraSystemCommands.AddEvent<Transform>("retarget_cmd".GetHashCode());
-        evt.OnInvoked += camSys.Retarget;
-    }
-
-    private void InventorySystemEvents(IDEvents ids, InventorySystem invSys)
-    {
-        var evt = InventorySystemCommands.AddEvent<ItemData>("add_cookie".GetHashCode());
-        evt.OnInvoked += (args) => invSys.AddCookieToInventory(args.m_ItemID, args.m_Amount);
-        evt = InventorySystemCommands.AddEvent<ItemData>("remove_cookie".GetHashCode());
-        evt.OnInvoked += (args) => invSys.RemoveCookieFromInventory(args.m_ItemID, args.m_Amount);
-    }
-
-    private void PopupSystemEvents(IDEvents ids, PopupSystem popSys)
-    {
-        // Commands
-        var evt = PopupSystemCommands.AddEvent<PopupData>("show_popup".GetHashCode());
-        evt.OnInvoked += (args) => popSys.ShowPopup(args);
-    }
+public interface ISystemEvents
+{
+    public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks);
 }

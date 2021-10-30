@@ -10,15 +10,13 @@ public class LoadGameStateButton : MonoBehaviour
     private GameStateSystem.State m_TargetState;
     private Button button;
 
-    private GameEventSystem _eventSys;
     private Event<GameStateSystem.State> _setGameStateCommand;
 
     private void Awake()
     {
-        var ids = Admin.g_Instance.ID.events;
         button = GetComponent<Button>();
-        _eventSys = Admin.g_Instance.gameEventSystem;
-        _eventSys.GameStateSystemMessaging.GetEvent(ids.set_game_state, out _setGameStateCommand);
+        var _eventSys = Admin.g_Instance.gameEventSystem;
+        _setGameStateCommand = _eventSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
     }
 
     private void OnEnable()

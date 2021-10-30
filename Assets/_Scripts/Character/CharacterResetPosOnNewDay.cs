@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class CharacterResetPosOnNewDay : MonoBehaviour
 {
-    private GameEventSystem _evtSys;
     private EventVoid _onDayEndedCallback;
 
     private Vector3 m_StartPos;
 
     private void Awake()
     {
-        var id = Admin.g_Instance.ID.events;
-        _evtSys = Admin.g_Instance.gameEventSystem;
-        _evtSys.DayCallbacks.GetEvent(id.on_day_ended, out _onDayEndedCallback);
+        var evtSys = Admin.g_Instance.gameEventSystem;
+        _onDayEndedCallback = evtSys.GetCallbackByName<EventVoid>("day_sys", "day_ended");
         _onDayEndedCallback.OnInvoked += OnDayEndedCallback_OnInvoked;
     }
 

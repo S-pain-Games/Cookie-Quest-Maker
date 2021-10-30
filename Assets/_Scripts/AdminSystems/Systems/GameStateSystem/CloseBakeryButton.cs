@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class CloseBakeryButton : MonoBehaviour
 {
-    private GameEventSystem _eventSystem;
     private EventVoid _onDailyStoriesCompletedCallback;
     private Event<GameStateSystem.State> _setGameStateCommand;
 
@@ -17,10 +16,9 @@ public class CloseBakeryButton : MonoBehaviour
     private void Awake()
     {
         // Subscribe to Callbacks and get Commands
-        var ids = Admin.g_Instance.ID.events;
-        _eventSystem = Admin.g_Instance.gameEventSystem;
-        _eventSystem.DayCallbacks.GetEvent(ids.on_daily_stories_completed, out _onDailyStoriesCompletedCallback);
-        _eventSystem.GameStateSystemMessaging.GetEvent(ids.set_game_state, out _setGameStateCommand);
+        var evtSys = Admin.g_Instance.gameEventSystem;
+        _onDailyStoriesCompletedCallback = evtSys.GetCallbackByName<EventVoid>("day_sys", "all_daily_stories_completed");
+        _setGameStateCommand = evtSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
 
         _button = _buttonGameObject.GetComponent<Button>();
     }

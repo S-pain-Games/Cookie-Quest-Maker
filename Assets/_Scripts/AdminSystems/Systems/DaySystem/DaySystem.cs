@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DaySystem
+public class DaySystem : ISystemEvents
 {
     private GameEventSystem _eventSystem;
     private DayData _dayData;
@@ -16,24 +16,33 @@ public class DaySystem
     private Event<GameStateSystem.State> _setGameStateCommand;
     private EventVoid _populateNpcsCommand;
 
+    public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+    {
+        commands = new EventSys();
+        callbacks = new EventSys();
+        sysID = "day_sys".GetHashCode();
+
+        _dayStartedCallbacks = callbacks.AddEvent("day_started".GetHashCode());
+        _dayEndedCallbacks = callbacks.AddEvent("day_ended".GetHashCode());
+        _dailyStoriesCompleted = callbacks.AddEvent("all_daily_stories_completed".GetHashCode());
+
+        var evt = commands.AddEvent("start_new_day".GetHashCode());
+        evt.OnInvoked += StartNewDay;
+    }
+
     public void Initialize(GameEventSystem eventSystem, DayData dayData)
     {
         // Setup Callbacks and Commands
         var ids = Admin.g_Instance.ID.events;
         _eventSystem = eventSystem;
 
-        // Initialize own callbacks
-        _eventSystem.DayCallbacks.GetEvent(ids.on_day_started, out _dayStartedCallbacks);
-        _eventSystem.DayCallbacks.GetEvent(ids.on_day_ended, out _dayEndedCallbacks);
-        _eventSystem.DayCallbacks.GetEvent(ids.on_daily_stories_completed, out _dailyStoriesCompleted);
-
         // Subscribe to Callbacks
-        _eventSystem.StoryCallbacks.GetEvent(ids.on_story_completed, out Event<int> evt);
+        Event<int> evt = _eventSystem.GetCallback<Event<int>>("story_sys".GetHashCode(), "story_completed".GetHashCode());
         evt.OnInvoked += StoryCompletedCallback;
 
         // Initialize external Commands
-        _eventSystem.GameStateSystemMessaging.GetEvent(ids.set_game_state, out _setGameStateCommand);
-        _eventSystem.NpcSystemCommands.GetEvent("cmd_populate_npcs".GetHashCode(), out _populateNpcsCommand);
+        _setGameStateCommand = _eventSystem.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
+        _populateNpcsCommand = _eventSystem.GetCommandByName<EventVoid>("npc_sys", "cmd_populate_npcs");
 
         _dayData = dayData;
     }
