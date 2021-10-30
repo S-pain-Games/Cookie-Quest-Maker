@@ -71,7 +71,7 @@ public class UIQuestMakerTable : MonoBehaviour
     {
         if (_questMakingSys.TryFinishMakingQuest())
         {
-            _questBuilding.ClearAllPieces();
+            _questBuilding.ConsumeQuest();
             _changeGameStateCmd.Invoke(GameStateSystem.State.Bakery);
         }
     }

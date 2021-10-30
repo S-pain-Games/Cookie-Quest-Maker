@@ -85,6 +85,20 @@ namespace CQM.QuestMaking.UI
             _questPieces.Clear();
         }
 
+        public void ConsumeQuest()
+        {
+            UnregisterPiecesAndSocketsEvents();
+            for (int i = 0; i < _sockets.Count; i++)
+            {
+                _sockets[i].Clear();
+            }
+            for (int i = 0; i < _questPieces.Count; i++)
+            {
+                Destroy(_questPieces[i].gameObject); // Pooling?
+            }
+            _questPieces.Clear();
+        }
+
         public void SpawnPiece(int pieceID, Canvas canvas)
         {
             var questPiece = Admin.g_Instance.questDB.m_QPiecesDB[pieceID];
@@ -94,11 +108,6 @@ namespace CQM.QuestMaking.UI
             {
                 if (_questPieces[i].Piece.m_Type == questPiece.m_Type)
                 {
-                    _questPieces[i].TryToUnsocket(null);
-                    Destroy(_questPieces[i].gameObject);
-                    _questPieces.RemoveAt(i);
-                    i--;
-
                     // TODO: oh god
                     if (_questPieces[i].Piece.m_Type == QuestPiece.PieceType.Cookie)
                     {
@@ -106,6 +115,11 @@ namespace CQM.QuestMaking.UI
                         var evt = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_cookie");
                         evt.Invoke(new ItemData(_questPieces[i].Piece.m_ID, 1));
                     }
+
+                    _questPieces[i].TryToUnsocket(null);
+                    Destroy(_questPieces[i].gameObject);
+                    _questPieces.RemoveAt(i);
+                    i--;
                     break;
                 }
             }
