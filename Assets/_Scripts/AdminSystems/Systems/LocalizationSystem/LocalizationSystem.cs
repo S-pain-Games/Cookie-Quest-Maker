@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LocalizationSystem : MonoBehaviour
+public class LocalizationSystem
 {
     // Current Language
     private Language m_Language = Language.Spanish;

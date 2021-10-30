@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(LocalizationSystem))]
 [RequireComponent(typeof(GameStateSystem))]
 
 [RequireComponent(typeof(CameraSystem))]
@@ -34,28 +33,28 @@ public class Admin : MonoBehaviour
     [SerializeField] private StoryDBUnityReferences storyDBRef;
     [SerializeField] private NpcDBUnityReferences npcDBRef;
 
-    public CalendarData calendarData;
+    [HideInInspector] public CalendarData calendarData;
 
     // Player Data
-    public InventoryData inventoryData;
+    [HideInInspector] public InventoryData inventoryData;
 
     // Game Systems
-    public GameEventSystem gameEventSystem;
-    public GameStateSystem gameStateSystem;
-    public LocalizationSystem localizationSystem;
-    public CameraSystem camSystem;
+    [HideInInspector] public GameEventSystem gameEventSystem;
+    [HideInInspector] public GameStateSystem gameStateSystem;
+    [HideInInspector] public LocalizationSystem localizationSystem;
+    [HideInInspector] public CameraSystem camSystem;
 
-    public DaySystem daySystem;
-    public StorySystem storySystem;
-    public QuestMakingSystem questMakerSystem;
-    public CookieMakingSystem cookieMakingSystem;
-    public DialogueSystem dialogueSystem;
-    public InventorySystem inventorySystem;
+    [HideInInspector] public DaySystem daySystem;
+    [HideInInspector] public StorySystem storySystem;
+    [HideInInspector] public QuestMakingSystem questMakerSystem;
+    [HideInInspector] public CookieMakingSystem cookieMakingSystem;
+    [HideInInspector] public DialogueSystem dialogueSystem;
+    [HideInInspector] public InventorySystem inventorySystem;
 
-    public NpcSystem npcSystem;
-    public TownSystem townSystem;
-    public CalendarSystem calendarSystem;
-    public PopupSystem popupSystem;
+    [HideInInspector] public NpcSystem npcSystem;
+    [HideInInspector] public TownSystem townSystem;
+    [HideInInspector] public CalendarSystem calendarSystem;
+    [HideInInspector] public PopupSystem popupSystem;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Init()
@@ -76,7 +75,7 @@ public class Admin : MonoBehaviour
         // Get or create Game Systems
         gameEventSystem = new GameEventSystem();
         gameStateSystem = GetComponent<GameStateSystem>();
-        localizationSystem = GetComponent<LocalizationSystem>();
+        localizationSystem = new LocalizationSystem();
         camSystem = GetComponent<CameraSystem>();
         daySystem = new DaySystem();
         storySystem = GetComponent<StorySystem>();
