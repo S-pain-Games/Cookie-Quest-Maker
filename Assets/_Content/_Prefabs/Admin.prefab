@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 120580767631800667}
   - component: {fileID: 2174897155559580259}
   - component: {fileID: 9146998435492606265}
+  - component: {fileID: 1001707630}
   m_Layer: 0
   m_Name: Admin
   m_TagString: Untagged
@@ -64,14 +65,9 @@ MonoBehaviour:
     m_GoodCookieReputation: 0
     m_EvilCookieReputation: 0
     m_Storage: 
-  gameStateSystem: {fileID: 0}
-  camSystem: {fileID: 0}
-  storySystem: {fileID: 0}
   questMakerSystem: {fileID: 0}
   cookieMakingSystem: {fileID: 0}
-  dialogueSystem: {fileID: 0}
-  npcSystem: {fileID: 0}
-  popupSystem: {fileID: 0}
+  characterSystem: {fileID: 1001707630}
 --- !u!114 &3180401619160224539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,3 +221,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PopupParent: {fileID: 0}
   m_PopupPrefab: {fileID: 3051747196200662067, guid: ea922bc99ae428843ba685267cf72fb6, type: 3}
+--- !u!114 &1001707630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a202115970900fd45b186c95a39c37e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _character:
+  - {fileID: 0}
+  - {fileID: 0}

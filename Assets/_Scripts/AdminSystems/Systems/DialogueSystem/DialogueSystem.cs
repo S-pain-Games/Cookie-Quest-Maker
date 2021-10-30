@@ -21,6 +21,15 @@ public class DialogueSystem : MonoBehaviour, ISystemEvents
     private int _lineIndex = 0;
     private Action _callbackOnDialogueEnd;
 
+    private EventVoid _enableCharMovementCmd;
+    private EventVoid _disableCharMovementCmd;
+
+    public void Initialize(GameEventSystem evtSys)
+    {
+        _enableCharMovementCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "enable_movement");
+        _disableCharMovementCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "disable_movement");
+    }
+
     // TODO: Add behaviour to stack dialogues
     public void ShowDialogue(List<string> dialogue, string characterName, Action callback)
     {
@@ -30,6 +39,8 @@ public class DialogueSystem : MonoBehaviour, ISystemEvents
         _characterNameComp.text = characterName;
         _lineTextComp.text = _dialogueLines[_lineIndex];
         _callbackOnDialogueEnd = callback;
+
+        _disableCharMovementCmd.Invoke();
     }
 
     public void NextLine()
@@ -49,6 +60,7 @@ public class DialogueSystem : MonoBehaviour, ISystemEvents
                 _callbackOnDialogueEnd.Invoke();
                 _callbackOnDialogueEnd = null;
             }
+            _enableCharMovementCmd.Invoke();
         }
     }
 

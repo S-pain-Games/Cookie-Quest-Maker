@@ -51,6 +51,8 @@ public class Admin : MonoBehaviour
     private StorySystem storySystem;
     private DialogueSystem dialogueSystem;
 
+    [SerializeField]
+    private CharacterSystem characterSystem;
     private NpcSystem npcSystem;
     private TownSystem townSystem;
     private CalendarSystem calendarSystem;
@@ -97,6 +99,7 @@ public class Admin : MonoBehaviour
         gameEventSystem.RegisterSystem(npcSystem);
         gameEventSystem.RegisterSystem(inventorySystem);
         gameEventSystem.RegisterSystem(popupSystem);
+        gameEventSystem.RegisterSystem(characterSystem);
         gameEventSystem.Initialize();
 
         gameStateSystem.Initialize(gameEventSystem);
@@ -106,6 +109,7 @@ public class Admin : MonoBehaviour
         questMakerSystem.Initialize(storySystem, storyDB);
         cookieMakingSystem.Initialize(cookieDB);
         npcSystem.Initialize(storyDB, npcDB);
+        dialogueSystem.Initialize(gameEventSystem);
         townSystem.Initialize(townData);
         calendarSystem.Initialize(calendarData, storyDB);
         inventorySystem.Initialize(inventoryData);
