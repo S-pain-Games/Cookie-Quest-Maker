@@ -20,3 +20,7 @@
 - Gain currency when completing stories and more shopping options
 - Map of the Town to see the state of each location
 - All Quest pieces will be baked with simple ingredients that can be bought or adquired in conversations
+
+ ##External Assets
+- NavMeshPlus: https://github.com/h8man/NavMeshPlus
+- Better Minimal WebGL Template: https://seansleblanc.itch.io/better-minimal-webgl-template
