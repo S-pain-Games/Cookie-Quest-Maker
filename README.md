@@ -1,7 +1,7 @@
 # Cookie-Quest-Maker
 
 
-##A brief guide of how to play our Alpha.
+ ##A brief guide of how to play our Alpha  
 
 - You can move your character freely with mouse clicks on Pc or by tapping on your screen on the mobile phone version.  
 - Whenever you approach to a NPC, a dialogue window will display showing a little conversation. After that, you get a mission.  
