@@ -96,12 +96,13 @@ public class CookieMakingUI : MonoBehaviour
 
     private void UpdateCookieRecipesUI()
     {
-        Debug.Log("Entra update");
+        //Debug.Log("Entra update");
         foreach(GameObject g in currentRecipes)
         {
+            //g.GetComponent<RecipeShopUI>().OnSelectRecipe -= SelectRecipe;
             Destroy(g);
         }
-        //currentRecipes.Clear();
+        currentRecipes.Clear();
         CreateCookiePrefabs();
     }
 

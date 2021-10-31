@@ -38,6 +38,8 @@ public class RecipeShopUI : MonoBehaviour
     public void SetRecipe(RecipeData recipe)
     {
         myRecipe = recipe;
+        if(myText == null)
+            myText = GetComponentInChildren<TextMeshProUGUI>();
         myText.text = recipe.m_RecipeName;
     }
 }
