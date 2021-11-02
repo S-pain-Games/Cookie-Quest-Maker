@@ -9,7 +9,7 @@ public class StoryData
     public string m_Title = "";
     public List<string> m_IntroductionDialogue = new List<string>();
     public List<BranchOption> m_BranchOptions = new List<BranchOption>();
-    public int m_Target; // TODO
+    public int m_Target; // TODO Add multiple targets
 
     public void Build()
     {

@@ -8,8 +8,6 @@ public class EvithBehaviour : MonoBehaviour, IInteractableEntity
     private Event<ShowDialogueEvtArgs> _showDialogueCmd;
 
     // HACK
-    // HACK
-    // HACK
     [SerializeField]
     private UnityEvent onFinishInteract;
 

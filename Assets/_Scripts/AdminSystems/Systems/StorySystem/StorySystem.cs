@@ -35,10 +35,10 @@ public class StorySystem : ISystemEvents
         OnAllStoriesCompleted = callbacks.AddEvent("all_stories_completed".GetHashCode());
         OnAllStoriesFinalized = callbacks.AddEvent("all_stories_finalized".GetHashCode());
 
-        var evt = commands.AddEvent<int>("start_story".GetHashCode());
-        evt.OnInvoked += StartStory;
-        evt = commands.AddEvent<int>("finalize_story".GetHashCode());
-        evt.OnInvoked += FinalizeStory;
+        commands.AddEvent<int>("start_story".GetHashCode()).OnInvoked += StartStory;
+        commands.AddEvent<StorySys_CompleteStoyEvtArgs>("complete_story".GetHashCode()).OnInvoked +=
+            (args) => CompleteStory(args.m_StoryId, args.m_QuestData);
+        commands.AddEvent<int>("finalize_story".GetHashCode()).OnInvoked += FinalizeStory;
     }
 
     // Called by some in-game conversation that starts

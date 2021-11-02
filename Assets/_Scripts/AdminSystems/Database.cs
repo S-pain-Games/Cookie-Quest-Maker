@@ -1,10 +1,14 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace CQM.Databases
 {
     [System.Serializable]
     public class Database : MonoBehaviour
     {
+        // All these references should only be called by unity objects
+        // Systems should be passed the necesary data on initialization
+        // This way its easier to identify what data does each system handle
         public QuestDB Quests { get => m_Quests; }
         public StoryDB Stories { get => m_Stories; }
         public TownDB Town { get => m_Town; }
@@ -28,19 +32,6 @@ namespace CQM.Databases
         [SerializeField] private StoryDB m_Stories = new StoryDB();
         [SerializeField] private QuestDB m_Quests;
         [SerializeField] private CameraDataComponent m_Cameras = new CameraDataComponent();
-
-        public T GetData<T>() where T : class
-        {
-            if (m_Quests is T)
-                return m_Quests as T;
-            else if (m_Stories is T)
-                return m_Stories as T;
-            else if (m_Town is T)
-                return m_Town as T;
-            else if (m_Cookies is T)
-                return m_Cookies as T;
-            return null;
-        }
 
         public void LoadData()
         {

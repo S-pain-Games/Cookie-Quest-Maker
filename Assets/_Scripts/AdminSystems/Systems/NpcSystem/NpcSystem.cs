@@ -39,7 +39,7 @@ public class NpcSystem : ISystemEvents
     public void PopulateNpcsData()
     {
         List<int> completedStoriesIDList = _storyDB.m_CompletedStories;
-        var storiesDB = Admin.Global.Database.Stories.m_StoriesDB;
+        var storiesDB = _storyDB.m_StoriesDB;
 
         // We make a copy because we dont want to remove elements from the storyDB list.
         // The completed stories should be "finalized" when the player has seen the 

@@ -6,16 +6,13 @@ using UnityEngine;
 // Entry point to the Quest Making Gameplay System
 public class QuestMakingSystem
 {
-    // References to Systems and Dbs
-    private StorySystem _storySystem;
-    private StoryDB _storyDB;
-
     private QMGameplayData m_Data = new QMGameplayData();
+    public Event<StorySys_CompleteStoyEvtArgs> _completeStoryCmd;
 
-    public void Initialize(StorySystem storySys, StoryDB storyDb)
+    public void Initialize()
     {
-        _storySystem = storySys;
-        _storyDB = storyDb;
+        var evtSys = Admin.Global.EventSystem;
+        _completeStoryCmd = evtSys.GetCommandByName<Event<StorySys_CompleteStoyEvtArgs>>("story_sys", "complete_story");
     }
 
     // These methods have to be called in a specific order
@@ -73,13 +70,26 @@ public class QuestMakingSystem
     {
         if (m_Data.m_CookieAdded && m_Data.m_ActionAdded && m_Data.m_TargetAdded)
         {
-            _storySystem.CompleteStory(m_Data.m_StoryID, m_Data.m_CurrentQuest);
+            _completeStoryCmd.Invoke(new StorySys_CompleteStoyEvtArgs(m_Data.m_StoryID, m_Data.m_CurrentQuest));
+            //_storySystem.CompleteStory(m_Data.m_StoryID, m_Data.m_CurrentQuest);
             return true;
         }
         else
         {
             return false;
         }
+    }
+}
+
+public struct StorySys_CompleteStoyEvtArgs
+{
+    public int m_StoryId;
+    public QuestData m_QuestData;
+
+    public StorySys_CompleteStoyEvtArgs(int storyId, QuestData questData)
+    {
+        m_StoryId = storyId;
+        m_QuestData = questData;
     }
 }
 

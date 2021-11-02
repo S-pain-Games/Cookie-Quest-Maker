@@ -4,15 +4,17 @@ using UnityEngine;
 public class TownSystem
 {
     private TownDB _data;
+    private StoryDB _stories;
 
-    public void Initialize(TownDB data)
+    public void Initialize(TownDB data, StoryDB stories)
     {
         _data = data;
+        _stories = stories;
     }
 
     public void CalculateTownHappiness()
     {
-        var repDb = Admin.Global.Database.Stories.m_Repercusions;
+        var repDb = _stories.m_Repercusions;
         List<Location> locList = _data.m_LocationsList;
         int globalHappiness = 0;
         for (int i = 0; i < locList.Count; i++)

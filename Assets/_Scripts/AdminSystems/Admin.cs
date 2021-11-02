@@ -34,37 +34,36 @@ public class Admin : MonoBehaviour
 
         _eventSystem = new GameEventSystem();
 
-        _systems.m_GameStateSystem.Initialize(Database.GameState); // Game State Sys registers events on init
+        _systems.InitializeGameState(Database.GameState); // Game State Sys registers events on init
         _eventSystem.RegisterSystems(_systems.GetSystemsEvents());
         _eventSystem.Initialize();
 
         _systems.InitializeSystems(EventSystem, Database);
 
-        _systems.m_GameStateSystem.StartGame();
+        _systems.StartGame();
     }
 }
 
 [System.Serializable]
 public class Systems
 {
-    public GameStateSystem m_GameStateSystem = new GameStateSystem();
+    private GameStateSystem m_GameStateSystem = new GameStateSystem();
     public LocalizationSystem m_LocalizationSystem = new LocalizationSystem();
-    public CameraSystem m_CameraSystem = new CameraSystem();
+    private CameraSystem m_CameraSystem = new CameraSystem();
 
     public QuestMakingSystem m_QuestMakerSystem = new QuestMakingSystem();
     public CookieMakingSystem m_CookieMakingSystem = new CookieMakingSystem();
-    public StorySystem m_StorySystem = new StorySystem();
+    private StorySystem m_StorySystem = new StorySystem();
 
-    public DialogueSystem m_DialogueSystem = new DialogueSystem();
-    public NpcSystem m_NpcSystem = new NpcSystem();
-    public PopupSystem m_PopupSystem = new PopupSystem();
-    public CharacterSystem m_CharacterSystem = new CharacterSystem();
+    private DialogueSystem m_DialogueSystem = new DialogueSystem();
+    private NpcSystem m_NpcSystem = new NpcSystem();
+    private PopupSystem m_PopupSystem = new PopupSystem();
+    private CharacterSystem m_CharacterSystem = new CharacterSystem();
     public InventorySystem m_InventorySystem = new InventorySystem();
 
-    public DaySystem m_DaySystem = new DaySystem();
-    public TownSystem m_TownSystem = new TownSystem();
-    public CalendarSystem m_CalendarSystem = new CalendarSystem();
-
+    private DaySystem m_DaySystem = new DaySystem();
+    private TownSystem m_TownSystem = new TownSystem();
+    private CalendarSystem m_CalendarSystem = new CalendarSystem();
 
     public List<ISystemEvents> GetSystemsEvents()
     {
@@ -83,21 +82,31 @@ public class Systems
         return systems;
     }
 
+    public void InitializeGameState(GameStateComponent gameStateComp)
+    {
+        m_GameStateSystem.Initialize(gameStateComp);
+    }
+
     public void InitializeSystems(GameEventSystem eventSystem, Database database)
     {
         m_CharacterSystem.Initialize(database.Player.Input);
         m_LocalizationSystem.LoadData();
         m_DaySystem.Initialize(eventSystem, database.World.CurrentDay);
         m_StorySystem.Initialize(database.Stories);
-        m_QuestMakerSystem.Initialize(m_StorySystem, database.Stories); // TODO -> Remove Story System dependency
+        m_QuestMakerSystem.Initialize();
         m_CookieMakingSystem.Initialize(database.Cookies);
         m_NpcSystem.Initialize(database.Stories, database.Npcs, eventSystem);
         m_DialogueSystem.Initialize(database.Dialogues.SceneElements, eventSystem);
-        m_TownSystem.Initialize(database.Town);
+        m_TownSystem.Initialize(database.Town, database.Stories);
         m_CalendarSystem.Initialize(database.World.Calendar, database.Stories);
         m_PopupSystem.Initialize(database.Popups);
         m_CameraSystem.Initialize(database.Cameras);
         m_InventorySystem.Initialize(database.Player.Inventory);
+    }
+
+    public void StartGame()
+    {
+        m_GameStateSystem.StartGame();
     }
 }
 

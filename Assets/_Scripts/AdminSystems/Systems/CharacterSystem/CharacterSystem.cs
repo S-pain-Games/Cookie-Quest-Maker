@@ -25,7 +25,6 @@ public class CharacterSystem : ISystemEvents
 
     private void EnableMovement()
     {
-        // TODO
         for (int i = 0; i < m_Input.m_Character.Count; i++)
         {
             m_Input.m_Character[i].SetInputActivated(true);
