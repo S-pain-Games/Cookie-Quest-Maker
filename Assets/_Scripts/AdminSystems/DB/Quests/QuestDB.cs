@@ -3,194 +3,64 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CQM.QuestMaking
+namespace CQM.Databases
 {
     // Stores all the created quests in the game
-    public class QuestDB
+    [System.Serializable]
+    public class QuestDB : MonoBehaviour
     {
+        // Inspector Only
+        [SerializeField]
+        private List<QuestPieceDataContainer> qpData = new List<QuestPieceDataContainer>();
+
+        // Contains all the quest piece data
+        private Dictionary<int, QuestPieceDataContainer> qpDataDic = new Dictionary<int, QuestPieceDataContainer>();
+
         // Contains all quests made in the playthrough
-        public Dictionary<int, QuestData> m_QuestDataDB = new Dictionary<int, QuestData>();
+        private Dictionary<int, QuestData> m_QuestDataDB = new Dictionary<int, QuestData>();
 
-        // Contains all functional quest pieces in the game
-        public Dictionary<int, QuestPiece> m_QPiecesDB = new Dictionary<int, QuestPiece>();
-        // Contains all the Prefabs to instantiate quest pieces in the Quest Builder UI
-        public Dictionary<int, GameObject> m_QuestBuildingPiecesPrefabs = new Dictionary<int, GameObject>();
-        // Contains all the UI Data of each quest piece
-        public Dictionary<int, UIQuestPieceData> m_UIQuestPieces = new Dictionary<int, UIQuestPieceData>();
-
-        public void LoadData(QuestDBUnityReferences unityReferences)
+        public T GetQuestPieceComponent<T>(int ID) where T : class
         {
-            var pIds = Admin.g_Instance.ID.pieces;
-
-            LoadQuestPieces(pIds);
-            LoadUIQuestPieces(pIds);
-            LoadQuestPiecesPrefabs(pIds, unityReferences);
+            var dataContainer = qpDataDic[ID];
+            if (dataContainer.m_Functional is T)
+            {
+                return dataContainer.m_Functional as T;
+            }
+            else if (dataContainer.m_QuestBuildingPiecePrefab is T)
+            {
+                return dataContainer.m_QuestBuildingPiecePrefab as T;
+            }
+            else if (dataContainer.m_QuestSelectionUI is T)
+            {
+                return dataContainer.m_QuestSelectionUI as T;
+            }
+            return null;
         }
 
-        private void LoadQuestPiecesPrefabs(IDQuestPieces pIds, QuestDBUnityReferences uRef)
+        public QuestData GetQuestData(int ID)
         {
-            for (int i = 0; i < uRef.QuestBuildingPiecePrefabs.Count; i++)
+            return m_QuestDataDB[ID];
+        }
+
+        public void LoadData()
+        {
+            for (int i = 0; i < qpData.Count; i++)
             {
-                var pieceRef = uRef.QuestBuildingPiecePrefabs[i];
-                m_QuestBuildingPiecesPrefabs.Add(pieceRef.m_NameID.GetHashCode(), pieceRef.m_Prefab);
+                var data = qpData[i];
+                data.m_Functional.m_ParentID = data.m_ID.GetHashCode();
+                data.m_QuestSelectionUI.m_ParentID = data.m_ID.GetHashCode();
+
+                qpDataDic.Add(data.m_ID.GetHashCode(), data);
             }
         }
+    }
 
-        private void LoadUIQuestPieces(IDQuestPieces pIds)
-        {
-            UIQuestPieceData qpd = new UIQuestPieceData
-            {
-                sprite = null,
-                name = "Mayor",
-                description = "A very respected man in town (by some)"
-            };
-            m_UIQuestPieces.Add(pIds.mayor, qpd);
-
-            qpd = new UIQuestPieceData
-            {
-                sprite = null,
-                name = "Molly",
-                description = "Friendly owner of the cow farm in town"
-            };
-            m_UIQuestPieces.Add(pIds.molly, qpd);
-
-            qpd = new UIQuestPieceData
-            {
-                sprite = null,
-                name = "Plain Cookie",
-                description = "Very plain"
-            };
-            m_UIQuestPieces.Add(pIds.plain_cookie, qpd);
-
-            qpd = new UIQuestPieceData
-            {
-                sprite = null,
-                name = "Plain Cookie 2",
-                description = "Very plain 2"
-            };
-            m_UIQuestPieces.Add(pIds.plain_cookie_2, qpd);
-
-            qpd = new UIQuestPieceData
-            {
-                sprite = null,
-                name = "Attack",
-                description = "Sometimes violence IS the answer -Evil Cookie Goddess"
-            };
-            m_UIQuestPieces.Add(pIds.attack, qpd);
-
-            qpd = new UIQuestPieceData
-            {
-                sprite = null,
-                name = "Assist",
-                description = "Being able to assist someone in need is very gud -Angelic Cookie God"
-            };
-            m_UIQuestPieces.Add(pIds.assist, qpd);
-
-            qpd = new UIQuestPieceData
-            {
-                sprite = null,
-                name = "Talk",
-                description = "Im not sure if somebody will understand a cookie tho"
-            };
-            m_UIQuestPieces.Add("dialogate".GetHashCode(), qpd);
-
-            qpd = new UIQuestPieceData
-            {
-                sprite = null,
-                name = "Brutally",
-                description = "Very Brutally"
-            };
-            m_UIQuestPieces.Add(pIds.brutally, qpd);
-
-            qpd = new UIQuestPieceData
-            {
-                sprite = null,
-                name = "Kindly",
-                description = "Very Kind"
-            };
-            m_UIQuestPieces.Add(pIds.kindly, qpd);
-
-            qpd = new UIQuestPieceData
-            {
-                sprite = null,
-                name = "Baseball Bat",
-                description = "Its a bat, from baseball"
-            };
-            m_UIQuestPieces.Add(pIds.baseball_bat, qpd);
-        }
-
-        private void LoadQuestPieces(IDQuestPieces pIds)
-        {
-            QuestPiece qp = new QuestPiece();
-            qp.m_ID = pIds.mayor;
-            qp.m_PieceName = "Mayor";
-            qp.m_Type = QuestPiece.PieceType.Target;
-            qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Help, m_Value = 1 });
-            m_QPiecesDB.Add(pIds.mayor, qp);
-
-            qp = new QuestPiece();
-            qp.m_ID = pIds.molly;
-            qp.m_PieceName = "Molly";
-            qp.m_Type = QuestPiece.PieceType.Target;
-            qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Help, m_Value = 1 });
-            m_QPiecesDB.Add(pIds.molly, qp);
-
-            qp = new QuestPiece();
-            qp.m_ID = pIds.attack;
-            qp.m_PieceName = "Attack";
-            qp.m_Type = QuestPiece.PieceType.Action;
-            qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Harm, m_Value = 1 });
-            m_QPiecesDB.Add(pIds.attack, qp);
-
-            qp = new QuestPiece();
-            qp.m_ID = pIds.assist;
-            qp.m_PieceName = "Assist";
-            qp.m_Type = QuestPiece.PieceType.Action;
-            qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Help, m_Value = 1 });
-            m_QPiecesDB.Add(pIds.assist, qp);
-
-            qp = new QuestPiece();
-            qp.m_ID = "dialogate".GetHashCode();
-            qp.m_PieceName = "Talk";
-            qp.m_Type = QuestPiece.PieceType.Action;
-            qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Convince, m_Value = 1 });
-            m_QPiecesDB.Add("dialogate".GetHashCode(), qp);
-
-            qp = new QuestPiece();
-            qp.m_ID = pIds.plain_cookie;
-            qp.m_PieceName = "Plain Cookie";
-            qp.m_Type = QuestPiece.PieceType.Cookie;
-            qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Help, m_Value = 1 });
-            m_QPiecesDB.Add(pIds.plain_cookie, qp);
-
-            qp = new QuestPiece();
-            qp.m_ID = pIds.plain_cookie_2;
-            qp.m_PieceName = "Plain Cookie 2";
-            qp.m_Type = QuestPiece.PieceType.Cookie;
-            qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Convince, m_Value = 1 });
-            m_QPiecesDB.Add(pIds.plain_cookie_2, qp);
-
-            qp = new QuestPiece();
-            qp.m_ID = pIds.brutally;
-            qp.m_PieceName = "Brutally";
-            qp.m_Type = QuestPiece.PieceType.Modifier;
-            qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Harm, m_Value = 1 });
-            m_QPiecesDB.Add(pIds.brutally, qp);
-
-            qp = new QuestPiece();
-            qp.m_ID = pIds.kindly;
-            qp.m_PieceName = "Kindly";
-            qp.m_Type = QuestPiece.PieceType.Modifier;
-            qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Help, m_Value = 1 });
-            qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Convince, m_Value = 1 });
-            m_QPiecesDB.Add(pIds.kindly, qp);
-
-            qp = new QuestPiece();
-            qp.m_ID = pIds.baseball_bat;
-            qp.m_PieceName = "Baseball Bat";
-            qp.m_Type = QuestPiece.PieceType.Object;
-            qp.m_Tags.Add(new QPTag { m_Type = QPTag.TagType.Harm, m_Value = 1 });
-            m_QPiecesDB.Add(pIds.baseball_bat, qp);
-        }
+    [Serializable]
+    public class QuestPieceDataContainer
+    {
+        public string m_ID;
+        public QuestPiece m_Functional;
+        public UIQuestPieceData m_QuestSelectionUI;
+        public GameObject m_QuestBuildingPiecePrefab;
     }
 }

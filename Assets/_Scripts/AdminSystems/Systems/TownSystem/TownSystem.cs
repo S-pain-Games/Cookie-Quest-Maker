@@ -12,7 +12,7 @@ public class TownSystem
 
     public void CalculateTownHappiness()
     {
-        var repDb = Admin.g_Instance.storyDB.m_Repercusions;
+        var repDb = Admin.Global.Database.Stories.m_Repercusions;
         List<Location> locList = _data.m_LocationsList;
         int globalHappiness = 0;
         for (int i = 0; i < locList.Count; i++)
@@ -52,8 +52,8 @@ public class TownDB
 
     public void LoadData(StoryDB storyDB)
     {
-        var townIds = Admin.g_Instance.ID.townLocations;
-        var repIds = Admin.g_Instance.ID.repercusions;
+        var townIds = Admin.Global.ID.townLocations;
+        var repIds = Admin.Global.ID.repercusions;
         var rep = storyDB.m_Repercusions;
 
         Location loc = new Location();

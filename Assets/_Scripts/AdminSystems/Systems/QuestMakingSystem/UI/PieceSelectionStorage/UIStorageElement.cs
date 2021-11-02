@@ -31,9 +31,9 @@ public class UIStorageElement : MonoBehaviour
         _pressable.OnPointerUpEvent -= OnPointerUpEvent;
     }
 
-    public void Build(QuestPiece piece)
+    public void Build(UIQuestPieceData piece)
     {
-        _textComp.text = piece.m_PieceName;
+        _textComp.text = piece.m_Name;
     }
 
     private void OnPointerUpEvent(PointerEventData obj)

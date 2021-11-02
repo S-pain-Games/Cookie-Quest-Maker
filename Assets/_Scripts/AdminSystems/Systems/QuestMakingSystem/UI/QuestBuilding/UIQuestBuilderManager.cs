@@ -5,7 +5,7 @@ using UnityEditor;
 using System;
 using UnityEngine.UI;
 
-namespace CQM.QuestMaking.UI
+namespace CQM.Databases.UI
 {
     public class UIQuestBuilderManager : MonoBehaviour
     {
@@ -75,9 +75,9 @@ namespace CQM.QuestMaking.UI
                 // TODO: >:[
                 if (_questPieces[i].Piece.m_Type == QuestPiece.PieceType.Cookie)
                 {
-                    var evtSys = Admin.g_Instance.gameEventSystem;
+                    var evtSys = Admin.Global.EventSystem;
                     var evt = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_cookie");
-                    evt.Invoke(new ItemData(_questPieces[i].Piece.m_ID, 1));
+                    evt.Invoke(new ItemData(_questPieces[i].Piece.m_ParentID, 1));
                 }
 
                 Destroy(_questPieces[i].gameObject); // Pooling?
@@ -101,7 +101,9 @@ namespace CQM.QuestMaking.UI
 
         public void SpawnPiece(int pieceID, Canvas canvas)
         {
-            var questPiece = Admin.g_Instance.questDB.m_QPiecesDB[pieceID];
+            QuestDB quests = Admin.Global.Database.Quests;
+            var questPiece = quests.GetQuestPieceComponent<QuestPiece>(pieceID);
+            var uiData = quests.GetQuestPieceComponent<UIQuestPieceData>(pieceID);
 
             // Destroy existing piece type
             for (int i = 0; i < _questPieces.Count; i++)
@@ -111,9 +113,9 @@ namespace CQM.QuestMaking.UI
                     // TODO: oh god
                     if (_questPieces[i].Piece.m_Type == QuestPiece.PieceType.Cookie)
                     {
-                        var evtSys = Admin.g_Instance.gameEventSystem;
+                        var evtSys = Admin.Global.EventSystem;
                         var evt = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_cookie");
-                        evt.Invoke(new ItemData(_questPieces[i].Piece.m_ID, 1));
+                        evt.Invoke(new ItemData(_questPieces[i].Piece.m_ParentID, 1));
                     }
 
                     _questPieces[i].TryToUnsocket(null);
@@ -127,15 +129,15 @@ namespace CQM.QuestMaking.UI
             // TODO: oh lord
             if (questPiece.m_Type == QuestPiece.PieceType.Cookie)
             {
-                var evtSys = Admin.g_Instance.gameEventSystem;
+                var evtSys = Admin.Global.EventSystem;
                 var evt = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "remove_cookie");
                 evt.Invoke(new ItemData(pieceID, 1));
             }
 
             // Spawn selected piece from storage in quest builder
-            var piecePrefab = Admin.g_Instance.questDB.m_QuestBuildingPiecesPrefabs[pieceID];
+            var piecePrefab = Admin.Global.Database.Quests.GetQuestPieceComponent<GameObject>(pieceID);
             var pieceBehaviour = Instantiate(piecePrefab, pieceSpawnPosition).GetComponent<UIQuestPieceBehaviour>();
-            pieceBehaviour.Initialize(canvas, questPiece);
+            pieceBehaviour.Initialize(canvas, uiData, questPiece);
 
             _questPieces.Add(pieceBehaviour);
             InitializeQuestPieceBehaviour(pieceBehaviour);

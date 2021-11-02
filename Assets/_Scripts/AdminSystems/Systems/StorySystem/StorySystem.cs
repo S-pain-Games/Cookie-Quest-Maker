@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 // Handles all the ongoing/completed stories
 // It is responsable of starting and finishing all the stories
-public class StorySystem : MonoBehaviour, ISystemEvents
+public class StorySystem : ISystemEvents
 {
     // Initialized Through Admin
     private StoryDB _storyDB;
@@ -45,7 +45,7 @@ public class StorySystem : MonoBehaviour, ISystemEvents
     // a story with the given ID
     public void StartStory(int storyId)
     {
-        Story story = _storyDB.m_StoriesDB[storyId];
+        Story story = _storyDB.GetStoryComponent<Story>(storyId);
 
         if (story.m_State != Story.State.NotStarted)
             Debug.LogError("Tried to start a story that is already in progress or completed");
@@ -67,7 +67,7 @@ public class StorySystem : MonoBehaviour, ISystemEvents
         if (!_storyDB.m_OngoingStories.Contains(storyId))
             throw new System.Exception("Trying to complete a story that isnt ongoing");
 #endif
-        Story story = _storyDB.m_StoriesDB[storyId];
+        Story story = _storyDB.GetStoryComponent<Story>(storyId);
         _storyDB.m_OngoingStories.Remove(storyId);
         _storyDB.m_CompletedStories.Add(storyId);
 

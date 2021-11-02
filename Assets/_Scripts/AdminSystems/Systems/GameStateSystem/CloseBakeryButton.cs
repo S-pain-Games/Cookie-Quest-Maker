@@ -16,7 +16,7 @@ public class CloseBakeryButton : MonoBehaviour
     private void Awake()
     {
         // Subscribe to Callbacks and get Commands
-        var evtSys = Admin.g_Instance.gameEventSystem;
+        var evtSys = Admin.Global.EventSystem;
         _onDailyStoriesCompletedCallback = evtSys.GetCallbackByName<EventVoid>("day_sys", "all_daily_stories_completed");
         _setGameStateCommand = evtSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
 

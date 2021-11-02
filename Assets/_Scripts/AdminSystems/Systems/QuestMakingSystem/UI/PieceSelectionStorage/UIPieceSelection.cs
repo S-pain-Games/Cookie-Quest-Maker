@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
-using CQM.QuestMaking;
+using CQM.Databases;
 
 // Handles the UI that shows all the available pieces of the selected type
 public class UIPieceSelection : MonoBehaviour
@@ -49,11 +49,10 @@ public class UIPieceSelection : MonoBehaviour
         pos.y += 150;
 
         // Loop over all unlocked word pieces
-        List<int> storage = Admin.g_Instance.inventoryData.m_Storage;
-        Dictionary<int, QuestPiece> qPiecesDB = Admin.g_Instance.questDB.m_QPiecesDB;
+        List<int> storage = Admin.Global.Database.Player.Inventory.m_Storage;
         for (int i = 0; i < storage.Count; i++)
         {
-            var questPiece = qPiecesDB[storage[i]];
+            var questPiece = Admin.Global.Database.Quests.GetQuestPieceComponent<QuestPiece>(storage[i]);
             // Only show the pieces that match the filter
             if (questPiece.m_Type == pieceType)
             {
@@ -64,14 +63,14 @@ public class UIPieceSelection : MonoBehaviour
         // Loop over all cookie inventory
         if (pieceType == QuestPiece.PieceType.Cookie)
         {
-            List<InventoryItem> cookiesStorage = Admin.g_Instance.inventoryData.m_Cookies;
+            List<InventoryItem> cookiesStorage = Admin.Global.Database.Player.Inventory.m_Cookies;
             if (cookiesStorage.Count <= 0) return;
 
             for (int i = 0; i < cookiesStorage.Count; i++)
             {
                 if (cookiesStorage[i].m_Amount <= 0) return; // Should be innecesary because the list shouldnt have empty items but just in case
 
-                QuestPiece cookiePiece = qPiecesDB[cookiesStorage[i].m_ItemID];
+                QuestPiece cookiePiece = Admin.Global.Database.Quests.GetQuestPieceComponent<QuestPiece>(cookiesStorage[i].m_ItemID);
                 // Only show the pieces that match the filter
                 pos = AddPieceToUI(pos, cookiePiece);
             }
@@ -80,8 +79,8 @@ public class UIPieceSelection : MonoBehaviour
         else if (pieceType == QuestPiece.PieceType.Target)
         {
             // TODO: ONLY HANDLES ONE TARGET
-            int targetID = Admin.g_Instance.storyDB.m_StoriesDB[m_CurrentStoryID].m_StoryData.m_Target;
-            QuestPiece targetPiece = Admin.g_Instance.questDB.m_QPiecesDB[targetID];
+            int targetID = Admin.Global.Database.Stories.GetStoryComponent<Story>(m_CurrentStoryID).m_StoryData.m_Target;
+            QuestPiece targetPiece = Admin.Global.Database.Quests.GetQuestPieceComponent<QuestPiece>(targetID);
 
             pos = AddPieceToUI(pos, targetPiece);
         }
@@ -95,11 +94,12 @@ public class UIPieceSelection : MonoBehaviour
         UIstorageElem.transform.localPosition = pos;
 
         // Initialize Element Data and Events
-        UIstorageElem.pieceID = questPiece.m_ID;
+        UIstorageElem.pieceID = questPiece.m_ParentID;
         UIstorageElem.OnSelected += StoragePiece_OnClicked;
 
+        var uiData = Admin.Global.Database.Quests.GetQuestPieceComponent<UIQuestPieceData>(questPiece.m_ParentID);
         // Initialize UI element with piece data
-        UIstorageElem.Build(questPiece);
+        UIstorageElem.Build(uiData);
         m_Elements.Add(UIstorageElem);
         return pos;
     }
@@ -108,8 +108,8 @@ public class UIPieceSelection : MonoBehaviour
     {
         m_SelectedPieceID = questPieceID;
         // Update UI
-        var UIPieceData = Admin.g_Instance.questDB.m_UIQuestPieces[m_SelectedPieceID];
-        _uiSelectedPieceView.UpdateUI(UIPieceData.sprite, UIPieceData.name, UIPieceData.description);
+        var UIPieceData = Admin.Global.Database.Quests.GetQuestPieceComponent<UIQuestPieceData>(m_SelectedPieceID);
+        _uiSelectedPieceView.UpdateUI(UIPieceData.m_Sprite, UIPieceData.m_Name, UIPieceData.m_Description);
     }
 
     public void UsePieceButton_OnClick()
@@ -138,7 +138,9 @@ public class UIPieceSelection : MonoBehaviour
 [Serializable]
 public class UIQuestPieceData
 {
-    public Sprite sprite;
-    public string name;
-    public string description;
+    public Sprite m_Sprite;
+    public string m_Name;
+    public string m_Description;
+
+    [HideInInspector] public int m_ParentID;
 }

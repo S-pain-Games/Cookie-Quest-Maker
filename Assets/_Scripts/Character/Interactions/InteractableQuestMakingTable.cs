@@ -8,7 +8,7 @@ public class InteractableQuestMakingTable : MonoBehaviour, IInteractableEntity
 
     public void Awake()
     {
-        var evtSys = Admin.g_Instance.gameEventSystem;
+        var evtSys = Admin.Global.EventSystem;
         _setStateCmd = evtSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 // Entry point to the Quest Making Gameplay System
-public class QuestMakingSystem : MonoBehaviour
+public class QuestMakingSystem
 {
     // References to Systems and Dbs
     private StorySystem _storySystem;

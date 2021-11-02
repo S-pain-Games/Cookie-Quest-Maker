@@ -122,7 +122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6839262565283562036}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueSystem, CQM.Scripts.Runtime
         m_MethodName: NextLine
         m_Mode: 1
@@ -192,7 +192,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5612763218185812416}
   - component: {fileID: 5172378233202238184}
-  - component: {fileID: 6839262565283562036}
   - component: {fileID: 1029722098594782724}
   m_Layer: 5
   m_Name: UI_Dialogue
@@ -229,22 +228,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146895226871911575}
   m_CullTransparentMesh: 1
---- !u!114 &6839262565283562036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2146895226871911575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa6b6d094e8869a4c85bb3b74a109faf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _dialogueBoxContainer: {fileID: 1693811375846806772}
-  _characterNameComp: {fileID: 1358749074003600818}
-  _lineTextComp: {fileID: 640952731166273355}
-  _dialogueLines: []
 --- !u!114 &1029722098594782724
 MonoBehaviour:
   m_ObjectHideFlags: 0

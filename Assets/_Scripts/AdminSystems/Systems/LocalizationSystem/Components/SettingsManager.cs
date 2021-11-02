@@ -15,7 +15,7 @@ public class SettingsManager : MonoBehaviour
 
     void Awake()
     {
-        ls = Admin.g_Instance.localizationSystem;
+        ls = Admin.Global.Systems.m_LocalizationSystem;
     }
 
     private void OnEnable()

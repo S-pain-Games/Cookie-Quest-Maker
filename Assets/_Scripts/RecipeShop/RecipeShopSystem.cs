@@ -11,22 +11,26 @@ public class RecipeShopSystem : MonoBehaviour
     [SerializeField] private List<GameObject> currentRecipes;
     [SerializeField] private Transform recipeListParent;
 
-    private Admin admin;
-
-    private Event<ItemData> _addCookieCommand;
-
     [SerializeField] private TextMeshProUGUI textGoodR;
     [SerializeField] private TextMeshProUGUI textEvilR;
     [SerializeField] private TextMeshProUGUI textPrice;
 
+    private CookieDB _cookiesData;
+    private InventoryData _inventoryData;
+
     private EventVoid _enableCharMovCmd;
     private EventVoid _disableCharMovCmd;
 
+    private EventVoid _buyRecipeCmd;
+
     private void Awake()
     {
-        admin = Admin.g_Instance;
-        _enableCharMovCmd = admin.gameEventSystem.GetCommandByName<EventVoid>("character_sys", "enable_movement");
-        _disableCharMovCmd = admin.gameEventSystem.GetCommandByName<EventVoid>("character_sys", "disable_movement");
+        var admin = Admin.Global;
+        _cookiesData = admin.Database.Cookies;
+        _inventoryData = admin.Database.Player.Inventory;
+        _enableCharMovCmd = admin.EventSystem.GetCommandByName<EventVoid>("character_sys", "enable_movement");
+        _disableCharMovCmd = admin.EventSystem.GetCommandByName<EventVoid>("character_sys", "disable_movement");
+        _buyRecipeCmd = admin.EventSystem.GetCommandByName<EventVoid>("cookie_making_sys", "buy_recipe");
     }
 
     private void OnEnable()
@@ -35,7 +39,7 @@ public class RecipeShopSystem : MonoBehaviour
 
         if (currentRecipes.Count == 0)
         {
-            List<RecipeData> recipes = admin.cookieDB.m_RecipeDataList;
+            List<RecipeData> recipes = _cookiesData.m_RecipeDataList;
             foreach (RecipeData r in recipes)
             {
                 GameObject newRecipeUI = Instantiate(pref_Recipe, recipeListParent);
@@ -76,7 +80,7 @@ public class RecipeShopSystem : MonoBehaviour
         if (selectedRecipe != -1)
         {
             RecipeData recipe;
-            admin.cookieDB.m_RecipeDataDB.TryGetValue(selectedRecipe, out recipe);
+            _cookiesData.m_RecipeDataDB.TryGetValue(selectedRecipe, out recipe);
 
             if (recipe != null)
             {
@@ -84,22 +88,22 @@ public class RecipeShopSystem : MonoBehaviour
                 {
                     if (recipe.m_Reputation == Reputation.GoodCookieReputation)
                     {
-                        bool bought = admin.inventorySystem.RemoveGoodCookieRep(recipe.price);
+                        bool bought = Admin.Global.Systems.m_InventorySystem.RemoveGoodCookieRep(recipe.price); // TODO
                         if (bought)
                         {
-                            admin.cookieDB.AddBoughtCookie(recipe.m_CookieID, recipe);
-                            admin.cookieMakingSystem.BuyRecipe();
+                            _cookiesData.AddBoughtCookie(recipe.m_CookieID, recipe);
+                            _buyRecipeCmd.Invoke();
                             UpdateTexts();
                         }
 
                     }
                     else if (recipe.m_Reputation == Reputation.EvilCookieReputation)
                     {
-                        bool bought = admin.inventorySystem.RemoveEvilCookieRep(recipe.price);
+                        bool bought = Admin.Global.Systems.m_InventorySystem.RemoveEvilCookieRep(recipe.price);
                         if (bought)
                         {
-                            admin.cookieDB.AddBoughtCookie(recipe.m_CookieID, recipe);
-                            admin.cookieMakingSystem.BuyRecipe();
+                            _cookiesData.AddBoughtCookie(recipe.m_CookieID, recipe);
+                            _buyRecipeCmd.Invoke();
                             UpdateTexts();
                         }
                     }
@@ -110,15 +114,15 @@ public class RecipeShopSystem : MonoBehaviour
 
     private void UpdateTexts()
     {
-        textGoodR.text = "Good Reputation: " + admin.inventoryData.m_GoodCookieReputation;
-        textEvilR.text = "Evil Reputation: " + admin.inventoryData.m_EvilCookieReputation;
+        textGoodR.text = "Good Reputation: " + _inventoryData.m_GoodCookieReputation;
+        textEvilR.text = "Evil Reputation: " + _inventoryData.m_EvilCookieReputation;
         UpdatePrice();
     }
 
     private void UpdatePrice()
     {
         RecipeData recipe;
-        admin.cookieDB.m_RecipeDataDB.TryGetValue(selectedRecipe, out recipe);
+        _cookiesData.m_RecipeDataDB.TryGetValue(selectedRecipe, out recipe);
         if (recipe != null)
             textPrice.text = "Price: " + recipe.price;
         else

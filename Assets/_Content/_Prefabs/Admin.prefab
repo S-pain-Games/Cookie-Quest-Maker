@@ -10,16 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2041105134198296795}
   - component: {fileID: 2041105134198296794}
-  - component: {fileID: 3180401619160224539}
-  - component: {fileID: 5370908183021347996}
-  - component: {fileID: 2041105134198296799}
-  - component: {fileID: 2041105134198296796}
-  - component: {fileID: 5950021498337157384}
-  - component: {fileID: 2513911811145284846}
-  - component: {fileID: 120580767631800667}
-  - component: {fileID: 2174897155559580259}
-  - component: {fileID: 9146998435492606265}
-  - component: {fileID: 1001707630}
+  - component: {fileID: 258224912}
+  - component: {fileID: 585195714406842495}
+  - component: {fileID: 1064268925869669367}
   m_Layer: 0
   m_Name: Admin
   m_TagString: Untagged
@@ -53,20 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef87ea3ff5678442b39938ba47c5bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questDBRef: {fileID: 3180401619160224539}
-  storyDBRef: {fileID: 5370908183021347996}
-  calendarData:
-    m_Year: 0
-    m_Month: 0
-    m_Day: 0
-  inventoryData:
-    m_GoodCookieReputation: 0
-    m_EvilCookieReputation: 0
-    m_Storage: 
-  questMakerSystem: {fileID: 0}
-  cookieMakingSystem: {fileID: 0}
-  characterSystem: {fileID: 1001707630}
---- !u!114 &3180401619160224539
+  _database: {fileID: 258224912}
+--- !u!114 &258224912
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,31 +56,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 2041105134198296772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce4443a2f72006644b0f1d920dd13119, type: 3}
+  m_Script: {fileID: 11500000, guid: d21672e173390854eb9316e92098a043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  QuestBuildingPiecePrefabs:
-  - m_NameID: attack
-    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
-  - m_NameID: assist
-    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
-  - m_NameID: mayor
-    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
-  - m_NameID: plain_cookie
-    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
-  - m_NameID: brutally
-    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
-  - m_NameID: kindly
-    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
-  - m_NameID: baseball_bat
-    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
-  - m_NameID: molly
-    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
-  - m_NameID: plain_cookie_2
-    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
-  - m_NameID: dialogate
-    m_Prefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
---- !u!114 &5370908183021347996
+  m_Player:
+    m_InputComponent:
+      m_Character:
+      - {fileID: 0}
+      - {fileID: 0}
+  m_GameState: {fileID: 585195714406842495}
+  m_Popups:
+    m_InstantiationTransform: {fileID: 0}
+    m_PopupPrefab: {fileID: 3051747196200662067, guid: ea922bc99ae428843ba685267cf72fb6, type: 3}
+  m_Npcs:
+    m_NpcBehaviour:
+    - {fileID: 0}
+  m_Dialogues:
+    m_DialogueUIData:
+      m_Container: {fileID: 0}
+      m_CaracterName: {fileID: 0}
+      m_Line: {fileID: 0}
+      m_CurrentDialogueLines: []
+      m_CurrentLineIndex: 0
+  m_Quests: {fileID: 1064268925869669367}
+  m_Cameras:
+    m_MainCam: {fileID: 0}
+--- !u!114 &585195714406842495
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,30 +90,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2041105134198296772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01756391b5f2aca4692cfbf337722357, type: 3}
+  m_Script: {fileID: 11500000, guid: b2144f8f0843d354496a3cf61a6757fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StorySelectionUICards: []
---- !u!114 &2041105134198296799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3c6f112303e68b4fbb44dae8bc89fde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Bakery:
-  - {fileID: 0}
+  m_Bakery: {fileID: 0}
   m_MainMenu: {fileID: 0}
   m_QuestMaking: {fileID: 0}
   m_CookieMaking: {fileID: 0}
-  m_BakeryNight:
-  - {fileID: 0}
---- !u!114 &2041105134198296796
+  m_BakeryNight: {fileID: 0}
+--- !u!114 &1064268925869669367
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,87 +107,46 @@ MonoBehaviour:
   m_GameObject: {fileID: 2041105134198296772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94f40ab6060b8b64fa22815e254defef, type: 3}
+  m_Script: {fileID: 11500000, guid: b132c417b4dd7b24d8205d3b01373368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5950021498337157384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27cca9ba5739e064ab6b1be06747e886, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _selectedRecipe: -1
---- !u!114 &2513911811145284846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa65cfa82464a874da6a4a73cad70b4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_NpcBehaviour:
-  - {fileID: 0}
---- !u!114 &120580767631800667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bba9fc684ec3024a973df4fed65c628, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mainCam: {fileID: 0}
---- !u!114 &2174897155559580259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c78eee7b2f6830b43be710e21ec81d1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &9146998435492606265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38226d441ebd18e4789542bdde498b78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PopupParent: {fileID: 0}
-  m_PopupPrefab: {fileID: 3051747196200662067, guid: ea922bc99ae428843ba685267cf72fb6, type: 3}
---- !u!114 &1001707630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a202115970900fd45b186c95a39c37e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _character:
-  - {fileID: 0}
-  - {fileID: 0}
+  qpData:
+  - m_ID: plain_cookie
+    m_QuestSelectionUI:
+      m_Sprite: {fileID: 0}
+      m_Name: Plain Cookie
+      m_Description: dawdwad
+      m_ParentID: 0
+    m_Functional:
+      m_Type: 4
+      m_Tags:
+      - m_Type: 1
+        m_Value: 1
+      m_ParentID: 0
+    m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  - m_ID: eureka
+    m_QuestSelectionUI:
+      m_Sprite: {fileID: 0}
+      m_Name: Attack
+      m_Description: dawdwad
+      m_ParentID: 0
+    m_Functional:
+      m_Type: 0
+      m_Tags:
+      - m_Type: 0
+        m_Value: 1
+      m_ParentID: 0
+    m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  - m_ID: mayor
+    m_QuestSelectionUI:
+      m_Sprite: {fileID: 0}
+      m_Name: Mayor
+      m_Description: dawdwad
+      m_ParentID: 0
+    m_Functional:
+      m_Type: 1
+      m_Tags:
+      - m_Type: 0
+        m_Value: 1
+      m_ParentID: 0
+    m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}

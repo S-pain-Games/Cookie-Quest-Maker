@@ -15,7 +15,7 @@ public class LocalizedText : MonoBehaviour
 
     private void Awake()
     {
-        locSystem = Admin.g_Instance.localizationSystem;
+        locSystem = Admin.Global.Systems.m_LocalizationSystem;
     }
 
     private void OnEnable()

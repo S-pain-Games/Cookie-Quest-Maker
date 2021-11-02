@@ -1,4 +1,4 @@
-﻿using CQM.QuestMaking;
+﻿using CQM.Databases;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,6 +14,14 @@ public class GameEventSystem
     public void RegisterSystem(ISystemEvents sys)
     {
         m_RegisteredSystems.Add(sys);
+    }
+
+    public void RegisterSystems(List<ISystemEvents> sys)
+    {
+        for (int i = 0; i < sys.Count; i++)
+        {
+            RegisterSystem(sys[i]);
+        }
     }
 
     public void Initialize()

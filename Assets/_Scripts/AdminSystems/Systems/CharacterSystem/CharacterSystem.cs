@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterSystem : MonoBehaviour, ISystemEvents
+public class CharacterSystem : ISystemEvents
 {
-    [SerializeField]
-    private List<AgentMouseListener> _character; // this is weird af
+    private InputComponent m_Input;
+
+    public void Initialize(InputComponent input)
+    {
+        m_Input = input;
+    }
 
     public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
     {
@@ -21,17 +25,18 @@ public class CharacterSystem : MonoBehaviour, ISystemEvents
 
     private void EnableMovement()
     {
-        for (int i = 0; i < _character.Count; i++)
+        // TODO
+        for (int i = 0; i < m_Input.m_Character.Count; i++)
         {
-            _character[i].SetInputActivated(true);
+            m_Input.m_Character[i].SetInputActivated(true);
         }
     }
 
     private void DisableMovement()
     {
-        for (int i = 0; i < _character.Count; i++)
+        for (int i = 0; i < m_Input.m_Character.Count; i++)
         {
-            _character[i].SetInputActivated(false);
+            m_Input.m_Character[i].SetInputActivated(false);
         }
     }
 }

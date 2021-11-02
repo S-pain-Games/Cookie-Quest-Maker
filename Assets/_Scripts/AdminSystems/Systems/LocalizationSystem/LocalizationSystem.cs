@@ -48,7 +48,7 @@ public class LocalizationSystem
 
     public void LoadData()
     {
-        var ids = Admin.g_Instance.ID.localization;
+        var ids = Admin.Global.ID.localization;
 
         //Main menu
         m_Spanish.Add(ids.mainmenu_title, "Menú");

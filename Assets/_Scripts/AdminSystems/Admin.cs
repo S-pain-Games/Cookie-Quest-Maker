@@ -1,146 +1,134 @@
-using CQM.QuestMaking;
+using CQM.Databases;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-[RequireComponent(typeof(GameStateSystem))]
 
-[RequireComponent(typeof(CameraSystem))]
-[RequireComponent(typeof(StorySystem))]
-[RequireComponent(typeof(QuestMakingSystem))]
-[RequireComponent(typeof(CookieMakingSystem))]
-[RequireComponent(typeof(NpcSystem))]
-[RequireComponent(typeof(PopupSystem))]
-
-[RequireComponent(typeof(QuestDBUnityReferences))]
-[RequireComponent(typeof(StoryDBUnityReferences))]
 public class Admin : MonoBehaviour
 {
-    public static Admin g_Instance;
+    public static Admin Global { get; private set; }
+
+    public Database Database { get => _database; }
+    public Systems Systems { get => _systems; }
+    public GameEventSystem EventSystem { get => _eventSystem; }
+
+    [SerializeField] private Systems _systems = new Systems();
+    [SerializeField] private Database _database;
+    private GameEventSystem _eventSystem;
+
 
     public GameDataIDs ID = new GameDataIDs();
-
-    /*
-     *  TODO Refactor entire data accessing system after alpha
-     */
-    // Game Data Storage
-    public StoryDB storyDB;
-    public QuestDB questDB;
-    public CookieDB cookieDB;
-    public TownDB townData;
-    public DialogueDB dialogueDB;
-    public DayData dayData;
-    [SerializeField] private QuestDBUnityReferences questDBRef;
-    [SerializeField] private StoryDBUnityReferences storyDBRef;
-
-    [HideInInspector] public CalendarData calendarData;
-
-    // Player Data
-    [HideInInspector] public InventoryData inventoryData;
-
-    // Game Systems
-    [HideInInspector] public QuestMakingSystem questMakerSystem;
-    [HideInInspector] public CookieMakingSystem cookieMakingSystem;
-    [HideInInspector] public InventorySystem inventorySystem;
-    [HideInInspector] public GameEventSystem gameEventSystem;
-    [HideInInspector] public LocalizationSystem localizationSystem;
-
-    private GameStateSystem gameStateSystem;
-    private CameraSystem camSystem;
-    private DaySystem daySystem;
-    private StorySystem storySystem;
-    private DialogueSystem dialogueSystem;
-
-    [SerializeField]
-    private CharacterSystem characterSystem;
-    private NpcSystem npcSystem;
-    private TownSystem townSystem;
-    private CalendarSystem calendarSystem;
-    private PopupSystem popupSystem;
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Init()
     {
-        g_Instance = FindObjectOfType<Admin>();
-        g_Instance.Initialize();
+        Global = FindObjectOfType<Admin>();
+        Global.Initialize();
     }
 
     private void Initialize()
     {
         // INITIALIZATION ORDER MATTERS
-        InitializeData();
-        InitializeSystems();
+        _database.LoadData();
+
+        _eventSystem = new GameEventSystem();
+
+        _systems.m_GameStateSystem.Initialize(Database.GameState); // Game State Sys registers events on init
+        _eventSystem.RegisterSystems(_systems.GetSystemsEvents());
+        _eventSystem.Initialize();
+
+        _systems.InitializeSystems(EventSystem, Database);
+
+        _systems.m_GameStateSystem.StartGame();
+    }
+}
+
+[System.Serializable]
+public class Systems
+{
+    public GameStateSystem m_GameStateSystem = new GameStateSystem();
+    public LocalizationSystem m_LocalizationSystem = new LocalizationSystem();
+    public CameraSystem m_CameraSystem = new CameraSystem();
+
+    public QuestMakingSystem m_QuestMakerSystem = new QuestMakingSystem();
+    public CookieMakingSystem m_CookieMakingSystem = new CookieMakingSystem();
+    public StorySystem m_StorySystem = new StorySystem();
+
+    public DialogueSystem m_DialogueSystem = new DialogueSystem();
+    public NpcSystem m_NpcSystem = new NpcSystem();
+    public PopupSystem m_PopupSystem = new PopupSystem();
+    public CharacterSystem m_CharacterSystem = new CharacterSystem();
+    public InventorySystem m_InventorySystem = new InventorySystem();
+
+    public DaySystem m_DaySystem = new DaySystem();
+    public TownSystem m_TownSystem = new TownSystem();
+    public CalendarSystem m_CalendarSystem = new CalendarSystem();
+
+
+    public List<ISystemEvents> GetSystemsEvents()
+    {
+        List<ISystemEvents> systems = new List<ISystemEvents>();
+        systems.Add(m_GameStateSystem);
+        systems.Add(m_PopupSystem);
+        systems.Add(m_CameraSystem);
+        systems.Add(m_DaySystem);
+        systems.Add(m_StorySystem);
+        systems.Add(m_DialogueSystem);
+        systems.Add(m_NpcSystem);
+        systems.Add(m_InventorySystem);
+        systems.Add(m_CharacterSystem);
+        systems.Add(m_CookieMakingSystem);
+
+        return systems;
     }
 
-    private void InitializeSystems()
+    public void InitializeSystems(GameEventSystem eventSystem, Database database)
     {
-        // Get or create Game Systems
-        gameEventSystem = new GameEventSystem();
-        gameStateSystem = GetComponent<GameStateSystem>();
-        localizationSystem = new LocalizationSystem();
-        camSystem = GetComponent<CameraSystem>();
-        daySystem = new DaySystem();
-        storySystem = GetComponent<StorySystem>();
-        dialogueSystem = FindObjectOfType<DialogueSystem>(true); // This might be questionable
-        questMakerSystem = GetComponent<QuestMakingSystem>();
-        cookieMakingSystem = GetComponent<CookieMakingSystem>();
-        npcSystem = GetComponent<NpcSystem>();
-        townSystem = new TownSystem();
-        calendarSystem = new CalendarSystem();
-        inventorySystem = new InventorySystem();
-        popupSystem = GetComponent<PopupSystem>();
-
-        // Initialize Events System
-        gameEventSystem.RegisterSystem(gameStateSystem);
-        gameEventSystem.RegisterSystem(camSystem);
-        gameEventSystem.RegisterSystem(daySystem);
-        gameEventSystem.RegisterSystem(storySystem);
-        gameEventSystem.RegisterSystem(dialogueSystem);
-        gameEventSystem.RegisterSystem(npcSystem);
-        gameEventSystem.RegisterSystem(inventorySystem);
-        gameEventSystem.RegisterSystem(popupSystem);
-        gameEventSystem.RegisterSystem(characterSystem);
-        gameEventSystem.Initialize();
-
-        gameStateSystem.Initialize(gameEventSystem);
-        localizationSystem.LoadData();
-        daySystem.Initialize(gameEventSystem, dayData);
-        storySystem.Initialize(storyDB);
-        questMakerSystem.Initialize(storySystem, storyDB);
-        cookieMakingSystem.Initialize(cookieDB);
-        npcSystem.Initialize(storyDB, gameEventSystem);
-        dialogueSystem.Initialize(gameEventSystem);
-        townSystem.Initialize(townData);
-        calendarSystem.Initialize(calendarData, storyDB);
-        inventorySystem.Initialize(inventoryData);
+        m_CharacterSystem.Initialize(database.Player.Input);
+        m_LocalizationSystem.LoadData();
+        m_DaySystem.Initialize(eventSystem, database.World.CurrentDay);
+        m_StorySystem.Initialize(database.Stories);
+        m_QuestMakerSystem.Initialize(m_StorySystem, database.Stories); // TODO -> Remove Story System dependency
+        m_CookieMakingSystem.Initialize(database.Cookies);
+        m_NpcSystem.Initialize(database.Stories, database.Npcs, eventSystem);
+        m_DialogueSystem.Initialize(database.Dialogues.SceneElements, eventSystem);
+        m_TownSystem.Initialize(database.Town);
+        m_CalendarSystem.Initialize(database.World.Calendar, database.Stories);
+        m_PopupSystem.Initialize(database.Popups);
+        m_CameraSystem.Initialize(database.Cameras);
+        m_InventorySystem.Initialize(database.Player.Inventory);
     }
+}
 
-    private void InitializeData()
+public class WorldDB
+{
+    public DayData CurrentDay { get; private set; }
+    public CalendarData Calendar { get; private set; }
+
+
+    public WorldDB()
     {
-        // Create DBs and data objects
-        storyDB = new StoryDB();
-        questDB = new QuestDB();
-        cookieDB = new CookieDB();
-        dialogueDB = new DialogueDB();
-        calendarData = new CalendarData();
-        townData = new TownDB();
-        dayData = new DayData();
+        CurrentDay = new DayData();
+        Calendar = new CalendarData();
+    }
+}
 
-        // Create Player Data Containers
-        inventoryData = new InventoryData();
+[System.Serializable]
+public class PlayerDB
+{
+    public InventoryData Inventory { get => m_Inventory; }
+    public InputComponent Input { get => m_InputComponent; }
 
-        // Get DBs Unity References Adapters
-        questDBRef = GetComponent<QuestDBUnityReferences>();
-        storyDBRef = GetComponent<StoryDBUnityReferences>();
+    private InputComponent m_InputComponent = new InputComponent();
+    private InventoryData m_Inventory;
 
-        // Load Data
-        storyDB.LoadData(storyDBRef);
-        questDB.LoadData(questDBRef);
-        townData.LoadData(storyDB);
-        cookieDB.LoadData();
-        dialogueDB.LoadData();
+    public void LoadData()
+    {
+        m_Inventory = new InventoryData();
+        m_Inventory.Initialize();
 
-        // Initialize Player Data Containers
-        inventoryData.Initialize();
+        // Automatically initialize to avoid inspector pain
+        m_InputComponent.m_Character = Object.FindObjectsOfType<AgentMouseListener>(true).ToList();
     }
 }

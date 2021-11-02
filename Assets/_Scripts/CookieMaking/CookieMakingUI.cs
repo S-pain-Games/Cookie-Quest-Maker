@@ -15,13 +15,13 @@ public class CookieMakingUI : MonoBehaviour
     [SerializeField] private List<GameObject> currentRecipes;
     [SerializeField] private Transform recipeListParent;
 
-    private Admin admin;
+    private CookieDB cookiesData;
     CookieMakingSystem cookieMakingSystem;
 
     private void Awake()
     {
-        admin = Admin.g_Instance;
-        cookieMakingSystem = admin.cookieMakingSystem;
+        cookiesData = Admin.Global.Database.Cookies;
+        cookieMakingSystem = Admin.Global.Systems.m_CookieMakingSystem;
     }
 
     private void OnEnable()
@@ -80,24 +80,23 @@ public class CookieMakingUI : MonoBehaviour
     public void UpdateUI(int id)
     {
         CookieData cookieData;
-        if(admin.cookieDB.m_CookieDataDB.TryGetValue(id, out cookieData))
+        if (cookiesData.m_CookieDataDB.TryGetValue(id, out cookieData))
         {
             txt_CookieName.text = cookieData.m_CookieName;
             txt_CookieDescription.text = cookieData.m_CookieDescription;
-            List<QPTag> tags = admin.questDB.m_QPiecesDB[id].m_Tags;
+            List<QPTag> tags = Admin.Global.Database.Quests.GetQuestPieceComponent<QuestPiece>(id).m_Tags;
             txt_CookieStats.text = "Hero Stats: \n";
             foreach (QPTag q in tags)
             {
                 txt_CookieStats.text += q.m_Type.ToString() + ": " + q.m_Value + "\n";
             }
         }
-        
     }
 
     private void UpdateCookieRecipesUI()
     {
         //Debug.Log("Entra update");
-        foreach(GameObject g in currentRecipes)
+        foreach (GameObject g in currentRecipes)
         {
             //g.GetComponent<RecipeShopUI>().OnSelectRecipe -= SelectRecipe;
             Destroy(g);
@@ -108,7 +107,7 @@ public class CookieMakingUI : MonoBehaviour
 
     private void CreateCookiePrefabs()
     {
-        List<RecipeData> recipes = admin.cookieDB.m_BoughtRecipeDataList;
+        List<RecipeData> recipes = cookiesData.m_BoughtRecipeDataList;
         foreach (RecipeData r in recipes)
         {
             GameObject newRecipeUI = Instantiate(pref_Recipe, recipeListParent);

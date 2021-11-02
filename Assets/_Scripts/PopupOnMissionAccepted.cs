@@ -11,7 +11,7 @@ public class PopupOnMissionAccepted : MonoBehaviour
 
     private void Awake()
     {
-        var evtSys = Admin.g_Instance.gameEventSystem;
+        var evtSys = Admin.Global.EventSystem;
         _storyStartedCallback = evtSys.GetCallbackByName<Event<int>>("story_sys", "story_started");
         _allStoriesCompletedTodayCallback = evtSys.GetCallbackByName<EventVoid>("day_sys", "all_daily_stories_completed");
         _showPopupCommand = evtSys.GetCommandByName<Event<PopupData>>("popup_sys", "show_popup");
@@ -32,7 +32,7 @@ public class PopupOnMissionAccepted : MonoBehaviour
     private void StoryStartedCallback_OnInvoked(int storyId)
     {
         PopupData pData = new PopupData();
-        pData.m_Text = Admin.g_Instance.storyDB.m_StoriesDB[storyId].m_StoryData.m_Title + " Story Started";
+        pData.m_Text = Admin.Global.Database.Stories.GetStoryComponent<Story>(storyId).m_StoryData.m_Title + " Story Started";
         pData.m_TimeAlive = 3.0f;
         _showPopupCommand.Invoke(pData);
     }

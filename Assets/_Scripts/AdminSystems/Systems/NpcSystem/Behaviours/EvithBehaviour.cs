@@ -15,7 +15,7 @@ public class EvithBehaviour : MonoBehaviour, IInteractableEntity
 
     private void Awake()
     {
-        var evtSys = Admin.g_Instance.gameEventSystem;
+        var evtSys = Admin.Global.EventSystem;
         _showDialogueCmd = evtSys.GetCommandByName<Event<ShowDialogueEvtArgs>>("dialogue_sys", "show_dialogue");
     }
 

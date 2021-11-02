@@ -1,12 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PopupSystem : MonoBehaviour, ISystemEvents
+public class PopupSystem : ISystemEvents
 {
-    [SerializeField]
-    private GameObject m_PopupParent;
-    [SerializeField]
-    private GameObject m_PopupPrefab;
+    private PopupDataComponent m_PopupData;
+
+    public void Initialize(PopupDataComponent popupData)
+    {
+        m_PopupData = popupData;
+    }
 
     public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
     {
@@ -20,7 +22,7 @@ public class PopupSystem : MonoBehaviour, ISystemEvents
 
     private void ShowPopup(PopupData popData)
     {
-        PopupBehaviour popUp = Object.Instantiate(m_PopupPrefab, m_PopupParent.transform).GetComponent<PopupBehaviour>();
+        PopupBehaviour popUp = Object.Instantiate(m_PopupData.m_PopupPrefab, m_PopupData.m_InstantiationTransform).GetComponent<PopupBehaviour>();
         popUp.Initialize(popData);
     }
 }

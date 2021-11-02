@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace CQM.QuestMaking.UI
+namespace CQM.Databases.UI
 {
     [RequireComponent(typeof(UIPressable))]
     [RequireComponent(typeof(UIDraggable))]

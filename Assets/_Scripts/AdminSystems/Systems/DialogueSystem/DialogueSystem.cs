@@ -4,28 +4,16 @@ using UnityEngine;
 using TMPro;
 using System;
 
-public class DialogueSystem : MonoBehaviour, ISystemEvents
+public class DialogueSystem : ISystemEvents
 {
-    [SerializeField]
-    private GameObject _dialogueBoxContainer;
-
-    [Header("Text")]
-    [SerializeField]
-    private TextMeshProUGUI _characterNameComp;
-    [SerializeField]
-    private TextMeshProUGUI _lineTextComp;
-
-    [SerializeField]
-    private List<string> _dialogueLines;
-
-    private int _lineIndex = 0;
-    private Action _callbackOnDialogueEnd;
+    private DialogueSceneElements _dialogueData;
 
     private EventVoid _enableCharMovementCmd;
     private EventVoid _disableCharMovementCmd;
 
-    public void Initialize(GameEventSystem evtSys)
+    public void Initialize(DialogueSceneElements dialogueData, GameEventSystem evtSys)
     {
+        _dialogueData = dialogueData;
         _enableCharMovementCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "enable_movement");
         _disableCharMovementCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "disable_movement");
     }
@@ -33,34 +21,36 @@ public class DialogueSystem : MonoBehaviour, ISystemEvents
     // TODO: Add behaviour to stack dialogues
     public void ShowDialogue(List<string> dialogue, string characterName, Action callback)
     {
-        _dialogueBoxContainer.SetActive(true);
-        _dialogueLines = dialogue;
+        var data = _dialogueData;
+        data.m_Container.SetActive(true);
+        data.m_CurrentDialogueLines = dialogue;
 
-        _characterNameComp.text = characterName;
-        _lineTextComp.text = _dialogueLines[_lineIndex];
-        _callbackOnDialogueEnd = callback;
+        data.m_CaracterName.text = characterName;
+        data.m_Line.text = data.m_CurrentDialogueLines[data.m_CurrentLineIndex];
+        data.m_CallbackOnDialogueEnd = callback;
 
         _disableCharMovementCmd.Invoke();
     }
 
     public void NextLine()
     {
-        if (_lineIndex < _dialogueLines.Count - 1)
+        var data = _dialogueData;
+        if (data.m_CurrentLineIndex < data.m_CurrentDialogueLines.Count - 1)
         {
-            _lineIndex++;
-            _lineTextComp.text = _dialogueLines[_lineIndex];
+            data.m_CurrentLineIndex++;
+            data.m_Line.text = data.m_CurrentDialogueLines[data.m_CurrentLineIndex];
         }
         else
         {
-            _dialogueBoxContainer.SetActive(false);
-            _lineIndex = 0;
+            data.m_Container.SetActive(false);
+            data.m_CurrentLineIndex = 0;
 
             _enableCharMovementCmd.Invoke();
 
-            if (_callbackOnDialogueEnd != null)
+            if (data.m_CallbackOnDialogueEnd != null)
             {
-                _callbackOnDialogueEnd.Invoke();
-                _callbackOnDialogueEnd = null;
+                data.m_CallbackOnDialogueEnd.Invoke();
+                data.m_CallbackOnDialogueEnd = null;
             }
         }
     }
@@ -74,6 +64,7 @@ public class DialogueSystem : MonoBehaviour, ISystemEvents
         // Commands
         var evt = commands.AddEvent<ShowDialogueEvtArgs>("show_dialogue".GetHashCode());
         evt.OnInvoked += (args) => ShowDialogue(args.dialogue, args.charName, args.callback);
+        commands.AddEvent("continue_dialogue".GetHashCode()).OnInvoked += NextLine;
     }
 }
 
@@ -91,13 +82,33 @@ public struct ShowDialogueEvtArgs
     }
 }
 
+[Serializable]
 public class DialogueDB
 {
-    // TODO: Complete this
-    // Contains all the random dialogue lines id's (for localization) said by secondary non-story NPCs
-    public Dictionary<int, List<int>> m_RandomDialogue = new Dictionary<int, List<int>>(); // List?
+    public DialogueSceneElements SceneElements => m_DialogueUIData;
+
+    [SerializeField]
+    private DialogueSceneElements m_DialogueUIData = new DialogueSceneElements();
+    private Dictionary<int, List<int>> m_RandomDialogue = new Dictionary<int, List<int>>(); // TODO: Localize
+
 
     public void LoadData()
     {
     }
+}
+
+[Serializable]
+public class DialogueSceneElements
+{
+    public GameObject m_Container;
+
+    [Header("Text")]
+    public TextMeshProUGUI m_CaracterName;
+    public TextMeshProUGUI m_Line;
+
+    [HideInInspector]
+    public List<string> m_CurrentDialogueLines;
+
+    [HideInInspector] public int m_CurrentLineIndex = 0;
+    public Action m_CallbackOnDialogueEnd;
 }

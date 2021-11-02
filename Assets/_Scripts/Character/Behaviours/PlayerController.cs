@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _input = GetComponent<AgentMouseListener>();
-        var evtSys = Admin.g_Instance.gameEventSystem;
+        var evtSys = Admin.Global.EventSystem;
 
         _onBakeryStateEnter = evtSys.GetCallbackByName<EventVoid>("game_state_sys", _enableCallbackID);
         _onBakeryStateExit = evtSys.GetCallbackByName<EventVoid>("game_state_sys", _disableCallbackID);

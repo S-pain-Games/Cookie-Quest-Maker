@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CQM.QuestMaking.UI
+namespace CQM.Databases.UI
 {
     public class PieceFilteringMenu : MonoBehaviour
     {

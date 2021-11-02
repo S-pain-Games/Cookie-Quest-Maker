@@ -14,7 +14,7 @@ public class NextDayButton : MonoBehaviour
     {
         _button = GetComponent<Button>();
 
-        var evtSys = Admin.g_Instance.gameEventSystem;
+        var evtSys = Admin.Global.EventSystem;
         _startNewDayCommand = evtSys.GetCommandByName<EventVoid>("day_sys", "start_new_day");
     }
 

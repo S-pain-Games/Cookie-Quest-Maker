@@ -16,7 +16,7 @@ public class CookieDB
 
     public void LoadData()
     {
-        var pIds = Admin.g_Instance.ID.pieces;
+        var pIds = Admin.Global.ID.pieces;
 
         LoadRecipes(pIds);
         LoadCookies(pIds);

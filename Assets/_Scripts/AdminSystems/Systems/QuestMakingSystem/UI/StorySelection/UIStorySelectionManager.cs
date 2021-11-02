@@ -27,7 +27,7 @@ public class UIStorySelectionManager : MonoBehaviour
 
     private void Awake()
     {
-        storyDB = Admin.g_Instance.storyDB;
+        storyDB = Admin.Global.Database.Stories;
     }
 
     private void OnEnable()

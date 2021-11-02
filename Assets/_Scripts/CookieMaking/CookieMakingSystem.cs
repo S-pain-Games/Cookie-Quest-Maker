@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
-using CQM.QuestMaking;
+using CQM.Databases;
 
-public class CookieMakingSystem : MonoBehaviour
+public class CookieMakingSystem : ISystemEvents
 {
     private CookieDB _cookieDB;
 
-    public int _selectedRecipe = -1;
-
+    private int _selectedRecipe = -1;
     public event Action<int> OnCreateCookie;
     public event Action OnBuyRecipe;
 
@@ -19,7 +18,7 @@ public class CookieMakingSystem : MonoBehaviour
     public void Initialize(CookieDB cookieDB)
     {
         _cookieDB = cookieDB;
-        var evtSys = Admin.g_Instance.gameEventSystem;
+        var evtSys = Admin.Global.EventSystem;
         _addCookieCommand = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_cookie");
     }
 
@@ -42,5 +41,14 @@ public class CookieMakingSystem : MonoBehaviour
     public void BuyRecipe()
     {
         OnBuyRecipe?.Invoke();
+    }
+
+    public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+    {
+        commands = new EventSys();
+        callbacks = new EventSys();
+        sysID = "cookie_making_sys".GetHashCode();
+
+        commands.AddEvent("buy_recipe".GetHashCode()).OnInvoked += BuyRecipe;
     }
 }

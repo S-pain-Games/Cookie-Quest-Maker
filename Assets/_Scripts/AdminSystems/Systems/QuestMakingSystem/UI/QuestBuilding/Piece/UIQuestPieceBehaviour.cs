@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
-namespace CQM.QuestMaking.UI
+namespace CQM.Databases.UI
 {
     [RequireComponent(typeof(UIDraggable))]
     [RequireComponent(typeof(UIPressable))]
@@ -33,13 +33,13 @@ namespace CQM.QuestMaking.UI
         private GraphicRaycaster _raycaster;
         private List<RaycastResult> m_Results = new List<RaycastResult>();
 
-        public void Initialize(Canvas canvas, QuestPiece piece)
+        public void Initialize(Canvas canvas, UIQuestPieceData uiData, QuestPiece piece)
         {
             _canvas = canvas;
             _raycaster = canvas.GetComponent<GraphicRaycaster>();
             Piece = piece;
             _draggable.Initialize(canvas);
-            _textComp.text = Piece.m_PieceName;
+            _textComp.text = uiData.m_Name;
         }
 
         private void Awake()

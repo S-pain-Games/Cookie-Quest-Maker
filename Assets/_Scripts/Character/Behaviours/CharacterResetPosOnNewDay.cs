@@ -10,7 +10,7 @@ public class CharacterResetPosOnNewDay : MonoBehaviour
 
     private void Awake()
     {
-        var evtSys = Admin.g_Instance.gameEventSystem;
+        var evtSys = Admin.Global.EventSystem;
         _onDayEndedCallback = evtSys.GetCallbackByName<EventVoid>("day_sys", "day_ended");
         _onDayEndedCallback.OnInvoked += OnDayEndedCallback_OnInvoked;
     }

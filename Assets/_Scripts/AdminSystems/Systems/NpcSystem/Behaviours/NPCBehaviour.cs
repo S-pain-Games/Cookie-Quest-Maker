@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class NPCBehaviour : MonoBehaviour, IInteractableEntity
 {
-    public NPCData m_NpcData = new NPCData();
+    public NPCBehaviourData m_NpcData = new NPCBehaviourData();
 
     private bool m_Interacting = false;
 
@@ -13,7 +13,7 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
 
     private void Awake()
     {
-        var evtSys = Admin.g_Instance.gameEventSystem;
+        var evtSys = Admin.Global.EventSystem;
         _showDialogueCmd = evtSys.GetCommandByName<Event<ShowDialogueEvtArgs>>("dialogue_sys", "show_dialogue");
         _startStoryCmd = evtSys.GetCommandByName<Event<int>>("story_sys", "start_story");
         finalizeStoryEvt = evtSys.GetCommandByName<Event<int>>("story_sys", "finalize_story");
@@ -49,7 +49,7 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
         if (m_NpcData.m_HasToStartAStory)
         {
             // Please do not write lines this horrible in production code, this is only for debugging
-            Debug.Log("Started Story : " + Admin.g_Instance.storyDB.m_StoriesDB[m_NpcData.m_StoryIDToStartOnInteract].m_StoryData.m_Title);
+            Debug.Log("Started Story : " + Admin.Global.Database.Stories.GetStoryComponent<Story>(m_NpcData.m_StoryIDToStartOnInteract).m_StoryData.m_Title);
             _startStoryCmd.Invoke(m_NpcData.m_StoryIDToStartOnInteract);
         }
         m_Interacting = false;

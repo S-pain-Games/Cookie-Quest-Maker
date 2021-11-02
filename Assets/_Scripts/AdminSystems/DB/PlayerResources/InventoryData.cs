@@ -23,20 +23,20 @@ public class InventoryData
     {
         // DEV ONLY, THE INVENTORY SHOULD BE FILLED BY
         // THE INVENTORY SYSTEM WHEN LOADING THE SAVED GAME
-        var ids = Admin.g_Instance.ID.pieces;
 
-        m_Storage.Add(ids.attack);
-        m_Storage.Add(ids.assist);
-        m_Storage.Add(ids.baseball_bat);
-        m_Storage.Add(ids.brutally);
-        m_Storage.Add(ids.kindly);
-        m_Storage.Add("dialogate".GetHashCode());
+        m_Storage.Add("eureka".GetHashCode());
+        //m_Storage.Add(ids.attack);
+        //m_Storage.Add(ids.assist);
+        //m_Storage.Add(ids.baseball_bat);
+        //m_Storage.Add(ids.brutally);
+        //m_Storage.Add(ids.kindly);
+        //m_Storage.Add("dialogate".GetHashCode());
 
-        m_Cookies.Add(new InventoryItem { m_ItemID = ids.plain_cookie, m_Amount = 1 });
+        m_Cookies.Add(new InventoryItem { m_ItemID = "plain_cookie".GetHashCode(), m_Amount = 1 });
 
-        m_Ingredients.Add(new InventoryItem("cookie_dough".GetHashCode(), 1));
-        m_Ingredients.Add(new InventoryItem("chocolate_chips".GetHashCode(), 1));
-        m_Ingredients.Add(new InventoryItem("red_jelly".GetHashCode(), 1));
+        //m_Ingredients.Add(new InventoryItem("cookie_dough".GetHashCode(), 1));
+        //m_Ingredients.Add(new InventoryItem("chocolate_chips".GetHashCode(), 1));
+        //m_Ingredients.Add(new InventoryItem("red_jelly".GetHashCode(), 1));
 
         m_GoodCookieReputation += 100;
         m_EvilCookieReputation += 100;

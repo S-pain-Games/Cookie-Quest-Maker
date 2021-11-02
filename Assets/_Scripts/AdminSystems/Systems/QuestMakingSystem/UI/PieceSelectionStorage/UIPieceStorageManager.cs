@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CQM.QuestMaking.UI
+namespace CQM.Databases.UI
 {
     // Handles over all the Storage UI functionality and
     // important data

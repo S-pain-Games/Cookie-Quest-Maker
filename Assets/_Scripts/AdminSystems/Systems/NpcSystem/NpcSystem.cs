@@ -7,14 +7,21 @@ using UnityEngine;
 // are always in the tavern and "Random" NPCs that just say
 // random facts or sneaky game tips like
 // (I've heard there will be a surplus of X ingredient in 2 days)
-public class NpcSystem : MonoBehaviour, ISystemEvents
+public class NpcSystem : ISystemEvents
 {
-    public StoryDB _storyDB;
+    private StoryDB _storyDB;
+    private NpcData _npcData;
+    private Event<PopupData> _showPopupCmd;
 
-    [SerializeField]
-    private List<NPCBehaviour> m_NpcBehaviour = new List<NPCBehaviour>();
+    public void Initialize(StoryDB storyDb, NpcData npcData, GameEventSystem evtSys)
+    {
+        _storyDB = storyDb;
+        _npcData = npcData;
 
-    public Event<PopupData> _showPopupCmd;
+        _showPopupCmd = evtSys.GetCommandByName<Event<PopupData>>("popup_sys", "show_popup");
+        // DEV ONLY
+        PopulateNpcsData();
+    }
 
     public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
     {
@@ -27,21 +34,12 @@ public class NpcSystem : MonoBehaviour, ISystemEvents
         evt.OnInvoked += PopulateNpcsData;
     }
 
-    public void Initialize(StoryDB storyDb, GameEventSystem evtSys)
-    {
-        _storyDB = storyDb;
-
-        _showPopupCmd = evtSys.GetCommandByName<Event<PopupData>>("popup_sys", "show_popup");
-        // DEV ONLY
-        PopulateNpcsData();
-    }
-
     // Called just before the start of the day to set the
     // dialogue that each NPC has to say that day
     public void PopulateNpcsData()
     {
         List<int> completedStoriesIDList = _storyDB.m_CompletedStories;
-        var storiesDB = Admin.g_Instance.storyDB.m_StoriesDB;
+        var storiesDB = Admin.Global.Database.Stories.m_StoriesDB;
 
         // We make a copy because we dont want to remove elements from the storyDB list.
         // The completed stories should be "finalized" when the player has seen the 
@@ -53,9 +51,9 @@ public class NpcSystem : MonoBehaviour, ISystemEvents
         List<int> completedStories = SelectCompletedStoriesToTryToShow(completedStoriesIDList, storiesDB);
         List<int> toStartStories = SelectStoriesToTryToStart();
 
-        for (int i = 0; i < m_NpcBehaviour.Count; i++)
+        for (int i = 0; i < _npcData.m_NpcBehaviour.Count; i++)
         {
-            NPCData npcData = m_NpcBehaviour[i].m_NpcData;
+            NPCBehaviourData npcData = _npcData.m_NpcBehaviour[i].m_NpcData;
 
             npcData.m_AlreadySpokenTo = false;
             npcData.m_Dialogue.Clear();
@@ -131,7 +129,7 @@ public class NpcSystem : MonoBehaviour, ISystemEvents
     }
 }
 
-public class NPCData
+public class NPCBehaviourData
 {
     // Dialogue lines that the npc has to say
     public List<string> m_Dialogue = new List<string>();

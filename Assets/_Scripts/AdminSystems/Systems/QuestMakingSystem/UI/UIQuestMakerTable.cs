@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using CQM.QuestMaking.UI;
+using CQM.Databases.UI;
 
 // Handles changing between the building and the storage
 // and also communication between those 2
@@ -24,8 +24,8 @@ public class UIQuestMakerTable : MonoBehaviour
 
     private void Awake()
     {
-        _questMakingSys = Admin.g_Instance.questMakerSystem;
-        evtSys = Admin.g_Instance.gameEventSystem;
+        _questMakingSys = Admin.Global.Systems.m_QuestMakerSystem;
+        evtSys = Admin.Global.EventSystem;
         _changeGameStateCmd = evtSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
     }
 

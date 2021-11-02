@@ -8,7 +8,7 @@ public class SetCamTargetOnEnable : MonoBehaviour
 
     private void Awake()
     {
-        var _evtSys = Admin.g_Instance.gameEventSystem;
+        var _evtSys = Admin.Global.EventSystem;
         _retargetCommand = _evtSys.GetCommandByName<Event<Transform>>("camera_sys", "retarget_cmd");
     }
 
