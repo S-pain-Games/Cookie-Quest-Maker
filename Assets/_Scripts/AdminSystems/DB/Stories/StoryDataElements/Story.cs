@@ -10,8 +10,9 @@ public class Story
     // WRITE TO THIS DATA ONLY FROM THE STORY SYSTEM
 
     public StoryData m_StoryData; // Persistent Story Data
-    public QuestData m_QuestData; // The quest that was created to complete the story
     public State m_State = State.NotStarted;
+
+    public QuestData m_QuestData; // The quest that was created to complete the story
     public List<string> m_QuestResult = new List<string>(); // The final result of the story given the quest
     public StoryRepercusion m_QuestRepercusion = null;
 

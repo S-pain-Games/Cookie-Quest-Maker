@@ -38,9 +38,6 @@ public class NpcSystem : ISystemEvents
     // dialogue that each NPC has to say that day
     public void PopulateNpcsData()
     {
-        List<int> completedStoriesIDList = _storyDB.m_CompletedStories;
-        var storiesDB = _storyDB.m_StoriesDB;
-
         // We make a copy because we dont want to remove elements from the storyDB list.
         // The completed stories should be "finalized" when the player has seen the 
         // repercusion dialogue not when the dialogue is assigned to an npc
@@ -48,8 +45,8 @@ public class NpcSystem : ISystemEvents
         // In this code we also assume that we might have more stories to show than npcs
         // so we have to "cache" and take into account the remaining unshown stories
         // to show them the next day
-        List<int> completedStories = SelectCompletedStoriesToTryToShow(completedStoriesIDList, storiesDB);
-        List<int> toStartStories = SelectStoriesToTryToStart();
+        List<int> finalizableStories = SelectStoriesThatHaveToBeFinalized(_storyDB.m_CompletedStories, 3);
+        List<int> storiesToStart = SelectStoriesThatShouldBeStarted(3);
 
         for (int i = 0; i < _npcData.m_NpcBehaviour.Count; i++)
         {
@@ -60,9 +57,9 @@ public class NpcSystem : ISystemEvents
 
             // Try to preappend a result of a completed story
             // only if there are remaining stories to show
-            if (completedStories.Count > 0)
+            if (finalizableStories.Count > 0)
             {
-                Story s = _storyDB.m_StoriesDB[completedStories[0]];
+                Story s = _storyDB.m_StoriesDB[finalizableStories[0]];
 
                 for (int c = 0; c < s.m_QuestResult.Count; c++)
                 {
@@ -70,9 +67,9 @@ public class NpcSystem : ISystemEvents
                 }
 
                 npcData.m_HasToFinalizeAStory = true;
-                npcData.m_StoryIDToFinalizeOnInteract = completedStories[0];
+                npcData.m_StoryIDToFinalizeOnInteract = finalizableStories[0];
 
-                completedStories.RemoveAt(0);
+                finalizableStories.RemoveAt(0);
                 npcData.m_Dialogue.Add("Anyways...");
             }
             else
@@ -83,30 +80,30 @@ public class NpcSystem : ISystemEvents
 
             // Append a new story dialogue
             // only if there are new stories to append
-            if (toStartStories.Count > 0)
+            if (storiesToStart.Count > 0)
             {
-                var introductionDialogue = _storyDB.m_StoriesDB[toStartStories[0]].m_StoryData.m_IntroductionDialogue;
+                var introductionDialogue = _storyDB.m_StoriesDB[storiesToStart[0]].m_StoryData.m_IntroductionDialogue;
                 for (int j = 0; j < introductionDialogue.Count; j++)
                 {
                     npcData.m_Dialogue.Add(introductionDialogue[j]);
                 }
 
                 npcData.m_HasToStartAStory = true;
-                npcData.m_StoryIDToStartOnInteract = toStartStories[0];
-                toStartStories.RemoveAt(0);
+                npcData.m_StoryIDToStartOnInteract = storiesToStart[0];
+                storiesToStart.RemoveAt(0);
             }
             else
             {
                 npcData.m_HasToStartAStory = false;
-                _showPopupCmd.Invoke(new PopupData { m_Text = "You have completed all stories, thank you for playing the alpha", m_TimeAlive = 999999999 });
+                //_showPopupCmd.Invoke(new PopupData { m_Text = "You have completed all stories, thank you for playing the alpha", m_TimeAlive = 999999999 });
             }
         }
     }
 
-    private List<int> SelectStoriesToTryToStart()
+    private List<int> SelectStoriesThatShouldBeStarted(int maxStoriesToSelect)
     {
         var storiesToStartIds = _storyDB.m_StoriesToStart;
-        int availableStoriesToStart = Mathf.Min(storiesToStartIds.Count, 3);
+        int availableStoriesToStart = Mathf.Min(storiesToStartIds.Count, maxStoriesToSelect);
         List<int> sStory = new List<int>();
         for (int j = 0; j < availableStoriesToStart; j++)
         {
@@ -116,9 +113,9 @@ public class NpcSystem : ISystemEvents
         return sStory;
     }
 
-    private List<int> SelectCompletedStoriesToTryToShow(List<int> completedStoriesIDList, Dictionary<int, Story> storiesDB)
+    private List<int> SelectStoriesThatHaveToBeFinalized(List<int> completedStoriesIDList, int maxStoriesToComplete)
     {
-        int avaliableCompletedStories = Mathf.Min(completedStoriesIDList.Count, 3);
+        int avaliableCompletedStories = Mathf.Min(completedStoriesIDList.Count, maxStoriesToComplete);
         List<int> cStoriesIds = new List<int>(); // Completed Stories Ids
         for (int i = 0; i < avaliableCompletedStories; i++)
         {

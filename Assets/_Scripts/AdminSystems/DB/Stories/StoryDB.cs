@@ -62,13 +62,23 @@ public class StoryDB
     private void LoadStoryData()
     {
         var builder = new StoryBuilder(this);
-        builder.StartCreatingStory("Mayor's Problem", new List<string>() { "The Towns Center is having a very bad wolves problem", "The mayor is obviously not happy about it but 'some' people are really enjoying the mess" });
-        builder.AddStoryBranch("center_wolf_dead", "Did you hear what happened ?? apparently somebody saw some small creatures talk with the wolves at night and just after that they just left.",
-            QPTag.TagType.Convince, 1);
+        builder.StartCreatingStory("Mayor's Problem", new List<string>() { "The Towns Center is having a very bad wolves problem",
+            "The mayor is obviously not happy about it but 'some' people are really enjoying the mess" });
+
+        builder.AddStoryBranch("center_wolf_dead", "Did you hear what happened ?? apparently conviced mayor.",
+            QPTag.TagType.Convince, 1, "mayor".GetHashCode());
         builder.AddStoryBranch("center_wolf_alive", "Apparently yesterday some small creatures tried to approach the Mayor at night, the mayor obviously ran away screaming help.",
-            QPTag.TagType.Help, 1);
+            QPTag.TagType.Help, 1, "mayor".GetHashCode());
         builder.AddStoryBranch("center_wolf_alive", "Did you hear that the mayor was attacked just this night?? It is horrible for the town.",
-            QPTag.TagType.Harm, 1);
+            QPTag.TagType.Harm, 1, "mayor".GetHashCode());
+
+        builder.AddStoryBranch("center_wolf_dead", "Did you hear what happened ?? apparently somebody saw some small creatures talk with the wolves at night and just after that they just left.",
+            QPTag.TagType.Convince, 1, "wolves".GetHashCode());
+        builder.AddStoryBranch("center_wolf_alive", "Apparently yesterday some small creatures tried to approach the Mayor at night, the mayor obviously ran away screaming help.",
+            QPTag.TagType.Help, 1, "wolves".GetHashCode());
+        builder.AddStoryBranch("center_wolf_alive", "Did you hear that the wolves were attacked just this night??",
+            QPTag.TagType.Harm, 1, "wolves".GetHashCode());
+
         var story = builder.FinishCreatingAndReturnStory();
         m_StoriesDB.Add("mayors_problem".GetHashCode(), story);
     }
@@ -140,7 +150,7 @@ public class StoryBuilder
         m_StoryData.m_IntroductionDialogue = new List<string>() { introduction };
     }
 
-    public void AddStoryBranch(string repercusion, List<string> result, QPTag.TagType tag, int tagValue)
+    public void AddStoryBranch(string repercusion, List<string> result, QPTag.TagType tag, int tagValue, int targetId)
     {
         BranchOption bOpt = new BranchOption
         {
@@ -150,13 +160,14 @@ public class StoryBuilder
         BranchCondition bCon = new BranchCondition
         {
             m_Tag = tag,
-            m_Value = tagValue
+            m_Value = tagValue,
+            m_Target = targetId
         };
         bOpt.m_Condition = bCon;
         m_StoryData.m_BranchOptions.Add(bOpt);
     }
 
-    public void AddStoryBranch(string repercusion, string result, QPTag.TagType tag, int tagValue)
+    public void AddStoryBranch(string repercusion, string result, QPTag.TagType tag, int tagValue, int targetId)
     {
         BranchOption bOpt = new BranchOption
         {
@@ -166,7 +177,8 @@ public class StoryBuilder
         BranchCondition bCon = new BranchCondition
         {
             m_Tag = tag,
-            m_Value = tagValue
+            m_Value = tagValue,
+            m_Target = targetId
         };
         bOpt.m_Condition = bCon;
         m_StoryData.m_BranchOptions.Add(bOpt);
@@ -174,7 +186,6 @@ public class StoryBuilder
 
     public Story FinishCreatingAndReturnStory()
     {
-        m_StoryData.m_Target = "mayor".GetHashCode();
         m_StoryData.Build();
 
         m_Story = new Story();

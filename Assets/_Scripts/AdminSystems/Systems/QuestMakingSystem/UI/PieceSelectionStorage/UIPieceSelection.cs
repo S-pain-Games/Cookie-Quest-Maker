@@ -78,11 +78,13 @@ public class UIPieceSelection : MonoBehaviour
         // Loop over all story targets
         else if (pieceType == QuestPiece.PieceType.Target)
         {
-            // TODO: ONLY HANDLES ONE TARGET
-            int targetID = Admin.Global.Database.Stories.GetStoryComponent<Story>(m_CurrentStoryID).m_StoryData.m_Target;
-            QuestPiece targetPiece = Admin.Global.Database.Quests.GetQuestPieceComponent<QuestPiece>(targetID);
+            var targetsList = Admin.Global.Database.Stories.GetStoryComponent<Story>(m_CurrentStoryID).m_StoryData.m_Targets;
 
-            pos = AddPieceToUI(pos, targetPiece);
+            for (int i = 0; i < targetsList.Count; i++)
+            {
+                QuestPiece targetPiece = Admin.Global.Database.Quests.GetQuestPieceComponent<QuestPiece>(targetsList[i]);
+                pos = AddPieceToUI(pos, targetPiece);
+            }
         }
     }
 

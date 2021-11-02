@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3704201887971256615}
   - component: {fileID: 6529011476643028969}
   - component: {fileID: 4552603596090524393}
+  - component: {fileID: 1227748649}
   m_Layer: 5
   m_Name: Btn_ContinueDialogue
   m_TagString: Untagged
@@ -121,19 +122,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3704201887971256615}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DialogueSystem, CQM.Scripts.Runtime
-        m_MethodName: NextLine
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &4552603596090524393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +137,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textNameID: dialoguebox_button_next
   textMesh: {fileID: 8622966836440140372}
+--- !u!114 &1227748649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101765965128466971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c5f09d729b1cb643b70216a0ea1bdbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1693811375846806772
 GameObject:
   m_ObjectHideFlags: 0

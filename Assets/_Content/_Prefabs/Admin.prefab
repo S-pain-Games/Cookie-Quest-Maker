@@ -59,11 +59,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21672e173390854eb9316e92098a043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Player:
-    m_InputComponent:
-      m_Character:
-      - {fileID: 0}
-      - {fileID: 0}
   m_GameState: {fileID: 585195714406842495}
   m_Popups:
     m_InstantiationTransform: {fileID: 0}
@@ -112,41 +107,67 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   qpData:
   - m_ID: plain_cookie
-    m_QuestSelectionUI:
-      m_Sprite: {fileID: 0}
-      m_Name: Plain Cookie
-      m_Description: dawdwad
-      m_ParentID: 0
     m_Functional:
       m_Type: 4
       m_Tags:
       - m_Type: 1
         m_Value: 1
       m_ParentID: 0
-    m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
-  - m_ID: eureka
     m_QuestSelectionUI:
       m_Sprite: {fileID: 0}
-      m_Name: Attack
+      m_Name: Plain Cookie
       m_Description: dawdwad
       m_ParentID: 0
+    m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  - m_ID: plain_cookie_2
+    m_Functional:
+      m_Type: 4
+      m_Tags:
+      - m_Type: 1
+        m_Value: 1
+      m_ParentID: 0
+    m_QuestSelectionUI:
+      m_Sprite: {fileID: 0}
+      m_Name: Plain Cookie 2
+      m_Description: dawdwad
+      m_ParentID: 0
+    m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  - m_ID: eureka
     m_Functional:
       m_Type: 0
       m_Tags:
       - m_Type: 0
         m_Value: 1
       m_ParentID: 0
-    m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
-  - m_ID: mayor
     m_QuestSelectionUI:
       m_Sprite: {fileID: 0}
-      m_Name: Mayor
+      m_Name: Attack
       m_Description: dawdwad
       m_ParentID: 0
+    m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  - m_ID: mayor
     m_Functional:
       m_Type: 1
       m_Tags:
       - m_Type: 0
         m_Value: 1
+      m_ParentID: 0
+    m_QuestSelectionUI:
+      m_Sprite: {fileID: 0}
+      m_Name: Mayor
+      m_Description: dawdwad
+      m_ParentID: 0
+    m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  - m_ID: wolves
+    m_Functional:
+      m_Type: 1
+      m_Tags:
+      - m_Type: 0
+        m_Value: 1
+      m_ParentID: 0
+    m_QuestSelectionUI:
+      m_Sprite: {fileID: 0}
+      m_Name: Wolves
+      m_Description: dawdwad
       m_ParentID: 0
     m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
