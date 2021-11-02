@@ -11,10 +11,10 @@ public class InventoryData
     public int m_EvilCookieReputation;
 
     // List of unlocked word pieces (Actions, Modifiers, Objects)
-    public List<int> m_Storage = new List<int>();
+    public List<int> m_UnlockedRecipes = new List<int>();
 
     // Cookies Inventory
-    public List<InventoryItem> m_Cookies = new List<InventoryItem>();
+    public List<InventoryItem> m_Pieces = new List<InventoryItem>();
 
     // Ingredients Inventory
     public List<InventoryItem> m_Ingredients = new List<InventoryItem>();
@@ -24,7 +24,10 @@ public class InventoryData
         // DEV ONLY, THE INVENTORY SHOULD BE FILLED BY
         // THE INVENTORY SYSTEM WHEN LOADING THE SAVED GAME
 
-        m_Storage.Add("eureka".GetHashCode());
+        //m_UnlockedRecipes.Add("eureka".GetHashCode());
+        m_UnlockedRecipes.Add("plain_cookie".GetHashCode());
+        m_UnlockedRecipes.Add("attack".GetHashCode());
+        //m_UnlockedRecipes.Add("plain_cookie_2".GetHashCode());
         //m_Storage.Add(ids.attack);
         //m_Storage.Add(ids.assist);
         //m_Storage.Add(ids.baseball_bat);
@@ -32,11 +35,9 @@ public class InventoryData
         //m_Storage.Add(ids.kindly);
         //m_Storage.Add("dialogate".GetHashCode());
 
-        m_Cookies.Add(new InventoryItem { m_ItemID = "plain_cookie".GetHashCode(), m_Amount = 1 });
-
-        //m_Ingredients.Add(new InventoryItem("cookie_dough".GetHashCode(), 1));
-        //m_Ingredients.Add(new InventoryItem("chocolate_chips".GetHashCode(), 1));
-        //m_Ingredients.Add(new InventoryItem("red_jelly".GetHashCode(), 1));
+        m_Ingredients.Add(new InventoryItem("cookie_dough".GetHashCode(), 1));
+        m_Ingredients.Add(new InventoryItem("chocolate_chips".GetHashCode(), 1));
+        m_Ingredients.Add(new InventoryItem("red_jelly".GetHashCode(), 1));
 
         m_GoodCookieReputation += 100;
         m_EvilCookieReputation += 100;

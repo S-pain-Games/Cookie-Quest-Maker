@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Linq;
 
 public class RecipeShopSystem : MonoBehaviour
 {
-    [SerializeField] private int selectedRecipe = -1;
+    [SerializeField] private int selectedRecipeId = -1;
 
     [SerializeField] private GameObject pref_Recipe;
     [SerializeField] private List<GameObject> currentRecipes;
@@ -21,16 +22,21 @@ public class RecipeShopSystem : MonoBehaviour
     private EventVoid _enableCharMovCmd;
     private EventVoid _disableCharMovCmd;
 
-    private EventVoid _buyRecipeCmd;
+    private EventVoid _buyRecipeCmdREFACTOR;
+    private Event<InventorySys_ChangeReputationEvtArgs> _changeRepCmd;
+    private Event<int> _unlockRecipeCmd;
 
     private void Awake()
     {
         var admin = Admin.Global;
         _cookiesData = admin.Database.Cookies;
         _inventoryData = admin.Database.Player.Inventory;
+
         _enableCharMovCmd = admin.EventSystem.GetCommandByName<EventVoid>("character_sys", "enable_movement");
         _disableCharMovCmd = admin.EventSystem.GetCommandByName<EventVoid>("character_sys", "disable_movement");
-        _buyRecipeCmd = admin.EventSystem.GetCommandByName<EventVoid>("cookie_making_sys", "buy_recipe");
+        _buyRecipeCmdREFACTOR = admin.EventSystem.GetCommandByName<EventVoid>("cookie_making_sys", "buy_recipe");
+        _changeRepCmd = admin.EventSystem.GetCommandByName<Event<InventorySys_ChangeReputationEvtArgs>>("inventory_sys", "change_reputation");
+        _unlockRecipeCmd = admin.EventSystem.GetCommandByName<Event<int>>("inventory_sys", "unlock_recipe");
     }
 
     private void OnEnable()
@@ -39,7 +45,7 @@ public class RecipeShopSystem : MonoBehaviour
 
         if (currentRecipes.Count == 0)
         {
-            List<RecipeData> recipes = _cookiesData.m_RecipeDataList;
+            List<RecipeData> recipes = _cookiesData.m_RecipeDataDB.Values.ToList(); // Slow but good enough
             foreach (RecipeData r in recipes)
             {
                 GameObject newRecipeUI = Instantiate(pref_Recipe, recipeListParent);
@@ -70,45 +76,31 @@ public class RecipeShopSystem : MonoBehaviour
 
     public void SelectRecipe(int id)
     {
-        selectedRecipe = id;
+        selectedRecipeId = id;
         UpdatePrice();
     }
 
     //TODO: Update cookie making available recipes
     public void BuyRecipe()
     {
-        if (selectedRecipe != -1)
+        if (selectedRecipeId == -1) return;
+
+        _cookiesData.m_RecipeDataDB.TryGetValue(selectedRecipeId, out RecipeData recipe);
+
+        if (recipe == null || _inventoryData.m_UnlockedRecipes.Contains(selectedRecipeId)) return;
+
+        bool enoughMoneyToBuy = false;
+        if (recipe.m_ReputationTypePrice == Reputation.GoodCookieReputation)
+            enoughMoneyToBuy = _inventoryData.m_GoodCookieReputation >= recipe.m_Price;
+        else if (recipe.m_ReputationTypePrice == Reputation.EvilCookieReputation)
+            enoughMoneyToBuy = _inventoryData.m_EvilCookieReputation >= recipe.m_Price;
+
+        if (enoughMoneyToBuy)
         {
-            RecipeData recipe;
-            _cookiesData.m_RecipeDataDB.TryGetValue(selectedRecipe, out recipe);
-
-            if (recipe != null)
-            {
-                if (!recipe.bought)
-                {
-                    if (recipe.m_Reputation == Reputation.GoodCookieReputation)
-                    {
-                        bool bought = Admin.Global.Systems.m_InventorySystem.RemoveGoodCookieRep(recipe.price); // TODO
-                        if (bought)
-                        {
-                            _cookiesData.AddBoughtCookie(recipe.m_CookieID, recipe);
-                            _buyRecipeCmd.Invoke();
-                            UpdateTexts();
-                        }
-
-                    }
-                    else if (recipe.m_Reputation == Reputation.EvilCookieReputation)
-                    {
-                        bool bought = Admin.Global.Systems.m_InventorySystem.RemoveEvilCookieRep(recipe.price);
-                        if (bought)
-                        {
-                            _cookiesData.AddBoughtCookie(recipe.m_CookieID, recipe);
-                            _buyRecipeCmd.Invoke();
-                            UpdateTexts();
-                        }
-                    }
-                }
-            }
+            _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(recipe.m_ReputationTypePrice, -recipe.m_Price));
+            _unlockRecipeCmd.Invoke(recipe.m_PieceID);
+            _buyRecipeCmdREFACTOR.Invoke();
+            UpdateTexts();
         }
     }
 
@@ -122,9 +114,9 @@ public class RecipeShopSystem : MonoBehaviour
     private void UpdatePrice()
     {
         RecipeData recipe;
-        _cookiesData.m_RecipeDataDB.TryGetValue(selectedRecipe, out recipe);
+        _cookiesData.m_RecipeDataDB.TryGetValue(selectedRecipeId, out recipe);
         if (recipe != null)
-            textPrice.text = "Price: " + recipe.price;
+            textPrice.text = "Price: " + recipe.m_Price;
         else
             textPrice.text = "";
     }

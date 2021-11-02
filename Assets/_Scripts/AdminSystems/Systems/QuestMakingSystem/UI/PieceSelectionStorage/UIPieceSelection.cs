@@ -48,35 +48,8 @@ public class UIPieceSelection : MonoBehaviour
         Vector3 pos = Vector3.zero;
         pos.y += 150;
 
-        // Loop over all unlocked word pieces
-        List<int> storage = Admin.Global.Database.Player.Inventory.m_Storage;
-        for (int i = 0; i < storage.Count; i++)
-        {
-            var questPiece = Admin.Global.Database.Quests.GetQuestPieceComponent<QuestPiece>(storage[i]);
-            // Only show the pieces that match the filter
-            if (questPiece.m_Type == pieceType)
-            {
-                pos = AddPieceToUI(pos, questPiece);
-            }
-        }
-
-        // Loop over all cookie inventory
-        if (pieceType == QuestPiece.PieceType.Cookie)
-        {
-            List<InventoryItem> cookiesStorage = Admin.Global.Database.Player.Inventory.m_Cookies;
-            if (cookiesStorage.Count <= 0) return;
-
-            for (int i = 0; i < cookiesStorage.Count; i++)
-            {
-                if (cookiesStorage[i].m_Amount <= 0) return; // Should be innecesary because the list shouldnt have empty items but just in case
-
-                QuestPiece cookiePiece = Admin.Global.Database.Quests.GetQuestPieceComponent<QuestPiece>(cookiesStorage[i].m_ItemID);
-                // Only show the pieces that match the filter
-                pos = AddPieceToUI(pos, cookiePiece);
-            }
-        }
         // Loop over all story targets
-        else if (pieceType == QuestPiece.PieceType.Target)
+        if (pieceType == QuestPiece.PieceType.Target)
         {
             var targetsList = Admin.Global.Database.Stories.GetStoryComponent<Story>(m_CurrentStoryID).m_StoryData.m_Targets;
 
@@ -84,6 +57,21 @@ public class UIPieceSelection : MonoBehaviour
             {
                 QuestPiece targetPiece = Admin.Global.Database.Quests.GetQuestPieceComponent<QuestPiece>(targetsList[i]);
                 pos = AddPieceToUI(pos, targetPiece);
+            }
+            return;
+        }
+
+        // Loop over all inventory pieces
+        List<InventoryItem> piecesInventory = Admin.Global.Database.Player.Inventory.m_Pieces;
+        for (int i = 0; i < piecesInventory.Count; i++)
+        {
+            if (piecesInventory[i].m_Amount <= 0) return; // Should be innecesary because the list shouldnt have empty items but just in case
+
+            QuestPiece piece = Admin.Global.Database.Quests.GetQuestPieceComponent<QuestPiece>(piecesInventory[i].m_ItemID);
+            // Only show the pieces that match the filter
+            if (piece.m_Type == pieceType)
+            {
+                pos = AddPieceToUI(pos, piece);
             }
         }
     }

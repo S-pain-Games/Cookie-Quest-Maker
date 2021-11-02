@@ -12,10 +12,29 @@ public class InventorySystem : ISystemEvents
         callbacks = new EventSys();
         sysID = "inventory_sys".GetHashCode();
 
-        var evt = commands.AddEvent<ItemData>("add_cookie".GetHashCode());
-        evt.OnInvoked += (args) => AddCookieToInventory(args.m_ItemID, args.m_Amount);
-        evt = commands.AddEvent<ItemData>("remove_cookie".GetHashCode());
-        evt.OnInvoked += (args) => RemoveCookieFromInventory(args.m_ItemID, args.m_Amount);
+        commands.AddEvent<ItemData>("add_cookie".GetHashCode()).OnInvoked +=
+            (args) => AddCookieToInventory(args.m_ItemID, args.m_Amount);
+        commands.AddEvent<ItemData>("remove_cookie".GetHashCode()).OnInvoked +=
+            (args) => RemoveCookieFromInventory(args.m_ItemID, args.m_Amount);
+
+        commands.AddEvent<InventorySys_ChangeReputationEvtArgs>("change_reputation".GetHashCode()).OnInvoked +=
+            (args) =>
+            {
+                switch (args.m_RepType)
+                {
+                    case Reputation.GoodCookieReputation:
+                        ChangueGoodCookieRep(args.m_Amount);
+                        break;
+                    case Reputation.EvilCookieReputation:
+                        ChangueEvilCookieRep(args.m_Amount);
+                        break;
+                    default:
+                        Debug.LogError("Oh no");
+                        break;
+                }
+            };
+
+        commands.AddEvent<int>("unlock_recipe".GetHashCode()).OnInvoked += UnlockRecipe;
     }
 
     public void Initialize(InventoryData data)
@@ -25,50 +44,59 @@ public class InventorySystem : ISystemEvents
 
     private void AddCookieToInventory(int cookieID, int amount)
     {
-        InventoryItem item = _inventoryData.m_Cookies.Find(i => i.m_ItemID == cookieID);
+        InventoryItem item = _inventoryData.m_Pieces.Find(i => i.m_ItemID == cookieID);
         if (item != null)
             item.m_Amount += amount;
         else
-            _inventoryData.m_Cookies.Add(new InventoryItem(cookieID, amount));
+            _inventoryData.m_Pieces.Add(new InventoryItem(cookieID, amount));
     }
-
     private void RemoveCookieFromInventory(int cookieID, int amount)
     {
-        InventoryItem item = _inventoryData.m_Cookies.Find(i => i.m_ItemID == cookieID);
+        InventoryItem item = _inventoryData.m_Pieces.Find(i => i.m_ItemID == cookieID);
         if (item != null)
         {
             item.m_Amount -= amount;
             item.m_Amount = Mathf.Min(item.m_Amount, 0);
 
             if (item.m_Amount == 0)
-                _inventoryData.m_Cookies.Remove(item);
+                _inventoryData.m_Pieces.Remove(item);
         }
     }
 
-
-    public void AddGoodCookieRep(int amount) => _inventoryData.m_GoodCookieReputation += amount;
-    public bool RemoveGoodCookieRep(int amount)
+    private void UnlockRecipe(int recipeID)
     {
-        if (_inventoryData.m_GoodCookieReputation - amount >= 0)
-        {
-            _inventoryData.m_GoodCookieReputation -= amount;
-            return true;
-        }
-        else
-            return false;
+        if (_inventoryData.m_UnlockedRecipes.Contains(recipeID))
+            Debug.LogError("Oh no");
 
+        _inventoryData.m_UnlockedRecipes.Add(recipeID);
     }
 
-    public void AddEvilCookieRep(int amount) => _inventoryData.m_EvilCookieReputation += amount;
-    public bool RemoveEvilCookieRep(int amount)
+    // TODO: Refactor this
+    public void ChangueGoodCookieRep(int amount)
     {
-        if (_inventoryData.m_EvilCookieReputation - amount >= 0)
-        {
-            _inventoryData.m_EvilCookieReputation -= amount;
-            return true;
-        }
+        if (_inventoryData.m_GoodCookieReputation + amount >= 0)
+            _inventoryData.m_GoodCookieReputation += amount;
         else
-            return false;
+            Debug.LogError("Tried to remove more currency than available");
+    }
 
+    public void ChangueEvilCookieRep(int amount)
+    {
+        if (_inventoryData.m_EvilCookieReputation + amount >= 0)
+            _inventoryData.m_EvilCookieReputation += amount;
+        else
+            Debug.LogError("Tried to remove more currency than available");
+    }
+}
+
+public struct InventorySys_ChangeReputationEvtArgs
+{
+    public Reputation m_RepType;
+    public int m_Amount;
+
+    public InventorySys_ChangeReputationEvtArgs(Reputation repType, int amount)
+    {
+        m_RepType = repType;
+        m_Amount = amount;
     }
 }

@@ -132,7 +132,7 @@ MonoBehaviour:
       m_Description: dawdwad
       m_ParentID: 0
     m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
-  - m_ID: eureka
+  - m_ID: attack
     m_Functional:
       m_Type: 0
       m_Tags:

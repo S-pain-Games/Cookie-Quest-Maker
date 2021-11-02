@@ -32,7 +32,7 @@ public class RecipeShopUI : MonoBehaviour
 
     private void SelectMyRecipe()
     {
-        OnSelectRecipe?.Invoke(myRecipe.m_CookieID);
+        OnSelectRecipe?.Invoke(myRecipe.m_PieceID);
     }
 
     public void SetRecipe(RecipeData recipe)

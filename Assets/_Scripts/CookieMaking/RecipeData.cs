@@ -11,9 +11,10 @@ public class RecipeData
 {
     public string m_RecipeName = "Unnamed";
     public string m_RecipeDescription = "No description";
-    public int m_CookieID = -1;
     public Image m_Image;
-    public Reputation m_Reputation = Reputation.GoodCookieReputation;
-    public int price;
-    public bool bought = false;
+
+    public Reputation m_ReputationTypePrice = Reputation.GoodCookieReputation;
+    public int m_Price;
+
+    public int m_PieceID = -1;
 }

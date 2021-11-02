@@ -16,11 +16,15 @@ public class CookieMakingUI : MonoBehaviour
     [SerializeField] private Transform recipeListParent;
 
     private CookieDB cookiesData;
-    CookieMakingSystem cookieMakingSystem;
+    private InventoryData _inventoryData;
+
+    private CookieMakingSystem cookieMakingSystem;
 
     private void Awake()
     {
         cookiesData = Admin.Global.Database.Cookies;
+        _inventoryData = Admin.Global.Database.Player.Inventory;
+
         cookieMakingSystem = Admin.Global.Systems.m_CookieMakingSystem;
     }
 
@@ -107,16 +111,19 @@ public class CookieMakingUI : MonoBehaviour
 
     private void CreateCookiePrefabs()
     {
-        List<RecipeData> recipes = cookiesData.m_BoughtRecipeDataList;
-        foreach (RecipeData r in recipes)
+        var recipesIds = _inventoryData.m_UnlockedRecipes;
+        for (int i = 0; i < recipesIds.Count; i++)
         {
+            RecipeData r = cookiesData.m_RecipeDataDB[recipesIds[i]];
+
             GameObject newRecipeUI = Instantiate(pref_Recipe, recipeListParent);
             RecipeShopUI ui = newRecipeUI.GetComponent<RecipeShopUI>();
             ui.SetRecipe(r);
             ui.OnSelectRecipe += SelectRecipe;
             currentRecipes.Add(newRecipeUI);
         }
-        if (recipes.Count > 0)
-            cookieMakingSystem.SelectRecipe(recipes[0].m_CookieID);
+
+        if (recipesIds.Count > 0)
+            cookieMakingSystem.SelectRecipe(cookiesData.m_RecipeDataDB[recipesIds[0]].m_PieceID);
     }
 }
