@@ -9,6 +9,8 @@ public enum Reputation
 [System.Serializable]
 public class RecipeData
 {
+    public int m_ParentID;
+
     public string m_RecipeName = "Unnamed";
     public string m_RecipeDescription = "No description";
     public Image m_Image;

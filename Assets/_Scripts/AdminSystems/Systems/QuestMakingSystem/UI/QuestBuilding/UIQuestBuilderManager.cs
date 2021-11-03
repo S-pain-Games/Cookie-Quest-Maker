@@ -125,7 +125,7 @@ namespace CQM.Databases.UI
 
         public void SpawnPiece(int pieceID)
         {
-            QuestDB quests = Admin.Global.Database.Quests;
+            PiecesDB quests = Admin.Global.Database.Pieces;
             var questPiece = quests.GetQuestPieceComponent<QuestPiece>(pieceID);
             var uiData = quests.GetQuestPieceComponent<UIQuestPieceData>(pieceID);
 
@@ -146,7 +146,7 @@ namespace CQM.Databases.UI
             _removePieceCmd.Invoke(new ItemData(pieceID, 1));
 
             // Spawn selected piece from storage in quest builder
-            var piecePrefab = Admin.Global.Database.Quests.GetQuestPieceComponent<GameObject>(pieceID);
+            var piecePrefab = Admin.Global.Database.Pieces.GetQuestPieceComponent<GameObject>(pieceID);
             var pieceBehaviour = Instantiate(piecePrefab, pieceSpawnPosition).GetComponent<UIQuestPieceBehaviour>();
             pieceBehaviour.Initialize(_canvas, uiData, questPiece);
 

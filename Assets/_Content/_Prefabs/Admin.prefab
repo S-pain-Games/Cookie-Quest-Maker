@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 2041105134198296794}
   - component: {fileID: 258224912}
   - component: {fileID: 585195714406842495}
-  - component: {fileID: 1064268925869669367}
+  - component: {fileID: 5413392989090943059}
+  - component: {fileID: 8151889590629862278}
+  - component: {fileID: 930925265}
   m_Layer: 0
   m_Name: Admin
   m_TagString: Untagged
@@ -73,7 +75,8 @@ MonoBehaviour:
       m_Line: {fileID: 0}
       m_CurrentDialogueLines: []
       m_CurrentLineIndex: 0
-  m_Quests: {fileID: 1064268925869669367}
+  m_Cookies: {fileID: 8151889590629862278}
+  m_Pieces: {fileID: 5413392989090943059}
   m_Cameras:
     m_MainCam: {fileID: 0}
 --- !u!114 &585195714406842495
@@ -93,7 +96,7 @@ MonoBehaviour:
   m_QuestMaking: {fileID: 0}
   m_CookieMaking: {fileID: 0}
   m_BakeryNight: {fileID: 0}
---- !u!114 &1064268925869669367
+--- !u!114 &5413392989090943059
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,72 +105,449 @@ MonoBehaviour:
   m_GameObject: {fileID: 2041105134198296772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b132c417b4dd7b24d8205d3b01373368, type: 3}
+  m_Script: {fileID: 11500000, guid: 30bf6d7865c1523469b07f9322d50070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  qpData:
-  - m_ID: plain_cookie
+  _pieceBuilder: {fileID: 930925265}
+--- !u!114 &8151889590629862278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7946f8118f36c340b7a8895adcdb098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _piecesBuilder: {fileID: 930925265}
+--- !u!114 &930925265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6426cf3f127309429de41b9e571bdc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BuiltPieces:
+  - inspectorPieceName: plain_cookie
+    qp:
+      m_ID: 1473648501
+      m_Functional:
+        m_Type: 4
+        m_Tags: []
+        m_ParentID: 1473648501
+      m_QuestSelectionUI:
+        m_Sprite: {fileID: 0}
+        m_Name: Plain Cookie
+        m_Description: Very plain
+        m_ParentID: 1473648501
+      m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    cookieData:
+      m_ParentID: 1473648501
+      m_CookieName: Plain Cookie
+      m_CookieDescription: Very plain
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ParentID: 1473648501
+      m_RecipeName: Grandma's Plain Cookie Recipe
+      m_RecipeDescription: Desc
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 50
+      m_PieceID: 1473648501
+  - inspectorPieceName: plain_cookie_2
+    qp:
+      m_ID: 390974588
+      m_Functional:
+        m_Type: 4
+        m_Tags: []
+        m_ParentID: 390974588
+      m_QuestSelectionUI:
+        m_Sprite: {fileID: 0}
+        m_Name: Plain Cookie 2
+        m_Description: Very Very plain plain
+        m_ParentID: 390974588
+      m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    cookieData:
+      m_ParentID: 390974588
+      m_CookieName: Plain Cookie 2
+      m_CookieDescription: Very Very plain plain
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ParentID: 390974588
+      m_RecipeName: Grandma's Plain Cookie Recipe
+      m_RecipeDescription: Desc
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 50
+      m_PieceID: 390974588
+  - inspectorPieceName: attack
+    qp:
+      m_ID: -143907494
+      m_Functional:
+        m_Type: 0
+        m_Tags:
+        - m_Type: 0
+          m_Value: 1
+        m_ParentID: -143907494
+      m_QuestSelectionUI:
+        m_Sprite: {fileID: 0}
+        m_Name: Attack
+        m_Description: Very Agressive
+        m_ParentID: -143907494
+      m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    cookieData:
+      m_ParentID: -143907494
+      m_CookieName: Attack
+      m_CookieDescription: Very Agressive
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ParentID: -143907494
+      m_RecipeName: Grandma's Plain Cookie Recipe
+      m_RecipeDescription: Desc
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 50
+      m_PieceID: -143907494
+  - inspectorPieceName: assist
+    qp:
+      m_ID: 223879643
+      m_Functional:
+        m_Type: 0
+        m_Tags:
+        - m_Type: 2
+          m_Value: 1
+        m_ParentID: 223879643
+      m_QuestSelectionUI:
+        m_Sprite: {fileID: 0}
+        m_Name: Assist
+        m_Description: Very Assistive
+        m_ParentID: 223879643
+      m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    cookieData:
+      m_ParentID: 223879643
+      m_CookieName: Assist
+      m_CookieDescription: Very Assistive
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ParentID: 223879643
+      m_RecipeName: Grandma's Plain Cookie Recipe
+      m_RecipeDescription: Desc
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 50
+      m_PieceID: 223879643
+  - inspectorPieceName: baseball_bat
+    qp:
+      m_ID: -673659770
+      m_Functional:
+        m_Type: 3
+        m_Tags:
+        - m_Type: 0
+          m_Value: 2
+        - m_Type: 1
+          m_Value: 1
+        m_ParentID: -673659770
+      m_QuestSelectionUI:
+        m_Sprite: {fileID: 0}
+        m_Name: Baseball Bat
+        m_Description: Very Bat
+        m_ParentID: -673659770
+      m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    cookieData:
+      m_ParentID: -673659770
+      m_CookieName: Baseball Bat
+      m_CookieDescription: Very Bat
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ParentID: -673659770
+      m_RecipeName: Grandma's Plain Cookie Recipe
+      m_RecipeDescription: Desc
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 50
+      m_PieceID: -673659770
+  - inspectorPieceName: cake
+    qp:
+      m_ID: -1966748430
+      m_Functional:
+        m_Type: 3
+        m_Tags:
+        - m_Type: 1
+          m_Value: 2
+        - m_Type: 2
+          m_Value: 1
+        m_ParentID: -1966748430
+      m_QuestSelectionUI:
+        m_Sprite: {fileID: 0}
+        m_Name: Cake
+        m_Description: Very Bat
+        m_ParentID: -1966748430
+      m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    cookieData:
+      m_ParentID: -1966748430
+      m_CookieName: Cake
+      m_CookieDescription: Very Bat
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ParentID: -1966748430
+      m_RecipeName: Grandma's Plain Cookie Recipe
+      m_RecipeDescription: Desc
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 50
+      m_PieceID: -1966748430
+  - inspectorPieceName: mayor
+    qp:
+      m_ID: 996742298
+      m_Functional:
+        m_Type: 1
+        m_Tags: []
+        m_ParentID: 996742298
+      m_QuestSelectionUI:
+        m_Sprite: {fileID: 0}
+        m_Name: Mayor
+        m_Description: Very Bat
+        m_ParentID: 996742298
+      m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    cookieData:
+      m_ParentID: 996742298
+      m_CookieName: Mayor
+      m_CookieDescription: Very Bat
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ParentID: 996742298
+      m_RecipeName: Grandma's Plain Cookie Recipe
+      m_RecipeDescription: Desc
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 50
+      m_PieceID: 996742298
+  - inspectorPieceName: wolves
+    qp:
+      m_ID: -1938852922
+      m_Functional:
+        m_Type: 1
+        m_Tags:
+        - m_Type: 0
+          m_Value: 1
+        m_ParentID: -1938852922
+      m_QuestSelectionUI:
+        m_Sprite: {fileID: 0}
+        m_Name: Wolves
+        m_Description: Very Bat
+        m_ParentID: -1938852922
+      m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    cookieData:
+      m_ParentID: -1938852922
+      m_CookieName: Wolves
+      m_CookieDescription: Very Bat
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ParentID: -1938852922
+      m_RecipeName: Grandma's Plain Cookie Recipe
+      m_RecipeDescription: Desc
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 50
+      m_PieceID: -1938852922
+  m_PiecesList:
+  - m_ID: 1473648501
     m_Functional:
       m_Type: 4
-      m_Tags:
-      - m_Type: 1
-        m_Value: 1
-      m_ParentID: 0
+      m_Tags: []
+      m_ParentID: 1473648501
     m_QuestSelectionUI:
       m_Sprite: {fileID: 0}
       m_Name: Plain Cookie
-      m_Description: dawdwad
-      m_ParentID: 0
+      m_Description: Very plain
+      m_ParentID: 1473648501
     m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
-  - m_ID: plain_cookie_2
+  - m_ID: 390974588
     m_Functional:
       m_Type: 4
-      m_Tags:
-      - m_Type: 1
-        m_Value: 1
-      m_ParentID: 0
+      m_Tags: []
+      m_ParentID: 390974588
     m_QuestSelectionUI:
       m_Sprite: {fileID: 0}
       m_Name: Plain Cookie 2
-      m_Description: dawdwad
-      m_ParentID: 0
+      m_Description: Very Very plain plain
+      m_ParentID: 390974588
     m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
-  - m_ID: attack
+  - m_ID: -143907494
     m_Functional:
       m_Type: 0
       m_Tags:
       - m_Type: 0
         m_Value: 1
-      m_ParentID: 0
+      m_ParentID: -143907494
     m_QuestSelectionUI:
       m_Sprite: {fileID: 0}
       m_Name: Attack
-      m_Description: dawdwad
-      m_ParentID: 0
+      m_Description: Very Agressive
+      m_ParentID: -143907494
     m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
-  - m_ID: mayor
+  - m_ID: 223879643
     m_Functional:
-      m_Type: 1
+      m_Type: 0
+      m_Tags:
+      - m_Type: 2
+        m_Value: 1
+      m_ParentID: 223879643
+    m_QuestSelectionUI:
+      m_Sprite: {fileID: 0}
+      m_Name: Assist
+      m_Description: Very Assistive
+      m_ParentID: 223879643
+    m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  - m_ID: -673659770
+    m_Functional:
+      m_Type: 3
       m_Tags:
       - m_Type: 0
+        m_Value: 2
+      - m_Type: 1
         m_Value: 1
-      m_ParentID: 0
+      m_ParentID: -673659770
+    m_QuestSelectionUI:
+      m_Sprite: {fileID: 0}
+      m_Name: Baseball Bat
+      m_Description: Very Bat
+      m_ParentID: -673659770
+    m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  - m_ID: -1966748430
+    m_Functional:
+      m_Type: 3
+      m_Tags:
+      - m_Type: 1
+        m_Value: 2
+      - m_Type: 2
+        m_Value: 1
+      m_ParentID: -1966748430
+    m_QuestSelectionUI:
+      m_Sprite: {fileID: 0}
+      m_Name: Cake
+      m_Description: Very Bat
+      m_ParentID: -1966748430
+    m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  - m_ID: 996742298
+    m_Functional:
+      m_Type: 1
+      m_Tags: []
+      m_ParentID: 996742298
     m_QuestSelectionUI:
       m_Sprite: {fileID: 0}
       m_Name: Mayor
-      m_Description: dawdwad
-      m_ParentID: 0
+      m_Description: Very Bat
+      m_ParentID: 996742298
     m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
-  - m_ID: wolves
+  - m_ID: -1938852922
     m_Functional:
       m_Type: 1
       m_Tags:
       - m_Type: 0
         m_Value: 1
-      m_ParentID: 0
+      m_ParentID: -1938852922
     m_QuestSelectionUI:
       m_Sprite: {fileID: 0}
       m_Name: Wolves
-      m_Description: dawdwad
-      m_ParentID: 0
+      m_Description: Very Bat
+      m_ParentID: -1938852922
     m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+  m_CookieDataList:
+  - m_ParentID: 1473648501
+    m_CookieName: Plain Cookie
+    m_CookieDescription: Very plain
+    m_Image: {fileID: 0}
+  - m_ParentID: 390974588
+    m_CookieName: Plain Cookie 2
+    m_CookieDescription: Very Very plain plain
+    m_Image: {fileID: 0}
+  - m_ParentID: -143907494
+    m_CookieName: Attack
+    m_CookieDescription: Very Agressive
+    m_Image: {fileID: 0}
+  - m_ParentID: 223879643
+    m_CookieName: Assist
+    m_CookieDescription: Very Assistive
+    m_Image: {fileID: 0}
+  - m_ParentID: -673659770
+    m_CookieName: Baseball Bat
+    m_CookieDescription: Very Bat
+    m_Image: {fileID: 0}
+  - m_ParentID: -1966748430
+    m_CookieName: Cake
+    m_CookieDescription: Very Bat
+    m_Image: {fileID: 0}
+  - m_ParentID: 996742298
+    m_CookieName: Mayor
+    m_CookieDescription: Very Bat
+    m_Image: {fileID: 0}
+  - m_ParentID: -1938852922
+    m_CookieName: Wolves
+    m_CookieDescription: Very Bat
+    m_Image: {fileID: 0}
+  m_RecipeDataList:
+  - m_ParentID: 1473648501
+    m_RecipeName: Grandma's Plain Cookie Recipe
+    m_RecipeDescription: Desc
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 50
+    m_PieceID: 1473648501
+  - m_ParentID: 390974588
+    m_RecipeName: Grandma's Plain Cookie Recipe
+    m_RecipeDescription: Desc
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 50
+    m_PieceID: 390974588
+  - m_ParentID: -143907494
+    m_RecipeName: Grandma's Plain Cookie Recipe
+    m_RecipeDescription: Desc
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 50
+    m_PieceID: -143907494
+  - m_ParentID: 223879643
+    m_RecipeName: Grandma's Plain Cookie Recipe
+    m_RecipeDescription: Desc
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 50
+    m_PieceID: 223879643
+  - m_ParentID: -673659770
+    m_RecipeName: Grandma's Plain Cookie Recipe
+    m_RecipeDescription: Desc
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 50
+    m_PieceID: -673659770
+  - m_ParentID: -1966748430
+    m_RecipeName: Grandma's Plain Cookie Recipe
+    m_RecipeDescription: Desc
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 50
+    m_PieceID: -1966748430
+  - m_ParentID: 996742298
+    m_RecipeName: Grandma's Plain Cookie Recipe
+    m_RecipeDescription: Desc
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 50
+    m_PieceID: 996742298
+  - m_ParentID: -1938852922
+    m_RecipeName: Grandma's Plain Cookie Recipe
+    m_RecipeDescription: Desc
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 50
+    m_PieceID: -1938852922
+  defaultPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}

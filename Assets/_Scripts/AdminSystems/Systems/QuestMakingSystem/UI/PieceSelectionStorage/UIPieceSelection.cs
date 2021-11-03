@@ -55,7 +55,7 @@ public class UIPieceSelection : MonoBehaviour
 
             for (int i = 0; i < targetsList.Count; i++)
             {
-                QuestPiece targetPiece = Admin.Global.Database.Quests.GetQuestPieceComponent<QuestPiece>(targetsList[i]);
+                QuestPiece targetPiece = Admin.Global.Database.Pieces.GetQuestPieceComponent<QuestPiece>(targetsList[i]);
                 pos = AddPieceToUI(pos, targetPiece);
             }
             return;
@@ -67,7 +67,7 @@ public class UIPieceSelection : MonoBehaviour
         {
             if (piecesInventory[i].m_Amount <= 0) return; // Should be innecesary because the list shouldnt have empty items but just in case
 
-            QuestPiece piece = Admin.Global.Database.Quests.GetQuestPieceComponent<QuestPiece>(piecesInventory[i].m_ItemID);
+            QuestPiece piece = Admin.Global.Database.Pieces.GetQuestPieceComponent<QuestPiece>(piecesInventory[i].m_ItemID);
             // Only show the pieces that match the filter
             if (piece.m_Type == pieceType)
             {
@@ -87,7 +87,7 @@ public class UIPieceSelection : MonoBehaviour
         UIstorageElem.pieceID = questPiece.m_ParentID;
         UIstorageElem.OnSelected += StoragePiece_OnClicked;
 
-        var uiData = Admin.Global.Database.Quests.GetQuestPieceComponent<UIQuestPieceData>(questPiece.m_ParentID);
+        var uiData = Admin.Global.Database.Pieces.GetQuestPieceComponent<UIQuestPieceData>(questPiece.m_ParentID);
         // Initialize UI element with piece data
         UIstorageElem.Build(uiData);
         m_Elements.Add(UIstorageElem);
@@ -98,7 +98,7 @@ public class UIPieceSelection : MonoBehaviour
     {
         m_SelectedPieceID = questPieceID;
         // Update UI
-        var UIPieceData = Admin.Global.Database.Quests.GetQuestPieceComponent<UIQuestPieceData>(m_SelectedPieceID);
+        var UIPieceData = Admin.Global.Database.Pieces.GetQuestPieceComponent<UIQuestPieceData>(m_SelectedPieceID);
         _uiSelectedPieceView.UpdateUI(UIPieceData.m_Sprite, UIPieceData.m_Name, UIPieceData.m_Description);
     }
 

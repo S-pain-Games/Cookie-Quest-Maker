@@ -7,11 +7,10 @@ namespace CQM.Databases
 {
     // Stores all the created quests in the game
     [System.Serializable]
-    public class QuestDB : MonoBehaviour
+    public class PiecesDB : MonoBehaviour
     {
-        // Inspector Only
         [SerializeField]
-        private List<QuestPieceDataContainer> qpData = new List<QuestPieceDataContainer>();
+        private PieceBuilder _pieceBuilder;
 
         // Contains all the quest piece data
         private Dictionary<int, QuestPieceDataContainer> qpDataDic = new Dictionary<int, QuestPieceDataContainer>();
@@ -44,13 +43,13 @@ namespace CQM.Databases
 
         public void LoadData()
         {
-            for (int i = 0; i < qpData.Count; i++)
-            {
-                var data = qpData[i];
-                data.m_Functional.m_ParentID = data.m_ID.GetHashCode();
-                data.m_QuestSelectionUI.m_ParentID = data.m_ID.GetHashCode();
+            var piecesList = _pieceBuilder.PiecesData;
 
-                qpDataDic.Add(data.m_ID.GetHashCode(), data);
+            for (int i = 0; i < piecesList.Count; i++)
+            {
+                var data = piecesList[i];
+
+                qpDataDic.Add(data.m_ID, data);
             }
         }
     }
@@ -58,7 +57,7 @@ namespace CQM.Databases
     [Serializable]
     public class QuestPieceDataContainer
     {
-        public string m_ID;
+        public int m_ID;
         public QuestPiece m_Functional;
         public UIQuestPieceData m_QuestSelectionUI;
         public GameObject m_QuestBuildingPiecePrefab;

@@ -9,7 +9,7 @@ namespace CQM.Databases
         // All these references should only be called by unity objects
         // Systems should be passed the necesary data on initialization
         // This way its easier to identify what data does each system handle
-        public QuestDB Quests { get => m_Quests; }
+        public PiecesDB Pieces { get => m_Pieces; }
         public StoryDB Stories { get => m_Stories; }
         public TownDB Town { get => m_Town; }
         public CookieDB Cookies { get => m_Cookies; }
@@ -27,16 +27,16 @@ namespace CQM.Databases
         [SerializeField] private NpcData m_Npcs = new NpcData();
         [SerializeField] private WorldDB m_World = new WorldDB();
         [SerializeField] private DialogueDB m_Dialogues = new DialogueDB();
-        [SerializeField] private CookieDB m_Cookies = new CookieDB();
+        [SerializeField] private CookieDB m_Cookies;
         [SerializeField] private TownDB m_Town = new TownDB();
         [SerializeField] private StoryDB m_Stories = new StoryDB();
-        [SerializeField] private QuestDB m_Quests;
+        [SerializeField] private PiecesDB m_Pieces;
         [SerializeField] private CameraDataComponent m_Cameras = new CameraDataComponent();
 
         public void LoadData()
         {
             m_Stories.LoadData();
-            m_Quests.LoadData();
+            m_Pieces.LoadData();
             m_Town.LoadData(Stories);
             m_Cookies.LoadData();
             m_Dialogues.LoadData();

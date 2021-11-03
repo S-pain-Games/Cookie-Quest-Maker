@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using CQM.Databases;
 
 public class CookieMakingUI : MonoBehaviour
 {
@@ -88,7 +89,7 @@ public class CookieMakingUI : MonoBehaviour
         {
             txt_CookieName.text = cookieData.m_CookieName;
             txt_CookieDescription.text = cookieData.m_CookieDescription;
-            List<QPTag> tags = Admin.Global.Database.Quests.GetQuestPieceComponent<QuestPiece>(id).m_Tags;
+            List<QPTag> tags = Admin.Global.Database.Pieces.GetQuestPieceComponent<QuestPiece>(id).m_Tags;
             txt_CookieStats.text = "Hero Stats: \n";
             foreach (QPTag q in tags)
             {

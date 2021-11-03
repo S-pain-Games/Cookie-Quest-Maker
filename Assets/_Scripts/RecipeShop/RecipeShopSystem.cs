@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Linq;
+using CQM.Databases;
 
 public class RecipeShopSystem : MonoBehaviour
 {
