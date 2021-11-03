@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using CQM.Databases;
+using CQM.Components;
 
 public class CookieMakingUI : MonoBehaviour
 {

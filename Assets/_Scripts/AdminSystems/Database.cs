@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using CQM.Components;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace CQM.Databases
@@ -32,6 +33,13 @@ namespace CQM.Databases
         [SerializeField] private StoryDB m_Stories = new StoryDB();
         [SerializeField] private PiecesDB m_Pieces;
         [SerializeField] private CameraDataComponent m_Cameras = new CameraDataComponent();
+
+        private Dictionary<int, object> m_ComponentsDic = new Dictionary<int, object>();
+
+        public T GetComponent<T>(string query, int ID) where T : class
+        {
+            return m_ComponentsDic[query.GetHashCode()] as T;
+        }
 
         public void LoadData()
         {

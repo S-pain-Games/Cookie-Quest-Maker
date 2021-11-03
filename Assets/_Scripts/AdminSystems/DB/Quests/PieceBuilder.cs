@@ -1,8 +1,9 @@
-﻿using System;
+﻿using CQM.Components;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-using PieceType = QuestPiece.PieceType;
-using Tag = QPTag.TagType;
+using PieceType = CQM.Components.QuestPiece.PieceType;
+using Tag = CQM.Components.QPTag.TagType;
 
 namespace CQM.Databases
 {

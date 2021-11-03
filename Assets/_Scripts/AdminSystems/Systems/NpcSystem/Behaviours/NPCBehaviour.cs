@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using CQM.Components;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class NPCBehaviour : MonoBehaviour, IInteractableEntity

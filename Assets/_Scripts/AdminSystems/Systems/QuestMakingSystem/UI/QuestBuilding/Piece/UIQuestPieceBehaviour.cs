@@ -5,8 +5,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
+using CQM.Components;
 
-namespace CQM.Databases.UI
+namespace CQM.Gameplay
 {
     [RequireComponent(typeof(UIDraggable))]
     [RequireComponent(typeof(UIPressable))]

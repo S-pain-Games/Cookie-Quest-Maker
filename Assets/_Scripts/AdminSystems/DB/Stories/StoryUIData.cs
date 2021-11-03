@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 
-public class StoryUIData
+namespace CQM.Components
 {
-    public Sprite m_Sprite;
-    public string m_Title;
+    public class StoryUIData
+    {
+        public Sprite m_Sprite;
+        public string m_Title;
+    }
 }

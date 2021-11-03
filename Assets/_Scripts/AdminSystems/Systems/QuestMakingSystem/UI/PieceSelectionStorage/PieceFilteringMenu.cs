@@ -1,9 +1,10 @@
+using CQM.Components;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CQM.Databases.UI
+namespace CQM.Gameplay
 {
     public class PieceFilteringMenu : MonoBehaviour
     {

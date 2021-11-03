@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 using CQM.Databases;
+using CQM.Components;
 
 // Handles the UI that shows all the available pieces of the selected type
 public class UIPieceSelection : MonoBehaviour

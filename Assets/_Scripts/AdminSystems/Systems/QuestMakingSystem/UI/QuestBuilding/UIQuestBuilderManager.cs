@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEditor;
 using System;
 using UnityEngine.UI;
+using CQM.Components;
+using CQM.Databases;
 
-namespace CQM.Databases.UI
+namespace CQM.Gameplay
 {
     public class UIQuestBuilderManager : MonoBehaviour
     {
