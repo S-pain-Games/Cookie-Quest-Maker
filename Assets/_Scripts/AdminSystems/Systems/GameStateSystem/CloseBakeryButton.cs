@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CloseBakeryButton : MonoBehaviour
 {
     private EventVoid _onDailyStoriesCompletedCallback;
-    private Event<GameStateSystem.State> _setGameStateCommand;
+    private EventVoid _setGameStateCommand;
 
     [SerializeField]
     private GameObject _buttonGameObject;
@@ -18,7 +18,7 @@ public class CloseBakeryButton : MonoBehaviour
         // Subscribe to Callbacks and get Commands
         var evtSys = Admin.Global.EventSystem;
         _onDailyStoriesCompletedCallback = evtSys.GetCallbackByName<EventVoid>("day_sys", "all_daily_stories_completed");
-        _setGameStateCommand = evtSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
+        _setGameStateCommand = evtSys.GetCommandByName<EventVoid>("day_sys", "begin_night");
 
         _button = _buttonGameObject.GetComponent<Button>();
     }
@@ -28,7 +28,7 @@ public class CloseBakeryButton : MonoBehaviour
         _onDailyStoriesCompletedCallback.OnInvoked += TryToEnableButton;
         _button.onClick.AddListener(() =>
         {
-            _setGameStateCommand.Invoke(GameStateSystem.State.BakeryNight);
+            _setGameStateCommand.Invoke();
             _buttonGameObject.SetActive(false);
         });
     }

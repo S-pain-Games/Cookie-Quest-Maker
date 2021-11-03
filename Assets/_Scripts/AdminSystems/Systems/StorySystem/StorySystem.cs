@@ -78,10 +78,10 @@ public class StorySystem : ISystemEvents
 
         int targetId = questData.m_PiecesList.Find(a => a.m_Type == QuestPiece.PieceType.Target).m_ParentID;
 
-        ProcessStoryData(story.m_StoryData, tagType, value, targetId, out List<string> result, out StoryRepercusion rep);
+        ProcessStoryData(story.m_StoryData, tagType, value, targetId, out BranchOption result, out StoryRepercusion rep);
         story.m_State = Story.State.Completed;
         story.m_QuestData = questData;
-        story.m_QuestResult = result;
+        story.m_QuestBranchResult = result;
         story.m_QuestRepercusion = rep;
 
         OnStoryCompleted.Invoke(storyId);
@@ -113,7 +113,7 @@ public class StorySystem : ISystemEvents
     }
 
     // Process a story with the given tag and value and get the result
-    private void ProcessStoryData(StoryData data, QPTag.TagType tag, int value, int targetId, out List<string> result, out StoryRepercusion rep)
+    private void ProcessStoryData(StoryData data, QPTag.TagType tag, int value, int targetId, out BranchOption result, out StoryRepercusion rep)
     {
         result = null;
         rep = null;
@@ -138,12 +138,12 @@ public class StorySystem : ISystemEvents
     }
 
     // Process a Branch Option
-    private bool ProcessBranchOption(BranchOption branchOpt, QPTag.TagType tag, int value, int targetId, out List<string> result, out StoryRepercusion rep)
+    private bool ProcessBranchOption(BranchOption branchOpt, QPTag.TagType tag, int value, int targetId, out BranchOption result, out StoryRepercusion rep)
     {
         bool match = CheckCondition(branchOpt.m_Condition, tag, value, targetId);
         if (match)
         {
-            result = branchOpt.m_Result;
+            result = branchOpt;
             rep = branchOpt.m_Repercusion;
         }
         else

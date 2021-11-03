@@ -70,17 +70,23 @@ namespace CQM.Databases
             "The mayor is obviously not happy about it but 'some' people are really enjoying the mess" });
 
             builder.AddStoryBranch("center_wolf_dead", "Did you hear what happened ?? apparently conviced mayor.",
+                "Well well, those wolves sure had a scary night",
                 QPTag.TagType.Convince, 1, "mayor".GetHashCode());
             builder.AddStoryBranch("center_wolf_alive", "Apparently yesterday some small creatures tried to approach the Mayor at night, the mayor obviously ran away screaming help.",
+                "Well well, those wolves sure had a scary night",
                 QPTag.TagType.Help, 1, "mayor".GetHashCode());
             builder.AddStoryBranch("center_wolf_alive", "Did you hear that the mayor was attacked just this night?? It is horrible for the town.",
+                "Well well, those wolves sure had a scary night",
                 QPTag.TagType.Harm, 1, "mayor".GetHashCode());
 
             builder.AddStoryBranch("center_wolf_dead", "Did you hear what happened ?? apparently somebody saw some small creatures talk with the wolves at night and just after that they just left.",
+                "Well well, those wolves sure had a scary night",
                 QPTag.TagType.Convince, 1, "wolves".GetHashCode());
             builder.AddStoryBranch("center_wolf_alive", "Apparently yesterday some small creatures tried to approach the Mayor at night, the mayor obviously ran away screaming help.",
+                "Well well, those wolves sure had a scary night",
                 QPTag.TagType.Help, 1, "wolves".GetHashCode());
             builder.AddStoryBranch("center_wolf_alive", "Did you hear that the wolves were attacked just this night??",
+                "Well well, those wolves sure had a scary night",
                 QPTag.TagType.Harm, 1, "wolves".GetHashCode());
 
             var story = builder.FinishCreatingAndReturnStory();
@@ -154,12 +160,12 @@ namespace CQM.Databases
             m_StoryData.m_IntroductionDialogue = new List<string>() { introduction };
         }
 
-        public void AddStoryBranch(string repercusion, List<string> result, QPTag.TagType tag, int tagValue, int targetId)
+        public void AddStoryBranch(string repercusion, List<string> npcResult, QPTag.TagType tag, int tagValue, int targetId)
         {
             BranchOption bOpt = new BranchOption
             {
                 m_Repercusion = _stories.GetRepercusion(repercusion.GetHashCode()),
-                m_Result = result
+                m_ResultNPCDialogue = npcResult
             };
             BranchCondition bCon = new BranchCondition
             {
@@ -171,12 +177,14 @@ namespace CQM.Databases
             m_StoryData.m_BranchOptions.Add(bOpt);
         }
 
-        public void AddStoryBranch(string repercusion, string result, QPTag.TagType tag, int tagValue, int targetId)
+        public void AddStoryBranch(string repercusion, string npcResult, string deityDialogue, QPTag.TagType tag, int tagValue, int targetId)
         {
             BranchOption bOpt = new BranchOption
             {
                 m_Repercusion = _stories.GetRepercusion(repercusion.GetHashCode()),
-                m_Result = new List<string>() { result }
+                m_ResultNPCDialogue = new List<string>() { npcResult },
+                m_DeitiesResultDialogue = new List<BranchOption.DeitiesStoryDialogue> { new BranchOption.DeitiesStoryDialogue { m_DeityID = 1, m_Dialogue = new List<string> { deityDialogue } } }
+
             };
             BranchCondition bCon = new BranchCondition
             {

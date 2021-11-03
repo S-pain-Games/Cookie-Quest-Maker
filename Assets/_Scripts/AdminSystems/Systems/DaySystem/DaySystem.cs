@@ -9,6 +9,7 @@ public class DaySystem : ISystemEvents
     // Own Callbacks
     private EventVoid _dayStartedCallbacks;
     private EventVoid _dayEndedCallbacks;
+    private EventVoid _nightBeginCallback;
     private EventVoid _dailyStoriesCompleted;
 
     // External Commands
@@ -23,10 +24,11 @@ public class DaySystem : ISystemEvents
 
         _dayStartedCallbacks = callbacks.AddEvent("day_started".GetHashCode());
         _dayEndedCallbacks = callbacks.AddEvent("day_ended".GetHashCode());
+        _nightBeginCallback = callbacks.AddEvent("night_begin".GetHashCode());
         _dailyStoriesCompleted = callbacks.AddEvent("all_daily_stories_completed".GetHashCode());
 
-        var evt = commands.AddEvent("start_new_day".GetHashCode());
-        evt.OnInvoked += StartNewDay;
+        commands.AddEvent("start_new_day".GetHashCode()).OnInvoked += StartNewDay;
+        commands.AddEvent("begin_night".GetHashCode()).OnInvoked += StartNight;
     }
 
     public void Initialize(GameEventSystem evtSys, DayData dayData)
@@ -49,6 +51,12 @@ public class DaySystem : ISystemEvents
         {
             _dailyStoriesCompleted.Invoke();
         }
+    }
+
+    public void StartNight()
+    {
+        _setGameStateCommand.Invoke(GameStateSystem.State.BakeryNight);
+        _nightBeginCallback.Invoke();
     }
 
     public void StartNewDay()

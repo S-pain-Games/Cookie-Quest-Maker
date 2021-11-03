@@ -68,6 +68,8 @@ MonoBehaviour:
   m_Npcs:
     m_NpcBehaviour:
     - {fileID: 0}
+    m_Evith: {fileID: 0}
+    m_Nu: {fileID: 0}
   m_Dialogues:
     m_DialogueUIData:
       m_Container: {fileID: 0}

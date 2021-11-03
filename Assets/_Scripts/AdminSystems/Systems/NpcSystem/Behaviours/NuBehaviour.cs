@@ -1,16 +1,15 @@
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class EvithBehaviour : MonoBehaviour, IInteractableEntity
+
+public class NuBehaviour : MonoBehaviour
 {
     public List<string> m_Dialogue = new List<string>();
     private Event<ShowDialogueEvtArgs> _showDialogueCmd;
-
-    // HACK
-    [SerializeField]
-    private UnityEvent onFinishInteract;
 
     private void Awake()
     {
@@ -22,12 +21,7 @@ public class EvithBehaviour : MonoBehaviour, IInteractableEntity
     {
         _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(
             m_Dialogue,
-            "Evith",
-            () => { DialogueWithNpcFinishedCallback(); }));
-    }
-
-    private void DialogueWithNpcFinishedCallback()
-    {
-        onFinishInteract?.Invoke();
+            "Nu",
+            null));
     }
 }

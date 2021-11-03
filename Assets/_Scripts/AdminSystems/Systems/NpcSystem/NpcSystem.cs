@@ -25,6 +25,7 @@ namespace CQM.Systems
             _npcData = npcData;
 
             _showPopupCmd = evtSys.GetCommandByName<Event<PopupData>>("popup_sys", "show_popup");
+            evtSys.GetCallbackByName<EventVoid>("day_sys", "night_begin").OnInvoked += PopulateDeitiesData;
             // DEV ONLY
             PopulateNpcsData();
         }
@@ -36,8 +37,8 @@ namespace CQM.Systems
             sysID = "npc_sys".GetHashCode();
 
             // Commands
-            var evt = commands.AddEvent("cmd_populate_npcs".GetHashCode());
-            evt.OnInvoked += PopulateNpcsData;
+            commands.AddEvent("cmd_populate_npcs".GetHashCode()).OnInvoked += PopulateNpcsData;
+            commands.AddEvent("populate_deities".GetHashCode()).OnInvoked += PopulateDeitiesData;
         }
 
         // Called just before the start of the day to set the
@@ -67,9 +68,9 @@ namespace CQM.Systems
                 {
                     Story s = _storyDB.m_StoriesDB[finalizableStories[0]];
 
-                    for (int c = 0; c < s.m_QuestResult.Count; c++)
+                    for (int c = 0; c < s.m_QuestBranchResult.m_ResultNPCDialogue.Count; c++)
                     {
-                        npcData.m_Dialogue.Add(s.m_QuestResult[c]);
+                        npcData.m_Dialogue.Add(s.m_QuestBranchResult.m_ResultNPCDialogue[c]);
                     }
 
                     npcData.m_HasToFinalizeAStory = true;
@@ -102,6 +103,40 @@ namespace CQM.Systems
                 {
                     npcData.m_HasToStartAStory = false;
                     //_showPopupCmd.Invoke(new PopupData { m_Text = "You have completed all stories, thank you for playing the alpha", m_TimeAlive = 999999999 });
+                }
+            }
+        }
+
+        public void PopulateDeitiesData()
+        {
+            List<int> completedStories = _storyDB.m_CompletedStories;
+
+            EvithBehaviour evith = _npcData.m_Evith;
+            NuBehaviour nu = _npcData.m_Nu;
+            evith.m_Dialogue.Clear();
+            nu.m_Dialogue.Clear();
+
+            for (int i = 0; i < completedStories.Count; i++)
+            {
+                BranchOption result = _storyDB.m_StoriesDB[completedStories[i]].m_QuestBranchResult;
+
+                for (int j = 0; j < result.m_DeitiesResultDialogue.Count; j++)
+                {
+                    BranchOption.DeitiesStoryDialogue dialogue = result.m_DeitiesResultDialogue[j];
+                    if (dialogue.m_DeityID == 0)
+                    {
+                        for (int k = 0; k < dialogue.m_Dialogue.Count; k++)
+                        {
+                            nu.m_Dialogue.Add(dialogue.m_Dialogue[k]);
+                        }
+                    }
+                    else
+                    {
+                        for (int k = 0; k < dialogue.m_Dialogue.Count; k++)
+                        {
+                            evith.m_Dialogue.Add(dialogue.m_Dialogue[k]);
+                        }
+                    }
                 }
             }
         }
