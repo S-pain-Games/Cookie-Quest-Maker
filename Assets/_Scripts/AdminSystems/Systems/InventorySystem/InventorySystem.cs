@@ -12,10 +12,10 @@ public class InventorySystem : ISystemEvents
         callbacks = new EventSys();
         sysID = "inventory_sys".GetHashCode();
 
-        commands.AddEvent<ItemData>("add_cookie".GetHashCode()).OnInvoked +=
-            (args) => AddCookieToInventory(args.m_ItemID, args.m_Amount);
-        commands.AddEvent<ItemData>("remove_cookie".GetHashCode()).OnInvoked +=
-            (args) => RemoveCookieFromInventory(args.m_ItemID, args.m_Amount);
+        commands.AddEvent<ItemData>("add_piece".GetHashCode()).OnInvoked +=
+            (args) => AddPieceToInventory(args.m_ItemID, args.m_Amount);
+        commands.AddEvent<ItemData>("remove_piece".GetHashCode()).OnInvoked +=
+            (args) => RemovePieceFromInventory(args.m_ItemID, args.m_Amount);
 
         commands.AddEvent<InventorySys_ChangeReputationEvtArgs>("change_reputation".GetHashCode()).OnInvoked +=
             (args) =>
@@ -42,17 +42,17 @@ public class InventorySystem : ISystemEvents
         _inventoryData = data;
     }
 
-    private void AddCookieToInventory(int cookieID, int amount)
+    private void AddPieceToInventory(int pieceID, int amount)
     {
-        InventoryItem item = _inventoryData.m_Pieces.Find(i => i.m_ItemID == cookieID);
+        InventoryItem item = _inventoryData.m_Pieces.Find(i => i.m_ItemID == pieceID);
         if (item != null)
             item.m_Amount += amount;
         else
-            _inventoryData.m_Pieces.Add(new InventoryItem(cookieID, amount));
+            _inventoryData.m_Pieces.Add(new InventoryItem(pieceID, amount));
     }
-    private void RemoveCookieFromInventory(int cookieID, int amount)
+    private void RemovePieceFromInventory(int pieceID, int amount)
     {
-        InventoryItem item = _inventoryData.m_Pieces.Find(i => i.m_ItemID == cookieID);
+        InventoryItem item = _inventoryData.m_Pieces.Find(i => i.m_ItemID == pieceID);
         if (item != null)
         {
             item.m_Amount -= amount;

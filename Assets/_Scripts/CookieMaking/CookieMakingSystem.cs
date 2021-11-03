@@ -19,7 +19,7 @@ public class CookieMakingSystem : ISystemEvents
     {
         _cookieDB = cookieDB;
         var evtSys = Admin.Global.EventSystem;
-        _addCookieCommand = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_cookie");
+        _addCookieCommand = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_piece");
     }
 
     public void SelectRecipe(int recipeId)

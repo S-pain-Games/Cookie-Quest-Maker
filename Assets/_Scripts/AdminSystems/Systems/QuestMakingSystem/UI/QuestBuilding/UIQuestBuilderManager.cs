@@ -22,6 +22,16 @@ namespace CQM.Databases.UI
         [SerializeField]
         private List<UIQuestPieceBehaviour> _questPieces = new List<UIQuestPieceBehaviour>();
 
+        private Event<ItemData> _addPieceCmd;
+        private Event<ItemData> _removePieceCmd;
+
+        private void Awake()
+        {
+            var evtSys = Admin.Global.EventSystem;
+            _addPieceCmd = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_piece");
+            _removePieceCmd = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "remove_piece");
+        }
+
         private void OnEnable()
         {
             // Register Sockets Events
@@ -75,9 +85,7 @@ namespace CQM.Databases.UI
                 // TODO: >:[
                 if (_questPieces[i].Piece.m_Type == QuestPiece.PieceType.Cookie)
                 {
-                    var evtSys = Admin.Global.EventSystem;
-                    var evt = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_cookie");
-                    evt.Invoke(new ItemData(_questPieces[i].Piece.m_ParentID, 1));
+                    _addPieceCmd.Invoke(new ItemData(_questPieces[i].Piece.m_ParentID, 1));
                 }
 
                 Destroy(_questPieces[i].gameObject); // Pooling?
@@ -110,29 +118,16 @@ namespace CQM.Databases.UI
             {
                 if (_questPieces[i].Piece.m_Type == questPiece.m_Type)
                 {
-                    // TODO: oh god
-                    if (_questPieces[i].Piece.m_Type == QuestPiece.PieceType.Cookie)
-                    {
-                        var evtSys = Admin.Global.EventSystem;
-                        var evt = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_cookie");
-                        evt.Invoke(new ItemData(_questPieces[i].Piece.m_ParentID, 1));
-                    }
+                    _addPieceCmd.Invoke(new ItemData(_questPieces[i].Piece.m_ParentID, 1));
 
                     _questPieces[i].TryToUnsocket(null);
                     Destroy(_questPieces[i].gameObject);
                     _questPieces.RemoveAt(i);
-                    i--;
                     break;
                 }
             }
 
-            // TODO: oh lord
-            if (questPiece.m_Type == QuestPiece.PieceType.Cookie)
-            {
-                var evtSys = Admin.Global.EventSystem;
-                var evt = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "remove_cookie");
-                evt.Invoke(new ItemData(pieceID, 1));
-            }
+            _removePieceCmd.Invoke(new ItemData(pieceID, 1));
 
             // Spawn selected piece from storage in quest builder
             var piecePrefab = Admin.Global.Database.Quests.GetQuestPieceComponent<GameObject>(pieceID);

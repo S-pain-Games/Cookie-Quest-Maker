@@ -55,5 +55,10 @@ public class CookieDB
         cookie.m_CookieName = "Plain Cookie 2";
         cookie.m_CookieDescription = "Plain Cookie 2 description";
         m_CookieDataDB.Add(pIds.plain_cookie_2, cookie);
+
+        cookie = new CookieData();
+        cookie.m_CookieName = "Attack";
+        cookie.m_CookieDescription = "Very Agressive";
+        m_CookieDataDB.Add("attack".GetHashCode(), cookie);
     }
 }
