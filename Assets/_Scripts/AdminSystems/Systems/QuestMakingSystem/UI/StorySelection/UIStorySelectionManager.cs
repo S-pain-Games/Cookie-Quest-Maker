@@ -7,8 +7,6 @@ using System;
 
 public class UIStorySelectionManager : MonoBehaviour
 {
-    public event Action<int> OnStorySelected;
-
     // Ui Controls
     [Header("Buttons")]
     [SerializeField] private Button _nextStoryButton;
@@ -20,14 +18,21 @@ public class UIStorySelectionManager : MonoBehaviour
     [SerializeField] private Image _cardContents;
     [SerializeField] private TextMeshProUGUI _cardTitle;
 
-    private StoryDB storyDB;
+    private StoryDB _storyDB;
+    private int _currentStoryIndex = 0;
 
-    private int currentStoryIndex = 0;
-    private int previousTarget = 0;
+    private EventSys _evtSys;
+    private Event<int> _onStorySelectedCallback;
+
+    public void Initialize(EventSys evtSys)
+    {
+        _evtSys = evtSys;
+        _onStorySelectedCallback = _evtSys.AddEvent<int>("on_story_selected".GetHashCode());
+    }
 
     private void Awake()
     {
-        storyDB = Admin.Global.Database.Stories;
+        _storyDB = Admin.Global.Database.Stories;
     }
 
     private void OnEnable()
@@ -48,7 +53,7 @@ public class UIStorySelectionManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        int numOngoingStories = storyDB.m_OngoingStories.Count;
+        int numOngoingStories = _storyDB.m_OngoingStories.Count;
         if (numOngoingStories <= 0)
         {
             _cardContents.sprite = null;
@@ -56,9 +61,9 @@ public class UIStorySelectionManager : MonoBehaviour
         }
         else
         {
-            currentStoryIndex = Mathf.Clamp(currentStoryIndex, 0, numOngoingStories - 1);
-            int storyId = storyDB.m_OngoingStories[currentStoryIndex];
-            var data = storyDB.m_StoriesUI[storyId];
+            _currentStoryIndex = Mathf.Clamp(_currentStoryIndex, 0, numOngoingStories - 1);
+            int storyId = _storyDB.m_OngoingStories[_currentStoryIndex];
+            var data = _storyDB.m_StoriesUI[storyId];
             _cardTitle.text = data.m_Title;
         }
     }
@@ -66,9 +71,9 @@ public class UIStorySelectionManager : MonoBehaviour
     private void NextStory()
     {
         // Increment and wrap around
-        currentStoryIndex++;
-        if (currentStoryIndex >= storyDB.m_OngoingStories.Count)
-            currentStoryIndex = 0;
+        _currentStoryIndex++;
+        if (_currentStoryIndex >= _storyDB.m_OngoingStories.Count)
+            _currentStoryIndex = 0;
 
         UpdateUI();
     }
@@ -76,19 +81,20 @@ public class UIStorySelectionManager : MonoBehaviour
     private void PreviousStory()
     {
         // Decrement and wrap around
-        currentStoryIndex--;
-        if (currentStoryIndex < 0)
-            currentStoryIndex = storyDB.m_OngoingStories.Count;
+        _currentStoryIndex--;
+        if (_currentStoryIndex < 0)
+            _currentStoryIndex = _storyDB.m_OngoingStories.Count;
 
         UpdateUI();
     }
 
     private void SelectStory()
     {
-        if (storyDB.m_OngoingStories.Count > 0)
+        if (_storyDB.m_OngoingStories.Count > 0)
         {
-            int storyId = storyDB.m_OngoingStories[currentStoryIndex];
-            OnStorySelected?.Invoke(storyId);
+            int storyId = _storyDB.m_OngoingStories[_currentStoryIndex];
+            _onStorySelectedCallback.Invoke(storyId);
+            //OnStorySelected?.Invoke(storyId);
         }
     }
 }

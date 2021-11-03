@@ -56,9 +56,8 @@ public class InventorySystem : ISystemEvents
         if (item != null)
         {
             item.m_Amount -= amount;
-            item.m_Amount = Mathf.Min(item.m_Amount, 0);
 
-            if (item.m_Amount == 0)
+            if (item.m_Amount <= 0)
                 _inventoryData.m_Pieces.Remove(item);
         }
     }

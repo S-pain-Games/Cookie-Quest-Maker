@@ -25,6 +25,22 @@ namespace CQM.Databases.UI
         private Event<ItemData> _addPieceCmd;
         private Event<ItemData> _removePieceCmd;
 
+        private EventSys _evtSys;
+        private Event<int> _onUsePiece;
+        private Canvas _canvas;
+
+        public void Initialize(EventSys evtSys, Canvas canvas)
+        {
+            _evtSys = evtSys;
+            _canvas = canvas;
+        }
+
+        public void AdquireUIEvents()
+        {
+            _evtSys.GetEvent("on_use_piece".GetHashCode(), out _onUsePiece);
+            _onUsePiece.OnInvoked += SpawnPiece;
+        }
+
         private void Awake()
         {
             var evtSys = Admin.Global.EventSystem;
@@ -107,7 +123,7 @@ namespace CQM.Databases.UI
             _questPieces.Clear();
         }
 
-        public void SpawnPiece(int pieceID, Canvas canvas)
+        public void SpawnPiece(int pieceID)
         {
             QuestDB quests = Admin.Global.Database.Quests;
             var questPiece = quests.GetQuestPieceComponent<QuestPiece>(pieceID);
@@ -132,7 +148,7 @@ namespace CQM.Databases.UI
             // Spawn selected piece from storage in quest builder
             var piecePrefab = Admin.Global.Database.Quests.GetQuestPieceComponent<GameObject>(pieceID);
             var pieceBehaviour = Instantiate(piecePrefab, pieceSpawnPosition).GetComponent<UIQuestPieceBehaviour>();
-            pieceBehaviour.Initialize(canvas, uiData, questPiece);
+            pieceBehaviour.Initialize(_canvas, uiData, questPiece);
 
             _questPieces.Add(pieceBehaviour);
             InitializeQuestPieceBehaviour(pieceBehaviour);

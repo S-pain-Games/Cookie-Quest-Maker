@@ -35,17 +35,14 @@ namespace CQM.Databases.UI
 
         public void Initialize(Canvas canvas, UIQuestPieceData uiData, QuestPiece piece)
         {
+            _draggable = GetComponent<UIDraggable>();
+            _pressable = GetComponent<UIPressable>();
+
             _canvas = canvas;
             _raycaster = canvas.GetComponent<GraphicRaycaster>();
             Piece = piece;
             _draggable.Initialize(canvas);
             _textComp.text = uiData.m_Name;
-        }
-
-        private void Awake()
-        {
-            _draggable = GetComponent<UIDraggable>();
-            _pressable = GetComponent<UIPressable>();
         }
 
         private void OnEnable()

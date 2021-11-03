@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 // Entry point to the Quest Making Gameplay System
-public class QuestMakingSystem
+public class QuestMakingSystem : ISystemEvents
 {
     private QMGameplayData m_Data = new QMGameplayData();
     public Event<StorySys_CompleteStoyEvtArgs> _completeStoryCmd;
@@ -78,6 +78,17 @@ public class QuestMakingSystem
         {
             return false;
         }
+    }
+
+    public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+    {
+        commands = new EventSys();
+        callbacks = new EventSys();
+        sysID = "quest_making_sys".GetHashCode();
+
+        commands.AddEvent<int>("select_story".GetHashCode()).OnInvoked += SelectStory;
+        commands.AddEvent<QuestPiece>("add_piece".GetHashCode()).OnInvoked += AddPiece;
+        commands.AddEvent<QuestPiece>("remove_piece".GetHashCode()).OnInvoked += RemovePiece;
     }
 }
 

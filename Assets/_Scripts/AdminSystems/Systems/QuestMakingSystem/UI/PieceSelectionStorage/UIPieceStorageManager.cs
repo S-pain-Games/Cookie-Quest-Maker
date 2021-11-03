@@ -9,13 +9,28 @@ namespace CQM.Databases.UI
     // important data
     public class UIPieceStorageManager : MonoBehaviour
     {
-        public event Action<int> OnUsePiece;
-
         public QuestPiece.PieceType m_SelectedType;
         public int selectedStoryId; // used to populate UI with story targets
 
         [SerializeField] private PieceFilteringMenu _pieceFiltering;
         [SerializeField] private UIPieceSelection _pieceSelector;
+
+        private EventSys _evtSys;
+
+        private Event<int> _onStorySelected;
+        private Event<int> _onUsePiece;
+
+        public void Initialize(EventSys evtSys)
+        {
+            _evtSys = evtSys;
+            _onUsePiece = _evtSys.AddEvent<int>("on_use_piece".GetHashCode());
+        }
+
+        public void AdquireUIEvents()
+        {
+            _evtSys.GetEvent("on_story_selected".GetHashCode(), out _onStorySelected);
+            _onStorySelected.OnInvoked += OnStorySelected;
+        }
 
         private void OnEnable()
         {
@@ -35,7 +50,7 @@ namespace CQM.Databases.UI
             _pieceSelector.Refresh(type);
         }
 
-        public void OnStorySelected(int storyID)
+        private void OnStorySelected(int storyID)
         {
             _pieceSelector.m_CurrentStoryID = storyID;
         }
@@ -43,7 +58,7 @@ namespace CQM.Databases.UI
         // Called by the Use UI button
         private void PieceSelection_OnUsePiece(int pieceID)
         {
-            OnUsePiece?.Invoke(pieceID);
+            _onUsePiece.Invoke(pieceID);
         }
     }
 }

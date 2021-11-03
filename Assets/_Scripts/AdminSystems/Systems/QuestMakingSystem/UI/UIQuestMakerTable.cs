@@ -22,39 +22,54 @@ public class UIQuestMakerTable : MonoBehaviour
     private GameEventSystem evtSys;
     private Event<GameStateSystem.State> _changeGameStateCmd;
 
+    public EventSys m_evtSys = new EventSys();
+
+    private Event<int> _onStorySelectedCallback;
+    private Event<int> _onUsePiece;
+
     private void Awake()
     {
         _questMakingSys = Admin.Global.Systems.m_QuestMakerSystem;
         evtSys = Admin.Global.EventSystem;
         _changeGameStateCmd = evtSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
+
+        _storySelection.Initialize(m_evtSys);
+        _pieceStorage.Initialize(m_evtSys);
+        _questBuilding.Initialize(m_evtSys, _canvas);
+
+        _pieceStorage.AdquireUIEvents();
+        _questBuilding.AdquireUIEvents();
+
+        m_evtSys.GetEvent("on_story_selected".GetHashCode(), out _onStorySelectedCallback);
+        m_evtSys.GetEvent("on_use_piece".GetHashCode(), out _onUsePiece);
     }
 
     private void OnEnable()
     {
-        _pieceStorage.OnUsePiece += PieceStorage_OnUsePiece;
-        _storySelection.OnStorySelected += StorySelection_OnStorySelected;
         _questBuilding.OnAddQuestPiece += QuestBuilding_OnAddQuestPiece;
         _questBuilding.OnRemoveQuestPiece += QuestBuilding_OnRemoveQuestPiece;
         _questBuilding.OnFinishQuest += QuestBuilding_OnFinishQuest;
 
+        _onStorySelectedCallback.OnInvoked += OnStorySelected;
+        _onUsePiece.OnInvoked += OnPieceSelected;
+
         EnableStorySelection();
     }
 
-
     private void OnDisable()
     {
-        _pieceStorage.OnUsePiece -= PieceStorage_OnUsePiece;
-        _storySelection.OnStorySelected -= StorySelection_OnStorySelected;
         _questBuilding.OnAddQuestPiece -= QuestBuilding_OnAddQuestPiece;
         _questBuilding.OnRemoveQuestPiece -= QuestBuilding_OnRemoveQuestPiece;
         _questBuilding.OnFinishQuest -= QuestBuilding_OnFinishQuest;
+
+        _onUsePiece.OnInvoked -= OnPieceSelected;
+        _onStorySelectedCallback.OnInvoked -= OnStorySelected;
     }
 
-    private void StorySelection_OnStorySelected(int storyId)
+    private void OnStorySelected(int storyId)
     {
         EnableQuestBuilding();
         _questMakingSys.SelectStory(storyId);
-        _pieceStorage.OnStorySelected(storyId);
     }
 
     private void QuestBuilding_OnRemoveQuestPiece(QuestPiece piece)
@@ -76,10 +91,9 @@ public class UIQuestMakerTable : MonoBehaviour
         }
     }
 
-    private void PieceStorage_OnUsePiece(int pieceID)
+    private void OnPieceSelected(int pieceID)
     {
         EnableQuestBuilding();
-        _questBuilding.SpawnPiece(pieceID, _canvas);
     }
 
     public void EnableStorySelection()
