@@ -6,12 +6,12 @@ using System;
 
 public class DialogueSystem : ISystemEvents
 {
-    private DialogueSceneElements _dialogueData;
+    private DialogueReferences _dialogueData;
 
     private EventVoid _enableCharMovementCmd;
     private EventVoid _disableCharMovementCmd;
 
-    public void Initialize(DialogueSceneElements dialogueData, GameEventSystem evtSys)
+    public void Initialize(DialogueReferences dialogueData, GameEventSystem evtSys)
     {
         _dialogueData = dialogueData;
         _enableCharMovementCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "enable_movement");
@@ -85,10 +85,10 @@ public struct ShowDialogueEvtArgs
 [Serializable]
 public class DialogueDB
 {
-    public DialogueSceneElements SceneElements => m_DialogueUIData;
+    public DialogueReferences SceneElements => m_DialogueUIData;
 
     [SerializeField]
-    private DialogueSceneElements m_DialogueUIData = new DialogueSceneElements();
+    private DialogueReferences m_DialogueUIData = new DialogueReferences();
     private Dictionary<int, List<int>> m_RandomDialogue = new Dictionary<int, List<int>>(); // TODO: Localize
 
 
@@ -98,7 +98,7 @@ public class DialogueDB
 }
 
 [Serializable]
-public class DialogueSceneElements
+public class DialogueReferences
 {
     public GameObject m_Container;
 

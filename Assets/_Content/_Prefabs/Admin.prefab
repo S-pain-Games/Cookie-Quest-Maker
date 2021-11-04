@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 2041105134198296794}
   - component: {fileID: 258224912}
   - component: {fileID: 585195714406842495}
-  - component: {fileID: 5413392989090943059}
-  - component: {fileID: 8151889590629862278}
   - component: {fileID: 930925265}
+  - component: {fileID: 2656137720672788242}
   m_Layer: 0
   m_Name: Admin
   m_TagString: Untagged
@@ -61,6 +60,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21672e173390854eb9316e92098a043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dataBuilders:
+    m_PiecesBuilder: {fileID: 930925265}
+    m_StoryBuilder: {fileID: 2656137720672788242}
   m_GameState: {fileID: 585195714406842495}
   m_Popups:
     m_InstantiationTransform: {fileID: 0}
@@ -77,8 +79,6 @@ MonoBehaviour:
       m_Line: {fileID: 0}
       m_CurrentDialogueLines: []
       m_CurrentLineIndex: 0
-  m_Cookies: {fileID: 8151889590629862278}
-  m_Pieces: {fileID: 5413392989090943059}
   m_Cameras:
     m_MainCam: {fileID: 0}
   m_NewspaperRefs: {fileID: 0}
@@ -99,32 +99,6 @@ MonoBehaviour:
   m_QuestMaking: {fileID: 0}
   m_CookieMaking: {fileID: 0}
   m_BakeryNight: {fileID: 0}
---- !u!114 &5413392989090943059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30bf6d7865c1523469b07f9322d50070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pieceBuilder: {fileID: 930925265}
---- !u!114 &8151889590629862278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7946f8118f36c340b7a8895adcdb098, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _piecesBuilder: {fileID: 930925265}
 --- !u!114 &930925265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,3 +528,120 @@ MonoBehaviour:
     m_Price: 50
     m_PieceID: -1938852922
   defaultPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+--- !u!114 &2656137720672788242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f08a15d8ebae24b99b20e9637457ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StoriesList:
+  - m_StoryData:
+      m_ID: 1004953812
+      m_Title: Mayor's Wolves
+      m_IntroductionDialogue:
+      - Intro 1 wolves
+      m_BranchOptions:
+      - m_Condition:
+          m_Target: 996742298
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - NPC_Dialogue Harm 1
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - Evith mayors wolves Harm dialogue
+        - m_DeityID: 0
+          m_Dialogue:
+          - Nu mayors wolves Harm dialogue
+        m_Repercusion:
+          m_ID: -623225176
+          m_ParentStoryID: 1004953812
+          m_Name: Wolves Alive
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target: 996742298
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - NPC_Dialogue Convince 1
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - Evith mayors wolves Convince dialogue
+        - m_DeityID: 0
+          m_Dialogue:
+          - Nu mayors wolves Convince dialogue
+        m_Repercusion:
+          m_ID: -623225176
+          m_ParentStoryID: 1004953812
+          m_Name: Wolves Alive
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target: 996742298
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - NPC_Dialogue Help 1
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - Evith mayors wolves Help dialogue
+        - m_DeityID: 0
+          m_Dialogue:
+          - Nu mayors wolves Help dialogue
+        m_Repercusion:
+          m_ID: -623225176
+          m_ParentStoryID: 1004953812
+          m_Name: Wolves Alive
+          m_Active: 0
+          m_Value: 15
+      m_AllPossibleTargets: 9a14693b
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID: 0
+        m_ParentStoryID: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID: 0
+      m_ParentStoryID: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  m_Repercusions:
+  - m_ID: -623225176
+    m_ParentStoryID: 1004953812
+    m_Name: Wolves Alive
+    m_Active: 0
+    m_Value: 15
+  m_RepercusionNewspaperArticles:
+  - m_RepID: -623225176
+    m_Title: Wolves alive oh god
+    m_Body: In other news
+  m_StoryUI:
+  - m_ParentStoryID: 1004953812
+    m_Sprite: {fileID: 21300000, guid: a9a7ff30478141346b289983e787b699, type: 3}
+    m_Title: Wolves Party
+  m_References:
+  - m_ParentStoryID: 1004953812
+    m_StoryName: Mayor's Wolves
+    m_StorySelectionUiSprite: {fileID: 21300000, guid: a9a7ff30478141346b289983e787b699, type: 3}

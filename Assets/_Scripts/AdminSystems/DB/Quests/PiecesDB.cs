@@ -7,12 +7,9 @@ using UnityEngine;
 namespace CQM.Databases
 {
     // Stores all the created quests in the game
-    [System.Serializable]
-    public class PiecesDB : MonoBehaviour
+    [Serializable]
+    public class PiecesDB
     {
-        [SerializeField]
-        private PieceBuilder _pieceBuilder;
-
         // Contains all the quest piece data
         private Dictionary<int, QuestPieceDataContainer> qpDataDic = new Dictionary<int, QuestPieceDataContainer>();
 
@@ -42,9 +39,9 @@ namespace CQM.Databases
             return m_QuestDataDB[ID];
         }
 
-        public void LoadData()
+        public void LoadData(PieceBuilder builder)
         {
-            var piecesList = _pieceBuilder.PiecesData;
+            var piecesList = builder.PiecesData;
 
             for (int i = 0; i < piecesList.Count; i++)
             {

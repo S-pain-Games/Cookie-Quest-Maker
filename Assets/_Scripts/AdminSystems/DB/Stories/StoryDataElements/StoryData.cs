@@ -8,13 +8,16 @@ namespace CQM.Components
 {
 
     // Data that describes the persistent designer-authored state of a story
+    [System.Serializable]
     public class StoryData
     {
         public int m_ID;
         public string m_Title = "";
         public List<string> m_IntroductionDialogue = new List<string>();
         public List<BranchOption> m_BranchOptions = new List<BranchOption>();
-        public List<int> m_Targets = new List<int>(); // TODO Add multiple targets
+
+        // We cache all the targets on build
+        public List<int> m_AllPossibleTargets = new List<int>();
 
         public void Build()
         {
@@ -26,13 +29,13 @@ namespace CQM.Components
             // it is good enough
             m_BranchOptions.Sort();
 
-            m_Targets.Clear();
+            m_AllPossibleTargets.Clear();
             for (int i = 0; i < m_BranchOptions.Count; i++)
             {
                 int targetId = m_BranchOptions[i].m_Condition.m_Target;
-                if (!m_Targets.Contains(targetId))
+                if (!m_AllPossibleTargets.Contains(targetId))
                 {
-                    m_Targets.Add(targetId);
+                    m_AllPossibleTargets.Add(targetId);
                 }
             }
         }
@@ -48,6 +51,7 @@ namespace CQM.Components
 
         // The dialogue the deities will say at night after completing a story
         public List<DeitiesStoryDialogue> m_DeitiesResultDialogue = new List<DeitiesStoryDialogue>();
+
         public StoryRepercusion m_Repercusion;
 
         public int CompareTo(BranchOption obj)
@@ -62,6 +66,7 @@ namespace CQM.Components
             }
         }
 
+        [System.Serializable]
         public class DeitiesStoryDialogue
         {
             public int m_DeityID = 0; // 0 -> Good Deity | 1 -> Evil Deity

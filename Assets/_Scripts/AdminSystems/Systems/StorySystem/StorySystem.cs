@@ -47,12 +47,12 @@ public class StorySystem : ISystemEvents
     // a story with the given ID
     public void StartStory(int storyId)
     {
-        Story story = _storyDB.GetStoryComponent<Story>(storyId);
+        StoryInfo story = _storyDB.GetStoryComponent<StoryInfo>(storyId);
 
-        if (story.m_State != Story.State.NotStarted)
+        if (story.m_State != StoryInfo.State.NotStarted)
             Debug.LogError("Tried to start a story that is already in progress or completed");
 
-        story.m_State = Story.State.InProgress;
+        story.m_State = StoryInfo.State.InProgress;
         _storyDB.m_OngoingStories.Add(storyId);
         _storyDB.m_StoriesToStart.Remove(storyId);
 
@@ -70,7 +70,7 @@ public class StorySystem : ISystemEvents
             throw new System.Exception("Trying to complete a story that isnt ongoing");
 #endif
 
-        Story story = _storyDB.GetStoryComponent<Story>(storyId);
+        StoryInfo story = _storyDB.GetStoryComponent<StoryInfo>(storyId);
         _storyDB.m_OngoingStories.Remove(storyId);
         _storyDB.m_CompletedStories.Add(storyId);
 
@@ -79,10 +79,14 @@ public class StorySystem : ISystemEvents
         int targetId = questData.m_PiecesList.Find(a => a.m_Type == QuestPiece.PieceType.Target).m_ParentID;
 
         ProcessStoryData(story.m_StoryData, tagType, value, targetId, out BranchOption result, out StoryRepercusion rep);
-        story.m_State = Story.State.Completed;
+        story.m_State = StoryInfo.State.Completed;
         story.m_QuestData = questData;
         story.m_QuestBranchResult = result;
         story.m_QuestRepercusion = rep;
+
+        Debug.Assert(questData != null);
+        Debug.Assert(result != null);
+        Debug.Assert(rep != null);
 
         OnStoryCompleted.Invoke(storyId);
 

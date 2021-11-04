@@ -8,15 +8,15 @@ namespace CQM.Databases
 {
     // We indicate which data objects are just persistent across the entire game
     // and which have runtime data
-    public class StoryDB : MonoBehaviour
+    public class StoryDB
     {
-        [SerializeField]
-        private StoryBuilder _storyBuilder;
-
         // All the Stories Data in the game (Persistent & Runtime)
-        public Dictionary<int, Story> m_StoriesDB = new Dictionary<int, Story>();
+        public Dictionary<int, StoryInfo> m_Stories = new Dictionary<int, StoryInfo>();
         // Story UI Data used in the story selection UI (Persistent)
         public Dictionary<int, StoryUIData> m_StoriesUI = new Dictionary<int, StoryUIData>();
+        // All the repercusions in the game (Persistent)
+        public Dictionary<int, StoryRepercusion> m_Repercusions = new Dictionary<int, StoryRepercusion>();
+
 
         // All below runtime
         // IDs of the stories in the order in which they will be started
@@ -29,14 +29,12 @@ namespace CQM.Databases
         // Stories that have been completely finished
         public List<int> m_FinalizedStories = new List<int>();
 
-        // All the repercusions in the game (Persistent)
-        public Dictionary<int, StoryRepercusion> m_Repercusions = new Dictionary<int, StoryRepercusion>();
 
         public T GetStoryComponent<T>(int ID) where T : class
         {
-            if (m_StoriesDB[ID] is T)
+            if (m_Stories[ID] is T)
             {
-                return m_StoriesDB[ID] as T;
+                return m_Stories[ID] as T;
             }
             else if (m_StoriesUI[ID] is T)
             {
@@ -50,11 +48,23 @@ namespace CQM.Databases
             return m_Repercusions[ID];
         }
 
-        public void LoadData()
+        public void LoadData(StoryBuilder storyBuilder)
         {
-            LoadStoryRepercusions();
-            LoadStoryUIData();
-            LoadStoryData();
+            for (int i = 0; i < storyBuilder.Stories.Count; i++)
+            {
+                var story = storyBuilder.Stories[i];
+                m_Stories.Add(story.m_StoryData.m_ID, story);
+            }
+            for (int i = 0; i < storyBuilder.Repercusions.Count; i++)
+            {
+                var rep = storyBuilder.Repercusions[i];
+                m_Repercusions.Add(rep.m_ID, rep);
+            }
+            for (int i = 0; i < storyBuilder.StoryUI.Count; i++)
+            {
+                var ui = storyBuilder.StoryUI[i];
+                m_StoriesUI.Add(ui.m_ParentStoryID, ui);
+            }
             LoadStoriesOrder();
         }
 
@@ -62,79 +72,7 @@ namespace CQM.Databases
         {
             // Loads the order in which the stories will be
             // presented to the player
-            var ids = Admin.Global.ID.stories;
-            m_StoriesToStart.Add(ids.mayors_problem);
-            //m_StoriesToStart.Add(ids.out_of_lactose);
-        }
-
-        private void LoadStoryData()
-        {
-            //var builder = new StoryBuilder(this);
-            //builder.StartCreatingStory("Mayor's Problem", new List<string>() { "The Towns Center is having a very bad wolves problem",
-            //"The mayor is obviously not happy about it but 'some' people are really enjoying the mess" });
-
-            //builder.AddStoryBranch("center_wolf_dead", "Did you hear what happened ?? apparently conviced mayor.",
-            //    "Well well, those wolves sure had a scary night",
-            //    QPTag.TagType.Convince, 1, "mayor".GetHashCode());
-            //builder.AddStoryBranch("center_wolf_alive", "Apparently yesterday some small creatures tried to approach the Mayor at night, the mayor obviously ran away screaming help.",
-            //    "Well well, those wolves sure had a scary night",
-            //    QPTag.TagType.Help, 1, "mayor".GetHashCode());
-            //builder.AddStoryBranch("center_wolf_alive", "Did you hear that the mayor was attacked just this night?? It is horrible for the town.",
-            //    "Well well, those wolves sure had a scary night",
-            //    QPTag.TagType.Harm, 1, "mayor".GetHashCode());
-
-            //builder.AddStoryBranch("center_wolf_dead", "Did you hear what happened ?? apparently somebody saw some small creatures talk with the wolves at night and just after that they just left.",
-            //    "Well well, those wolves sure had a scary night",
-            //    QPTag.TagType.Convince, 1, "wolves".GetHashCode());
-            //builder.AddStoryBranch("center_wolf_alive", "Apparently yesterday some small creatures tried to approach the Mayor at night, the mayor obviously ran away screaming help.",
-            //    "Well well, those wolves sure had a scary night",
-            //    QPTag.TagType.Help, 1, "wolves".GetHashCode());
-            //builder.AddStoryBranch("center_wolf_alive", "Did you hear that the wolves were attacked just this night??",
-            //    "Well well, those wolves sure had a scary night",
-            //    QPTag.TagType.Harm, 1, "wolves".GetHashCode());
-
-            //var story = builder.FinishCreatingAndReturnStory();
-            //m_StoriesDB.Add("mayors_problem".GetHashCode(), story);
-        }
-
-        private void LoadStoryRepercusions()
-        {
-            //var ids = Admin.Global.ID.repercusions;
-
-            //AddRepercusion("center_wolf_dead".GetHashCode(), 10);
-            //AddRepercusion("center_wolf_alive".GetHashCode(), -15);
-            //AddRepercusion(ids.towncenter_mayor_celebration_happened, 10);
-            //AddRepercusion(ids.towncenter_mayor_celebration_didnt_happen, -10);
-            //AddRepercusion(ids.towncenter_in_ruins, -20);
-            //AddRepercusion(ids.towncenter_not_in_ruins, +20);
-
-            //void AddRepercusion(int id, int value)
-            //{
-            //    var rep = new StoryRepercusion();
-            //    rep.m_Value = value;
-            //    m_Repercusions.Add(id, rep);
-            //}
-        }
-
-        private void LoadStoryUIData()
-        {
-            var ids = Admin.Global.ID.stories;
-
-            var s = new StoryUIData();
-            s.m_Title = "Test Story";
-            m_StoriesUI.Add(ids.test, s);
-
-            s = new StoryUIData();
-            s.m_Title = "Mayor's Problem";
-            m_StoriesUI.Add(ids.mayors_problem, s);
-
-            s = new StoryUIData();
-            s.m_Title = "Out of Lactose";
-            m_StoriesUI.Add(ids.out_of_lactose, s);
-
-            s = new StoryUIData();
-            s.m_Title = "The Birds & Bees";
-            m_StoriesUI.Add(ids.the_birds_and_the_bees, s);
+            m_StoriesToStart.Add("mayors_wolves".GetHashCode());
         }
     }
 }

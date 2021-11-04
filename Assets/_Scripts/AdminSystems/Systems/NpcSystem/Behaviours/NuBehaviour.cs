@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 
-public class NuBehaviour : MonoBehaviour
+public class NuBehaviour : MonoBehaviour , IInteractableEntity
 {
     public List<string> m_Dialogue = new List<string>();
     private Event<ShowDialogueEvtArgs> _showDialogueCmd;

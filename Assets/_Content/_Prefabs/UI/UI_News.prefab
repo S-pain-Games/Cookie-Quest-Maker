@@ -166,8 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e903434b42d368e469366a8e52ed35c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainTitle: {fileID: 106261192581199888}
-  _mainBody: {fileID: 7513542255551533982}
+  mainTitle: {fileID: 106261192581199888}
+  mainBody: {fileID: 7513542255551533982}
   _mainImg: {fileID: 7686065097646524739}
   _secTitle: {fileID: 5094022998531499438}
   _secBody: {fileID: 2391389733779745021}

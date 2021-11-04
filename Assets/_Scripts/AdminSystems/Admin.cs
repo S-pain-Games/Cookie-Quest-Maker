@@ -106,7 +106,7 @@ public class Systems
         m_PopupSystem.Initialize(database.Popups);
         m_CameraSystem.Initialize(database.Cameras);
         m_InventorySystem.Initialize(database.Player.Inventory);
-        m_NewspaperSystem.Initialize(database.NewspaperRefs, database.World.Newspaper, database.Town, database.Stories);
+        m_NewspaperSystem.Initialize(database.NewspaperRefs, database.Newspaper, database.Stories);
     }
 
     public void StartGame()
@@ -119,13 +119,11 @@ public class WorldDB
 {
     public DayData CurrentDay { get; private set; }
     public CalendarData Calendar { get; private set; }
-    public NewspaperDataComponent Newspaper { get; private set; }
 
     public WorldDB()
     {
         CurrentDay = new DayData();
         Calendar = new CalendarData();
-        Newspaper = new NewspaperDataComponent();
     }
 }
 
