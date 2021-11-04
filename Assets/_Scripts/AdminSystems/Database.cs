@@ -21,6 +21,7 @@ namespace CQM.Databases
         public PopupDataComponent Popups { get => m_Popups; }
         public GameStateComponent GameState { get => m_GameState; }
         public CameraDataComponent Cameras { get => m_Cameras; }
+        public NewspaperReferencesComponent NewspaperRefs { get => m_NewspaperRefs; }
 
         [SerializeField] private PlayerDB m_Player = new PlayerDB();
         [SerializeField] private GameStateComponent m_GameState;
@@ -33,6 +34,7 @@ namespace CQM.Databases
         [SerializeField] private StoryDB m_Stories = new StoryDB();
         [SerializeField] private PiecesDB m_Pieces;
         [SerializeField] private CameraDataComponent m_Cameras = new CameraDataComponent();
+        [SerializeField] private NewspaperReferencesComponent m_NewspaperRefs;
 
         private Dictionary<int, object> m_ComponentsDic = new Dictionary<int, object>();
 

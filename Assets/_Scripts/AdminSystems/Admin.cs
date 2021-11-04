@@ -66,6 +66,7 @@ public class Systems
     private DaySystem m_DaySystem = new DaySystem();
     private TownSystem m_TownSystem = new TownSystem();
     private CalendarSystem m_CalendarSystem = new CalendarSystem();
+    private NewspaperSystem m_NewspaperSystem = new NewspaperSystem();
 
     public List<ISystemEvents> GetSystemsEvents()
     {
@@ -80,6 +81,7 @@ public class Systems
         systems.Add(m_InventorySystem);
         systems.Add(m_CharacterSystem);
         systems.Add(m_CookieMakingSystem);
+        systems.Add(m_NewspaperSystem);
 
         return systems;
     }
@@ -104,6 +106,7 @@ public class Systems
         m_PopupSystem.Initialize(database.Popups);
         m_CameraSystem.Initialize(database.Cameras);
         m_InventorySystem.Initialize(database.Player.Inventory);
+        m_NewspaperSystem.Initialize(database.NewspaperRefs, database.World.Newspaper);
     }
 
     public void StartGame()
@@ -116,12 +119,13 @@ public class WorldDB
 {
     public DayData CurrentDay { get; private set; }
     public CalendarData Calendar { get; private set; }
-
+    public NewspaperDataComponent Newspaper { get; private set; }
 
     public WorldDB()
     {
         CurrentDay = new DayData();
         Calendar = new CalendarData();
+        Newspaper = new NewspaperDataComponent();
     }
 }
 

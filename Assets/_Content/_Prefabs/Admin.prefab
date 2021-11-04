@@ -81,6 +81,7 @@ MonoBehaviour:
   m_Pieces: {fileID: 5413392989090943059}
   m_Cameras:
     m_MainCam: {fileID: 0}
+  m_NewspaperRefs: {fileID: 0}
 --- !u!114 &585195714406842495
 MonoBehaviour:
   m_ObjectHideFlags: 0
