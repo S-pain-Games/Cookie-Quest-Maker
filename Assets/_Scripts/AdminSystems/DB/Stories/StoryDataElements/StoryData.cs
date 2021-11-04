@@ -10,6 +10,7 @@ namespace CQM.Components
     // Data that describes the persistent designer-authored state of a story
     public class StoryData
     {
+        public int m_ID;
         public string m_Title = "";
         public List<string> m_IntroductionDialogue = new List<string>();
         public List<BranchOption> m_BranchOptions = new List<BranchOption>();

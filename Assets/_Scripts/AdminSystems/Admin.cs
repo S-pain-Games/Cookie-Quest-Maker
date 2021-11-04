@@ -106,7 +106,7 @@ public class Systems
         m_PopupSystem.Initialize(database.Popups);
         m_CameraSystem.Initialize(database.Cameras);
         m_InventorySystem.Initialize(database.Player.Inventory);
-        m_NewspaperSystem.Initialize(database.NewspaperRefs, database.World.Newspaper);
+        m_NewspaperSystem.Initialize(database.NewspaperRefs, database.World.Newspaper, database.Town, database.Stories);
     }
 
     public void StartGame()

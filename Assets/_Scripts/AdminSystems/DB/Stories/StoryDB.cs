@@ -1,14 +1,18 @@
 ﻿using CQM.Components;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 
 namespace CQM.Databases
 {
     // We indicate which data objects are just persistent across the entire game
     // and which have runtime data
-    public class StoryDB
+    public class StoryDB : MonoBehaviour
     {
+        [SerializeField]
+        private StoryBuilder _storyBuilder;
+
         // All the Stories Data in the game (Persistent & Runtime)
         public Dictionary<int, Story> m_StoriesDB = new Dictionary<int, Story>();
         // Story UI Data used in the story selection UI (Persistent)
@@ -65,51 +69,51 @@ namespace CQM.Databases
 
         private void LoadStoryData()
         {
-            var builder = new StoryBuilder(this);
-            builder.StartCreatingStory("Mayor's Problem", new List<string>() { "The Towns Center is having a very bad wolves problem",
-            "The mayor is obviously not happy about it but 'some' people are really enjoying the mess" });
+            //var builder = new StoryBuilder(this);
+            //builder.StartCreatingStory("Mayor's Problem", new List<string>() { "The Towns Center is having a very bad wolves problem",
+            //"The mayor is obviously not happy about it but 'some' people are really enjoying the mess" });
 
-            builder.AddStoryBranch("center_wolf_dead", "Did you hear what happened ?? apparently conviced mayor.",
-                "Well well, those wolves sure had a scary night",
-                QPTag.TagType.Convince, 1, "mayor".GetHashCode());
-            builder.AddStoryBranch("center_wolf_alive", "Apparently yesterday some small creatures tried to approach the Mayor at night, the mayor obviously ran away screaming help.",
-                "Well well, those wolves sure had a scary night",
-                QPTag.TagType.Help, 1, "mayor".GetHashCode());
-            builder.AddStoryBranch("center_wolf_alive", "Did you hear that the mayor was attacked just this night?? It is horrible for the town.",
-                "Well well, those wolves sure had a scary night",
-                QPTag.TagType.Harm, 1, "mayor".GetHashCode());
+            //builder.AddStoryBranch("center_wolf_dead", "Did you hear what happened ?? apparently conviced mayor.",
+            //    "Well well, those wolves sure had a scary night",
+            //    QPTag.TagType.Convince, 1, "mayor".GetHashCode());
+            //builder.AddStoryBranch("center_wolf_alive", "Apparently yesterday some small creatures tried to approach the Mayor at night, the mayor obviously ran away screaming help.",
+            //    "Well well, those wolves sure had a scary night",
+            //    QPTag.TagType.Help, 1, "mayor".GetHashCode());
+            //builder.AddStoryBranch("center_wolf_alive", "Did you hear that the mayor was attacked just this night?? It is horrible for the town.",
+            //    "Well well, those wolves sure had a scary night",
+            //    QPTag.TagType.Harm, 1, "mayor".GetHashCode());
 
-            builder.AddStoryBranch("center_wolf_dead", "Did you hear what happened ?? apparently somebody saw some small creatures talk with the wolves at night and just after that they just left.",
-                "Well well, those wolves sure had a scary night",
-                QPTag.TagType.Convince, 1, "wolves".GetHashCode());
-            builder.AddStoryBranch("center_wolf_alive", "Apparently yesterday some small creatures tried to approach the Mayor at night, the mayor obviously ran away screaming help.",
-                "Well well, those wolves sure had a scary night",
-                QPTag.TagType.Help, 1, "wolves".GetHashCode());
-            builder.AddStoryBranch("center_wolf_alive", "Did you hear that the wolves were attacked just this night??",
-                "Well well, those wolves sure had a scary night",
-                QPTag.TagType.Harm, 1, "wolves".GetHashCode());
+            //builder.AddStoryBranch("center_wolf_dead", "Did you hear what happened ?? apparently somebody saw some small creatures talk with the wolves at night and just after that they just left.",
+            //    "Well well, those wolves sure had a scary night",
+            //    QPTag.TagType.Convince, 1, "wolves".GetHashCode());
+            //builder.AddStoryBranch("center_wolf_alive", "Apparently yesterday some small creatures tried to approach the Mayor at night, the mayor obviously ran away screaming help.",
+            //    "Well well, those wolves sure had a scary night",
+            //    QPTag.TagType.Help, 1, "wolves".GetHashCode());
+            //builder.AddStoryBranch("center_wolf_alive", "Did you hear that the wolves were attacked just this night??",
+            //    "Well well, those wolves sure had a scary night",
+            //    QPTag.TagType.Harm, 1, "wolves".GetHashCode());
 
-            var story = builder.FinishCreatingAndReturnStory();
-            m_StoriesDB.Add("mayors_problem".GetHashCode(), story);
+            //var story = builder.FinishCreatingAndReturnStory();
+            //m_StoriesDB.Add("mayors_problem".GetHashCode(), story);
         }
 
         private void LoadStoryRepercusions()
         {
-            var ids = Admin.Global.ID.repercusions;
+            //var ids = Admin.Global.ID.repercusions;
 
-            AddRepercusion("center_wolf_dead".GetHashCode(), 10);
-            AddRepercusion("center_wolf_alive".GetHashCode(), -15);
-            AddRepercusion(ids.towncenter_mayor_celebration_happened, 10);
-            AddRepercusion(ids.towncenter_mayor_celebration_didnt_happen, -10);
-            AddRepercusion(ids.towncenter_in_ruins, -20);
-            AddRepercusion(ids.towncenter_not_in_ruins, +20);
+            //AddRepercusion("center_wolf_dead".GetHashCode(), 10);
+            //AddRepercusion("center_wolf_alive".GetHashCode(), -15);
+            //AddRepercusion(ids.towncenter_mayor_celebration_happened, 10);
+            //AddRepercusion(ids.towncenter_mayor_celebration_didnt_happen, -10);
+            //AddRepercusion(ids.towncenter_in_ruins, -20);
+            //AddRepercusion(ids.towncenter_not_in_ruins, +20);
 
-            void AddRepercusion(int id, int value)
-            {
-                var rep = new StoryRepercusion();
-                rep.m_Value = value;
-                m_Repercusions.Add(id, rep);
-            }
+            //void AddRepercusion(int id, int value)
+            //{
+            //    var rep = new StoryRepercusion();
+            //    rep.m_Value = value;
+            //    m_Repercusions.Add(id, rep);
+            //}
         }
 
         private void LoadStoryUIData()
@@ -131,79 +135,6 @@ namespace CQM.Databases
             s = new StoryUIData();
             s.m_Title = "The Birds & Bees";
             m_StoriesUI.Add(ids.the_birds_and_the_bees, s);
-        }
-    }
-
-    public class StoryBuilder
-    {
-        private Story m_Story;
-        private StoryData m_StoryData;
-
-        private StoryDB _stories;
-
-        public StoryBuilder(StoryDB stories)
-        {
-            _stories = stories;
-        }
-
-        public void StartCreatingStory(string title, List<string> introduction)
-        {
-            m_StoryData = new StoryData();
-            m_StoryData.m_Title = title;
-            m_StoryData.m_IntroductionDialogue = introduction;
-        }
-
-        public void StartCreatingStory(string title, string introduction)
-        {
-            m_StoryData = new StoryData();
-            m_StoryData.m_Title = title;
-            m_StoryData.m_IntroductionDialogue = new List<string>() { introduction };
-        }
-
-        public void AddStoryBranch(string repercusion, List<string> npcResult, QPTag.TagType tag, int tagValue, int targetId)
-        {
-            BranchOption bOpt = new BranchOption
-            {
-                m_Repercusion = _stories.GetRepercusion(repercusion.GetHashCode()),
-                m_ResultNPCDialogue = npcResult
-            };
-            BranchCondition bCon = new BranchCondition
-            {
-                m_Tag = tag,
-                m_Value = tagValue,
-                m_Target = targetId
-            };
-            bOpt.m_Condition = bCon;
-            m_StoryData.m_BranchOptions.Add(bOpt);
-        }
-
-        public void AddStoryBranch(string repercusion, string npcResult, string deityDialogue, QPTag.TagType tag, int tagValue, int targetId)
-        {
-            BranchOption bOpt = new BranchOption
-            {
-                m_Repercusion = _stories.GetRepercusion(repercusion.GetHashCode()),
-                m_ResultNPCDialogue = new List<string>() { npcResult },
-                m_DeitiesResultDialogue = new List<BranchOption.DeitiesStoryDialogue> { new BranchOption.DeitiesStoryDialogue { m_DeityID = 1, m_Dialogue = new List<string> { deityDialogue } } }
-
-            };
-            BranchCondition bCon = new BranchCondition
-            {
-                m_Tag = tag,
-                m_Value = tagValue,
-                m_Target = targetId
-            };
-            bOpt.m_Condition = bCon;
-            m_StoryData.m_BranchOptions.Add(bOpt);
-        }
-
-        public Story FinishCreatingAndReturnStory()
-        {
-            m_StoryData.Build();
-
-            m_Story = new Story();
-            m_Story.m_StoryData = m_StoryData;
-
-            return m_Story;
         }
     }
 }

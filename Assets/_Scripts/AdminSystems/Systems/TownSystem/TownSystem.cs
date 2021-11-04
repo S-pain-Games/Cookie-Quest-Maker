@@ -64,7 +64,6 @@ namespace CQM.Databases
         {
             var townIds = Admin.Global.ID.townLocations;
             var repIds = Admin.Global.ID.repercusions;
-            var rep = storyDB.m_Repercusions;
 
             Location loc = new Location();
             loc.m_LocName = "Town Center";
@@ -80,6 +79,7 @@ namespace CQM.Databases
             m_LocationsList.Add(loc);
         }
     }
+
     public class Location
     {
         public string m_LocName;
