@@ -189,10 +189,10 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     recipeData:
       m_ParentID: -143907494
-      m_RecipeName: Grandma's Plain Cookie Recipe
-      m_RecipeDescription: Desc
+      m_RecipeName: Attack Piece Recipe
+      m_RecipeDescription: Very aggresive
       m_Image: {fileID: 0}
-      m_ReputationTypePrice: 0
+      m_ReputationTypePrice: 1
       m_Price: 50
       m_PieceID: -143907494
   - inspectorPieceName: assist
@@ -217,8 +217,8 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     recipeData:
       m_ParentID: 223879643
-      m_RecipeName: Grandma's Plain Cookie Recipe
-      m_RecipeDescription: Desc
+      m_RecipeName: Assist Recipe
+      m_RecipeDescription: Very Assistive
       m_Image: {fileID: 0}
       m_ReputationTypePrice: 0
       m_Price: 50
@@ -489,15 +489,15 @@ MonoBehaviour:
     m_Price: 50
     m_PieceID: 390974588
   - m_ParentID: -143907494
-    m_RecipeName: Grandma's Plain Cookie Recipe
-    m_RecipeDescription: Desc
+    m_RecipeName: Attack Piece Recipe
+    m_RecipeDescription: Very aggresive
     m_Image: {fileID: 0}
-    m_ReputationTypePrice: 0
+    m_ReputationTypePrice: 1
     m_Price: 50
     m_PieceID: -143907494
   - m_ParentID: 223879643
-    m_RecipeName: Grandma's Plain Cookie Recipe
-    m_RecipeDescription: Desc
+    m_RecipeName: Assist Recipe
+    m_RecipeDescription: Very Assistive
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price: 50
