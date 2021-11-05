@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class PopupSystem : ISystemEvents
 {
-    private PopupDataComponent m_PopupData;
+    private PopupComponent m_PopupData;
 
-    public void Initialize(PopupDataComponent popupData)
+    public void Initialize(PopupComponent popupData)
     {
         m_PopupData = popupData;
     }

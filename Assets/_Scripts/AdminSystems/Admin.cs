@@ -104,7 +104,7 @@ public class Systems
         m_QuestMakerSystem.Initialize();
         m_CookieMakingSystem.Initialize(database.Cookies);
         m_NpcSystem.Initialize(database.Stories, database.Npcs, eventSystem);
-        m_DialogueSystem.Initialize(database.Dialogues.SceneElements, eventSystem);
+        m_DialogueSystem.Initialize(database.Dialogues.ReferencesAndData, eventSystem);
         m_TownSystem.Initialize(database.Town, database.Stories);
         m_CalendarSystem.Initialize(database.World.Calendar, database.Stories);
         m_PopupSystem.Initialize(database.Popups);
@@ -122,13 +122,13 @@ public class Systems
 
 public class WorldDB
 {
-    public DayData CurrentDay { get; private set; }
+    public DayComponent CurrentDay { get; private set; }
     public CalendarData Calendar { get; private set; }
 
 
     public WorldDB()
     {
-        CurrentDay = new DayData();
+        CurrentDay = new DayComponent();
         Calendar = new CalendarData();
     }
 }

@@ -22,7 +22,7 @@ namespace CQM.Databases
         public WorldDB World { get => m_World; }
         public NpcReferencesComponent Npcs { get => m_Npcs; }
         public PlayerDB Player { get => m_Player; }
-        public PopupDataComponent Popups { get => m_Popups; }
+        public PopupComponent Popups { get => m_Popups; }
         public GameStateComponent GameStateComponent { get => m_GameState; }
         public CameraDataComponent Cameras { get => m_Cameras; }
 
@@ -36,7 +36,7 @@ namespace CQM.Databases
 
         [SerializeField] private PlayerDB m_Player = new PlayerDB();
         [SerializeField] private GameStateComponent m_GameState;
-        [SerializeField] private PopupDataComponent m_Popups = new PopupDataComponent();
+        [SerializeField] private PopupComponent m_Popups = new PopupComponent();
         [SerializeField] private NpcReferencesComponent m_Npcs = new NpcReferencesComponent();
         [SerializeField] private WorldDB m_World = new WorldDB();
         [SerializeField] private DialogueDB m_Dialogues = new DialogueDB();

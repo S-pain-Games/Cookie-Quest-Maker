@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DaySystem : ISystemEvents
 {
-    private DayData _dayData;
+    private DayComponent _dayData;
 
     // Own Callbacks
     private EventVoid _dayStartedCallbacks;
@@ -31,7 +31,7 @@ public class DaySystem : ISystemEvents
         commands.AddEvent("begin_night".GetHashCode()).OnInvoked += StartNight;
     }
 
-    public void Initialize(GameEventSystem evtSys, DayData dayData)
+    public void Initialize(GameEventSystem evtSys, DayComponent dayData)
     {
         // Subscribe to Callbacks
         Event<int> evt = evtSys.GetCallback<Event<int>>("story_sys".GetHashCode(), "story_completed".GetHashCode());
@@ -68,7 +68,7 @@ public class DaySystem : ISystemEvents
     }
 }
 
-public class DayData
+public class DayComponent
 {
     public int m_StoriesCompletedToday = 0;
 }

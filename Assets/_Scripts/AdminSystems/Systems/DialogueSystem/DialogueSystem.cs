@@ -106,7 +106,7 @@ public struct ShowDialogueEvtArgs
 [Serializable]
 public class DialogueDB
 {
-    public DialogueReferences SceneElements => m_DialogueUIData;
+    public DialogueReferences ReferencesAndData => m_DialogueUIData;
 
     [SerializeField]
     private DialogueReferences m_DialogueUIData = new DialogueReferences();

@@ -22,7 +22,6 @@ namespace CQM.Gameplay
         private UIPieceStorageManager _pieceStorage;
 
         private QuestMakingSystem _questMakingSys;
-        private GameEventSystem evtSys;
         private Event<GameStateSystem.State> _changeGameStateCmd;
 
         public EventSys m_evtSys = new EventSys();
@@ -33,7 +32,7 @@ namespace CQM.Gameplay
         private void Awake()
         {
             _questMakingSys = Admin.Global.Systems.m_QuestMakerSystem;
-            evtSys = Admin.Global.EventSystem;
+            var evtSys = Admin.Global.EventSystem;
             _changeGameStateCmd = evtSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
 
             _storySelection.Initialize(m_evtSys);
