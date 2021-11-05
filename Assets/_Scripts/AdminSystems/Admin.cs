@@ -71,6 +71,7 @@ public class Systems
     private UISystem m_UISystem = new UISystem();
 
 
+
     public List<ISystemEvents> GetSystemsEvents()
     {
         List<ISystemEvents> systems = new List<ISystemEvents>();
@@ -104,7 +105,7 @@ public class Systems
         m_QuestMakerSystem.Initialize();
         m_CookieMakingSystem.Initialize(database.Cookies);
         m_NpcSystem.Initialize(database.Stories, database.Npcs, eventSystem);
-        m_DialogueSystem.Initialize(database.Dialogues.ReferencesAndData, eventSystem);
+        m_DialogueSystem.Initialize(database.Dialogues.ReferencesAndData, database.m_CharacterComponents, database.m_CharacterDialogueComponents, eventSystem);
         m_TownSystem.Initialize(database.Town, database.Stories);
         m_CalendarSystem.Initialize(database.World.Calendar, database.Stories);
         m_PopupSystem.Initialize(database.Popups);

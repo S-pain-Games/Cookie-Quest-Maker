@@ -440,6 +440,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 404580703654454805}
     m_Modifications:
+    - target: {fileID: 1693811375846806772, guid: 86145d1ad5d95aa47b8730e04f46a6cf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2146895226871911575, guid: 86145d1ad5d95aa47b8730e04f46a6cf, type: 3}
       propertyPath: m_Name
       value: UI_Dialogue

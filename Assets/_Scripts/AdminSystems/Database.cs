@@ -33,6 +33,9 @@ namespace CQM.Databases
 
         public TransitionsComponent TransitionsComponent { get => m_TransitionsComponent; }
 
+        public Dictionary<int, CharacterComponent> m_CharacterComponents = new Dictionary<int, CharacterComponent>();
+        public Dictionary<int, DialogueCharacterComponent> m_CharacterDialogueComponents = new Dictionary<int, DialogueCharacterComponent>();
+
 
         [SerializeField] private PlayerDB m_Player = new PlayerDB();
         [SerializeField] private GameStateComponent m_GameState;
@@ -63,6 +66,19 @@ namespace CQM.Databases
             m_Dialogues.LoadData();
             m_Player.LoadData();
             m_Newspaper.LoadData(_dataBuilders.m_StoryBuilder);
+
+            var cList = _dataBuilders.m_CharactersBuilder.m_CharactersList;
+            for (int i = 0; i < cList.Count; i++)
+            {
+                m_CharacterComponents.Add(cList[i].m_ID, cList[i]);
+            }
+
+            var dList = _dataBuilders.m_CharactersBuilder.m_CharacterDialogueList;
+            for (int i = 0; i < cList.Count; i++)
+            {
+                m_CharacterDialogueComponents.Add(dList[i].m_ID, dList[i]);
+            }
+
         }
     }
 
@@ -72,5 +88,6 @@ namespace CQM.Databases
     {
         public PieceBuilder m_PiecesBuilder;
         public StoryBuilder m_StoryBuilder;
+        public CharactersBuilder m_CharactersBuilder;
     }
 }

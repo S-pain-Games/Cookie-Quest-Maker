@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 585195714406842495}
   - component: {fileID: 930925265}
   - component: {fileID: 2656137720672788242}
+  - component: {fileID: 1499442548}
   m_Layer: 0
   m_Name: Admin
   m_TagString: Untagged
@@ -63,6 +64,7 @@ MonoBehaviour:
   _dataBuilders:
     m_PiecesBuilder: {fileID: 930925265}
     m_StoryBuilder: {fileID: 2656137720672788242}
+    m_CharactersBuilder: {fileID: 1499442548}
   m_GameState: {fileID: 585195714406842495}
   m_Popups:
     m_InstantiationTransform: {fileID: 0}
@@ -648,3 +650,58 @@ MonoBehaviour:
   - m_ParentStoryID: 1004953812
     m_StoryName: Mayor's Wolves
     m_StorySelectionUiSprite: {fileID: 0}
+--- !u!114 &1499442548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a58c4116d7ea14fa2ce02767d0a3e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CharactersList:
+  - m_ID: -1630721097
+    m_FullName: Mery la Leches
+    m_ShortName: Mery
+    m_Description: She is the owner of the town's farm
+  - m_ID: 573504420
+    m_FullName: Evith
+    m_ShortName: Evith
+    m_Description: She is the owner of the town's farm
+  - m_ID: 689543378
+    m_FullName: Mamarrachus Generikus
+    m_ShortName: Mamarrachus
+    m_Description: She is the owner of the town's farm
+  - m_ID: -1991483173
+    m_FullName: Nu
+    m_ShortName: Nu Nu
+    m_Description: She is the owner of the town's farm
+  m_CharacterDialogueList:
+  - m_ID: -1630721097
+    m_CharacterImg: {fileID: 0}
+    m_NameColor: {r: 1, g: 0, b: 0, a: 1}
+  - m_ID: 573504420
+    m_CharacterImg: {fileID: 0}
+    m_NameColor: {r: 1, g: 0, b: 0, a: 1}
+  - m_ID: 689543378
+    m_CharacterImg: {fileID: 0}
+    m_NameColor: {r: 1, g: 0, b: 0, a: 1}
+  - m_ID: -1991483173
+    m_CharacterImg: {fileID: 0}
+    m_NameColor: {r: 1, g: 0, b: 0, a: 1}
+  m_References:
+  - m_ID: -1630721097
+    m_CharacterName: 
+    m_DialogueSprite: {fileID: 0}
+  - m_ID: 573504420
+    m_CharacterName: 
+    m_DialogueSprite: {fileID: 0}
+  - m_ID: 689543378
+    m_CharacterName: 
+    m_DialogueSprite: {fileID: 0}
+  - m_ID: -1991483173
+    m_CharacterName: 
+    m_DialogueSprite: {fileID: 0}

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 
-public class NuBehaviour : MonoBehaviour , IInteractableEntity
+public class NuBehaviour : MonoBehaviour, IInteractableEntity
 {
     public List<string> m_Dialogue = new List<string>();
     private Event<ShowDialogueEvtArgs> _showDialogueCmd;
@@ -21,7 +21,7 @@ public class NuBehaviour : MonoBehaviour , IInteractableEntity
     {
         _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(
             m_Dialogue,
-            "Nu",
+            "nu".GetHashCode(),
             null));
     }
 }

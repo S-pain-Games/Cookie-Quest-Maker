@@ -22,7 +22,7 @@ public class EvithBehaviour : MonoBehaviour, IInteractableEntity
     {
         _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(
             m_Dialogue,
-            "Evith",
+            "evith".GetHashCode(),
             () => { DialogueWithNpcFinishedCallback(); }));
     }
 

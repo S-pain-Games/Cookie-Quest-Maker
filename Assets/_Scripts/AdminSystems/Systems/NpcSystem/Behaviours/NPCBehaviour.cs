@@ -29,7 +29,7 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
         {
             _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(
                 m_NpcData.m_Dialogue,
-                "Mamarrachus",
+                "mamarrachus".GetHashCode(),
                 () => { DialogueWithNpcFinishedCallback(); }));
 
             m_NpcData.m_AlreadySpokenTo = true;
@@ -38,7 +38,7 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
         {
             _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(
                new List<string> { m_NpcData.m_AlreadySpokenToDialogue[Random.Range(0, m_NpcData.m_AlreadySpokenToDialogue.Count)] }, // TODO: Fix this atrocity
-               "Mamarrachus",
+               "mamarrachus".GetHashCode(),
                () => m_Interacting = false));
         }
     }

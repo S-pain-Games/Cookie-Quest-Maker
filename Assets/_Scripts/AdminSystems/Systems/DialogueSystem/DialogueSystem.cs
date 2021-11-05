@@ -7,14 +7,22 @@ using System;
 public class DialogueSystem : ISystemEvents
 {
     private DialogueReferences _dialogueData;
+    private Dictionary<int, CharacterComponent> _characters;
+    private Dictionary<int, DialogueCharacterComponent> _dialogue;
 
     private EventVoid _enableCharMovementCmd;
     private EventVoid _disableCharMovementCmd;
 
 
-    public void Initialize(DialogueReferences dialogueData, GameEventSystem evtSys)
+    public void Initialize(DialogueReferences dialogueRefs,
+                           Dictionary<int, CharacterComponent> characters,
+                           Dictionary<int, DialogueCharacterComponent> dialogue,
+                           GameEventSystem evtSys)
     {
-        _dialogueData = dialogueData;
+        _dialogueData = dialogueRefs;
+        _characters = characters;
+        _dialogue = dialogue;
+
         _enableCharMovementCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "enable_movement");
         _disableCharMovementCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "disable_movement");
     }
@@ -27,20 +35,20 @@ public class DialogueSystem : ISystemEvents
 
         // Commands
         var evt = commands.AddEvent<ShowDialogueEvtArgs>("show_dialogue".GetHashCode());
-        evt.OnInvoked += (args) => ShowDialogue(args.dialogue, args.charName, args.callback);
+        evt.OnInvoked += (args) => ShowDialogue(args.m_Dialogue, args.m_CharID, args.m_Callback);
         commands.AddEvent("continue_dialogue".GetHashCode()).OnInvoked += NextLine;
     }
 
 
-    public void ShowDialogue(List<string> dialogue, string characterName, Action callback)
+    public void ShowDialogue(List<string> dialogue, int characterID, Action callback)
     {
         var data = _dialogueData;
         data.m_Container.gameObject.SetActive(true);
         data.m_CurrentDialogueLines = dialogue;
 
-        data.m_CaracterName.text = characterName;
+
+        data.m_CaracterName.text = _characters[characterID].m_FullName;
         data.m_Container.StartCoroutine(ShowText(data.m_CurrentDialogueLines[data.m_CurrentLineIndex]));
-        //data.m_Line.text = data.m_CurrentDialogueLines[data.m_CurrentLineIndex];
         data.m_CallbackOnDialogueEnd = callback;
 
         _disableCharMovementCmd.Invoke();
@@ -68,7 +76,6 @@ public class DialogueSystem : ISystemEvents
         if (data.m_CurrentLineIndex < data.m_CurrentDialogueLines.Count - 1)
         {
             data.m_CurrentLineIndex++;
-            //data.m_Line.text = data.m_CurrentDialogueLines[data.m_CurrentLineIndex];
             data.m_Container.StartCoroutine(ShowText(data.m_CurrentDialogueLines[data.m_CurrentLineIndex]));
         }
         else
@@ -90,15 +97,15 @@ public class DialogueSystem : ISystemEvents
 
 public struct ShowDialogueEvtArgs
 {
-    public List<string> dialogue;
-    public string charName;
-    public Action callback;
+    public List<string> m_Dialogue;
+    public int m_CharID;
+    public Action m_Callback;
 
-    public ShowDialogueEvtArgs(List<string> dialogue, string charName, Action callback)
+    public ShowDialogueEvtArgs(List<string> dialogue, int charID, Action callback)
     {
-        this.dialogue = dialogue;
-        this.charName = charName;
-        this.callback = callback;
+        m_Dialogue = dialogue;
+        m_CharID = charID;
+        m_Callback = callback;
     }
 }
 
@@ -133,4 +140,12 @@ public class DialogueReferences
 
     [HideInInspector] public int m_CurrentLineIndex = 0;
     public Action m_CallbackOnDialogueEnd;
+}
+
+[Serializable]
+public class DialogueCharacterComponent
+{
+    public int m_ID;
+    public Sprite m_CharacterImg;
+    public Color m_NameColor;
 }
