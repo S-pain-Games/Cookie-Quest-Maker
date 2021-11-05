@@ -42,7 +42,7 @@ namespace CQM.Databases
             StartCreatingStory("mayors_wolves", "Mayor's Wolves", new List<string>() { "Intro 1 wolves" });
 
             CreateRepercusion("wolves_alive", "Wolves Alive", 15);
-            AddStoryRepercusionNewspaperArticle("Wolves alive oh god", "In other news");
+            AddStoryRepercusionNewspaperArticle("Wolves Trouble", "In other news, there are still wolves in the town's center");
 
             StartStoryBranch();
             SetRepercusionToBranch("wolves_alive");

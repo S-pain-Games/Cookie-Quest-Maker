@@ -638,8 +638,8 @@ MonoBehaviour:
     m_Value: 15
   m_RepercusionNewspaperArticles:
   - m_RepID: -623225176
-    m_Title: Wolves alive oh god
-    m_Body: In other news
+    m_Title: Wolves Trouble
+    m_Body: In other news, there are still wolves in the town's center
   m_StoryUI:
   - m_ParentStoryID: 1004953812
     m_Sprite: {fileID: 0}

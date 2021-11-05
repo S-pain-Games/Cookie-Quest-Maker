@@ -29,6 +29,10 @@ namespace CQM.Systems
                 (id) =>
                 {
                     rw_newsData.m_StoriesToShowInNewspaper.Add(id);
+                };
+            evtSys.GetCallbackByName<EventVoid>("day_sys", "day_ended").OnInvoked +=
+                () =>
+                {
                     UpdateNewspaper();
                 };
         }
