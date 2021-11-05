@@ -50,7 +50,7 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
         if (m_NpcData.m_HasToStartAStory)
         {
             // Please do not write lines this horrible in production code, this is only for debugging
-            Debug.Log("Started Story : " + Admin.Global.Database.Stories.GetStoryComponent<StoryInfo>(m_NpcData.m_StoryIDToStartOnInteract).m_StoryData.m_Title);
+            Debug.Log("Started Story : " + Admin.Global.Database.Stories.GetStoryComponent<StoryInfoComponent>(m_NpcData.m_StoryIDToStartOnInteract).m_StoryData.m_Title);
             _startStoryCmd.Invoke(m_NpcData.m_StoryIDToStartOnInteract);
         }
         m_Interacting = false;

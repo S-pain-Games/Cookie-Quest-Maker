@@ -16,13 +16,13 @@ using UnityEngine;
 public class LocationState : ScriptableObject
 {
     [SerializeField]
-    private List<StoryRepercusion> StoryRepercusionList;
+    private List<StoryRepercusionComponent> StoryRepercusionList;
 
     public int locationvalue = 0;
 
     public void CalculateLocationState()
     {
-        foreach (StoryRepercusion _sr in StoryRepercusionList)
+        foreach (StoryRepercusionComponent _sr in StoryRepercusionList)
         {
             if (_sr.m_Active)
             {

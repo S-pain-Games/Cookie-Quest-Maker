@@ -18,7 +18,7 @@ public class RecipeShopSystem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textPrice;
 
     private CookieDB _cookiesData;
-    private InventoryData _inventoryData;
+    private InventoryComponent _inventoryData;
 
     private EventVoid _enableCharMovCmd;
     private EventVoid _disableCharMovCmd;

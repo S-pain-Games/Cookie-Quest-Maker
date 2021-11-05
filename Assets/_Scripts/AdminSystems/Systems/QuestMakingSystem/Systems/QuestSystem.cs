@@ -5,7 +5,7 @@ using UnityEngine;
 // Processes quest data
 public class QuestSystem
 {
-    public void GetOverallTag(List<QuestPiece> pieces, out QPTag.TagType highestTagType, out int highestValue)
+    public void GetOverallTag(List<QuestPieceFunctionalComponent> pieces, out QPTag.TagType highestTagType, out int highestValue)
     {
         Dictionary<QPTag.TagType, int> values = CountAllTags(pieces);
 
@@ -32,7 +32,7 @@ public class QuestSystem
             highestTagType = highestTagsTypes[0];
         else
         {
-            QuestPiece action = pieces.Find((q) => q.m_Type == QuestPiece.PieceType.Action);
+            QuestPieceFunctionalComponent action = pieces.Find((q) => q.m_Type == QuestPieceFunctionalComponent.PieceType.Action);
             bool match = false;
 
             // We iterate over all the tags of the action (They are sorted from highest value to lowest)
@@ -63,7 +63,7 @@ public class QuestSystem
         }
     }
 
-    private Dictionary<QPTag.TagType, int> CountAllTags(List<QuestPiece> questPieces)
+    private Dictionary<QPTag.TagType, int> CountAllTags(List<QuestPieceFunctionalComponent> questPieces)
     {
         Dictionary<QPTag.TagType, int> values = new Dictionary<QPTag.TagType, int>();
 
@@ -93,7 +93,7 @@ public class QuestSystem
     // NEW
     // =================================================
 
-    public void GetOverallTagV2(List<QuestPiece> pieces, out QPTag.TagType highestTagType, out int highestValue)
+    public void GetOverallTagV2(List<QuestPieceFunctionalComponent> pieces, out QPTag.TagType highestTagType, out int highestValue)
     {
         Dictionary<QPTag.TagType, int> valuesDict = CountAllTags(pieces);
 
@@ -152,7 +152,7 @@ public class QuestSystem
         return tieValues;
     }
 
-    private int SelectTagIndexFromList(List<QuestPiece> pieces, List<KeyValuePair<QPTag.TagType, int>> tieTagValues)
+    private int SelectTagIndexFromList(List<QuestPieceFunctionalComponent> pieces, List<KeyValuePair<QPTag.TagType, int>> tieTagValues)
     {
         List<int> actionTagsIndex = GetActionTagValuesList(pieces, tieTagValues);
         if (actionTagsIndex.Count == 1)
@@ -172,9 +172,9 @@ public class QuestSystem
     }
 
     //Obtener una lista de índices marcando los QuestPieceTagType que formen parte de Acción
-    private List<int> GetActionTagValuesList(List<QuestPiece> pieces, List<KeyValuePair<QPTag.TagType, int>> tieList)
+    private List<int> GetActionTagValuesList(List<QuestPieceFunctionalComponent> pieces, List<KeyValuePair<QPTag.TagType, int>> tieList)
     {
-        QuestPiece actionPiece = GetPieceOfType(pieces, QuestPiece.PieceType.Action);
+        QuestPieceFunctionalComponent actionPiece = GetPieceOfType(pieces, QuestPieceFunctionalComponent.PieceType.Action);
         List<QPTag.TagType> actionPieceTagTypes = new List<QPTag.TagType>();
 
         for (int i = 0; i < actionPiece.m_Tags.Count; i++)
@@ -195,7 +195,7 @@ public class QuestSystem
         return actionTags;
     }
 
-    public QuestPiece GetPieceOfType(List<QuestPiece> pieces, QuestPiece.PieceType pieceType)
+    public QuestPieceFunctionalComponent GetPieceOfType(List<QuestPieceFunctionalComponent> pieces, QuestPieceFunctionalComponent.PieceType pieceType)
     {
         return pieces.Find((q) => q.m_Type == pieceType);
     }

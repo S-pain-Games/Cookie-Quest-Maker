@@ -47,12 +47,12 @@ public class StorySystem : ISystemEvents
     // a story with the given ID
     public void StartStory(int storyId)
     {
-        StoryInfo story = _storyDB.GetStoryComponent<StoryInfo>(storyId);
+        StoryInfoComponent story = _storyDB.GetStoryComponent<StoryInfoComponent>(storyId);
 
-        if (story.m_State != StoryInfo.State.NotStarted)
+        if (story.m_State != StoryInfoComponent.State.NotStarted)
             Debug.LogError("Tried to start a story that is already in progress or completed");
 
-        story.m_State = StoryInfo.State.InProgress;
+        story.m_State = StoryInfoComponent.State.InProgress;
         _storyDB.m_OngoingStories.Add(storyId);
         _storyDB.m_StoriesToStart.Remove(storyId);
 
@@ -70,16 +70,16 @@ public class StorySystem : ISystemEvents
             throw new System.Exception("Trying to complete a story that isnt ongoing");
 #endif
 
-        StoryInfo story = _storyDB.GetStoryComponent<StoryInfo>(storyId);
+        StoryInfoComponent story = _storyDB.GetStoryComponent<StoryInfoComponent>(storyId);
         _storyDB.m_OngoingStories.Remove(storyId);
         _storyDB.m_CompletedStories.Add(storyId);
 
         _questSystem.GetOverallTag(questData.m_PiecesList, out QPTag.TagType tagType, out int value);
 
-        int targetId = questData.m_PiecesList.Find(a => a.m_Type == QuestPiece.PieceType.Target).m_ParentID;
+        int targetId = questData.m_PiecesList.Find(a => a.m_Type == QuestPieceFunctionalComponent.PieceType.Target).m_ParentID;
 
-        ProcessStoryData(story.m_StoryData, tagType, value, targetId, out BranchOption result, out StoryRepercusion rep);
-        story.m_State = StoryInfo.State.Completed;
+        ProcessStoryData(story.m_StoryData, tagType, value, targetId, out BranchOption result, out StoryRepercusionComponent rep);
+        story.m_State = StoryInfoComponent.State.Completed;
         story.m_QuestData = questData;
         story.m_QuestBranchResult = result;
         story.m_QuestRepercusion = rep;
@@ -117,7 +117,7 @@ public class StorySystem : ISystemEvents
     }
 
     // Process a story with the given tag and value and get the result
-    private void ProcessStoryData(StoryData data, QPTag.TagType tag, int value, int targetId, out BranchOption result, out StoryRepercusion rep)
+    private void ProcessStoryData(StoryData data, QPTag.TagType tag, int value, int targetId, out BranchOption result, out StoryRepercusionComponent rep)
     {
         result = null;
         rep = null;
@@ -142,7 +142,7 @@ public class StorySystem : ISystemEvents
     }
 
     // Process a Branch Option
-    private bool ProcessBranchOption(BranchOption branchOpt, QPTag.TagType tag, int value, int targetId, out BranchOption result, out StoryRepercusion rep)
+    private bool ProcessBranchOption(BranchOption branchOpt, QPTag.TagType tag, int value, int targetId, out BranchOption result, out StoryRepercusionComponent rep)
     {
         bool match = CheckCondition(branchOpt.m_Condition, tag, value, targetId);
         if (match)

@@ -46,7 +46,7 @@ namespace CQM.Systems
         {
             for (int i = 0; i < rw_newsData.m_StoriesToShowInNewspaper.Count; i++)
             {
-                StoryInfo s = r_story.m_Stories[rw_newsData.m_StoriesToShowInNewspaper[i]];
+                StoryInfoComponent s = r_story.m_StoriesInfo[rw_newsData.m_StoriesToShowInNewspaper[i]];
                 int repId = s.m_QuestBranchResult.m_Repercusion.m_ID;
                 var storyNews = rw_newsData.m_NewspaperStories[repId];
 

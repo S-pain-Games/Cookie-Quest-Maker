@@ -8,10 +8,10 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class UIPieceTypeSelectionButton : MonoBehaviour
 {
-    public event Action<QuestPiece.PieceType> OnButtonClicked;
+    public event Action<QuestPieceFunctionalComponent.PieceType> OnButtonClicked;
 
     [SerializeField]
-    private QuestPiece.PieceType m_PieceType;
+    private QuestPieceFunctionalComponent.PieceType m_PieceType;
     private Button _button;
 
     private void Awake()

@@ -75,12 +75,12 @@ namespace CQM.Gameplay
             _questMakingSys.SelectStory(storyId);
         }
 
-        private void QuestBuilding_OnRemoveQuestPiece(QuestPiece piece)
+        private void QuestBuilding_OnRemoveQuestPiece(QuestPieceFunctionalComponent piece)
         {
             _questMakingSys.RemovePiece(piece);
         }
 
-        private void QuestBuilding_OnAddQuestPiece(QuestPiece piece)
+        private void QuestBuilding_OnAddQuestPiece(QuestPieceFunctionalComponent piece)
         {
             _questMakingSys.AddPiece(piece);
         }

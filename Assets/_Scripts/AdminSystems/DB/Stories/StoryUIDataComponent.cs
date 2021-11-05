@@ -3,7 +3,7 @@
 namespace CQM.Components
 {
     [System.Serializable]
-    public class StoryUIData
+    public class StoryUIDataComponent
     {
         public int m_ParentStoryID;
         public Sprite m_Sprite;

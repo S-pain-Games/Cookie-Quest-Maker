@@ -4,7 +4,7 @@ using UnityEngine;
 namespace CQM.Components
 {
     [System.Serializable]
-    public class QuestPiece
+    public class QuestPieceFunctionalComponent
     {
         public PieceType m_Type = PieceType.Action;
         public List<QPTag> m_Tags = new List<QPTag>();

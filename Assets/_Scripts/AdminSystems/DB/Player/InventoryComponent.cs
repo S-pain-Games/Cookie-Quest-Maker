@@ -6,7 +6,7 @@ namespace CQM.Databases
 {
     [System.Serializable]
     // Storage of all the unlocked pieces and cookies that the player has
-    public class InventoryData
+    public class InventoryComponent
     {
         // Reputation
         public int m_GoodCookieReputation;

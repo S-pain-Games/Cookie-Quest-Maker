@@ -8,15 +8,15 @@ namespace CQM.Components
     //Unstarted stories dont have this representation
 
     [System.Serializable]
-    public class StoryInfo
+    public class StoryInfoComponent
     {
         public StoryData m_StoryData; // Persistent Story Data
         public State m_State = State.NotStarted;
-        
+
 
         public QuestData m_QuestData; // The quest that was created to complete the story
         public BranchOption m_QuestBranchResult; // The final result of the story given the quest
-        public StoryRepercusion m_QuestRepercusion = null;
+        public StoryRepercusionComponent m_QuestRepercusion = null;
 
         public enum State
         {

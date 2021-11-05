@@ -18,7 +18,7 @@ public class CookieMakingUI : MonoBehaviour
     [SerializeField] private Transform recipeListParent;
 
     private CookieDB cookiesData;
-    private InventoryData _inventoryData;
+    private InventoryComponent _inventoryData;
 
     private CookieMakingSystem cookieMakingSystem;
 
@@ -90,7 +90,7 @@ public class CookieMakingUI : MonoBehaviour
         {
             txt_CookieName.text = cookieData.m_CookieName;
             txt_CookieDescription.text = cookieData.m_CookieDescription;
-            List<QPTag> tags = Admin.Global.Database.Pieces.GetQuestPieceComponent<QuestPiece>(id).m_Tags;
+            List<QPTag> tags = Admin.Global.Database.Pieces.GetQuestPieceComponent<QuestPieceFunctionalComponent>(id).m_Tags;
             txt_CookieStats.text = "Hero Stats: \n";
             foreach (QPTag q in tags)
             {

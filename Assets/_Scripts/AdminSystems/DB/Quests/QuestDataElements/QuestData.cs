@@ -7,6 +7,6 @@ namespace CQM.Components
     [Serializable]
     public class QuestData
     {
-        public List<QuestPiece> m_PiecesList = new List<QuestPiece>();
+        public List<QuestPieceFunctionalComponent> m_PiecesList = new List<QuestPieceFunctionalComponent>();
     }
 }

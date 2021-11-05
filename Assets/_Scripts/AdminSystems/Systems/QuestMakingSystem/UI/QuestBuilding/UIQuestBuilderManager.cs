@@ -11,8 +11,8 @@ namespace CQM.Gameplay
 {
     public class UIQuestBuilderManager : MonoBehaviour
     {
-        public event Action<QuestPiece> OnAddQuestPiece;
-        public event Action<QuestPiece> OnRemoveQuestPiece;
+        public event Action<QuestPieceFunctionalComponent> OnAddQuestPiece;
+        public event Action<QuestPieceFunctionalComponent> OnRemoveQuestPiece;
         public event Action OnFinishQuest;
 
         public RectTransform pieceSpawnPosition;
@@ -101,7 +101,7 @@ namespace CQM.Gameplay
             for (int i = 0; i < _questPieces.Count; i++)
             {
                 // TODO: >:[
-                if (_questPieces[i].Piece.m_Type == QuestPiece.PieceType.Cookie)
+                if (_questPieces[i].Piece.m_Type == QuestPieceFunctionalComponent.PieceType.Cookie)
                 {
                     _addPieceCmd.Invoke(new ItemData(_questPieces[i].Piece.m_ParentID, 1));
                 }
@@ -128,8 +128,8 @@ namespace CQM.Gameplay
         public void SpawnPiece(int pieceID)
         {
             PiecesDB quests = Admin.Global.Database.Pieces;
-            var questPiece = quests.GetQuestPieceComponent<QuestPiece>(pieceID);
-            var uiData = quests.GetQuestPieceComponent<UIQuestPieceData>(pieceID);
+            var questPiece = quests.GetQuestPieceComponent<QuestPieceFunctionalComponent>(pieceID);
+            var uiData = quests.GetQuestPieceComponent<UIQuestPieceComponent>(pieceID);
 
             // Destroy existing piece type
             for (int i = 0; i < _questPieces.Count; i++)
@@ -161,12 +161,12 @@ namespace CQM.Gameplay
             OnFinishQuest?.Invoke();
         }
 
-        private void OnPieceSocketedHandle(QuestPiece piece)
+        private void OnPieceSocketedHandle(QuestPieceFunctionalComponent piece)
         {
             OnAddQuestPiece?.Invoke(piece);
         }
 
-        private void OnPieceUnsocketedHandle(QuestPiece piece)
+        private void OnPieceUnsocketedHandle(QuestPieceFunctionalComponent piece)
         {
             OnRemoveQuestPiece?.Invoke(piece);
         }

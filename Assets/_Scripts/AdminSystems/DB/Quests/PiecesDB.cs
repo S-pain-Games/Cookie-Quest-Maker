@@ -56,8 +56,8 @@ namespace CQM.Databases
     public class QuestPieceDataContainer
     {
         public int m_ID;
-        public QuestPiece m_Functional;
-        public UIQuestPieceData m_QuestSelectionUI;
+        public QuestPieceFunctionalComponent m_Functional;
+        public UIQuestPieceComponent m_QuestSelectionUI;
         public GameObject m_QuestBuildingPiecePrefab;
     }
 }

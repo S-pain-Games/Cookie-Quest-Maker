@@ -1,6 +1,7 @@
 ﻿using CQM.Components;
 using CQM.Databases;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace CQM.Systems
@@ -8,10 +9,10 @@ namespace CQM.Systems
 
     public class TownSystem
     {
-        private TownDB _data;
+        private TownComponent _data;
         private StoryDB _stories;
 
-        public void Initialize(TownDB data, StoryDB stories)
+        public void Initialize(TownComponent data, StoryDB stories)
         {
             _data = data;
             _stories = stories;
@@ -27,7 +28,7 @@ namespace CQM.Systems
                 int locHappiness = 0;
                 for (int j = 0; j < locList[i].m_StoryRepercusionsIDs.Count; j++)
                 {
-                    StoryRepercusion rep = repDb[locList[i].m_StoryRepercusionsIDs[j]];
+                    StoryRepercusionComponent rep = repDb[locList[i].m_StoryRepercusionsIDs[j]];
                     if (rep.m_Active)
                         locHappiness += rep.m_Value;
                 }
@@ -54,7 +55,7 @@ namespace CQM.Systems
 namespace CQM.Databases
 {
     [SerializeField]
-    public class TownDB
+    public class TownComponent
     {
         public int m_GlobalHappiness;
         public Dictionary<int, Location> m_Locations = new Dictionary<int, Location>();
@@ -87,5 +88,10 @@ namespace CQM.Databases
 
         public int m_Happiness;
         public List<int> m_StoryRepercusionsIDs = new List<int>();
+    }
+
+    public class TownUI
+    {
+        public TextMeshProUGUI _happiness;
     }
 }

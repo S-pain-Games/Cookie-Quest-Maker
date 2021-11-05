@@ -6,9 +6,14 @@ public class GameStateSystem : ISystemEvents
 {
     private GameStateComponent m_GameState;
 
-    public void Initialize(GameStateComponent gameState)
+    private TransitionsSubSystem m_TransitionsSubSys;
+
+
+    public void Initialize(GameStateComponent gameState, TransitionsComponent transitions)
     {
         m_GameState = gameState;
+        m_TransitionsSubSys = new TransitionsSubSystem();
+        m_TransitionsSubSys.Initialize(transitions);
     }
 
     public void StartGame()
@@ -24,9 +29,12 @@ public class GameStateSystem : ISystemEvents
 
     public void SetState(State state)
     {
-        m_GameState.m_State.OnStateExit();
-        m_GameState.m_State = m_GameState.m_States[state];
-        m_GameState.m_State.OnStateEnter();
+        m_TransitionsSubSys.TransitionTo(() =>
+        {
+            m_GameState.m_State.OnStateExit();
+            m_GameState.m_State = m_GameState.m_States[state];
+            m_GameState.m_State.OnStateEnter();
+        });
     }
 
     public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
@@ -64,6 +72,32 @@ public class GameStateSystem : ISystemEvents
         evt.OnInvoked += SetState;
     }
 
+
+    public class TransitionsSubSystem
+    {
+        private TransitionsComponent _data;
+
+        public void Initialize(TransitionsComponent component)
+        {
+            _data = component;
+        }
+
+        public void TransitionTo(Action midPoint)
+        {
+            var t = _data.m_FadeTransition;
+            t.outCompleted += midPoint;
+            t.outCompleted += () => _data.m_FadeTransition.TransitionIn(); ;
+            t.inCompleted += () => t.ClearAllCallbacks();
+            t.TransitionOut();
+        }
+    }
+
+    [Serializable]
+    public class TransitionsComponent
+    {
+        public TransitionBehaviour m_FadeTransition;
+    }
+
     public enum State
     {
         MainMenu,
@@ -74,11 +108,13 @@ public class GameStateSystem : ISystemEvents
     }
 }
 
+
 public class GameState
 {
     private EventVoid m_OnStateEnter;
     private EventVoid m_OnStateExit;
     private List<GameObject> m_Prefabs;
+
 
     public GameState(EventVoid onStateEnter, EventVoid onStateExit, List<GameObject> prefabs)
     {
@@ -93,6 +129,7 @@ public class GameState
         m_OnStateExit = onStateExit;
         m_Prefabs = new List<GameObject>() { prefabs };
     }
+
 
     public void OnStateEnter()
     {

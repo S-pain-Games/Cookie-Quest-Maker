@@ -18,6 +18,7 @@ namespace CQM.Components
         public string m_SecTitle;
         public string m_SecBody;
 
+
         public void LoadData(StoryBuilder storyBuilder)
         {
             for (int i = 0; i < storyBuilder.RepercusionNewspaperArticles.Count; i++)

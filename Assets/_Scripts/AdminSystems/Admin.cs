@@ -19,8 +19,8 @@ public class Admin : MonoBehaviour
     [SerializeField] private Database _database;
     private GameEventSystem _eventSystem;
 
-
     public GameDataIDs ID = new GameDataIDs();
+
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Init()
@@ -36,7 +36,7 @@ public class Admin : MonoBehaviour
 
         _eventSystem = new GameEventSystem();
 
-        _systems.InitializeGameState(Database.GameState); // Game State Sys registers events on init
+        _systems.InitializeGameState(Database.GameStateComponent, Database.TransitionsComponent); // Game State Sys registers events on init
         _eventSystem.RegisterSystems(_systems.GetSystemsEvents());
         _eventSystem.Initialize();
 
@@ -68,6 +68,9 @@ public class Systems
     private CalendarSystem m_CalendarSystem = new CalendarSystem();
     private NewspaperSystem m_NewspaperSystem = new NewspaperSystem();
 
+    private UISystem m_UISystem = new UISystem();
+
+
     public List<ISystemEvents> GetSystemsEvents()
     {
         List<ISystemEvents> systems = new List<ISystemEvents>();
@@ -82,13 +85,14 @@ public class Systems
         systems.Add(m_CharacterSystem);
         systems.Add(m_CookieMakingSystem);
         systems.Add(m_NewspaperSystem);
+        systems.Add(m_UISystem);
 
         return systems;
     }
 
-    public void InitializeGameState(GameStateComponent gameStateComp)
+    public void InitializeGameState(GameStateComponent gameStateComp, GameStateSystem.TransitionsComponent transitionsComp)
     {
-        m_GameStateSystem.Initialize(gameStateComp);
+        m_GameStateSystem.Initialize(gameStateComp, transitionsComp);
     }
 
     public void InitializeSystems(GameEventSystem eventSystem, Database database)
@@ -107,6 +111,7 @@ public class Systems
         m_CameraSystem.Initialize(database.Cameras);
         m_InventorySystem.Initialize(database.Player.Inventory);
         m_NewspaperSystem.Initialize(database.NewspaperRefs, database.Newspaper, database.Stories);
+        m_UISystem.Initialize(database.UIRefs);
     }
 
     public void StartGame()
@@ -120,6 +125,7 @@ public class WorldDB
     public DayData CurrentDay { get; private set; }
     public CalendarData Calendar { get; private set; }
 
+
     public WorldDB()
     {
         CurrentDay = new DayData();
@@ -130,15 +136,16 @@ public class WorldDB
 [System.Serializable]
 public class PlayerDB
 {
-    public InventoryData Inventory { get => m_Inventory; }
+    public InventoryComponent Inventory { get => m_Inventory; }
     public InputComponent Input { get => m_InputComponent; }
 
     private InputComponent m_InputComponent = new InputComponent();
-    private InventoryData m_Inventory;
+    private InventoryComponent m_Inventory;
+
 
     public void LoadData()
     {
-        m_Inventory = new InventoryData();
+        m_Inventory = new InventoryComponent();
         m_Inventory.Initialize();
 
         // Automatically initialize to avoid inspector pain

@@ -27,19 +27,19 @@ public class QuestMakingSystem : ISystemEvents
         m_Data.m_CurrentQuest = new QuestData();
     }
 
-    public void AddPiece(QuestPiece piece)
+    public void AddPiece(QuestPieceFunctionalComponent piece)
     {
         m_Data.m_CurrentQuest.m_PiecesList.Add(piece);
 
         switch (piece.m_Type)
         {
-            case QuestPiece.PieceType.Action:
+            case QuestPieceFunctionalComponent.PieceType.Action:
                 m_Data.m_ActionAdded = true;
                 break;
-            case QuestPiece.PieceType.Target:
+            case QuestPieceFunctionalComponent.PieceType.Target:
                 m_Data.m_TargetAdded = true;
                 break;
-            case QuestPiece.PieceType.Cookie:
+            case QuestPieceFunctionalComponent.PieceType.Cookie:
                 m_Data.m_CookieAdded = true;
                 break;
             default:
@@ -47,19 +47,19 @@ public class QuestMakingSystem : ISystemEvents
         }
     }
 
-    public void RemovePiece(QuestPiece piece)
+    public void RemovePiece(QuestPieceFunctionalComponent piece)
     {
         m_Data.m_CurrentQuest.m_PiecesList.Remove(piece);
 
         switch (piece.m_Type)
         {
-            case QuestPiece.PieceType.Action:
+            case QuestPieceFunctionalComponent.PieceType.Action:
                 m_Data.m_ActionAdded = false;
                 break;
-            case QuestPiece.PieceType.Target:
+            case QuestPieceFunctionalComponent.PieceType.Target:
                 m_Data.m_TargetAdded = false;
                 break;
-            case QuestPiece.PieceType.Cookie:
+            case QuestPieceFunctionalComponent.PieceType.Cookie:
                 m_Data.m_CookieAdded = false;
                 break;
             default:
@@ -88,8 +88,8 @@ public class QuestMakingSystem : ISystemEvents
         sysID = "quest_making_sys".GetHashCode();
 
         commands.AddEvent<int>("select_story".GetHashCode()).OnInvoked += SelectStory;
-        commands.AddEvent<QuestPiece>("add_piece".GetHashCode()).OnInvoked += AddPiece;
-        commands.AddEvent<QuestPiece>("remove_piece".GetHashCode()).OnInvoked += RemovePiece;
+        commands.AddEvent<QuestPieceFunctionalComponent>("add_piece".GetHashCode()).OnInvoked += AddPiece;
+        commands.AddEvent<QuestPieceFunctionalComponent>("remove_piece".GetHashCode()).OnInvoked += RemovePiece;
     }
 }
 

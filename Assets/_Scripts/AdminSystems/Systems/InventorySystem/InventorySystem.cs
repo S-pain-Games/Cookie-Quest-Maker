@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InventorySystem : ISystemEvents
 {
-    private InventoryData _inventoryData;
+    private InventoryComponent _inventoryData;
 
     public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
     {
@@ -37,7 +37,7 @@ public class InventorySystem : ISystemEvents
         commands.AddEvent<int>("unlock_recipe".GetHashCode()).OnInvoked += UnlockRecipe;
     }
 
-    public void Initialize(InventoryData data)
+    public void Initialize(InventoryComponent data)
     {
         _inventoryData = data;
     }

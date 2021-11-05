@@ -24,7 +24,7 @@ namespace CQM.Gameplay
         [SerializeField]
         private TextMeshProUGUI _textComp;
         [HideInInspector]
-        public QuestPiece Piece;
+        public QuestPieceFunctionalComponent Piece;
         private Canvas _canvas;
 
         private bool m_Socketed = false;
@@ -34,7 +34,7 @@ namespace CQM.Gameplay
         private GraphicRaycaster _raycaster;
         private List<RaycastResult> m_Results = new List<RaycastResult>();
 
-        public void Initialize(Canvas canvas, UIQuestPieceData uiData, QuestPiece piece)
+        public void Initialize(Canvas canvas, UIQuestPieceComponent uiData, QuestPieceFunctionalComponent piece)
         {
             _draggable = GetComponent<UIDraggable>();
             _pressable = GetComponent<UIPressable>();

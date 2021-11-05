@@ -5,7 +5,7 @@ using UnityEngine;
 namespace CQM.Components
 {
     [System.Serializable]
-    public class StoryRepercusion
+    public class StoryRepercusionComponent
     {
         public int m_ID;
         public int m_ParentStoryID;

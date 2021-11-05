@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using PieceType = CQM.Components.QuestPiece.PieceType;
+using PieceType = CQM.Components.QuestPieceFunctionalComponent.PieceType;
 using Tag = CQM.Components.QPTag.TagType;
 
 namespace CQM.Databases
@@ -52,14 +52,14 @@ namespace CQM.Databases
             SetPieceType(PieceType.Action);
             AddFunctionalTag(Tag.Harm, 1);
             SetUIData("Attack", "Very Agressive");
-            SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+            SetRecipeData("Attack Piece Recipe", "Very aggresive", Reputation.EvilCookieReputation, 50);
 
             CreateNew();
             SetIDName("assist");
             SetPieceType(PieceType.Action);
             AddFunctionalTag(Tag.Help, 1);
             SetUIData("Assist", "Very Assistive");
-            SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+            SetRecipeData("Assist Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50);
 
             CreateNew();
             SetIDName("baseball_bat");
@@ -96,8 +96,8 @@ namespace CQM.Databases
         {
             _qpData = new QuestPieceDataContainer();
             _qpData.m_QuestBuildingPiecePrefab = defaultPiecePrefab;
-            _qpData.m_Functional = new QuestPiece();
-            _qpData.m_QuestSelectionUI = new UIQuestPieceData();
+            _qpData.m_Functional = new QuestPieceFunctionalComponent();
+            _qpData.m_QuestSelectionUI = new UIQuestPieceComponent();
 
             _cookieData = new CookieData();
             _recipeData = new RecipeData();

@@ -52,7 +52,7 @@ namespace CQM.Components
         // The dialogue the deities will say at night after completing a story
         public List<DeitiesStoryDialogue> m_DeitiesResultDialogue = new List<DeitiesStoryDialogue>();
 
-        public StoryRepercusion m_Repercusion;
+        public StoryRepercusionComponent m_Repercusion;
 
         public int CompareTo(BranchOption obj)
         {

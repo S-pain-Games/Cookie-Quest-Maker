@@ -8,7 +8,7 @@ namespace CQM.Gameplay
 {
     public class PieceFilteringMenu : MonoBehaviour
     {
-        public event Action<QuestPiece.PieceType> OnFilterSelected;
+        public event Action<QuestPieceFunctionalComponent.PieceType> OnFilterSelected;
 
         [SerializeField]
         private List<UIPieceTypeSelectionButton> m_Buttons = new List<UIPieceTypeSelectionButton>();
@@ -29,7 +29,7 @@ namespace CQM.Gameplay
             }
         }
 
-        private void ButtonClickedHandle(QuestPiece.PieceType type)
+        private void ButtonClickedHandle(QuestPieceFunctionalComponent.PieceType type)
         {
             OnFilterSelected?.Invoke(type);
         }

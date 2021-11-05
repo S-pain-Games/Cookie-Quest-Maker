@@ -1,7 +1,7 @@
 ﻿using CQM.Components;
 using System.Collections.Generic;
 using UnityEngine;
-using PieceType = CQM.Components.QuestPiece.PieceType;
+using PieceType = CQM.Components.QuestPieceFunctionalComponent.PieceType;
 using Tag = CQM.Components.QPTag.TagType;
 
 
@@ -9,29 +9,28 @@ namespace CQM.Databases
 {
     public class StoryBuilder : MonoBehaviour
     {
-        public List<StoryInfo> Stories => m_StoriesList;
-        public List<StoryRepercusion> Repercusions => m_Repercusions;
-        public List<StoryUIData> StoryUI => m_StoryUI;
+        public List<StoryInfoComponent> Stories => m_StoriesList;
+        public List<StoryRepercusionComponent> Repercusions => m_Repercusions;
+        public List<StoryUIDataComponent> StoryUI => m_StoryUI;
         public List<StoryRepNewspaperComponent> RepercusionNewspaperArticles => m_RepercusionNewspaperArticles;
 
         [SerializeField]
-        private List<StoryInfo> m_StoriesList = new List<StoryInfo>();
+        private List<StoryInfoComponent> m_StoriesList = new List<StoryInfoComponent>();
         [SerializeField]
-        private List<StoryRepercusion> m_Repercusions = new List<StoryRepercusion>();
+        private List<StoryRepercusionComponent> m_Repercusions = new List<StoryRepercusionComponent>();
         [SerializeField]
         private List<StoryRepNewspaperComponent> m_RepercusionNewspaperArticles = new List<StoryRepNewspaperComponent>();
         [SerializeField]
-        private List<StoryUIData> m_StoryUI = new List<StoryUIData>();
+        private List<StoryUIDataComponent> m_StoryUI = new List<StoryUIDataComponent>();
 
-        private StoryInfo m_Story;
+        private StoryInfoComponent m_Story;
         private StoryData m_StoryData;
         private BranchOption m_Branch;
-        private StoryRepercusion m_Repercusion;
+        private StoryRepercusionComponent m_Repercusion;
 
         [SerializeField]
         private List<References> m_References = new List<References>();
 
-        [MethodButton]
         public void LoadDataFromCode()
         {
             m_StoriesList.Clear();
@@ -68,7 +67,6 @@ namespace CQM.Databases
             FinishCreatingStory();
         }
 
-        [MethodButton]
         public void SyncReferences()
         {
             for (int i = 0; i < m_References.Count; i++)
@@ -99,7 +97,7 @@ namespace CQM.Databases
 
         public void CreateRepercusion(string idName, string repName, int happinessValue)
         {
-            var rep = new StoryRepercusion();
+            var rep = new StoryRepercusionComponent();
             rep.m_ID = idName.GetHashCode();
             rep.m_Name = repName;
             rep.m_ParentStoryID = m_StoryData.m_ID;
@@ -111,7 +109,7 @@ namespace CQM.Databases
 
         public void SetRepercusionToBranch(string idName)
         {
-            StoryRepercusion rep = null;
+            StoryRepercusionComponent rep = null;
             for (int i = 0; i < m_Repercusions.Count; i++)
             {
                 if (m_Repercusions[i].m_ID == idName.GetHashCode())
@@ -137,7 +135,7 @@ namespace CQM.Databases
             m_RepercusionNewspaperArticles.Add(newsArticle);
         }
 
-        public void AddBranchCompletion_NPCDialogue(List<string> npcResultDialogue, QPTag.TagType tag, int tagValue, string target)
+        public void AddBranchCompletion_NPCDialogue(List<string> npcResultDialogue, Tag tag, int tagValue, string target)
         {
             m_Branch.m_ResultNPCDialogue = npcResultDialogue;
 
@@ -169,7 +167,7 @@ namespace CQM.Databases
 
         public void AddStorySelectionUIData(string title)
         {
-            var s = new StoryUIData();
+            var s = new StoryUIDataComponent();
             s.m_Title = title;
             s.m_ParentStoryID = m_StoryData.m_ID;
             m_StoryUI.Add(s);
@@ -185,7 +183,7 @@ namespace CQM.Databases
         {
             m_StoryData.Build();
 
-            m_Story = new StoryInfo();
+            m_Story = new StoryInfoComponent();
             m_Story.m_StoryData = m_StoryData;
 
             m_StoriesList.Add(m_Story);

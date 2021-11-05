@@ -10,7 +10,7 @@ namespace CQM.Gameplay
     // important data
     public class UIPieceStorageManager : MonoBehaviour
     {
-        public QuestPiece.PieceType m_SelectedType;
+        public QuestPieceFunctionalComponent.PieceType m_SelectedType;
         public int selectedStoryId; // used to populate UI with story targets
 
         [SerializeField] private PieceFilteringMenu _pieceFiltering;
@@ -45,7 +45,7 @@ namespace CQM.Gameplay
             _pieceSelector.OnUsePiece -= PieceSelection_OnUsePiece;
         }
 
-        private void PieceFiltering_OnFilterSelected(QuestPiece.PieceType type)
+        private void PieceFiltering_OnFilterSelected(QuestPieceFunctionalComponent.PieceType type)
         {
             m_SelectedType = type;
             _pieceSelector.Refresh(type);

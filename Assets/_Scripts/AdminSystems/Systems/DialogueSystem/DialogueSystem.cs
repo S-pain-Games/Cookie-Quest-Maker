@@ -11,48 +11,12 @@ public class DialogueSystem : ISystemEvents
     private EventVoid _enableCharMovementCmd;
     private EventVoid _disableCharMovementCmd;
 
+
     public void Initialize(DialogueReferences dialogueData, GameEventSystem evtSys)
     {
         _dialogueData = dialogueData;
         _enableCharMovementCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "enable_movement");
         _disableCharMovementCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "disable_movement");
-    }
-
-    // TODO: Add behaviour to stack dialogues
-    public void ShowDialogue(List<string> dialogue, string characterName, Action callback)
-    {
-        var data = _dialogueData;
-        data.m_Container.SetActive(true);
-        data.m_CurrentDialogueLines = dialogue;
-
-        data.m_CaracterName.text = characterName;
-        data.m_Line.text = data.m_CurrentDialogueLines[data.m_CurrentLineIndex];
-        data.m_CallbackOnDialogueEnd = callback;
-
-        _disableCharMovementCmd.Invoke();
-    }
-
-    public void NextLine()
-    {
-        var data = _dialogueData;
-        if (data.m_CurrentLineIndex < data.m_CurrentDialogueLines.Count - 1)
-        {
-            data.m_CurrentLineIndex++;
-            data.m_Line.text = data.m_CurrentDialogueLines[data.m_CurrentLineIndex];
-        }
-        else
-        {
-            data.m_Container.SetActive(false);
-            data.m_CurrentLineIndex = 0;
-
-            _enableCharMovementCmd.Invoke();
-
-            if (data.m_CallbackOnDialogueEnd != null)
-            {
-                data.m_CallbackOnDialogueEnd.Invoke();
-                data.m_CallbackOnDialogueEnd = null;
-            }
-        }
     }
 
     public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
@@ -66,7 +30,63 @@ public class DialogueSystem : ISystemEvents
         evt.OnInvoked += (args) => ShowDialogue(args.dialogue, args.charName, args.callback);
         commands.AddEvent("continue_dialogue".GetHashCode()).OnInvoked += NextLine;
     }
+
+
+    public void ShowDialogue(List<string> dialogue, string characterName, Action callback)
+    {
+        var data = _dialogueData;
+        data.m_Container.gameObject.SetActive(true);
+        data.m_CurrentDialogueLines = dialogue;
+
+        data.m_CaracterName.text = characterName;
+        data.m_Container.StartCoroutine(ShowText(data.m_CurrentDialogueLines[data.m_CurrentLineIndex]));
+        //data.m_Line.text = data.m_CurrentDialogueLines[data.m_CurrentLineIndex];
+        data.m_CallbackOnDialogueEnd = callback;
+
+        _disableCharMovementCmd.Invoke();
+    }
+
+    public IEnumerator ShowText(string dialogueLine)
+    {
+        int i = 0;
+        var wait = new WaitForSeconds(0.02f);
+        var d = _dialogueData;
+        while (i <= dialogueLine.Length)
+        {
+            d.m_Line.text = dialogueLine.Substring(0, i);
+            yield return wait;
+            i++;
+        }
+    }
+
+    public void NextLine()
+    {
+        var data = _dialogueData;
+
+        data.m_Container.StopAllCoroutines();
+
+        if (data.m_CurrentLineIndex < data.m_CurrentDialogueLines.Count - 1)
+        {
+            data.m_CurrentLineIndex++;
+            //data.m_Line.text = data.m_CurrentDialogueLines[data.m_CurrentLineIndex];
+            data.m_Container.StartCoroutine(ShowText(data.m_CurrentDialogueLines[data.m_CurrentLineIndex]));
+        }
+        else
+        {
+            data.m_Container.gameObject.SetActive(false);
+            data.m_CurrentLineIndex = 0;
+
+            _enableCharMovementCmd.Invoke();
+
+            if (data.m_CallbackOnDialogueEnd != null)
+            {
+                data.m_CallbackOnDialogueEnd.Invoke();
+                data.m_CallbackOnDialogueEnd = null;
+            }
+        }
+    }
 }
+
 
 public struct ShowDialogueEvtArgs
 {
@@ -81,6 +101,7 @@ public struct ShowDialogueEvtArgs
         this.callback = callback;
     }
 }
+
 
 [Serializable]
 public class DialogueDB
@@ -97,10 +118,11 @@ public class DialogueDB
     }
 }
 
+
 [Serializable]
 public class DialogueReferences
 {
-    public GameObject m_Container;
+    public DialogueContainer m_Container;
 
     [Header("Text")]
     public TextMeshProUGUI m_CaracterName;

@@ -16,10 +16,10 @@ namespace CQM.Systems
     public class NpcSystem : ISystemEvents
     {
         private StoryDB _storyDB;
-        private NpcData _npcData;
+        private NpcReferencesComponent _npcData;
         private Event<PopupData> _showPopupCmd;
 
-        public void Initialize(StoryDB storyDb, NpcData npcData, GameEventSystem evtSys)
+        public void Initialize(StoryDB storyDb, NpcReferencesComponent npcData, GameEventSystem evtSys)
         {
             _storyDB = storyDb;
             _npcData = npcData;
@@ -66,7 +66,7 @@ namespace CQM.Systems
                 // only if there are remaining stories to show
                 if (finalizableStories.Count > 0)
                 {
-                    StoryInfo s = _storyDB.m_Stories[finalizableStories[0]];
+                    StoryInfoComponent s = _storyDB.m_StoriesInfo[finalizableStories[0]];
 
                     for (int c = 0; c < s.m_QuestBranchResult.m_ResultNPCDialogue.Count; c++)
                     {
@@ -89,7 +89,7 @@ namespace CQM.Systems
                 // only if there are new stories to append
                 if (storiesToStart.Count > 0)
                 {
-                    var introductionDialogue = _storyDB.m_Stories[storiesToStart[0]].m_StoryData.m_IntroductionDialogue;
+                    var introductionDialogue = _storyDB.m_StoriesInfo[storiesToStart[0]].m_StoryData.m_IntroductionDialogue;
                     for (int j = 0; j < introductionDialogue.Count; j++)
                     {
                         npcData.m_Dialogue.Add(introductionDialogue[j]);
@@ -118,7 +118,7 @@ namespace CQM.Systems
 
             for (int i = 0; i < completedStories.Count; i++)
             {
-                BranchOption result = _storyDB.m_Stories[completedStories[i]].m_QuestBranchResult;
+                BranchOption result = _storyDB.m_StoriesInfo[completedStories[i]].m_QuestBranchResult;
 
                 for (int j = 0; j < result.m_DeitiesResultDialogue.Count; j++)
                 {

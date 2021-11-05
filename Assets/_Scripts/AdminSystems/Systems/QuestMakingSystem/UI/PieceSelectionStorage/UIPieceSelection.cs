@@ -27,7 +27,7 @@ public class UIPieceSelection : MonoBehaviour
 
     private void OnEnable()
     {
-        Refresh(QuestPiece.PieceType.Cookie);
+        Refresh(QuestPieceFunctionalComponent.PieceType.Cookie);
         _usePieceButton.onClick.AddListener(UsePieceButton_OnClick);
     }
 
@@ -36,7 +36,7 @@ public class UIPieceSelection : MonoBehaviour
         _usePieceButton.onClick.RemoveListener(UsePieceButton_OnClick);
     }
 
-    public void Refresh(QuestPiece.PieceType pieceType)
+    public void Refresh(QuestPieceFunctionalComponent.PieceType pieceType)
     {
         // Delete previous elements
         for (int i = m_Elements.Count - 1; i >= 0; i--)
@@ -50,13 +50,13 @@ public class UIPieceSelection : MonoBehaviour
         pos.y += 150;
 
         // Loop over all story targets
-        if (pieceType == QuestPiece.PieceType.Target)
+        if (pieceType == QuestPieceFunctionalComponent.PieceType.Target)
         {
-            var targetsList = Admin.Global.Database.Stories.GetStoryComponent<StoryInfo>(m_CurrentStoryID).m_StoryData.m_AllPossibleTargets;
+            var targetsList = Admin.Global.Database.Stories.GetStoryComponent<StoryInfoComponent>(m_CurrentStoryID).m_StoryData.m_AllPossibleTargets;
 
             for (int i = 0; i < targetsList.Count; i++)
             {
-                QuestPiece targetPiece = Admin.Global.Database.Pieces.GetQuestPieceComponent<QuestPiece>(targetsList[i]);
+                QuestPieceFunctionalComponent targetPiece = Admin.Global.Database.Pieces.GetQuestPieceComponent<QuestPieceFunctionalComponent>(targetsList[i]);
                 pos = AddPieceToUI(pos, targetPiece);
             }
             return;
@@ -68,7 +68,7 @@ public class UIPieceSelection : MonoBehaviour
         {
             if (piecesInventory[i].m_Amount <= 0) return; // Should be innecesary because the list shouldnt have empty items but just in case
 
-            QuestPiece piece = Admin.Global.Database.Pieces.GetQuestPieceComponent<QuestPiece>(piecesInventory[i].m_ItemID);
+            QuestPieceFunctionalComponent piece = Admin.Global.Database.Pieces.GetQuestPieceComponent<QuestPieceFunctionalComponent>(piecesInventory[i].m_ItemID);
             // Only show the pieces that match the filter
             if (piece.m_Type == pieceType)
             {
@@ -77,7 +77,7 @@ public class UIPieceSelection : MonoBehaviour
         }
     }
 
-    private Vector3 AddPieceToUI(Vector3 pos, QuestPiece questPiece)
+    private Vector3 AddPieceToUI(Vector3 pos, QuestPieceFunctionalComponent questPiece)
     {
         // Create and position corresponding elements in UI
         pos += new Vector3(250, 0, 0);
@@ -88,7 +88,7 @@ public class UIPieceSelection : MonoBehaviour
         UIstorageElem.pieceID = questPiece.m_ParentID;
         UIstorageElem.OnSelected += StoragePiece_OnClicked;
 
-        var uiData = Admin.Global.Database.Pieces.GetQuestPieceComponent<UIQuestPieceData>(questPiece.m_ParentID);
+        var uiData = Admin.Global.Database.Pieces.GetQuestPieceComponent<UIQuestPieceComponent>(questPiece.m_ParentID);
         // Initialize UI element with piece data
         UIstorageElem.Build(uiData);
         m_Elements.Add(UIstorageElem);
@@ -99,7 +99,7 @@ public class UIPieceSelection : MonoBehaviour
     {
         m_SelectedPieceID = questPieceID;
         // Update UI
-        var UIPieceData = Admin.Global.Database.Pieces.GetQuestPieceComponent<UIQuestPieceData>(m_SelectedPieceID);
+        var UIPieceData = Admin.Global.Database.Pieces.GetQuestPieceComponent<UIQuestPieceComponent>(m_SelectedPieceID);
         _uiSelectedPieceView.UpdateUI(UIPieceData.m_Sprite, UIPieceData.m_Name, UIPieceData.m_Description);
     }
 
@@ -127,7 +127,7 @@ public class UIPieceSelection : MonoBehaviour
 
 
 [Serializable]
-public class UIQuestPieceData
+public class UIQuestPieceComponent
 {
     public Sprite m_Sprite;
     public string m_Name;

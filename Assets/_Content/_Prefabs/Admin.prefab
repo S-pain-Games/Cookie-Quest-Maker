@@ -82,6 +82,9 @@ MonoBehaviour:
   m_Cameras:
     m_MainCam: {fileID: 0}
   m_NewspaperRefs: {fileID: 0}
+  m_UIRefs: {fileID: 0}
+  m_TransitionsComponent:
+    m_FadeTransition: {fileID: 0}
 --- !u!114 &585195714406842495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,9 +642,9 @@ MonoBehaviour:
     m_Body: In other news
   m_StoryUI:
   - m_ParentStoryID: 1004953812
-    m_Sprite: {fileID: 21300000, guid: a9a7ff30478141346b289983e787b699, type: 3}
+    m_Sprite: {fileID: 0}
     m_Title: Wolves Party
   m_References:
   - m_ParentStoryID: 1004953812
     m_StoryName: Mayor's Wolves
-    m_StorySelectionUiSprite: {fileID: 21300000, guid: a9a7ff30478141346b289983e787b699, type: 3}
+    m_StorySelectionUiSprite: {fileID: 0}

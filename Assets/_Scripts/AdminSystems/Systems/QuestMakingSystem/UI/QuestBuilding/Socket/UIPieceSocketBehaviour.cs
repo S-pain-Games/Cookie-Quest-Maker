@@ -7,12 +7,12 @@ using UnityEngine.UI;
 
 public class UIPieceSocketBehaviour : MonoBehaviour
 {
-    public event Action<QuestPiece> OnPieceSocketed;
-    public event Action<QuestPiece> OnPieceUnsocketed;
+    public event Action<QuestPieceFunctionalComponent> OnPieceSocketed;
+    public event Action<QuestPieceFunctionalComponent> OnPieceUnsocketed;
 
     public bool m_Filled = false;
-    public QuestPiece.PieceType RequiredType = QuestPiece.PieceType.Action;
-    public QuestPiece m_CurrentPiece;
+    public QuestPieceFunctionalComponent.PieceType RequiredType = QuestPieceFunctionalComponent.PieceType.Action;
+    public QuestPieceFunctionalComponent m_CurrentPiece;
 
     private Color m_BaseColor;
 
@@ -28,7 +28,7 @@ public class UIPieceSocketBehaviour : MonoBehaviour
         GetComponent<Image>().color = m_BaseColor;
     }
 
-    public bool TryToSetPiece(QuestPiece piece)
+    public bool TryToSetPiece(QuestPieceFunctionalComponent piece)
     {
         if (!m_Filled && piece.m_Type == RequiredType)
         {
