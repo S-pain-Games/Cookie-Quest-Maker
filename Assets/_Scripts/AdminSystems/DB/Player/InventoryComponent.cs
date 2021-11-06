@@ -23,19 +23,8 @@ namespace CQM.Databases
 
         public void Initialize()
         {
-            // DEV ONLY, THE INVENTORY SHOULD BE FILLED BY
-            // THE INVENTORY SYSTEM WHEN LOADING THE SAVED GAME
-
-            //m_UnlockedRecipes.Add("eureka".GetHashCode());
             m_UnlockedRecipes.Add("plain_cookie".GetHashCode());
             m_UnlockedRecipes.Add("attack".GetHashCode());
-            //m_UnlockedRecipes.Add("plain_cookie_2".GetHashCode());
-            //m_Storage.Add(ids.attack);
-            //m_Storage.Add(ids.assist);
-            //m_Storage.Add(ids.baseball_bat);
-            //m_Storage.Add(ids.brutally);
-            //m_Storage.Add(ids.kindly);
-            //m_Storage.Add("dialogate".GetHashCode());
 
             m_Ingredients.Add(new InventoryItem("cookie_dough".GetHashCode(), 1));
             m_Ingredients.Add(new InventoryItem("chocolate_chips".GetHashCode(), 1));
@@ -70,5 +59,13 @@ namespace CQM.Databases
             m_ItemID = itemID;
             m_Amount = amount;
         }
+    }
+
+    [System.Serializable]
+    public class IngredientComponent
+    {
+        public int m_ID;
+        public string m_Name;
+        public Sprite m_Sprite;
     }
 }

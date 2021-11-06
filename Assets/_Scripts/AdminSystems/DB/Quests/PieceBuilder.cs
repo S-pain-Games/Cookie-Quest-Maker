@@ -27,7 +27,6 @@ namespace CQM.Databases
         private CookieData _cookieData;
         private RecipeData _recipeData;
 
-        [MethodButton]
         public void LoadDataFromCode()
         {
             m_BuiltPieces.Clear();
@@ -40,12 +39,14 @@ namespace CQM.Databases
             SetPieceType(PieceType.Cookie);
             SetUIData("Plain Cookie", "Very plain");
             SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+            AddIngredientToRecipe("chocolate", 1);
 
             CreateNew();
             SetIDName("plain_cookie_2");
             SetPieceType(PieceType.Cookie);
             SetUIData("Plain Cookie 2", "Very Very plain plain");
             SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+            AddIngredientToRecipe("chocolate", 1);
 
             CreateNew();
             SetIDName("attack");
@@ -53,6 +54,7 @@ namespace CQM.Databases
             AddFunctionalTag(Tag.Harm, 1);
             SetUIData("Attack", "Very Agressive");
             SetRecipeData("Attack Piece Recipe", "Very aggresive", Reputation.EvilCookieReputation, 50);
+            AddIngredientToRecipe("chocolate", 1);
 
             CreateNew();
             SetIDName("assist");
@@ -60,6 +62,7 @@ namespace CQM.Databases
             AddFunctionalTag(Tag.Help, 1);
             SetUIData("Assist", "Very Assistive");
             SetRecipeData("Assist Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50);
+            AddIngredientToRecipe("vanilla", 1);
 
             CreateNew();
             SetIDName("baseball_bat");
@@ -68,6 +71,7 @@ namespace CQM.Databases
             AddFunctionalTag(Tag.Convince, 1);
             SetUIData("Baseball Bat", "Very Bat");
             SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+            AddIngredientToRecipe("chocolate", 2);
 
             CreateNew();
             SetIDName("cake");
@@ -76,6 +80,8 @@ namespace CQM.Databases
             AddFunctionalTag(Tag.Help, 1);
             SetUIData("Cake", "Very Bat");
             SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+            AddIngredientToRecipe("chocolate", 2);
+            AddIngredientToRecipe("vanilla", 2);
 
             CreateNew();
             SetIDName("mayor");
@@ -151,6 +157,11 @@ namespace CQM.Databases
             _recipeData.m_RecipeDescription = description;
             _recipeData.m_ReputationTypePrice = repType;
             _recipeData.m_Price = price;
+        }
+
+        private void AddIngredientToRecipe(string ingredientIDname, int amount)
+        {
+            _recipeData.m_IngredientsList.Add(new InventoryItem(ingredientIDname.GetHashCode(), amount));
         }
         #endregion
 

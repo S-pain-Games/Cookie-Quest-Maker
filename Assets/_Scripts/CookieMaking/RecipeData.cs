@@ -1,3 +1,5 @@
+using CQM.Databases;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public enum Reputation
@@ -17,6 +19,8 @@ public class RecipeData
 
     public Reputation m_ReputationTypePrice = Reputation.GoodCookieReputation;
     public int m_Price;
+
+    public List<InventoryItem> m_IngredientsList = new List<InventoryItem>();
 
     public int m_PieceID = -1;
 }

@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using CQM.Databases;
 
-[CustomEditor(typeof(PieceBuilder))]
-public class PiecesBuilderEditor : Editor
+[CustomEditor(typeof(IngredientsBuilder))]
+public class IngredientsBuilderEditor : Editor
 {
-    private PieceBuilder t;
+    private IngredientsBuilder t;
     private bool showInternal;
 
     private void Awake()
     {
-        t = target as PieceBuilder;
+        t = target as IngredientsBuilder;
     }
 
     public override void OnInspectorGUI()
@@ -24,6 +23,14 @@ public class PiecesBuilderEditor : Editor
             EditorUtility.SetDirty(t);
         }
 
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_References"));
+
+        if (GUILayout.Button("Apply References", GUILayout.Height(40)))
+        {
+            serializedObject.Update();
+            t.ApplyReferences();
+            EditorUtility.SetDirty(t);
+        }
 
         showInternal = EditorGUILayout.Toggle("Show internal data", showInternal);
         if (showInternal)

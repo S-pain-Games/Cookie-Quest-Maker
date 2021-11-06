@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 930925265}
   - component: {fileID: 2656137720672788242}
   - component: {fileID: 1499442548}
+  - component: {fileID: 7711632443896495855}
   m_Layer: 0
   m_Name: Admin
   m_TagString: Untagged
@@ -705,3 +706,35 @@ MonoBehaviour:
   - m_ID: -1991483173
     m_CharacterName: 
     m_DialogueSprite: {fileID: 0}
+--- !u!114 &7711632443896495855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba92c1ffd5ff3444a9fd1e72e13db42f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IngredientsList:
+  - m_ID: -965336208
+    m_Name: Chocolate
+    m_Sprite: {fileID: 0}
+  - m_ID: -1372670123
+    m_Name: Vanilla
+    m_Sprite: {fileID: 0}
+  - m_ID: 1185218972
+    m_Name: Cream
+    m_Sprite: {fileID: 0}
+  m_References:
+  - m_ID: -965336208
+    m_Name: Chocolate
+    m_Sprite: {fileID: 0}
+  - m_ID: -1372670123
+    m_Name: Vanilla
+    m_Sprite: {fileID: 0}
+  - m_ID: 1185218972
+    m_Name: Cream
+    m_Sprite: {fileID: 0}
