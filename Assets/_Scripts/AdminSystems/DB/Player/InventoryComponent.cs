@@ -26,15 +26,16 @@ namespace CQM.Databases
             m_UnlockedRecipes.Add("plain_cookie".GetHashCode());
             m_UnlockedRecipes.Add("attack".GetHashCode());
 
-            m_Ingredients.Add(new InventoryItem("cookie_dough".GetHashCode(), 1));
-            m_Ingredients.Add(new InventoryItem("chocolate_chips".GetHashCode(), 1));
-            m_Ingredients.Add(new InventoryItem("red_jelly".GetHashCode(), 1));
+            m_Ingredients.Add(new InventoryItem("vanilla".GetHashCode(), 1));
+            m_Ingredients.Add(new InventoryItem("chocolate".GetHashCode(), 2));
+            m_Ingredients.Add(new InventoryItem("cream".GetHashCode(), 1));
 
             m_GoodCookieReputation += 100;
             m_EvilCookieReputation += 100;
         }
     }
 
+    [System.Serializable]
     public class InventoryItem
     {
         public int m_ItemID = 0;

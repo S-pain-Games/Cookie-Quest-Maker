@@ -103,7 +103,7 @@ public class Systems
         m_DaySystem.Initialize(eventSystem, database.World.CurrentDay);
         m_StorySystem.Initialize(database.Stories);
         m_QuestMakerSystem.Initialize();
-        m_CookieMakingSystem.Initialize(database.Cookies);
+        m_CookieMakingSystem.Initialize(database.Cookies, database.Player.Inventory);
         m_NpcSystem.Initialize(database.Stories, database.Npcs, eventSystem);
         m_DialogueSystem.Initialize(database.Dialogues.ReferencesAndData, database.m_CharacterComponents, database.m_CharacterDialogueComponents, eventSystem);
         m_TownSystem.Initialize(database.Town, database.Stories);

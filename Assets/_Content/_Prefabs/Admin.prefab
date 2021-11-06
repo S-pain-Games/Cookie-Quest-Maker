@@ -143,6 +143,9 @@ MonoBehaviour:
       m_Image: {fileID: 0}
       m_ReputationTypePrice: 0
       m_Price: 50
+      m_IngredientsList:
+      - m_ItemID: -965336208
+        m_Amount: 1
       m_PieceID: 1473648501
   - inspectorPieceName: plain_cookie_2
     qp:
@@ -169,6 +172,9 @@ MonoBehaviour:
       m_Image: {fileID: 0}
       m_ReputationTypePrice: 0
       m_Price: 50
+      m_IngredientsList:
+      - m_ItemID: -965336208
+        m_Amount: 1
       m_PieceID: 390974588
   - inspectorPieceName: attack
     qp:
@@ -197,6 +203,9 @@ MonoBehaviour:
       m_Image: {fileID: 0}
       m_ReputationTypePrice: 1
       m_Price: 50
+      m_IngredientsList:
+      - m_ItemID: -965336208
+        m_Amount: 1
       m_PieceID: -143907494
   - inspectorPieceName: assist
     qp:
@@ -225,6 +234,9 @@ MonoBehaviour:
       m_Image: {fileID: 0}
       m_ReputationTypePrice: 0
       m_Price: 50
+      m_IngredientsList:
+      - m_ItemID: -1372670123
+        m_Amount: 1
       m_PieceID: 223879643
   - inspectorPieceName: baseball_bat
     qp:
@@ -255,6 +267,9 @@ MonoBehaviour:
       m_Image: {fileID: 0}
       m_ReputationTypePrice: 0
       m_Price: 50
+      m_IngredientsList:
+      - m_ItemID: -965336208
+        m_Amount: 2
       m_PieceID: -673659770
   - inspectorPieceName: cake
     qp:
@@ -285,6 +300,11 @@ MonoBehaviour:
       m_Image: {fileID: 0}
       m_ReputationTypePrice: 0
       m_Price: 50
+      m_IngredientsList:
+      - m_ItemID: -965336208
+        m_Amount: 2
+      - m_ItemID: -1372670123
+        m_Amount: 2
       m_PieceID: -1966748430
   - inspectorPieceName: mayor
     qp:
@@ -311,6 +331,7 @@ MonoBehaviour:
       m_Image: {fileID: 0}
       m_ReputationTypePrice: 0
       m_Price: 50
+      m_IngredientsList: []
       m_PieceID: 996742298
   - inspectorPieceName: wolves
     qp:
@@ -339,6 +360,7 @@ MonoBehaviour:
       m_Image: {fileID: 0}
       m_ReputationTypePrice: 0
       m_Price: 50
+      m_IngredientsList: []
       m_PieceID: -1938852922
   m_PiecesList:
   - m_ID: 1473648501
@@ -483,6 +505,9 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price: 50
+    m_IngredientsList:
+    - m_ItemID: -965336208
+      m_Amount: 1
     m_PieceID: 1473648501
   - m_ParentID: 390974588
     m_RecipeName: Grandma's Plain Cookie Recipe
@@ -490,6 +515,9 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price: 50
+    m_IngredientsList:
+    - m_ItemID: -965336208
+      m_Amount: 1
     m_PieceID: 390974588
   - m_ParentID: -143907494
     m_RecipeName: Attack Piece Recipe
@@ -497,6 +525,9 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 1
     m_Price: 50
+    m_IngredientsList:
+    - m_ItemID: -965336208
+      m_Amount: 1
     m_PieceID: -143907494
   - m_ParentID: 223879643
     m_RecipeName: Assist Recipe
@@ -504,6 +535,9 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price: 50
+    m_IngredientsList:
+    - m_ItemID: -1372670123
+      m_Amount: 1
     m_PieceID: 223879643
   - m_ParentID: -673659770
     m_RecipeName: Grandma's Plain Cookie Recipe
@@ -511,6 +545,9 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price: 50
+    m_IngredientsList:
+    - m_ItemID: -965336208
+      m_Amount: 2
     m_PieceID: -673659770
   - m_ParentID: -1966748430
     m_RecipeName: Grandma's Plain Cookie Recipe
@@ -518,6 +555,11 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price: 50
+    m_IngredientsList:
+    - m_ItemID: -965336208
+      m_Amount: 2
+    - m_ItemID: -1372670123
+      m_Amount: 2
     m_PieceID: -1966748430
   - m_ParentID: 996742298
     m_RecipeName: Grandma's Plain Cookie Recipe
@@ -525,6 +567,7 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price: 50
+    m_IngredientsList: []
     m_PieceID: 996742298
   - m_ParentID: -1938852922
     m_RecipeName: Grandma's Plain Cookie Recipe
@@ -532,6 +575,7 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price: 50
+    m_IngredientsList: []
     m_PieceID: -1938852922
   defaultPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
 --- !u!114 &2656137720672788242

@@ -17,6 +17,11 @@ public class InventorySystem : ISystemEvents
         commands.AddEvent<ItemData>("remove_piece".GetHashCode()).OnInvoked +=
             (args) => RemovePieceFromInventory(args.m_ItemID, args.m_Amount);
 
+        commands.AddEvent<ItemData>("add_ingredient".GetHashCode()).OnInvoked +=
+            (args) => AddIngredientToInventory(args.m_ItemID, args.m_Amount);
+        commands.AddEvent<ItemData>("remove_ingredient".GetHashCode()).OnInvoked +=
+            (args) => RemoveIngredientFromInventory(args.m_ItemID, args.m_Amount);
+
         commands.AddEvent<InventorySys_ChangeReputationEvtArgs>("change_reputation".GetHashCode()).OnInvoked +=
             (args) =>
             {
@@ -61,6 +66,27 @@ public class InventorySystem : ISystemEvents
                 _inventoryData.m_Pieces.Remove(item);
         }
     }
+
+    private void AddIngredientToInventory(int pieceID, int amount)
+    {
+        InventoryItem item = _inventoryData.m_Ingredients.Find(i => i.m_ItemID == pieceID);
+        if (item != null)
+            item.m_Amount += amount;
+        else
+            _inventoryData.m_Ingredients.Add(new InventoryItem(pieceID, amount));
+    }
+    private void RemoveIngredientFromInventory(int pieceID, int amount)
+    {
+        InventoryItem item = _inventoryData.m_Ingredients.Find(i => i.m_ItemID == pieceID);
+        if (item != null)
+        {
+            item.m_Amount -= amount;
+
+            if (item.m_Amount <= 0)
+                _inventoryData.m_Ingredients.Remove(item);
+        }
+    }
+
 
     private void UnlockRecipe(int recipeID)
     {
