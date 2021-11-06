@@ -9,9 +9,9 @@ namespace CQM.Systems
 {
     public class CalendarSystem
     {
-        private CalendarData _data;
+        private Singleton_CalendarComponent _data;
 
-        public void Initialize(CalendarData data, StoryDB storyBd)
+        public void Initialize(Singleton_CalendarComponent data)
         {
             _data = data;
         }
@@ -41,7 +41,7 @@ namespace CQM.Systems
 namespace CQM.Components
 {
     [System.Serializable]
-    public class CalendarData
+    public class Singleton_CalendarComponent
     {
         public int m_Year;
         public int m_Month;

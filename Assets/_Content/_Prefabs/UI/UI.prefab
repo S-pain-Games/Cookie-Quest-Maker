@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 404580703654454804}
   - component: {fileID: 404580703654454807}
   - component: {fileID: 404580703654454806}
-  - component: {fileID: 2924006926060592847}
+  - component: {fileID: 6501667215820569916}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2924006926060592847
+--- !u!114 &6501667215820569916
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 404580703654454801}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c19d06c813cf004391b24e36fe4c2ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 474873583ae5dda47a713ffaacf052a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_NewspaperUi: {fileID: 5815900887695398052}

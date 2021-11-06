@@ -18,18 +18,18 @@ namespace CQM.Gameplay
 
         private EventSys _evtSys;
 
-        private Event<int> _onStorySelected;
-        private Event<int> _onUsePiece;
+        private Event<ID> _onStorySelected;
+        private Event<ID> _onUsePiece;
 
         public void Initialize(EventSys evtSys)
         {
             _evtSys = evtSys;
-            _onUsePiece = _evtSys.AddEvent<int>("on_use_piece".GetHashCode());
+            _onUsePiece = _evtSys.AddEvent<ID>(new ID("on_use_piece"));
         }
 
         public void AdquireUIEvents()
         {
-            _evtSys.GetEvent("on_story_selected".GetHashCode(), out _onStorySelected);
+            _evtSys.GetEvent(new ID("on_story_selected"), out _onStorySelected);
             _onStorySelected.OnInvoked += OnStorySelected;
         }
 
@@ -51,13 +51,13 @@ namespace CQM.Gameplay
             _pieceSelector.Refresh(type);
         }
 
-        private void OnStorySelected(int storyID)
+        private void OnStorySelected(ID storyID)
         {
             _pieceSelector.m_CurrentStoryID = storyID;
         }
 
         // Called by the Use UI button
-        private void PieceSelection_OnUsePiece(int pieceID)
+        private void PieceSelection_OnUsePiece(ID pieceID)
         {
             _onUsePiece.Invoke(pieceID);
         }

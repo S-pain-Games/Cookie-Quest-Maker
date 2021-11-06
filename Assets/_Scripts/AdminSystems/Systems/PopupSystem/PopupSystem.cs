@@ -3,20 +3,20 @@ using UnityEngine;
 
 public class PopupSystem : ISystemEvents
 {
-    private PopupComponent m_PopupData;
+    private Singleton_PopupComponent m_PopupData;
 
-    public void Initialize(PopupComponent popupData)
+    public void Initialize(Singleton_PopupComponent popupData)
     {
         m_PopupData = popupData;
     }
 
-    public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+    public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
     {
         commands = new EventSys();
         callbacks = new EventSys();
-        sysID = "popup_sys".GetHashCode();
+        sysID = new ID("popup_sys");
 
-        var evt = commands.AddEvent<PopupData>("show_popup".GetHashCode());
+        var evt = commands.AddEvent<PopupData>(new ID("show_popup"));
         evt.OnInvoked += (args) => ShowPopup(args);
     }
 

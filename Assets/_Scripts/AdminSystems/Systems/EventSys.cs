@@ -7,9 +7,9 @@ public class EventSys
 {
     // We have to be careful with boxing and unboxing
     // It "should" work with this design without generating much garbage
-    private Dictionary<int, object> m_Events = new Dictionary<int, object>();
+    private Dictionary<ID, object> m_Events = new Dictionary<ID, object>();
 
-    public Event<T> AddEvent<T>(int evtId)
+    public Event<T> AddEvent<T>(ID evtId)
     {
 #if UNITY_EDITOR
         if (m_Events.ContainsKey(evtId))
@@ -23,7 +23,7 @@ public class EventSys
         return evt;
     }
 
-    public EventVoid AddEvent(int evtId)
+    public EventVoid AddEvent(ID evtId)
     {
 #if UNITY_EDITOR
         if (m_Events.ContainsKey(evtId))
@@ -33,11 +33,11 @@ public class EventSys
 #endif
 
         EventVoid evt = new EventVoid();
-        m_Events.Add(evtId.GetHashCode(), evt);
+        m_Events.Add(evtId, evt);
         return evt;
     }
 
-    public bool GetEvent<T>(int evtId, out T evt) where T : class
+    public bool GetEvent<T>(ID evtId, out T evt) where T : class
     {
         if (m_Events.TryGetValue(evtId, out object evtObj))
         {
@@ -52,7 +52,7 @@ public class EventSys
         }
     }
 
-    public bool GetEvent(int evtId, out EventVoid evt)
+    public bool GetEvent(ID evtId, out EventVoid evt)
     {
         if (m_Events.TryGetValue(evtId, out object evtObj))
         {
@@ -66,24 +66,6 @@ public class EventSys
             return false;
         }
     }
-
-    //private void Start()
-    //{
-    //    AddEvent<int>("Evt1");
-
-    //    if (GetEvent("Evt1", out Event<int> evt))
-    //    {
-    //        evt.OnInvoked += (args) => { args += 3; };
-    //    }
-    //}
-
-    //private void Update()
-    //{
-    //    if (GetEvent("Evt1", out Event<int> evt))
-    //    {
-    //        evt.Invoke(2);
-    //    }
-    //}
 }
 
 public class Event<T>

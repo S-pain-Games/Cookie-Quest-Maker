@@ -6,9 +6,9 @@ using System;
 [RequireComponent(typeof(UIPressable))]
 public class UIStorageElement : MonoBehaviour
 {
-    public event Action<int> OnSelected;
+    public event Action<ID> OnSelected;
 
-    public int pieceID; // Used as an ID
+    public ID pieceID; // Used as an ID
 
     private TextMeshProUGUI _textComp;
     private UIPressable _pressable;

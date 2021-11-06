@@ -9,15 +9,15 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
     private bool m_Interacting = false;
 
     private Event<ShowDialogueEvtArgs> _showDialogueCmd;
-    private Event<int> _startStoryCmd;
-    private Event<int> finalizeStoryEvt;
+    private Event<ID> _startStoryCmd;
+    private Event<ID> _finalizeStoryCmd;
 
     private void Awake()
     {
         var evtSys = Admin.Global.EventSystem;
         _showDialogueCmd = evtSys.GetCommandByName<Event<ShowDialogueEvtArgs>>("dialogue_sys", "show_dialogue");
-        _startStoryCmd = evtSys.GetCommandByName<Event<int>>("story_sys", "start_story");
-        finalizeStoryEvt = evtSys.GetCommandByName<Event<int>>("story_sys", "finalize_story");
+        _startStoryCmd = evtSys.GetCommandByName<Event<ID>>("story_sys", "start_story");
+        _finalizeStoryCmd = evtSys.GetCommandByName<Event<ID>>("story_sys", "finalize_story");
     }
 
     public void OnInteract()
@@ -29,7 +29,7 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
         {
             _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(
                 m_NpcData.m_Dialogue,
-                "mamarrachus".GetHashCode(),
+                new ID("mamarrachus"),
                 () => { DialogueWithNpcFinishedCallback(); }));
 
             m_NpcData.m_AlreadySpokenTo = true;
@@ -38,7 +38,7 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
         {
             _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(
                new List<string> { m_NpcData.m_AlreadySpokenToDialogue[Random.Range(0, m_NpcData.m_AlreadySpokenToDialogue.Count)] }, // TODO: Fix this atrocity
-               "mamarrachus".GetHashCode(),
+               new ID("mamarrachus"),
                () => m_Interacting = false));
         }
     }
@@ -46,11 +46,11 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
     private void DialogueWithNpcFinishedCallback()
     {
         if (m_NpcData.m_HasToFinalizeAStory)
-            finalizeStoryEvt.Invoke(m_NpcData.m_StoryIDToFinalizeOnInteract);
+            _finalizeStoryCmd.Invoke(m_NpcData.m_StoryIDToFinalizeOnInteract);
         if (m_NpcData.m_HasToStartAStory)
         {
             // Please do not write lines this horrible in production code, this is only for debugging
-            Debug.Log("Started Story : " + Admin.Global.Database.Stories.GetStoryComponent<StoryInfoComponent>(m_NpcData.m_StoryIDToStartOnInteract).m_StoryData.m_Title);
+            Debug.Log("Started Story : " + Admin.Global.Components.m_StoriesInfo[m_NpcData.m_StoryIDToStartOnInteract].m_StoryData.m_Title);
             _startStoryCmd.Invoke(m_NpcData.m_StoryIDToStartOnInteract);
         }
         m_Interacting = false;

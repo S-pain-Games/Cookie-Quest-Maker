@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DaySystem : ISystemEvents
 {
-    private DayComponent _dayData;
+    private Singleton_DayComponent _dayData;
 
     // Own Callbacks
     private EventVoid _dayStartedCallbacks;
@@ -16,25 +16,25 @@ public class DaySystem : ISystemEvents
     private Event<GameStateSystem.State> _setGameStateCommand;
     private EventVoid _populateNpcsCommand;
 
-    public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+    public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
     {
         commands = new EventSys();
         callbacks = new EventSys();
-        sysID = "day_sys".GetHashCode();
+        sysID = new ID("day_sys");
 
-        _dayStartedCallbacks = callbacks.AddEvent("day_started".GetHashCode());
-        _dayEndedCallbacks = callbacks.AddEvent("day_ended".GetHashCode());
-        _nightBeginCallback = callbacks.AddEvent("night_begin".GetHashCode());
-        _dailyStoriesCompleted = callbacks.AddEvent("all_daily_stories_completed".GetHashCode());
+        _dayStartedCallbacks = callbacks.AddEvent(new ID("day_started"));
+        _dayEndedCallbacks = callbacks.AddEvent(new ID("day_ended"));
+        _nightBeginCallback = callbacks.AddEvent(new ID("night_begin"));
+        _dailyStoriesCompleted = callbacks.AddEvent(new ID("all_daily_stories_completed"));
 
-        commands.AddEvent("start_new_day".GetHashCode()).OnInvoked += StartNewDay;
-        commands.AddEvent("begin_night".GetHashCode()).OnInvoked += StartNight;
+        commands.AddEvent(new ID("start_new_day")).OnInvoked += StartNewDay;
+        commands.AddEvent(new ID("begin_night")).OnInvoked += StartNight;
     }
 
-    public void Initialize(GameEventSystem evtSys, DayComponent dayData)
+    public void Initialize(GameEventSystem evtSys, Singleton_DayComponent dayData)
     {
         // Subscribe to Callbacks
-        Event<int> evt = evtSys.GetCallback<Event<int>>("story_sys".GetHashCode(), "story_completed".GetHashCode());
+        Event<ID> evt = evtSys.GetCallback<Event<ID>>(new ID("story_sys"), new ID("story_completed"));
         evt.OnInvoked += StoryCompletedCallback;
 
         // Initialize external Commands
@@ -44,7 +44,7 @@ public class DaySystem : ISystemEvents
         _dayData = dayData;
     }
 
-    private void StoryCompletedCallback(int storyId)
+    private void StoryCompletedCallback(ID storyId)
     {
         _dayData.m_StoriesCompletedToday += 1;
         if (_dayData.m_StoriesCompletedToday >= 1)
@@ -68,7 +68,7 @@ public class DaySystem : ISystemEvents
     }
 }
 
-public class DayComponent
+public class Singleton_DayComponent
 {
     public int m_StoriesCompletedToday = 0;
 }

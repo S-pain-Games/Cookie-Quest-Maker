@@ -17,24 +17,26 @@ public class CookieMakingUI : MonoBehaviour
     [SerializeField] private List<GameObject> currentRecipes;
     [SerializeField] private Transform recipeListParent;
 
-    private CookieDB cookiesData;
-    private InventoryComponent _inventoryData;
+    private ComponentsContainer<CookieDataComponent> _cookieDataComponents;
+    private ComponentsContainer<RecipeDataComponent> _recipeDataComponents;
+    private Singleton_InventoryComponent _inventoryData;
 
-    private CookieMakingSystem cookieMakingSystem;
+    private CookieMakingSystem _cookieMakingSystem;
 
     private void Awake()
     {
-        cookiesData = Admin.Global.Database.Cookies;
-        _inventoryData = Admin.Global.Database.Player.Inventory;
+        _cookieDataComponents = Admin.Global.Components.m_CookieData;
+        _recipeDataComponents = Admin.Global.Components.m_RecipeData;
+        _inventoryData = Admin.Global.Components.m_InventoryComponent;
 
-        cookieMakingSystem = Admin.Global.Systems.m_CookieMakingSystem;
+        _cookieMakingSystem = Admin.Global.Systems.m_CookieMakingSystem;
     }
 
     private void OnEnable()
     {
-        cookieMakingSystem.OnCreateCookie += UpdateUI;
-        cookieMakingSystem.OnBuyRecipe -= UpdateCookieRecipesUI;
-        cookieMakingSystem.OnBuyRecipe += UpdateCookieRecipesUI;
+        _cookieMakingSystem.OnCreateCookie += UpdateUI;
+        _cookieMakingSystem.OnBuyRecipe -= UpdateCookieRecipesUI;
+        _cookieMakingSystem.OnBuyRecipe += UpdateCookieRecipesUI;
 
         if (currentRecipes.Count == 0)
         {
@@ -69,33 +71,30 @@ public class CookieMakingUI : MonoBehaviour
             r.GetComponent<RecipeShopUI>().OnSelectRecipe -= SelectRecipe;
         }
 
-        cookieMakingSystem.OnCreateCookie -= UpdateUI;
+        _cookieMakingSystem.OnCreateCookie -= UpdateUI;
         //cookieMakingSystem.OnBuyRecipe -= UpdateCookieRecipesUI;
     }
 
-    public void SelectRecipe(int id)
+    public void SelectRecipe(ID id)
     {
-        cookieMakingSystem.SelectRecipe(id);
+        _cookieMakingSystem.SelectRecipe(id);
     }
 
     public void CreateCookie()
     {
-        cookieMakingSystem.CreateCookie();
+        _cookieMakingSystem.CreateCookie();
     }
 
-    public void UpdateUI(int id)
+    public void UpdateUI(ID id)
     {
-        CookieData cookieData;
-        if (cookiesData.m_CookieDataDB.TryGetValue(id, out cookieData))
+        CookieDataComponent cookieData = _cookieDataComponents[id];
+        txt_CookieName.text = cookieData.m_CookieName;
+        txt_CookieDescription.text = cookieData.m_CookieDescription;
+        List<QPTag> tags = Admin.Global.Components.m_QuestPieceFunctionalComponents[id].m_Tags;
+        txt_CookieStats.text = "Hero Stats: \n";
+        foreach (QPTag q in tags)
         {
-            txt_CookieName.text = cookieData.m_CookieName;
-            txt_CookieDescription.text = cookieData.m_CookieDescription;
-            List<QPTag> tags = Admin.Global.Database.Pieces.GetQuestPieceComponent<QuestPieceFunctionalComponent>(id).m_Tags;
-            txt_CookieStats.text = "Hero Stats: \n";
-            foreach (QPTag q in tags)
-            {
-                txt_CookieStats.text += q.m_Type.ToString() + ": " + q.m_Value + "\n";
-            }
+            txt_CookieStats.text += q.m_Type.ToString() + ": " + q.m_Value + "\n";
         }
     }
 
@@ -116,7 +115,7 @@ public class CookieMakingUI : MonoBehaviour
         var recipesIds = _inventoryData.m_UnlockedRecipes;
         for (int i = 0; i < recipesIds.Count; i++)
         {
-            RecipeData r = cookiesData.m_RecipeDataDB[recipesIds[i]];
+            RecipeDataComponent r = _recipeDataComponents[recipesIds[i]];
 
             GameObject newRecipeUI = Instantiate(pref_Recipe, recipeListParent);
             RecipeShopUI ui = newRecipeUI.GetComponent<RecipeShopUI>();
@@ -126,6 +125,6 @@ public class CookieMakingUI : MonoBehaviour
         }
 
         if (recipesIds.Count > 0)
-            cookieMakingSystem.SelectRecipe(cookiesData.m_RecipeDataDB[recipesIds[0]].m_PieceID);
+            _cookieMakingSystem.SelectRecipe(_recipeDataComponents[recipesIds[0]].m_PieceID);
     }
 }

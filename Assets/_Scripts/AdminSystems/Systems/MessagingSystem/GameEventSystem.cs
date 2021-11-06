@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class GameEventSystem
 {
-    private Dictionary<int, EventSys> m_Commands = new Dictionary<int, EventSys>();
-    private Dictionary<int, EventSys> m_Callbacks = new Dictionary<int, EventSys>();
+    private Dictionary<ID, EventSys> m_Commands = new Dictionary<ID, EventSys>();
+    private Dictionary<ID, EventSys> m_Callbacks = new Dictionary<ID, EventSys>();
 
     private List<ISystemEvents> m_RegisteredSystems = new List<ISystemEvents>();
 
@@ -28,19 +28,19 @@ public class GameEventSystem
     {
         for (int i = 0; i < m_RegisteredSystems.Count; i++)
         {
-            m_RegisteredSystems[i].RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks);
+            m_RegisteredSystems[i].RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks);
             m_Commands.Add(sysID, commands);
             m_Callbacks.Add(sysID, callbacks);
         }
     }
 
-    public T GetCommand<T>(int sysID, int cmdID) where T : class
+    public T GetCommand<T>(ID sysID, ID cmdID) where T : class
     {
         m_Commands[sysID].GetEvent(cmdID, out T cmd);
         return cmd;
     }
 
-    public T GetCallback<T>(int sysID, int callbackID) where T : class
+    public T GetCallback<T>(ID sysID, ID callbackID) where T : class
     {
         m_Callbacks[sysID].GetEvent(callbackID, out T callback);
         return callback;
@@ -48,18 +48,18 @@ public class GameEventSystem
 
     public T GetCommandByName<T>(string sysID, string cmdID) where T : class
     {
-        m_Commands[sysID.GetHashCode()].GetEvent(cmdID.GetHashCode(), out T cmd);
+        m_Commands[new ID(sysID)].GetEvent(new ID(cmdID), out T cmd);
         return cmd;
     }
 
     public T GetCallbackByName<T>(string sysID, string callbackID) where T : class
     {
-        m_Callbacks[sysID.GetHashCode()].GetEvent(callbackID.GetHashCode(), out T callback);
+        m_Callbacks[new ID(sysID)].GetEvent(new ID(callbackID), out T callback);
         return callback;
     }
 }
 
 public interface ISystemEvents
 {
-    public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks);
+    public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks);
 }

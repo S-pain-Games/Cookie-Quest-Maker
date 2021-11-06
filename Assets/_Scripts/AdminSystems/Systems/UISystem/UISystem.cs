@@ -8,21 +8,21 @@ namespace CQM.Systems
 {
     public class UISystem : ISystemEvents
     {
-        private UIReferencesComponent _references;
+        private Singleton_UIReferencesComponent _references;
 
-        public void Initialize(UIReferencesComponent references)
+        public void Initialize(Singleton_UIReferencesComponent references)
         {
             _references = references;
             Debug.Assert(references != null);
         }
 
-        public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+        public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
         {
-            sysID = "ui_sys".GetHashCode();
+            sysID = new ID("ui_sys");
             commands = new EventSys();
             callbacks = new EventSys();
 
-            commands.AddEvent("toggle_newspaper".GetHashCode()).OnInvoked += ToggleNewspaper;
+            commands.AddEvent(new ID("toggle_newspaper")).OnInvoked += ToggleNewspaper;
         }
 
         private void ToggleNewspaper()

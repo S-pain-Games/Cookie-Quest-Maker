@@ -7,9 +7,9 @@ using TMPro;
 
 public class RecipeShopUI : MonoBehaviour
 {
-    public RecipeData myRecipe;
+    public RecipeDataComponent myRecipe;
 
-    public event Action<int> OnSelectRecipe;
+    public event Action<ID> OnSelectRecipe;
 
     private Button button;
     private TextMeshProUGUI myText;
@@ -35,7 +35,7 @@ public class RecipeShopUI : MonoBehaviour
         OnSelectRecipe?.Invoke(myRecipe.m_PieceID);
     }
 
-    public void SetRecipe(RecipeData recipe)
+    public void SetRecipe(RecipeDataComponent recipe)
     {
         myRecipe = recipe;
         if(myText == null)

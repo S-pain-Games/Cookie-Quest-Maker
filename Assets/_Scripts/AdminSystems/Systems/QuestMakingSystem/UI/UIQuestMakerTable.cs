@@ -26,8 +26,8 @@ namespace CQM.Gameplay
 
         public EventSys m_evtSys = new EventSys();
 
-        private Event<int> _onStorySelectedCallback;
-        private Event<int> _onUsePiece;
+        private Event<ID> _onStorySelectedCallback;
+        private Event<ID> _onUsePiece;
 
         private void Awake()
         {
@@ -42,8 +42,8 @@ namespace CQM.Gameplay
             _pieceStorage.AdquireUIEvents();
             _questBuilding.AdquireUIEvents();
 
-            m_evtSys.GetEvent("on_story_selected".GetHashCode(), out _onStorySelectedCallback);
-            m_evtSys.GetEvent("on_use_piece".GetHashCode(), out _onUsePiece);
+            m_evtSys.GetEvent(new ID("on_story_selected"), out _onStorySelectedCallback);
+            m_evtSys.GetEvent(new ID("on_use_piece"), out _onUsePiece);
         }
 
         private void OnEnable()
@@ -68,7 +68,7 @@ namespace CQM.Gameplay
             _onStorySelectedCallback.OnInvoked -= OnStorySelected;
         }
 
-        private void OnStorySelected(int storyId)
+        private void OnStorySelected(ID storyId)
         {
             EnableQuestBuilding();
             _questMakingSys.SelectStory(storyId);
@@ -93,7 +93,7 @@ namespace CQM.Gameplay
             }
         }
 
-        private void OnPieceSelected(int pieceID)
+        private void OnPieceSelected(ID pieceID)
         {
             EnableQuestBuilding();
         }

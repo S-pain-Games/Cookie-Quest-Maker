@@ -15,14 +15,23 @@ namespace CQM.Systems
     // (I've heard there will be a surplus of X ingredient in 2 days)
     public class NpcSystem : ISystemEvents
     {
-        private StoryDB _storyDB;
-        private NpcReferencesComponent _npcData;
+        private ComponentsContainer<StoryInfoComponent> _storyInfoComponents;
+        private List<ID> _storiesToStart;
+        private List<ID> _completedStories;
+        private Singleton_NpcReferencesComponent _npcReferencesComponent;
+
         private Event<PopupData> _showPopupCmd;
 
-        public void Initialize(StoryDB storyDb, NpcReferencesComponent npcData, GameEventSystem evtSys)
+        public void Initialize(Singleton_NpcReferencesComponent npcReferencesComponent,
+                               ComponentsContainer<StoryInfoComponent> storyInfoComponents,
+                               List<ID> storiesToStart,
+                               List<ID> completedStories,
+                               GameEventSystem evtSys)
         {
-            _storyDB = storyDb;
-            _npcData = npcData;
+            _storyInfoComponents = storyInfoComponents;
+            _npcReferencesComponent = npcReferencesComponent;
+            _storiesToStart = storiesToStart;
+            _completedStories = completedStories;
 
             _showPopupCmd = evtSys.GetCommandByName<Event<PopupData>>("popup_sys", "show_popup");
             evtSys.GetCallbackByName<EventVoid>("day_sys", "night_begin").OnInvoked += PopulateDeitiesData;
@@ -30,15 +39,15 @@ namespace CQM.Systems
             PopulateNpcsData();
         }
 
-        public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+        public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
         {
             commands = new EventSys();
             callbacks = new EventSys();
-            sysID = "npc_sys".GetHashCode();
+            sysID = new ID("npc_sys");
 
             // Commands
-            commands.AddEvent("cmd_populate_npcs".GetHashCode()).OnInvoked += PopulateNpcsData;
-            commands.AddEvent("populate_deities".GetHashCode()).OnInvoked += PopulateDeitiesData;
+            commands.AddEvent(new ID("cmd_populate_npcs")).OnInvoked += PopulateNpcsData;
+            commands.AddEvent(new ID("populate_deities")).OnInvoked += PopulateDeitiesData;
         }
 
         // Called just before the start of the day to set the
@@ -52,12 +61,12 @@ namespace CQM.Systems
             // In this code we also assume that we might have more stories to show than npcs
             // so we have to "cache" and take into account the remaining unshown stories
             // to show them the next day
-            List<int> finalizableStories = SelectStoriesThatHaveToBeFinalized(_storyDB.m_CompletedStories, 3);
-            List<int> storiesToStart = SelectStoriesThatShouldBeStarted(3);
+            List<ID> finalizableStories = SelectStoriesThatHaveToBeFinalized(_completedStories, 3);
+            List<ID> storiesToStart = SelectStoriesThatShouldBeStarted(3);
 
-            for (int i = 0; i < _npcData.m_NpcBehaviour.Count; i++)
+            for (int i = 0; i < _npcReferencesComponent.m_NpcBehaviour.Count; i++)
             {
-                NPCBehaviourData npcData = _npcData.m_NpcBehaviour[i].m_NpcData;
+                NPCBehaviourData npcData = _npcReferencesComponent.m_NpcBehaviour[i].m_NpcData;
 
                 npcData.m_AlreadySpokenTo = false;
                 npcData.m_Dialogue.Clear();
@@ -66,7 +75,7 @@ namespace CQM.Systems
                 // only if there are remaining stories to show
                 if (finalizableStories.Count > 0)
                 {
-                    StoryInfoComponent s = _storyDB.m_StoriesInfo[finalizableStories[0]];
+                    StoryInfoComponent s = _storyInfoComponents[finalizableStories[0]];
 
                     for (int c = 0; c < s.m_QuestBranchResult.m_ResultNPCDialogue.Count; c++)
                     {
@@ -89,7 +98,7 @@ namespace CQM.Systems
                 // only if there are new stories to append
                 if (storiesToStart.Count > 0)
                 {
-                    var introductionDialogue = _storyDB.m_StoriesInfo[storiesToStart[0]].m_StoryData.m_IntroductionDialogue;
+                    var introductionDialogue = _storyInfoComponents[storiesToStart[0]].m_StoryData.m_IntroductionDialogue;
                     for (int j = 0; j < introductionDialogue.Count; j++)
                     {
                         npcData.m_Dialogue.Add(introductionDialogue[j]);
@@ -109,16 +118,16 @@ namespace CQM.Systems
 
         public void PopulateDeitiesData()
         {
-            List<int> completedStories = _storyDB.m_CompletedStories;
+            List<ID> completedStories = _completedStories;
 
-            EvithBehaviour evith = _npcData.m_Evith;
-            NuBehaviour nu = _npcData.m_Nu;
+            EvithBehaviour evith = _npcReferencesComponent.m_Evith;
+            NuBehaviour nu = _npcReferencesComponent.m_Nu;
             evith.m_Dialogue.Clear();
             nu.m_Dialogue.Clear();
 
             for (int i = 0; i < completedStories.Count; i++)
             {
-                BranchOption result = _storyDB.m_StoriesInfo[completedStories[i]].m_QuestBranchResult;
+                BranchOption result = _storyInfoComponents[completedStories[i]].m_QuestBranchResult;
 
                 for (int j = 0; j < result.m_DeitiesResultDialogue.Count; j++)
                 {
@@ -141,11 +150,11 @@ namespace CQM.Systems
             }
         }
 
-        private List<int> SelectStoriesThatShouldBeStarted(int maxStoriesToSelect)
+        private List<ID> SelectStoriesThatShouldBeStarted(int maxStoriesToSelect)
         {
-            var storiesToStartIds = _storyDB.m_StoriesToStart;
+            var storiesToStartIds = _storiesToStart;
             int availableStoriesToStart = Mathf.Min(storiesToStartIds.Count, maxStoriesToSelect);
-            List<int> sStory = new List<int>();
+            List<ID> sStory = new List<ID>();
             for (int j = 0; j < availableStoriesToStart; j++)
             {
                 sStory.Add(storiesToStartIds[j]);
@@ -154,10 +163,10 @@ namespace CQM.Systems
             return sStory;
         }
 
-        private List<int> SelectStoriesThatHaveToBeFinalized(List<int> completedStoriesIDList, int maxStoriesToComplete)
+        private List<ID> SelectStoriesThatHaveToBeFinalized(List<ID> completedStoriesIDList, int maxStoriesToComplete)
         {
             int avaliableCompletedStories = Mathf.Min(completedStoriesIDList.Count, maxStoriesToComplete);
-            List<int> cStoriesIds = new List<int>(); // Completed Stories Ids
+            List<ID> cStoriesIds = new List<ID>(); // Completed Stories Ids
             for (int i = 0; i < avaliableCompletedStories; i++)
             {
                 cStoriesIds.Add(completedStoriesIDList[i]);
@@ -176,10 +185,10 @@ namespace CQM.Components
         public List<string> m_Dialogue = new List<string>();
         // The ID of the story that will start when the player interacts with the NPC
         public bool m_HasToStartAStory;
-        public int m_StoryIDToStartOnInteract;
+        public ID m_StoryIDToStartOnInteract;
         // ID of the story to finalize on dialogue
         public bool m_HasToFinalizeAStory;
-        public int m_StoryIDToFinalizeOnInteract;
+        public ID m_StoryIDToFinalizeOnInteract;
 
         public bool m_AlreadySpokenTo;
         public List<string> m_AlreadySpokenToDialogue = new List<string> { "I have nothing more to say", "This is a really nice bakery", "Such a nice weather today" };

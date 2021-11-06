@@ -18,13 +18,13 @@ public class QuestMakingSystem : ISystemEvents
 
     // These methods have to be called in a specific order
     // SelectStory -> Add/Remove Pieces -> Finish Making Quest
-    public void SelectStory(int storyId)
+    public void SelectStory(ID storyId)
     {
         // We generate garbage when selecting a story multiple times
         // but wachugonadu its not a priority right now
         m_Data = new QMGameplayData();
         m_Data.m_StoryID = storyId;
-        m_Data.m_CurrentQuest = new QuestData();
+        m_Data.m_CurrentQuest = new QuestDataComponent();
     }
 
     public void AddPiece(QuestPieceFunctionalComponent piece)
@@ -81,24 +81,24 @@ public class QuestMakingSystem : ISystemEvents
         }
     }
 
-    public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+    public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
     {
         commands = new EventSys();
         callbacks = new EventSys();
-        sysID = "quest_making_sys".GetHashCode();
+        sysID = new ID("quest_making_sys");
 
-        commands.AddEvent<int>("select_story".GetHashCode()).OnInvoked += SelectStory;
-        commands.AddEvent<QuestPieceFunctionalComponent>("add_piece".GetHashCode()).OnInvoked += AddPiece;
-        commands.AddEvent<QuestPieceFunctionalComponent>("remove_piece".GetHashCode()).OnInvoked += RemovePiece;
+        commands.AddEvent<ID>(new ID("select_story")).OnInvoked += SelectStory;
+        commands.AddEvent<QuestPieceFunctionalComponent>(new ID("add_piece")).OnInvoked += AddPiece;
+        commands.AddEvent<QuestPieceFunctionalComponent>(new ID("remove_piece")).OnInvoked += RemovePiece;
     }
 }
 
 public struct StorySys_CompleteStoyEvtArgs
 {
-    public int m_StoryId;
-    public QuestData m_QuestData;
+    public ID m_StoryId;
+    public QuestDataComponent m_QuestData;
 
-    public StorySys_CompleteStoyEvtArgs(int storyId, QuestData questData)
+    public StorySys_CompleteStoyEvtArgs(ID storyId, QuestDataComponent questData)
     {
         m_StoryId = storyId;
         m_QuestData = questData;
@@ -107,9 +107,9 @@ public struct StorySys_CompleteStoyEvtArgs
 
 public class QMGameplayData
 {
-    public QuestData m_CurrentQuest;
+    public QuestDataComponent m_CurrentQuest;
     public bool m_CookieAdded;
     public bool m_TargetAdded;
     public bool m_ActionAdded;
-    public int m_StoryID;
+    public ID m_StoryID;
 }

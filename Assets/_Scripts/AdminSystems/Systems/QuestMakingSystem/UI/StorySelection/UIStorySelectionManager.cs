@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using CQM.Databases;
+using CQM.Components;
 
 namespace CQM.Gameplay
 {
@@ -21,21 +22,24 @@ namespace CQM.Gameplay
         [SerializeField] private Image _cardContents;
         [SerializeField] private TextMeshProUGUI _cardTitle;
 
-        private StoryDB _storyDB;
+        private List<ID> _ongoingStories;
+        private ComponentsContainer<StoryUIDataComponent> _storyUIComponents;
+
         private int _currentStoryIndex = 0;
 
         private EventSys _evtSys;
-        private Event<int> _onStorySelectedCallback;
+        private Event<ID> _onStorySelectedCallback;
 
         public void Initialize(EventSys evtSys)
         {
             _evtSys = evtSys;
-            _onStorySelectedCallback = _evtSys.AddEvent<int>("on_story_selected".GetHashCode());
+            _onStorySelectedCallback = _evtSys.AddEvent<ID>(new ID("on_story_selected"));
         }
 
         private void Awake()
         {
-            _storyDB = Admin.Global.Database.Stories;
+            _ongoingStories = Admin.Global.Components.m_OngoingStories;
+            _storyUIComponents = Admin.Global.Components.m_StoriesUI;
         }
 
         private void OnEnable()
@@ -56,7 +60,7 @@ namespace CQM.Gameplay
 
         private void UpdateUI()
         {
-            int numOngoingStories = _storyDB.m_OngoingStories.Count;
+            int numOngoingStories = _ongoingStories.Count;
             if (numOngoingStories <= 0)
             {
                 _cardContents.sprite = null;
@@ -65,8 +69,8 @@ namespace CQM.Gameplay
             else
             {
                 _currentStoryIndex = Mathf.Clamp(_currentStoryIndex, 0, numOngoingStories - 1);
-                int storyId = _storyDB.m_OngoingStories[_currentStoryIndex];
-                var data = _storyDB.m_StoriesUI[storyId];
+                ID storyId = _ongoingStories[_currentStoryIndex];
+                var data = _storyUIComponents[storyId];
                 _cardTitle.text = data.m_Title;
             }
         }
@@ -75,7 +79,7 @@ namespace CQM.Gameplay
         {
             // Increment and wrap around
             _currentStoryIndex++;
-            if (_currentStoryIndex >= _storyDB.m_OngoingStories.Count)
+            if (_currentStoryIndex >= _ongoingStories.Count)
                 _currentStoryIndex = 0;
 
             UpdateUI();
@@ -86,16 +90,16 @@ namespace CQM.Gameplay
             // Decrement and wrap around
             _currentStoryIndex--;
             if (_currentStoryIndex < 0)
-                _currentStoryIndex = _storyDB.m_OngoingStories.Count;
+                _currentStoryIndex = _ongoingStories.Count;
 
             UpdateUI();
         }
 
         private void SelectStory()
         {
-            if (_storyDB.m_OngoingStories.Count > 0)
+            if (_ongoingStories.Count > 0)
             {
-                int storyId = _storyDB.m_OngoingStories[_currentStoryIndex];
+                ID storyId = _ongoingStories[_currentStoryIndex];
                 _onStorySelectedCallback.Invoke(storyId);
                 //OnStorySelected?.Invoke(storyId);
             }

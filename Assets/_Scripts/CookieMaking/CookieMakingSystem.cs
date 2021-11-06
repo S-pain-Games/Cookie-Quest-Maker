@@ -7,19 +7,19 @@ using CQM.Databases;
 
 public class CookieMakingSystem : ISystemEvents
 {
-    private CookieDB _cookieDB;
-    private InventoryComponent _inventory;
+    private ComponentsContainer<RecipeDataComponent> _recipeDataComponents;
+    private Singleton_InventoryComponent _inventory;
 
-    private int _selectedRecipe = -1;
-    public event Action<int> OnCreateCookie;
+    private ID _selectedCookieID;
+    public event Action<ID> OnCreateCookie;
     public event Action OnBuyRecipe;
 
     private Event<ItemData> _addPieceToInventoryCmd;
     private Event<ItemData> _removeIngredientToInventoryCmd;
 
-    public void Initialize(CookieDB cookieDB, InventoryComponent inventory)
+    public void Initialize(ComponentsContainer<RecipeDataComponent> recipeDataComponents, Singleton_InventoryComponent inventory)
     {
-        _cookieDB = cookieDB;
+        _recipeDataComponents = recipeDataComponents;
         _inventory = inventory;
 
         var evtSys = Admin.Global.EventSystem;
@@ -27,15 +27,15 @@ public class CookieMakingSystem : ISystemEvents
         _removeIngredientToInventoryCmd = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "remove_ingredient");
     }
 
-    public void SelectRecipe(int recipeId)
+    public void SelectRecipe(ID recipeId)
     {
-        _selectedRecipe = recipeId;
-        OnCreateCookie?.Invoke(_selectedRecipe);
+        _selectedCookieID = recipeId;
+        OnCreateCookie?.Invoke(_selectedCookieID);
     }
 
     public void CreateCookie()
     {
-        _cookieDB.m_RecipeDataDB.TryGetValue(_selectedRecipe, out RecipeData recipe);
+        RecipeDataComponent recipe = _recipeDataComponents[_selectedCookieID];
 
         if (recipe != null)
         {
@@ -80,7 +80,7 @@ public class CookieMakingSystem : ISystemEvents
                     var recipIngr = recipe.m_IngredientsList[i];
                     _removeIngredientToInventoryCmd.Invoke(new ItemData(recipIngr.m_ItemID, recipIngr.m_Amount));
                 }
-                _addPieceToInventoryCmd.Invoke(new ItemData(_selectedRecipe, 1));
+                _addPieceToInventoryCmd.Invoke(new ItemData(_selectedCookieID, 1));
             }
             //else
             //    Debug.Log("Not enough ingredients");
@@ -95,12 +95,12 @@ public class CookieMakingSystem : ISystemEvents
         OnBuyRecipe?.Invoke();
     }
 
-    public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+    public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
     {
         commands = new EventSys();
         callbacks = new EventSys();
-        sysID = "cookie_making_sys".GetHashCode();
+        sysID = new ID("cookie_making_sys");
 
-        commands.AddEvent("buy_recipe".GetHashCode()).OnInvoked += BuyRecipe;
+        commands.AddEvent(new ID("buy_recipe")).OnInvoked += BuyRecipe;
     }
 }

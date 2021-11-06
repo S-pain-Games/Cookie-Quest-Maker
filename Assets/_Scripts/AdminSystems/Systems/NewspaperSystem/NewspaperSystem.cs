@@ -8,54 +8,48 @@ namespace CQM.Systems
 {
     public class NewspaperSystem : ISystemEvents
     {
-        private NewspaperReferencesComponent w_newspaperReferences;
-        private NewspaperDataComponent rw_newsData;
-        private StoryDB r_story;
+        private Singleton_NewspaperReferencesComponent _NewspaperReferencesComponent;
+        private Singleton_NewspaperDataComponent _NewsDataComponent;
+        private ComponentsContainer<StoryInfoComponent> m_StoryInfoComponents;
 
-        public void Initialize(NewspaperReferencesComponent refs,
-                               NewspaperDataComponent data,
-                               StoryDB stories)
+        public void Initialize(Singleton_NewspaperReferencesComponent newspaperReferencesComponent,
+                               Singleton_NewspaperDataComponent newspaperDataComponent,
+                               ComponentsContainer<StoryInfoComponent> storyInfoComponents)
         {
-            w_newspaperReferences = refs;
-            rw_newsData = data;
-            r_story = stories;
+            _NewspaperReferencesComponent = newspaperReferencesComponent;
+            _NewsDataComponent = newspaperDataComponent;
+            m_StoryInfoComponents = storyInfoComponents;
 
-            Debug.Assert(r_story != null);
-            Debug.Assert(rw_newsData != null);
-            Debug.Assert(w_newspaperReferences != null);
+            Debug.Assert(m_StoryInfoComponents != null);
+            Debug.Assert(_NewsDataComponent != null);
+            Debug.Assert(_NewspaperReferencesComponent != null);
 
             var evtSys = Admin.Global.EventSystem;
-            evtSys.GetCallbackByName<Event<int>>("story_sys", "story_finalized").OnInvoked +=
-                (id) =>
-                {
-                    rw_newsData.m_StoriesToShowInNewspaper.Add(id);
-                };
+            evtSys.GetCallbackByName<Event<ID>>("story_sys", "story_finalized").OnInvoked +=
+                (id) => _NewsDataComponent.m_StoriesToShowInNewspaper.Add(id);
             evtSys.GetCallbackByName<EventVoid>("day_sys", "day_ended").OnInvoked +=
-                () =>
-                {
-                    UpdateNewspaper();
-                };
+                () => UpdateNewspaper();
         }
 
-        public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+        public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
         {
-            sysID = "newspaper_sys".GetHashCode();
+            sysID = new ID("newspaper_sys");
             commands = new EventSys();
             callbacks = new EventSys();
 
-            commands.AddEvent("update_newspaper".GetHashCode()).OnInvoked += UpdateNewspaper;
+            commands.AddEvent(new ID("update_newspaper")).OnInvoked += UpdateNewspaper;
         }
 
         public void UpdateNewspaper()
         {
-            for (int i = 0; i < rw_newsData.m_StoriesToShowInNewspaper.Count; i++)
+            for (int i = 0; i < _NewsDataComponent.m_StoriesToShowInNewspaper.Count; i++)
             {
-                StoryInfoComponent s = r_story.m_StoriesInfo[rw_newsData.m_StoriesToShowInNewspaper[i]];
-                int repId = s.m_QuestBranchResult.m_Repercusion.m_ID;
-                var storyNews = rw_newsData.m_NewspaperStories[repId];
+                StoryInfoComponent s = m_StoryInfoComponents[_NewsDataComponent.m_StoriesToShowInNewspaper[i]];
+                ID repId = s.m_QuestBranchResult.m_Repercusion.m_ID;
+                var storyNews = _NewsDataComponent.m_NewspaperStories[repId];
 
-                w_newspaperReferences.mainTitle.text = storyNews.m_Title;
-                w_newspaperReferences.mainBody.text = storyNews.m_Body;
+                _NewspaperReferencesComponent.mainTitle.text = storyNews.m_Title;
+                _NewspaperReferencesComponent.mainBody.text = storyNews.m_Body;
             }
         }
     }

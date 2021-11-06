@@ -6,17 +6,20 @@ using System;
 
 public class DialogueSystem : ISystemEvents
 {
-    private DialogueReferences _dialogueData;
-    private Dictionary<int, CharacterComponent> _characters;
-    private Dictionary<int, DialogueCharacterComponent> _dialogue;
+    private Singleton_DialogueReferencesComponent _dialogueData;
+    private ComponentsContainer<CharacterComponent> _characters;
+    private ComponentsContainer<DialogueCharacterComponent> _dialogue;
+
+
 
     private EventVoid _enableCharMovementCmd;
     private EventVoid _disableCharMovementCmd;
 
 
-    public void Initialize(DialogueReferences dialogueRefs,
-                           Dictionary<int, CharacterComponent> characters,
-                           Dictionary<int, DialogueCharacterComponent> dialogue,
+
+    public void Initialize(Singleton_DialogueReferencesComponent dialogueRefs,
+                           ComponentsContainer<CharacterComponent> characters,
+                           ComponentsContainer<DialogueCharacterComponent> dialogue,
                            GameEventSystem evtSys)
     {
         _dialogueData = dialogueRefs;
@@ -27,20 +30,20 @@ public class DialogueSystem : ISystemEvents
         _disableCharMovementCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "disable_movement");
     }
 
-    public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+    public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
     {
         commands = new EventSys();
         callbacks = new EventSys();
-        sysID = "dialogue_sys".GetHashCode();
+        sysID = new ID("dialogue_sys");
 
         // Commands
-        var evt = commands.AddEvent<ShowDialogueEvtArgs>("show_dialogue".GetHashCode());
+        var evt = commands.AddEvent<ShowDialogueEvtArgs>(new ID("show_dialogue"));
         evt.OnInvoked += (args) => ShowDialogue(args.m_Dialogue, args.m_CharID, args.m_Callback);
-        commands.AddEvent("continue_dialogue".GetHashCode()).OnInvoked += NextLine;
+        commands.AddEvent(new ID("continue_dialogue")).OnInvoked += NextLine;
     }
 
 
-    public void ShowDialogue(List<string> dialogue, int characterID, Action callback)
+    public void ShowDialogue(List<string> dialogue, ID characterID, Action callback)
     {
         var data = _dialogueData;
         data.m_Container.gameObject.SetActive(true);
@@ -98,10 +101,10 @@ public class DialogueSystem : ISystemEvents
 public struct ShowDialogueEvtArgs
 {
     public List<string> m_Dialogue;
-    public int m_CharID;
+    public ID m_CharID;
     public Action m_Callback;
 
-    public ShowDialogueEvtArgs(List<string> dialogue, int charID, Action callback)
+    public ShowDialogueEvtArgs(List<string> dialogue, ID charID, Action callback)
     {
         m_Dialogue = dialogue;
         m_CharID = charID;
@@ -109,25 +112,8 @@ public struct ShowDialogueEvtArgs
     }
 }
 
-
 [Serializable]
-public class DialogueDB
-{
-    public DialogueReferences ReferencesAndData => m_DialogueUIData;
-
-    [SerializeField]
-    private DialogueReferences m_DialogueUIData = new DialogueReferences();
-    private Dictionary<int, List<int>> m_RandomDialogue = new Dictionary<int, List<int>>(); // TODO: Localize
-
-
-    public void LoadData()
-    {
-    }
-}
-
-
-[Serializable]
-public class DialogueReferences
+public class Singleton_DialogueReferencesComponent
 {
     public DialogueContainer m_Container;
 
@@ -145,7 +131,7 @@ public class DialogueReferences
 [Serializable]
 public class DialogueCharacterComponent
 {
-    public int m_ID;
+    public ID m_ID;
     public Sprite m_CharacterImg;
     public Color m_NameColor;
 }

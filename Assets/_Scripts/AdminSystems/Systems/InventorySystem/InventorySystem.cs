@@ -4,25 +4,26 @@ using UnityEngine;
 
 public class InventorySystem : ISystemEvents
 {
-    private InventoryComponent _inventoryData;
+    private Singleton_InventoryComponent _inventoryData;
 
-    public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+
+    public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
     {
         commands = new EventSys();
         callbacks = new EventSys();
-        sysID = "inventory_sys".GetHashCode();
+        sysID = new ID("inventory_sys");
 
-        commands.AddEvent<ItemData>("add_piece".GetHashCode()).OnInvoked +=
+        commands.AddEvent<ItemData>(new ID("add_piece")).OnInvoked +=
             (args) => AddPieceToInventory(args.m_ItemID, args.m_Amount);
-        commands.AddEvent<ItemData>("remove_piece".GetHashCode()).OnInvoked +=
+        commands.AddEvent<ItemData>(new ID("remove_piece")).OnInvoked +=
             (args) => RemovePieceFromInventory(args.m_ItemID, args.m_Amount);
 
-        commands.AddEvent<ItemData>("add_ingredient".GetHashCode()).OnInvoked +=
+        commands.AddEvent<ItemData>(new ID("add_ingredient")).OnInvoked +=
             (args) => AddIngredientToInventory(args.m_ItemID, args.m_Amount);
-        commands.AddEvent<ItemData>("remove_ingredient".GetHashCode()).OnInvoked +=
+        commands.AddEvent<ItemData>(new ID("remove_ingredient")).OnInvoked +=
             (args) => RemoveIngredientFromInventory(args.m_ItemID, args.m_Amount);
 
-        commands.AddEvent<InventorySys_ChangeReputationEvtArgs>("change_reputation".GetHashCode()).OnInvoked +=
+        commands.AddEvent<InventorySys_ChangeReputationEvtArgs>(new ID("change_reputation")).OnInvoked +=
             (args) =>
             {
                 switch (args.m_RepType)
@@ -39,15 +40,15 @@ public class InventorySystem : ISystemEvents
                 }
             };
 
-        commands.AddEvent<int>("unlock_recipe".GetHashCode()).OnInvoked += UnlockRecipe;
+        commands.AddEvent<ID>(new ID("unlock_recipe")).OnInvoked += UnlockRecipe;
     }
 
-    public void Initialize(InventoryComponent data)
+    public void Initialize(Singleton_InventoryComponent data)
     {
         _inventoryData = data;
     }
 
-    private void AddPieceToInventory(int pieceID, int amount)
+    private void AddPieceToInventory(ID pieceID, int amount)
     {
         InventoryItem item = _inventoryData.m_Pieces.Find(i => i.m_ItemID == pieceID);
         if (item != null)
@@ -55,7 +56,7 @@ public class InventorySystem : ISystemEvents
         else
             _inventoryData.m_Pieces.Add(new InventoryItem(pieceID, amount));
     }
-    private void RemovePieceFromInventory(int pieceID, int amount)
+    private void RemovePieceFromInventory(ID pieceID, int amount)
     {
         InventoryItem item = _inventoryData.m_Pieces.Find(i => i.m_ItemID == pieceID);
         if (item != null)
@@ -67,7 +68,7 @@ public class InventorySystem : ISystemEvents
         }
     }
 
-    private void AddIngredientToInventory(int pieceID, int amount)
+    private void AddIngredientToInventory(ID pieceID, int amount)
     {
         InventoryItem item = _inventoryData.m_Ingredients.Find(i => i.m_ItemID == pieceID);
         if (item != null)
@@ -75,7 +76,7 @@ public class InventorySystem : ISystemEvents
         else
             _inventoryData.m_Ingredients.Add(new InventoryItem(pieceID, amount));
     }
-    private void RemoveIngredientFromInventory(int pieceID, int amount)
+    private void RemoveIngredientFromInventory(ID pieceID, int amount)
     {
         InventoryItem item = _inventoryData.m_Ingredients.Find(i => i.m_ItemID == pieceID);
         if (item != null)
@@ -88,7 +89,7 @@ public class InventorySystem : ISystemEvents
     }
 
 
-    private void UnlockRecipe(int recipeID)
+    private void UnlockRecipe(ID recipeID)
     {
         if (_inventoryData.m_UnlockedRecipes.Contains(recipeID))
             Debug.LogError("Oh no");

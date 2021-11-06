@@ -7,7 +7,7 @@ using CQM.Databases;
 
 public class RecipeShopSystem : MonoBehaviour
 {
-    [SerializeField] private int selectedRecipeId = -1;
+    [SerializeField] private ID selectedRecipeId;
 
     [SerializeField] private GameObject pref_Recipe;
     [SerializeField] private List<GameObject> currentRecipes;
@@ -17,27 +17,27 @@ public class RecipeShopSystem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textEvilR;
     [SerializeField] private TextMeshProUGUI textPrice;
 
-    private CookieDB _cookiesData;
-    private InventoryComponent _inventoryData;
+    private ComponentsContainer<RecipeDataComponent> _recipeDataComponents;
+    private Singleton_InventoryComponent _inventoryData;
 
     private EventVoid _enableCharMovCmd;
     private EventVoid _disableCharMovCmd;
 
     private EventVoid _buyRecipeCmdREFACTOR;
     private Event<InventorySys_ChangeReputationEvtArgs> _changeRepCmd;
-    private Event<int> _unlockRecipeCmd;
+    private Event<ID> _unlockRecipeCmd;
 
     private void Awake()
     {
         var admin = Admin.Global;
-        _cookiesData = admin.Database.Cookies;
-        _inventoryData = admin.Database.Player.Inventory;
+        _recipeDataComponents = admin.Components.m_RecipeData;
+        _inventoryData = admin.Components.m_InventoryComponent;
 
         _enableCharMovCmd = admin.EventSystem.GetCommandByName<EventVoid>("character_sys", "enable_movement");
         _disableCharMovCmd = admin.EventSystem.GetCommandByName<EventVoid>("character_sys", "disable_movement");
         _buyRecipeCmdREFACTOR = admin.EventSystem.GetCommandByName<EventVoid>("cookie_making_sys", "buy_recipe");
         _changeRepCmd = admin.EventSystem.GetCommandByName<Event<InventorySys_ChangeReputationEvtArgs>>("inventory_sys", "change_reputation");
-        _unlockRecipeCmd = admin.EventSystem.GetCommandByName<Event<int>>("inventory_sys", "unlock_recipe");
+        _unlockRecipeCmd = admin.EventSystem.GetCommandByName<Event<ID>>("inventory_sys", "unlock_recipe");
     }
 
     private void OnEnable()
@@ -46,8 +46,8 @@ public class RecipeShopSystem : MonoBehaviour
 
         if (currentRecipes.Count == 0)
         {
-            List<RecipeData> recipes = _cookiesData.m_RecipeDataDB.Values.ToList(); // Slow but good enough
-            foreach (RecipeData r in recipes)
+            List<RecipeDataComponent> recipes = _recipeDataComponents.GetList();
+            foreach (RecipeDataComponent r in recipes)
             {
                 GameObject newRecipeUI = Instantiate(pref_Recipe, recipeListParent);
                 RecipeShopUI ui = newRecipeUI.GetComponent<RecipeShopUI>();
@@ -75,7 +75,7 @@ public class RecipeShopSystem : MonoBehaviour
         }
     }
 
-    public void SelectRecipe(int id)
+    public void SelectRecipe(ID id)
     {
         selectedRecipeId = id;
         UpdatePrice();
@@ -84,11 +84,11 @@ public class RecipeShopSystem : MonoBehaviour
     //TODO: Update cookie making available recipes
     public void BuyRecipe()
     {
-        if (selectedRecipeId == -1) return;
+        if (!selectedRecipeId.Initialized()) return;
 
-        _cookiesData.m_RecipeDataDB.TryGetValue(selectedRecipeId, out RecipeData recipe);
+        RecipeDataComponent recipe = _recipeDataComponents[selectedRecipeId];
 
-        if (recipe == null || _inventoryData.m_UnlockedRecipes.Contains(selectedRecipeId)) return;
+        if (_inventoryData.m_UnlockedRecipes.Contains(selectedRecipeId)) return;
 
         bool enoughMoneyToBuy = false;
         if (recipe.m_ReputationTypePrice == Reputation.GoodCookieReputation)
@@ -114,10 +114,11 @@ public class RecipeShopSystem : MonoBehaviour
 
     private void UpdatePrice()
     {
-        RecipeData recipe;
-        _cookiesData.m_RecipeDataDB.TryGetValue(selectedRecipeId, out recipe);
-        if (recipe != null)
+        if (selectedRecipeId.Initialized())
+        {
+            RecipeDataComponent recipe = _recipeDataComponents[selectedRecipeId];
             textPrice.text = "Price: " + recipe.m_Price;
+        }
         else
             textPrice.text = "";
     }

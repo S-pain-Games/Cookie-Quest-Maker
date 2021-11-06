@@ -21,7 +21,7 @@ public class NuBehaviour : MonoBehaviour, IInteractableEntity
     {
         _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(
             m_Dialogue,
-            "nu".GetHashCode(),
+            new ID("nu"),
             null));
     }
 }

@@ -19,27 +19,33 @@ namespace CQM.Gameplay
         [SerializeField]
         private Button finishQuestButton;
 
-        [SerializeField]
-        private List<UIPieceSocketBehaviour> _sockets = new List<UIPieceSocketBehaviour>();
-        [SerializeField]
-        private List<UIQuestPieceBehaviour> _questPieces = new List<UIQuestPieceBehaviour>();
+        [SerializeField] private List<UIPieceSocketBehaviour> _sockets = new List<UIPieceSocketBehaviour>();
+        [SerializeField] private List<UIQuestPieceBehaviour> _questPieces = new List<UIQuestPieceBehaviour>();
 
         private Event<ItemData> _addPieceCmd;
         private Event<ItemData> _removePieceCmd;
 
         private EventSys _evtSys;
-        private Event<int> _onUsePiece;
+        private Event<ID> _onUsePiece;
         private Canvas _canvas;
+
+        private ComponentsContainer<QuestPieceFunctionalComponent> _questPieceFunctionalComponents;
+        private ComponentsContainer<UIQuestPieceComponent> _questPieceUIComponents;
+        private ComponentsContainer<QuestPiecePrefabComponent> _questPrefabComponents;
 
         public void Initialize(EventSys evtSys, Canvas canvas)
         {
             _evtSys = evtSys;
             _canvas = canvas;
+
+            _questPieceFunctionalComponents = Admin.Global.Components.m_QuestPieceFunctionalComponents;
+            _questPieceUIComponents = Admin.Global.Components.m_QuestPieceUIComponent;
+            _questPrefabComponents = Admin.Global.Components.m_QuestPiecePrefabComponent;
         }
 
         public void AdquireUIEvents()
         {
-            _evtSys.GetEvent("on_use_piece".GetHashCode(), out _onUsePiece);
+            _evtSys.GetEvent(new ID("on_use_piece"), out _onUsePiece);
             _onUsePiece.OnInvoked += SpawnPiece;
         }
 
@@ -103,7 +109,7 @@ namespace CQM.Gameplay
                 // TODO: >:[
                 if (_questPieces[i].Piece.m_Type == QuestPieceFunctionalComponent.PieceType.Cookie)
                 {
-                    _addPieceCmd.Invoke(new ItemData(_questPieces[i].Piece.m_ParentID, 1));
+                    _addPieceCmd.Invoke(new ItemData(_questPieces[i].Piece.m_ID, 1));
                 }
 
                 Destroy(_questPieces[i].gameObject); // Pooling?
@@ -125,18 +131,17 @@ namespace CQM.Gameplay
             _questPieces.Clear();
         }
 
-        public void SpawnPiece(int pieceID)
+        public void SpawnPiece(ID pieceID)
         {
-            PiecesDB quests = Admin.Global.Database.Pieces;
-            var questPiece = quests.GetQuestPieceComponent<QuestPieceFunctionalComponent>(pieceID);
-            var uiData = quests.GetQuestPieceComponent<UIQuestPieceComponent>(pieceID);
+            var questPiece = _questPieceFunctionalComponents[pieceID];
+            var uiData = _questPieceUIComponents[pieceID];
 
             // Destroy existing piece type
             for (int i = 0; i < _questPieces.Count; i++)
             {
                 if (_questPieces[i].Piece.m_Type == questPiece.m_Type)
                 {
-                    _addPieceCmd.Invoke(new ItemData(_questPieces[i].Piece.m_ParentID, 1));
+                    _addPieceCmd.Invoke(new ItemData(_questPieces[i].Piece.m_ID, 1));
 
                     _questPieces[i].TryToUnsocket(null);
                     Destroy(_questPieces[i].gameObject);
@@ -148,7 +153,7 @@ namespace CQM.Gameplay
             _removePieceCmd.Invoke(new ItemData(pieceID, 1));
 
             // Spawn selected piece from storage in quest builder
-            var piecePrefab = Admin.Global.Database.Pieces.GetQuestPieceComponent<GameObject>(pieceID);
+            var piecePrefab = _questPrefabComponents[pieceID].m_QuestBuildingPiecePrefab;
             var pieceBehaviour = Instantiate(piecePrefab, pieceSpawnPosition).GetComponent<UIQuestPieceBehaviour>();
             pieceBehaviour.Initialize(_canvas, uiData, questPiece);
 

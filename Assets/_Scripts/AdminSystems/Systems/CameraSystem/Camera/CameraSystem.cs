@@ -9,20 +9,20 @@ namespace CQM.Systems
 {
     public class CameraSystem : ISystemEvents
     {
-        private CameraDataComponent _camData;
+        private Singleton_CameraDataComponent _camData;
 
-        public void Initialize(CameraDataComponent camData)
+        public void Initialize(Singleton_CameraDataComponent camData)
         {
             _camData = camData;
         }
 
-        public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+        public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
         {
             commands = new EventSys();
             callbacks = new EventSys();
-            sysID = "camera_sys".GetHashCode();
+            sysID = new ID("camera_sys");
 
-            var evt = commands.AddEvent<Transform>("retarget_cmd".GetHashCode());
+            var evt = commands.AddEvent<Transform>(new ID("retarget_cmd"));
             evt.OnInvoked += Retarget;
         }
 
@@ -37,7 +37,7 @@ namespace CQM.Components
 {
 
     [Serializable]
-    public class CameraDataComponent
+    public class Singleton_CameraDataComponent
     {
         public CinemachineVirtualCamera m_MainCam;
     }

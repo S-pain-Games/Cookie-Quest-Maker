@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class QuestGetValueTest : MonoBehaviour
 {
-    public QuestData quest;
+    public QuestDataComponent quest;
     private QuestSystem qs = new QuestSystem();
 
     [MethodButton]

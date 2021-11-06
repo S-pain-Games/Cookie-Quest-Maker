@@ -7,22 +7,22 @@ namespace CQM.Systems
 {
     public class CharacterSystem : ISystemEvents
     {
-        private InputComponent m_Input;
+        private Singleton_InputComponent m_Input;
 
-        public void Initialize(InputComponent input)
+        public void Initialize(Singleton_InputComponent input)
         {
             m_Input = input;
         }
 
-        public void RegisterEvents(out int sysID, out EventSys commands, out EventSys callbacks)
+        public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
         {
-            sysID = "character_sys".GetHashCode();
+            sysID = new ID("character_sys");
             commands = new EventSys();
             callbacks = new EventSys();
 
-            var cmd = commands.AddEvent("enable_movement".GetHashCode());
+            var cmd = commands.AddEvent(new ID("enable_movement"));
             cmd.OnInvoked += EnableMovement;
-            cmd = commands.AddEvent("disable_movement".GetHashCode());
+            cmd = commands.AddEvent(new ID("disable_movement"));
             cmd.OnInvoked += DisableMovement;
         }
 

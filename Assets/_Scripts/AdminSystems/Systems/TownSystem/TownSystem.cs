@@ -6,41 +6,45 @@ using UnityEngine;
 
 namespace CQM.Systems
 {
-
     public class TownSystem
     {
-        private TownComponent _data;
-        private StoryDB _stories;
+        private Singleton_TownComponent _townComponent;
+        private ComponentsContainer<LocationComponent> _locationComponents;
+        private ComponentsContainer<StoryRepercusionComponent> _repercusionsComponents;
 
-        public void Initialize(TownComponent data, StoryDB stories)
+
+        public void Initialize(Singleton_TownComponent townComponent,
+                               ComponentsContainer<LocationComponent> locationComponents,
+                               ComponentsContainer<StoryRepercusionComponent> repercusionsComponents)
         {
-            _data = data;
-            _stories = stories;
+            _townComponent = townComponent;
+            _locationComponents = locationComponents;
+            _repercusionsComponents = repercusionsComponents;
         }
 
         public void CalculateTownHappiness()
         {
-            var repDb = _stories.m_Repercusions;
-            List<Location> locList = _data.m_LocationsList;
+            List<LocationComponent> locList = _locationComponents.GetList();
+
             int globalHappiness = 0;
             for (int i = 0; i < locList.Count; i++)
             {
                 int locHappiness = 0;
                 for (int j = 0; j < locList[i].m_StoryRepercusionsIDs.Count; j++)
                 {
-                    StoryRepercusionComponent rep = repDb[locList[i].m_StoryRepercusionsIDs[j]];
+                    StoryRepercusionComponent rep = _repercusionsComponents[locList[i].m_StoryRepercusionsIDs[j]];
                     if (rep.m_Active)
                         locHappiness += rep.m_Value;
                 }
                 locList[i].m_Happiness = locHappiness;
                 globalHappiness += locHappiness;
             }
-            _data.m_GlobalHappiness = globalHappiness;
+            _townComponent.m_GlobalHappiness = globalHappiness;
         }
 
-        public void SetBuildingRepercusion(int repercusionID, bool activated)
+        public void SetBuildingRepercusion(ID repercusionID, bool activated)
         {
-            List<Location> locList = _data.m_LocationsList;
+            List<LocationComponent> locList = _locationComponents.GetList();
             for (int i = 0; i < locList.Count; i++)
             {
                 if (locList[i].m_StoryRepercusionsIDs[i] == repercusionID)
@@ -55,41 +59,26 @@ namespace CQM.Systems
 namespace CQM.Databases
 {
     [SerializeField]
-    public class TownComponent
+    public class Singleton_TownComponent
     {
         public int m_GlobalHappiness;
-        public Dictionary<int, Location> m_Locations = new Dictionary<int, Location>();
-        public List<Location> m_LocationsList = new List<Location>();
-
-        public void LoadData(StoryDB storyDB)
-        {
-            var townIds = Admin.Global.ID.townLocations;
-            var repIds = Admin.Global.ID.repercusions;
-
-            Location loc = new Location();
-            loc.m_LocName = "Town Center";
-            loc.m_LocDesc = "Desc";
-            loc.m_StoryRepercusionsIDs.Add(repIds.center_wolf_alive);
-            loc.m_StoryRepercusionsIDs.Add(repIds.center_wolf_dead);
-            loc.m_StoryRepercusionsIDs.Add(repIds.towncenter_in_ruins);
-            loc.m_StoryRepercusionsIDs.Add(repIds.towncenter_not_in_ruins);
-            loc.m_StoryRepercusionsIDs.Add(repIds.towncenter_mayor_celebration_happened);
-            loc.m_StoryRepercusionsIDs.Add(repIds.towncenter_mayor_celebration_didnt_happen);
-
-            m_Locations.Add(townIds.town_center, loc);
-            m_LocationsList.Add(loc);
-        }
     }
 
-    public class Location
+
+    [System.Serializable]
+    public class LocationComponent
     {
+        public ID m_ID;
+
         public string m_LocName;
         public string m_LocDesc;
 
         public int m_Happiness;
-        public List<int> m_StoryRepercusionsIDs = new List<int>();
+        public List<ID> m_StoryRepercusionsIDs = new List<ID>();
     }
 
+
+    [System.Serializable]
     public class TownUI
     {
         public TextMeshProUGUI _happiness;

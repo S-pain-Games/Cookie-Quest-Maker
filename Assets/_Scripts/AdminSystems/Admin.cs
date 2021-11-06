@@ -11,16 +11,11 @@ public class Admin : MonoBehaviour
 {
     public static Admin Global { get; private set; }
 
-    public Database Database { get => _database; }
-    public Systems Systems { get => _systems; }
-    public GameEventSystem EventSystem { get => _eventSystem; }
+    public Systems Systems = new Systems();
+    public ComponentsDatabase Components;
+    public GameEventSystem EventSystem = new GameEventSystem();
 
-    [SerializeField] private Systems _systems = new Systems();
-    [SerializeField] private Database _database;
-    private GameEventSystem _eventSystem;
-
-    public GameDataIDs ID = new GameDataIDs();
-
+    public GameDataIDsUSECAREFULLY ID = new GameDataIDsUSECAREFULLY();
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void Init()
@@ -32,19 +27,18 @@ public class Admin : MonoBehaviour
     private void Initialize()
     {
         // INITIALIZATION ORDER MATTERS
-        _database.LoadData();
+        Components.LoadData();
 
-        _eventSystem = new GameEventSystem();
+        Systems.InitializeGameState(Components.m_GameState, Components.m_TransitionsComponent); // Game State Sys registers events on init
+        EventSystem.RegisterSystems(Systems.GetSystemsEvents());
+        EventSystem.Initialize();
 
-        _systems.InitializeGameState(Database.GameStateComponent, Database.TransitionsComponent); // Game State Sys registers events on init
-        _eventSystem.RegisterSystems(_systems.GetSystemsEvents());
-        _eventSystem.Initialize();
+        Systems.InitializeSystems(EventSystem, Components);
 
-        _systems.InitializeSystems(EventSystem, Database);
-
-        _systems.StartGame();
+        Systems.StartGame();
     }
 }
+
 
 [System.Serializable]
 public class Systems
@@ -91,65 +85,32 @@ public class Systems
         return systems;
     }
 
-    public void InitializeGameState(GameStateComponent gameStateComp, GameStateSystem.TransitionsComponent transitionsComp)
+    public void InitializeGameState(Singleton_GameStateComponent gameStateComp, GameStateSystem.Singleton_TransitionsComponent transitionsComp)
     {
         m_GameStateSystem.Initialize(gameStateComp, transitionsComp);
     }
 
-    public void InitializeSystems(GameEventSystem eventSystem, Database database)
+    public void InitializeSystems(GameEventSystem eventSystem, ComponentsDatabase d)
     {
-        m_CharacterSystem.Initialize(database.Player.Input);
+        m_CharacterSystem.Initialize(d.m_InputComponent);
         m_LocalizationSystem.LoadData();
-        m_DaySystem.Initialize(eventSystem, database.World.CurrentDay);
-        m_StorySystem.Initialize(database.Stories);
+        m_DaySystem.Initialize(eventSystem, d.m_DayComponent);
+        m_StorySystem.Initialize(d.m_StoriesInfo, d.m_OngoingStories, d.m_StoriesToStart, d.m_CompletedStories, d.m_FinalizedStories);
         m_QuestMakerSystem.Initialize();
-        m_CookieMakingSystem.Initialize(database.Cookies, database.Player.Inventory);
-        m_NpcSystem.Initialize(database.Stories, database.Npcs, eventSystem);
-        m_DialogueSystem.Initialize(database.Dialogues.ReferencesAndData, database.m_CharacterComponents, database.m_CharacterDialogueComponents, eventSystem);
-        m_TownSystem.Initialize(database.Town, database.Stories);
-        m_CalendarSystem.Initialize(database.World.Calendar, database.Stories);
-        m_PopupSystem.Initialize(database.Popups);
-        m_CameraSystem.Initialize(database.Cameras);
-        m_InventorySystem.Initialize(database.Player.Inventory);
-        m_NewspaperSystem.Initialize(database.NewspaperRefs, database.Newspaper, database.Stories);
-        m_UISystem.Initialize(database.UIRefs);
+        m_CookieMakingSystem.Initialize(d.m_RecipeData, d.m_InventoryComponent);
+        m_NpcSystem.Initialize(d.m_NpcReferencesComponent, d.m_StoriesInfo, d.m_StoriesToStart, d.m_CompletedStories, eventSystem);
+        m_DialogueSystem.Initialize(d.m_DialogueUIData, d.m_CharacterComponents, d.m_CharacterDialogueComponents, eventSystem);
+        m_TownSystem.Initialize(d.m_TownComponent, d.m_LocationsComponents, d.m_Repercusions);
+        m_CalendarSystem.Initialize(d.m_CalendarComponent);
+        m_PopupSystem.Initialize(d.m_Popups);
+        m_CameraSystem.Initialize(d.m_Cameras);
+        m_InventorySystem.Initialize(d.m_InventoryComponent);
+        m_NewspaperSystem.Initialize(d.m_NewspaperRefs, d.m_Newspaper, d.m_StoriesInfo);
+        m_UISystem.Initialize(d.m_UIRefs);
     }
 
     public void StartGame()
     {
         m_GameStateSystem.StartGame();
-    }
-}
-
-public class WorldDB
-{
-    public DayComponent CurrentDay { get; private set; }
-    public CalendarData Calendar { get; private set; }
-
-
-    public WorldDB()
-    {
-        CurrentDay = new DayComponent();
-        Calendar = new CalendarData();
-    }
-}
-
-[System.Serializable]
-public class PlayerDB
-{
-    public InventoryComponent Inventory { get => m_Inventory; }
-    public InputComponent Input { get => m_InputComponent; }
-
-    private InputComponent m_InputComponent = new InputComponent();
-    private InventoryComponent m_Inventory;
-
-
-    public void LoadData()
-    {
-        m_Inventory = new InventoryComponent();
-        m_Inventory.Initialize();
-
-        // Automatically initialize to avoid inspector pain
-        m_InputComponent.m_Character = Object.FindObjectsOfType<AgentMouseListener>(true).ToList();
     }
 }
