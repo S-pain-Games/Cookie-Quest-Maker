@@ -4,9 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public struct ID
 {
-#if UNITY_EDITOR
     [SerializeField] private string m_NameID;
-#endif
     [SerializeField, HideInInspector] private int m_ID;
     [SerializeField, HideInInspector] private bool m_Initialized;
 
@@ -14,9 +12,7 @@ public struct ID
     {
         m_ID = name.GetHashCode();
 
-#if UNITY_EDITOR
         m_NameID = name;
-#endif
         m_Initialized = true;
     }
 

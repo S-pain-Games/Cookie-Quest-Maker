@@ -7,10 +7,8 @@ public class ComponentsContainer<T>
 {
     private Dictionary<ID, T> m_Components = new Dictionary<ID, T>();
 
-#if UNITY_EDITOR
     [SerializeField]
     private List<T> m_ComponentsList = new List<T>();
-#endif
 
     public T this[ID id]
     {
@@ -22,9 +20,7 @@ public class ComponentsContainer<T>
     {
         m_Components.Add(id, component);
 
-#if UNITY_EDITOR
         m_ComponentsList.Add(component);
-#endif
     }
 
     public T[] GetArray()

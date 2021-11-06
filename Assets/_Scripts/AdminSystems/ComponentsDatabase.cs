@@ -11,8 +11,6 @@ namespace CQM.Databases
         [SerializeField]
         private DataBuilders _dataBuilders;
 
-        private List<object> m_Components = new List<object>();
-
         // All the Stories Data in the game (Persistent & Runtime)
         public ComponentsContainer<StoryInfoComponent> m_StoriesInfo = new ComponentsContainer<StoryInfoComponent>();
         // Story UI Data used in the story selection UI (Persistent)
@@ -55,18 +53,6 @@ namespace CQM.Databases
         public Singleton_InventoryComponent m_InventoryComponent; // INIT?
 
 
-
-        public ComponentsContainer<T> GetComponentContainer<T>() where T : class
-        {
-            for (int i = 0; i < m_Components.Count; i++)
-            {
-                if (m_Components[i] is ComponentsContainer<T> c)
-                    return c;
-            }
-            return null;
-        }
-
-
         /*
          * DATA VIEWS
          */
@@ -83,22 +69,8 @@ namespace CQM.Databases
         public List<ID> m_FinalizedStories = new List<ID>();
 
 
-
         public void LoadData()
         {
-            m_Components.Add(m_StoriesInfo);
-            m_Components.Add(m_StoriesUI);
-            m_Components.Add(m_Repercusions);
-            m_Components.Add(m_RecipeData);
-            m_Components.Add(m_CookieData);
-            m_Components.Add(m_QuestPieceFunctionalComponents);
-            m_Components.Add(m_QuestPieceUIComponent);
-            m_Components.Add(m_QuestPiecePrefabComponent);
-            m_Components.Add(m_CharacterComponents);
-            m_Components.Add(m_CharacterDialogueComponents);
-            m_Components.Add(m_LocationsComponents);
-
-
             var storyBuilder = _dataBuilders.m_StoryBuilder;
             var characterBuilder = _dataBuilders.m_CharactersBuilder;
             var piecesBuilder = _dataBuilders.m_PiecesBuilder;
