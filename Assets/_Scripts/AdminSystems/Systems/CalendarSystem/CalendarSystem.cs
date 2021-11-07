@@ -11,6 +11,7 @@ namespace CQM.Systems
     {
         private Singleton_CalendarComponent _data;
 
+
         public void Initialize(Singleton_CalendarComponent data)
         {
             _data = data;
@@ -37,6 +38,7 @@ namespace CQM.Systems
         }
     }
 }
+
 
 namespace CQM.Components
 {

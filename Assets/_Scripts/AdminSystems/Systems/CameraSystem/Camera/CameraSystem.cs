@@ -11,6 +11,7 @@ namespace CQM.Systems
     {
         private Singleton_CameraDataComponent _camData;
 
+
         public void Initialize(Singleton_CameraDataComponent camData)
         {
             _camData = camData;

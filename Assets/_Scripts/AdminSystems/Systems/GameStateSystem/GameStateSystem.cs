@@ -9,32 +9,12 @@ public class GameStateSystem : ISystemEvents
     private TransitionsSubSystem m_TransitionsSubSys;
 
 
-    public void Initialize(Singleton_GameStateComponent gameState, Singleton_TransitionsComponent transitions)
+    public void Initialize(Singleton_GameStateComponent gameState,
+                           Singleton_TransitionsComponent transitions)
     {
         m_GameState = gameState;
         m_TransitionsSubSys = new TransitionsSubSystem();
         m_TransitionsSubSys.Initialize(transitions);
-    }
-
-    public void StartGame()
-    {
-        // Disable All States Except for the starting one (Maybe Bug prone?)
-        foreach (GameState state in m_GameState.m_States.Values)
-        {
-            state.DisableAllGameobjects();
-        }
-        m_GameState.m_State = m_GameState.m_States[State.MainMenu];
-        m_GameState.m_State.OnStateEnter();
-    }
-
-    public void SetState(State state)
-    {
-        m_TransitionsSubSys.TransitionTo(() =>
-        {
-            m_GameState.m_State.OnStateExit();
-            m_GameState.m_State = m_GameState.m_States[state];
-            m_GameState.m_State.OnStateEnter();
-        });
     }
 
     public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
@@ -70,6 +50,27 @@ public class GameStateSystem : ISystemEvents
 
         var evt = commands.AddEvent<State>(new ID("set_game_state"));
         evt.OnInvoked += SetState;
+    }
+
+    public void StartGame()
+    {
+        // Disable All States Except for the starting one (Maybe Bug prone?)
+        foreach (GameState state in m_GameState.m_States.Values)
+        {
+            state.DisableAllGameobjects();
+        }
+        m_GameState.m_State = m_GameState.m_States[State.MainMenu];
+        m_GameState.m_State.OnStateEnter();
+    }
+
+    public void SetState(State state)
+    {
+        m_TransitionsSubSys.TransitionTo(() =>
+        {
+            m_GameState.m_State.OnStateExit();
+            m_GameState.m_State = m_GameState.m_States[state];
+            m_GameState.m_State.OnStateEnter();
+        });
     }
 
 

@@ -10,11 +10,8 @@ public class DialogueSystem : ISystemEvents
     private ComponentsContainer<CharacterComponent> _characters;
     private ComponentsContainer<DialogueCharacterComponent> _dialogue;
 
-
-
     private EventVoid _enableCharMovementCmd;
     private EventVoid _disableCharMovementCmd;
-
 
 
     public void Initialize(Singleton_DialogueReferencesComponent dialogueRefs,
@@ -111,6 +108,7 @@ public struct ShowDialogueEvtArgs
         m_Callback = callback;
     }
 }
+
 
 [Serializable]
 public class Singleton_DialogueReferencesComponent

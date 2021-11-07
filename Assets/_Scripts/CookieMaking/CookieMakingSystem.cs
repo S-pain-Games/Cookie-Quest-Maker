@@ -17,7 +17,9 @@ public class CookieMakingSystem : ISystemEvents
     private Event<ItemData> _addPieceToInventoryCmd;
     private Event<ItemData> _removeIngredientToInventoryCmd;
 
-    public void Initialize(ComponentsContainer<RecipeDataComponent> recipeDataComponents, Singleton_InventoryComponent inventory)
+
+    public void Initialize(ComponentsContainer<RecipeDataComponent> recipeDataComponents,
+                           Singleton_InventoryComponent inventory)
     {
         _recipeDataComponents = recipeDataComponents;
         _inventory = inventory;
@@ -25,6 +27,15 @@ public class CookieMakingSystem : ISystemEvents
         var evtSys = Admin.Global.EventSystem;
         _addPieceToInventoryCmd = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_piece");
         _removeIngredientToInventoryCmd = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "remove_ingredient");
+    }
+
+    public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
+    {
+        commands = new EventSys();
+        callbacks = new EventSys();
+        sysID = new ID("cookie_making_sys");
+
+        commands.AddEvent(new ID("buy_recipe")).OnInvoked += BuyRecipe;
     }
 
     public void SelectRecipe(ID recipeId)
@@ -93,14 +104,5 @@ public class CookieMakingSystem : ISystemEvents
     public void BuyRecipe()
     {
         OnBuyRecipe?.Invoke();
-    }
-
-    public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
-    {
-        commands = new EventSys();
-        callbacks = new EventSys();
-        sysID = new ID("cookie_making_sys");
-
-        commands.AddEvent(new ID("buy_recipe")).OnInvoked += BuyRecipe;
     }
 }

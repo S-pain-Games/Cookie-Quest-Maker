@@ -10,6 +10,7 @@ namespace CQM.Systems
     {
         private Singleton_UIReferencesComponent _references;
 
+
         public void Initialize(Singleton_UIReferencesComponent references)
         {
             _references = references;

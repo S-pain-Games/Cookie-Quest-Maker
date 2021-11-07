@@ -12,6 +12,7 @@ namespace CQM.Systems
         private Singleton_NewspaperDataComponent _NewsDataComponent;
         private ComponentsContainer<StoryInfoComponent> m_StoryInfoComponents;
 
+
         public void Initialize(Singleton_NewspaperReferencesComponent newspaperReferencesComponent,
                                Singleton_NewspaperDataComponent newspaperDataComponent,
                                ComponentsContainer<StoryInfoComponent> storyInfoComponents)

@@ -8,12 +8,25 @@ using UnityEngine;
 public class QuestMakingSystem : ISystemEvents
 {
     private QMGameplayData m_Data = new QMGameplayData();
+
     public Event<StorySys_CompleteStoyEvtArgs> _completeStoryCmd;
+
 
     public void Initialize()
     {
         var evtSys = Admin.Global.EventSystem;
         _completeStoryCmd = evtSys.GetCommandByName<Event<StorySys_CompleteStoyEvtArgs>>("story_sys", "complete_story");
+    }
+
+    public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
+    {
+        commands = new EventSys();
+        callbacks = new EventSys();
+        sysID = new ID("quest_making_sys");
+
+        commands.AddEvent<ID>(new ID("select_story")).OnInvoked += SelectStory;
+        commands.AddEvent<QuestPieceFunctionalComponent>(new ID("add_piece")).OnInvoked += AddPiece;
+        commands.AddEvent<QuestPieceFunctionalComponent>(new ID("remove_piece")).OnInvoked += RemovePiece;
     }
 
     // These methods have to be called in a specific order
@@ -81,16 +94,6 @@ public class QuestMakingSystem : ISystemEvents
         }
     }
 
-    public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
-    {
-        commands = new EventSys();
-        callbacks = new EventSys();
-        sysID = new ID("quest_making_sys");
-
-        commands.AddEvent<ID>(new ID("select_story")).OnInvoked += SelectStory;
-        commands.AddEvent<QuestPieceFunctionalComponent>(new ID("add_piece")).OnInvoked += AddPiece;
-        commands.AddEvent<QuestPieceFunctionalComponent>(new ID("remove_piece")).OnInvoked += RemovePiece;
-    }
 }
 
 public struct StorySys_CompleteStoyEvtArgs

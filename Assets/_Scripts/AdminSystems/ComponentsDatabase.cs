@@ -11,6 +11,7 @@ namespace CQM.Databases
         [SerializeField]
         private DataBuilders _dataBuilders;
 
+
         // All the Stories Data in the game (Persistent & Runtime)
         public ComponentsContainer<StoryInfoComponent> m_StoriesInfo = new ComponentsContainer<StoryInfoComponent>();
         // Story UI Data used in the story selection UI (Persistent)
@@ -56,7 +57,6 @@ namespace CQM.Databases
         /*
          * DATA VIEWS
          */
-
         public ComponentsContainer<QuestDataComponent> m_CompletedQuestData = new ComponentsContainer<QuestDataComponent>();
 
         // IDs of the stories in the order in which they will be started

@@ -16,6 +16,20 @@ public class DaySystem : ISystemEvents
     private Event<GameStateSystem.State> _setGameStateCommand;
     private EventVoid _populateNpcsCommand;
 
+
+    public void Initialize(GameEventSystem evtSys, Singleton_DayComponent dayData)
+    {
+        // Subscribe to Callbacks
+        Event<ID> evt = evtSys.GetCallback<Event<ID>>(new ID("story_sys"), new ID("story_completed"));
+        evt.OnInvoked += StoryCompletedCallback;
+
+        // Initialize external Commands
+        _setGameStateCommand = evtSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
+        _populateNpcsCommand = evtSys.GetCommandByName<EventVoid>("npc_sys", "cmd_populate_npcs");
+
+        _dayData = dayData;
+    }
+
     public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
     {
         commands = new EventSys();
@@ -31,18 +45,6 @@ public class DaySystem : ISystemEvents
         commands.AddEvent(new ID("begin_night")).OnInvoked += StartNight;
     }
 
-    public void Initialize(GameEventSystem evtSys, Singleton_DayComponent dayData)
-    {
-        // Subscribe to Callbacks
-        Event<ID> evt = evtSys.GetCallback<Event<ID>>(new ID("story_sys"), new ID("story_completed"));
-        evt.OnInvoked += StoryCompletedCallback;
-
-        // Initialize external Commands
-        _setGameStateCommand = evtSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
-        _populateNpcsCommand = evtSys.GetCommandByName<EventVoid>("npc_sys", "cmd_populate_npcs");
-
-        _dayData = dayData;
-    }
 
     private void StoryCompletedCallback(ID storyId)
     {

@@ -5,6 +5,7 @@ public class PopupSystem : ISystemEvents
 {
     private Singleton_PopupReferencesComponent m_PopupData;
 
+
     public void Initialize(Singleton_PopupReferencesComponent popupData)
     {
         m_PopupData = popupData;
@@ -20,12 +21,14 @@ public class PopupSystem : ISystemEvents
         evt.OnInvoked += (args) => ShowPopup(args);
     }
 
+
     private void ShowPopup(PopupData popData)
     {
         PopupBehaviour popUp = Object.Instantiate(m_PopupData.m_PopupPrefab, m_PopupData.m_InstantiationTransform).GetComponent<PopupBehaviour>();
         popUp.Initialize(popData);
     }
 }
+
 
 public struct PopupData
 {

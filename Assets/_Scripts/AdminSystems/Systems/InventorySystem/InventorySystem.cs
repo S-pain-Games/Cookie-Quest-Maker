@@ -7,6 +7,11 @@ public class InventorySystem : ISystemEvents
     private Singleton_InventoryComponent _inventoryData;
 
 
+    public void Initialize(Singleton_InventoryComponent data)
+    {
+        _inventoryData = data;
+    }
+
     public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
     {
         commands = new EventSys();
@@ -43,10 +48,6 @@ public class InventorySystem : ISystemEvents
         commands.AddEvent<ID>(new ID("unlock_recipe")).OnInvoked += UnlockRecipe;
     }
 
-    public void Initialize(Singleton_InventoryComponent data)
-    {
-        _inventoryData = data;
-    }
 
     private void AddPieceToInventory(ID pieceID, int amount)
     {

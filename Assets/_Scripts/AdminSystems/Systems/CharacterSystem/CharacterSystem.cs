@@ -9,6 +9,7 @@ namespace CQM.Systems
     {
         private Singleton_InputComponent m_Input;
 
+
         public void Initialize(Singleton_InputComponent input)
         {
             m_Input = input;
@@ -25,6 +26,7 @@ namespace CQM.Systems
             cmd = commands.AddEvent(new ID("disable_movement"));
             cmd.OnInvoked += DisableMovement;
         }
+
 
         private void EnableMovement()
         {

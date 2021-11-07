@@ -18,6 +18,7 @@ public class LocalizationSystem
     private Dictionary<int, string> m_Spanish = new Dictionary<int, string>();
     private Dictionary<int, string> m_English = new Dictionary<int, string>();
 
+
     public void ChangeLanguage(Language newLanguage)
     {
         m_Language = newLanguage;

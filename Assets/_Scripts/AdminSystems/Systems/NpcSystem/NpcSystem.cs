@@ -22,6 +22,7 @@ namespace CQM.Systems
 
         private Event<PopupData> _showPopupCmd;
 
+
         public void Initialize(Singleton_NpcReferencesComponent npcReferencesComponent,
                                ComponentsContainer<StoryInfoComponent> storyInfoComponents,
                                List<ID> storiesToStart,
@@ -49,6 +50,7 @@ namespace CQM.Systems
             commands.AddEvent(new ID("cmd_populate_npcs")).OnInvoked += PopulateNpcsData;
             commands.AddEvent(new ID("populate_deities")).OnInvoked += PopulateDeitiesData;
         }
+
 
         // Called just before the start of the day to set the
         // dialogue that each NPC has to say that day
@@ -176,6 +178,7 @@ namespace CQM.Systems
         }
     }
 }
+
 
 namespace CQM.Components
 {

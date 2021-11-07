@@ -65,26 +65,6 @@ public class Systems
     private UISystem m_UISystem = new UISystem();
 
 
-
-    public List<ISystemEvents> GetSystemsEvents()
-    {
-        List<ISystemEvents> systems = new List<ISystemEvents>();
-        systems.Add(m_GameStateSystem);
-        systems.Add(m_PopupSystem);
-        systems.Add(m_CameraSystem);
-        systems.Add(m_DaySystem);
-        systems.Add(m_StorySystem);
-        systems.Add(m_DialogueSystem);
-        systems.Add(m_NpcSystem);
-        systems.Add(m_InventorySystem);
-        systems.Add(m_CharacterSystem);
-        systems.Add(m_CookieMakingSystem);
-        systems.Add(m_NewspaperSystem);
-        systems.Add(m_UISystem);
-
-        return systems;
-    }
-
     public void InitializeGameState(Singleton_GameStateComponent gameStateComp, GameStateSystem.Singleton_TransitionsComponent transitionsComp)
     {
         m_GameStateSystem.Initialize(gameStateComp, transitionsComp);
@@ -107,6 +87,25 @@ public class Systems
         m_InventorySystem.Initialize(d.m_InventoryComponent);
         m_NewspaperSystem.Initialize(d.m_NewspaperRefs, d.m_Newspaper, d.m_StoriesInfo);
         m_UISystem.Initialize(d.m_UIRefs);
+    }
+
+    public List<ISystemEvents> GetSystemsEvents()
+    {
+        List<ISystemEvents> systems = new List<ISystemEvents>();
+        systems.Add(m_GameStateSystem);
+        systems.Add(m_PopupSystem);
+        systems.Add(m_CameraSystem);
+        systems.Add(m_DaySystem);
+        systems.Add(m_StorySystem);
+        systems.Add(m_DialogueSystem);
+        systems.Add(m_NpcSystem);
+        systems.Add(m_InventorySystem);
+        systems.Add(m_CharacterSystem);
+        systems.Add(m_CookieMakingSystem);
+        systems.Add(m_NewspaperSystem);
+        systems.Add(m_UISystem);
+
+        return systems;
     }
 
     public void StartGame()
