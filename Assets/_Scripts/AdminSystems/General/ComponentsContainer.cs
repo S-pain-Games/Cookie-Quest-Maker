@@ -30,6 +30,7 @@ public class ComponentsContainer<T>
 
     public List<T> GetList()
     {
-        return m_Components.Values.ToList();
+        //return m_Components.Values.ToList();
+        return m_ComponentsList;
     }
 }
