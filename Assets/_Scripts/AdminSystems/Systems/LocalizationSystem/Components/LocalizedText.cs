@@ -13,6 +13,7 @@ public class LocalizedText : MonoBehaviour
 
     private LocalizationSystem locSystem;
 
+
     private void Awake()
     {
         locSystem = Admin.Global.Systems.m_LocalizationSystem;
@@ -31,6 +32,6 @@ public class LocalizedText : MonoBehaviour
 
     private void UpdateTextLine()
     {
-        textMesh.text = locSystem.GetLine(textNameID.GetHashCode());
+        textMesh.text = locSystem.GetLine(new ID(textNameID));
     }
 }

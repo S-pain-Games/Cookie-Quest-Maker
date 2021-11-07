@@ -73,7 +73,6 @@ public class Systems
     public void InitializeSystems(GameEventSystem eventSystem, ComponentsDatabase d)
     {
         m_CharacterSystem.Initialize(d.m_InputComponent);
-        m_LocalizationSystem.LoadData();
         m_DaySystem.Initialize(eventSystem, d.m_DayComponent);
         m_StorySystem.Initialize(d.m_StoriesInfo, d.m_OngoingStories, d.m_StoriesToStart, d.m_CompletedStories, d.m_FinalizedStories);
         m_QuestMakerSystem.Initialize();
@@ -87,6 +86,7 @@ public class Systems
         m_InventorySystem.Initialize(d.m_InventoryComponent);
         m_NewspaperSystem.Initialize(d.m_NewspaperRefs, d.m_Newspaper, d.m_StoriesInfo);
         m_UISystem.Initialize(d.m_UIRefs);
+        m_LocalizationSystem.Initialize(d.m_LocalizationComponent);
     }
 
     public List<ISystemEvents> GetSystemsEvents()

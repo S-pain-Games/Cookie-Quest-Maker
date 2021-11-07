@@ -51,7 +51,9 @@ namespace CQM.Databases
         public Singleton_TownComponent m_TownComponent = new Singleton_TownComponent();
 
         public Singleton_InputComponent m_InputComponent = new Singleton_InputComponent();
-        public Singleton_InventoryComponent m_InventoryComponent; // INIT?
+        public Singleton_InventoryComponent m_InventoryComponent;
+
+        public Singleton_LocalizationComponent m_LocalizationComponent = new Singleton_LocalizationComponent();
 
 
         /*
@@ -74,6 +76,7 @@ namespace CQM.Databases
             var storyBuilder = _dataBuilders.m_StoryBuilder;
             var characterBuilder = _dataBuilders.m_CharactersBuilder;
             var piecesBuilder = _dataBuilders.m_PiecesBuilder;
+            var localizationBuilder = _dataBuilders.m_LocalizationBuilder;
 
 
             var cList = characterBuilder.m_CharactersList;
@@ -140,6 +143,32 @@ namespace CQM.Databases
                 m_Newspaper.m_NewspaperStories.Add(news.m_RepID, news);
             }
 
+            // TODO: LOAD TEXT FROM BUILDER
+            var lText = localizationBuilder.m_LocalizedText;
+            for (int i = 0; i < lText.Count; i++)
+            {
+                for (int j = 0; j < lText[i].m_Lines.Count; j++)
+                {
+                    var line = lText[i].m_Lines[j];
+
+                    switch (line.m_Lang)
+                    {
+                        case Language.Undefined:
+                            Debug.LogError("Undefined language when loading Loc data");
+                            break;
+                        case Language.Spanish:
+                            m_LocalizationComponent.m_Spanish.Add(lText[i].m_ID, line.m_Line);
+                            break;
+                        case Language.English:
+                            m_LocalizationComponent.m_English.Add(lText[i].m_ID, line.m_Line);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+
+
             m_StoriesToStart.Add(new ID("mayors_wolves"));
 
 
@@ -162,5 +191,6 @@ namespace CQM.Databases
         public PieceBuilder m_PiecesBuilder;
         public StoryBuilder m_StoryBuilder;
         public CharactersBuilder m_CharactersBuilder;
+        public LocalizationBuilder m_LocalizationBuilder;
     }
 }

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2656137720672788242}
   - component: {fileID: 1499442548}
   - component: {fileID: 7711632443896495855}
+  - component: {fileID: 390151711}
   m_Layer: 0
   m_Name: Admin
   m_TagString: Untagged
@@ -66,6 +67,7 @@ MonoBehaviour:
     m_PiecesBuilder: {fileID: 930925265}
     m_StoryBuilder: {fileID: 2656137720672788242}
     m_CharactersBuilder: {fileID: 1499442548}
+    m_LocalizationBuilder: {fileID: 390151711}
   m_StoriesInfo:
     m_ComponentsList: []
   m_StoriesUI:
@@ -1074,3 +1076,115 @@ MonoBehaviour:
       m_Initialized: 1
     m_Name: Cream
     m_Sprite: {fileID: 0}
+--- !u!114 &390151711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e3b63e6c6b96dd4d9eedfd787ff2431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocalizedText:
+  - m_ID:
+      m_NameID: mainmenu_title
+      m_ID: -1882436397
+      m_Initialized: 1
+    m_Lines:
+    - m_Lang: 1
+      m_Line: "Men\xFA"
+    - m_Lang: 2
+      m_Line: Menu
+  - m_ID:
+      m_NameID: mainmenu_button_play
+      m_ID: -36870064
+      m_Initialized: 1
+    m_Lines:
+    - m_Lang: 1
+      m_Line: Jugar
+    - m_Lang: 2
+      m_Line: Play
+  - m_ID:
+      m_NameID: mainmenu_button_options
+      m_ID: 762931948
+      m_Initialized: 1
+    m_Lines:
+    - m_Lang: 1
+      m_Line: Opciones
+    - m_Lang: 2
+      m_Line: Options
+  - m_ID:
+      m_NameID: mainmenu_button_credits
+      m_ID: -1375628924
+      m_Initialized: 1
+    m_Lines:
+    - m_Lang: 1
+      m_Line: "Cr\xE9ditos"
+    - m_Lang: 2
+      m_Line: Credits
+  - m_ID:
+      m_NameID: optionsmenu_title
+      m_ID: 868132782
+      m_Initialized: 1
+    m_Lines:
+    - m_Lang: 1
+      m_Line: Opciones
+    - m_Lang: 2
+      m_Line: Options
+  - m_ID:
+      m_NameID: optionsmenu_text_volume_music
+      m_ID: 391548282
+      m_Initialized: 1
+    m_Lines:
+    - m_Lang: 1
+      m_Line: "Volumen de m\xFAsica"
+    - m_Lang: 2
+      m_Line: Music volume
+  - m_ID:
+      m_NameID: optionsmenu_text_volume_effects
+      m_ID: 2070351853
+      m_Initialized: 1
+    m_Lines:
+    - m_Lang: 1
+      m_Line: Volumen de efectos
+    - m_Lang: 2
+      m_Line: Effects volume
+  - m_ID:
+      m_NameID: optionsmenu_text_language
+      m_ID: -177264338
+      m_Initialized: 1
+    m_Lines:
+    - m_Lang: 1
+      m_Line: IDIOMA
+    - m_Lang: 2
+      m_Line: LANGUAGE
+  - m_ID:
+      m_NameID: creditsmenu_title
+      m_ID: 227655490
+      m_Initialized: 1
+    m_Lines:
+    - m_Lang: 1
+      m_Line: "Cr\xE9ditos"
+    - m_Lang: 2
+      m_Line: Credits
+  - m_ID:
+      m_NameID: dialoguebox_text
+      m_ID: -1359560901
+      m_Initialized: 1
+    m_Lines:
+    - m_Lang: 1
+      m_Line: Hola
+    - m_Lang: 2
+      m_Line: Hi
+  - m_ID:
+      m_NameID: dialoguebox_button_next
+      m_ID: -8620594
+      m_Initialized: 1
+    m_Lines:
+    - m_Lang: 1
+      m_Line: Siguiente
+    - m_Lang: 2
+      m_Line: Next
