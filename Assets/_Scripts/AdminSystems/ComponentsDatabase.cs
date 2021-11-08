@@ -70,9 +70,13 @@ namespace CQM.Databases
         private Dictionary<Type, object> m_ComponentContainers = new Dictionary<Type, object>();
         private Dictionary<Type, object> m_SingletonComponents = new Dictionary<Type, object>();
 
+
         public void Initialize()
         {
             m_ComponentContainers.Add(typeof(StoryInfoComponent), m_StoriesInfo);
+            m_ComponentContainers.Add(typeof(StoryUIDataComponent), m_StoriesUI);
+            m_ComponentContainers.Add(typeof(StoryRepercusionComponent), m_Repercusions);
+            m_ComponentContainers.Add(typeof(RecipeDataComponent), m_RecipeData);
         }
 
         public ComponentsContainer<T> GetComponentContainer<T>()

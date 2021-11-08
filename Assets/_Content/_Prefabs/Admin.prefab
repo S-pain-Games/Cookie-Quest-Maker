@@ -1152,14 +1152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329c579529548164cac9efe308401ba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_StoriesInfo:
-    m_ComponentsList: []
-  m_StoriesUI:
-    m_ComponentsList: []
-  m_Repercusions:
-    m_ComponentsList: []
-  m_RecipeData:
-    m_ComponentsList: []
   m_CookieData:
     m_ComponentsList: []
   m_QuestPieceFunctionalComponents:

@@ -24,8 +24,8 @@ public class Admin : MonoBehaviour
     private void Initialize()
     {
         // INITIALIZATION ORDER MATTERS
-        m_DataBuilders.BuildData(Components);
         Components.Initialize();
+        m_DataBuilders.BuildData(Components);
 
         Systems.InitializeGameState(Components.m_GameState, Components.m_TransitionsComponent); // Game State Sys registers events on init
         EventSystem.RegisterSystems(Systems.GetSystemsEvents());
