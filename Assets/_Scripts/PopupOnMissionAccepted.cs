@@ -33,7 +33,8 @@ public class PopupOnMissionAccepted : MonoBehaviour
     private void StoryStartedCallback_OnInvoked(ID storyId)
     {
         PopupData pData = new PopupData();
-        pData.m_Text = Admin.Global.Components.m_StoriesInfo[storyId].m_StoryData.m_Title + " Story Started";
+        pData.m_Text = Admin.Global.Components.GetComponentContainer<StoryInfoComponent>()[storyId].m_StoryData.m_Title + " Story Started";
+        //Admin.Global.Components.m_StoriesInfo[storyId].m_StoryData.m_Title + " Story Started";
         pData.m_TimeAlive = 3.0f;
         _showPopupCommand.Invoke(pData);
     }

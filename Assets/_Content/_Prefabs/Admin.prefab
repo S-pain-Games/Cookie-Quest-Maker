@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2041105134198296772
+--- !u!1 &656283499
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,153 +8,57 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2041105134198296795}
-  - component: {fileID: 2041105134198296794}
-  - component: {fileID: 7085979173324703691}
-  - component: {fileID: 585195714406842495}
-  - component: {fileID: 930925265}
-  - component: {fileID: 2656137720672788242}
-  - component: {fileID: 1499442548}
-  - component: {fileID: 7711632443896495855}
-  - component: {fileID: 390151711}
+  - component: {fileID: 656283500}
+  - component: {fileID: 656283501}
+  - component: {fileID: 656283502}
+  - component: {fileID: 656283503}
+  - component: {fileID: 656283504}
+  - component: {fileID: 656283505}
+  - component: {fileID: 656283506}
   m_Layer: 0
-  m_Name: Admin
+  m_Name: DataBuilders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2041105134198296795
+--- !u!4 &656283500
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
+  m_GameObject: {fileID: 656283499}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2041105134198296795}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2041105134198296794
+--- !u!114 &656283501
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
+  m_GameObject: {fileID: 656283499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ef87ea3ff5678442b39938ba47c5bda, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a8979f0c9301dc48991669a52a27f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Components: {fileID: 7085979173324703691}
---- !u!114 &7085979173324703691
+  m_PiecesBuilder: {fileID: 656283502}
+  m_StoryBuilder: {fileID: 656283503}
+  m_CharactersBuilder: {fileID: 656283504}
+  m_LocalizationBuilder: {fileID: 656283505}
+--- !u!114 &656283502
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 329c579529548164cac9efe308401ba5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _dataBuilders:
-    m_PiecesBuilder: {fileID: 930925265}
-    m_StoryBuilder: {fileID: 2656137720672788242}
-    m_CharactersBuilder: {fileID: 1499442548}
-    m_LocalizationBuilder: {fileID: 390151711}
-  m_StoriesInfo:
-    m_ComponentsList: []
-  m_StoriesUI:
-    m_ComponentsList: []
-  m_Repercusions:
-    m_ComponentsList: []
-  m_RecipeData:
-    m_ComponentsList: []
-  m_CookieData:
-    m_ComponentsList: []
-  m_QuestPieceFunctionalComponents:
-    m_ComponentsList: []
-  m_QuestPieceUIComponent:
-    m_ComponentsList: []
-  m_QuestPiecePrefabComponent:
-    m_ComponentsList: []
-  m_CharacterComponents:
-    m_ComponentsList: []
-  m_CharacterDialogueComponents:
-    m_ComponentsList: []
-  m_LocationsComponents:
-    m_ComponentsList: []
-  m_GameState: {fileID: 585195714406842495}
-  m_Popups:
-    m_InstantiationTransform: {fileID: 0}
-    m_PopupPrefab: {fileID: 3051747196200662067, guid: ea922bc99ae428843ba685267cf72fb6, type: 3}
-  m_Cameras:
-    m_MainCam: {fileID: 0}
-  m_NewspaperRefs: {fileID: 0}
-  m_UIRefs: {fileID: 0}
-  m_TransitionsComponent:
-    m_FadeTransition: {fileID: 0}
-  m_NpcReferencesComponent:
-    m_NpcBehaviour:
-    - {fileID: 0}
-    m_Evith: {fileID: 0}
-    m_Nu: {fileID: 0}
-  m_CalendarComponent:
-    m_Year: 0
-    m_Month: 0
-    m_Day: 0
-  m_DialogueUIData:
-    m_Container: {fileID: 0}
-    m_CaracterName: {fileID: 0}
-    m_Line: {fileID: 0}
-    m_CurrentDialogueLines: []
-    m_CurrentLineIndex: 0
-  m_InputComponent:
-    m_Character:
-    - {fileID: 0}
-    - {fileID: 0}
-  m_InventoryComponent:
-    m_GoodCookieReputation: 0
-    m_EvilCookieReputation: 0
-    m_UnlockedRecipes: []
-    m_Pieces: []
-    m_Ingredients: []
-  m_CompletedQuestData:
-    m_ComponentsList: []
-  m_StoriesToStart: []
-  m_OngoingStories: []
-  m_CompletedStories: []
-  m_FinalizedStories: []
---- !u!114 &585195714406842495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2144f8f0843d354496a3cf61a6757fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Bakery: {fileID: 0}
-  m_MainMenu: {fileID: 0}
-  m_QuestMaking: {fileID: 0}
-  m_CookieMaking: {fileID: 0}
-  m_BakeryNight: {fileID: 0}
---- !u!114 &930925265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
+  m_GameObject: {fileID: 656283499}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6426cf3f127309429de41b9e571bdc6, type: 3}
@@ -755,13 +659,13 @@ MonoBehaviour:
       m_ID: -1938852922
       m_Initialized: 1
   m_DefaultPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
---- !u!114 &2656137720672788242
+--- !u!114 &656283503
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
+  m_GameObject: {fileID: 656283499}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43f08a15d8ebae24b99b20e9637457ed, type: 3}
@@ -935,13 +839,13 @@ MonoBehaviour:
       m_Initialized: 1
     m_StoryName: Mayor's Wolves
     m_StorySelectionUiSprite: {fileID: 0}
---- !u!114 &1499442548
+--- !u!114 &656283504
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
+  m_GameObject: {fileID: 656283499}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07a58c4116d7ea14fa2ce02767d0a3e0, type: 3}
@@ -1026,63 +930,13 @@ MonoBehaviour:
       m_Initialized: 1
     m_CharacterName: 
     m_DialogueSprite: {fileID: 0}
---- !u!114 &7711632443896495855
+--- !u!114 &656283505
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba92c1ffd5ff3444a9fd1e72e13db42f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IngredientsList:
-  - m_ID:
-      m_NameID: chocolate
-      m_ID: -965336208
-      m_Initialized: 1
-    m_Name: Chocolate
-    m_Sprite: {fileID: 0}
-  - m_ID:
-      m_NameID: vanilla
-      m_ID: -1372670123
-      m_Initialized: 1
-    m_Name: Vanilla
-    m_Sprite: {fileID: 0}
-  - m_ID:
-      m_NameID: cream
-      m_ID: 1185218972
-      m_Initialized: 1
-    m_Name: Cream
-    m_Sprite: {fileID: 0}
-  m_References:
-  - m_ID:
-      m_NameID: chocolate
-      m_ID: -965336208
-      m_Initialized: 1
-    m_Name: Chocolate
-    m_Sprite: {fileID: 0}
-  - m_ID:
-      m_NameID: vanilla
-      m_ID: -1372670123
-      m_Initialized: 1
-    m_Name: Vanilla
-    m_Sprite: {fileID: 0}
-  - m_ID:
-      m_NameID: cream
-      m_ID: 1185218972
-      m_Initialized: 1
-    m_Name: Cream
-    m_Sprite: {fileID: 0}
---- !u!114 &390151711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041105134198296772}
+  m_GameObject: {fileID: 656283499}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e3b63e6c6b96dd4d9eedfd787ff2431, type: 3}
@@ -1188,3 +1042,192 @@ MonoBehaviour:
       m_Line: Siguiente
     - m_Lang: 2
       m_Line: Next
+--- !u!114 &656283506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656283499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba92c1ffd5ff3444a9fd1e72e13db42f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IngredientsList:
+  - m_ID:
+      m_NameID: chocolate
+      m_ID: -965336208
+      m_Initialized: 1
+    m_Name: Chocolate
+    m_Sprite: {fileID: 0}
+  - m_ID:
+      m_NameID: vanilla
+      m_ID: -1372670123
+      m_Initialized: 1
+    m_Name: Vanilla
+    m_Sprite: {fileID: 0}
+  - m_ID:
+      m_NameID: cream
+      m_ID: 1185218972
+      m_Initialized: 1
+    m_Name: Cream
+    m_Sprite: {fileID: 0}
+  m_References:
+  - m_ID:
+      m_NameID: chocolate
+      m_ID: -965336208
+      m_Initialized: 1
+    m_Name: Chocolate
+    m_Sprite: {fileID: 0}
+  - m_ID:
+      m_NameID: vanilla
+      m_ID: -1372670123
+      m_Initialized: 1
+    m_Name: Vanilla
+    m_Sprite: {fileID: 0}
+  - m_ID:
+      m_NameID: cream
+      m_ID: 1185218972
+      m_Initialized: 1
+    m_Name: Cream
+    m_Sprite: {fileID: 0}
+--- !u!1 &2041105134198296772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2041105134198296795}
+  - component: {fileID: 2041105134198296794}
+  - component: {fileID: 7085979173324703691}
+  - component: {fileID: 585195714406842495}
+  m_Layer: 0
+  m_Name: Admin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2041105134198296795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 656283500}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2041105134198296794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ef87ea3ff5678442b39938ba47c5bda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DataBuilders: {fileID: 656283501}
+  Components: {fileID: 7085979173324703691}
+--- !u!114 &7085979173324703691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 329c579529548164cac9efe308401ba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StoriesInfo:
+    m_ComponentsList: []
+  m_StoriesUI:
+    m_ComponentsList: []
+  m_Repercusions:
+    m_ComponentsList: []
+  m_RecipeData:
+    m_ComponentsList: []
+  m_CookieData:
+    m_ComponentsList: []
+  m_QuestPieceFunctionalComponents:
+    m_ComponentsList: []
+  m_QuestPieceUIComponent:
+    m_ComponentsList: []
+  m_QuestPiecePrefabComponent:
+    m_ComponentsList: []
+  m_CharacterComponents:
+    m_ComponentsList: []
+  m_CharacterDialogueComponents:
+    m_ComponentsList: []
+  m_LocationsComponents:
+    m_ComponentsList: []
+  m_GameState: {fileID: 585195714406842495}
+  m_Popups:
+    m_InstantiationTransform: {fileID: 0}
+    m_PopupPrefab: {fileID: 3051747196200662067, guid: ea922bc99ae428843ba685267cf72fb6, type: 3}
+  m_Cameras:
+    m_MainCam: {fileID: 0}
+  m_NewspaperRefs: {fileID: 0}
+  m_UIRefs: {fileID: 0}
+  m_TransitionsComponent:
+    m_FadeTransition: {fileID: 0}
+  m_NpcReferencesComponent:
+    m_NpcBehaviour:
+    - {fileID: 0}
+    m_Evith: {fileID: 0}
+    m_Nu: {fileID: 0}
+  m_CalendarComponent:
+    m_Year: 0
+    m_Month: 0
+    m_Day: 0
+  m_DialogueUIData:
+    m_Container: {fileID: 0}
+    m_CaracterName: {fileID: 0}
+    m_Line: {fileID: 0}
+    m_CurrentDialogueLines: []
+    m_CurrentLineIndex: 0
+  m_InputComponent:
+    m_Character:
+    - {fileID: 0}
+    - {fileID: 0}
+  m_InventoryComponent:
+    m_GoodCookieReputation: 0
+    m_EvilCookieReputation: 0
+    m_UnlockedRecipes: []
+    m_Pieces: []
+    m_Ingredients: []
+  m_CompletedQuestData:
+    m_ComponentsList: []
+  m_StoriesToStart: []
+  m_OngoingStories: []
+  m_CompletedStories: []
+  m_FinalizedStories: []
+--- !u!114 &585195714406842495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2144f8f0843d354496a3cf61a6757fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Bakery: {fileID: 0}
+  m_MainMenu: {fileID: 0}
+  m_CookieMaking: {fileID: 0}
+  m_BakeryNight: {fileID: 0}

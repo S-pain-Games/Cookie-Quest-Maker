@@ -26,7 +26,7 @@ public class CookieMakingUI : MonoBehaviour
     private void Awake()
     {
         _cookieDataComponents = Admin.Global.Components.m_CookieData;
-        _recipeDataComponents = Admin.Global.Components.m_RecipeData;
+        _recipeDataComponents = Admin.Global.Components.GetComponentContainer<RecipeDataComponent>();
         _inventoryData = Admin.Global.Components.m_InventoryComponent;
 
         _cookieMakingSystem = Admin.Global.Systems.m_CookieMakingSystem;

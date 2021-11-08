@@ -6,9 +6,7 @@ using UnityEngine;
 public class ComponentsContainer<T>
 {
     private Dictionary<ID, T> m_Components = new Dictionary<ID, T>();
-
-    [SerializeField]
-    private List<T> m_ComponentsList = new List<T>();
+    [SerializeField] private List<T> m_ComponentsList = new List<T>();
 
     public T this[ID id]
     {
@@ -23,14 +21,13 @@ public class ComponentsContainer<T>
         m_ComponentsList.Add(component);
     }
 
-    public T[] GetArray()
-    {
-        return m_Components.Values.ToArray();
-    }
-
     public List<T> GetList()
     {
-        //return m_Components.Values.ToList();
         return m_ComponentsList;
+    }
+
+    public T GetComponentByID(ID id)
+    {
+        return m_Components[id];
     }
 }

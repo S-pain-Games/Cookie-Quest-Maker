@@ -30,7 +30,7 @@ public class RecipeShopSystem : MonoBehaviour
     private void Awake()
     {
         var admin = Admin.Global;
-        _recipeDataComponents = admin.Components.m_RecipeData;
+        _recipeDataComponents = admin.Components.GetComponentContainer<RecipeDataComponent>();
         _inventoryData = admin.Components.m_InventoryComponent;
 
         _enableCharMovCmd = admin.EventSystem.GetCommandByName<EventVoid>("character_sys", "enable_movement");

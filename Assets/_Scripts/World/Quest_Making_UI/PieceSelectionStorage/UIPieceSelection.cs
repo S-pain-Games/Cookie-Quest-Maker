@@ -52,7 +52,7 @@ public class UIPieceSelection : MonoBehaviour
         // Loop over all story targets
         if (pieceType == QuestPieceFunctionalComponent.PieceType.Target)
         {
-            var targetsList = Admin.Global.Components.m_StoriesInfo[m_CurrentStoryID].m_StoryData.m_AllPossibleTargets;
+            var targetsList = Admin.Global.Components.GetComponentContainer<StoryInfoComponent>()[m_CurrentStoryID].m_StoryData.m_AllPossibleTargets;
 
             for (int i = 0; i < targetsList.Count; i++)
             {

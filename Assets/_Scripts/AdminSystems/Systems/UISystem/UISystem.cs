@@ -10,11 +10,17 @@ namespace CQM.Systems
     {
         private Singleton_UIReferencesComponent _references;
 
+        private EventVoid _enableCharacterMovementCmd;
+        private EventVoid _disableCharacterMovementCmd;
+
 
         public void Initialize(Singleton_UIReferencesComponent references)
         {
             _references = references;
             Debug.Assert(references != null);
+
+            _enableCharacterMovementCmd = Admin.Global.EventSystem.GetCommandByName<EventVoid>("character_sys", "enable_movement");
+            _disableCharacterMovementCmd = Admin.Global.EventSystem.GetCommandByName<EventVoid>("character_sys", "disable_movement");
         }
 
         public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
@@ -40,9 +46,15 @@ namespace CQM.Systems
         {
             var ui = _references.m_QuestMakingUi;
             if (ui.activeSelf)
+            {
                 ui.SetActive(false);
+                _enableCharacterMovementCmd.Invoke();
+            }
             else
+            {
+                _disableCharacterMovementCmd.Invoke();
                 ui.SetActive(true);
+            }
         }
     }
 }

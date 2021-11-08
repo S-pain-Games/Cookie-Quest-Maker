@@ -1,4 +1,5 @@
 ﻿using CQM.Components;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using static GameStateSystem;
@@ -8,20 +9,16 @@ namespace CQM.Databases
     [System.Serializable]
     public class ComponentsDatabase : MonoBehaviour
     {
-        [SerializeField]
-        private DataBuilders _dataBuilders;
-
-
         // All the Stories Data in the game (Persistent & Runtime)
-        public ComponentsContainer<StoryInfoComponent> m_StoriesInfo = new ComponentsContainer<StoryInfoComponent>();
+        private ComponentsContainer<StoryInfoComponent> m_StoriesInfo = new ComponentsContainer<StoryInfoComponent>();
         // Story UI Data used in the story selection UI (Persistent)
-        public ComponentsContainer<StoryUIDataComponent> m_StoriesUI = new ComponentsContainer<StoryUIDataComponent>();
+        private ComponentsContainer<StoryUIDataComponent> m_StoriesUI = new ComponentsContainer<StoryUIDataComponent>();
         // All the repercusions in the game (Persistent)
-        public ComponentsContainer<StoryRepercusionComponent> m_Repercusions = new ComponentsContainer<StoryRepercusionComponent>();
+        private ComponentsContainer<StoryRepercusionComponent> m_Repercusions = new ComponentsContainer<StoryRepercusionComponent>();
 
 
         // Contains all the cookie recipes
-        public ComponentsContainer<RecipeDataComponent> m_RecipeData = new ComponentsContainer<RecipeDataComponent>();
+        private ComponentsContainer<RecipeDataComponent> m_RecipeData = new ComponentsContainer<RecipeDataComponent>();
         // Contains all the data for the cookies
         public ComponentsContainer<CookieDataComponent> m_CookieData = new ComponentsContainer<CookieDataComponent>();
 
@@ -55,7 +52,6 @@ namespace CQM.Databases
 
         public Singleton_LocalizationComponent m_LocalizationComponent = new Singleton_LocalizationComponent();
 
-
         /*
          * DATA VIEWS
          */
@@ -71,126 +67,22 @@ namespace CQM.Databases
         public List<ID> m_FinalizedStories = new List<ID>();
 
 
-        public void LoadData()
+        private Dictionary<Type, object> m_ComponentContainers = new Dictionary<Type, object>();
+        private Dictionary<Type, object> m_SingletonComponents = new Dictionary<Type, object>();
+
+        public void Initialize()
         {
-            var storyBuilder = _dataBuilders.m_StoryBuilder;
-            var characterBuilder = _dataBuilders.m_CharactersBuilder;
-            var piecesBuilder = _dataBuilders.m_PiecesBuilder;
-            var localizationBuilder = _dataBuilders.m_LocalizationBuilder;
-
-
-            var cList = characterBuilder.m_CharactersList;
-            for (int i = 0; i < cList.Count; i++)
-            {
-                m_CharacterComponents.Add(cList[i].m_ID, cList[i]);
-            }
-            var dList = characterBuilder.m_CharacterDialogueList;
-            for (int i = 0; i < cList.Count; i++)
-            {
-                m_CharacterDialogueComponents.Add(dList[i].m_ID, dList[i]);
-            }
-
-
-            var piecesList = piecesBuilder.m_QuestPieceUIComponent;
-            for (int i = 0; i < piecesList.Count; i++)
-            {
-                var data = piecesList[i];
-                m_QuestPieceUIComponent.Add(data.m_ID, data);
-            }
-            var functionalQuestPieces = piecesBuilder.m_QuestPieceFunctionalComponents;
-            for (int i = 0; i < functionalQuestPieces.Count; i++)
-            {
-                var data = functionalQuestPieces[i];
-                m_QuestPieceFunctionalComponents.Add(data.m_ID, data);
-            }
-            var prefabQuestPieces = piecesBuilder.m_QuestPiecePrefabComponent;
-            for (int i = 0; i < prefabQuestPieces.Count; i++)
-            {
-                var data = prefabQuestPieces[i];
-                m_QuestPiecePrefabComponent.Add(data.m_ID, data);
-            }
-            var recipeData = piecesBuilder.m_RecipeData;
-            for (int i = 0; i < recipeData.Count; i++)
-            {
-                m_RecipeData.Add(recipeData[i].m_ID, recipeData[i]);
-            }
-
-            var cookieData = piecesBuilder.m_CookieData;
-            for (int i = 0; i < recipeData.Count; i++)
-            {
-                m_CookieData.Add(cookieData[i].m_ParentID, cookieData[i]);
-            }
-
-
-            for (int i = 0; i < storyBuilder.Stories.Count; i++)
-            {
-                var story = storyBuilder.Stories[i];
-                m_StoriesInfo.Add(story.m_StoryData.m_ID, story);
-            }
-            for (int i = 0; i < storyBuilder.Repercusions.Count; i++)
-            {
-                var rep = storyBuilder.Repercusions[i];
-                m_Repercusions.Add(rep.m_ID, rep);
-            }
-            for (int i = 0; i < storyBuilder.StoryUI.Count; i++)
-            {
-                var ui = storyBuilder.StoryUI[i];
-                m_StoriesUI.Add(ui.m_ParentStoryID, ui);
-            }
-            for (int i = 0; i < storyBuilder.RepercusionNewspaperArticles.Count; i++)
-            {
-                var news = storyBuilder.RepercusionNewspaperArticles[i];
-                m_Newspaper.m_NewspaperStories.Add(news.m_RepID, news);
-            }
-
-            // TODO: LOAD TEXT FROM BUILDER
-            var lText = localizationBuilder.m_LocalizedText;
-            for (int i = 0; i < lText.Count; i++)
-            {
-                for (int j = 0; j < lText[i].m_Lines.Count; j++)
-                {
-                    var line = lText[i].m_Lines[j];
-
-                    switch (line.m_Lang)
-                    {
-                        case Language.Undefined:
-                            Debug.LogError("Undefined language when loading Loc data");
-                            break;
-                        case Language.Spanish:
-                            m_LocalizationComponent.m_Spanish.Add(lText[i].m_ID, line.m_Line);
-                            break;
-                        case Language.English:
-                            m_LocalizationComponent.m_English.Add(lText[i].m_ID, line.m_Line);
-                            break;
-                        default:
-                            break;
-                    }
-                }
-            }
-
-
-            m_StoriesToStart.Add(new ID("mayors_wolves"));
-
-
-            m_InventoryComponent.m_UnlockedRecipes.Add(new ID("plain_cookie"));
-            m_InventoryComponent.m_UnlockedRecipes.Add(new ID("attack"));
-
-            m_InventoryComponent.m_Ingredients.Add(new InventoryItem(new ID("vanilla"), 1));
-            m_InventoryComponent.m_Ingredients.Add(new InventoryItem(new ID("chocolate"), 2));
-            m_InventoryComponent.m_Ingredients.Add(new InventoryItem(new ID("cream"), 1));
-
-            m_InventoryComponent.m_GoodCookieReputation += 100;
-            m_InventoryComponent.m_EvilCookieReputation += 100;
+            m_ComponentContainers.Add(typeof(StoryInfoComponent), m_StoriesInfo);
         }
-    }
 
+        public ComponentsContainer<T> GetComponentContainer<T>()
+        {
+            return m_ComponentContainers[typeof(T)] as ComponentsContainer<T>;
+        }
 
-    [System.Serializable]
-    public class DataBuilders
-    {
-        public PieceBuilder m_PiecesBuilder;
-        public StoryBuilder m_StoryBuilder;
-        public CharactersBuilder m_CharactersBuilder;
-        public LocalizationBuilder m_LocalizationBuilder;
+        public T GetSingletonComponent<T>() where T : class
+        {
+            return m_SingletonComponents[typeof(T)] as T;
+        }
     }
 }

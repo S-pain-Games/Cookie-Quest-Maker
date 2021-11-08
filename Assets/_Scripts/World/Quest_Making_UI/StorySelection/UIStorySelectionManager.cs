@@ -39,7 +39,7 @@ namespace CQM.Gameplay
         private void Awake()
         {
             _ongoingStories = Admin.Global.Components.m_OngoingStories;
-            _storyUIComponents = Admin.Global.Components.m_StoriesUI;
+            _storyUIComponents = Admin.Global.Components.GetComponentContainer<StoryUIDataComponent>();
         }
 
         private void OnEnable()
