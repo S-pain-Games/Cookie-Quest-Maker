@@ -24,11 +24,21 @@ namespace CQM.Systems
             callbacks = new EventSys();
 
             commands.AddEvent(new ID("toggle_newspaper")).OnInvoked += ToggleNewspaper;
+            commands.AddEvent(new ID("toggle_quest_making")).OnInvoked += ShowQuestMaking;
         }
 
         private void ToggleNewspaper()
         {
             var ui = _references.m_NewspaperUi;
+            if (ui.activeSelf)
+                ui.SetActive(false);
+            else
+                ui.SetActive(true);
+        }
+
+        private void ShowQuestMaking()
+        {
+            var ui = _references.m_QuestMakingUi;
             if (ui.activeSelf)
                 ui.SetActive(false);
             else

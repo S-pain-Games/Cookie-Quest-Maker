@@ -33,11 +33,6 @@ public class GameStateSystem : ISystemEvents
             m_GameState.m_MainMenu);
         m_GameState.m_States.Add(State.MainMenu, gs);
 
-        gs = new GameState(callbacks.AddEvent(new ID("quest_making_enter")),
-            callbacks.AddEvent(new ID("quest_making_exit")),
-            m_GameState.m_QuestMaking);
-        m_GameState.m_States.Add(State.QuestMaking, gs);
-
         gs = new GameState(callbacks.AddEvent(new ID("cookie_making_enter")),
             callbacks.AddEvent(new ID("cookie_making_exit")),
             m_GameState.m_CookieMaking);
@@ -105,7 +100,6 @@ public class GameStateSystem : ISystemEvents
     {
         MainMenu,
         Bakery,
-        QuestMaking,
         CookieMaking,
         BakeryNight
     }

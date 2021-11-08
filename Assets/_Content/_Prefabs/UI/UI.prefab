@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NewspaperUi: {fileID: 5815900887695398052}
+  m_QuestMakingUi: {fileID: 404580704988885907}
 --- !u!1001 &700742701809533048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1175,6 +1176,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94a9ebf5cb612bb4eba455d9a92fc869, type: 3}
+--- !u!1 &404580704988885907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8359491086150262351, guid: 94a9ebf5cb612bb4eba455d9a92fc869, type: 3}
+  m_PrefabInstance: {fileID: 8187470299702308316}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &404580704988885904 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8359491086150262348, guid: 94a9ebf5cb612bb4eba455d9a92fc869, type: 3}

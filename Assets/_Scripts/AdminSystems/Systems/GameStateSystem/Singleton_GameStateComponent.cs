@@ -12,7 +12,6 @@ public class Singleton_GameStateComponent : MonoBehaviour
     [Header("Prefabs")]
     public GameObject m_Bakery;
     public GameObject m_MainMenu;
-    public GameObject m_QuestMaking;
     public GameObject m_CookieMaking;
     public GameObject m_BakeryNight;
 }

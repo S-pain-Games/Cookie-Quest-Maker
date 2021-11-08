@@ -22,7 +22,7 @@ namespace CQM.Gameplay
         private UIPieceStorageManager _pieceStorage;
 
         private QuestMakingSystem _questMakingSys;
-        private Event<GameStateSystem.State> _changeGameStateCmd;
+        private EventVoid _toggleQuestMakingUI;
 
         public EventSys m_evtSys = new EventSys();
 
@@ -33,7 +33,7 @@ namespace CQM.Gameplay
         {
             _questMakingSys = Admin.Global.Systems.m_QuestMakerSystem;
             var evtSys = Admin.Global.EventSystem;
-            _changeGameStateCmd = evtSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
+            _toggleQuestMakingUI = evtSys.GetCommandByName<EventVoid>("ui_sys", "toggle_quest_making");
 
             _storySelection.Initialize(m_evtSys);
             _pieceStorage.Initialize(m_evtSys);
@@ -89,7 +89,7 @@ namespace CQM.Gameplay
             if (_questMakingSys.TryFinishMakingQuest())
             {
                 _questBuilding.ConsumeQuest();
-                _changeGameStateCmd.Invoke(GameStateSystem.State.Bakery);
+                _toggleQuestMakingUI.Invoke();
             }
         }
 
