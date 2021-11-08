@@ -30,6 +30,7 @@ namespace CQM.Gameplay
         private EventSys _evtSys;
         private Event<ID> _onStorySelectedCallback;
 
+
         public void Initialize(EventSys evtSys)
         {
             _evtSys = evtSys;
@@ -63,14 +64,17 @@ namespace CQM.Gameplay
             int numOngoingStories = _ongoingStories.Count;
             if (numOngoingStories <= 0)
             {
-                _cardContents.sprite = null;
+                _cardContents.gameObject.SetActive(false);
                 _cardTitle.text = "Out of Stories";
             }
             else
             {
+                _cardContents.gameObject.SetActive(true);
                 _currentStoryIndex = Mathf.Clamp(_currentStoryIndex, 0, numOngoingStories - 1);
                 ID storyId = _ongoingStories[_currentStoryIndex];
                 var data = _storyUIComponents[storyId];
+
+                _cardContents.sprite = data.m_Sprite;
                 _cardTitle.text = data.m_Title;
             }
         }

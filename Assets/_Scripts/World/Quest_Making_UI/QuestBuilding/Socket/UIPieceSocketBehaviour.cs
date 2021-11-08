@@ -15,6 +15,7 @@ public class UIPieceSocketBehaviour : MonoBehaviour
     public QuestPieceFunctionalComponent m_CurrentPiece;
 
     private Color m_BaseColor;
+    [SerializeField] private Color m_HighlightColor;
 
     private void Start()
     {
@@ -49,7 +50,7 @@ public class UIPieceSocketBehaviour : MonoBehaviour
 
     public void OnMatchingPieceSelectedHandle()
     {
-        GetComponent<Image>().color = Color.blue;
+        GetComponent<Image>().color = m_HighlightColor;
     }
 
     public void OnMatchingPieceUnselectedHandle()
