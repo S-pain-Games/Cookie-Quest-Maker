@@ -76,7 +76,18 @@ namespace CQM.Databases
             m_ComponentContainers.Add(typeof(StoryInfoComponent), m_StoriesInfo);
             m_ComponentContainers.Add(typeof(StoryUIDataComponent), m_StoriesUI);
             m_ComponentContainers.Add(typeof(StoryRepercusionComponent), m_Repercusions);
+
             m_ComponentContainers.Add(typeof(RecipeDataComponent), m_RecipeData);
+            m_ComponentContainers.Add(typeof(CookieDataComponent), m_CookieData);
+
+            m_ComponentContainers.Add(typeof(QuestPieceFunctionalComponent), m_QuestPieceFunctionalComponents);
+            m_ComponentContainers.Add(typeof(UIQuestPieceComponent), m_QuestPieceUIComponent);
+            m_ComponentContainers.Add(typeof(QuestPiecePrefabComponent), m_QuestPiecePrefabComponent);
+
+            m_ComponentContainers.Add(typeof(CharacterComponent), m_CharacterComponents);
+            m_ComponentContainers.Add(typeof(DialogueCharacterComponent), m_CharacterDialogueComponents);
+
+            m_ComponentContainers.Add(typeof(LocationComponent), m_LocationsComponents);
         }
 
         public ComponentsContainer<T> GetComponentContainer<T>()
@@ -84,9 +95,10 @@ namespace CQM.Databases
             return m_ComponentContainers[typeof(T)] as ComponentsContainer<T>;
         }
 
-        public T GetSingletonComponent<T>() where T : class
-        {
-            return m_SingletonComponents[typeof(T)] as T;
-        }
+        // TODO:
+        //public T GetSingletonComponent<T>() where T : class
+        //{
+        //    return m_SingletonComponents[typeof(T)] as T;
+        //}
     }
 }
