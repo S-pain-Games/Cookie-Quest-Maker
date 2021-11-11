@@ -47,7 +47,7 @@ public class UIPieceSelection : MonoBehaviour
 
         // Prepare start position for UI Pieces
         Vector3 pos = Vector3.zero;
-        pos.y += 150;
+        pos.y += 100;
 
         // Loop over all story targets
         if (pieceType == QuestPieceFunctionalComponent.PieceType.Target)

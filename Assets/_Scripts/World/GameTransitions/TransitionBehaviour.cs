@@ -33,7 +33,7 @@ public class TransitionBehaviour : MonoBehaviour
 
         var wait = new WaitForSeconds(0.005f);
 
-        while ((_fadeScreen.transform.position - _endPos.position).magnitude > 50f)
+        while ((_fadeScreen.transform.position - _endPos.position).magnitude > 0.01f)
         {
             _fadeScreen.transform.position = Vector3.Lerp(_fadeScreen.transform.position, _endPos.position, 0.1f);
             yield return wait;
@@ -48,7 +48,7 @@ public class TransitionBehaviour : MonoBehaviour
 
         var wait = new WaitForSeconds(0.005f);
 
-        while ((_fadeScreen.transform.position - _midPos.position).magnitude > 50f)
+        while ((_fadeScreen.transform.position - _midPos.position).magnitude > 0.01f)
         {
             _fadeScreen.transform.position = Vector3.Lerp(_fadeScreen.transform.position, _midPos.position, 0.1f);
             yield return wait;
