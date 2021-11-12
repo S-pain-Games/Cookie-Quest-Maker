@@ -15,16 +15,18 @@ namespace CQM.Gameplay
         public event Action<QuestPieceFunctionalComponent> OnRemoveQuestPiece;
         public event Action OnFinishQuest;
 
-        public RectTransform pieceSpawnPosition;
-        [SerializeField]
-        private Button finishQuestButton;
+        public Transform pieceSpawnPosition;
+        [SerializeField] private Button finishQuestButton;
 
         [SerializeField] private List<UIPieceSocketBehaviour> _sockets = new List<UIPieceSocketBehaviour>();
         [SerializeField] private List<UIQuestPieceBehaviour> _questPieces = new List<UIQuestPieceBehaviour>();
+        
 
+        // Global Systems Events
         private Event<ItemData> _addPieceCmd;
         private Event<ItemData> _removePieceCmd;
 
+        // Local UI Events
         private EventSys _evtSys;
         private Event<ID> _onUsePiece;
         private Canvas _canvas;
@@ -32,6 +34,7 @@ namespace CQM.Gameplay
         private ComponentsContainer<QuestPieceFunctionalComponent> _questPieceFunctionalComponents;
         private ComponentsContainer<UIQuestPieceComponent> _questPieceUIComponents;
         private ComponentsContainer<QuestPiecePrefabComponent> _questPrefabComponents;
+
 
         public void Initialize(EventSys evtSys, Canvas canvas)
         {
@@ -131,7 +134,7 @@ namespace CQM.Gameplay
             _questPieces.Clear();
         }
 
-        public void SpawnPiece(ID pieceID)
+        private void SpawnPiece(ID pieceID)
         {
             var questPiece = _questPieceFunctionalComponents[pieceID];
             var uiData = _questPieceUIComponents[pieceID];

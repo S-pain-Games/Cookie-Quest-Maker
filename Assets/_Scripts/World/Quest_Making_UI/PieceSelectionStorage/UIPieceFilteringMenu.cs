@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace CQM.Gameplay
 {
-    public class PieceFilteringMenu : MonoBehaviour
+    public class UIPieceFilteringMenu : MonoBehaviour
     {
         public event Action<QuestPieceFunctionalComponent.PieceType> OnFilterSelected;
 

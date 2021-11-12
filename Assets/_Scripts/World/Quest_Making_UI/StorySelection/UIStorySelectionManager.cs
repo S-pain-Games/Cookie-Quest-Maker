@@ -22,6 +22,7 @@ namespace CQM.Gameplay
         [SerializeField] private Image _cardContents;
         [SerializeField] private TextMeshProUGUI _cardTitle;
 
+
         private List<ID> _ongoingStories;
         private ComponentsContainer<StoryUIDataComponent> _storyUIComponents;
 

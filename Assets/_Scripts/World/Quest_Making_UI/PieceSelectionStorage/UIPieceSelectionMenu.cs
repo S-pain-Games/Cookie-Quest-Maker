@@ -9,7 +9,7 @@ using CQM.Databases;
 using CQM.Components;
 
 // Handles the UI that shows all the available pieces of the selected type
-public class UIPieceSelection : MonoBehaviour
+public class UIPieceSelectionMenu : MonoBehaviour
 {
     // Use Piece Handling
     public event Action<ID> OnUsePiece;
@@ -29,7 +29,7 @@ public class UIPieceSelection : MonoBehaviour
 
     private void OnEnable()
     {
-        Clear();
+        ClearSelectablePieces();
         _usePieceButton.onClick.AddListener(UsePieceButton_OnClick);
     }
 
@@ -38,13 +38,13 @@ public class UIPieceSelection : MonoBehaviour
         _usePieceButton.onClick.RemoveListener(UsePieceButton_OnClick);
     }
 
-    private void Clear()
+    private void ClearSelectablePieces()
     {
         m_IsAPieceSelected = false;
         _uiSelectedPieceView.Clear();
     }
 
-    public void Refresh(QuestPieceFunctionalComponent.PieceType pieceType)
+    public void RefreshSelectablePieces(QuestPieceFunctionalComponent.PieceType pieceType)
     {
         // Delete previous elements
         for (int i = m_Elements.Count - 1; i >= 0; i--)
@@ -114,13 +114,14 @@ public class UIPieceSelection : MonoBehaviour
 
     public void UsePieceButton_OnClick()
     {
-        if(m_IsAPieceSelected)
+        if (m_IsAPieceSelected)
             OnUsePiece?.Invoke(m_SelectedPieceID);
     }
 
     [Serializable]
     private class UISelectedPieceView
     {
+        [SerializeField] private GameObject _gameObject;
         [SerializeField] private Image _image;
         [SerializeField] private TextMeshProUGUI _nameTextComp;
         [SerializeField] private TextMeshProUGUI _descTextComp;
@@ -128,6 +129,9 @@ public class UIPieceSelection : MonoBehaviour
 
         public void UpdateUI(Sprite sprite, string name, string description)
         {
+            if(!_gameObject.activeInHierarchy)
+                _gameObject.SetActive(true);
+
             _image.color = Color.white;
             _image.sprite = sprite;
             _nameTextComp.text = name;
@@ -136,6 +140,7 @@ public class UIPieceSelection : MonoBehaviour
 
         public void Clear()
         {
+            _gameObject.SetActive(false);
             _image.sprite = null;
             _image.color = new Color(0, 0, 0, 0);
             _nameTextComp.text = "";
