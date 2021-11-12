@@ -217,7 +217,7 @@ namespace CQM.Databases
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
                 "Una decisión interesante la que has tomado. Sin duda traerá buenos resultados." });
 
-            AddStorySelectionUIData("Wolves Party");
+            AddStorySelectionUIData("El Problema del Alcalde");
 
             FinishCreatingStory();
 
@@ -310,6 +310,10 @@ namespace CQM.Databases
                 "Aunque no tiene pinta de que vaya a ocurrir. Una pena."});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
                 "Por muy dura que sea una situación, siempre hay que buscar una solución pacífica." });
+
+            AddStorySelectionUIData("Falta de Lactosa");
+
+            FinishCreatingStory();
 
             //STORY 3
             StartCreatingStory("sacred_egg", "El Huevo Sagrado", new List<string>() {
@@ -405,6 +409,9 @@ namespace CQM.Databases
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
                 "Debo reconocer que tus decisiones son bastante interesantes. Me intriga saber qué haras a continuación." });
 
+            AddStorySelectionUIData("El Huevo Sagrado");
+
+            FinishCreatingStory();
         }
 
         public void SyncReferences()

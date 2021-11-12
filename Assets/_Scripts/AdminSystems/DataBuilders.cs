@@ -23,7 +23,9 @@ namespace CQM.Databases
             BuildStories(c, storyBuilder);
             BuildLocalization(c, localizationBuilder);
 
-            c.m_StoriesToStart.Add(new ID("mayors_wolves"));
+            c.m_StoriesToStart.Add(new ID("mayor_problem"));
+            c.m_StoriesToStart.Add(new ID("out_of_lactose"));
+            c.m_StoriesToStart.Add(new ID("sacred_egg"));
 
             c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("plain_cookie"));
             c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("attack"));

@@ -152,6 +152,35 @@ MonoBehaviour:
         m_NameID: attack
         m_ID: -143907494
         m_Initialized: 1
+  - inspectorPieceName: dialogate
+    cookieData:
+      m_ParentID:
+        m_NameID: dialogate
+        m_ID: -949047606
+        m_Initialized: 1
+      m_CookieName: Dialogate
+      m_CookieDescription: Very Assistive
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ID:
+        m_NameID: dialogate
+        m_ID: -949047606
+        m_Initialized: 1
+      m_RecipeName: Dialogate Recipe
+      m_RecipeDescription: Very Assistive
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 50
+      m_IngredientsList:
+      - m_ItemID:
+          m_NameID: vanilla
+          m_ID: -1372670123
+          m_Initialized: 1
+        m_Amount: 1
+      m_PieceID:
+        m_NameID: dialogate
+        m_ID: -949047606
+        m_Initialized: 1
   - inspectorPieceName: assist
     cookieData:
       m_ParentID:
@@ -180,6 +209,93 @@ MonoBehaviour:
       m_PieceID:
         m_NameID: assist
         m_ID: 223879643
+        m_Initialized: 1
+  - inspectorPieceName: look
+    cookieData:
+      m_ParentID:
+        m_NameID: look
+        m_ID: 963906251
+        m_Initialized: 1
+      m_CookieName: Look
+      m_CookieDescription: Very Assistive
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ID:
+        m_NameID: look
+        m_ID: 963906251
+        m_Initialized: 1
+      m_RecipeName: Look Recipe
+      m_RecipeDescription: Very Assistive
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 50
+      m_IngredientsList:
+      - m_ItemID:
+          m_NameID: vanilla
+          m_ID: -1372670123
+          m_Initialized: 1
+        m_Amount: 1
+      m_PieceID:
+        m_NameID: look
+        m_ID: 963906251
+        m_Initialized: 1
+  - inspectorPieceName: stare
+    cookieData:
+      m_ParentID:
+        m_NameID: stare
+        m_ID: -1436242079
+        m_Initialized: 1
+      m_CookieName: Stare
+      m_CookieDescription: Very Assistive
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ID:
+        m_NameID: stare
+        m_ID: -1436242079
+        m_Initialized: 1
+      m_RecipeName: Stare Recipe
+      m_RecipeDescription: Very Assistive
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 50
+      m_IngredientsList:
+      - m_ItemID:
+          m_NameID: vanilla
+          m_ID: -1372670123
+          m_Initialized: 1
+        m_Amount: 1
+      m_PieceID:
+        m_NameID: stare
+        m_ID: -1436242079
+        m_Initialized: 1
+  - inspectorPieceName: steal
+    cookieData:
+      m_ParentID:
+        m_NameID: steal
+        m_ID: 1742979855
+        m_Initialized: 1
+      m_CookieName: Steal
+      m_CookieDescription: Very Assistive
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ID:
+        m_NameID: steal
+        m_ID: 1742979855
+        m_Initialized: 1
+      m_RecipeName: Steal Recipe
+      m_RecipeDescription: Very Assistive
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 50
+      m_IngredientsList:
+      - m_ItemID:
+          m_NameID: vanilla
+          m_ID: -1372670123
+          m_Initialized: 1
+        m_Amount: 1
+      m_PieceID:
+        m_NameID: steal
+        m_ID: 1742979855
         m_Initialized: 1
   - inspectorPieceName: baseball_bat
     cookieData:
@@ -210,6 +326,64 @@ MonoBehaviour:
         m_NameID: baseball_bat
         m_ID: -673659770
         m_Initialized: 1
+  - inspectorPieceName: scissor
+    cookieData:
+      m_ParentID:
+        m_NameID: scissor
+        m_ID: 539109376
+        m_Initialized: 1
+      m_CookieName: Scissor
+      m_CookieDescription: Very Bat
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ID:
+        m_NameID: scissor
+        m_ID: 539109376
+        m_Initialized: 1
+      m_RecipeName: Scissor Recipe
+      m_RecipeDescription: Desc
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 50
+      m_IngredientsList:
+      - m_ItemID:
+          m_NameID: chocolate
+          m_ID: -965336208
+          m_Initialized: 1
+        m_Amount: 2
+      m_PieceID:
+        m_NameID: scissor
+        m_ID: 539109376
+        m_Initialized: 1
+  - inspectorPieceName: flip_flops
+    cookieData:
+      m_ParentID:
+        m_NameID: flip_flops
+        m_ID: 738388376
+        m_Initialized: 1
+      m_CookieName: Flip Flops
+      m_CookieDescription: Very Bat
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ID:
+        m_NameID: flip_flops
+        m_ID: 738388376
+        m_Initialized: 1
+      m_RecipeName: Flip Flops Recipe
+      m_RecipeDescription: Desc
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 50
+      m_IngredientsList:
+      - m_ItemID:
+          m_NameID: chocolate
+          m_ID: -965336208
+          m_Initialized: 1
+        m_Amount: 2
+      m_PieceID:
+        m_NameID: flip_flops
+        m_ID: 738388376
+        m_Initialized: 1
   - inspectorPieceName: cake
     cookieData:
       m_ParentID:
@@ -224,7 +398,7 @@ MonoBehaviour:
         m_NameID: cake
         m_ID: -1966748430
         m_Initialized: 1
-      m_RecipeName: Grandma's Plain Cookie Recipe
+      m_RecipeName: Cake Recipe
       m_RecipeDescription: Desc
       m_Image: {fileID: 0}
       m_ReputationTypePrice: 0
@@ -244,6 +418,142 @@ MonoBehaviour:
         m_NameID: cake
         m_ID: -1966748430
         m_Initialized: 1
+  - inspectorPieceName: violently
+    cookieData:
+      m_ParentID:
+        m_NameID: violently
+        m_ID: -1715915298
+        m_Initialized: 1
+      m_CookieName: Violently
+      m_CookieDescription: Very Bat
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ID:
+        m_NameID: violently
+        m_ID: -1715915298
+        m_Initialized: 1
+      m_RecipeName: Violently Recipe
+      m_RecipeDescription: Desc
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 50
+      m_IngredientsList:
+      - m_ItemID:
+          m_NameID: chocolate
+          m_ID: -965336208
+          m_Initialized: 1
+        m_Amount: 2
+      - m_ItemID:
+          m_NameID: vanilla
+          m_ID: -1372670123
+          m_Initialized: 1
+        m_Amount: 2
+      m_PieceID:
+        m_NameID: violently
+        m_ID: -1715915298
+        m_Initialized: 1
+  - inspectorPieceName: brutally
+    cookieData:
+      m_ParentID:
+        m_NameID: brutally
+        m_ID: 83815085
+        m_Initialized: 1
+      m_CookieName: Brutally
+      m_CookieDescription: Very Bat
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ID:
+        m_NameID: brutally
+        m_ID: 83815085
+        m_Initialized: 1
+      m_RecipeName: Brutally Recipe
+      m_RecipeDescription: Desc
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 50
+      m_IngredientsList:
+      - m_ItemID:
+          m_NameID: chocolate
+          m_ID: -965336208
+          m_Initialized: 1
+        m_Amount: 2
+      - m_ItemID:
+          m_NameID: vanilla
+          m_ID: -1372670123
+          m_Initialized: 1
+        m_Amount: 2
+      m_PieceID:
+        m_NameID: brutally
+        m_ID: 83815085
+        m_Initialized: 1
+  - inspectorPieceName: kindly
+    cookieData:
+      m_ParentID:
+        m_NameID: kindly
+        m_ID: 2072750721
+        m_Initialized: 1
+      m_CookieName: Kindly
+      m_CookieDescription: Very Bat
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ID:
+        m_NameID: kindly
+        m_ID: 2072750721
+        m_Initialized: 1
+      m_RecipeName: Kindly Recipe
+      m_RecipeDescription: Desc
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 50
+      m_IngredientsList:
+      - m_ItemID:
+          m_NameID: chocolate
+          m_ID: -965336208
+          m_Initialized: 1
+        m_Amount: 2
+      - m_ItemID:
+          m_NameID: vanilla
+          m_ID: -1372670123
+          m_Initialized: 1
+        m_Amount: 2
+      m_PieceID:
+        m_NameID: kindly
+        m_ID: 2072750721
+        m_Initialized: 1
+  - inspectorPieceName: convincingly
+    cookieData:
+      m_ParentID:
+        m_NameID: convincingly
+        m_ID: 1186496505
+        m_Initialized: 1
+      m_CookieName: Convincingly
+      m_CookieDescription: Very Bat
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ID:
+        m_NameID: convincingly
+        m_ID: 1186496505
+        m_Initialized: 1
+      m_RecipeName: Convincingly Recipe
+      m_RecipeDescription: Desc
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 50
+      m_IngredientsList:
+      - m_ItemID:
+          m_NameID: chocolate
+          m_ID: -965336208
+          m_Initialized: 1
+        m_Amount: 2
+      - m_ItemID:
+          m_NameID: vanilla
+          m_ID: -1372670123
+          m_Initialized: 1
+        m_Amount: 2
+      m_PieceID:
+        m_NameID: convincingly
+        m_ID: 1186496505
+        m_Initialized: 1
   - inspectorPieceName: mayor
     cookieData:
       m_ParentID:
@@ -258,15 +568,135 @@ MonoBehaviour:
         m_NameID: mayor
         m_ID: 996742298
         m_Initialized: 1
-      m_RecipeName: Grandma's Plain Cookie Recipe
-      m_RecipeDescription: Desc
+      m_RecipeName: Unnamed
+      m_RecipeDescription: No description
       m_Image: {fileID: 0}
       m_ReputationTypePrice: 0
-      m_Price: 50
+      m_Price: 0
       m_IngredientsList: []
       m_PieceID:
         m_NameID: mayor
         m_ID: 996742298
+        m_Initialized: 1
+  - inspectorPieceName: meri
+    cookieData:
+      m_ParentID:
+        m_NameID: meri
+        m_ID: -918260377
+        m_Initialized: 1
+      m_CookieName: Mery
+      m_CookieDescription: Very Bat
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ID:
+        m_NameID: meri
+        m_ID: -918260377
+        m_Initialized: 1
+      m_RecipeName: Unnamed
+      m_RecipeDescription: No description
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 0
+      m_IngredientsList: []
+      m_PieceID:
+        m_NameID: meri
+        m_ID: -918260377
+        m_Initialized: 1
+  - inspectorPieceName: canela
+    cookieData:
+      m_ParentID:
+        m_NameID: canela
+        m_ID: -619351516
+        m_Initialized: 1
+      m_CookieName: Canela
+      m_CookieDescription: Very Bat
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ID:
+        m_NameID: canela
+        m_ID: -619351516
+        m_Initialized: 1
+      m_RecipeName: Unnamed
+      m_RecipeDescription: No description
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 0
+      m_IngredientsList: []
+      m_PieceID:
+        m_NameID: canela
+        m_ID: -619351516
+        m_Initialized: 1
+  - inspectorPieceName: johny_setas
+    cookieData:
+      m_ParentID:
+        m_NameID: johny_setas
+        m_ID: -840848411
+        m_Initialized: 1
+      m_CookieName: Er Johny el setas
+      m_CookieDescription: Very Bat
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ID:
+        m_NameID: johny_setas
+        m_ID: -840848411
+        m_Initialized: 1
+      m_RecipeName: Unnamed
+      m_RecipeDescription: No description
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 0
+      m_IngredientsList: []
+      m_PieceID:
+        m_NameID: johny_setas
+        m_ID: -840848411
+        m_Initialized: 1
+  - inspectorPieceName: miss_chocolate
+    cookieData:
+      m_ParentID:
+        m_NameID: miss_chocolate
+        m_ID: -370492881
+        m_Initialized: 1
+      m_CookieName: Miss Chocolate
+      m_CookieDescription: Very Bat
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ID:
+        m_NameID: miss_chocolate
+        m_ID: -370492881
+        m_Initialized: 1
+      m_RecipeName: Unnamed
+      m_RecipeDescription: No description
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 0
+      m_IngredientsList: []
+      m_PieceID:
+        m_NameID: miss_chocolate
+        m_ID: -370492881
+        m_Initialized: 1
+  - inspectorPieceName: mantecas
+    cookieData:
+      m_ParentID:
+        m_NameID: mantecas
+        m_ID: 2085496002
+        m_Initialized: 1
+      m_CookieName: El Mantecas
+      m_CookieDescription: Very Bat
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ID:
+        m_NameID: mantecas
+        m_ID: 2085496002
+        m_Initialized: 1
+      m_RecipeName: Unnamed
+      m_RecipeDescription: No description
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 0
+      m_IngredientsList: []
+      m_PieceID:
+        m_NameID: mantecas
+        m_ID: 2085496002
         m_Initialized: 1
   - inspectorPieceName: wolves
     cookieData:
@@ -274,7 +704,7 @@ MonoBehaviour:
         m_NameID: wolves
         m_ID: -1938852922
         m_Initialized: 1
-      m_CookieName: Wolves
+      m_CookieName: Lobos
       m_CookieDescription: Very Bat
       m_Image: {fileID: 0}
     recipeData:
@@ -282,15 +712,63 @@ MonoBehaviour:
         m_NameID: wolves
         m_ID: -1938852922
         m_Initialized: 1
-      m_RecipeName: Grandma's Plain Cookie Recipe
-      m_RecipeDescription: Desc
+      m_RecipeName: Unnamed
+      m_RecipeDescription: No description
       m_Image: {fileID: 0}
       m_ReputationTypePrice: 0
-      m_Price: 50
+      m_Price: 0
       m_IngredientsList: []
       m_PieceID:
         m_NameID: wolves
         m_ID: -1938852922
+        m_Initialized: 1
+  - inspectorPieceName: rats
+    cookieData:
+      m_ParentID:
+        m_NameID: rats
+        m_ID: -1872639626
+        m_Initialized: 1
+      m_CookieName: Ratas
+      m_CookieDescription: Very Bat
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ID:
+        m_NameID: rats
+        m_ID: -1872639626
+        m_Initialized: 1
+      m_RecipeName: Unnamed
+      m_RecipeDescription: No description
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 0
+      m_IngredientsList: []
+      m_PieceID:
+        m_NameID: rats
+        m_ID: -1872639626
+        m_Initialized: 1
+  - inspectorPieceName: vacas
+    cookieData:
+      m_ParentID:
+        m_NameID: vacas
+        m_ID: 190186940
+        m_Initialized: 1
+      m_CookieName: Vacas
+      m_CookieDescription: Deep Mooooo
+      m_Image: {fileID: 0}
+    recipeData:
+      m_ID:
+        m_NameID: vacas
+        m_ID: 190186940
+        m_Initialized: 1
+      m_RecipeName: Unnamed
+      m_RecipeDescription: No description
+      m_Image: {fileID: 0}
+      m_ReputationTypePrice: 0
+      m_Price: 0
+      m_IngredientsList: []
+      m_PieceID:
+        m_NameID: vacas
+        m_ID: 190186940
         m_Initialized: 1
   m_QuestPieceFunctionalComponents:
   - m_ID:
@@ -314,8 +792,40 @@ MonoBehaviour:
     - m_Type: 0
       m_Value: 1
   - m_ID:
+      m_NameID: dialogate
+      m_ID: -949047606
+      m_Initialized: 1
+    m_Type: 0
+    m_Tags:
+    - m_Type: 2
+      m_Value: 1
+  - m_ID:
       m_NameID: assist
       m_ID: 223879643
+      m_Initialized: 1
+    m_Type: 0
+    m_Tags:
+    - m_Type: 2
+      m_Value: 1
+  - m_ID:
+      m_NameID: look
+      m_ID: 963906251
+      m_Initialized: 1
+    m_Type: 0
+    m_Tags:
+    - m_Type: 2
+      m_Value: 1
+  - m_ID:
+      m_NameID: stare
+      m_ID: -1436242079
+      m_Initialized: 1
+    m_Type: 0
+    m_Tags:
+    - m_Type: 2
+      m_Value: 1
+  - m_ID:
+      m_NameID: steal
+      m_ID: 1742979855
       m_Initialized: 1
     m_Type: 0
     m_Tags:
@@ -332,8 +842,68 @@ MonoBehaviour:
     - m_Type: 1
       m_Value: 1
   - m_ID:
+      m_NameID: scissor
+      m_ID: 539109376
+      m_Initialized: 1
+    m_Type: 3
+    m_Tags:
+    - m_Type: 0
+      m_Value: 2
+    - m_Type: 1
+      m_Value: 1
+  - m_ID:
+      m_NameID: flip_flops
+      m_ID: 738388376
+      m_Initialized: 1
+    m_Type: 3
+    m_Tags:
+    - m_Type: 0
+      m_Value: 2
+    - m_Type: 1
+      m_Value: 1
+  - m_ID:
       m_NameID: cake
       m_ID: -1966748430
+      m_Initialized: 1
+    m_Type: 3
+    m_Tags:
+    - m_Type: 1
+      m_Value: 2
+    - m_Type: 2
+      m_Value: 1
+  - m_ID:
+      m_NameID: violently
+      m_ID: -1715915298
+      m_Initialized: 1
+    m_Type: 3
+    m_Tags:
+    - m_Type: 1
+      m_Value: 2
+    - m_Type: 2
+      m_Value: 1
+  - m_ID:
+      m_NameID: brutally
+      m_ID: 83815085
+      m_Initialized: 1
+    m_Type: 3
+    m_Tags:
+    - m_Type: 1
+      m_Value: 2
+    - m_Type: 2
+      m_Value: 1
+  - m_ID:
+      m_NameID: kindly
+      m_ID: 2072750721
+      m_Initialized: 1
+    m_Type: 3
+    m_Tags:
+    - m_Type: 1
+      m_Value: 2
+    - m_Type: 2
+      m_Value: 1
+  - m_ID:
+      m_NameID: convincingly
+      m_ID: 1186496505
       m_Initialized: 1
     m_Type: 3
     m_Tags:
@@ -348,6 +918,36 @@ MonoBehaviour:
     m_Type: 1
     m_Tags: []
   - m_ID:
+      m_NameID: meri
+      m_ID: -918260377
+      m_Initialized: 1
+    m_Type: 1
+    m_Tags: []
+  - m_ID:
+      m_NameID: canela
+      m_ID: -619351516
+      m_Initialized: 1
+    m_Type: 1
+    m_Tags: []
+  - m_ID:
+      m_NameID: johny_setas
+      m_ID: -840848411
+      m_Initialized: 1
+    m_Type: 1
+    m_Tags: []
+  - m_ID:
+      m_NameID: miss_chocolate
+      m_ID: -370492881
+      m_Initialized: 1
+    m_Type: 1
+    m_Tags: []
+  - m_ID:
+      m_NameID: mantecas
+      m_ID: 2085496002
+      m_Initialized: 1
+    m_Type: 1
+    m_Tags: []
+  - m_ID:
       m_NameID: wolves
       m_ID: -1938852922
       m_Initialized: 1
@@ -355,8 +955,21 @@ MonoBehaviour:
     m_Tags:
     - m_Type: 0
       m_Value: 1
+  - m_ID:
+      m_NameID: rats
+      m_ID: -1872639626
+      m_Initialized: 1
+    m_Type: 1
+    m_Tags: []
+  - m_ID:
+      m_NameID: vacas
+      m_ID: 190186940
+      m_Initialized: 1
+    m_Type: 1
+    m_Tags: []
   m_QuestPieceUIComponent:
   - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
     m_Name: Plain Cookie
     m_Description: Very plain
     m_ID:
@@ -364,6 +977,7 @@ MonoBehaviour:
       m_ID: 1473648501
       m_Initialized: 1
   - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
     m_Name: Plain Cookie 2
     m_Description: Very Very plain plain
     m_ID:
@@ -371,6 +985,7 @@ MonoBehaviour:
       m_ID: 390974588
       m_Initialized: 1
   - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
     m_Name: Attack
     m_Description: Very Agressive
     m_ID:
@@ -378,6 +993,15 @@ MonoBehaviour:
       m_ID: -143907494
       m_Initialized: 1
   - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
+    m_Name: Dialogate
+    m_Description: Very Assistive
+    m_ID:
+      m_NameID: dialogate
+      m_ID: -949047606
+      m_Initialized: 1
+  - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
     m_Name: Assist
     m_Description: Very Assistive
     m_ID:
@@ -385,6 +1009,31 @@ MonoBehaviour:
       m_ID: 223879643
       m_Initialized: 1
   - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
+    m_Name: Look
+    m_Description: Very Assistive
+    m_ID:
+      m_NameID: look
+      m_ID: 963906251
+      m_Initialized: 1
+  - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
+    m_Name: Stare
+    m_Description: Very Assistive
+    m_ID:
+      m_NameID: stare
+      m_ID: -1436242079
+      m_Initialized: 1
+  - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
+    m_Name: Steal
+    m_Description: Very Assistive
+    m_ID:
+      m_NameID: steal
+      m_ID: 1742979855
+      m_Initialized: 1
+  - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
     m_Name: Baseball Bat
     m_Description: Very Bat
     m_ID:
@@ -392,13 +1041,63 @@ MonoBehaviour:
       m_ID: -673659770
       m_Initialized: 1
   - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
+    m_Name: Scissor
+    m_Description: Very Bat
+    m_ID:
+      m_NameID: scissor
+      m_ID: 539109376
+      m_Initialized: 1
+  - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
+    m_Name: Flip Flops
+    m_Description: Very Bat
+    m_ID:
+      m_NameID: flip_flops
+      m_ID: 738388376
+      m_Initialized: 1
+  - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
     m_Name: Cake
     m_Description: Very Bat
     m_ID:
       m_NameID: cake
       m_ID: -1966748430
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: 5f6092fe08f678544afddc11f2f3a372, type: 3}
+  - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
+    m_Name: Violently
+    m_Description: Very Bat
+    m_ID:
+      m_NameID: violently
+      m_ID: -1715915298
+      m_Initialized: 1
+  - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
+    m_Name: Brutally
+    m_Description: Very Bat
+    m_ID:
+      m_NameID: brutally
+      m_ID: 83815085
+      m_Initialized: 1
+  - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
+    m_Name: Kindly
+    m_Description: Very Bat
+    m_ID:
+      m_NameID: kindly
+      m_ID: 2072750721
+      m_Initialized: 1
+  - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
+    m_Name: Convincingly
+    m_Description: Very Bat
+    m_ID:
+      m_NameID: convincingly
+      m_ID: 1186496505
+      m_Initialized: 1
+  - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
     m_Name: Mayor
     m_Description: Very Bat
     m_ID:
@@ -406,11 +1105,68 @@ MonoBehaviour:
       m_ID: 996742298
       m_Initialized: 1
   - m_Sprite: {fileID: 0}
-    m_Name: Wolves
+    m_QuestBuildingSprite: {fileID: 0}
+    m_Name: Mery
+    m_Description: Very Bat
+    m_ID:
+      m_NameID: meri
+      m_ID: -918260377
+      m_Initialized: 1
+  - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
+    m_Name: Canela
+    m_Description: Very Bat
+    m_ID:
+      m_NameID: canela
+      m_ID: -619351516
+      m_Initialized: 1
+  - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
+    m_Name: Er Johny el setas
+    m_Description: Very Bat
+    m_ID:
+      m_NameID: johny_setas
+      m_ID: -840848411
+      m_Initialized: 1
+  - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
+    m_Name: Miss Chocolate
+    m_Description: Very Bat
+    m_ID:
+      m_NameID: miss_chocolate
+      m_ID: -370492881
+      m_Initialized: 1
+  - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
+    m_Name: El Mantecas
+    m_Description: Very Bat
+    m_ID:
+      m_NameID: mantecas
+      m_ID: 2085496002
+      m_Initialized: 1
+  - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
+    m_Name: Lobos
     m_Description: Very Bat
     m_ID:
       m_NameID: wolves
       m_ID: -1938852922
+      m_Initialized: 1
+  - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
+    m_Name: Ratas
+    m_Description: Very Bat
+    m_ID:
+      m_NameID: rats
+      m_ID: -1872639626
+      m_Initialized: 1
+  - m_Sprite: {fileID: 0}
+    m_QuestBuildingSprite: {fileID: 0}
+    m_Name: Vacas
+    m_Description: Deep Mooooo
+    m_ID:
+      m_NameID: vacas
+      m_ID: 190186940
       m_Initialized: 1
   m_QuestPiecePrefabComponent:
   - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
@@ -430,8 +1186,28 @@ MonoBehaviour:
       m_Initialized: 1
   - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
     m_ID:
+      m_NameID: dialogate
+      m_ID: -949047606
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
       m_NameID: assist
       m_ID: 223879643
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: look
+      m_ID: 963906251
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: stare
+      m_ID: -1436242079
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: steal
+      m_ID: 1742979855
       m_Initialized: 1
   - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
     m_ID:
@@ -440,8 +1216,38 @@ MonoBehaviour:
       m_Initialized: 1
   - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
     m_ID:
+      m_NameID: scissor
+      m_ID: 539109376
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: flip_flops
+      m_ID: 738388376
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
       m_NameID: cake
       m_ID: -1966748430
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: violently
+      m_ID: -1715915298
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: brutally
+      m_ID: 83815085
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: kindly
+      m_ID: 2072750721
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: convincingly
+      m_ID: 1186496505
       m_Initialized: 1
   - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
     m_ID:
@@ -450,8 +1256,43 @@ MonoBehaviour:
       m_Initialized: 1
   - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
     m_ID:
+      m_NameID: meri
+      m_ID: -918260377
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: canela
+      m_ID: -619351516
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: johny_setas
+      m_ID: -840848411
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: miss_chocolate
+      m_ID: -370492881
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: mantecas
+      m_ID: 2085496002
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
       m_NameID: wolves
       m_ID: -1938852922
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: rats
+      m_ID: -1872639626
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: vacas
+      m_ID: 190186940
       m_Initialized: 1
   m_CookieData:
   - m_ParentID:
@@ -476,10 +1317,38 @@ MonoBehaviour:
     m_CookieDescription: Very Agressive
     m_Image: {fileID: 0}
   - m_ParentID:
+      m_NameID: dialogate
+      m_ID: -949047606
+      m_Initialized: 1
+    m_CookieName: Dialogate
+    m_CookieDescription: Very Assistive
+    m_Image: {fileID: 0}
+  - m_ParentID:
       m_NameID: assist
       m_ID: 223879643
       m_Initialized: 1
     m_CookieName: Assist
+    m_CookieDescription: Very Assistive
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: look
+      m_ID: 963906251
+      m_Initialized: 1
+    m_CookieName: Look
+    m_CookieDescription: Very Assistive
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: stare
+      m_ID: -1436242079
+      m_Initialized: 1
+    m_CookieName: Stare
+    m_CookieDescription: Very Assistive
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: steal
+      m_ID: 1742979855
+      m_Initialized: 1
+    m_CookieName: Steal
     m_CookieDescription: Very Assistive
     m_Image: {fileID: 0}
   - m_ParentID:
@@ -490,10 +1359,52 @@ MonoBehaviour:
     m_CookieDescription: Very Bat
     m_Image: {fileID: 0}
   - m_ParentID:
+      m_NameID: scissor
+      m_ID: 539109376
+      m_Initialized: 1
+    m_CookieName: Scissor
+    m_CookieDescription: Very Bat
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: flip_flops
+      m_ID: 738388376
+      m_Initialized: 1
+    m_CookieName: Flip Flops
+    m_CookieDescription: Very Bat
+    m_Image: {fileID: 0}
+  - m_ParentID:
       m_NameID: cake
       m_ID: -1966748430
       m_Initialized: 1
     m_CookieName: Cake
+    m_CookieDescription: Very Bat
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: violently
+      m_ID: -1715915298
+      m_Initialized: 1
+    m_CookieName: Violently
+    m_CookieDescription: Very Bat
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: brutally
+      m_ID: 83815085
+      m_Initialized: 1
+    m_CookieName: Brutally
+    m_CookieDescription: Very Bat
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: kindly
+      m_ID: 2072750721
+      m_Initialized: 1
+    m_CookieName: Kindly
+    m_CookieDescription: Very Bat
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: convincingly
+      m_ID: 1186496505
+      m_Initialized: 1
+    m_CookieName: Convincingly
     m_CookieDescription: Very Bat
     m_Image: {fileID: 0}
   - m_ParentID:
@@ -504,11 +1415,60 @@ MonoBehaviour:
     m_CookieDescription: Very Bat
     m_Image: {fileID: 0}
   - m_ParentID:
+      m_NameID: meri
+      m_ID: -918260377
+      m_Initialized: 1
+    m_CookieName: Mery
+    m_CookieDescription: Very Bat
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: canela
+      m_ID: -619351516
+      m_Initialized: 1
+    m_CookieName: Canela
+    m_CookieDescription: Very Bat
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: johny_setas
+      m_ID: -840848411
+      m_Initialized: 1
+    m_CookieName: Er Johny el setas
+    m_CookieDescription: Very Bat
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: miss_chocolate
+      m_ID: -370492881
+      m_Initialized: 1
+    m_CookieName: Miss Chocolate
+    m_CookieDescription: Very Bat
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: mantecas
+      m_ID: 2085496002
+      m_Initialized: 1
+    m_CookieName: El Mantecas
+    m_CookieDescription: Very Bat
+    m_Image: {fileID: 0}
+  - m_ParentID:
       m_NameID: wolves
       m_ID: -1938852922
       m_Initialized: 1
-    m_CookieName: Wolves
+    m_CookieName: Lobos
     m_CookieDescription: Very Bat
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: rats
+      m_ID: -1872639626
+      m_Initialized: 1
+    m_CookieName: Ratas
+    m_CookieDescription: Very Bat
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: vacas
+      m_ID: 190186940
+      m_Initialized: 1
+    m_CookieName: Vacas
+    m_CookieDescription: Deep Mooooo
     m_Image: {fileID: 0}
   m_RecipeData:
   - m_ID:
@@ -569,6 +1529,25 @@ MonoBehaviour:
       m_ID: -143907494
       m_Initialized: 1
   - m_ID:
+      m_NameID: dialogate
+      m_ID: -949047606
+      m_Initialized: 1
+    m_RecipeName: Dialogate Recipe
+    m_RecipeDescription: Very Assistive
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 50
+    m_IngredientsList:
+    - m_ItemID:
+        m_NameID: vanilla
+        m_ID: -1372670123
+        m_Initialized: 1
+      m_Amount: 1
+    m_PieceID:
+      m_NameID: dialogate
+      m_ID: -949047606
+      m_Initialized: 1
+  - m_ID:
       m_NameID: assist
       m_ID: 223879643
       m_Initialized: 1
@@ -588,6 +1567,63 @@ MonoBehaviour:
       m_ID: 223879643
       m_Initialized: 1
   - m_ID:
+      m_NameID: look
+      m_ID: 963906251
+      m_Initialized: 1
+    m_RecipeName: Look Recipe
+    m_RecipeDescription: Very Assistive
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 50
+    m_IngredientsList:
+    - m_ItemID:
+        m_NameID: vanilla
+        m_ID: -1372670123
+        m_Initialized: 1
+      m_Amount: 1
+    m_PieceID:
+      m_NameID: look
+      m_ID: 963906251
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: stare
+      m_ID: -1436242079
+      m_Initialized: 1
+    m_RecipeName: Stare Recipe
+    m_RecipeDescription: Very Assistive
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 50
+    m_IngredientsList:
+    - m_ItemID:
+        m_NameID: vanilla
+        m_ID: -1372670123
+        m_Initialized: 1
+      m_Amount: 1
+    m_PieceID:
+      m_NameID: stare
+      m_ID: -1436242079
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: steal
+      m_ID: 1742979855
+      m_Initialized: 1
+    m_RecipeName: Steal Recipe
+    m_RecipeDescription: Very Assistive
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 50
+    m_IngredientsList:
+    - m_ItemID:
+        m_NameID: vanilla
+        m_ID: -1372670123
+        m_Initialized: 1
+      m_Amount: 1
+    m_PieceID:
+      m_NameID: steal
+      m_ID: 1742979855
+      m_Initialized: 1
+  - m_ID:
       m_NameID: baseball_bat
       m_ID: -673659770
       m_Initialized: 1
@@ -607,10 +1643,48 @@ MonoBehaviour:
       m_ID: -673659770
       m_Initialized: 1
   - m_ID:
+      m_NameID: scissor
+      m_ID: 539109376
+      m_Initialized: 1
+    m_RecipeName: Scissor Recipe
+    m_RecipeDescription: Desc
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 50
+    m_IngredientsList:
+    - m_ItemID:
+        m_NameID: chocolate
+        m_ID: -965336208
+        m_Initialized: 1
+      m_Amount: 2
+    m_PieceID:
+      m_NameID: scissor
+      m_ID: 539109376
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: flip_flops
+      m_ID: 738388376
+      m_Initialized: 1
+    m_RecipeName: Flip Flops Recipe
+    m_RecipeDescription: Desc
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 50
+    m_IngredientsList:
+    - m_ItemID:
+        m_NameID: chocolate
+        m_ID: -965336208
+        m_Initialized: 1
+      m_Amount: 2
+    m_PieceID:
+      m_NameID: flip_flops
+      m_ID: 738388376
+      m_Initialized: 1
+  - m_ID:
       m_NameID: cake
       m_ID: -1966748430
       m_Initialized: 1
-    m_RecipeName: Grandma's Plain Cookie Recipe
+    m_RecipeName: Cake Recipe
     m_RecipeDescription: Desc
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
@@ -631,32 +1705,226 @@ MonoBehaviour:
       m_ID: -1966748430
       m_Initialized: 1
   - m_ID:
-      m_NameID: mayor
-      m_ID: 996742298
+      m_NameID: violently
+      m_ID: -1715915298
       m_Initialized: 1
-    m_RecipeName: Grandma's Plain Cookie Recipe
+    m_RecipeName: Violently Recipe
     m_RecipeDescription: Desc
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price: 50
+    m_IngredientsList:
+    - m_ItemID:
+        m_NameID: chocolate
+        m_ID: -965336208
+        m_Initialized: 1
+      m_Amount: 2
+    - m_ItemID:
+        m_NameID: vanilla
+        m_ID: -1372670123
+        m_Initialized: 1
+      m_Amount: 2
+    m_PieceID:
+      m_NameID: violently
+      m_ID: -1715915298
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: brutally
+      m_ID: 83815085
+      m_Initialized: 1
+    m_RecipeName: Brutally Recipe
+    m_RecipeDescription: Desc
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 50
+    m_IngredientsList:
+    - m_ItemID:
+        m_NameID: chocolate
+        m_ID: -965336208
+        m_Initialized: 1
+      m_Amount: 2
+    - m_ItemID:
+        m_NameID: vanilla
+        m_ID: -1372670123
+        m_Initialized: 1
+      m_Amount: 2
+    m_PieceID:
+      m_NameID: brutally
+      m_ID: 83815085
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: kindly
+      m_ID: 2072750721
+      m_Initialized: 1
+    m_RecipeName: Kindly Recipe
+    m_RecipeDescription: Desc
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 50
+    m_IngredientsList:
+    - m_ItemID:
+        m_NameID: chocolate
+        m_ID: -965336208
+        m_Initialized: 1
+      m_Amount: 2
+    - m_ItemID:
+        m_NameID: vanilla
+        m_ID: -1372670123
+        m_Initialized: 1
+      m_Amount: 2
+    m_PieceID:
+      m_NameID: kindly
+      m_ID: 2072750721
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: convincingly
+      m_ID: 1186496505
+      m_Initialized: 1
+    m_RecipeName: Convincingly Recipe
+    m_RecipeDescription: Desc
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 50
+    m_IngredientsList:
+    - m_ItemID:
+        m_NameID: chocolate
+        m_ID: -965336208
+        m_Initialized: 1
+      m_Amount: 2
+    - m_ItemID:
+        m_NameID: vanilla
+        m_ID: -1372670123
+        m_Initialized: 1
+      m_Amount: 2
+    m_PieceID:
+      m_NameID: convincingly
+      m_ID: 1186496505
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: mayor
+      m_ID: 996742298
+      m_Initialized: 1
+    m_RecipeName: Unnamed
+    m_RecipeDescription: No description
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 0
     m_IngredientsList: []
     m_PieceID:
       m_NameID: mayor
       m_ID: 996742298
       m_Initialized: 1
   - m_ID:
+      m_NameID: meri
+      m_ID: -918260377
+      m_Initialized: 1
+    m_RecipeName: Unnamed
+    m_RecipeDescription: No description
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 0
+    m_IngredientsList: []
+    m_PieceID:
+      m_NameID: meri
+      m_ID: -918260377
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: canela
+      m_ID: -619351516
+      m_Initialized: 1
+    m_RecipeName: Unnamed
+    m_RecipeDescription: No description
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 0
+    m_IngredientsList: []
+    m_PieceID:
+      m_NameID: canela
+      m_ID: -619351516
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: johny_setas
+      m_ID: -840848411
+      m_Initialized: 1
+    m_RecipeName: Unnamed
+    m_RecipeDescription: No description
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 0
+    m_IngredientsList: []
+    m_PieceID:
+      m_NameID: johny_setas
+      m_ID: -840848411
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: miss_chocolate
+      m_ID: -370492881
+      m_Initialized: 1
+    m_RecipeName: Unnamed
+    m_RecipeDescription: No description
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 0
+    m_IngredientsList: []
+    m_PieceID:
+      m_NameID: miss_chocolate
+      m_ID: -370492881
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: mantecas
+      m_ID: 2085496002
+      m_Initialized: 1
+    m_RecipeName: Unnamed
+    m_RecipeDescription: No description
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 0
+    m_IngredientsList: []
+    m_PieceID:
+      m_NameID: mantecas
+      m_ID: 2085496002
+      m_Initialized: 1
+  - m_ID:
       m_NameID: wolves
       m_ID: -1938852922
       m_Initialized: 1
-    m_RecipeName: Grandma's Plain Cookie Recipe
-    m_RecipeDescription: Desc
+    m_RecipeName: Unnamed
+    m_RecipeDescription: No description
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 50
+    m_Price: 0
     m_IngredientsList: []
     m_PieceID:
       m_NameID: wolves
       m_ID: -1938852922
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: rats
+      m_ID: -1872639626
+      m_Initialized: 1
+    m_RecipeName: Unnamed
+    m_RecipeDescription: No description
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 0
+    m_IngredientsList: []
+    m_PieceID:
+      m_NameID: rats
+      m_ID: -1872639626
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: vacas
+      m_ID: 190186940
+      m_Initialized: 1
+    m_RecipeName: Unnamed
+    m_RecipeDescription: No description
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price: 0
+    m_IngredientsList: []
+    m_PieceID:
+      m_NameID: vacas
+      m_ID: 190186940
       m_Initialized: 1
   m_DefaultPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
 --- !u!114 &656283503
@@ -674,39 +1942,123 @@ MonoBehaviour:
   m_StoriesList:
   - m_StoryData:
       m_ID:
-        m_NameID: mayors_wolves
-        m_ID: 1004953812
+        m_NameID: mayor_problem
+        m_ID: -600069758
         m_Initialized: 1
-      m_Title: Mayor's Wolves
+      m_Title: El problema del alcalde
       m_IntroductionDialogue:
-      - Intro 1 wolves
+      - "\xDAltimamente una manada de lobos nos est\xE1 causando muchos problemas."
+      - Estos acechan a nuestro ganado y a los comerciantes que quieren llegar al
+        pueblo.
+      - "Si esto sigue as\xED, tendremos que contratar a un cazador profesional,
+        pero nos va a costar una fortuna."
+      - "\xA1No s\xE9 qu\xE9 hacer!"
       m_BranchOptions:
       - m_Condition:
           m_Target:
             m_NameID: mayor
             m_ID: 996742298
             m_Initialized: 1
-          m_Tag: 0
-          m_Value: 1
+          m_Tag: 1
+          m_Value: 3
         m_ResultNPCDialogue:
-        - NPC_Dialogue Harm 1
+        - "\xA1No te lo vas a creer!. Esta misma ma\xF1ana ha venido un cazador a
+          ofrecer sus servicios \xA1Gratis!"
+        - Normalmente suelen pedir bastante dinero para este tipo de problemas con
+          bestias salvajes.
+        - "Pero ha insistido mucho en trabajar de forma gratuita. \xA1Estamos salvados!"
         m_DeitiesResultDialogue:
         - m_DeityID: 1
           m_Dialogue:
-          - Evith mayors wolves Harm dialogue
+          - "\xBFPor qu\xE9 todo el mundo piensa que los lobos son malvados?"
+          - "\xA1Tienen las mismas cualidades que cualquier perro pero con muchas
+            ansias de sangre, son perfectos!"
         - m_DeityID: 0
           m_Dialogue:
-          - Nu mayors wolves Harm dialogue
+          - "Una decisi\xF3n interesante la que has tomado. Sin duda traer\xE1 buenos
+            resultados."
         m_Repercusion:
           m_ID:
-            m_NameID: wolves_alive
-            m_ID: -623225176
+            m_NameID: wolves_gone
+            m_ID: -1222842292
             m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: mayors_wolves
-            m_ID: 1004953812
+            m_NameID: mayor_problem
+            m_ID: -600069758
             m_Initialized: 1
-          m_Name: Wolves Alive
+          m_Name: Wolves Gone
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "\xA1No te lo vas a creer!. Esta misma ma\xF1ana ha venido un cazador a
+          ofrecer sus servicios \xA1Gratis!"
+        - Normalmente suelen pedir bastante dinero para este tipo de problemas con
+          bestias salvajes.
+        - "Pero ha insistido mucho en trabajar de forma gratuita. \xA1Estamos salvados!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFPor qu\xE9 todo el mundo piensa que los lobos son malvados?"
+          - "\xA1Tienen las mismas cualidades que cualquier perro pero con muchas
+            ansias de sangre, son perfectos!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Una decisi\xF3n interesante la que has tomado. Sin duda traer\xE1 buenos
+            resultados."
+        m_Repercusion:
+          m_ID:
+            m_NameID: wolves_gone
+            m_ID: -1222842292
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: mayor_problem
+            m_ID: -600069758
+            m_Initialized: 1
+          m_Name: Wolves Gone
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: wolves
+            m_ID: -1938852922
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "\xBFRecuerdas el asunto de los lobos del otro d\xEDa? Todav\xEDa me cuesta
+          creerlo."
+        - "\xA1La manada entera fue aniquilada de la noche a la ma\xF1ana, no ha
+          quedado ni uno!"
+        - Me alegra que el problema se haya solucionado, pero me preocupa pensar
+          que haya una criatura
+        - "m\xE1s peligrosa que esos lobos merodeando en los alrededores."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFPor qu\xE9 todo el mundo piensa que los lobos son malvados?"
+          - "\xA1Tienen las mismas cualidades que cualquier perro pero con muchas
+            ansias de sangre, son perfectos!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Una decisi\xF3n interesante la que has tomado. Sin duda traer\xE1 buenos
+            resultados."
+        m_Repercusion:
+          m_ID:
+            m_NameID: wolves_gone
+            m_ID: -1222842292
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: mayor_problem
+            m_ID: -600069758
+            m_Initialized: 1
+          m_Name: Wolves Gone
           m_Active: 0
           m_Value: 15
       - m_Condition:
@@ -717,24 +2069,33 @@ MonoBehaviour:
           m_Tag: 1
           m_Value: 1
         m_ResultNPCDialogue:
-        - NPC_Dialogue Convince 1
+        - "Fu\xED esta ma\xF1ana a contratar a un cazador para lidiar con el problema
+          de los lobos."
+        - "Para mi sorpresa, acept\xF3 el contrato por mucho menos de lo que pide
+          normalmente"
+        - "No s\xE9 qu\xE9 lo habr\xE1 llevado a rebajar tanto su precio, pero se
+          lo agradezco."
+        - "Pronto el problema estar\xE1 resuelto."
         m_DeitiesResultDialogue:
         - m_DeityID: 1
           m_Dialogue:
-          - Evith mayors wolves Convince dialogue
+          - "\xBFPor qu\xE9 todo el mundo piensa que los lobos son malvados?"
+          - "\xA1Tienen las mismas cualidades que cualquier perro pero con muchas
+            ansias de sangre, son perfectos!"
         - m_DeityID: 0
           m_Dialogue:
-          - Nu mayors wolves Convince dialogue
+          - "Una decisi\xF3n interesante la que has tomado. Sin duda traer\xE1 buenos
+            resultados."
         m_Repercusion:
           m_ID:
-            m_NameID: wolves_alive
-            m_ID: -623225176
+            m_NameID: wolves_gone
+            m_ID: -1222842292
             m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: mayors_wolves
-            m_ID: 1004953812
+            m_NameID: mayor_problem
+            m_ID: -600069758
             m_Initialized: 1
-          m_Name: Wolves Alive
+          m_Name: Wolves Gone
           m_Active: 0
           m_Value: 15
       - m_Condition:
@@ -745,29 +2106,675 @@ MonoBehaviour:
           m_Tag: 2
           m_Value: 1
         m_ResultNPCDialogue:
-        - NPC_Dialogue Help 1
+        - "Fu\xED esta ma\xF1ana a contratar a un cazador para lidiar con el problema
+          de los lobos."
+        - "Para mi sorpresa, acept\xF3 el contrato por mucho menos de lo que pide
+          normalmente"
+        - "No s\xE9 qu\xE9 lo habr\xE1 llevado a rebajar tanto su precio, pero se
+          lo agradezco."
+        - "Pronto el problema estar\xE1 resuelto."
         m_DeitiesResultDialogue:
         - m_DeityID: 1
           m_Dialogue:
-          - Evith mayors wolves Help dialogue
+          - "\xBFPor qu\xE9 todo el mundo piensa que los lobos son malvados?"
+          - "\xA1Tienen las mismas cualidades que cualquier perro pero con muchas
+            ansias de sangre, son perfectos!"
         - m_DeityID: 0
           m_Dialogue:
-          - Nu mayors wolves Help dialogue
+          - "Una decisi\xF3n interesante la que has tomado. Sin duda traer\xE1 buenos
+            resultados."
         m_Repercusion:
           m_ID:
-            m_NameID: wolves_alive
-            m_ID: -623225176
+            m_NameID: wolves_gone
+            m_ID: -1222842292
             m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: mayors_wolves
-            m_ID: 1004953812
+            m_NameID: mayor_problem
+            m_ID: -600069758
             m_Initialized: 1
-          m_Name: Wolves Alive
+          m_Name: Wolves Gone
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Esto va de mal en peor! \xA1Anoche alguien quer\xEDa matarme! No he
+          identificado al agresor por desgracia."
+        - "Por si el problema de los lobos no fuera suficiente estr\xE9s, ahora tengo
+          que lidiar con m\xE1s presi\xF3n."
+        - Los lobos siguen campando a sus anchas, voy a tener que contratar a un
+          cazador cuanto antes.
+        - Y un par de guardaespaldas, por si fuera poco.
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1Ooooohh! \xA1Eso s\xED que no me lo esperaba! Parece que no me voy
+            a aburrir contigo."
+        - m_DeityID: 0
+          m_Dialogue:
+          - 'Si bien me preocupo por el bienestar de todas las criaturas del mundo. '
+          - "He de decir que los lobos son de las bestias m\xE1s cercanas a los engendros
+            infernales."
+        m_Repercusion:
+          m_ID:
+            m_NameID: wolves_stay
+            m_ID: 2003692602
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: mayor_problem
+            m_ID: -600069758
+            m_Initialized: 1
+          m_Name: Wolves Stay
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: wolves
+            m_ID: -1938852922
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1\xBFC\xF3mo ha ocurrido esto?!, \xA1Los lobos campan a sus anchas
+          cazando a nuestro ganado!"
+        - Han conseguido entrar en algunas granjas durante la noche, de alguna forma.
+        - "Nadie me hac\xEDa caso, pero ten\xEDa raz\xF3n en que estas criaturas
+          son cada vez m\xE1s inteligentes."
+        - Ya he contratado a un profesional para que se haga cargo, pero estaremos
+          endeudados una buena temporada.
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1Ooooohh! \xA1Eso s\xED que no me lo esperaba! Parece que no me voy
+            a aburrir contigo."
+        - m_DeityID: 0
+          m_Dialogue:
+          - 'Si bien me preocupo por el bienestar de todas las criaturas del mundo. '
+          - "He de decir que los lobos son de las bestias m\xE1s cercanas a los engendros
+            infernales."
+        m_Repercusion:
+          m_ID:
+            m_NameID: wolves_stay
+            m_ID: 2003692602
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: mayor_problem
+            m_ID: -600069758
+            m_Initialized: 1
+          m_Name: Wolves Stay
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: wolves
+            m_ID: -1938852922
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Acerca del asunto de los lobos que te coment\xE9 el otro d\xEDa. \xA1Ha
+          ocurrido algo impensable!"
+        - "\xA1Algunos de los lobos han sido domesticados, as\xED de la noche a la
+          ma\xF1ana! \xA1Nadie sabe c\xF3mo!"
+        - Los lobos domesticados ayudan a proteger el ganado, y el resto de los lobos
+          ya no son un problema.
+        - "Ten\xEDa pensado contratar a alguien para lidiar con ellos, pero parece
+          que ya no har\xE1 falta."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFPor qu\xE9 todo el mundo piensa que los lobos son malvados?"
+          - "\xA1Tienen las mismas cualidades que cualquier perro pero con muchas
+            ansias de sangre, son perfectos!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Una decisi\xF3n interesante la que has tomado. Sin duda traer\xE1 buenos
+            resultados."
+        m_Repercusion:
+          m_ID:
+            m_NameID: wolves_gone
+            m_ID: -1222842292
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: mayor_problem
+            m_ID: -600069758
+            m_Initialized: 1
+          m_Name: Wolves Gone
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: wolves
+            m_ID: -1938852922
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xBFTe acuerdas del problema aqu\xE9l de los lobos del que te habl\xE9?
+          \xA1No te lo vas a creer!"
+        - "Se comenta que alguien o algo los ha espantado. \xA1As\xED tal cual, de
+          la noche a la ma\xF1ana!"
+        - "Al final no ha sido necesario contratar a nadie para lidiar con ellos.
+          \xA1As\xED que estamos a salvo!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFPor qu\xE9 todo el mundo piensa que los lobos son malvados?"
+          - "\xA1Tienen las mismas cualidades que cualquier perro pero con muchas
+            ansias de sangre, son perfectos!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Una decisi\xF3n interesante la que has tomado. Sin duda traer\xE1 buenos
+            resultados."
+        m_Repercusion:
+          m_ID:
+            m_NameID: wolves_gone
+            m_ID: -1222842292
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: mayor_problem
+            m_ID: -600069758
+            m_Initialized: 1
+          m_Name: Wolves Gone
           m_Active: 0
           m_Value: 15
       m_AllPossibleTargets:
       - m_NameID: mayor
         m_ID: 996742298
+        m_Initialized: 1
+      - m_NameID: wolves
+        m_ID: -1938852922
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: out_of_lactose
+        m_ID: 1134344292
+        m_Initialized: 1
+      m_Title: Falta de lactosa
+      m_IntroductionDialogue:
+      - "Necesito tener muchos productos l\xE1cteos para vender en la Feria de verano,
+        que se celebrar\xE1 pronto."
+      - El problema es que las vacas del pueblo no dan suficiente leche para producir
+        tanto.
+      - "La sequ\xEDa de este a\xF1o ha disminuido la calidad de los pastos en los
+        alrededores, por lo que no pueden alimentarse lo suficiente."
+      - "Tampoco puedo comprar leche a los dem\xE1s ganaderos, ya que la venden demasiado
+        cara estos d\xEDas."
+      - Quiero hacer algo al respecto, pero no puedo hacer nada.
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: meri
+            m_ID: -918260377
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "Esta misma ma\xF1ana, mientras revisaba a mis vacas, \xA1ha ocurrido algo
+          maravilloso!"
+        - Muchos de mis vecinos ganaderos han decidido ayudarme con los preparativos
+          para la Feria.
+        - "Tambi\xE9n me han dado consejos para fabricar pienso y rutas de pastoreo
+          en tiempos de sequ\xEDa."
+        - "Con esto tendr\xE9 incluso m\xE1s productos de los habituales para la
+          Feria. \xA1No sabes cu\xE1nto me alegro!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "No tengo ninguna necesidad alimenticia, \xA1pero c\xF3mo me comer\xEDa
+            unos buenos filetes!"
+          - Aunque no tiene pinta de que vaya a ocurrir. Una pena.
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Por muy dura que sea una situaci\xF3n, siempre hay que buscar una soluci\xF3n
+            pac\xEDfica."
+        m_Repercusion:
+          m_ID:
+            m_NameID: cows_saved
+            m_ID: -1668179774
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: out_of_lactose
+            m_ID: 1134344292
+            m_Initialized: 1
+          m_Name: Cows Saved
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: meri
+            m_ID: -918260377
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "\xA1Ha ocurrido una tragedia! \xA1La mayor\xEDa de mis vacas han muerto
+          durante la noche!"
+        - "Nadie del pueblo sabe nada al respecto, \xA1\xBFPor qu\xE9 me pasan estas
+          cosas solamente a m\xED?!"
+        - "La Feria va a ser un fracaso, pero al menos podr\xE9 vender bastante carne."
+        - "Eso s\xED, no me har\xE9 responsable de mis actos si descubro al responsable."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Ya veo por donde vas. Me gusta tu forma de pensar, \xA1yo tambi\xE9n
+            hubiera hecho lo mismo!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Muchas decisiones de las que debemos de tomar d\xEDa a d\xEDa no son
+            f\xE1ciles."
+          - Aunque pienso que a veces hay que buscar alternativas a la violencia.
+        m_Repercusion:
+          m_ID:
+            m_NameID: cows_harmed
+            m_ID: 551016836
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: out_of_lactose
+            m_ID: 1134344292
+            m_Initialized: 1
+          m_Name: Cows Harmed
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: meri
+            m_ID: -918260377
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "He hablado con otros ganaderos, y algunos han accedido a venderme algo
+          de leche por un precio algo m\xE1s razonable."
+        - Es raro que bajen los precios en estas fechas, pero no me puedo quejar.
+        - "Aun as\xED deber\xEDa de tener suficiente leche para vender todo lo que
+          me gustar\xEDa en la Feria. \xA1Qu\xE9 alegr\xEDa!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "No tengo ninguna necesidad alimenticia, \xA1pero c\xF3mo me comer\xEDa
+            unos buenos filetes!"
+          - Aunque no tiene pinta de que vaya a ocurrir. Una pena.
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Por muy dura que sea una situaci\xF3n, siempre hay que buscar una soluci\xF3n
+            pac\xEDfica."
+        m_Repercusion:
+          m_ID:
+            m_NameID: cows_saved
+            m_ID: -1668179774
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: out_of_lactose
+            m_ID: 1134344292
+            m_Initialized: 1
+          m_Name: Cows Saved
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: meri
+            m_ID: -918260377
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "De alguna forma mis vacas se escaparon de mi granja en mitad de la noche.
+          \xA1Una locura!"
+        - "Segu\xED sus huellas a trav\xE9s de una arboleda y las encontr\xE9 a todas
+          pastando en un prado verde que no conoc\xEDa."
+        - "Con las vacas mejor alimentadas,  llegar\xE9 a tener suficiente leche
+          para la Feria. \xA1Qu\xE9 alivio!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "No tengo ninguna necesidad alimenticia, \xA1pero c\xF3mo me comer\xEDa
+            unos buenos filetes!"
+          - Aunque no tiene pinta de que vaya a ocurrir. Una pena.
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Por muy dura que sea una situaci\xF3n, siempre hay que buscar una soluci\xF3n
+            pac\xEDfica."
+        m_Repercusion:
+          m_ID:
+            m_NameID: cows_saved
+            m_ID: -1668179774
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: out_of_lactose
+            m_ID: 1134344292
+            m_Initialized: 1
+          m_Name: Cows Saved
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: meri
+            m_ID: -918260377
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Fui esta ma\xF1ana a revisar mis vacas como todas las ma\xF1anas y todav\xEDa
+          me cuesta creerlo."
+        - Alguien ha matado a cuatro de mis vacas durante la noche. Ninguno de mis
+          vecinos sabe nada al respecto.
+        - "Es una tragedia, pero viendo el lado positivo\u2026 las dem\xE1s vacas
+          podr\xE1n comer m\xE1s que antes."
+        - "No podr\xE9 vender todos los l\xE1cteos que me gustar\xEDa, pero al menos
+          podr\xE9 vender algunas carnes."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Ya veo por donde vas. Me gusta tu forma de pensar, \xA1yo tambi\xE9n
+            hubiera hecho lo mismo!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Muchas decisiones de las que debemos de tomar d\xEDa a d\xEDa no son
+            f\xE1ciles."
+          - Aunque pienso que a veces hay que buscar alternativas a la violencia.
+        m_Repercusion:
+          m_ID:
+            m_NameID: cows_harmed
+            m_ID: 551016836
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: out_of_lactose
+            m_ID: 1134344292
+            m_Initialized: 1
+          m_Name: Cows Harmed
+          m_Active: 0
+          m_Value: -15
+      m_AllPossibleTargets:
+      - m_NameID: meri
+        m_ID: -918260377
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: sacred_egg
+        m_ID: 2133386136
+        m_Initialized: 1
+      m_Title: El Huevo Sagrado
+      m_IntroductionDialogue:
+      - "Hace unos d\xEDas estuve de visita por las subastas de la ciudad, buscando
+        artefactos llamativos para decorar mi sal\xF3n, ya sabes."
+      - "El caso es que uno de los art\xEDculos m\xE1s llamativos fue un huevo dorado,
+        que aseguran que es aut\xE9ntico."
+      - "Por supuesto que lo compr\xE9 y me lo traje a casa. Pero desde entonces
+        me han surgido problemas."
+      - Hay un grupo de sectarios de la ciudad que cree firmemente que el huevo es
+        un artefacto sagrado.
+      - "Por supuesto que me negu\xE9 a d\xE1rselo. Pero estoy preocupada de que
+        entren a robar o algo peor."
+      - "\xA1Ese huevo me ha costado una fortuna, y no pienso deshacerme de \xE9l!"
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "\xA1\xBFEl huevo dorado?!, Me he deshecho de \xE9l esta misma ma\xF1ana.
+          \xA1Ya no quiero saber nada de \xE9l!"
+        - "\xA1Ese huevo est\xE1 maldito! No he parado de escuchar ruidos extra\xF1os
+          en toda la noche."
+        - "Y por si fuera poco, toda mi colecci\xF3n estaba patas arriba, \xA1como
+          si fuera obra de un esp\xEDritu!"
+        - "Ese huevo me ha costado un dineral, \xA1pero no pienso poner en peligro
+          mi colecci\xF3n por una baratija como esa!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Quiz\xE1s yo tambi\xE9n deber\xEDa de empezar a coleccionar cachivaches."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Debo reconocer que tus decisiones son bastante interesantes. Me intriga
+            saber qu\xE9 haras a continuaci\xF3n."
+        m_Repercusion:
+          m_ID:
+            m_NameID: golden_egg_gone
+            m_ID: 1896423645
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: sacred_egg
+            m_ID: 2133386136
+            m_Initialized: 1
+          m_Name: Golden Egg Gone
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "Te habl\xE9 el otro d\xEDa sobre el huevo dorado, \xBFno? A\xFAn lo tengo
+          expuesto en mi sal\xF3n."
+        - "S\xE9 que cuesta mucho creerlo, \xA1pero ayer sorprend\xED a un sectario
+          que se hab\xEDa colado en mi finca!"
+        - "Estaba huyendo despavorido como si hubiera visto algo aterrador. Se disculp\xF3
+          conmigo y me prometi\xF3 que nunca jam\xE1s volver\xEDan a molestarme."
+        - "Me alegra que este asunto se haya terminado, pero me pregunto qu\xE9 ser\xE1
+          lo que le aterr\xF3 tanto."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Me pregunto a qu\xE9 deidad venerar\xE1n aquellos cultistas. \xA1Como
+            sean seguidores de Nu, se las van a tener que ver conmigo!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Es menester ayudar a todo ser en necesidad de ayuda. Salvo si se trata
+            de un cultista o de Evith, ellos son la excepci\xF3n."
+        m_Repercusion:
+          m_ID:
+            m_NameID: golden_egg_safe
+            m_ID: -704593445
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: sacred_egg
+            m_ID: 2133386136
+            m_Initialized: 1
+          m_Name: Golden Egg Safe
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Acerca del huevo dorado\u2026 Estoy pensando en deshacerme de \xE9l."
+        - "\xBFPor qu\xE9? Bueno, esta noche he escuchado ruidos extra\xF1os procedentes
+          del sal\xF3n."
+        - "He revisado de arriba a abajo toda la casa y no soy capaz de entender
+          qu\xE9 los provoca."
+        - "Empiezo a pensar si el huevo est\xE1 maldecido o si de verdad es una reliquia
+          de esa secta."
+        - "Creo que mi mejor opci\xF3n ser\xE1 vender el huevo a alg\xFAn interesado
+          y olvidarme del asunto."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Quiz\xE1s yo tambi\xE9n deber\xEDa de empezar a coleccionar cachivaches."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Debo reconocer que tus decisiones son bastante interesantes. Me intriga
+            saber qu\xE9 haras a continuaci\xF3n."
+        m_Repercusion:
+          m_ID:
+            m_NameID: golden_egg_gone
+            m_ID: 1896423645
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: sacred_egg
+            m_ID: 2133386136
+            m_Initialized: 1
+          m_Name: Golden Egg Gone
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xBFEl huevo dorado? Se encuentra a salvo en mi sal\xF3n, por ahora."
+        - "Por lo visto anoche uno de los sectarios trat\xF3 de irrumpir en mi hogar,
+          aunque logr\xF3 escapar."
+        - Se hubiera salido con la suya si no fuera por el ruido que hizo al entrar
+          por la ventana.
+        - "He tenido suerte de que hubiera cazuelas apoyadas sobre la ventana, aunque
+          no recuerdo haberlas dejado ah\xED."
+        - "No esperaba que realmente fueran a entrar en mi casa, tendr\xE9 que contratar
+          algunos guardias."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Me pregunto a qu\xE9 deidad venerar\xE1n aquellos cultistas. \xA1Como
+            sean seguidores de Nu, se las van a tener que ver conmigo!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Es menester ayudar a todo ser en necesidad de ayuda. Salvo si se trata
+            de un cultista o de Evith, ellos son la excepci\xF3n."
+        m_Repercusion:
+          m_ID:
+            m_NameID: golden_egg_safe
+            m_ID: -704593445
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: sacred_egg
+            m_ID: 2133386136
+            m_Initialized: 1
+          m_Name: Golden Egg Safe
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Esto es un ultraje! \xA1Anoche alguien entr\xF3 en mi casa y ha destrozado
+          el huevo dorado!"
+        - "Debi\xF3 de ser uno de los sectarios, aunque no me esperaba que quisieran
+          hacerlo a\xF1icos siendo tan importante para ellos."
+        - "Y sobre el huevo\u2026 result\xF3 ser uno normal y corriente pintado de
+          amarillo. Tan simple como eso."
+        - "Me siento avergonzada por caer en una estafa tan clara, pero al menos
+          s\xE9 que no he sido la \xFAnica."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1La violencia es siempre la soluci\xF3n! Y si no funciona es porque
+            no se aplica lo suficiente."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "A veces es necesario despojarnos de nuestras posesiones m\xE1s preciadas
+            para resolver un conflicto."
+        m_Repercusion:
+          m_ID:
+            m_NameID: golden_egg_destroyed
+            m_ID: -1052392455
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: sacred_egg
+            m_ID: 2133386136
+            m_Initialized: 1
+          m_Name: Golden Egg Destroyed
+          m_Active: 0
+          m_Value: -15
+      m_AllPossibleTargets:
+      - m_NameID: canela
+        m_ID: -619351516
         m_Initialized: 1
     m_State: 0
     m_QuestData:
@@ -808,37 +2815,175 @@ MonoBehaviour:
       m_Value: 0
   m_Repercusions:
   - m_ID:
-      m_NameID: wolves_alive
-      m_ID: -623225176
+      m_NameID: wolves_gone
+      m_ID: -1222842292
       m_Initialized: 1
     m_ParentStoryID:
-      m_NameID: mayors_wolves
-      m_ID: 1004953812
+      m_NameID: mayor_problem
+      m_ID: -600069758
       m_Initialized: 1
-    m_Name: Wolves Alive
+    m_Name: Wolves Gone
     m_Active: 0
     m_Value: 15
+  - m_ID:
+      m_NameID: wolves_stay
+      m_ID: 2003692602
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: mayor_problem
+      m_ID: -600069758
+      m_Initialized: 1
+    m_Name: Wolves Stay
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: cows_harmed
+      m_ID: 551016836
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: out_of_lactose
+      m_ID: 1134344292
+      m_Initialized: 1
+    m_Name: Cows Harmed
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: cows_saved
+      m_ID: -1668179774
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: out_of_lactose
+      m_ID: 1134344292
+      m_Initialized: 1
+    m_Name: Cows Saved
+    m_Active: 0
+    m_Value: 15
+  - m_ID:
+      m_NameID: golden_egg_destroyed
+      m_ID: -1052392455
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: sacred_egg
+      m_ID: 2133386136
+      m_Initialized: 1
+    m_Name: Golden Egg Destroyed
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: golden_egg_safe
+      m_ID: -704593445
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: sacred_egg
+      m_ID: 2133386136
+      m_Initialized: 1
+    m_Name: Golden Egg Safe
+    m_Active: 0
+    m_Value: 15
+  - m_ID:
+      m_NameID: golden_egg_gone
+      m_ID: 1896423645
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: sacred_egg
+      m_ID: 2133386136
+      m_Initialized: 1
+    m_Name: Golden Egg Gone
+    m_Active: 0
+    m_Value: -15
   m_RepercusionNewspaperArticles:
   - m_RepID:
-      m_NameID: wolves_alive
-      m_ID: -623225176
+      m_NameID: wolves_gone
+      m_ID: -1222842292
       m_Initialized: 1
-    m_Title: Wolves Trouble
-    m_Body: In other news, there are still wolves in the town's center
+    m_Title: Los lobos desaparecen de nuestros campos.
+    m_Body: "Despu\xE9s de varios d\xEDas de gran tensi\xF3n, los lobos por fin han
+      dejado de ser un problema para nuestros ganaderos y otros viajeros."
+  - m_RepID:
+      m_NameID: wolves_stay
+      m_ID: 2003692602
+      m_Initialized: 1
+    m_Title: "El terror de los lobos contin\xFAa."
+    m_Body: "Despu\xE9s de varios d\xEDas de calvario, los lobos siguen campando
+      a sus anchas por nuestros campos. El Alcalde declara que va a tomar cartas
+      en el asunto."
+  - m_RepID:
+      m_NameID: cows_harmed
+      m_ID: 551016836
+      m_Initialized: 1
+    m_Title: La tragedia de las vacas.
+    m_Body: La misteriosa muerte de numerosas vacas de una ganadera local ha conmocionado
+      a los habitantes del pueblo.
+  - m_RepID:
+      m_NameID: cows_saved
+      m_ID: -1668179774
+      m_Initialized: 1
+    m_Title: El milagro de las vacas
+    m_Body: "A pesar de la dura sequ\xEDa que azota a nuestros campos, una ganadera
+      local ha logrado mantener una buena alimentaci\xF3n para sus vacas. \xBFCu\xE1l
+      ser\xE1 su secreto?"
+  - m_RepID:
+      m_NameID: golden_egg_destroyed
+      m_ID: -1052392455
+      m_Initialized: 1
+    m_Title: Demasiado bueno para ser cierto.
+    m_Body: "La prestigiosa coleccionista Canela N Rama se ve envuelta en una pol\xE9mica
+      tras la realidad de su nueva adquisici\xF3n, un huevo dorado, que result\xF3
+      ser un huevo normal y corriente."
+  - m_RepID:
+      m_NameID: golden_egg_safe
+      m_ID: -704593445
+      m_Initialized: 1
+    m_Title: El nuevo artefacto de Canela N Rama
+    m_Body: "Un nuevo artefacto forma parte de la colecci\xF3n de la prestigiosa
+      coleccionista local Canela N Rama, se trata de un misterioso huevo dorado de
+      un valor incalculable, asegura la coleccionista."
+  - m_RepID:
+      m_NameID: golden_egg_gone
+      m_ID: 1896423645
+      m_Initialized: 1
+    m_Title: El huevo maldito.
+    m_Body: "El Huevo Dorado, el artefacto que iba a ser la joya de la colecci\xF3n
+      de la prestigiosa Canela N Rama, ha sido retirado de la exposici\xF3n. La coleccionista
+      insinu\xF3 que el artefacto podr\xEDa estar maldito"
   m_StoryUI:
   - m_ParentStoryID:
-      m_NameID: mayors_wolves
-      m_ID: 1004953812
+      m_NameID: mayor_problem
+      m_ID: -600069758
       m_Initialized: 1
     m_Sprite: {fileID: 21300000, guid: 955648f86f7437c4d83f982a26431630, type: 3}
-    m_Title: Wolves Party
+    m_Title: El Problema del Alcalde
+  - m_ParentStoryID:
+      m_NameID: out_of_lactose
+      m_ID: 1134344292
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 6f5f7f2fb0ff53544ade6dca2233f3f3, type: 3}
+    m_Title: Falta de Lactosa
+  - m_ParentStoryID:
+      m_NameID: sacred_egg
+      m_ID: 2133386136
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+    m_Title: El Huevo Sagrado
   m_References:
   - m_ParentStoryID:
-      m_NameID: mayors_wolves
-      m_ID: 1004953812
+      m_NameID: mayor_problem
+      m_ID: -600069758
       m_Initialized: 1
-    m_StoryName: Mayor's Wolves
+    m_StoryName: El Problema del Alcalde
     m_StorySelectionUiSprite: {fileID: 21300000, guid: 955648f86f7437c4d83f982a26431630, type: 3}
+  - m_ParentStoryID:
+      m_NameID: out_of_lactose
+      m_ID: 1134344292
+      m_Initialized: 1
+    m_StoryName: Falta de lactosa
+    m_StorySelectionUiSprite: {fileID: 21300000, guid: 6f5f7f2fb0ff53544ade6dca2233f3f3, type: 3}
+  - m_ParentStoryID:
+      m_NameID: sacred_egg
+      m_ID: 2133386136
+      m_Initialized: 1
+    m_StoryName: El Huevo Sagrado
+    m_StorySelectionUiSprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
 --- !u!114 &656283504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -886,50 +3031,75 @@ MonoBehaviour:
       m_ID: -1630721097
       m_Initialized: 1
     m_CharacterImg: {fileID: 0}
-    m_NameColor: {r: 1, g: 0, b: 0, a: 1}
+    m_NameColor: {r: 0, g: 0, b: 0, a: 0}
   - m_ID:
       m_NameID: evith
       m_ID: 573504420
       m_Initialized: 1
     m_CharacterImg: {fileID: 0}
-    m_NameColor: {r: 1, g: 0, b: 0, a: 1}
+    m_NameColor: {r: 0, g: 0, b: 0, a: 0}
   - m_ID:
       m_NameID: mamarrachus
       m_ID: 689543378
       m_Initialized: 1
     m_CharacterImg: {fileID: 0}
-    m_NameColor: {r: 1, g: 0, b: 0, a: 1}
+    m_NameColor: {r: 0, g: 0, b: 0, a: 0}
   - m_ID:
       m_NameID: nu
       m_ID: -1991483173
       m_Initialized: 1
     m_CharacterImg: {fileID: 0}
-    m_NameColor: {r: 1, g: 0, b: 0, a: 1}
+    m_NameColor: {r: 0, g: 0, b: 0, a: 0}
+  m_CharacterWorldPrefabComponent:
+  - m_ID:
+      m_NameID: mery
+      m_ID: -1630721097
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: evith
+      m_ID: 573504420
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: mamarrachus
+      m_ID: 689543378
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: nu
+      m_ID: -1991483173
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
   m_References:
   - m_ID:
       m_NameID: mery
       m_ID: -1630721097
       m_Initialized: 1
-    m_CharacterName: 
+    m_CharacterName: Mery la Leches
     m_DialogueSprite: {fileID: 0}
+    m_WorldCharacterPrefab: {fileID: 0}
   - m_ID:
       m_NameID: evith
       m_ID: 573504420
       m_Initialized: 1
-    m_CharacterName: 
+    m_CharacterName: Evith
     m_DialogueSprite: {fileID: 0}
+    m_WorldCharacterPrefab: {fileID: 0}
   - m_ID:
       m_NameID: mamarrachus
       m_ID: 689543378
       m_Initialized: 1
-    m_CharacterName: 
+    m_CharacterName: Mamarrachus Generikus
     m_DialogueSprite: {fileID: 0}
+    m_WorldCharacterPrefab: {fileID: 0}
   - m_ID:
       m_NameID: nu
       m_ID: -1991483173
       m_Initialized: 1
-    m_CharacterName: 
+    m_CharacterName: Nu
     m_DialogueSprite: {fileID: 0}
+    m_WorldCharacterPrefab: {fileID: 0}
 --- !u!114 &656283505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1152,6 +3322,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329c579529548164cac9efe308401ba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StoriesInfo:
+    m_ComponentsList: []
+  m_RecipeData:
+    m_ComponentsList: []
   m_CookieData:
     m_ComponentsList: []
   m_QuestPieceFunctionalComponents:
