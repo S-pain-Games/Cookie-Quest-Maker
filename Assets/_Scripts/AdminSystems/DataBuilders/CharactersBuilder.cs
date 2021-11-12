@@ -22,16 +22,34 @@ public class CharactersBuilder : MonoBehaviour
         m_CharacterDialogueList.Clear();
         m_References.Clear();
 
-        CreateCharacter("mery", "Mery la Leches", "Mery");
+        CreateCharacter("hio", "Hio", "Hio");
+        SetDescription("She is the owner of the town's farm");
+
+        CreateCharacter("nu", "Nu", "Nu Nu");
         SetDescription("She is the owner of the town's farm");
 
         CreateCharacter("evith", "Evith", "Evith");
         SetDescription("She is the owner of the town's farm");
 
-        CreateCharacter("mamarrachus", "Mamarrachus Generikus", "Mamarrachus");
+        CreateCharacter("meri", "Meri la Leches", "Meri");
         SetDescription("She is the owner of the town's farm");
 
-        CreateCharacter("nu", "Nu", "Nu Nu");
+        CreateCharacter("mayor", "Alcalde, Antonio", "Alcalde");
+        SetDescription("She is the owner of the town's farm");
+
+        CreateCharacter("miss_chocolate", "Miss Chocolate", "Ms.Chocolate");
+        SetDescription("She is the owner of the town's farm");
+
+        CreateCharacter("canela", "Canela N Rama", "Cane");
+        SetDescription("She is the owner of the town's farm");
+
+        CreateCharacter("johny_setas", "Johny, el setas", "Johny");
+        SetDescription("She is the owner of the town's farm");
+
+        CreateCharacter("mantecas", "Juanjo, el mantecas", "Juanjo");
+        SetDescription("She is the owner of the town's farm");
+
+        CreateCharacter("mamarrachus", "Mamarrachus Generikus", "Mamarrachus");
         SetDescription("She is the owner of the town's farm");
     }
 

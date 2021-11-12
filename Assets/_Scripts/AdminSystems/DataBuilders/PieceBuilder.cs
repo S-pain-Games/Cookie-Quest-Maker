@@ -40,67 +40,207 @@ namespace CQM.Databases
             m_CookieData.Clear();
             m_RecipeData.Clear();
 
-            CreateNew();
-            SetIDName("plain_cookie");
-            SetPieceType(PieceType.Cookie);
-            SetUIData("Plain Cookie", "Very plain");
-            SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50);
-            AddIngredientToRecipe("chocolate", 1);
+            CreateCookies();
+            CreateActions();
+            CreateObjects();
+            CreateModifiers();
+            CreateTargets();
 
-            CreateNew();
-            SetIDName("plain_cookie_2");
-            SetPieceType(PieceType.Cookie);
-            SetUIData("Plain Cookie 2", "Very Very plain plain");
-            SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50);
-            AddIngredientToRecipe("chocolate", 1);
+            void CreateCookies()
+            {
+                CreateNew();
+                SetIDName("plain_cookie");
+                SetPieceType(PieceType.Cookie);
+                SetUIData("Plain Cookie", "Very plain");
+                SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+                AddIngredientToRecipe("chocolate", 1);
 
-            CreateNew();
-            SetIDName("attack");
-            SetPieceType(PieceType.Action);
-            AddFunctionalTag(Tag.Harm, 1);
-            SetUIData("Attack", "Very Agressive");
-            SetRecipeData("Attack Piece Recipe", "Very aggresive", Reputation.EvilCookieReputation, 50);
-            AddIngredientToRecipe("chocolate", 1);
+                CreateNew();
+                SetIDName("plain_cookie_2");
+                SetPieceType(PieceType.Cookie);
+                SetUIData("Plain Cookie 2", "Very Very plain plain");
+                SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+                AddIngredientToRecipe("chocolate", 1);
+            }
+            void CreateActions()
+            {
+                CreateNew();
+                SetIDName("attack");
+                SetPieceType(PieceType.Action);
+                AddFunctionalTag(Tag.Harm, 1);
+                SetUIData("Attack", "Very Agressive");
+                SetRecipeData("Attack Piece Recipe", "Very aggresive", Reputation.EvilCookieReputation, 50);
+                AddIngredientToRecipe("chocolate", 1);
 
-            CreateNew();
-            SetIDName("assist");
-            SetPieceType(PieceType.Action);
-            AddFunctionalTag(Tag.Help, 1);
-            SetUIData("Assist", "Very Assistive");
-            SetRecipeData("Assist Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50);
-            AddIngredientToRecipe("vanilla", 1);
+                CreateNew();
+                SetIDName("dialogate");
+                SetPieceType(PieceType.Action);
+                AddFunctionalTag(Tag.Help, 1);
+                SetUIData("Dialogate", "Very Assistive");
+                SetRecipeData("Dialogate Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50);
+                AddIngredientToRecipe("vanilla", 1);
 
-            CreateNew();
-            SetIDName("baseball_bat");
-            SetPieceType(PieceType.Object);
-            AddFunctionalTag(Tag.Harm, 2);
-            AddFunctionalTag(Tag.Convince, 1);
-            SetUIData("Baseball Bat", "Very Bat");
-            SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50);
-            AddIngredientToRecipe("chocolate", 2);
+                CreateNew();
+                SetIDName("assist");
+                SetPieceType(PieceType.Action);
+                AddFunctionalTag(Tag.Help, 1);
+                SetUIData("Assist", "Very Assistive");
+                SetRecipeData("Assist Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50);
+                AddIngredientToRecipe("vanilla", 1);
 
-            CreateNew();
-            SetIDName("cake");
-            SetPieceType(PieceType.Object);
-            AddFunctionalTag(Tag.Convince, 2);
-            AddFunctionalTag(Tag.Help, 1);
-            SetUIData("Cake", "Very Bat");
-            SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50);
-            AddIngredientToRecipe("chocolate", 2);
-            AddIngredientToRecipe("vanilla", 2);
+                CreateNew();
+                SetIDName("look");
+                SetPieceType(PieceType.Action);
+                AddFunctionalTag(Tag.Help, 1);
+                SetUIData("Look", "Very Assistive");
+                SetRecipeData("Look Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50);
+                AddIngredientToRecipe("vanilla", 1);
 
-            CreateNew();
-            SetIDName("mayor");
-            SetPieceType(PieceType.Target);
-            SetUIData("Mayor", "Very Bat");
-            SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+                CreateNew();
+                SetIDName("stare");
+                SetPieceType(PieceType.Action);
+                AddFunctionalTag(Tag.Help, 1);
+                SetUIData("Stare", "Very Assistive");
+                SetRecipeData("Stare Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50);
+                AddIngredientToRecipe("vanilla", 1);
 
-            CreateNew();
-            SetIDName("wolves");
-            SetPieceType(PieceType.Target);
-            AddFunctionalTag(Tag.Harm, 1);
-            SetUIData("Wolves", "Very Bat");
-            SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+                CreateNew();
+                SetIDName("steal");
+                SetPieceType(PieceType.Action);
+                AddFunctionalTag(Tag.Help, 1);
+                SetUIData("Steal", "Very Assistive");
+                SetRecipeData("Steal Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50);
+                AddIngredientToRecipe("vanilla", 1);
+            }
+            void CreateObjects()
+            {
+                CreateNew();
+                SetIDName("baseball_bat");
+                SetPieceType(PieceType.Object);
+                AddFunctionalTag(Tag.Harm, 2);
+                AddFunctionalTag(Tag.Convince, 1);
+                SetUIData("Baseball Bat", "Very Bat");
+                SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+                AddIngredientToRecipe("chocolate", 2);
+
+                CreateNew();
+                SetIDName("scissor");
+                SetPieceType(PieceType.Object);
+                AddFunctionalTag(Tag.Harm, 2);
+                AddFunctionalTag(Tag.Convince, 1);
+                SetUIData("Scissor", "Very Bat");
+                SetRecipeData("Scissor Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+                AddIngredientToRecipe("chocolate", 2);
+
+                CreateNew();
+                SetIDName("flip_flops");
+                SetPieceType(PieceType.Object);
+                AddFunctionalTag(Tag.Harm, 2);
+                AddFunctionalTag(Tag.Convince, 1);
+                SetUIData("Flip Flops", "Very Bat");
+                SetRecipeData("Flip Flops Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+                AddIngredientToRecipe("chocolate", 2);
+
+                CreateNew();
+                SetIDName("cake");
+                SetPieceType(PieceType.Object);
+                AddFunctionalTag(Tag.Convince, 2);
+                AddFunctionalTag(Tag.Help, 1);
+                SetUIData("Cake", "Very Bat");
+                SetRecipeData("Cake Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+                AddIngredientToRecipe("chocolate", 2);
+                AddIngredientToRecipe("vanilla", 2);
+            }
+            void CreateModifiers()
+            {
+                CreateNew();
+                SetIDName("violently");
+                SetPieceType(PieceType.Object);
+                AddFunctionalTag(Tag.Convince, 2);
+                AddFunctionalTag(Tag.Help, 1);
+                SetUIData("Violently", "Very Bat");
+                SetRecipeData("Violently Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+                AddIngredientToRecipe("chocolate", 2);
+                AddIngredientToRecipe("vanilla", 2);
+
+                CreateNew();
+                SetIDName("brutally");
+                SetPieceType(PieceType.Object);
+                AddFunctionalTag(Tag.Convince, 2);
+                AddFunctionalTag(Tag.Help, 1);
+                SetUIData("Brutally", "Very Bat");
+                SetRecipeData("Brutally Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+                AddIngredientToRecipe("chocolate", 2);
+                AddIngredientToRecipe("vanilla", 2);
+
+                CreateNew();
+                SetIDName("kindly");
+                SetPieceType(PieceType.Object);
+                AddFunctionalTag(Tag.Convince, 2);
+                AddFunctionalTag(Tag.Help, 1);
+                SetUIData("Kindly", "Very Bat");
+                SetRecipeData("Kindly Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+                AddIngredientToRecipe("chocolate", 2);
+                AddIngredientToRecipe("vanilla", 2);
+
+                CreateNew();
+                SetIDName("convincingly");
+                SetPieceType(PieceType.Object);
+                AddFunctionalTag(Tag.Convince, 2);
+                AddFunctionalTag(Tag.Help, 1);
+                SetUIData("Convincingly", "Very Bat");
+                SetRecipeData("Convincingly Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+                AddIngredientToRecipe("chocolate", 2);
+                AddIngredientToRecipe("vanilla", 2);
+            }
+            void CreateTargets()
+            {
+                CreateNew();
+                SetIDName("mayor");
+                SetPieceType(PieceType.Target);
+                SetUIData("Mayor", "Very Bat");
+
+                CreateNew();
+                SetIDName("meri");
+                SetPieceType(PieceType.Target);
+                SetUIData("Mery", "Very Bat");
+
+                CreateNew();
+                SetIDName("canela");
+                SetPieceType(PieceType.Target);
+                SetUIData("Canela", "Very Bat");
+
+                CreateNew();
+                SetIDName("johny_setas");
+                SetPieceType(PieceType.Target);
+                SetUIData("Er Johny el setas", "Very Bat");
+
+                CreateNew();
+                SetIDName("miss_chocolate");
+                SetPieceType(PieceType.Target);
+                SetUIData("Miss Chocolate", "Very Bat");
+
+                CreateNew();
+                SetIDName("mantecas");
+                SetPieceType(PieceType.Target);
+                SetUIData("El Mantecas", "Very Bat");
+
+                CreateNew();
+                SetIDName("wolves");
+                SetPieceType(PieceType.Target);
+                AddFunctionalTag(Tag.Harm, 1);
+                SetUIData("Lobos", "Very Bat");
+
+                CreateNew();
+                SetIDName("rats");
+                SetPieceType(PieceType.Target);
+                SetUIData("Ratas", "Very Bat");
+
+                CreateNew();
+                SetIDName("vacas");
+                SetPieceType(PieceType.Target);
+                SetUIData("Vacas", "Deep Mooooo");
+            }
         }
 
         #region Builder Methods
