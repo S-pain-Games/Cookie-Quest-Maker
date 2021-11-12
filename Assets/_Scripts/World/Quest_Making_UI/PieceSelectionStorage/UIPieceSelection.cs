@@ -18,6 +18,7 @@ public class UIPieceSelection : MonoBehaviour
 
     private ID m_SelectedPieceID;
 
+    private bool m_IsAPieceSelected;
     [SerializeField] private Button _usePieceButton;
     [SerializeField] private UISelectedPieceView _uiSelectedPieceView;
 
@@ -25,15 +26,22 @@ public class UIPieceSelection : MonoBehaviour
     [SerializeField] private GameObject elementPrefab;
     private List<UIStorageElement> m_Elements = new List<UIStorageElement>();
 
+
     private void OnEnable()
     {
-        Refresh(QuestPieceFunctionalComponent.PieceType.Cookie);
+        Clear();
         _usePieceButton.onClick.AddListener(UsePieceButton_OnClick);
     }
 
     private void OnDisable()
     {
         _usePieceButton.onClick.RemoveListener(UsePieceButton_OnClick);
+    }
+
+    private void Clear()
+    {
+        m_IsAPieceSelected = false;
+        _uiSelectedPieceView.Clear();
     }
 
     public void Refresh(QuestPieceFunctionalComponent.PieceType pieceType)
@@ -98,6 +106,7 @@ public class UIPieceSelection : MonoBehaviour
     private void StoragePiece_OnClicked(ID questPieceID)
     {
         m_SelectedPieceID = questPieceID;
+        m_IsAPieceSelected = true;
         // Update UI
         UIQuestPieceComponent UIPieceData = Admin.Global.Components.m_QuestPieceUIComponent[m_SelectedPieceID];
         _uiSelectedPieceView.UpdateUI(UIPieceData.m_Sprite, UIPieceData.m_Name, UIPieceData.m_Description);
@@ -105,7 +114,8 @@ public class UIPieceSelection : MonoBehaviour
 
     public void UsePieceButton_OnClick()
     {
-        OnUsePiece?.Invoke(m_SelectedPieceID);
+        if(m_IsAPieceSelected)
+            OnUsePiece?.Invoke(m_SelectedPieceID);
     }
 
     [Serializable]
@@ -115,11 +125,21 @@ public class UIPieceSelection : MonoBehaviour
         [SerializeField] private TextMeshProUGUI _nameTextComp;
         [SerializeField] private TextMeshProUGUI _descTextComp;
 
+
         public void UpdateUI(Sprite sprite, string name, string description)
         {
+            _image.color = Color.white;
             _image.sprite = sprite;
             _nameTextComp.text = name;
             _descTextComp.text = description;
+        }
+
+        public void Clear()
+        {
+            _image.sprite = null;
+            _image.color = new Color(0, 0, 0, 0);
+            _nameTextComp.text = "";
+            _descTextComp.text = "";
         }
     }
 }
@@ -130,6 +150,7 @@ public class UIPieceSelection : MonoBehaviour
 public class UIQuestPieceComponent
 {
     public Sprite m_Sprite;
+    public Sprite m_QuestBuildingSprite;
     public string m_Name;
     public string m_Description;
 
