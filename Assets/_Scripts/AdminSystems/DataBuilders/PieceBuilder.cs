@@ -13,6 +13,7 @@ namespace CQM.Databases
         [SerializeField]
         private List<BuiltPiece> m_Pieces = new List<BuiltPiece>();
 
+        // Output Components
         public List<QuestPieceFunctionalComponent> m_QuestPieceFunctionalComponents = new List<QuestPieceFunctionalComponent>();
         public List<UIQuestPieceComponent> m_QuestPieceUIComponent = new List<UIQuestPieceComponent>();
         public List<QuestPiecePrefabComponent> m_QuestPiecePrefabComponent = new List<QuestPiecePrefabComponent>();
@@ -21,13 +22,14 @@ namespace CQM.Databases
 
         public GameObject m_DefaultPiecePrefab;
 
+        // Data of the piece that is currently being built
         private BuiltPiece _piece;
-
         private QuestPieceFunctionalComponent _functionalQP;
         private UIQuestPieceComponent _uiQP;
         private QuestPiecePrefabComponent _prefabQP;
         private CookieDataComponent _cookieData;
         private RecipeDataComponent _recipeData;
+
 
         public void LoadDataFromCode()
         {
@@ -173,7 +175,7 @@ namespace CQM.Databases
         }
         #endregion
 
-        [System.Serializable]
+        [Serializable]
         private class BuiltPiece
         {
             public string inspectorPieceName;

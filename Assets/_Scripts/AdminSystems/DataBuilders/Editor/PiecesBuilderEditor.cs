@@ -17,7 +17,7 @@ public class PiecesBuilderEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        if (GUILayout.Button("Load Data From Script", GUILayout.Height(40)))
+        if (GUILayout.Button("Load Data From Script", GUILayout.Height(30)))
         {
             serializedObject.Update();
             t.LoadDataFromCode();
