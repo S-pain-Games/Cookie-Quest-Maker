@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class SpAnimatorTester : MonoBehaviour
+public class SpriteAnimatorTester : MonoBehaviour
 {
     [SerializeField]
     private SpriteRenderer _renderer;
