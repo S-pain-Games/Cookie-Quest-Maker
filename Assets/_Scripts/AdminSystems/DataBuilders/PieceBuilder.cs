@@ -52,14 +52,14 @@ namespace CQM.Databases
                 SetIDName("plain_cookie");
                 SetPieceType(PieceType.Cookie);
                 SetUIData("Plain Cookie", "Very plain");
-                SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+                SetRecipeData("Grandma's Plain Cookie Recipe", "Description Plain Cookie", Reputation.GoodCookieReputation, 50);
                 AddIngredientToRecipe("chocolate", 1);
 
                 CreateNew();
                 SetIDName("plain_cookie_2");
                 SetPieceType(PieceType.Cookie);
                 SetUIData("Plain Cookie 2", "Very Very plain plain");
-                SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50);
+                SetRecipeData("Grandma's Plain Cookie 2 Recipe", "Description Plain Cookie 2", Reputation.GoodCookieReputation, 50);
                 AddIngredientToRecipe("chocolate", 1);
             }
             void CreateActions()
