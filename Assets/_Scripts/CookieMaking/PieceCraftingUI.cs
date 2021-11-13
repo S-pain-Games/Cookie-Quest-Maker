@@ -10,6 +10,7 @@ public class PieceCraftingUI : MonoBehaviour
 {
     private ComponentsContainer<RecipeDataComponent> _recipeDataComponents;
     private ComponentsContainer<QuestPieceFunctionalComponent> _pieceDataComponents;
+    private ComponentsContainer<UIQuestPieceComponent> _recipeUiDataComponents;
     private Singleton_InventoryComponent _inventory;
 
     private List<ID> _cookieRecipes;
@@ -48,6 +49,7 @@ public class PieceCraftingUI : MonoBehaviour
         _recipeDataComponents = admin.Components.GetComponentContainer<RecipeDataComponent>();
         _pieceDataComponents = admin.Components.m_QuestPieceFunctionalComponents;
         _inventory = admin.Components.m_InventoryComponent;
+        _recipeUiDataComponents = admin.Components.m_QuestPieceUIComponent;
 
         _cookieRecipes = new List<ID>();
         _actionRecipes = new List<ID>();
@@ -105,6 +107,7 @@ public class PieceCraftingUI : MonoBehaviour
     {
         QuestPieceFunctionalComponent piece = null;
         RecipeDataComponent recipe = null;
+        UIQuestPieceComponent recipeUi = null;
 
         bool selected = false;
 
@@ -145,8 +148,9 @@ public class PieceCraftingUI : MonoBehaviour
         {
             piece = _pieceDataComponents.GetComponentByID(_selectedPieceID);
             recipe = _recipeDataComponents.GetComponentByID(_selectedPieceID);
+            recipeUi = _recipeUiDataComponents.GetComponentByID(_selectedPieceID);
             HideUi(true);
-            UpdatePieceUi(piece, recipe);
+            UpdatePieceUi(piece, recipe, recipeUi);
         }
         else
         {
@@ -166,14 +170,14 @@ public class PieceCraftingUI : MonoBehaviour
         text_stat_3.gameObject.SetActive(state);
     }
 
-    private void UpdatePieceUi(QuestPieceFunctionalComponent piece, RecipeDataComponent recipe)
+    private void UpdatePieceUi(QuestPieceFunctionalComponent piece, RecipeDataComponent recipe, UIQuestPieceComponent recipeUi)
     {
         if (recipe != null && piece != null)
         {
-            text_piece_name.text = recipe.m_RecipeName;
-            text_piece_description.text = recipe.m_RecipeDescription;
-            //img_recipe_big.sprite = newPiece.recipe.m_Image.sprite;
-            //img_recipe_small.sprite = newPiece.recipe.m_Image.sprite;
+            text_piece_name.text = recipeUi.m_Name;
+            text_piece_description.text = recipeUi.m_Description;
+            img_recipe_big.sprite = recipeUi.m_Sprite;
+            img_recipe_small.sprite = recipeUi.m_Sprite;
             //1: Convice, 2: Help, 0: Harm 
             text_stat_1.text = "0";
             text_stat_2.text = "0";
@@ -187,6 +191,8 @@ public class PieceCraftingUI : MonoBehaviour
                 else if (piece.m_Tags[i].m_Type == QPTag.TagType.Harm)
                     text_stat_3.text = piece.m_Tags[i].m_Value.ToString();
             }
+
+
             
         }
     }
@@ -223,12 +229,15 @@ public class PieceCraftingUI : MonoBehaviour
         {
             if (_cookieRecipes.Count > 0)
             {
+                /*
                 if (idx_cookieRecipes < 0)
                     idx_cookieRecipes = 0;
                 else if (idx_cookieRecipes >= _cookieRecipes.Count)
                     idx_cookieRecipes = _cookieRecipes.Count - 1;
                 if(idx_cookieRecipes < 0)
                     idx_cookieRecipes = 0;
+                */
+                idx_cookieRecipes = Mathf.Clamp(idx_cookieRecipes, 0, _cookieRecipes.Count-1);
             }
             else
                 idx_cookieRecipes = 0;
@@ -237,12 +246,7 @@ public class PieceCraftingUI : MonoBehaviour
         {
             if (_actionRecipes.Count > 0)
             {
-                if (idx_actionRecipe < 0)
-                    idx_actionRecipe = 0;
-                else if (idx_actionRecipe >= _actionRecipes.Count)
-                    idx_actionRecipe = _actionRecipes.Count - 1;
-                if (idx_actionRecipe < 0)
-                    idx_actionRecipe = 0;
+                idx_actionRecipe = Mathf.Clamp(idx_actionRecipe, 0, _actionRecipes.Count - 1);
             }
             else
                 idx_actionRecipe = 0;
@@ -251,12 +255,7 @@ public class PieceCraftingUI : MonoBehaviour
         {
             if (_modifierRecipes.Count > 0)
             {
-                if (idx_modifierRecipes < 0)
-                    idx_modifierRecipes = 0;
-                else if (idx_modifierRecipes >= _modifierRecipes.Count)
-                    idx_modifierRecipes = _modifierRecipes.Count - 1;
-                if (idx_modifierRecipes < 0)
-                    idx_modifierRecipes = 0;
+                idx_modifierRecipes = Mathf.Clamp(idx_modifierRecipes, 0, _modifierRecipes.Count - 1);
             }
             else
                 idx_modifierRecipes = 0;
@@ -265,12 +264,7 @@ public class PieceCraftingUI : MonoBehaviour
         {
             if (_objectRecipes.Count > 0)
             {
-                if (idx_objectRecipes < 0)
-                    idx_objectRecipes = 0;
-                else if (idx_objectRecipes >= _objectRecipes.Count)
-                    idx_objectRecipes = _objectRecipes.Count - 1;
-                if (idx_objectRecipes < 0)
-                    idx_objectRecipes = 0;
+                idx_objectRecipes = Mathf.Clamp(idx_objectRecipes, 0, _objectRecipes.Count - 1);
             }
             else
                 idx_objectRecipes = 0;
