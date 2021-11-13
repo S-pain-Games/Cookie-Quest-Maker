@@ -110,6 +110,7 @@ namespace CQM.Gameplay
 
         public void EnableQuestBuilding()
         {
+            _storySelection.gameObject.SetActive(false);
             _pieceStorage.gameObject.SetActive(false);
             _questBuilding.gameObject.SetActive(true);
         }
