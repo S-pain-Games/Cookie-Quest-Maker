@@ -191,9 +191,6 @@ public class PieceCraftingUI : MonoBehaviour
                 else if (piece.m_Tags[i].m_Type == QPTag.TagType.Harm)
                     text_stat_3.text = piece.m_Tags[i].m_Value.ToString();
             }
-
-
-            
         }
     }
 
