@@ -119,7 +119,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8677883691634186270}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9156172236910156426}
+        m_TargetAssemblyTypeName: PieceCraftingUI, CQM.Scripts.Runtime
+        m_MethodName: SelectPieceModifier
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &453596497440027911
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,7 +788,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3040184354877596523}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9156172236910156426}
+        m_TargetAssemblyTypeName: PieceCraftingUI, CQM.Scripts.Runtime
+        m_MethodName: SelectPieceObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2853312488570512347
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,7 +958,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1751636798590533197}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9156172236910156426}
+        m_TargetAssemblyTypeName: PieceCraftingUI, CQM.Scripts.Runtime
+        m_MethodName: NextRecipe
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &3070773051523323936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1902,7 +1938,7 @@ GameObject:
   - component: {fileID: 371300479438984511}
   - component: {fileID: 902431668810978283}
   m_Layer: 5
-  m_Name: Button_Anterior_Piece
+  m_Name: Button_Previous_Piece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2008,7 +2044,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 371300479438984511}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9156172236910156426}
+        m_TargetAssemblyTypeName: PieceCraftingUI, CQM.Scripts.Runtime
+        m_MethodName: NextRecipe
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8780013809576971523
 GameObject:
   m_ObjectHideFlags: 0
@@ -2130,9 +2178,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8780013811240723211}
-        m_TargetAssemblyTypeName: CookieMakingUI, CQM.Scripts.Runtime
-        m_MethodName: CreateCookie
+      - m_Target: {fileID: 9156172236910156426}
+        m_TargetAssemblyTypeName: PieceCraftingUI, CQM.Scripts.Runtime
+        m_MethodName: CraftRecipe
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2968,7 +3016,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8780013811240723205}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 893f9443a3ba55443b7f1a52184c6c54, type: 3}
   m_Name: 
@@ -2992,10 +3040,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4ca55b76f23f9a469a4f46d6c1e8869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _selectedPieceType: 4
   text_piece_name: {fileID: 2620914868069278593}
   text_piece_description: {fileID: 5505329739184200124}
   img_recipe_big: {fileID: 7389864641890218901}
   img_recipe_small: {fileID: 6639101235883699524}
-  text_stat_1: {fileID: 0}
-  text_stat_2: {fileID: 0}
-  text_stat_3: {fileID: 0}
+  text_stat_1: {fileID: 7522800084083049724}
+  text_stat_2: {fileID: 5668206054025462823}
+  text_stat_3: {fileID: 781311070700687847}
