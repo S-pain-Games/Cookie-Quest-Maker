@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Hio_Idle_S
   m_EditorClassIdentifier: 
   m_Sprites:
-  - {fileID: 6824513225904693074, guid: 7cc9466e46917a64d9c8f453e68f03cb, type: 3}
-  - {fileID: 7597804039804721674, guid: 7cc9466e46917a64d9c8f453e68f03cb, type: 3}
-  - {fileID: 7253491516941476609, guid: 7cc9466e46917a64d9c8f453e68f03cb, type: 3}
-  - {fileID: -8786524432461243018, guid: 7cc9466e46917a64d9c8f453e68f03cb, type: 3}
-  - {fileID: -464844192748583506, guid: 7cc9466e46917a64d9c8f453e68f03cb, type: 3}
-  - {fileID: -1971373250647147980, guid: 7cc9466e46917a64d9c8f453e68f03cb, type: 3}
+  - {fileID: 945984085638535348, guid: 35f234dcfb13be24f8fbc984592ce546, type: 3}
+  - {fileID: -5973248821049902409, guid: 35f234dcfb13be24f8fbc984592ce546, type: 3}
+  - {fileID: -6820556924862281295, guid: 35f234dcfb13be24f8fbc984592ce546, type: 3}
+  - {fileID: -296355969488164326, guid: 35f234dcfb13be24f8fbc984592ce546, type: 3}
+  - {fileID: 6535379416526513895, guid: 35f234dcfb13be24f8fbc984592ce546, type: 3}
+  - {fileID: 582406930756672918, guid: 35f234dcfb13be24f8fbc984592ce546, type: 3}
