@@ -21,8 +21,8 @@ namespace CQM.Gameplay
         public event Action<UIQuestPieceBehaviour> OnSelected;
         public event Action<UIQuestPieceBehaviour> OnUnselect;
 
-        [SerializeField]
-        private TextMeshProUGUI _textComp;
+
+        [SerializeField] private Image _image;
         [HideInInspector]
         public QuestPieceFunctionalComponent Piece;
         private Canvas _canvas;
@@ -43,7 +43,7 @@ namespace CQM.Gameplay
             _raycaster = canvas.GetComponent<GraphicRaycaster>();
             Piece = piece;
             _draggable.Initialize(canvas);
-            _textComp.text = uiData.m_Name;
+            _image.sprite = uiData.m_QuestBuildingSprite;
         }
 
         private void OnEnable()

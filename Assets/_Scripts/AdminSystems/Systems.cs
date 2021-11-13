@@ -12,6 +12,7 @@ public class Systems
 
     public QuestMakingSystem m_QuestMakerSystem = new QuestMakingSystem();
     public CookieMakingSystem m_CookieMakingSystem = new CookieMakingSystem();
+    public PieceCraftingSystem pieceCraftingSystem = new PieceCraftingSystem(); // NEW
     private StorySystem m_StorySystem = new StorySystem();
 
     private DialogueSystem m_DialogueSystem = new DialogueSystem();
@@ -40,6 +41,7 @@ public class Systems
         m_StorySystem.Initialize(d.GetComponentContainer<StoryInfoComponent>(), d.m_OngoingStories, d.m_StoriesToStart, d.m_CompletedStories, d.m_FinalizedStories);
         m_QuestMakerSystem.Initialize();
         m_CookieMakingSystem.Initialize(d.GetComponentContainer<RecipeDataComponent>(), d.m_InventoryComponent);
+        pieceCraftingSystem.Initialize(d.GetComponentContainer<RecipeDataComponent>(), d.m_InventoryComponent, d.m_QuestPieceFunctionalComponents); // NEW
         m_NpcSystem.Initialize(d.m_NpcReferencesComponent, d.GetComponentContainer<StoryInfoComponent>(), d.m_StoriesToStart, d.m_CompletedStories, eventSystem);
         m_DialogueSystem.Initialize(d.m_DialogueUIData, d.m_CharacterComponents, d.m_CharacterDialogueComponents, eventSystem);
         m_TownSystem.Initialize(d.m_TownComponent, d.m_LocationsComponents, d.GetComponentContainer<StoryRepercusionComponent>());
@@ -65,6 +67,7 @@ public class Systems
         systems.Add(m_InventorySystem);
         systems.Add(m_CharacterSystem);
         systems.Add(m_CookieMakingSystem);
+        systems.Add(pieceCraftingSystem); // NEW
         systems.Add(m_NewspaperSystem);
         systems.Add(m_UISystem);
 

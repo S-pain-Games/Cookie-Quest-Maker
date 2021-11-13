@@ -13,8 +13,8 @@ namespace CQM.Gameplay
         public QuestPieceFunctionalComponent.PieceType m_SelectedType;
         public int selectedStoryId; // used to populate UI with story targets
 
-        [SerializeField] private PieceFilteringMenu _pieceFiltering;
-        [SerializeField] private UIPieceSelection _pieceSelector;
+        [SerializeField] private UIPieceFilteringMenu _pieceFiltering;
+        [SerializeField] private UIPieceSelectionMenu _pieceSelector;
 
         private EventSys _evtSys;
 
@@ -48,7 +48,7 @@ namespace CQM.Gameplay
         private void PieceFiltering_OnFilterSelected(QuestPieceFunctionalComponent.PieceType type)
         {
             m_SelectedType = type;
-            _pieceSelector.Refresh(type);
+            _pieceSelector.RefreshSelectablePieces(type);
         }
 
         private void OnStorySelected(ID storyID)

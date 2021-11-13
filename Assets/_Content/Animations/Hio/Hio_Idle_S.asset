@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2127c04212a2fb499a1e7e9e4dea9f9, type: 3}
+  m_Name: Hio_Idle_S
+  m_EditorClassIdentifier: 
+  m_Sprites:
+  - {fileID: 945984085638535348, guid: 35f234dcfb13be24f8fbc984592ce546, type: 3}
+  - {fileID: -5973248821049902409, guid: 35f234dcfb13be24f8fbc984592ce546, type: 3}
+  - {fileID: -6820556924862281295, guid: 35f234dcfb13be24f8fbc984592ce546, type: 3}
+  - {fileID: -296355969488164326, guid: 35f234dcfb13be24f8fbc984592ce546, type: 3}
+  - {fileID: 6535379416526513895, guid: 35f234dcfb13be24f8fbc984592ce546, type: 3}
+  - {fileID: 582406930756672918, guid: 35f234dcfb13be24f8fbc984592ce546, type: 3}

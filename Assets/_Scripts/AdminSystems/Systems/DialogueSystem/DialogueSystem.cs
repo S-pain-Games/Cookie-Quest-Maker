@@ -57,7 +57,7 @@ public class DialogueSystem : ISystemEvents
     public IEnumerator ShowText(string dialogueLine)
     {
         int i = 0;
-        var wait = new WaitForSeconds(0.02f);
+        var wait = new WaitForSeconds(0.015f);
         var d = _dialogueData;
         while (i <= dialogueLine.Length)
         {

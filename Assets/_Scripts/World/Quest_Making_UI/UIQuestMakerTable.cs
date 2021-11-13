@@ -24,7 +24,7 @@ namespace CQM.Gameplay
         private QuestMakingSystem _questMakingSys;
         private EventVoid _toggleQuestMakingUI;
 
-        public EventSys m_evtSys = new EventSys();
+        public EventSys m_localUIEventSystem = new EventSys();
 
         private Event<ID> _onStorySelectedCallback;
         private Event<ID> _onUsePiece;
@@ -35,15 +35,18 @@ namespace CQM.Gameplay
             var evtSys = Admin.Global.EventSystem;
             _toggleQuestMakingUI = evtSys.GetCommandByName<EventVoid>("ui_sys", "toggle_quest_making");
 
-            _storySelection.Initialize(m_evtSys);
-            _pieceStorage.Initialize(m_evtSys);
-            _questBuilding.Initialize(m_evtSys, _canvas);
+            // Initialize all the UI Components (this also registers their events)
+            _storySelection.Initialize(m_localUIEventSystem);
+            _pieceStorage.Initialize(m_localUIEventSystem);
+            _questBuilding.Initialize(m_localUIEventSystem, _canvas);
 
+            // After all the UI Components have registered their events
+            // every component that needs them adquires them
             _pieceStorage.AdquireUIEvents();
             _questBuilding.AdquireUIEvents();
 
-            m_evtSys.GetEvent(new ID("on_story_selected"), out _onStorySelectedCallback);
-            m_evtSys.GetEvent(new ID("on_use_piece"), out _onUsePiece);
+            m_localUIEventSystem.GetEvent(new ID("on_story_selected"), out _onStorySelectedCallback);
+            m_localUIEventSystem.GetEvent(new ID("on_use_piece"), out _onUsePiece);
         }
 
         private void OnEnable()

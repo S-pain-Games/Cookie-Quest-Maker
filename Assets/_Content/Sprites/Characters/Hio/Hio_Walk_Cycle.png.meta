@@ -1,0 +1,1272 @@
+fileFormatVersion: 2
+guid: 04f9e9ba13a0add48a0852eaec5bde90
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5252100679041203957
+    second: Hio_IdleCycle2_0
+  - first:
+      213: 4656566348403814887
+    second: Hio_IdleCycle2_1
+  - first:
+      213: -763417408217578405
+    second: Hio_IdleCycle2_2
+  - first:
+      213: 4015545248302494657
+    second: Hio_IdleCycle2_3
+  - first:
+      213: -8120893128010944546
+    second: Hio_IdleCycle2_4
+  - first:
+      213: 7687416532294030865
+    second: Hio_IdleCycle2_5
+  - first:
+      213: -8719758548839242009
+    second: Hio_IdleCycle2_6
+  - first:
+      213: -2371551486907962738
+    second: Hio_IdleCycle2_7
+  - first:
+      213: -768884285146177148
+    second: Hio_IdleCycle2_8
+  - first:
+      213: 8078520373891737098
+    second: Hio_IdleCycle2_9
+  - first:
+      213: 8209298188529635981
+    second: Hio_IdleCycle2_10
+  - first:
+      213: -3640879088382667981
+    second: Hio_IdleCycle2_11
+  - first:
+      213: -380347473736862462
+    second: Hio_IdleCycle2_12
+  - first:
+      213: 4937527888041204192
+    second: Hio_IdleCycle2_13
+  - first:
+      213: 9002800835281941509
+    second: Hio_IdleCycle2_14
+  - first:
+      213: -6603841817597879462
+    second: Hio_IdleCycle2_15
+  - first:
+      213: -1267136970757173821
+    second: Hio_IdleCycle2_16
+  - first:
+      213: -8073031522091720444
+    second: Hio_IdleCycle2_17
+  - first:
+      213: -1868801086570896520
+    second: Hio_IdleCycle2_18
+  - first:
+      213: 7539562741700908602
+    second: Hio_IdleCycle2_19
+  - first:
+      213: 4854239203777170257
+    second: Hio_IdleCycle2_20
+  - first:
+      213: -4418413227718730064
+    second: Hio_IdleCycle2_21
+  - first:
+      213: 4168635163178518505
+    second: Hio_IdleCycle2_22
+  - first:
+      213: -2947807350200840999
+    second: Hio_IdleCycle2_23
+  - first:
+      213: 4830057327423579055
+    second: Hio_IdleCycle2_24
+  - first:
+      213: -5306356519973280252
+    second: Hio_IdleCycle2_25
+  - first:
+      213: 7986461573583535246
+    second: Hio_IdleCycle2_26
+  - first:
+      213: -7517067150421006844
+    second: Hio_IdleCycle2_27
+  - first:
+      213: 1474679326448447916
+    second: Hio_IdleCycle2_28
+  - first:
+      213: -1517834072647913230
+    second: Hio_IdleCycle2_29
+  - first:
+      213: 4870229812130646843
+    second: Hio_IdleCycle2_30
+  - first:
+      213: -3495915969102421923
+    second: Hio_IdleCycle2_31
+  - first:
+      213: -4230161246039824853
+    second: Hio_IdleCycle2_32
+  - first:
+      213: 2341114980642751307
+    second: Hio_IdleCycle2_33
+  - first:
+      213: 3966347625994108070
+    second: Hio_IdleCycle2_34
+  - first:
+      213: 1845392316054146125
+    second: Hio_IdleCycle2_35
+  - first:
+      213: -6706265295345942567
+    second: Hio_IdleCycle2_36
+  - first:
+      213: 5329319946073943652
+    second: Hio_IdleCycle2_37
+  - first:
+      213: -6578363686568278568
+    second: Hio_IdleCycle2_38
+  - first:
+      213: 742503944871739042
+    second: Hio_IdleCycle2_39
+  - first:
+      213: -2139994023015659709
+    second: Hio_IdleCycle2_40
+  - first:
+      213: 265952617426524225
+    second: Hio_IdleCycle2_41
+  - first:
+      213: -2649200047875836966
+    second: Hio_IdleCycle2_42
+  - first:
+      213: -8093946586115060727
+    second: Hio_IdleCycle2_43
+  - first:
+      213: -8889207404101618794
+    second: Hio_IdleCycle2_44
+  - first:
+      213: 845991061627239001
+    second: Hio_IdleCycle2_45
+  - first:
+      213: -1129134168227994433
+    second: Hio_IdleCycle2_46
+  - first:
+      213: 3931846555110327002
+    second: Hio_IdleCycle2_47
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 616
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b01492d524acc17b0800000000000000
+      internalID: -5252100679041203957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 616
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1b5ad1c627f9040800000000000000
+      internalID: 4656566348403814887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_2
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 616
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5487d779ebc765f0800000000000000
+      internalID: -763417408217578405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_3
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 616
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c3f398c0251ab730800000000000000
+      internalID: 4015545248302494657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_4
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 616
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf2ff5f9bacc4f80800000000000000
+      internalID: -8120893128010944546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_5
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 616
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 116d9df3b903faa60800000000000000
+      internalID: 7687416532294030865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 539
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6e2419cc13df680800000000000000
+      internalID: -8719758548839242009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_7
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 539
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8a2d48dc7e861fd0800000000000000
+      internalID: -2371551486907962738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_8
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 539
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4816b7ef0df5455f0800000000000000
+      internalID: -768884285146177148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_9
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 539
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06a29c6a7bac1070800000000000000
+      internalID: 8078520373891737098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_10
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 539
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82119e25394de170800000000000000
+      internalID: 8209298188529635981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_11
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 539
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3339dc262cff87dc0800000000000000
+      internalID: -3640879088382667981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 462
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20572b0ecfbb8baf0800000000000000
+      internalID: -380347473736862462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_13
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 462
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9d74b347f958440800000000000000
+      internalID: 4937527888041204192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_14
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 462
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504f19a29af50fc70800000000000000
+      internalID: 9002800835281941509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_15
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 462
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b55350bd07a54a0800000000000000
+      internalID: -6603841817597879462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_16
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 462
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd014083a93a6ee0800000000000000
+      internalID: -1267136970757173821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_17
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 462
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40121397a94d6ff80800000000000000
+      internalID: -8073031522091720444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 385
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873e317205fa016e0800000000000000
+      internalID: -1868801086570896520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_19
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 385
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a365ad40e58e1a860800000000000000
+      internalID: 7539562741700908602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_20
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 385
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15bc9e346d8bd5340800000000000000
+      internalID: 4854239203777170257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_21
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 385
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0be10f24494aea2c0800000000000000
+      internalID: -4418413227718730064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_22
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 385
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e745733897f9d930800000000000000
+      internalID: 4168635163178518505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_23
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 385
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc4ef845d84717d0800000000000000
+      internalID: -2947807350200840999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 308
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3eadd6c8fc70340800000000000000
+      internalID: 4830057327423579055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_25
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 308
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4062a6ffbd80c56b0800000000000000
+      internalID: -5306356519973280252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_26
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 308
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8cf0c1bc7c95de60800000000000000
+      internalID: 7986461573583535246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_27
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 308
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406e56af0430ea790800000000000000
+      internalID: -7517067150421006844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_28
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 308
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca17292c80d177410800000000000000
+      internalID: 1474679326448447916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_29
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 308
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f036d7e3f19feae0800000000000000
+      internalID: -1517834072647913230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 231
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b8096e538869340800000000000000
+      internalID: 4870229812130646843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_31
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 231
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d50e801c2f20c7fc0800000000000000
+      internalID: -3495915969102421923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_32
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 231
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b262c2352c27b45c0800000000000000
+      internalID: -4230161246039824853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_33
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 231
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b438e8fcbaf4d7020800000000000000
+      internalID: 2341114980642751307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_34
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 231
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6acb717b62c4b0730800000000000000
+      internalID: 3966347625994108070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_35
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 231
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c84adb8862c9910800000000000000
+      internalID: 1845392316054146125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 154
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfff55ce3f8ee2a0800000000000000
+      internalID: -6706265295345942567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_37
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 154
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e2428414c85f940800000000000000
+      internalID: 5329319946073943652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_38
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 154
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5c4caa415f4b4a0800000000000000
+      internalID: -6578363686568278568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_39
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 154
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aef7666767ed4a00800000000000000
+      internalID: 742503944871739042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_40
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 154
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34741b436c63d42e0800000000000000
+      internalID: -2139994023015659709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_41
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 154
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1481bc81f7ad0b300800000000000000
+      internalID: 265952617426524225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 77
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3b96fa7962c3bd0800000000000000
+      internalID: -2649200047875836966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_43
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 77
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c40a7a6768caf80800000000000000
+      internalID: -8093946586115060727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_44
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 77
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69330c786f033a480800000000000000
+      internalID: -8889207404101618794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_45
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 77
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a727763609dbb00800000000000000
+      internalID: 845991061627239001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_46
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 77
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4a307d4728450f0800000000000000
+      internalID: -1129134168227994433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hio_IdleCycle2_47
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 77
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2c1bc2c99b09630800000000000000
+      internalID: 3931846555110327002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

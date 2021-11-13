@@ -9,31 +9,32 @@ namespace CQM.Databases
     [System.Serializable]
     public class ComponentsDatabase : MonoBehaviour
     {
+        [Header("Batch Components")]
         // All the Stories Data in the game (Persistent & Runtime)
-        private ComponentsContainer<StoryInfoComponent> m_StoriesInfo = new ComponentsContainer<StoryInfoComponent>();
+        [SerializeField] private ComponentsContainer<StoryInfoComponent> m_StoriesInfo = new ComponentsContainer<StoryInfoComponent>();
         // Story UI Data used in the story selection UI (Persistent)
         private ComponentsContainer<StoryUIDataComponent> m_StoriesUI = new ComponentsContainer<StoryUIDataComponent>();
         // All the repercusions in the game (Persistent)
         private ComponentsContainer<StoryRepercusionComponent> m_Repercusions = new ComponentsContainer<StoryRepercusionComponent>();
 
-
         // Contains all the cookie recipes
-        private ComponentsContainer<RecipeDataComponent> m_RecipeData = new ComponentsContainer<RecipeDataComponent>();
+        [SerializeField] private ComponentsContainer<RecipeDataComponent> m_RecipeData = new ComponentsContainer<RecipeDataComponent>();
         // Contains all the data for the cookies
-        public ComponentsContainer<CookieDataComponent> m_CookieData = new ComponentsContainer<CookieDataComponent>();
+        [SerializeField] public ComponentsContainer<CookieDataComponent> m_CookieData = new ComponentsContainer<CookieDataComponent>();
 
         // Contains all the quest piece data
-        public ComponentsContainer<QuestPieceFunctionalComponent> m_QuestPieceFunctionalComponents = new ComponentsContainer<QuestPieceFunctionalComponent>();
-        public ComponentsContainer<UIQuestPieceComponent> m_QuestPieceUIComponent = new ComponentsContainer<UIQuestPieceComponent>();
-        public ComponentsContainer<QuestPiecePrefabComponent> m_QuestPiecePrefabComponent = new ComponentsContainer<QuestPiecePrefabComponent>();
+        [SerializeField] public ComponentsContainer<QuestPieceFunctionalComponent> m_QuestPieceFunctionalComponents = new ComponentsContainer<QuestPieceFunctionalComponent>();
+        [SerializeField] public ComponentsContainer<UIQuestPieceComponent> m_QuestPieceUIComponent = new ComponentsContainer<UIQuestPieceComponent>();
+        [SerializeField] public ComponentsContainer<QuestPiecePrefabComponent> m_QuestPiecePrefabComponent = new ComponentsContainer<QuestPiecePrefabComponent>();
 
-        public ComponentsContainer<CharacterComponent> m_CharacterComponents = new ComponentsContainer<CharacterComponent>();
-        public ComponentsContainer<DialogueCharacterComponent> m_CharacterDialogueComponents = new ComponentsContainer<DialogueCharacterComponent>();
+        [SerializeField] public ComponentsContainer<CharacterComponent> m_CharacterComponents = new ComponentsContainer<CharacterComponent>();
+        [SerializeField] public ComponentsContainer<DialogueCharacterComponent> m_CharacterDialogueComponents = new ComponentsContainer<DialogueCharacterComponent>();
 
-        public ComponentsContainer<LocationComponent> m_LocationsComponents = new ComponentsContainer<LocationComponent>();
+        [SerializeField] public ComponentsContainer<LocationComponent> m_LocationsComponents = new ComponentsContainer<LocationComponent>();
 
 
         // Singleton Components
+        [Header("Singleton Components")]
         public Singleton_GameStateComponent m_GameState;
         public Singleton_PopupReferencesComponent m_Popups = new Singleton_PopupReferencesComponent();
         public Singleton_CameraDataComponent m_Cameras = new Singleton_CameraDataComponent();
@@ -52,9 +53,8 @@ namespace CQM.Databases
 
         public Singleton_LocalizationComponent m_LocalizationComponent = new Singleton_LocalizationComponent();
 
-        /*
-         * DATA VIEWS
-         */
+
+        [Header("Non-Component Misc Data")]
         public ComponentsContainer<QuestDataComponent> m_CompletedQuestData = new ComponentsContainer<QuestDataComponent>();
 
         // IDs of the stories in the order in which they will be started
