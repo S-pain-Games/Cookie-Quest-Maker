@@ -1,4 +1,5 @@
 using CQM.Databases;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,15 @@ public class IngredientsBuilder : MonoBehaviour
         CreateIngredient("cream", "Cream");
     }
 
+    public void BuildPieces(ComponentsDatabase c)
+    {
+        for (int i = 0; i < m_IngredientsList.Count; i++)
+        {
+            var ingr = m_IngredientsList[i];
+            c.GetComponentContainer<IngredientComponent>().Add(ingr.m_ID, ingr);
+        }
+    }
+
     public void ApplyReferences()
     {
         for (int i = 0; i < m_References.Count; i++)
@@ -38,7 +48,7 @@ public class IngredientsBuilder : MonoBehaviour
     private void CreateIngredient(string idName, string name)
     {
         i = new IngredientComponent();
-        i.m_ID = ID(idName);
+        i.m_ID = new ID(idName);
         i.m_Name = name;
         m_IngredientsList.Add(i);
 
@@ -46,11 +56,6 @@ public class IngredientsBuilder : MonoBehaviour
         r.m_ID = i.m_ID;
         r.m_Name = i.m_Name;
         m_References.Add(r);
-    }
-
-    private ID ID(string name)
-    {
-        return new ID(name);
     }
 
     [System.Serializable]

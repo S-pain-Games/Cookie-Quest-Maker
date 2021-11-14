@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CQM.Databases;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using static Language;
@@ -10,6 +11,32 @@ public class LocalizationBuilder : MonoBehaviour
     private ID _currentID;
     private LocalizedData _localData;
 
+    public void BuildLocalization(ComponentsDatabase c)
+    {
+        var lText = m_LocalizedText;
+        for (int i = 0; i < lText.Count; i++)
+        {
+            for (int j = 0; j < lText[i].m_Lines.Count; j++)
+            {
+                var line = lText[i].m_Lines[j];
+
+                switch (line.m_Lang)
+                {
+                    case Language.Undefined:
+                        Debug.LogError("Undefined language when loading Loc data");
+                        break;
+                    case Language.Spanish:
+                        c.m_LocalizationComponent.m_Spanish.Add(lText[i].m_ID, line.m_Line);
+                        break;
+                    case Language.English:
+                        c.m_LocalizationComponent.m_English.Add(lText[i].m_ID, line.m_Line);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+    }
 
     [MethodButton]
     public void LoadDataFromCode()

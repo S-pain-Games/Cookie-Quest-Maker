@@ -32,6 +32,8 @@ namespace CQM.Databases
 
         [SerializeField] public ComponentsContainer<LocationComponent> m_LocationsComponents = new ComponentsContainer<LocationComponent>();
 
+        [SerializeField] private ComponentsContainer<IngredientComponent> m_IngredientsComponents = new ComponentsContainer<IngredientComponent>();
+
 
         // Singleton Components
         [Header("Singleton Components")]
@@ -88,6 +90,7 @@ namespace CQM.Databases
             m_ComponentContainers.Add(typeof(DialogueCharacterComponent), m_CharacterDialogueComponents);
 
             m_ComponentContainers.Add(typeof(LocationComponent), m_LocationsComponents);
+            m_ComponentContainers.Add(typeof(IngredientComponent), m_IngredientsComponents);
         }
 
         public ComponentsContainer<T> GetComponentContainer<T>()

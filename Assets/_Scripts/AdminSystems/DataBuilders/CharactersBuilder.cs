@@ -1,3 +1,4 @@
+using CQM.Databases;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,19 @@ public class CharactersBuilder : MonoBehaviour
     private CharacterReferences r;
     private CharacterWorldPrefabComponent p;
 
+    public void BuildCharacters(ComponentsDatabase c)
+    {
+        var cList = m_CharactersList;
+        for (int i = 0; i < cList.Count; i++)
+        {
+            c.m_CharacterComponents.Add(cList[i].m_ID, cList[i]);
+        }
+        var dList = m_CharacterDialogueList;
+        for (int i = 0; i < cList.Count; i++)
+        {
+            c.m_CharacterDialogueComponents.Add(dList[i].m_ID, dList[i]);
+        }
+    }
 
     public void LoadDataFromCode()
     {

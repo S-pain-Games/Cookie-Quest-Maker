@@ -11,7 +11,7 @@ namespace CQM.Databases
     public class PieceBuilder : MonoBehaviour
     {
         [SerializeField]
-        private List<BuiltPiece> m_Pieces = new List<BuiltPiece>();
+        private List<BuiltPieceReference> m_PiecesReferences = new List<BuiltPieceReference>();
 
         // Output Components
         public List<QuestPieceFunctionalComponent> m_QuestPieceFunctionalComponents = new List<QuestPieceFunctionalComponent>();
@@ -23,7 +23,6 @@ namespace CQM.Databases
         public GameObject m_DefaultPiecePrefab;
 
         // Data of the piece that is currently being built
-        private BuiltPiece _piece;
         private QuestPieceFunctionalComponent _functionalQP;
         private UIQuestPieceComponent _uiQP;
         private QuestPiecePrefabComponent _prefabQP;
@@ -31,9 +30,42 @@ namespace CQM.Databases
         private RecipeDataComponent _recipeData;
 
 
+        public void BuildPieces(ComponentsDatabase c)
+        {
+            var piecesList = m_QuestPieceUIComponent;
+            for (int i = 0; i < piecesList.Count; i++)
+            {
+                var data = piecesList[i];
+                c.m_QuestPieceUIComponent.Add(data.m_ID, data);
+            }
+            var functionalQuestPieces = m_QuestPieceFunctionalComponents;
+            for (int i = 0; i < functionalQuestPieces.Count; i++)
+            {
+                var data = functionalQuestPieces[i];
+                c.m_QuestPieceFunctionalComponents.Add(data.m_ID, data);
+            }
+            var prefabQuestPieces = m_QuestPiecePrefabComponent;
+            for (int i = 0; i < prefabQuestPieces.Count; i++)
+            {
+                var data = prefabQuestPieces[i];
+                c.m_QuestPiecePrefabComponent.Add(data.m_ID, data);
+            }
+            var recipeData = m_RecipeData;
+            for (int i = 0; i < recipeData.Count; i++)
+            {
+                c.GetComponentContainer<RecipeDataComponent>().Add(recipeData[i].m_ID, recipeData[i]);
+            }
+
+            var cookieData = m_CookieData;
+            for (int i = 0; i < recipeData.Count; i++)
+            {
+                c.m_CookieData.Add(cookieData[i].m_ParentID, cookieData[i]);
+            }
+        }
+
         public void LoadDataFromCode()
         {
-            m_Pieces.Clear();
+            m_PiecesReferences.Clear();
             m_QuestPieceFunctionalComponents.Clear();
             m_QuestPieceUIComponent.Clear();
             m_QuestPiecePrefabComponent.Clear();
@@ -243,6 +275,23 @@ namespace CQM.Databases
             }
         }
 
+        public void ApplyReferences()
+        {
+            for (int i = 0; i < m_PiecesReferences.Count; i++)
+            {
+                var p = m_PiecesReferences[i];
+                for (int j = 0; j < m_QuestPieceUIComponent.Count; j++)
+                {
+                    m_QuestPieceUIComponent[j].m_Sprite = p.smallSprite;
+                    m_QuestPieceUIComponent[j].m_QuestBuildingSprite = p.fullSprite;
+                }
+                for (int j = 0; j < m_QuestPiecePrefabComponent.Count; j++)
+                {
+                    m_QuestPiecePrefabComponent[j].m_QuestBuildingPiecePrefab = p.questBuildingPrefab;
+                }
+            }
+        }
+
         #region Builder Methods
         private void CreateNew()
         {
@@ -261,14 +310,12 @@ namespace CQM.Databases
 
             _prefabQP.m_QuestBuildingPiecePrefab = m_DefaultPiecePrefab;
 
-            // Inspector Only
-            _piece = new BuiltPiece(_cookieData, _recipeData);
-            m_Pieces.Add(_piece);
+
         }
 
         private void SetIDName(string idName)
         {
-            _piece.inspectorPieceName = idName;
+            m_PiecesReferences.Add(new BuiltPieceReference { inspectorPieceName = idName });
             ID id = new ID(idName);
 
             _functionalQP.m_ID = id;
@@ -316,17 +363,12 @@ namespace CQM.Databases
         #endregion
 
         [Serializable]
-        private class BuiltPiece
+        private class BuiltPieceReference
         {
             public string inspectorPieceName;
-            public CookieDataComponent cookieData;
-            public RecipeDataComponent recipeData;
-
-            public BuiltPiece(CookieDataComponent cookieData, RecipeDataComponent recipeData)
-            {
-                this.cookieData = cookieData;
-                this.recipeData = recipeData;
-            }
+            public Sprite smallSprite;
+            public Sprite fullSprite;
+            public GameObject questBuildingPrefab;
         }
     }
 }
