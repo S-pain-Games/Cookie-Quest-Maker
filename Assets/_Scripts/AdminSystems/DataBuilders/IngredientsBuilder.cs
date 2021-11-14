@@ -17,9 +17,16 @@ public class IngredientsBuilder : MonoBehaviour
         m_IngredientsList.Clear();
         m_References.Clear();
 
-        CreateIngredient("chocolate", "Chocolate");
-        CreateIngredient("vanilla", "Vanilla");
-        CreateIngredient("cream", "Cream");
+        CreateIngredient("masa_de_galletas_encantada", "Masa de galletas encantada");
+        CreateIngredient("compota_de_mora_infernal", "Compota de mora infernal");
+        CreateIngredient("nucleo_de_cereza_animico", "Núcleo de cereza anímico");
+        CreateIngredient("crema_pastelera_arcana", "Crema pastelera arcana");
+        CreateIngredient("vainilla_de_la_iluminacion", "Vainilla de la iluminación");
+        CreateIngredient("caramelo_fundido_candiscente", "Caramelo fundido candiscente");
+        CreateIngredient("esencia_de_limon_purificadora", "Esencia de limón purificadora");
+        CreateIngredient("levadura_ancestral_de_la_pereza", "Levadura Ancestral de la pereza");
+        CreateIngredient("chocolate_negro_sempiterno", "Chocolate negro Sempiterno");
+        CreateIngredient("harina_de_fuerza_titanica", "Harina de fuerza titánica");
     }
 
     public void BuildPieces(ComponentsDatabase c)

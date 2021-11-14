@@ -11,6 +11,7 @@ public class PieceCraftingUI : MonoBehaviour
     private ComponentsContainer<RecipeDataComponent> _recipeDataComponents;
     private ComponentsContainer<QuestPieceFunctionalComponent> _pieceDataComponents;
     private ComponentsContainer<UIQuestPieceComponent> _recipeUiDataComponents;
+    private ComponentsContainer<IngredientComponent> _ingredientDataComponents;
     private Singleton_InventoryComponent _inventory;
 
     private List<ID> _cookieRecipes;
@@ -36,13 +37,29 @@ public class PieceCraftingUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text_stat_2;
     [SerializeField] private TextMeshProUGUI text_stat_3;
 
+    [SerializeField] private GameObject obj_ingredient_1;
+    [SerializeField] private GameObject obj_ingredient_2;
+    [SerializeField] private GameObject obj_ingredient_3;
+
+    [SerializeField] private TextMeshProUGUI text_ingredient_name_1;
+    [SerializeField] private TextMeshProUGUI text_ingredient_name_2;
+    [SerializeField] private TextMeshProUGUI text_ingredient_name_3;
+
+    [SerializeField] private TextMeshProUGUI text_ingredient_amount_1;
+    [SerializeField] private TextMeshProUGUI text_ingredient_amount_2;
+    [SerializeField] private TextMeshProUGUI text_ingredient_amount_3;
+
+    [SerializeField] private Image image_ingredient_1;
+    [SerializeField] private Image image_ingredient_2;
+    [SerializeField] private Image image_ingredient_3;
+
     private void Awake()
     {
         var admin = Admin.Global;
         _craftRecipe = admin.EventSystem.GetCommandByName<Event<ID>>("piece_crafting_sys", "craft_recipe");
 
-        //Event<PieceRecipeUi> evt = admin.EventSystem.GetCallback<Event<PieceRecipeUi>>(new ID("piece_crafting_sys"), new ID("update_piece_ui"));
-        //evt.OnInvoked += UpdatePieceUi;
+        Event<ID> evt = admin.EventSystem.GetCallback<Event<ID>>(new ID("piece_crafting_sys"), new ID("update_ingredients_ui"));
+        evt.OnInvoked += UpdateRecipeIngredients;
 
         //Admin.Global.Systems.pieceCraftingSystem.GetDefaultUi();
 
@@ -50,6 +67,7 @@ public class PieceCraftingUI : MonoBehaviour
         _pieceDataComponents = admin.Components.m_QuestPieceFunctionalComponents;
         _inventory = admin.Components.m_InventoryComponent;
         _recipeUiDataComponents = admin.Components.m_QuestPieceUIComponent;
+        _ingredientDataComponents = admin.Components.GetComponentContainer<IngredientComponent>();
 
         _cookieRecipes = new List<ID>();
         _actionRecipes = new List<ID>();
@@ -168,6 +186,10 @@ public class PieceCraftingUI : MonoBehaviour
         text_stat_1.gameObject.SetActive(state);
         text_stat_2.gameObject.SetActive(state);
         text_stat_3.gameObject.SetActive(state);
+
+        obj_ingredient_1.SetActive(state);
+        obj_ingredient_2.SetActive(state);
+        obj_ingredient_3.SetActive(state);
     }
 
     private void UpdatePieceUi(QuestPieceFunctionalComponent piece, RecipeDataComponent recipe, UIQuestPieceComponent recipeUi)
@@ -190,6 +212,95 @@ public class PieceCraftingUI : MonoBehaviour
                     text_stat_2.text = piece.m_Tags[i].m_Value.ToString();
                 else if (piece.m_Tags[i].m_Type == QPTag.TagType.Harm)
                     text_stat_3.text = piece.m_Tags[i].m_Value.ToString();
+            }
+
+            UpdateRecipeIngredients(recipe.m_ID);
+            /*
+            obj_ingredient_1.SetActive(false);
+            obj_ingredient_2.SetActive(false);
+            obj_ingredient_3.SetActive(false);
+
+            for (int i = 0; i < recipe.m_IngredientsList.Count; i++)
+            {
+                IngredientComponent ingredient = _ingredientDataComponents.GetComponentByID(recipe.m_IngredientsList[i].m_ItemID);
+                int m_amount = 0;
+                for (int j=0; j<_inventory.m_Ingredients.Count; j++)
+                {
+                    if(_inventory.m_Ingredients[j].m_ItemID == ingredient.m_ID)
+                    {
+                        m_amount = _inventory.m_Ingredients[j].m_Amount;
+                        break;
+                    }
+                }
+                if (i == 0)
+                {
+                    obj_ingredient_1.SetActive(true);
+                    text_ingredient_name_1.text = ingredient.m_Name;
+                    text_ingredient_amount_1.text = m_amount + " / " + recipe.m_IngredientsList[i].m_Amount;
+                    image_ingredient_1.sprite = ingredient.m_Sprite;
+                }
+                else if (i == 1)
+                {
+                    obj_ingredient_2.SetActive(true);
+                    text_ingredient_name_2.text = ingredient.m_Name;
+                    text_ingredient_amount_2.text = m_amount + " / " + recipe.m_IngredientsList[i].m_Amount;
+                    image_ingredient_2.sprite = ingredient.m_Sprite;
+                }
+                else if (i == 2)
+                {
+                    obj_ingredient_3.SetActive(true);
+                    text_ingredient_name_3.text = ingredient.m_Name;
+                    text_ingredient_amount_3.text = m_amount + " / " + recipe.m_IngredientsList[i].m_Amount;
+                    image_ingredient_3.sprite = ingredient.m_Sprite;
+                }
+            }
+            */
+        }
+    }
+
+    public void UpdateRecipeIngredients(ID recipeId)
+    {
+        obj_ingredient_1.SetActive(false);
+        obj_ingredient_2.SetActive(false);
+        obj_ingredient_3.SetActive(false);
+
+        RecipeDataComponent recipe = _recipeDataComponents.GetComponentByID(recipeId);
+
+        for (int i = 0; i < recipe.m_IngredientsList.Count; i++)
+        {
+            IngredientComponent ingredient = _ingredientDataComponents.GetComponentByID(recipe.m_IngredientsList[i].m_ItemID);
+           
+            int m_amount = 0;
+            for (int j = 0; j < _inventory.m_Ingredients.Count; j++)
+            {
+                if (_inventory.m_Ingredients[j].m_ItemID == ingredient.m_ID)
+                {
+                    m_amount = _inventory.m_Ingredients[j].m_Amount;
+                    break;
+                }
+            }
+            if (i == 0)
+            {
+                obj_ingredient_1.SetActive(true);
+                text_ingredient_name_1.text = ingredient.m_Name;
+                text_ingredient_amount_1.text = m_amount + " / " + recipe.m_IngredientsList[i].m_Amount;
+                if (ingredient.m_ID == new ID("masa_de_galletas_encantada"))
+                    text_ingredient_amount_1.text = "\u221E" + " / " + recipe.m_IngredientsList[i].m_Amount;
+                image_ingredient_1.sprite = ingredient.m_Sprite;
+            }
+            else if (i == 1)
+            {
+                obj_ingredient_2.SetActive(true);
+                text_ingredient_name_2.text = ingredient.m_Name;
+                text_ingredient_amount_2.text = m_amount + " / " + recipe.m_IngredientsList[i].m_Amount;
+                image_ingredient_2.sprite = ingredient.m_Sprite;
+            }
+            else if (i == 2)
+            {
+                obj_ingredient_3.SetActive(true);
+                text_ingredient_name_3.text = ingredient.m_Name;
+                text_ingredient_amount_3.text = m_amount + " / " + recipe.m_IngredientsList[i].m_Amount;
+                image_ingredient_3.sprite = ingredient.m_Sprite;
             }
         }
     }

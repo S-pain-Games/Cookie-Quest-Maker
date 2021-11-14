@@ -916,8 +916,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 40
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -945,7 +945,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 63.741364, w: 0}
+  m_margin: {x: -44.255913, y: -24.70269, z: 63.741364, w: -25.225176}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1672,8 +1672,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 40
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1701,7 +1701,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 63.741364, w: 0}
+  m_margin: {x: -44.255913, y: -24.70269, z: 63.741364, w: -25.225176}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1806,8 +1806,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 40
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1835,7 +1835,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 63.741364, w: 0}
+  m_margin: {x: -44.255913, y: -24.70269, z: 63.741364, w: -25.225176}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3106,7 +3106,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 78a4e9c93ecdfb444ad986998705f6b2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ca7d7d7958643e4c9d7b642cfc01334, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3322,6 +3322,18 @@ MonoBehaviour:
   text_stat_1: {fileID: 7522800084083049724}
   text_stat_2: {fileID: 5668206054025462823}
   text_stat_3: {fileID: 781311070700687847}
+  obj_ingredient_1: {fileID: 979386368934204986}
+  obj_ingredient_2: {fileID: 3431404035081776691}
+  obj_ingredient_3: {fileID: 191329458171498140}
+  text_ingredient_name_1: {fileID: 3368110872878443437}
+  text_ingredient_name_2: {fileID: 4460138298488141964}
+  text_ingredient_name_3: {fileID: 8021602818806694755}
+  text_ingredient_amount_1: {fileID: 6428525822934964149}
+  text_ingredient_amount_2: {fileID: 6957154598766880933}
+  text_ingredient_amount_3: {fileID: 5846208231910172385}
+  image_ingredient_1: {fileID: 2783596005337011899}
+  image_ingredient_2: {fileID: 128384380075992507}
+  image_ingredient_3: {fileID: 3392009260668747912}
 --- !u!1 &8843529709796086818
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ public class PieceCraftingSystem : ISystemEvents
     private Event<ItemData> _addPieceToInventoryCmd;
     private Event<ItemData> _removeIngredientToInventoryCmd;
 
-    //private Event<PieceRecipeUi> _updatePieceUiCallback;
+    private Event<ID> _updateIngredientsCallback;
 
 
     public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
@@ -24,7 +24,7 @@ public class PieceCraftingSystem : ISystemEvents
 
         //commands.AddEvent<QuestPieceFunctionalComponent.PieceType>(new ID("select_crafting_type")).OnInvoked += SetCraftingType;
         commands.AddEvent<ID>(new ID("craft_recipe")).OnInvoked += CraftRecipe;
-        //callbacks.AddEvent<PieceRecipeUi>(new ID("update_piece_ui"));
+        callbacks.AddEvent<ID>(new ID("update_ingredients_ui"));
     }
 
     public void Initialize(ComponentsContainer<RecipeDataComponent> recipeDataComponents,
@@ -37,7 +37,7 @@ public class PieceCraftingSystem : ISystemEvents
         var evtSys = Admin.Global.EventSystem;
         _addPieceToInventoryCmd = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_piece");
         _removeIngredientToInventoryCmd = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "remove_ingredient");
-        //_updatePieceUiCallback = Admin.Global.EventSystem.GetCallbackByName<Event<PieceRecipeUi>>("piece_crafting_sys", "update_piece_ui");
+        _updateIngredientsCallback = Admin.Global.EventSystem.GetCallbackByName<Event<ID>>("piece_crafting_sys", "update_ingredients_ui");
 
         /*
         _cookieRecipes = new List<ID>();
@@ -56,6 +56,15 @@ public class PieceCraftingSystem : ISystemEvents
 
         if (recipe != null)
         {
+            // This ingredient amount is infinite
+            if (recipe.m_IngredientsList.Count > 0 && recipe.m_IngredientsList[0].m_ItemID == new ID("masa_de_galletas_encantada"))
+            {
+                _addPieceToInventoryCmd.Invoke(new ItemData(_selectedCookieID, 1));
+                _updateIngredientsCallback.Invoke(_selectedCookieID);
+                Debug.Log("Piece added");
+                return;
+            }
+
             bool hasEnoughIngredients = true;
 
             if (_inventory.m_Ingredients.Count < recipe.m_IngredientsList.Count)
@@ -98,6 +107,7 @@ public class PieceCraftingSystem : ISystemEvents
                     _removeIngredientToInventoryCmd.Invoke(new ItemData(recipIngr.m_ItemID, recipIngr.m_Amount));
                 }
                 _addPieceToInventoryCmd.Invoke(new ItemData(_selectedCookieID, 1));
+                _updateIngredientsCallback.Invoke(_selectedCookieID);
                 Debug.Log("Piece added");
             }
             else

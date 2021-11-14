@@ -83,16 +83,17 @@ namespace CQM.Databases
                 CreateNew();
                 SetIDName("plain_cookie");
                 SetPieceType(PieceType.Cookie);
-                SetUIData("Plain Cookie", "Very plain");
+                SetUIData("Galleta normal", "Es una galleta normal.");
                 SetRecipeData("Grandma's Plain Cookie Recipe", "Description Plain Cookie", Reputation.GoodCookieReputation, 50);
-                AddIngredientToRecipe("chocolate", 1);
+                AddIngredientToRecipe("masa_de_galletas_encantada", 1);
 
                 CreateNew();
                 SetIDName("plain_cookie_2");
                 SetPieceType(PieceType.Cookie);
-                SetUIData("Plain Cookie 2", "Very Very plain plain");
+                SetUIData("La jauría", "Descripción de galleta jauría.");
                 SetRecipeData("Grandma's Plain Cookie 2 Recipe", "Description Plain Cookie 2", Reputation.GoodCookieReputation, 50);
-                AddIngredientToRecipe("chocolate", 1);
+                AddIngredientToRecipe("compota_de_mora_infernal", 1);
+                AddIngredientToRecipe("chocolate_negro_sempiterno", 1);
             }
             void CreateActions()
             {
@@ -102,7 +103,7 @@ namespace CQM.Databases
                 AddFunctionalTag(Tag.Harm, 1);
                 SetUIData("Attack", "Very Agressive");
                 SetRecipeData("Attack Piece Recipe", "Very aggresive", Reputation.EvilCookieReputation, 50);
-                AddIngredientToRecipe("chocolate", 1);
+                AddIngredientToRecipe("masa_de_galletas_encantada", 1);
 
                 CreateNew();
                 SetIDName("dialogate");
@@ -110,7 +111,7 @@ namespace CQM.Databases
                 AddFunctionalTag(Tag.Help, 1);
                 SetUIData("Dialogate", "Very Assistive");
                 SetRecipeData("Dialogate Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50);
-                AddIngredientToRecipe("vanilla", 1);
+                AddIngredientToRecipe("compota_de_mora_infernal", 1);
 
                 CreateNew();
                 SetIDName("assist");
@@ -118,7 +119,7 @@ namespace CQM.Databases
                 AddFunctionalTag(Tag.Help, 1);
                 SetUIData("Assist", "Very Assistive");
                 SetRecipeData("Assist Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50);
-                AddIngredientToRecipe("vanilla", 1);
+                AddIngredientToRecipe("compota_de_mora_infernal", 1);
 
                 CreateNew();
                 SetIDName("look");
@@ -126,7 +127,7 @@ namespace CQM.Databases
                 AddFunctionalTag(Tag.Help, 1);
                 SetUIData("Look", "Very Assistive");
                 SetRecipeData("Look Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50);
-                AddIngredientToRecipe("vanilla", 1);
+                AddIngredientToRecipe("compota_de_mora_infernal", 1);
 
                 CreateNew();
                 SetIDName("stare");
@@ -134,7 +135,7 @@ namespace CQM.Databases
                 AddFunctionalTag(Tag.Help, 1);
                 SetUIData("Stare", "Very Assistive");
                 SetRecipeData("Stare Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50);
-                AddIngredientToRecipe("vanilla", 1);
+                AddIngredientToRecipe("compota_de_mora_infernal", 1);
 
                 CreateNew();
                 SetIDName("steal");
@@ -142,7 +143,7 @@ namespace CQM.Databases
                 AddFunctionalTag(Tag.Help, 1);
                 SetUIData("Steal", "Very Assistive");
                 SetRecipeData("Steal Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50);
-                AddIngredientToRecipe("vanilla", 1);
+                AddIngredientToRecipe("compota_de_mora_infernal", 1);
             }
             void CreateObjects()
             {
@@ -153,7 +154,7 @@ namespace CQM.Databases
                 AddFunctionalTag(Tag.Convince, 1);
                 SetUIData("Baseball Bat", "Very Bat");
                 SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50);
-                AddIngredientToRecipe("chocolate", 2);
+                AddIngredientToRecipe("compota_de_mora_infernal", 2);
 
                 CreateNew();
                 SetIDName("scissor");
@@ -162,7 +163,7 @@ namespace CQM.Databases
                 AddFunctionalTag(Tag.Convince, 1);
                 SetUIData("Scissor", "Very Bat");
                 SetRecipeData("Scissor Recipe", "Desc", Reputation.GoodCookieReputation, 50);
-                AddIngredientToRecipe("chocolate", 2);
+                AddIngredientToRecipe("compota_de_mora_infernal", 2);
 
                 CreateNew();
                 SetIDName("flip_flops");
@@ -171,7 +172,7 @@ namespace CQM.Databases
                 AddFunctionalTag(Tag.Convince, 1);
                 SetUIData("Flip Flops", "Very Bat");
                 SetRecipeData("Flip Flops Recipe", "Desc", Reputation.GoodCookieReputation, 50);
-                AddIngredientToRecipe("chocolate", 2);
+                AddIngredientToRecipe("compota_de_mora_infernal", 2);
 
                 CreateNew();
                 SetIDName("cake");
@@ -180,8 +181,8 @@ namespace CQM.Databases
                 AddFunctionalTag(Tag.Help, 1);
                 SetUIData("Cake", "Very Bat");
                 SetRecipeData("Cake Recipe", "Desc", Reputation.GoodCookieReputation, 50);
-                AddIngredientToRecipe("chocolate", 2);
-                AddIngredientToRecipe("vanilla", 2);
+                AddIngredientToRecipe("compota_de_mora_infernal", 2);
+                AddIngredientToRecipe("nucleo_de_cereza_animico", 2);
             }
             void CreateModifiers()
             {
@@ -192,8 +193,8 @@ namespace CQM.Databases
                 AddFunctionalTag(Tag.Help, 1);
                 SetUIData("Violently", "Very Bat");
                 SetRecipeData("Violently Recipe", "Desc", Reputation.GoodCookieReputation, 50);
-                AddIngredientToRecipe("chocolate", 2);
-                AddIngredientToRecipe("vanilla", 2);
+                AddIngredientToRecipe("nucleo_de_cereza_animico", 2);
+                AddIngredientToRecipe("crema_pastelera_arcana", 2);
 
                 CreateNew();
                 SetIDName("brutally");
@@ -202,8 +203,8 @@ namespace CQM.Databases
                 AddFunctionalTag(Tag.Help, 1);
                 SetUIData("Brutally", "Very Bat");
                 SetRecipeData("Brutally Recipe", "Desc", Reputation.GoodCookieReputation, 50);
-                AddIngredientToRecipe("chocolate", 2);
-                AddIngredientToRecipe("vanilla", 2);
+                AddIngredientToRecipe("nucleo_de_cereza_animico", 2);
+                AddIngredientToRecipe("crema_pastelera_arcana", 2);
 
                 CreateNew();
                 SetIDName("kindly");
@@ -212,8 +213,8 @@ namespace CQM.Databases
                 AddFunctionalTag(Tag.Help, 1);
                 SetUIData("Kindly", "Very Bat");
                 SetRecipeData("Kindly Recipe", "Desc", Reputation.GoodCookieReputation, 50);
-                AddIngredientToRecipe("chocolate", 2);
-                AddIngredientToRecipe("vanilla", 2);
+                AddIngredientToRecipe("nucleo_de_cereza_animico", 2);
+                AddIngredientToRecipe("crema_pastelera_arcana", 2);
 
                 CreateNew();
                 SetIDName("convincingly");
@@ -222,8 +223,8 @@ namespace CQM.Databases
                 AddFunctionalTag(Tag.Help, 1);
                 SetUIData("Convincingly", "Very Bat");
                 SetRecipeData("Convincingly Recipe", "Desc", Reputation.GoodCookieReputation, 50);
-                AddIngredientToRecipe("chocolate", 2);
-                AddIngredientToRecipe("vanilla", 2);
+                AddIngredientToRecipe("nucleo_de_cereza_animico", 2);
+                AddIngredientToRecipe("crema_pastelera_arcana", 2);
             }
             void CreateTargets()
             {

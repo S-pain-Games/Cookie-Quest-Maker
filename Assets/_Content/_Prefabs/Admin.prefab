@@ -65,7 +65,107 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6426cf3f127309429de41b9e571bdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PiecesReferences: []
+  m_PiecesReferences:
+  - inspectorPieceName: plain_cookie
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: plain_cookie_2
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: attack
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: dialogate
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: assist
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: look
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: stare
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: steal
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: baseball_bat
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: scissor
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: flip_flops
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: cake
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: violently
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: brutally
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: kindly
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: convincingly
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: mayor
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: meri
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: canela
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: johny_setas
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: miss_chocolate
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: mantecas
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: wolves
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: rats
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
+  - inspectorPieceName: vacas
+    smallSprite: {fileID: 0}
+    fullSprite: {fileID: 0}
+    questBuildingPrefab: {fileID: 0}
   m_QuestPieceFunctionalComponents:
   - m_ID:
       m_NameID: plain_cookie
@@ -266,16 +366,16 @@ MonoBehaviour:
   m_QuestPieceUIComponent:
   - m_Sprite: {fileID: 0}
     m_QuestBuildingSprite: {fileID: 0}
-    m_Name: Plain Cookie
-    m_Description: Very plain
+    m_Name: Galleta normal
+    m_Description: Es una galleta normal.
     m_ID:
       m_NameID: plain_cookie
       m_ID: 1473648501
       m_Initialized: 1
   - m_Sprite: {fileID: 0}
     m_QuestBuildingSprite: {fileID: 0}
-    m_Name: Plain Cookie 2
-    m_Description: Very Very plain plain
+    m_Name: "La jaur\xEDa"
+    m_Description: "Descripci\xF3n de galleta jaur\xEDa."
     m_ID:
       m_NameID: plain_cookie_2
       m_ID: 390974588
@@ -595,15 +695,15 @@ MonoBehaviour:
       m_NameID: plain_cookie
       m_ID: 1473648501
       m_Initialized: 1
-    m_CookieName: Plain Cookie
-    m_CookieDescription: Very plain
+    m_CookieName: Galleta normal
+    m_CookieDescription: Es una galleta normal.
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: plain_cookie_2
       m_ID: 390974588
       m_Initialized: 1
-    m_CookieName: Plain Cookie 2
-    m_CookieDescription: Very Very plain plain
+    m_CookieName: "La jaur\xEDa"
+    m_CookieDescription: "Descripci\xF3n de galleta jaur\xEDa."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: attack
@@ -772,14 +872,14 @@ MonoBehaviour:
       m_ID: 1473648501
       m_Initialized: 1
     m_RecipeName: Grandma's Plain Cookie Recipe
-    m_RecipeDescription: Desc
+    m_RecipeDescription: Description Plain Cookie
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: chocolate
-        m_ID: -965336208
+        m_NameID: masa_de_galletas_encantada
+        m_ID: -695902982
         m_Initialized: 1
       m_Amount: 1
     m_PieceID:
@@ -790,15 +890,20 @@ MonoBehaviour:
       m_NameID: plain_cookie_2
       m_ID: 390974588
       m_Initialized: 1
-    m_RecipeName: Grandma's Plain Cookie Recipe
-    m_RecipeDescription: Desc
+    m_RecipeName: Grandma's Plain Cookie 2 Recipe
+    m_RecipeDescription: Description Plain Cookie 2
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: chocolate
-        m_ID: -965336208
+        m_NameID: compota_de_mora_infernal
+        m_ID: -1959704931
+        m_Initialized: 1
+      m_Amount: 1
+    - m_ItemID:
+        m_NameID: chocolate_negro_sempiterno
+        m_ID: 1221400841
         m_Initialized: 1
       m_Amount: 1
     m_PieceID:
@@ -816,8 +921,8 @@ MonoBehaviour:
     m_Price: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: chocolate
-        m_ID: -965336208
+        m_NameID: masa_de_galletas_encantada
+        m_ID: -695902982
         m_Initialized: 1
       m_Amount: 1
     m_PieceID:
@@ -835,8 +940,8 @@ MonoBehaviour:
     m_Price: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: vanilla
-        m_ID: -1372670123
+        m_NameID: compota_de_mora_infernal
+        m_ID: -1959704931
         m_Initialized: 1
       m_Amount: 1
     m_PieceID:
@@ -854,8 +959,8 @@ MonoBehaviour:
     m_Price: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: vanilla
-        m_ID: -1372670123
+        m_NameID: compota_de_mora_infernal
+        m_ID: -1959704931
         m_Initialized: 1
       m_Amount: 1
     m_PieceID:
@@ -873,8 +978,8 @@ MonoBehaviour:
     m_Price: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: vanilla
-        m_ID: -1372670123
+        m_NameID: compota_de_mora_infernal
+        m_ID: -1959704931
         m_Initialized: 1
       m_Amount: 1
     m_PieceID:
@@ -892,8 +997,8 @@ MonoBehaviour:
     m_Price: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: vanilla
-        m_ID: -1372670123
+        m_NameID: compota_de_mora_infernal
+        m_ID: -1959704931
         m_Initialized: 1
       m_Amount: 1
     m_PieceID:
@@ -911,8 +1016,8 @@ MonoBehaviour:
     m_Price: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: vanilla
-        m_ID: -1372670123
+        m_NameID: compota_de_mora_infernal
+        m_ID: -1959704931
         m_Initialized: 1
       m_Amount: 1
     m_PieceID:
@@ -930,8 +1035,8 @@ MonoBehaviour:
     m_Price: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: chocolate
-        m_ID: -965336208
+        m_NameID: compota_de_mora_infernal
+        m_ID: -1959704931
         m_Initialized: 1
       m_Amount: 2
     m_PieceID:
@@ -949,8 +1054,8 @@ MonoBehaviour:
     m_Price: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: chocolate
-        m_ID: -965336208
+        m_NameID: compota_de_mora_infernal
+        m_ID: -1959704931
         m_Initialized: 1
       m_Amount: 2
     m_PieceID:
@@ -968,8 +1073,8 @@ MonoBehaviour:
     m_Price: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: chocolate
-        m_ID: -965336208
+        m_NameID: compota_de_mora_infernal
+        m_ID: -1959704931
         m_Initialized: 1
       m_Amount: 2
     m_PieceID:
@@ -987,13 +1092,13 @@ MonoBehaviour:
     m_Price: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: chocolate
-        m_ID: -965336208
+        m_NameID: compota_de_mora_infernal
+        m_ID: -1959704931
         m_Initialized: 1
       m_Amount: 2
     - m_ItemID:
-        m_NameID: vanilla
-        m_ID: -1372670123
+        m_NameID: nucleo_de_cereza_animico
+        m_ID: 1174637542
         m_Initialized: 1
       m_Amount: 2
     m_PieceID:
@@ -1011,13 +1116,13 @@ MonoBehaviour:
     m_Price: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: chocolate
-        m_ID: -965336208
+        m_NameID: nucleo_de_cereza_animico
+        m_ID: 1174637542
         m_Initialized: 1
       m_Amount: 2
     - m_ItemID:
-        m_NameID: vanilla
-        m_ID: -1372670123
+        m_NameID: crema_pastelera_arcana
+        m_ID: -235594117
         m_Initialized: 1
       m_Amount: 2
     m_PieceID:
@@ -1035,13 +1140,13 @@ MonoBehaviour:
     m_Price: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: chocolate
-        m_ID: -965336208
+        m_NameID: nucleo_de_cereza_animico
+        m_ID: 1174637542
         m_Initialized: 1
       m_Amount: 2
     - m_ItemID:
-        m_NameID: vanilla
-        m_ID: -1372670123
+        m_NameID: crema_pastelera_arcana
+        m_ID: -235594117
         m_Initialized: 1
       m_Amount: 2
     m_PieceID:
@@ -1059,13 +1164,13 @@ MonoBehaviour:
     m_Price: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: chocolate
-        m_ID: -965336208
+        m_NameID: nucleo_de_cereza_animico
+        m_ID: 1174637542
         m_Initialized: 1
       m_Amount: 2
     - m_ItemID:
-        m_NameID: vanilla
-        m_ID: -1372670123
+        m_NameID: crema_pastelera_arcana
+        m_ID: -235594117
         m_Initialized: 1
       m_Amount: 2
     m_PieceID:
@@ -1083,13 +1188,13 @@ MonoBehaviour:
     m_Price: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: chocolate
-        m_ID: -965336208
+        m_NameID: nucleo_de_cereza_animico
+        m_ID: 1174637542
         m_Initialized: 1
       m_Amount: 2
     - m_ItemID:
-        m_NameID: vanilla
-        m_ID: -1372670123
+        m_NameID: crema_pastelera_arcana
+        m_ID: -235594117
         m_Initialized: 1
       m_Amount: 2
     m_PieceID:
@@ -2522,42 +2627,126 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IngredientsList:
   - m_ID:
-      m_NameID: chocolate
-      m_ID: -965336208
+      m_NameID: masa_de_galletas_encantada
+      m_ID: -695902982
       m_Initialized: 1
-    m_Name: Chocolate
-    m_Sprite: {fileID: 0}
+    m_Name: Masa de galletas encantada
+    m_Sprite: {fileID: 21300000, guid: d09056cfa8500f049a3cbce0406c7e26, type: 3}
   - m_ID:
-      m_NameID: vanilla
-      m_ID: -1372670123
+      m_NameID: compota_de_mora_infernal
+      m_ID: -1959704931
       m_Initialized: 1
-    m_Name: Vanilla
-    m_Sprite: {fileID: 0}
+    m_Name: Compota de mora infernal
+    m_Sprite: {fileID: 21300000, guid: f9031271c08413c43bb11496a3b32a00, type: 3}
   - m_ID:
-      m_NameID: cream
-      m_ID: 1185218972
+      m_NameID: nucleo_de_cereza_animico
+      m_ID: 1174637542
       m_Initialized: 1
-    m_Name: Cream
-    m_Sprite: {fileID: 0}
+    m_Name: "N\xFAcleo de cereza an\xEDmico"
+    m_Sprite: {fileID: 21300000, guid: a27089fc51fdcaf4181affbc4cd10ec6, type: 3}
+  - m_ID:
+      m_NameID: crema_pastelera_arcana
+      m_ID: -235594117
+      m_Initialized: 1
+    m_Name: Crema pastelera arcana
+    m_Sprite: {fileID: 21300000, guid: 39bad943b4b30ad4bbd1af7d8619d31f, type: 3}
+  - m_ID:
+      m_NameID: vainilla_de_la_iluminacion
+      m_ID: 1922958395
+      m_Initialized: 1
+    m_Name: "Vainilla de la iluminaci\xF3n"
+    m_Sprite: {fileID: 21300000, guid: f36a0413a581d4b4dab06b5cff233ce2, type: 3}
+  - m_ID:
+      m_NameID: caramelo_fundido_candiscente
+      m_ID: 340510824
+      m_Initialized: 1
+    m_Name: Caramelo fundido candiscente
+    m_Sprite: {fileID: 21300000, guid: 82194dd7c988abb4c86e25247aa6e194, type: 3}
+  - m_ID:
+      m_NameID: esencia_de_limon_purificadora
+      m_ID: 334205480
+      m_Initialized: 1
+    m_Name: "Esencia de lim\xF3n purificadora"
+    m_Sprite: {fileID: 21300000, guid: 75ae9afafc8dbea46893f0e60e06bcd2, type: 3}
+  - m_ID:
+      m_NameID: levadura_ancestral_de_la_pereza
+      m_ID: -1427575368
+      m_Initialized: 1
+    m_Name: Levadura Ancestral de la pereza
+    m_Sprite: {fileID: 21300000, guid: dac919421da07f74686382450856e1ee, type: 3}
+  - m_ID:
+      m_NameID: chocolate_negro_sempiterno
+      m_ID: 1221400841
+      m_Initialized: 1
+    m_Name: Chocolate negro Sempiterno
+    m_Sprite: {fileID: 21300000, guid: 14453757a922dbe4084bc58b44d3a8da, type: 3}
+  - m_ID:
+      m_NameID: harina_de_fuerza_titanica
+      m_ID: 1850996025
+      m_Initialized: 1
+    m_Name: "Harina de fuerza tit\xE1nica"
+    m_Sprite: {fileID: 21300000, guid: c6c0dbea8b1cd9245a274ab113a9a19f, type: 3}
   m_References:
   - m_ID:
-      m_NameID: chocolate
-      m_ID: -965336208
+      m_NameID: masa_de_galletas_encantada
+      m_ID: -695902982
       m_Initialized: 1
-    m_Name: Chocolate
-    m_Sprite: {fileID: 0}
+    m_Name: Masa de galletas encantada
+    m_Sprite: {fileID: 21300000, guid: d09056cfa8500f049a3cbce0406c7e26, type: 3}
   - m_ID:
-      m_NameID: vanilla
-      m_ID: -1372670123
+      m_NameID: compota_de_mora_infernal
+      m_ID: -1959704931
       m_Initialized: 1
-    m_Name: Vanilla
-    m_Sprite: {fileID: 0}
+    m_Name: Compota de mora infernal
+    m_Sprite: {fileID: 21300000, guid: f9031271c08413c43bb11496a3b32a00, type: 3}
   - m_ID:
-      m_NameID: cream
-      m_ID: 1185218972
+      m_NameID: nucleo_de_cereza_animico
+      m_ID: 1174637542
       m_Initialized: 1
-    m_Name: Cream
-    m_Sprite: {fileID: 0}
+    m_Name: "N\xFAcleo de cereza an\xEDmico"
+    m_Sprite: {fileID: 21300000, guid: a27089fc51fdcaf4181affbc4cd10ec6, type: 3}
+  - m_ID:
+      m_NameID: crema_pastelera_arcana
+      m_ID: -235594117
+      m_Initialized: 1
+    m_Name: Crema pastelera arcana
+    m_Sprite: {fileID: 21300000, guid: 39bad943b4b30ad4bbd1af7d8619d31f, type: 3}
+  - m_ID:
+      m_NameID: vainilla_de_la_iluminacion
+      m_ID: 1922958395
+      m_Initialized: 1
+    m_Name: "Vainilla de la iluminaci\xF3n"
+    m_Sprite: {fileID: 21300000, guid: f36a0413a581d4b4dab06b5cff233ce2, type: 3}
+  - m_ID:
+      m_NameID: caramelo_fundido_candiscente
+      m_ID: 340510824
+      m_Initialized: 1
+    m_Name: Caramelo fundido candiscente
+    m_Sprite: {fileID: 21300000, guid: 82194dd7c988abb4c86e25247aa6e194, type: 3}
+  - m_ID:
+      m_NameID: esencia_de_limon_purificadora
+      m_ID: 334205480
+      m_Initialized: 1
+    m_Name: "Esencia de lim\xF3n purificadora"
+    m_Sprite: {fileID: 21300000, guid: 75ae9afafc8dbea46893f0e60e06bcd2, type: 3}
+  - m_ID:
+      m_NameID: levadura_ancestral_de_la_pereza
+      m_ID: -1427575368
+      m_Initialized: 1
+    m_Name: Levadura Ancestral de la pereza
+    m_Sprite: {fileID: 21300000, guid: dac919421da07f74686382450856e1ee, type: 3}
+  - m_ID:
+      m_NameID: chocolate_negro_sempiterno
+      m_ID: 1221400841
+      m_Initialized: 1
+    m_Name: Chocolate negro Sempiterno
+    m_Sprite: {fileID: 21300000, guid: 14453757a922dbe4084bc58b44d3a8da, type: 3}
+  - m_ID:
+      m_NameID: harina_de_fuerza_titanica
+      m_ID: 1850996025
+      m_Initialized: 1
+    m_Name: "Harina de fuerza tit\xE1nica"
+    m_Sprite: {fileID: 21300000, guid: c6c0dbea8b1cd9245a274ab113a9a19f, type: 3}
 --- !u!1 &2041105134198296772
 GameObject:
   m_ObjectHideFlags: 0
