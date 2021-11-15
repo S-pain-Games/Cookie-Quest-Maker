@@ -8,48 +8,31 @@ public class SpriteLayerSwapperZone : MonoBehaviour
     private SpriteRenderer[] _affectedObjects;
 
     [SerializeField]
-    private int _targetLayerOnEnter;
+    private int _layerIncreaseOnEnter;
 
     [SerializeField]
-    private int _targetLayerOnExit;
+    private int _layerDecreaseOnExit;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Algo ha entrado");
-
         if (collision.GetComponent<CharacterNavMeshAgentHandler>() != null)
         {
-            Debug.Log("Cambiooo");
-            SetAffectedObjectsLayerToValue(_targetLayerOnEnter);
+            SetAffectedObjectsLayerToValue(_layerIncreaseOnEnter);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Algo ha entrado");
-
         if (collision.GetComponent<CharacterNavMeshAgentHandler>() != null)
         {
-            Debug.Log("Cambiooo");
-            SetAffectedObjectsLayerToValue(_targetLayerOnExit);
+            SetAffectedObjectsLayerToValue(_layerDecreaseOnExit);
         }
     }
 
     private void SetAffectedObjectsLayerToValue(int newLayer)
     {
         foreach (SpriteRenderer sr in _affectedObjects)
-            sr.sortingOrder = newLayer;
+            sr.sortingOrder += newLayer;
     }
 }
