@@ -2906,7 +2906,7 @@ MonoBehaviour:
   - {fileID: 7384338015274797963}
   - {fileID: 7384338016420408970}
   - {fileID: 3024146369654735096}
-  - {fileID: 0}
+  - {fileID: 438570459384065804}
   - {fileID: 8489614948728805980}
   _layerIncreaseOnEnter: -2
   _layerDecreaseOnExit: 2
@@ -5520,19 +5520,19 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.78245443, y: 0.147995}
-      - {x: 0.5221059, y: 0.090016425}
-      - {x: 0.27517602, y: 0.13195406}
-      - {x: -0.6356664, y: 0.5846648}
-      - {x: -1.1290523, y: 0.8359004}
+    - - {x: 0.84366244, y: -0.0078072697}
+      - {x: 0.5415812, y: -0.0045778155}
+      - {x: 0.20283923, y: 0.070746034}
+      - {x: -0.6885278, y: 0.4984172}
+      - {x: -1.2319931, y: 0.78025675}
       - {x: -1.672188, y: 0.59896374}
       - {x: -1.6842203, y: 0.06462243}
       - {x: 0.017044425, y: -0.78165716}
       - {x: 0.40386707, y: -0.87588346}
       - {x: 0.91732407, y: -0.8148113}
       - {x: 1.6706938, y: -0.45445922}
-      - {x: 1.6816227, y: -0.18760034}
-      - {x: 0.9193262, y: 0.20129248}
+      - {x: 1.6746794, y: -0.3033227}
+      - {x: 1.114079, y: 0.049724057}
 --- !u!114 &7384338016785371352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6102,7 +6102,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 17
+  m_SortingOrder: 14
   m_Sprite: {fileID: 21300000, guid: 82a00f9462fdd3647800a69cdaf5103a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6335,7 +6335,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 17
+  m_SortingOrder: 14
   m_Sprite: {fileID: 21300000, guid: 82a00f9462fdd3647800a69cdaf5103a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
