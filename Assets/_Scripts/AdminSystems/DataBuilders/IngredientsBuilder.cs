@@ -17,16 +17,16 @@ public class IngredientsBuilder : MonoBehaviour
         m_IngredientsList.Clear();
         m_References.Clear();
 
-        CreateIngredient("masa_de_galletas_encantada", "Masa de galletas encantada");
-        CreateIngredient("compota_de_mora_infernal", "Compota de mora infernal");
-        CreateIngredient("nucleo_de_cereza_animico", "Núcleo de cereza anímico");
-        CreateIngredient("crema_pastelera_arcana", "Crema pastelera arcana");
-        CreateIngredient("vainilla_de_la_iluminacion", "Vainilla de la iluminación");
-        CreateIngredient("caramelo_fundido_candiscente", "Caramelo fundido candiscente");
-        CreateIngredient("esencia_de_limon_purificadora", "Esencia de limón purificadora");
-        CreateIngredient("levadura_ancestral_de_la_pereza", "Levadura Ancestral de la pereza");
-        CreateIngredient("chocolate_negro_sempiterno", "Chocolate negro Sempiterno");
-        CreateIngredient("harina_de_fuerza_titanica", "Harina de fuerza titánica");
+        CreateIngredient("masa_de_galletas_encantada", "Masa de galletas encantada", 0, Reputation.GoodCookieReputation);
+        CreateIngredient("compota_de_mora_infernal", "Compota de mora infernal", 0, Reputation.EvilCookieReputation);
+        CreateIngredient("nucleo_de_cereza_animico", "Núcleo de cereza anímico", 0, Reputation.GoodCookieReputation);
+        CreateIngredient("crema_pastelera_arcana", "Crema pastelera arcana", 0, Reputation.GoodCookieReputation);
+        CreateIngredient("vainilla_de_la_iluminacion", "Vainilla de la iluminación", 0, Reputation.EvilCookieReputation);
+        CreateIngredient("caramelo_fundido_candiscente", "Caramelo fundido candiscente", 0, Reputation.EvilCookieReputation);
+        CreateIngredient("esencia_de_limon_purificadora", "Esencia de limón purificadora", 0, Reputation.GoodCookieReputation);
+        CreateIngredient("levadura_ancestral_de_la_pereza", "Levadura Ancestral de la pereza", 0, Reputation.EvilCookieReputation);
+        CreateIngredient("chocolate_negro_sempiterno", "Chocolate negro Sempiterno", 0, Reputation.EvilCookieReputation);
+        CreateIngredient("harina_de_fuerza_titanica", "Harina de fuerza titánica", 0, Reputation.GoodCookieReputation);
     }
 
     public void BuildPieces(ComponentsDatabase c)
@@ -52,16 +52,20 @@ public class IngredientsBuilder : MonoBehaviour
         }
     }
 
-    private void CreateIngredient(string idName, string name)
+    private void CreateIngredient(string idName, string name, int price, Reputation repType)
     {
         i = new IngredientComponent();
         i.m_ID = new ID(idName);
         i.m_Name = name;
+        i.m_Price = price;
+        i.m_ReputationTypePrice = repType;
         m_IngredientsList.Add(i);
 
         var r = new IngredientReferences();
         r.m_ID = i.m_ID;
         r.m_Name = i.m_Name;
+        r.m_Price = price;
+        r.m_ReputationTypePrice = repType;
         m_References.Add(r);
     }
 
@@ -72,5 +76,7 @@ public class IngredientsBuilder : MonoBehaviour
         public ID m_ID;
         public string m_Name;
         public Sprite m_Sprite;
+        public Reputation m_ReputationTypePrice;
+        public int m_Price;
     }
 }

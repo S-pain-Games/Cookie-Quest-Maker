@@ -43,7 +43,7 @@ public class Systems
         m_QuestMakerSystem.Initialize();
         m_CookieMakingSystem.Initialize(d.GetComponentContainer<RecipeDataComponent>(), d.m_InventoryComponent);
         pieceCraftingSystem.Initialize(d.GetComponentContainer<RecipeDataComponent>(), d.m_InventoryComponent); // NEW
-        m_ShopSystem.Initialize(d.GetComponentContainer<RecipeDataComponent>(), d.m_InventoryComponent); // NEW
+        m_ShopSystem.Initialize(d.GetComponentContainer<RecipeDataComponent>(), d.m_InventoryComponent, d.GetComponentContainer<IngredientComponent>()); // NEW
         m_NpcSystem.Initialize(d.m_NpcReferencesComponent, d.GetComponentContainer<StoryInfoComponent>(), d.m_StoriesToStart, d.m_CompletedStories, eventSystem);
         m_DialogueSystem.Initialize(d.m_DialogueUIData, d.m_CharacterComponents, d.m_CharacterDialogueComponents, eventSystem);
         m_TownSystem.Initialize(d.m_TownComponent, d.m_LocationsComponents, d.GetComponentContainer<StoryRepercusionComponent>());

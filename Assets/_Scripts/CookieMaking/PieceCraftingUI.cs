@@ -119,6 +119,9 @@ public class PieceCraftingUI : MonoBehaviour
             else if (currentType == QuestPieceFunctionalComponent.PieceType.Object)
                 _objectRecipes.Add(recipes[i]);
         }
+
+        Debug.Log("modifiers: " + _modifierRecipes.Count);
+        Debug.Log("objects: " + _objectRecipes.Count);
     }
 
     private void SelectPieceUi()

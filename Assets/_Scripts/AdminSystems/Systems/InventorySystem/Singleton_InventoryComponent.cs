@@ -58,5 +58,8 @@ namespace CQM.Databases
         public ID m_ID;
         public string m_Name;
         public Sprite m_Sprite;
+
+        public Reputation m_ReputationTypePrice = Reputation.GoodCookieReputation;
+        public int m_Price = 50;
     }
 }

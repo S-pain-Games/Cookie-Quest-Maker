@@ -7,6 +7,7 @@ public class ShopSystem : ISystemEvents
 {
     private ComponentsContainer<RecipeDataComponent> _recipeDataComponents;
     private Singleton_InventoryComponent _inventoryData;
+    private ComponentsContainer<IngredientComponent> _ingredientsDataComponents;
 
     private EventVoid _updateShopCallback;
 
@@ -28,10 +29,11 @@ public class ShopSystem : ISystemEvents
     }
 
     public void Initialize(ComponentsContainer<RecipeDataComponent> recipeDataComponents,
-                           Singleton_InventoryComponent inventory)
+                           Singleton_InventoryComponent inventory, ComponentsContainer<IngredientComponent> ingredientsDataComponents)
     {
         _recipeDataComponents = recipeDataComponents;
         _inventoryData = inventory;
+        _ingredientsDataComponents = ingredientsDataComponents;
 
         var evtSys = Admin.Global.EventSystem;
         //_enableCharMovCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "enable_movement");
@@ -58,6 +60,26 @@ public class ShopSystem : ISystemEvents
         {
             _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(recipe.m_ReputationTypePrice, -recipe.m_Price));
             _unlockRecipeCmd.Invoke(recipe.m_PieceID);
+            _updateShopCallback.Invoke();
+            //_buyRecipeCmdREFACTOR.Invoke();
+            //UpdateTexts();
+        }
+    }
+
+    public void BuyIngredient(ID selectedIngredientId)
+    {
+        IngredientComponent ingredient = _ingredientsDataComponents.GetComponentByID(selectedIngredientId);
+
+        bool enoughMoneyToBuy = false;
+        if (ingredient.m_ReputationTypePrice == Reputation.GoodCookieReputation)
+            enoughMoneyToBuy = _inventoryData.m_GoodCookieReputation >= ingredient.m_Price;
+        else if (ingredient.m_ReputationTypePrice == Reputation.EvilCookieReputation)
+            enoughMoneyToBuy = _inventoryData.m_EvilCookieReputation >= ingredient.m_Price;
+
+        if (enoughMoneyToBuy)
+        {
+            _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(ingredient.m_ReputationTypePrice, -ingredient.m_Price));
+            //_unlockRecipeCmd.Invoke(recipe.m_PieceID);
             _updateShopCallback.Invoke();
             //_buyRecipeCmdREFACTOR.Invoke();
             //UpdateTexts();

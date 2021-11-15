@@ -189,7 +189,7 @@ namespace CQM.Databases
             {
                 CreateNew();
                 SetIDName("violently");
-                SetPieceType(PieceType.Object);
+                SetPieceType(PieceType.Modifier);
                 AddFunctionalTag(Tag.Convince, 2);
                 AddFunctionalTag(Tag.Help, 1);
                 SetUIData("Violently", "Very Bat");
@@ -199,7 +199,7 @@ namespace CQM.Databases
 
                 CreateNew();
                 SetIDName("brutally");
-                SetPieceType(PieceType.Object);
+                SetPieceType(PieceType.Modifier);
                 AddFunctionalTag(Tag.Convince, 2);
                 AddFunctionalTag(Tag.Help, 1);
                 SetUIData("Brutally", "Very Bat");
@@ -209,7 +209,7 @@ namespace CQM.Databases
 
                 CreateNew();
                 SetIDName("kindly");
-                SetPieceType(PieceType.Object);
+                SetPieceType(PieceType.Modifier);
                 AddFunctionalTag(Tag.Convince, 2);
                 AddFunctionalTag(Tag.Help, 1);
                 SetUIData("Kindly", "Very Bat");
@@ -219,7 +219,7 @@ namespace CQM.Databases
 
                 CreateNew();
                 SetIDName("convincingly");
-                SetPieceType(PieceType.Object);
+                SetPieceType(PieceType.Modifier);
                 AddFunctionalTag(Tag.Convince, 2);
                 AddFunctionalTag(Tag.Help, 1);
                 SetUIData("Convincingly", "Very Bat");

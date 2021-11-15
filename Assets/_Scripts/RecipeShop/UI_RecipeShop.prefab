@@ -121,8 +121,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2781834573024937273}
-        m_TargetAssemblyTypeName: RecipeShopSystem, CQM.Scripts.Runtime
+      - m_Target: {fileID: 5040541266953655314}
+        m_TargetAssemblyTypeName: Shop_UI, CQM.Scripts.Runtime
         m_MethodName: BuyRecipe
         m_Mode: 1
         m_Arguments:
@@ -1050,6 +1050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82dbbe8965a3400449d4bb9c58e667c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goodRecipeShop: 1
   text_good_rep: {fileID: 1665034711773997870}
   text_evil_rep: {fileID: 8138141819503081870}
   text_stat_1: {fileID: 7897898433644289539}
