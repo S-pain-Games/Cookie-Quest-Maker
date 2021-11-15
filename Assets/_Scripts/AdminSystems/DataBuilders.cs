@@ -26,6 +26,14 @@ namespace CQM.Databases
 
             c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("plain_cookie"));
             c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("attack"));
+            c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("dialogate"));
+            c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("assist"));
+            c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("look"));
+            c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("baseball_bat"));
+            c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("flip_flops"));
+            c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("violently"));
+            c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("brutally"));
+            c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("kindly"));
 
             c.m_InventoryComponent.m_Ingredients.Add(new InventoryItem(new ID("masa_de_galletas_encantada"), 10));
             c.m_InventoryComponent.m_Ingredients.Add(new InventoryItem(new ID("compota_de_mora_infernal"), 2));
