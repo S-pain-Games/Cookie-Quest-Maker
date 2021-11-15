@@ -7,7 +7,6 @@ using UnityEngine;
 public class PieceCraftingSystem : ISystemEvents
 {
     private ComponentsContainer<RecipeDataComponent> _recipeDataComponents;
-    private ComponentsContainer<QuestPieceFunctionalComponent> _pieceDataComponents;
     private Singleton_InventoryComponent _inventory;
 
     private Event<ItemData> _addPieceToInventoryCmd;
@@ -22,16 +21,14 @@ public class PieceCraftingSystem : ISystemEvents
         callbacks = new EventSys();
         sysID = new ID("piece_crafting_sys");
 
-        //commands.AddEvent<QuestPieceFunctionalComponent.PieceType>(new ID("select_crafting_type")).OnInvoked += SetCraftingType;
         commands.AddEvent<ID>(new ID("craft_recipe")).OnInvoked += CraftRecipe;
         callbacks.AddEvent<ID>(new ID("update_ingredients_ui"));
     }
 
     public void Initialize(ComponentsContainer<RecipeDataComponent> recipeDataComponents,
-                           Singleton_InventoryComponent inventory, ComponentsContainer<QuestPieceFunctionalComponent> pieceDataComponents)
+                           Singleton_InventoryComponent inventory)
     {
         _recipeDataComponents = recipeDataComponents;
-        _pieceDataComponents = pieceDataComponents;
         _inventory = inventory;
 
         var evtSys = Admin.Global.EventSystem;
@@ -39,15 +36,6 @@ public class PieceCraftingSystem : ISystemEvents
         _removeIngredientToInventoryCmd = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "remove_ingredient");
         _updateIngredientsCallback = Admin.Global.EventSystem.GetCallbackByName<Event<ID>>("piece_crafting_sys", "update_ingredients_ui");
 
-        /*
-        _cookieRecipes = new List<ID>();
-        _actionRecipes = new List<ID>();
-        _modifierRecipes = new List<ID>();
-        _objectRecipes = new List<ID>();
-
-        LoadRecipeLists();
-        LoadDefaultRecipe();
-        */
     }
 
     public void CraftRecipe(ID _selectedCookieID)
