@@ -1010,7 +1010,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2655504294425553911}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c701656203a9bb43b93a061a4196f7b, type: 3}
   m_Name: 
@@ -1023,7 +1023,7 @@ MonoBehaviour:
   currentRecipes: []
   recipeListParent: {fileID: 5078931602045340364}
   textGoodR: {fileID: 1665034711773997870}
-  textEvilR: {fileID: 0}
+  textEvilR: {fileID: 8138141819503081870}
   textPrice: {fileID: 3841892461116443574}
 --- !u!1 &2896145472007606889
 GameObject:
