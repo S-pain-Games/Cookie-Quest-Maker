@@ -68,7 +68,10 @@ namespace CQM.Databases
             FinishCreatingStory();
             */
 
+            // =============================================================================================
             //  STORY 1
+            // =============================================================================================
+
             StartCreatingStory("mayor_problem", "El problema del alcalde", new List<string>() {
                 "Últimamente una manada de lobos nos está causando muchos problemas.",
                 "Estos acechan a nuestro ganado y a los comerciantes que quieren llegar al pueblo.",
@@ -221,7 +224,10 @@ namespace CQM.Databases
 
             FinishCreatingStory();
 
+            // =============================================================================================
             //  STORY 2
+            // =============================================================================================
+
             StartCreatingStory("out_of_lactose", "Falta de lactosa", new List<string>() {
                 "Necesito tener muchos productos lácteos para vender en la Feria de verano, que se celebrará pronto.",
                 "El problema es que las vacas del pueblo no dan suficiente leche para producir tanto.",
@@ -315,7 +321,10 @@ namespace CQM.Databases
 
             FinishCreatingStory();
 
+            // =============================================================================================
             //STORY 3
+            // =============================================================================================
+            
             StartCreatingStory("sacred_egg", "El Huevo Sagrado", new List<string>() {
                 "Hace unos días estuve de visita por las subastas de la ciudad, buscando artefactos llamativos para decorar mi salón, ya sabes.",
                 "El caso es que uno de los artículos más llamativos fue un huevo dorado, que aseguran que es auténtico.",
@@ -412,6 +421,242 @@ namespace CQM.Databases
             AddStorySelectionUIData("El Huevo Sagrado");
 
             FinishCreatingStory();
+
+            // =============================================================================================
+            //STORY 4
+            // =============================================================================================
+
+            StartCreatingStory("explosive_chocolate", "Chocolate explosivo", new List<string>() {
+                "Estoy muy cerca de conseguir la receta de chocolate definitiva. ¡Va a ser un pelotazo!",
+                "He teorizado una receta que puede ser toda una revolución.",
+                "Mezclar chocolate con pólvora, ¡todo para lograr una mezcla de sabor explosiva!",
+                "¿Que si va a ser peligroso? ¡Qué va! La receta necesitará una pizquita de nada.",
+                "Tan solo necesito que los mercaderes accedan a venderme mucha más pólvora.",
+                "Insisten en que puede ser muy peligroso, que podría salir el pueblo por los aires… ¡Bah!",
+                "A no ser que encuentre otro ingrediente alternativo, tendré que seguir trasteando con lo que tengo."
+               });
+
+            CreateRepercusion("ms_chocolate_sabotaged", "MS Chocolate Sabotaged", -15);
+            AddStoryRepercusionNewspaperArticle("Accidente explosivo.",
+                "La explosión que despertó a todos los vecinos del pueblo fué causa de un accidente por parte de Miss Chocolate la Bomb, una chocolatera local. La chocolatera se encuentra ilesa y se ha disculpado públicamente.");
+
+            CreateRepercusion("ms_chocolate_gunpowder", "MS Chocolate Gunpowder", 15);
+            AddStoryRepercusionNewspaperArticle("Experimentos explosivos.",
+               "Los experimentos de Miss Chocolate la Bomb tienen preocupados a toda la comunidad de vecinos tras adquirir grandes cantidades de pólvora. ¿Qué es lo que pretende la chocolatera?");
+
+            CreateRepercusion("ms_chocolate_pepper", "MS Chocolate Pepper", 15);
+            AddStoryRepercusionNewspaperArticle("El nuevo ingrediente secreto que revolucionará la chocolatería.",
+               "La comunidad de chocolateros de la región se encuentra intrigada ante el nuevo ingrediente que utilizará Miss Chocolate la Bomb en sus productos, la pimienta.");
+
+            //TARGET: MS CHOCOLATE
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("ms_chocolate_sabotaged");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡¿Qué ha podido salir mal?! ¡Lo tenía todo controlado!",
+                "¿Qué si ha ocurrido algo? Nada, tan solo un pequeño accidente.",
+                "Algunos de los viales con la mezcla que tenía preparados se han caído de su estante.",
+                "El problema es que han caído ligeramente cerca de la chimenea... estando encendida.",
+                "Nadie ha resultado herido, tan solo han saltado por los aires algunos de mis aparatos.",
+                "Supongo que yo soy la culpable, tenía que haber tenido más cuidado. ¡Pero no me rendiré!"
+            }, Tag.Harm, 1, "ms chocolate");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡Esta noche presiento que va a ocurrir algo genial! Buena decisión, por cierto." });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Hacer ver a los demás sus errores puede ser incluso más difícil que partir una montaña."});
+
+            //HARM >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("ms_chocolate_sabotaged");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "De todas las cosas que podrían haber salido mal… ¡¿Por qué ha ocurrido lo peor?!",
+                "Pensaba que había tomado todas las precauciones necesarias para que algo así no ocurra.",
+                "Todo indica a que la pólvora que tenía almacenada se prendió, lo que no sé es cómo.",
+                "Yo estaba fuera tomando el aire fresco en el momento de la explosión, por suerte.",
+                "Toda mi investigación se ha echado a perder. Tan solo han quedado intactos algunos inventos.",
+                "Tendré que comenzar desde cero, ¡Pero no me daré por vencida!"
+            }, Tag.Harm, 3, "ms chocolate");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡Esta noche presiento que va a ocurrir algo genial! Buena decisión, por cierto." });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Hacer ver a los demás sus errores puede ser incluso más difícil que partir una montaña."});
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("ms_chocolate_pepper");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "He dejado de utilizar pólvora para mi receta definitiva. ¡Porque he encontrado algo mucho mejor!",
+                "Me di cuenta en el momento en que me cayó un bote de pimienta en la cabeza. ¡Qué cosas!",
+                "¡El verdadero sabor explosivo que buscaba en realidad proviene del picante!",
+                "Por eso utilizo ahora pimienta en lugar de pólvora, ¡En mayores cantidades!"
+            }, Tag.Help, 1, "ms chocolate");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Sea lo que sea que salga de ese experimento, ¡me gustaría probarlo!" });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "La menor de nuestras acciones es suficiente para alterar el destino del mundo."});
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("ms_chocolate_gunpowder");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Por fin podré continuar con mis experimentos! Pensaba que ya sería imposible.",
+                "Algunos mercaderes finalmente han accedido a ofrecerme toda la pólvora que necesito.",
+                "Por supuesto siguen insistiendo en que es muy peligroso, por eso he accedido a experimentar con pequeñas dosis muy controladas.",
+                "Mi investigación no progresará tanto como me gustaría, pero, ¡poco a poco lograré mi objetivo!"
+            }, Tag.Convince, 1, "ms chocolate");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡El fin justifica los medios! Y si medio pueblo sale por los aires, ¡todavía mejor!" });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "El deseo de crear algo revolucionario es una meta encomiable.",
+                "Aunque deja de serlo tanto si se ponen en peligro vidas en el proceso."});
+
+            //CONVINCE >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("ms_chocolate_gunpowder");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Esta misma mañana he vuelto a buscar más pólvora para la receta, pero he encontrado algo mejor.",
+                "Uno de los mercaderes me ha ofrecido muestras de especias provenientes de un país lejano.",
+                "Tienen propiedades casi idénticas que la pólvora, pero sin los riesgos de salir por los aires.",
+                "Ese tipo de ingredientes son tan raros por aquí que es impensable comprarlos ¡Pero la suerte me sonríe!",
+                "¡Estoy cada vez más cerca de lograr la fórmula del chocolate definitivo! ¡Tengo que seguir trabajando!"
+            }, Tag.Convince, 3, "ms chocolate");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡El fin justifica los medios! Y si medio pueblo sale por los aires, ¡todavía mejor!" });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "El deseo de crear algo revolucionario es una meta encomiable.",
+                "Aunque deja de serlo tanto si se ponen en peligro vidas en el proceso."});
+
+            // =============================================================================================
+            //STORY 5
+            // =============================================================================================
+
+            StartCreatingStory("not_so_dirty_rats", "Ratas no tan sucias", new List<string>() {
+                "¡Estoy harto de que las ratas me destrocen el granero! ¡Todos los años igual!",
+                "No sé qué es lo que les echa de comer el Johnny, pero te juro que son cada vez más inteligentes.",
+                "¡Esta vez han ido demasiado lejos, si hasta han construido un mercadillo en mi propiedad!",
+                "Es como lo oyes, ¡se rifan mis vegetales en su propio mercadillo! ¡Se están riendo de mí!"
+               });
+
+            CreateRepercusion("smart_rats_stay", "Smart rats stay", -15);
+            AddStoryRepercusionNewspaperArticle("Los nuevos vecinos roedores.",
+                "Una colonia de ratas aparentemente inteligentes se ha establecido en el granero de un granjero local. El dueño de la granja expresa su disgusto con la situación.");
+
+            CreateRepercusion("smart_rats_gone", "Smart rats gone", 15);
+            AddStoryRepercusionNewspaperArticle("La caída de la sociedad de las ratas.",
+               "La colonia de ratas aparentemente inteligentes que atormentaba los cultivos de los granjeros locales parece haberse disuelto, para el contento de todos.");
+
+            CreateRepercusion("smart_rats_tribute", "Smart rats tribute", 15);
+            AddStoryRepercusionNewspaperArticle("¿Relación simbiótica entre humanos y ratas?",
+               "La ancestral relación de odio entre humanos y ratas podría llegar a su fin. Una colonia de ratas inteligentes coopera con un granjero local a cambio de cobijo en su granero. El dueño de la granja niega tales afirmaciones.");
+
+            //TARGET: MANTECAS
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("smart_rats_stay");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Malditas ratas inmundas! ¡No solo me roban mis vegetales si no que encima me atacan!",
+                "¡Han colocado trampas en mi casa, como si fuera yo el intruso!",
+                "¡¿Quién se creen que son?! ¡Esto es una declaración de guerra! ¡No saben contra quien se enfrentan!"
+            }, Tag.Harm, 1, "mantecas");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Tengo ganas de ver qué tan lejos llegarán esas ratas. Puede que algún día exista una rata experta en repostería." });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Ocurra lo que ocurra, la naturaleza seguirá su curso."});
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("smart_rats_gone");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Esto es inconcebible! ¡Otra colonia de ratas ha atacado a las ratas de mi granero!",
+                "Ahora por lo menos las ratas que quedan son normales¡ ¡Pero siguen siendo ratas!",
+                "Si esto es obra del Johnny, ¡te juro que va a preparar sus pociones desde el fondo del mar!"
+            }, Tag.Help, 1, "mantecas");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Es universal que todo el mundo odie a las ratas. ¡Pero a mí me encantan!",
+                "Son como hamsters pero con cola. Y pueden ser más inteligentes que muchos humanos."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Ninguna nación ni imperio dura para siempre. Ese hecho se aplica a todos los seres vivos."});
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("smart_rats_tribute");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡¿Pero qué locura es esta?! ¡Las ratas están recolectando dinero del suelo!",
+                "¡Sí, ahora las ratas recogen el dinero que la gente pierde por ahí y lo dejan delante de mi puerta!",
+                "¡¿Piensan que por que me den tributo las voy a perdonar?! ¡Habrase visto!"
+            }, Tag.Convince, 1, "mantecas");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡Eres toda una caja de sorpresas! Ya empezaba a pensar que serías otro humano aburrido." });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Estoy seguro de que esa decisión llevará a consecuencias que nadie esperaría."});
+
+            //TARGET: RATS
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("smart_rats_gone");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Aunque esas dichosas ratas sean inteligentes, ¡no pueden evitar sus propias plagas!",
+                "Parece ser que parte de mi cosecha robada estaba en mal estado, muchas de ellas han enfermado.",
+                "¡Seguro que las han envenenado con sus sucias garras! ¡Se lo tienen merecido!"
+            }, Tag.Harm, 1, "rats");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Es universal que todo el mundo odie a las ratas. ¡Pero a mí me encantan!",
+                "Son como hamsters pero con cola. Y pueden ser más inteligentes que muchos humanos."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Ninguna nación ni imperio dura para siempre. Ese hecho se aplica a todos los seres vivos."});
+
+            //HARM >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("smart_rats_gone");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Ahora las ratas se pelean entre ellas por mi comida, recurren al robo y al vandalismo.",
+                "Su sociedad ha caído y vuelven a ser como antes ¡Que regresen al agujero del que salieron!",
+                "Aunque la rata se vista de seda, ¡Rata se queda!"
+            }, Tag.Harm, 3, "rats");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Es universal que todo el mundo odie a las ratas. ¡Pero a mí me encantan!",
+                "Son como hamsters pero con cola. Y pueden ser más inteligentes que muchos humanos."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Ninguna nación ni imperio dura para siempre. Ese hecho se aplica a todos los seres vivos."});
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("smart_rats_stay");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Estúpidas ratas! No contentas con robarme mis vegetales, ¡ahora me roban dinero para comprar en su mercadillo!",
+                "¡Pagarán por esta ofensa! ¡No saben contra quién se están enfrentando!"
+            }, Tag.Help, 1, "rats");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Tengo ganas de ver qué tan lejos llegarán esas ratas. Puede que algún día exista una rata experta en repostería." });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Ocurra lo que ocurra, la naturaleza seguirá su curso."});
+
+            //HELP >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("smart_rats_stay");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Pero esto qué es! Ya era un insulto que las ratas tuvieran su propio mercadillo a mi costa.",
+                "¡Ahora resulta que han construido una fortaleza! ¡En mi propio granero! ¡Con sus torres vigía y todo!",
+                "¡¿Me quieren tomar el pelo?! ¡Pienso sacarlas de ahí aunque tenga que prender fuego a toda mi granja!"
+            }, Tag.Help, 3, "rats");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Tengo ganas de ver qué tan lejos llegarán esas ratas. Puede que algún día exista una rata experta en repostería." });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Ocurra lo que ocurra, la naturaleza seguirá su curso."});
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("smart_rats_gone");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Esas estúpidas ratas han abandonado mi granero. ¡Ya no se atreven a enfrentarme!",
+                "Parece ser que ahora se han instalado en la despensa del Johnny. ¡Se lo tiene merecido!",
+                "Eso sí, ¡Como las ratas vuelvan a dar por saco, pienso hacer que se trague todas sus pócimas!"
+            }, Tag.Convince, 1, "rats");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Es universal que todo el mundo odie a las ratas. ¡Pero a mí me encantan!",
+                "Son como hamsters pero con cola. Y pueden ser más inteligentes que muchos humanos."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Ninguna nación ni imperio dura para siempre. Ese hecho se aplica a todos los seres vivos."});
         }
 
         public void SyncReferences()
