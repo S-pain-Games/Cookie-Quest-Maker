@@ -100,7 +100,7 @@ namespace CQM.Databases
                 CreateNew();
                 SetIDName("attack");
                 SetPieceType(PieceType.Action);
-                AddFunctionalTag(Tag.Harm, 1);
+                AddFunctionalTag(Tag.Harm, 4);
                 SetUIData("Attack", "Very Agressive");
                 SetRecipeData("Attack Piece Recipe", "Very aggresive", Reputation.EvilCookieReputation, 50);
                 AddIngredientToRecipe("masa_de_galletas_encantada", 1);
@@ -108,7 +108,7 @@ namespace CQM.Databases
                 CreateNew();
                 SetIDName("dialogate");
                 SetPieceType(PieceType.Action);
-                AddFunctionalTag(Tag.Help, 1);
+                AddFunctionalTag(Tag.Convince, 4);
                 SetUIData("Dialogate", "Very Assistive");
                 SetRecipeData("Dialogate Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50);
                 AddIngredientToRecipe("compota_de_mora_infernal", 1);
@@ -116,7 +116,7 @@ namespace CQM.Databases
                 CreateNew();
                 SetIDName("assist");
                 SetPieceType(PieceType.Action);
-                AddFunctionalTag(Tag.Help, 1);
+                AddFunctionalTag(Tag.Help, 4);
                 SetUIData("Assist", "Very Assistive");
                 SetRecipeData("Assist Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50);
                 AddIngredientToRecipe("compota_de_mora_infernal", 1);
@@ -124,7 +124,7 @@ namespace CQM.Databases
                 CreateNew();
                 SetIDName("look");
                 SetPieceType(PieceType.Action);
-                AddFunctionalTag(Tag.Help, 1);
+                AddFunctionalTag(Tag.Convince, 4);
                 SetUIData("Look", "Very Assistive");
                 SetRecipeData("Look Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50);
                 AddIngredientToRecipe("compota_de_mora_infernal", 1);
@@ -132,7 +132,8 @@ namespace CQM.Databases
                 CreateNew();
                 SetIDName("stare");
                 SetPieceType(PieceType.Action);
-                AddFunctionalTag(Tag.Help, 1);
+                AddFunctionalTag(Tag.Help, 5);
+                AddFunctionalTag(Tag.Harm, 2);
                 SetUIData("Stare", "Very Assistive");
                 SetRecipeData("Stare Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50);
                 AddIngredientToRecipe("compota_de_mora_infernal", 1);
@@ -140,7 +141,7 @@ namespace CQM.Databases
                 CreateNew();
                 SetIDName("steal");
                 SetPieceType(PieceType.Action);
-                AddFunctionalTag(Tag.Help, 1);
+                AddFunctionalTag(Tag.Harm, 5);
                 SetUIData("Steal", "Very Assistive");
                 SetRecipeData("Steal Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50);
                 AddIngredientToRecipe("compota_de_mora_infernal", 1);
