@@ -33,8 +33,6 @@ public class SpriteAnimatorHio : MonoBehaviour
                 m_AnimSys.SetAnimation(WalkingW);
             else if (angle <= 315)
                 m_AnimSys.SetAnimation(WalkingS);
-            if (angle <= 45)
-                m_AnimSys.SetAnimation(WalkingE);
         }
         else
         {
