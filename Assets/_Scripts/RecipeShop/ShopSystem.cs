@@ -16,6 +16,7 @@ public class ShopSystem : ISystemEvents
 
     private Event<InventorySys_ChangeReputationEvtArgs> _changeRepCmd;
     private Event<ID> _unlockRecipeCmd;
+    private Event<ItemData> _addIngredient;
 
 
     public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
@@ -25,6 +26,7 @@ public class ShopSystem : ISystemEvents
         sysID = new ID("shop_sys");
 
         commands.AddEvent<ID>(new ID("buy_recipe")).OnInvoked += BuyRecipe;
+        commands.AddEvent<ID>(new ID("buy_ingredient")).OnInvoked += BuyIngredient;
         callbacks.AddEvent(new ID("update_shop_ui"));
     }
 
@@ -40,6 +42,8 @@ public class ShopSystem : ISystemEvents
         //_disableCharMovCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "disable_movement");
         _changeRepCmd = evtSys.GetCommandByName<Event<InventorySys_ChangeReputationEvtArgs>>("inventory_sys", "change_reputation");
         _unlockRecipeCmd = evtSys.GetCommandByName<Event<ID>>("inventory_sys", "unlock_recipe");
+        _addIngredient = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_ingredient");
+        _updateShopCallback = Admin.Global.EventSystem.GetCallbackByName<EventVoid>("shop_sys", "update_shop_ui");
     }
 
     public void BuyRecipe(ID selectedRecipeId)
@@ -70,19 +74,24 @@ public class ShopSystem : ISystemEvents
     {
         IngredientComponent ingredient = _ingredientsDataComponents.GetComponentByID(selectedIngredientId);
 
-        bool enoughMoneyToBuy = false;
-        if (ingredient.m_ReputationTypePrice == Reputation.GoodCookieReputation)
-            enoughMoneyToBuy = _inventoryData.m_GoodCookieReputation >= ingredient.m_Price;
-        else if (ingredient.m_ReputationTypePrice == Reputation.EvilCookieReputation)
-            enoughMoneyToBuy = _inventoryData.m_EvilCookieReputation >= ingredient.m_Price;
-
-        if (enoughMoneyToBuy)
+        if(ingredient != null)
         {
-            _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(ingredient.m_ReputationTypePrice, -ingredient.m_Price));
-            //_unlockRecipeCmd.Invoke(recipe.m_PieceID);
-            _updateShopCallback.Invoke();
-            //_buyRecipeCmdREFACTOR.Invoke();
-            //UpdateTexts();
+            bool enoughMoneyToBuy = false;
+            if (ingredient.m_ReputationTypePrice == Reputation.GoodCookieReputation)
+                enoughMoneyToBuy = _inventoryData.m_GoodCookieReputation >= ingredient.m_Price;
+            else if (ingredient.m_ReputationTypePrice == Reputation.EvilCookieReputation)
+                enoughMoneyToBuy = _inventoryData.m_EvilCookieReputation >= ingredient.m_Price;
+
+            if (enoughMoneyToBuy)
+            {
+                _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(ingredient.m_ReputationTypePrice, -ingredient.m_Price));
+                //_unlockRecipeCmd.Invoke(recipe.m_PieceID);
+                ItemData newIngredient = new ItemData(selectedIngredientId, 1);
+                _addIngredient.Invoke(newIngredient);
+                _updateShopCallback.Invoke();
+                //_buyRecipeCmdREFACTOR.Invoke();
+                //UpdateTexts();
+            }
         }
     }
 }
