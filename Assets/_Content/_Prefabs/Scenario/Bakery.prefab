@@ -313,7 +313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5277764367098276352
 Transform:
   m_ObjectHideFlags: 0
@@ -366,7 +366,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5277764367135137572}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.875, y: -0.484375, z: 0}
+  m_LocalPosition: {x: -4.09375, y: 0.15625, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5277764367098276352}
@@ -412,7 +412,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 25
-  m_Sprite: {fileID: 6824513225904693074, guid: 7cc9466e46917a64d9c8f453e68f03cb, type: 3}
+  m_Sprite: {fileID: 4100404643430389711, guid: bc3523d981c222547a940446eb81ebef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -451,8 +451,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.11764706}
-    oldSize: {x: 1.0625, y: 1.328125}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.203125, y: 1.203125}
     newSize: {x: 1.0625, y: 1.328125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
