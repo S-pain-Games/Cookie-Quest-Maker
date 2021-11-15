@@ -107,8 +107,7 @@ namespace CQM.Databases
             AddBranchCompletion_NPCDialogue(new List<string>() {
                 "¿Recuerdas el asunto de los lobos del otro día? Todavía me cuesta creerlo.",
                 "¡La manada entera fue aniquilada de la noche a la mañana, no ha quedado ni uno!",
-                "Me alegra que el problema se haya solucionado, pero me preocupa pensar que haya una criatura",
-                "más peligrosa que esos lobos merodeando en los alrededores."
+                "Me alegra que el problema se haya solucionado, pero me preocupa pensar que haya una criatura más peligrosa que esos lobos merodeando en los alrededores."
             }, Tag.Harm, 3, "wolves");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Por qué todo el mundo piensa que los lobos son malvados?",
