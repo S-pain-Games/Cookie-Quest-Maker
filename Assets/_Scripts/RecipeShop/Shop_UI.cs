@@ -91,7 +91,8 @@ public class Shop_UI : MonoBehaviour
         for (int i=0; i< recipes.Count; i++)
         {
             RecipeDataComponent recipe = recipes[i];
-            if (!_inventoryData.m_UnlockedRecipes.Contains(recipe.m_ID))
+            if (!_inventoryData.m_UnlockedRecipes.Contains(recipe.m_ID) 
+                && _pieceDataComponents.GetComponentByID(recipe.m_ID).m_Type != QuestPieceFunctionalComponent.PieceType.Target)
             {
                 if(recipe.m_ReputationTypePrice == Reputation.EvilCookieReputation)
                     _evilRecipesToBuy.Add(recipe);
@@ -194,7 +195,7 @@ public class Shop_UI : MonoBehaviour
 
             image_recipe.sprite = ingredient.m_Sprite;
         }
-        
+        image_recipe.preserveAspect = true;
     }
 
     public void BuyRecipe()

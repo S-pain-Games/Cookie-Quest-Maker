@@ -204,6 +204,8 @@ public class PieceCraftingUI : MonoBehaviour
             //img_recipe_big.sprite = _cookieDataComponents.GetComponentByID(piece.m_ID).m_Image.sprite;
             img_recipe_big.sprite = recipeUi.m_Sprite;
             img_recipe_small.sprite = recipeUi.m_Sprite;
+            img_recipe_big.preserveAspect = true;
+            img_recipe_small.preserveAspect = true;
             //1: Convice, 2: Help, 0: Harm 
             text_stat_1.text = "0";
             text_stat_2.text = "0";
