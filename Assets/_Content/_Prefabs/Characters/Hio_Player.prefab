@@ -102,11 +102,15 @@ MonoBehaviour:
       m_IdleS: {fileID: 11400000, guid: 6cf71b8d746462b4b8012cb13864f23d, type: 2}
       m_IdleE: {fileID: 11400000, guid: 1a9ee7582776a7445a4afb1e5c00c20a, type: 2}
       m_IdleW: {fileID: 11400000, guid: 49252cbd685e1ec4e9246711eba5b470, type: 2}
+      m_IdleSE: {fileID: 11400000, guid: 52758cf28a3ccfc4294680f270a69f6b, type: 2}
+      m_IdleSW: {fileID: 11400000, guid: 28c6cc18616b7a14880181508abb83e8, type: 2}
       m_WalkingN: {fileID: 11400000, guid: 7eea624ff9587ff4c8e624070d86b145, type: 2}
       m_WalkingS: {fileID: 11400000, guid: f5190ccab5110cc46901acf3df2ff71b, type: 2}
       m_WalkingE: {fileID: 11400000, guid: fa7bd6948e15a784aba0984487ef494d, type: 2}
       m_WalkingW: {fileID: 11400000, guid: 79d7380b0b2e96d4b8a99998f9eef578, type: 2}
-    m_FrameRate: 7
+      m_WalkingSE: {fileID: 11400000, guid: c1d362357ca060f46b9ed261756367c6, type: 2}
+      m_WalkingSW: {fileID: 11400000, guid: 5b8a8bc14465d024cbe9a417299d2c60, type: 2}
+    m_FrameRate: 9
 --- !u!114 &1793424623321897368
 MonoBehaviour:
   m_ObjectHideFlags: 0

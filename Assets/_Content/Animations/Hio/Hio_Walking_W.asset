@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2127c04212a2fb499a1e7e9e4dea9f9, type: 3}
-  m_Name: Hio_Running_W
+  m_Name: Hio_Walking_W
   m_EditorClassIdentifier: 
   m_Sprites:
   - {fileID: 1845392316054146125, guid: 04f9e9ba13a0add48a0852eaec5bde90, type: 3}

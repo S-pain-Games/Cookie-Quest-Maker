@@ -25,25 +25,35 @@ public class SpriteAnimatorHio : MonoBehaviour
                 angle = 360 + angle;
             m_FacingAngle = angle;
 
-            if (angle <= 45)
+            if (AngleInRange(angle, 0, 20))
                 m_AnimSys.SetAnimation(WalkingE);
-            else if (angle <= 135)
+            else if (AngleInRange(angle, 20, 160))
                 m_AnimSys.SetAnimation(WalkingN);
-            else if (angle <= 225)
+            else if (AngleInRange(angle, 160, 200))
                 m_AnimSys.SetAnimation(WalkingW);
-            else if (angle <= 315)
+            else if (AngleInRange(angle, 200, 260))
+                m_AnimSys.SetAnimation(WalkingSW);
+            else if (AngleInRange(angle, 260, 280))
                 m_AnimSys.SetAnimation(WalkingS);
+            else if (AngleInRange(angle, 280, 340))
+                m_AnimSys.SetAnimation(WalkingSE);
+            else if (angle <= 360)
+                m_AnimSys.SetAnimation(WalkingE);
         }
         else
         {
-            if (m_FacingAngle <= 45)
+            if (m_FacingAngle <= 20)
                 m_AnimSys.SetAnimation(IdleE);
-            else if (m_FacingAngle <= 135)
+            else if (m_FacingAngle <= 160)
                 m_AnimSys.SetAnimation(IdleN);
-            else if (m_FacingAngle <= 225)
+            else if (m_FacingAngle <= 200)
                 m_AnimSys.SetAnimation(IdleW);
-            else if (m_FacingAngle <= 315)
-                m_AnimSys.SetAnimation(IdleS);
+            else if (m_FacingAngle <= 260)
+                m_AnimSys.SetAnimation(IdleSW);
+            else if (m_FacingAngle <= 280)
+                m_AnimSys.SetAnimation(IdleE);
+            else if (m_FacingAngle <= 340)
+                m_AnimSys.SetAnimation(IdleSE);
             else if (m_FacingAngle <= 360)
                 m_AnimSys.SetAnimation(IdleE);
         }
@@ -52,7 +62,13 @@ public class SpriteAnimatorHio : MonoBehaviour
         m_AnimSys.Update();
     }
 
-
+    private bool AngleInRange(float angle, float a, float b)
+    {
+        if (angle <= b && angle >= a)
+            return true;
+        else
+            return false;
+    }
 
     [System.Serializable]
     public class AnimationsSystem
@@ -84,33 +100,46 @@ public class SpriteAnimatorHio : MonoBehaviour
             }
         }
 
+        // We should definitely use a dictionary for this but oh well
         public void SetAnimation(AnimationID id)
         {
             switch (id)
             {
-                case AnimationID.IdleN:
+                case IdleN:
                     m_CurrentAnimation = m_Anim.m_IdleN;
                     break;
-                case AnimationID.IdleS:
+                case IdleS:
                     m_CurrentAnimation = m_Anim.m_IdleS;
                     break;
-                case AnimationID.IdleE:
+                case IdleE:
                     m_CurrentAnimation = m_Anim.m_IdleE;
                     break;
-                case AnimationID.IdleW:
+                case IdleW:
                     m_CurrentAnimation = m_Anim.m_IdleW;
                     break;
-                case AnimationID.WalkingN:
+                case IdleSE:
+                    m_CurrentAnimation = m_Anim.m_IdleSE;
+                    break;
+                case IdleSW:
+                    m_CurrentAnimation = m_Anim.m_IdleSW;
+                    break;
+                case WalkingN:
                     m_CurrentAnimation = m_Anim.m_WalkingN;
                     break;
-                case AnimationID.WalkingS:
+                case WalkingS:
                     m_CurrentAnimation = m_Anim.m_WalkingS;
                     break;
-                case AnimationID.WalkingE:
+                case WalkingE:
                     m_CurrentAnimation = m_Anim.m_WalkingE;
                     break;
-                case AnimationID.WalkingW:
+                case WalkingW:
                     m_CurrentAnimation = m_Anim.m_WalkingW;
+                    break;
+                case WalkingSE:
+                    m_CurrentAnimation = m_Anim.m_WalkingSE;
+                    break;
+                case WalkingSW:
+                    m_CurrentAnimation = m_Anim.m_WalkingSW;
                     break;
                 default:
                     break;
@@ -123,11 +152,15 @@ public class SpriteAnimatorHio : MonoBehaviour
             IdleS,
             IdleE,
             IdleW,
+            IdleSE,
+            IdleSW,
 
             WalkingN,
             WalkingS,
+            WalkingSE,
             WalkingE,
             WalkingW,
+            WalkingSW
         }
 
         [System.Serializable]
@@ -137,11 +170,15 @@ public class SpriteAnimatorHio : MonoBehaviour
             public AnimationFrames m_IdleS;
             public AnimationFrames m_IdleE;
             public AnimationFrames m_IdleW;
+            public AnimationFrames m_IdleSE;
+            public AnimationFrames m_IdleSW;
 
             public AnimationFrames m_WalkingN;
             public AnimationFrames m_WalkingS;
             public AnimationFrames m_WalkingE;
             public AnimationFrames m_WalkingW;
+            public AnimationFrames m_WalkingSE;
+            public AnimationFrames m_WalkingSW;
         }
     }
 }
