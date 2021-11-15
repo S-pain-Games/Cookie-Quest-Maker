@@ -20,7 +20,7 @@ namespace CQM.Gameplay
 
         [SerializeField] private List<UIPieceSocketBehaviour> _sockets = new List<UIPieceSocketBehaviour>();
         [SerializeField] private List<UIQuestPieceBehaviour> _questPieces = new List<UIQuestPieceBehaviour>();
-        
+
 
         // Global Systems Events
         private Event<ItemData> _addPieceCmd;
@@ -109,12 +109,7 @@ namespace CQM.Gameplay
             }
             for (int i = 0; i < _questPieces.Count; i++)
             {
-                // TODO: >:[
-                if (_questPieces[i].Piece.m_Type == QuestPieceFunctionalComponent.PieceType.Cookie)
-                {
-                    _addPieceCmd.Invoke(new ItemData(_questPieces[i].Piece.m_ID, 1));
-                }
-
+                _addPieceCmd.Invoke(new ItemData(_questPieces[i].Piece.m_ID, 1));
                 Destroy(_questPieces[i].gameObject); // Pooling?
             }
             _questPieces.Clear();
