@@ -526,6 +526,10 @@ namespace CQM.Databases
                 "El deseo de crear algo revolucionario es una meta encomiable.",
                 "Aunque deja de serlo tanto si se ponen en peligro vidas en el proceso."});
 
+            AddStorySelectionUIData("Chocolate explosivo");
+
+            FinishCreatingStory();
+
             // =============================================================================================
             //STORY 5
             // =============================================================================================
@@ -658,6 +662,9 @@ namespace CQM.Databases
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
                 "Ninguna nación ni imperio dura para siempre. Ese hecho se aplica a todos los seres vivos."});
 
+            AddStorySelectionUIData("Ratas no tan sucias");
+
+            FinishCreatingStory();
 
             // =============================================================================================
             //STORY 6
@@ -776,6 +783,10 @@ namespace CQM.Databases
                 "Hay veces en las que uno debe tomar las riendas de la situación para resolver un problema ajeno.",
                 "Especialmente si aquel no sabe lo que hace." });
 
+            AddStorySelectionUIData("Impuestos para el tacaño");
+
+            FinishCreatingStory();
+
             // =============================================================================================
             //STORY 7
             // =============================================================================================
@@ -873,6 +884,10 @@ namespace CQM.Databases
                 "Con esa decisión, parece que vas a ayudarme a resolver una duda que tenía." });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
                 "Aún cuando la naturaleza se vuelve confusa, ha de seguir su curso." });
+
+            AddStorySelectionUIData("Las vacas locas");
+
+            FinishCreatingStory();
         }
 
         public void SyncReferences()
