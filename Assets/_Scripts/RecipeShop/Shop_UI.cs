@@ -27,6 +27,7 @@ public class Shop_UI : MonoBehaviour
     private ID _selectedPieceID;
 
     private Event<ID> _buyRecipe;
+    private Event<ID> _buyIngredient;
 
     private List<RecipeDataComponent> _goodRecipesToBuy;
     private List<RecipeDataComponent> _evilRecipesToBuy;
@@ -58,9 +59,12 @@ public class Shop_UI : MonoBehaviour
         _ingredientsDataComponents = admin.Components.GetComponentContainer<IngredientComponent>();
 
         _buyRecipe = admin.EventSystem.GetCommandByName<Event<ID>>("shop_sys", "buy_recipe");
+        _buyIngredient = admin.EventSystem.GetCommandByName<Event<ID>>("shop_sys", "buy_ingredient");
 
         _goodRecipesToBuy = new List<RecipeDataComponent>();
         _evilRecipesToBuy = new List<RecipeDataComponent>();
+        _goodIngredientsToBuy = new List<IngredientComponent>();
+        _evilIngredientsToBuy = new List<IngredientComponent>();
 
         EventVoid evt = admin.EventSystem.GetCallback<EventVoid>(new ID("shop_sys"), new ID("update_shop_ui"));
         evt.OnInvoked += UpdateUI;
@@ -75,6 +79,8 @@ public class Shop_UI : MonoBehaviour
     {
         _goodRecipesToBuy.Clear();
         _evilRecipesToBuy.Clear();
+        _goodIngredientsToBuy.Clear();
+        _evilIngredientsToBuy.Clear();
 
         idx_good = 0;
         idx_evil = 0;
@@ -99,10 +105,13 @@ public class Shop_UI : MonoBehaviour
         {
             IngredientComponent ingredient = ingredients[i];
 
-            if (ingredient.m_ReputationTypePrice == Reputation.EvilCookieReputation)
-                _evilIngredientsToBuy.Add(ingredient);
-            else
-                _goodIngredientsToBuy.Add(ingredient);
+            if(ingredient.m_ID != new ID("masa_de_galletas_encantada"))
+            {
+                if (ingredient.m_ReputationTypePrice == Reputation.EvilCookieReputation)
+                    _evilIngredientsToBuy.Add(ingredient);
+                else
+                    _goodIngredientsToBuy.Add(ingredient);
+            }
         }
 
         UpdateUI();
@@ -147,11 +156,6 @@ public class Shop_UI : MonoBehaviour
         text_good_rep.text = _inventoryData.m_GoodCookieReputation.ToString();
         text_evil_rep.text = _inventoryData.m_EvilCookieReputation.ToString();
 
-        QuestPieceFunctionalComponent piece = _pieceDataComponents.GetComponentByID(_selectedPieceID);
-        RecipeDataComponent recipe = _recipeDataComponents.GetComponentByID(_selectedPieceID);
-        UIQuestPieceComponent pieceUI = _recipeUiDataComponents.GetComponentByID(_selectedPieceID);
-        IngredientComponent ingredient = _ingredientsDataComponents.GetComponentByID(_selectedPieceID);
-
         //0: Convice, 1: Help, 2: Harm 
         text_stat_1.text = "0";
         text_stat_2.text = "0";
@@ -159,6 +163,10 @@ public class Shop_UI : MonoBehaviour
 
         if(currentRecipeType == RecipeTypes.PieceRecipes)
         {
+            QuestPieceFunctionalComponent piece = _pieceDataComponents.GetComponentByID(_selectedPieceID);
+            RecipeDataComponent recipe = _recipeDataComponents.GetComponentByID(_selectedPieceID);
+            UIQuestPieceComponent pieceUI = _recipeUiDataComponents.GetComponentByID(_selectedPieceID);
+
             for (int i = 0; i < piece.m_Tags.Count; i++)
             {
                 if (piece.m_Tags[i].m_Type == QPTag.TagType.Convince)
@@ -180,6 +188,7 @@ public class Shop_UI : MonoBehaviour
         }
         else
         {
+            IngredientComponent ingredient = _ingredientsDataComponents.GetComponentByID(_selectedPieceID);
             text_recipe_name.text = ingredient.m_Name;
             text_price.text = ingredient.m_Price.ToString();
 
@@ -194,7 +203,10 @@ public class Shop_UI : MonoBehaviour
         {
             _buyRecipe.Invoke(_selectedPieceID);
         }
-        
+        else if(currentRecipeType == RecipeTypes.IngredientRecipes)
+        {
+            _buyIngredient.Invoke(_selectedPieceID);
+        }
     }
 
     public void NextItem(bool next)
@@ -205,13 +217,29 @@ public class Shop_UI : MonoBehaviour
 
         if(goodRecipeShop)
         {
-            idx_good += amount;
-            idx_good = Mathf.Clamp(idx_good, 0, _goodRecipesToBuy.Count - 1);
+            if(currentRecipeType == RecipeTypes.PieceRecipes)
+            {
+                idx_good += amount;
+                idx_good = Mathf.Clamp(idx_good, 0, _goodRecipesToBuy.Count - 1);
+            }
+            else if(currentRecipeType == RecipeTypes.IngredientRecipes)
+            {
+                idx_good_ingredient += amount;
+                idx_good_ingredient = Mathf.Clamp(idx_good_ingredient, 0, _goodIngredientsToBuy.Count-1);
+            }
         }
         else
         {
-            idx_evil += amount;
-            idx_evil = Mathf.Clamp(idx_evil, 0, _evilRecipesToBuy.Count - 1);
+            if (currentRecipeType == RecipeTypes.PieceRecipes)
+            {
+                idx_evil += amount;
+                idx_evil = Mathf.Clamp(idx_evil, 0, _evilRecipesToBuy.Count - 1);
+            }
+            else if (currentRecipeType == RecipeTypes.IngredientRecipes)
+            {
+                idx_evil_ingredient += amount;
+                idx_evil_ingredient = Mathf.Clamp(idx_evil_ingredient, 0, _evilIngredientsToBuy.Count - 1);
+            }
         }
 
         UpdateUI();
@@ -219,11 +247,20 @@ public class Shop_UI : MonoBehaviour
 
     public void SetPieceRecipeTypes()
     {
-        currentRecipeType = RecipeTypes.PieceRecipes;
+        if(currentRecipeType != RecipeTypes.PieceRecipes)
+        {
+            currentRecipeType = RecipeTypes.PieceRecipes;
+            UpdateUI();
+        }
     }
 
     public void SetIngredientRecipeTypes()
     {
-        currentRecipeType = RecipeTypes.IngredientRecipes;
+        if(currentRecipeType != RecipeTypes.IngredientRecipes)
+        {
+            currentRecipeType = RecipeTypes.IngredientRecipes;
+            text_buy.text = "¡Comprar!";
+            UpdateUI();
+        }
     }
 }
