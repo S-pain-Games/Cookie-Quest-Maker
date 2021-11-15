@@ -657,6 +657,222 @@ namespace CQM.Databases
                 "Son como hamsters pero con cola. Y pueden ser más inteligentes que muchos humanos."});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
                 "Ninguna nación ni imperio dura para siempre. Ese hecho se aplica a todos los seres vivos."});
+
+
+            // =============================================================================================
+            //STORY 6
+            // =============================================================================================
+
+            StartCreatingStory("stingy_taxes", "Impuestos para el tacaño", new List<string>() {
+                "Los impuestos recaudados este año han caído en mínimos históricos ¡Es una ruina!",
+                "Me niego a pensar que la gente no pueda contribuir ¡La gente está guardándose el dinero, seguro!",
+                "Tengo la sensación de que la gente todavía no confía en mí, ¡Después de todo lo que he hecho por ellos!",
+                "¡Se han olvidado del gran puerto en la Charca local, o los tres arbustos nuevos de la Plaza!",
+                "¡Si hasta hice cambiar un estante de la biblioteca y mandé construir una estatua de mi persona!",
+                "Son unos desagradecidos."
+               });
+
+            CreateRepercusion("mayor_assaulted", "Mayor assaulted", -15);
+            AddStoryRepercusionNewspaperArticle("El misterioso agresor nocturno.",
+                "Nuestro alcalde ha sido asaltado mientras paseaba por un misterioso atacante. Se cree que es un ciudadano descontento con la reciente recaudación de impuestos.");
+
+            CreateRepercusion("mayor_waste", "Mayor waste", -15);
+            AddStoryRepercusionNewspaperArticle("Las nuevas reformas.",
+               "Gracias a la exitosa recaudación de impuestos, el alcalde continúa con su proyecto de embellecer el pueblo a pesar de las voces críticas de muchos vecinos.");
+
+            CreateRepercusion("mayor_robbed", "Mayor robbed", 15);
+            AddStoryRepercusionNewspaperArticle("El ladrón misterioso.",
+               "Un misterioso desconocido ha robado los fondos recaudados recientemente y los ha devuelto a los vecinos del pueblo. Algunos lo aclaman como un héroe sin corcel.");
+
+            //TARGET: MAYOR
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("mayor_assaulted");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Qué disparate! ¡He sido agredido en plena noche mientras paseaba!",
+                "Al responsable de esta afrenta se le va a caer el pelo, en cuanto sepa quien ha sido.",
+                "¡Soy el que más se preocupa por el bienestar de este pueblo! ¡¿Cómo se atreven a hacerme esto?!",
+                "Siempre sigo mi buen juicio, aunque a veces me pregunto si estaré haciendo algo mal."
+            }, Tag.Harm, 1, "mayor");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡¿Cómo se atreve ese alcalde a construir una estatua de su persona?! ¡Tendrá su merecido!",
+                "¡Toda estatua debería de representar la grandeza de la gran Evith!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Es difícil asimilar la idea de que el llamado sentido común no es tán común como suponemos."});
+
+            //HARM >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("mayor_assaulted");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Esto es un escándalo! ¡¿Cómo es posible que yo, el alcalde, haya sido agredido múltiples veces en una misma noche?!",
+                "¡La gente ya no me respeta! ¡¿Qué es lo que estoy haciendo mal?!",
+                "¡Con todo lo que he hecho por el pueblo! ¿Será que mis reformas no gustan a la gente?"
+            }, Tag.Harm, 3, "mayor");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡¿Cómo se atreve ese alcalde a construir una estatua de su persona?! ¡Tendrá su merecido!",
+                "¡Toda estatua debería de representar la grandeza de la gran Evith!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Es difícil asimilar la idea de que el llamado sentido común no es tán común como suponemos."});
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("mayor_waste");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Esta mañana cuando he entrado en mi oficina he visto un saco con dinero sobre mi escritorio.",
+                "Doy por hecho que es parte del dinero faltante, aunque preferiría que me hubiera llegado por medios oficiales.",
+                "¡El caso es que ahora tendremos dinero suficiente para arreglar las aceras de mi casa y pintar mi fachada!",
+                "El resto del dinero quedará en reserva en caso de emergencias, ¡nunca se sabe lo que puede ocurrir en estos tiempos!"
+            }, Tag.Help, 1, "mayor");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Incluso el santurrón presuntuoso de Nu y yo podemos estar de acuerdo en que a ese alcalde le faltan un par de veranos."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "¿Realmente el alcalde sabrá lo que está haciendo? Sus intenciones parecen buenas pero..."});
+
+            //HELP >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("mayor_waste");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Esta misma mañana me han llegado varios sacos con dinero sobre mi escritorio.",
+                "Debe de ser todo el dinero que faltaba de la recaudación, aunque me extraña que no se me haya notificado.",
+                "El caso es que se ha recaudado más dinero de lo que se recauda normalmente. ¡Es maravilloso!",
+                "¡Ahora podré embadurnar de plata mi estatua y ampliar el puerto de la charca!",
+                "¡Ya solo falta que puedan llegar barcos mercantes! ¡La gente me adorará!"
+            }, Tag.Help, 3, "mayor");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Incluso el santurrón presuntuoso de Nu y yo podemos estar de acuerdo en que a ese alcalde le faltan un par de veranos."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "¿Realmente el alcalde sabrá lo que está haciendo? Sus intenciones parecen buenas pero..."});
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("mayor_robbed");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Acerca de la recaudación de este año… ¡Ha desaparecido parte del dinero! ¡¿Cómo ha podido ser?!",
+                "No se ha encontrado rastro alguno del ladrón. Estoy buscando al culpable por todos los medios posibles, pero no hay rastro de él.",
+                "Pero más importante, ¡ya no hay dinero para ampliar el puerto de la charca!",
+                "Menos mal que para estos casos tengo bastante dinero almacenado. ¡Siempre es bueno ser previsor!"
+            }, Tag.Convince, 1, "mayor");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿Qué harías tú si fueras el alcalde? ¡Espero que muchas tropelías!",
+                 "Sinceramente no te veo siendo un santurrón como Nu." });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Hay veces en las que uno debe tomar las riendas de la situación para resolver un problema ajeno.",
+                "Especialmente si aquel no sabe lo que hace." });
+
+            //CONVINCE >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("mayor_robbed");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Ha ocurrido algo terrible! ¡El dinero de la caja fuerte ha desaparecido! ¡Ya no queda nada!",
+                "Debe de tratarse de alguien muy habilidoso para cometer tal hazaña. ¡Todo un profesional!",
+                "Parece ser que el dinero se ha repartido por todos los habitantes del pueblo.",
+                "Todo el mundo está muy feliz al respecto, como es de esperar. ¡Pero no puedo dejar que ocurran cosas así!",
+                "No me queda más remedio que gastar mis ahorros para cubrir el presupuesto del resto del año."
+            }, Tag.Convince, 3, "mayor");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿Qué harías tú si fueras el alcalde? ¡Espero que muchas tropelías!",
+                 "Sinceramente no te veo siendo un santurrón como Nu." });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Hay veces en las que uno debe tomar las riendas de la situación para resolver un problema ajeno.",
+                "Especialmente si aquel no sabe lo que hace." });
+
+            // =============================================================================================
+            //STORY 7
+            // =============================================================================================
+
+            StartCreatingStory("crazy_cows", "Las vacas locas", new List<string>() {
+                "¡Mis vacas se han vuelto locas! ¡Son como cabras!",
+                "Lo digo literalmente, mis vacas ahora tienen complejo de cabras.",
+                "Se suponía que el pienso especial de Johnny las iba a ayudar a atravesar montañas con facilidad.",
+                "¡Ahora se comen cualquier cosa, son muy testarudas y hasta se suben a cualquier sitio!",
+                "No puedo trabajar con ellas así, ¡No sé que voy a hacer!"
+               });
+
+            CreateRepercusion("cows_transformed", "Cows transformed", -15);
+            AddStoryRepercusionNewspaperArticle("¿La epidemia de las vacas locas?",
+                "Las vacas de una ganadera local han sufrido una extraña transformación que las ha convertido en cabras. Los vecinos tienen miedo de que sea contagioso.");
+
+            CreateRepercusion("cows_back_to_normal", "Cows back to normal", 15);
+            AddStoryRepercusionNewspaperArticle("Las vacas todoterreno.",
+               "Las vacas de una ganadera local se han convertido en el centro de atención de la comunidad ganadera tras ver las impactantes imágenes de vacas escalando riscos.");
+
+            CreateRepercusion("cows_and_goats_reversed", "Cows and goats reversed", -15);
+            AddStoryRepercusionNewspaperArticle("Confusión ganadera.",
+               "Un extraño incidente ha provocado que las vacas se transformen en cabras y las cabras en vacas. ¿Cuán confuso puede llegar a ser el mundo en el que vivimos?");
+
+
+            //TARGET: MERI
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("cows_transformed");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Esto es una locura! Mis vacas han comido más pienso especial antes de que pudiera deshacerme de él.",
+                "¡Ahora las vacas balan y se dan de cabezazos entre ellas!",
+                "A este paso voy a tener que dedicarme al pastoreo de cabras. ¡¿Por qué me pasa esto a mí?!"
+            }, Tag.Harm, 1, "meri");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿Entonces cualquier cosa que se coma el pienso especial será transformado en cabra? ¿Qué ocurriría entonces si se lo echan a las cabras?" });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Si Evith se comiera el pienso especial, no creo que le surte efecto. Ya presenta cualidades de cabra." });
+
+            //HARM >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("cows_transformed");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "El asunto de mis vacas, si pueden seguir llamándose vacas, se ha ido de madre.",
+                "De alguna manera han conseguido comerse todo el pienso especial que tenía que quemar.",
+                "¡Ahora, además de balar, son más pequeñas y les han salido cuernos! Lo que tengo ya no son vacas.",
+                "Será mejor que Johnny no haya vertido sus pócimas al río, no quiero que se conviertan en morsas o algo similar."
+            }, Tag.Harm, 3, "meri");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿Entonces cualquier cosa que se coma el pienso especial será transformado en cabra? ¿Qué ocurriría entonces si se lo echan a las cabras?" });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Si Evith se comiera el pienso especial, no creo que le surte efecto. Ya presenta cualidades de cabra." });
+
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("cows_back_to_normal");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Esta mañana he encontrado un frasco vacío junto al pienso normal que suelo darle a mis vacas.",
+                "Parece ser que alguien vino por la noche a vaciar el contenido del frasco sobre el pienso.",
+                "Por suerte parece que el efecto del líquido ha sido revertir en parte la transformación de las vacas.",
+                "Ahora al menos se han tranquilizado y siguen dando leche de vaca."
+            }, Tag.Help, 1, "meri");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿En serio vas a ayudar a que vuelvan a la normalidad? ¡Yo quería hasta donde llegaba la cosa!" });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Es mejor que la naturaleza siga su curso. Hay cosas que es mejor dejar inalteradas." });
+
+            //HELP >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("cows_back_to_normal");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "El problema con mis vacas se ha solucionado, más o menos...",
+                "Parece ser que alguien le ha dado de beber a mis vacas varias pócimas de Johnny.",
+                "¿Cómo lo sé? Él mismo ha venido a mi granja a preguntar por ellas.",
+                "Parece ser que alguien se las robó ayer de su laboratorio.",
+                "El caso es que mis vacas ahora se comportan como vacas... generalmente.",
+                "Todavía siguen subiéndose a sitios extraños, pero por lo menos puedo tratar con ellas."
+            }, Tag.Help, 3, "meri");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿En serio vas a ayudar a que vuelvan a la normalidad? ¡Yo quería hasta donde llegaba la cosa!" });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Es mejor que la naturaleza siga su curso. Hay cosas que es mejor dejar inalteradas." });
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("cows_and_goats_reversed");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Ahora resulta que las cabras de mi vecino se están comportando como vacas. ¡Esto no tiene sentido!",
+                "Alguien le ha dado de comer el pienso especial a las cabras. ¡¿Quién en su sano juicio haría algo así?!",
+                "Ahora las cabras del vecino mugen y son más amigables. ¡Y hasta dan leche de vaca!",
+                "Todo esto es una locura, ¿pero el problema se ha solucionado, supongo?"
+            }, Tag.Convince, 1, "meri");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Con esa decisión, parece que vas a ayudarme a resolver una duda que tenía." });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Aún cuando la naturaleza se vuelve confusa, ha de seguir su curso." });
         }
 
         public void SyncReferences()
