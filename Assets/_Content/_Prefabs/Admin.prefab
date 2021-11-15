@@ -372,8 +372,8 @@ MonoBehaviour:
       m_NameID: plain_cookie
       m_ID: 1473648501
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: b70affcf69ee9034fa79a8efeca045cb, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: 9765c5238660b4d4ebe852b6572540b7, type: 3}
+  - m_Sprite: {fileID: 21300000, guid: 9765c5238660b4d4ebe852b6572540b7, type: 3}
+    m_QuestBuildingSprite: {fileID: 21300000, guid: b70affcf69ee9034fa79a8efeca045cb, type: 3}
     m_Name: "La jaur\xEDa"
     m_Description: "Descripci\xF3n de galleta jaur\xEDa."
     m_ID:
