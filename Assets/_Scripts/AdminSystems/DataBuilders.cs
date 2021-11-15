@@ -1,4 +1,5 @@
-﻿using CQM.Components;
+﻿using CQM.AssetReferences;
+using CQM.Components;
 using UnityEngine;
 
 namespace CQM.Databases
@@ -6,11 +7,12 @@ namespace CQM.Databases
     [System.Serializable]
     public class DataBuilders : MonoBehaviour
     {
-        public PieceBuilder m_PiecesBuilder;
-        public StoryBuilder m_StoryBuilder;
-        public CharactersBuilder m_CharactersBuilder;
-        public IngredientsBuilder m_IngredientsBuilder;
-        public LocalizationBuilder m_LocalizationBuilder;
+        [SerializeField] private PieceBuilder m_PiecesBuilder;
+        [SerializeField] private StoryBuilder m_StoryBuilder;
+        [SerializeField] private CharactersBuilder m_CharactersBuilder;
+        [SerializeField] private IngredientsBuilder m_IngredientsBuilder;
+        [SerializeField] private LocalizationBuilder m_LocalizationBuilder;
+
 
         public void BuildData(ComponentsDatabase c)
         {

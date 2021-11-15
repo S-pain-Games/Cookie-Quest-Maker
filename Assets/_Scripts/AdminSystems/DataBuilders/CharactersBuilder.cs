@@ -16,6 +16,7 @@ public class CharactersBuilder : MonoBehaviour
     private CharacterReferences r;
     private CharacterWorldPrefabComponent p;
 
+
     public void BuildCharacters(ComponentsDatabase c)
     {
         var cList = m_CharactersList;

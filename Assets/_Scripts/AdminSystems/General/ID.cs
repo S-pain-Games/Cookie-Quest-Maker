@@ -4,6 +4,9 @@ using UnityEngine;
 [System.Serializable]
 public struct ID
 {
+    public string NameID => m_NameID;
+    public int intID => m_ID;
+
     [SerializeField] private string m_NameID;
     [SerializeField, HideInInspector] private int m_ID;
     [SerializeField, HideInInspector] private bool m_Initialized;

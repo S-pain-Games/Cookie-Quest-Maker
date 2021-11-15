@@ -1,4 +1,5 @@
-﻿using CQM.Components;
+﻿using CQM.AssetReferences;
+using CQM.Components;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,8 +11,7 @@ namespace CQM.Databases
     [Serializable]
     public class PieceBuilder : MonoBehaviour
     {
-        [SerializeField]
-        private List<BuiltPieceReference> m_PiecesReferences = new List<BuiltPieceReference>();
+        [SerializeField] private CookieReferencesDatabase _cookieReferences;
 
         // Output Components
         public List<QuestPieceFunctionalComponent> m_QuestPieceFunctionalComponents = new List<QuestPieceFunctionalComponent>();
@@ -65,7 +65,6 @@ namespace CQM.Databases
 
         public void LoadDataFromCode()
         {
-            m_PiecesReferences.Clear();
             m_QuestPieceFunctionalComponents.Clear();
             m_QuestPieceUIComponent.Clear();
             m_QuestPiecePrefabComponent.Clear();
@@ -158,7 +157,7 @@ namespace CQM.Databases
                 AddIngredientToRecipe("compota_de_mora_infernal", 2);
 
                 CreateNew();
-                SetIDName("scissor");
+                SetIDName("scissors");
                 SetPieceType(PieceType.Object);
                 AddFunctionalTag(Tag.Harm, 2);
                 AddFunctionalTag(Tag.Convince, 1);
@@ -277,23 +276,6 @@ namespace CQM.Databases
             }
         }
 
-        public void ApplyReferences()
-        {
-            for (int i = 0; i < m_PiecesReferences.Count; i++)
-            {
-                var p = m_PiecesReferences[i];
-                for (int j = 0; j < m_QuestPieceUIComponent.Count; j++)
-                {
-                    m_QuestPieceUIComponent[j].m_Sprite = p.smallSprite;
-                    m_QuestPieceUIComponent[j].m_QuestBuildingSprite = p.fullSprite;
-                }
-                for (int j = 0; j < m_QuestPiecePrefabComponent.Count; j++)
-                {
-                    m_QuestPiecePrefabComponent[j].m_QuestBuildingPiecePrefab = p.questBuildingPrefab;
-                }
-            }
-        }
-
         #region Builder Methods
         private void CreateNew()
         {
@@ -309,15 +291,11 @@ namespace CQM.Databases
             m_CookieData.Add(_cookieData);
             m_RecipeData.Add(_recipeData);
 
-
             _prefabQP.m_QuestBuildingPiecePrefab = m_DefaultPiecePrefab;
-
-
         }
 
         private void SetIDName(string idName)
         {
-            m_PiecesReferences.Add(new BuiltPieceReference { inspectorPieceName = idName });
             ID id = new ID(idName);
 
             _functionalQP.m_ID = id;
@@ -348,6 +326,9 @@ namespace CQM.Databases
             // TODO: Unify this
             _cookieData.m_CookieName = name;
             _cookieData.m_CookieDescription = description;
+
+            _uiQP.m_Sprite = _cookieReferences.GetSimpleSprite(_uiQP.m_ID);
+            _uiQP.m_QuestBuildingSprite = _cookieReferences.GetFullSprite(_uiQP.m_ID);
         }
 
         private void SetRecipeData(string name, string description, Reputation repType, int price)
@@ -363,14 +344,5 @@ namespace CQM.Databases
             _recipeData.m_IngredientsList.Add(new InventoryItem(new ID(ingredientIDname), amount));
         }
         #endregion
-
-        [Serializable]
-        private class BuiltPieceReference
-        {
-            public string inspectorPieceName;
-            public Sprite smallSprite;
-            public Sprite fullSprite;
-            public GameObject questBuildingPrefab;
-        }
     }
 }
