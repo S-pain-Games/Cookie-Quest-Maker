@@ -30,6 +30,8 @@ namespace CQM.Systems
                 (id) => _NewsDataComponent.m_StoriesToShowInNewspaper.Add(id);
             evtSys.GetCallbackByName<EventVoid>("day_sys", "day_ended").OnInvoked +=
                 () => UpdateNewspaper();
+
+            UpdateNewspaper();
         }
 
         public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
@@ -43,14 +45,23 @@ namespace CQM.Systems
 
         public void UpdateNewspaper()
         {
-            for (int i = 0; i < _NewsDataComponent.m_StoriesToShowInNewspaper.Count; i++)
+            var n = _NewsDataComponent;
+            if (n.m_StoriesToShowInNewspaper.Count > 0)
             {
-                StoryInfoComponent s = m_StoryInfoComponents[_NewsDataComponent.m_StoriesToShowInNewspaper[i]];
-                ID repId = s.m_QuestBranchResult.m_Repercusion.m_ID;
-                var storyNews = _NewsDataComponent.m_NewspaperStories[repId];
+                for (int i = 0; i < _NewsDataComponent.m_StoriesToShowInNewspaper.Count; i++)
+                {
+                    StoryInfoComponent s = m_StoryInfoComponents[_NewsDataComponent.m_StoriesToShowInNewspaper[i]];
+                    ID repId = s.m_QuestBranchResult.m_Repercusion.m_ID;
+                    var storyNews = _NewsDataComponent.m_NewspaperStories[repId];
 
-                _NewspaperReferencesComponent.mainTitle.text = storyNews.m_Title;
-                _NewspaperReferencesComponent.mainBody.text = storyNews.m_Body;
+                    _NewspaperReferencesComponent.mainTitle.text = storyNews.m_Title;
+                    _NewspaperReferencesComponent.mainBody.text = storyNews.m_Body;
+                }
+            }
+            else
+            {
+                _NewspaperReferencesComponent.mainTitle.text = "Nuevo pastelero en el pueblo";
+                _NewspaperReferencesComponent.mainBody.text = "Todos los ciudadanos que tengan ganas de dulces podran comprarlos en la nueva pasteleria de Hio";
             }
         }
     }
