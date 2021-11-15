@@ -109,7 +109,22 @@ public class UIPieceSelectionMenu : MonoBehaviour
         m_IsAPieceSelected = true;
         // Update UI
         UIQuestPieceComponent UIPieceData = Admin.Global.Components.m_QuestPieceUIComponent[m_SelectedPieceID];
-        _uiSelectedPieceView.UpdateUI(UIPieceData.m_Sprite, UIPieceData.m_Name, UIPieceData.m_Description);
+        QuestPieceFunctionalComponent funcPiece = Admin.Global.Components.GetComponentContainer<QuestPieceFunctionalComponent>().GetComponentByID(m_SelectedPieceID);
+
+        int convince = 0;
+        int help = 0;
+        int harm = 0;
+        var l = funcPiece.m_Tags.Find(t => t.m_Type == QPTag.TagType.Convince);
+        if (l != null)
+            convince = l.m_Value;
+        l = funcPiece.m_Tags.Find(t => t.m_Type == QPTag.TagType.Help);
+        if (l != null)
+            help = l.m_Value;
+        l = funcPiece.m_Tags.Find(t => t.m_Type == QPTag.TagType.Harm);
+        if (l != null)
+            harm = l.m_Value;
+
+        _uiSelectedPieceView.UpdateUI(UIPieceData.m_Sprite, UIPieceData.m_Name, UIPieceData.m_Description, convince, help, harm);
     }
 
     public void UsePieceButton_OnClick()
@@ -126,16 +141,24 @@ public class UIPieceSelectionMenu : MonoBehaviour
         [SerializeField] private TextMeshProUGUI _nameTextComp;
         [SerializeField] private TextMeshProUGUI _descTextComp;
 
+        [SerializeField] private TextMeshProUGUI _convince;
+        [SerializeField] private TextMeshProUGUI _help;
+        [SerializeField] private TextMeshProUGUI _harm;
 
-        public void UpdateUI(Sprite sprite, string name, string description)
+
+        public void UpdateUI(Sprite sprite, string name, string description, int convince, int help, int harm)
         {
-            if(!_gameObject.activeInHierarchy)
+            if (!_gameObject.activeInHierarchy)
                 _gameObject.SetActive(true);
 
             _image.color = Color.white;
             _image.sprite = sprite;
             _nameTextComp.text = name;
             _descTextComp.text = description;
+
+            _convince.text = convince.ToString();
+            _help.text = help.ToString();
+            _harm.text = harm.ToString();
         }
 
         public void Clear()
