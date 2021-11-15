@@ -953,7 +953,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 869432513009597304}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5040541266953655314}
+        m_TargetAssemblyTypeName: Shop_UI, CQM.Scripts.Runtime
+        m_MethodName: NextItem
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &2655504294425553911
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,6 +976,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7086555508475996206}
   - component: {fileID: 2781834573024937273}
+  - component: {fileID: 5040541266953655314}
   m_Layer: 5
   m_Name: UI_RecipeShop
   m_TagString: Untagged
@@ -1010,7 +1023,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2655504294425553911}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c701656203a9bb43b93a061a4196f7b, type: 3}
   m_Name: 
@@ -1025,6 +1038,27 @@ MonoBehaviour:
   textGoodR: {fileID: 1665034711773997870}
   textEvilR: {fileID: 8138141819503081870}
   textPrice: {fileID: 3841892461116443574}
+--- !u!114 &5040541266953655314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2655504294425553911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82dbbe8965a3400449d4bb9c58e667c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text_good_rep: {fileID: 1665034711773997870}
+  text_evil_rep: {fileID: 8138141819503081870}
+  text_stat_1: {fileID: 7897898433644289539}
+  text_stat_2: {fileID: 4319335017558882570}
+  text_stat_3: {fileID: 6448742838966232079}
+  text_price: {fileID: 3841892461116443574}
+  text_recipe_name: {fileID: 621473021605119165}
+  text_buy: {fileID: 5210616146490498861}
+  image_recipe: {fileID: 5766360659325400573}
 --- !u!1 &2896145472007606889
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,4 +2171,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7875080297658567813}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5040541266953655314}
+        m_TargetAssemblyTypeName: Shop_UI, CQM.Scripts.Runtime
+        m_MethodName: NextItem
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

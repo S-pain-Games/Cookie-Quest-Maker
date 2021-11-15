@@ -12,6 +12,7 @@ public class PieceCraftingUI : MonoBehaviour
     private ComponentsContainer<QuestPieceFunctionalComponent> _pieceDataComponents;
     private ComponentsContainer<UIQuestPieceComponent> _recipeUiDataComponents;
     private ComponentsContainer<IngredientComponent> _ingredientDataComponents;
+    private ComponentsContainer<CookieDataComponent> _cookieDataComponents;
     private Singleton_InventoryComponent _inventory;
 
     private List<ID> _cookieRecipes;
@@ -61,13 +62,12 @@ public class PieceCraftingUI : MonoBehaviour
         Event<ID> evt = admin.EventSystem.GetCallback<Event<ID>>(new ID("piece_crafting_sys"), new ID("update_ingredients_ui"));
         evt.OnInvoked += UpdateRecipeIngredients;
 
-        //Admin.Global.Systems.pieceCraftingSystem.GetDefaultUi();
-
         _recipeDataComponents = admin.Components.GetComponentContainer<RecipeDataComponent>();
         _pieceDataComponents = admin.Components.m_QuestPieceFunctionalComponents;
         _inventory = admin.Components.m_InventoryComponent;
         _recipeUiDataComponents = admin.Components.m_QuestPieceUIComponent;
         _ingredientDataComponents = admin.Components.GetComponentContainer<IngredientComponent>();
+        _cookieDataComponents = admin.Components.m_CookieData;
 
         _cookieRecipes = new List<ID>();
         _actionRecipes = new List<ID>();
@@ -198,6 +198,7 @@ public class PieceCraftingUI : MonoBehaviour
         {
             text_piece_name.text = recipeUi.m_Name;
             text_piece_description.text = recipeUi.m_Description;
+            //img_recipe_big.sprite = _cookieDataComponents.GetComponentByID(piece.m_ID).m_Image.sprite;
             img_recipe_big.sprite = recipeUi.m_Sprite;
             img_recipe_small.sprite = recipeUi.m_Sprite;
             //1: Convice, 2: Help, 0: Harm 
@@ -215,46 +216,7 @@ public class PieceCraftingUI : MonoBehaviour
             }
 
             UpdateRecipeIngredients(recipe.m_ID);
-            /*
-            obj_ingredient_1.SetActive(false);
-            obj_ingredient_2.SetActive(false);
-            obj_ingredient_3.SetActive(false);
 
-            for (int i = 0; i < recipe.m_IngredientsList.Count; i++)
-            {
-                IngredientComponent ingredient = _ingredientDataComponents.GetComponentByID(recipe.m_IngredientsList[i].m_ItemID);
-                int m_amount = 0;
-                for (int j=0; j<_inventory.m_Ingredients.Count; j++)
-                {
-                    if(_inventory.m_Ingredients[j].m_ItemID == ingredient.m_ID)
-                    {
-                        m_amount = _inventory.m_Ingredients[j].m_Amount;
-                        break;
-                    }
-                }
-                if (i == 0)
-                {
-                    obj_ingredient_1.SetActive(true);
-                    text_ingredient_name_1.text = ingredient.m_Name;
-                    text_ingredient_amount_1.text = m_amount + " / " + recipe.m_IngredientsList[i].m_Amount;
-                    image_ingredient_1.sprite = ingredient.m_Sprite;
-                }
-                else if (i == 1)
-                {
-                    obj_ingredient_2.SetActive(true);
-                    text_ingredient_name_2.text = ingredient.m_Name;
-                    text_ingredient_amount_2.text = m_amount + " / " + recipe.m_IngredientsList[i].m_Amount;
-                    image_ingredient_2.sprite = ingredient.m_Sprite;
-                }
-                else if (i == 2)
-                {
-                    obj_ingredient_3.SetActive(true);
-                    text_ingredient_name_3.text = ingredient.m_Name;
-                    text_ingredient_amount_3.text = m_amount + " / " + recipe.m_IngredientsList[i].m_Amount;
-                    image_ingredient_3.sprite = ingredient.m_Sprite;
-                }
-            }
-            */
         }
     }
 
@@ -337,14 +299,6 @@ public class PieceCraftingUI : MonoBehaviour
         {
             if (_cookieRecipes.Count > 0)
             {
-                /*
-                if (idx_cookieRecipes < 0)
-                    idx_cookieRecipes = 0;
-                else if (idx_cookieRecipes >= _cookieRecipes.Count)
-                    idx_cookieRecipes = _cookieRecipes.Count - 1;
-                if(idx_cookieRecipes < 0)
-                    idx_cookieRecipes = 0;
-                */
                 idx_cookieRecipes = Mathf.Clamp(idx_cookieRecipes, 0, _cookieRecipes.Count-1);
             }
             else
@@ -381,7 +335,6 @@ public class PieceCraftingUI : MonoBehaviour
 
     public void SelectPieceCookie()
     {
-        //_selectPieceTypeCmd.Invoke(QuestPieceFunctionalComponent.PieceType.Cookie);
         _selectedPieceType = QuestPieceFunctionalComponent.PieceType.Cookie;
         SelectPieceUi();
     }
