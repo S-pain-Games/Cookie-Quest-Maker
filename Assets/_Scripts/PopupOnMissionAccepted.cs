@@ -34,7 +34,7 @@ public class PopupOnMissionAccepted : MonoBehaviour
     {
         PopupData_MissionStarted pData = new PopupData_MissionStarted();
         pData.m_MissionTitle = Admin.Global.Components.GetComponentContainer<StoryInfoComponent>()[storyId].m_StoryData.m_Title;
-        pData.m_TimeAlive = 3.0f;
+        pData.m_TimeAlive = 2.0f;
         _showPopupCommand.Invoke(pData);
     }
 
