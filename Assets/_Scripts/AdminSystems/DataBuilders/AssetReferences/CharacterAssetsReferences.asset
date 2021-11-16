@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ae392678f6a3a47ad1ce5e07a6b704, type: 3}
+  m_Name: CharacterAssetsReferences
+  m_EditorClassIdentifier: 
+  m_Characters:
+  - m_IDName: nu
+    m_DialogueSprite: {fileID: 21300000, guid: d749a37a6de74434f9cc2fd3accc37a6, type: 3}
+  - m_IDName: evith
+    m_DialogueSprite: {fileID: 21300000, guid: 7511b8a306a19604b8eea170e4d2d1b5, type: 3}
+  - m_IDName: meri
+    m_DialogueSprite: {fileID: 21300000, guid: 803698d8261da90409dedfe796bae79a, type: 3}
+  - m_IDName: mayor
+    m_DialogueSprite: {fileID: 21300000, guid: 709e4c3eab4ca53429c03291e32391cb, type: 3}
+  - m_IDName: miss_chocolate
+    m_DialogueSprite: {fileID: 21300000, guid: 6c55735ad9200d049a649c59319c8a8f, type: 3}
+  - m_IDName: canela
+    m_DialogueSprite: {fileID: 21300000, guid: f4bd6bfaf6cd3ba4c88a18796a5f1913, type: 3}
+  - m_IDName: johny_setas
+    m_DialogueSprite: {fileID: 21300000, guid: 943e21760de78a044942edb2aa18938f, type: 3}
+  - m_IDName: mantecas
+    m_DialogueSprite: {fileID: 21300000, guid: 9bae7dc6843c36f458ccd314e48bce14, type: 3}
+  - m_IDName: hio
+    m_DialogueSprite: {fileID: 21300000, guid: 2e377219cb2ecc84791de061d1bc6c10, type: 3}

@@ -25,15 +25,6 @@ public class CharacterBuilderEditor : Editor
             EditorUtility.SetDirty(t);
         }
 
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("m_References"));
-
-        if (GUILayout.Button("Apply References", GUILayout.Height(40)))
-        {
-            serializedObject.Update();
-            t.ApplyReferences();
-            EditorUtility.SetDirty(t);
-        }
-
         showInternal = EditorGUILayout.Toggle("Show internal data", showInternal);
         if (showInternal)
         {

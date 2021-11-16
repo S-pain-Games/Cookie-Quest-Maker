@@ -5,56 +5,59 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIPieceSocketBehaviour : MonoBehaviour
+namespace CQM.UI.QuestMakingTable
 {
-    public event Action<QuestPieceFunctionalComponent> OnPieceSocketed;
-    public event Action<QuestPieceFunctionalComponent> OnPieceUnsocketed;
-
-    public bool m_Filled = false;
-    public QuestPieceFunctionalComponent.PieceType RequiredType = QuestPieceFunctionalComponent.PieceType.Action;
-    public QuestPieceFunctionalComponent m_CurrentPiece;
-
-    private Color m_BaseColor;
-    [SerializeField] private Color m_HighlightColor;
-
-    private void Start()
+    public class UIPieceSocketBehaviour : MonoBehaviour
     {
-        m_BaseColor = GetComponent<Image>().color;
-    }
+        public event Action<QuestPieceFunctionalComponent> OnPieceSocketed;
+        public event Action<QuestPieceFunctionalComponent> OnPieceUnsocketed;
 
-    public void Clear()
-    {
-        m_Filled = false;
-        m_CurrentPiece = null;
-        GetComponent<Image>().color = m_BaseColor;
-    }
+        public bool m_Filled = false;
+        public QuestPieceFunctionalComponent.PieceType RequiredType = QuestPieceFunctionalComponent.PieceType.Action;
+        public QuestPieceFunctionalComponent m_CurrentPiece;
 
-    public bool TryToSetPiece(QuestPieceFunctionalComponent piece)
-    {
-        if (!m_Filled && piece.m_Type == RequiredType)
+        private Color m_BaseColor;
+        [SerializeField] private Color m_HighlightColor;
+
+        private void Start()
         {
-            m_CurrentPiece = piece;
-            m_Filled = true;
-            OnPieceSocketed?.Invoke(piece);
-            return true;
+            m_BaseColor = GetComponent<Image>().color;
         }
-        return false;
-    }
 
-    public void RemovePiece()
-    {
-        m_Filled = false;
-        OnPieceUnsocketed?.Invoke(m_CurrentPiece);
-        m_CurrentPiece = null;
-    }
+        public void Clear()
+        {
+            m_Filled = false;
+            m_CurrentPiece = null;
+            GetComponent<Image>().color = m_BaseColor;
+        }
 
-    public void OnMatchingPieceSelectedHandle()
-    {
-        GetComponent<Image>().color = m_HighlightColor;
-    }
+        public bool TryToSetPiece(QuestPieceFunctionalComponent piece)
+        {
+            if (!m_Filled && piece.m_Type == RequiredType)
+            {
+                m_CurrentPiece = piece;
+                m_Filled = true;
+                OnPieceSocketed?.Invoke(piece);
+                return true;
+            }
+            return false;
+        }
 
-    public void OnMatchingPieceUnselectedHandle()
-    {
-        GetComponent<Image>().color = m_BaseColor;
+        public void RemovePiece()
+        {
+            m_Filled = false;
+            OnPieceUnsocketed?.Invoke(m_CurrentPiece);
+            m_CurrentPiece = null;
+        }
+
+        public void OnMatchingPieceSelectedHandle()
+        {
+            GetComponent<Image>().color = m_HighlightColor;
+        }
+
+        public void OnMatchingPieceUnselectedHandle()
+        {
+            GetComponent<Image>().color = m_BaseColor;
+        }
     }
 }

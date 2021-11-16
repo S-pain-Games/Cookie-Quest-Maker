@@ -38,7 +38,7 @@ namespace CQM.Databases
         // Singleton Components
         [Header("Singleton Components")]
         public Singleton_GameStateComponent m_GameState;
-        public Singleton_PopupReferencesComponent m_Popups = new Singleton_PopupReferencesComponent();
+        public Singleton_PopupReferencesComponent m_Popups;
         public Singleton_CameraDataComponent m_Cameras = new Singleton_CameraDataComponent();
         public Singleton_NewspaperDataComponent m_Newspaper = new Singleton_NewspaperDataComponent();
         public Singleton_NewspaperReferencesComponent m_NewspaperRefs;

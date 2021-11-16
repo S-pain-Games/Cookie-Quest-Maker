@@ -3,63 +3,60 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-namespace CQM.Gameplay
+
+namespace CQM.UI.QuestMakingTable
 {
-    // Handles over all the Storage UI functionality and
-    // important data
+    // Handles all the Storage UI functionality
     public class UIPieceStorageManager : MonoBehaviour
     {
+        public event Action<ID> OnPickPiece;
+        public event Action OnExit;
+
         public QuestPieceFunctionalComponent.PieceType m_SelectedType;
-        public int selectedStoryId; // used to populate UI with story targets
 
-        [SerializeField] private UIPieceFilteringMenu _pieceFiltering;
-        [SerializeField] private UIPieceSelectionMenu _pieceSelector;
+        [SerializeField] private UIPieceTypeSelectionMenu _pieceFilteringMenu;
+        [SerializeField] private UIPieceSelectionMenu _pieceSelectionMenu;
+        [SerializeField] private Button _exitButton;
 
-        private EventSys _evtSys;
 
-        private Event<ID> _onStorySelected;
-        private Event<ID> _onUsePiece;
-
-        public void Initialize(EventSys evtSys)
+        public void Initialize(QuestMakerTableState state)
         {
-            _evtSys = evtSys;
-            _onUsePiece = _evtSys.AddEvent<ID>(new ID("on_use_piece"));
-        }
-
-        public void AdquireUIEvents()
-        {
-            _evtSys.GetEvent(new ID("on_story_selected"), out _onStorySelected);
-            _onStorySelected.OnInvoked += OnStorySelected;
+            _pieceSelectionMenu.Initialize(state);
         }
 
         private void OnEnable()
         {
-            _pieceFiltering.OnFilterSelected += PieceFiltering_OnFilterSelected;
-            _pieceSelector.OnUsePiece += PieceSelection_OnUsePiece;
+            _pieceFilteringMenu.OnPieceTypeSelected += PieceFiltering_OnFilterSelected;
+            _pieceSelectionMenu.OnUsePiece += PieceSelection_OnUsePiece;
+
+            _exitButton.onClick.AddListener(OnExitButton);
         }
 
         private void OnDisable()
         {
-            _pieceFiltering.OnFilterSelected -= PieceFiltering_OnFilterSelected;
-            _pieceSelector.OnUsePiece -= PieceSelection_OnUsePiece;
+            _pieceFilteringMenu.OnPieceTypeSelected -= PieceFiltering_OnFilterSelected;
+            _pieceSelectionMenu.OnUsePiece -= PieceSelection_OnUsePiece;
+
+            _exitButton.onClick.RemoveListener(OnExitButton);
         }
 
         private void PieceFiltering_OnFilterSelected(QuestPieceFunctionalComponent.PieceType type)
         {
             m_SelectedType = type;
-            _pieceSelector.RefreshSelectablePieces(type);
-        }
-
-        private void OnStorySelected(ID storyID)
-        {
-            _pieceSelector.m_CurrentStoryID = storyID;
+            _pieceSelectionMenu.RefreshSelectablePieces(type);
         }
 
         // Called by the Use UI button
         private void PieceSelection_OnUsePiece(ID pieceID)
         {
-            _onUsePiece.Invoke(pieceID);
+            OnPickPiece.Invoke(pieceID);
+        }
+
+        private void OnExitButton()
+        {
+            OnExit?.Invoke();
         }
     }
 }

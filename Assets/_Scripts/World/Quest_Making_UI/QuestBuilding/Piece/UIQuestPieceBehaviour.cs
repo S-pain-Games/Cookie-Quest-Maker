@@ -7,7 +7,8 @@ using UnityEngine.EventSystems;
 using TMPro;
 using CQM.Components;
 
-namespace CQM.Gameplay
+
+namespace CQM.UI.QuestMakingTable
 {
     [RequireComponent(typeof(UIDraggable))]
     [RequireComponent(typeof(UIPressable))]
@@ -36,14 +37,17 @@ namespace CQM.Gameplay
 
         public void Initialize(Canvas canvas, UIQuestPieceComponent uiData, QuestPieceFunctionalComponent piece)
         {
-            _draggable = GetComponent<UIDraggable>();
-            _pressable = GetComponent<UIPressable>();
-
             _canvas = canvas;
             _raycaster = canvas.GetComponent<GraphicRaycaster>();
             Piece = piece;
             _draggable.Initialize(canvas);
             _image.sprite = uiData.m_QuestBuildingSprite;
+        }
+
+        private void Awake()
+        {
+            _draggable = GetComponent<UIDraggable>();
+            _pressable = GetComponent<UIPressable>();
         }
 
         private void OnEnable()

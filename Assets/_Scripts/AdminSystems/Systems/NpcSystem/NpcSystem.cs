@@ -20,8 +20,6 @@ namespace CQM.Systems
         private List<ID> _completedStories;
         private Singleton_NpcReferencesComponent _npcReferencesComponent;
 
-        private Event<PopupData> _showPopupCmd;
-
 
         public void Initialize(Singleton_NpcReferencesComponent npcReferencesComponent,
                                ComponentsContainer<StoryInfoComponent> storyInfoComponents,
@@ -34,7 +32,6 @@ namespace CQM.Systems
             _storiesToStart = storiesToStart;
             _completedStories = completedStories;
 
-            _showPopupCmd = evtSys.GetCommandByName<Event<PopupData>>("popup_sys", "show_popup");
             evtSys.GetCallbackByName<EventVoid>("day_sys", "night_begin").OnInvoked += PopulateDeitiesData;
             // DEV ONLY
             PopulateNpcsData();
