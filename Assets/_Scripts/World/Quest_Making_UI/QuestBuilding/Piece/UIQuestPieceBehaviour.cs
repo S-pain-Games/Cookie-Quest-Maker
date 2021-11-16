@@ -7,7 +7,8 @@ using UnityEngine.EventSystems;
 using TMPro;
 using CQM.Components;
 
-namespace CQM.Gameplay
+
+namespace CQM.UI.QuestMakingTable
 {
     [RequireComponent(typeof(UIDraggable))]
     [RequireComponent(typeof(UIPressable))]
@@ -44,10 +45,7 @@ namespace CQM.Gameplay
             Piece = piece;
             _draggable.Initialize(canvas);
             _image.sprite = uiData.m_QuestBuildingSprite;
-        }
 
-        private void OnEnable()
-        {
             _draggable.OnBeginDragEvent += TryToUnsocket;
             _draggable.OnEndDragEvent += TryToFitInSocket;
             _pressable.OnPointerDownEvent += OnSelectedHandle;

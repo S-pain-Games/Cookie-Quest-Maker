@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3741317857663865583}
   - component: {fileID: 4820165033913479732}
   m_Layer: 5
-  m_Name: UI_Storage_QuestPiece
+  m_Name: UI_Storage_QuestPiece_Element
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,4 +1,4 @@
-using CQM.Gameplay;
+using CQM.UI.QuestMakingTable;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

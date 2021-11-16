@@ -4,11 +4,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CQM.Gameplay
+namespace CQM.UI.QuestMakingTable
 {
-    public class UIPieceFilteringMenu : MonoBehaviour
+    public class UIPieceTypeSelectionMenu : MonoBehaviour
     {
-        public event Action<QuestPieceFunctionalComponent.PieceType> OnFilterSelected;
+        public event Action<QuestPieceFunctionalComponent.PieceType> OnPieceTypeSelected;
 
         [SerializeField]
         private List<UIPieceTypeSelectionButton> m_Buttons = new List<UIPieceTypeSelectionButton>();
@@ -31,7 +31,7 @@ namespace CQM.Gameplay
 
         private void ButtonClickedHandle(QuestPieceFunctionalComponent.PieceType type)
         {
-            OnFilterSelected?.Invoke(type);
+            OnPieceTypeSelected?.Invoke(type);
         }
     }
 }

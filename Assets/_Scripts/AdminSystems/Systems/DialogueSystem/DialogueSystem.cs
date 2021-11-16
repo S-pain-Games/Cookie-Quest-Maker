@@ -48,7 +48,7 @@ public class DialogueSystem : ISystemEvents
         data.m_CurrentDialogueLines = dialogue;
 
 
-        data.m_CaracterName.text = _characters[characterID].m_FullName;
+        //data.m_CaracterName.text = _characters[characterID].m_FullName;
         data.m_CharacterImage.sprite = _characters[characterID].m_CharacterSprite;
         data.m_Container.StartCoroutine(ShowText(data.m_CurrentDialogueLines[data.m_CurrentLineIndex]));
         data.m_CallbackOnDialogueEnd = callback;

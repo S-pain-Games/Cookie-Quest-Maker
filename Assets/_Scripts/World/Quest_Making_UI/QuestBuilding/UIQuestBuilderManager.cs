@@ -7,28 +7,30 @@ using UnityEngine.UI;
 using CQM.Components;
 using CQM.Databases;
 
-namespace CQM.Gameplay
+namespace CQM.UI.QuestMakingTable
 {
     public class UIQuestBuilderManager : MonoBehaviour
     {
+        // Events
+        public event Action OnExit;
+        public event Action OnOpenStorage;
         public event Action<QuestPieceFunctionalComponent> OnAddQuestPiece;
         public event Action<QuestPieceFunctionalComponent> OnRemoveQuestPiece;
         public event Action OnFinishQuest;
 
         public Transform pieceSpawnPosition;
-        [SerializeField] private Button finishQuestButton;
+        [SerializeField] private Button _finishQuestButton;
+        [SerializeField] private Button _exitButton;
+        [SerializeField] private Button _openStorageButton;
 
         [SerializeField] private List<UIPieceSocketBehaviour> _sockets = new List<UIPieceSocketBehaviour>();
-        [SerializeField] private List<UIQuestPieceBehaviour> _questPieces = new List<UIQuestPieceBehaviour>();
+        private List<UIQuestPieceBehaviour> _questPieces = new List<UIQuestPieceBehaviour>();
 
 
         // Global Systems Events
         private Event<ItemData> _addPieceCmd;
         private Event<ItemData> _removePieceCmd;
 
-        // Local UI Events
-        private EventSys _evtSys;
-        private Event<ID> _onUsePiece;
         private Canvas _canvas;
 
         private ComponentsContainer<QuestPieceFunctionalComponent> _questPieceFunctionalComponents;
@@ -36,24 +38,12 @@ namespace CQM.Gameplay
         private ComponentsContainer<QuestPiecePrefabComponent> _questPrefabComponents;
 
 
-        public void Initialize(EventSys evtSys, Canvas canvas)
+        private void Awake()
         {
-            _evtSys = evtSys;
-            _canvas = canvas;
-
             _questPieceFunctionalComponents = Admin.Global.Components.m_QuestPieceFunctionalComponents;
             _questPieceUIComponents = Admin.Global.Components.m_QuestPieceUIComponent;
             _questPrefabComponents = Admin.Global.Components.m_QuestPiecePrefabComponent;
-        }
 
-        public void AdquireUIEvents()
-        {
-            _evtSys.GetEvent(new ID("on_use_piece"), out _onUsePiece);
-            _onUsePiece.OnInvoked += SpawnPiece;
-        }
-
-        private void Awake()
-        {
             var evtSys = Admin.Global.EventSystem;
             _addPieceCmd = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_piece");
             _removePieceCmd = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "remove_piece");
@@ -74,14 +64,21 @@ namespace CQM.Gameplay
                 InitializeQuestPieceBehaviour(_questPieces[i]);
             }
 
-            finishQuestButton.onClick.AddListener(OnFinishQuestButtonClicked);
+            _finishQuestButton.onClick.AddListener(OnFinishQuestButtonClicked);
+            _exitButton.onClick.AddListener(OnExitButton);
+            _openStorageButton.onClick.AddListener(OnOpenStorageButton);
         }
+
 
         private void OnDisable()
         {
             UnregisterPiecesAndSocketsEvents();
-            finishQuestButton.onClick.RemoveListener(OnFinishQuestButtonClicked);
+            _finishQuestButton.onClick.RemoveListener(OnFinishQuestButtonClicked);
+            _exitButton.onClick.RemoveListener(OnExitButton);
+            _openStorageButton.onClick.RemoveListener(OnOpenStorageButton);
         }
+
+        public void SetCanvas(Canvas canvas) => _canvas = canvas;
 
         private void UnregisterPiecesAndSocketsEvents()
         {
@@ -129,7 +126,7 @@ namespace CQM.Gameplay
             _questPieces.Clear();
         }
 
-        private void SpawnPiece(ID pieceID)
+        public void SpawnPiece(ID pieceID)
         {
             var questPiece = _questPieceFunctionalComponents[pieceID];
             var uiData = _questPieceUIComponents[pieceID];
@@ -159,10 +156,12 @@ namespace CQM.Gameplay
             InitializeQuestPieceBehaviour(pieceBehaviour);
         }
 
+
         private void OnFinishQuestButtonClicked()
         {
             OnFinishQuest?.Invoke();
         }
+
 
         private void OnPieceSocketedHandle(QuestPieceFunctionalComponent piece)
         {
@@ -173,6 +172,7 @@ namespace CQM.Gameplay
         {
             OnRemoveQuestPiece?.Invoke(piece);
         }
+
 
         private void OnPieceSelectedBroadcast(UIQuestPieceBehaviour uiPiece)
         {
@@ -188,10 +188,22 @@ namespace CQM.Gameplay
                 matchingSocket.OnMatchingPieceUnselectedHandle();
         }
 
+
         private void InitializeQuestPieceBehaviour(UIQuestPieceBehaviour pieceBehaviour)
         {
             pieceBehaviour.OnSelected += OnPieceSelectedBroadcast;
             pieceBehaviour.OnUnselect += OnPieceUnselectedBroadcast;
+        }
+
+
+        private void OnOpenStorageButton()
+        {
+            OnOpenStorage.Invoke();
+        }
+
+        private void OnExitButton()
+        {
+            OnExit.Invoke();
         }
     }
 }
