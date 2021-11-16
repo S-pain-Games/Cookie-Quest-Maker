@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using System;
-using UnityEngine.UI;
 
 public class DialogueSystem : ISystemEvents
 {
@@ -49,7 +47,7 @@ public class DialogueSystem : ISystemEvents
 
 
         //data.m_CaracterName.text = _characters[characterID].m_FullName;
-        data.m_CharacterImage.sprite = _characters[characterID].m_CharacterSprite;
+        data.m_CharacterImage.sprite = _dialogue[characterID].m_CharacterImg;
         data.m_Container.StartCoroutine(ShowText(data.m_CurrentDialogueLines[data.m_CurrentLineIndex]));
         data.m_CallbackOnDialogueEnd = callback;
 
@@ -109,31 +107,4 @@ public struct ShowDialogueEvtArgs
         m_CharID = charID;
         m_Callback = callback;
     }
-}
-
-
-[Serializable]
-public class Singleton_DialogueReferencesComponent
-{
-    public DialogueContainer m_Container;
-
-    [Header("Text")]
-    public TextMeshProUGUI m_CaracterName;
-    public TextMeshProUGUI m_Line;
-
-    [HideInInspector]
-    public List<string> m_CurrentDialogueLines;
-
-    [HideInInspector] public int m_CurrentLineIndex = 0;
-    public Action m_CallbackOnDialogueEnd;
-
-    public Image m_CharacterImage;
-}
-
-[Serializable]
-public class DialogueCharacterComponent
-{
-    public ID m_ID;
-    public Sprite m_CharacterImg;
-    public Color m_NameColor;
 }

@@ -2,18 +2,19 @@ using CQM.Databases;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CQM.AssetReferences;
 
 public class CharactersBuilder : MonoBehaviour
 {
+    [SerializeField] private CharacterReferencesDatabase _characterReferences;
+
     public List<CharacterComponent> m_CharactersList = new List<CharacterComponent>();
     public List<DialogueCharacterComponent> m_CharacterDialogueList = new List<DialogueCharacterComponent>();
     public List<CharacterWorldPrefabComponent> m_CharacterWorldPrefabComponent = new List<CharacterWorldPrefabComponent>();
 
-    [SerializeField] private List<CharacterReferences> m_References = new List<CharacterReferences>();
 
     private CharacterComponent c;
     private DialogueCharacterComponent d;
-    private CharacterReferences r;
     private CharacterWorldPrefabComponent p;
 
 
@@ -35,7 +36,6 @@ public class CharactersBuilder : MonoBehaviour
     {
         m_CharactersList.Clear();
         m_CharacterDialogueList.Clear();
-        m_References.Clear();
 
         CreateCharacter("hio", "Hio", "Hio");
         SetDescription("She is the owner of the town's farm");
@@ -63,55 +63,21 @@ public class CharactersBuilder : MonoBehaviour
 
         CreateCharacter("mantecas", "Juanjo, el mantecas", "Juanjo");
         SetDescription("She is the owner of the town's farm");
-
-        CreateCharacter("mamarrachus", "Mamarrachus Generikus", "Mamarrachus");
-        SetDescription("She is the owner of the town's farm");
-    }
-
-    public void ApplyReferences()
-    {
-        // This is absurdly inefficient but its an editor tool so its okey
-        for (int i = 0; i < m_References.Count; i++)
-        {
-            var r = m_References[i];
-
-            // Apply Dialogue Character Image References
-            for (int j = 0; j < m_CharacterDialogueList.Count; j++)
-            {
-                var dialogueRef = m_CharacterDialogueList[j];
-                if (dialogueRef.m_ID == r.m_ID)
-                {
-                    dialogueRef.m_CharacterImg = r.m_DialogueSprite;
-                }
-            }
-
-            for (int j = 0; j < m_CharacterWorldPrefabComponent.Count; j++)
-            {
-                var prefabRef = m_CharacterWorldPrefabComponent[j];
-                if (prefabRef.m_ID == r.m_ID)
-                {
-                    prefabRef.m_Prefab = r.m_WorldCharacterPrefab;
-                }
-            }
-        }
     }
 
     public void CreateCharacter(string idName, string longName, string shortName)
     {
         c = new CharacterComponent();
         d = new DialogueCharacterComponent();
-        r = new CharacterReferences();
         p = new CharacterWorldPrefabComponent();
 
         c.m_ID = new ID(idName);
         c.m_ShortName = shortName;
         c.m_FullName = longName;
 
+        d.m_CharacterImg = _characterReferences.GetDialogueSprite(new ID(idName));
+
         d.m_ID = new ID(idName);
-
-        r.m_ID = new ID(idName);
-        r.m_CharacterName = longName;
-
         p.m_ID = new ID(idName);
     }
 
@@ -122,16 +88,6 @@ public class CharactersBuilder : MonoBehaviour
         // Finish
         m_CharactersList.Add(c);
         m_CharacterDialogueList.Add(d);
-        m_References.Add(r);
         m_CharacterWorldPrefabComponent.Add(p);
-    }
-
-    [System.Serializable]
-    public class CharacterReferences
-    {
-        [HideInInspector] public ID m_ID;
-        public string m_CharacterName;
-        public Sprite m_DialogueSprite;
-        public GameObject m_WorldCharacterPrefab;
     }
 }

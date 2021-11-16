@@ -2299,6 +2299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07a58c4116d7ea14fa2ce02767d0a3e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _characterReferences: {fileID: 11400000, guid: 8fc91bff4d544ca4a83000b384d5be97, type: 2}
   m_CharactersList:
   - m_ID:
       m_NameID: hio
@@ -2372,74 +2373,60 @@ MonoBehaviour:
     m_ShortName: Juanjo
     m_Description: She is the owner of the town's farm
     m_CharacterSprite: {fileID: 0}
-  - m_ID:
-      m_NameID: mamarrachus
-      m_ID: 689543378
-      m_Initialized: 1
-    m_FullName: Mamarrachus Generikus
-    m_ShortName: Mamarrachus
-    m_Description: She is the owner of the town's farm
-    m_CharacterSprite: {fileID: 0}
   m_CharacterDialogueList:
   - m_ID:
       m_NameID: hio
       m_ID: 339799166
       m_Initialized: 1
-    m_CharacterImg: {fileID: 0}
+    m_CharacterImg: {fileID: 21300000, guid: 2e377219cb2ecc84791de061d1bc6c10, type: 3}
     m_NameColor: {r: 0, g: 0, b: 0, a: 0}
   - m_ID:
       m_NameID: nu
       m_ID: -1991483173
       m_Initialized: 1
-    m_CharacterImg: {fileID: 0}
+    m_CharacterImg: {fileID: 21300000, guid: d749a37a6de74434f9cc2fd3accc37a6, type: 3}
     m_NameColor: {r: 0, g: 0, b: 0, a: 0}
   - m_ID:
       m_NameID: evith
       m_ID: 573504420
       m_Initialized: 1
-    m_CharacterImg: {fileID: 0}
+    m_CharacterImg: {fileID: 21300000, guid: 7511b8a306a19604b8eea170e4d2d1b5, type: 3}
     m_NameColor: {r: 0, g: 0, b: 0, a: 0}
   - m_ID:
       m_NameID: meri
       m_ID: -918260377
       m_Initialized: 1
-    m_CharacterImg: {fileID: 0}
+    m_CharacterImg: {fileID: 21300000, guid: 803698d8261da90409dedfe796bae79a, type: 3}
     m_NameColor: {r: 0, g: 0, b: 0, a: 0}
   - m_ID:
       m_NameID: mayor
       m_ID: 996742298
       m_Initialized: 1
-    m_CharacterImg: {fileID: 0}
+    m_CharacterImg: {fileID: 21300000, guid: 709e4c3eab4ca53429c03291e32391cb, type: 3}
     m_NameColor: {r: 0, g: 0, b: 0, a: 0}
   - m_ID:
       m_NameID: miss_chocolate
       m_ID: -370492881
       m_Initialized: 1
-    m_CharacterImg: {fileID: 0}
+    m_CharacterImg: {fileID: 21300000, guid: 6c55735ad9200d049a649c59319c8a8f, type: 3}
     m_NameColor: {r: 0, g: 0, b: 0, a: 0}
   - m_ID:
       m_NameID: canela
       m_ID: -619351516
       m_Initialized: 1
-    m_CharacterImg: {fileID: 0}
+    m_CharacterImg: {fileID: 21300000, guid: f4bd6bfaf6cd3ba4c88a18796a5f1913, type: 3}
     m_NameColor: {r: 0, g: 0, b: 0, a: 0}
   - m_ID:
       m_NameID: johny_setas
       m_ID: -840848411
       m_Initialized: 1
-    m_CharacterImg: {fileID: 0}
+    m_CharacterImg: {fileID: 21300000, guid: 943e21760de78a044942edb2aa18938f, type: 3}
     m_NameColor: {r: 0, g: 0, b: 0, a: 0}
   - m_ID:
       m_NameID: mantecas
       m_ID: 2085496002
       m_Initialized: 1
-    m_CharacterImg: {fileID: 0}
-    m_NameColor: {r: 0, g: 0, b: 0, a: 0}
-  - m_ID:
-      m_NameID: mamarrachus
-      m_ID: 689543378
-      m_Initialized: 1
-    m_CharacterImg: {fileID: 0}
+    m_CharacterImg: {fileID: 21300000, guid: 9bae7dc6843c36f458ccd314e48bce14, type: 3}
     m_NameColor: {r: 0, g: 0, b: 0, a: 0}
   m_CharacterWorldPrefabComponent:
   - m_ID:
@@ -2512,77 +2499,96 @@ MonoBehaviour:
       m_ID: 689543378
       m_Initialized: 1
     m_Prefab: {fileID: 0}
-  m_References:
   - m_ID:
       m_NameID: hio
       m_ID: 339799166
       m_Initialized: 1
-    m_CharacterName: Hio
-    m_DialogueSprite: {fileID: 0}
-    m_WorldCharacterPrefab: {fileID: 0}
+    m_Prefab: {fileID: 0}
   - m_ID:
       m_NameID: nu
       m_ID: -1991483173
       m_Initialized: 1
-    m_CharacterName: Nu
-    m_DialogueSprite: {fileID: 0}
-    m_WorldCharacterPrefab: {fileID: 0}
+    m_Prefab: {fileID: 0}
   - m_ID:
       m_NameID: evith
       m_ID: 573504420
       m_Initialized: 1
-    m_CharacterName: Evith
-    m_DialogueSprite: {fileID: 0}
-    m_WorldCharacterPrefab: {fileID: 0}
+    m_Prefab: {fileID: 0}
   - m_ID:
       m_NameID: meri
       m_ID: -918260377
       m_Initialized: 1
-    m_CharacterName: Meri la Leches
-    m_DialogueSprite: {fileID: 0}
-    m_WorldCharacterPrefab: {fileID: 0}
+    m_Prefab: {fileID: 0}
   - m_ID:
       m_NameID: mayor
       m_ID: 996742298
       m_Initialized: 1
-    m_CharacterName: Alcalde, Antonio
-    m_DialogueSprite: {fileID: 0}
-    m_WorldCharacterPrefab: {fileID: 0}
+    m_Prefab: {fileID: 0}
   - m_ID:
       m_NameID: miss_chocolate
       m_ID: -370492881
       m_Initialized: 1
-    m_CharacterName: Miss Chocolate
-    m_DialogueSprite: {fileID: 0}
-    m_WorldCharacterPrefab: {fileID: 0}
+    m_Prefab: {fileID: 0}
   - m_ID:
       m_NameID: canela
       m_ID: -619351516
       m_Initialized: 1
-    m_CharacterName: Canela N Rama
-    m_DialogueSprite: {fileID: 0}
-    m_WorldCharacterPrefab: {fileID: 0}
+    m_Prefab: {fileID: 0}
   - m_ID:
       m_NameID: johny_setas
       m_ID: -840848411
       m_Initialized: 1
-    m_CharacterName: Johny, el setas
-    m_DialogueSprite: {fileID: 0}
-    m_WorldCharacterPrefab: {fileID: 0}
+    m_Prefab: {fileID: 0}
   - m_ID:
       m_NameID: mantecas
       m_ID: 2085496002
       m_Initialized: 1
-    m_CharacterName: Juanjo, el mantecas
-    m_DialogueSprite: {fileID: 0}
-    m_WorldCharacterPrefab: {fileID: 0}
+    m_Prefab: {fileID: 0}
   - m_ID:
-      m_NameID: mamarrachus
-      m_ID: 689543378
+      m_NameID: hio
+      m_ID: 339799166
       m_Initialized: 1
-    m_CharacterName: Mamarrachus Generikus
-    m_DialogueSprite: {fileID: 0}
-    m_WorldCharacterPrefab: {fileID: 0}
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: nu
+      m_ID: -1991483173
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: evith
+      m_ID: 573504420
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: meri
+      m_ID: -918260377
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: mayor
+      m_ID: 996742298
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: miss_chocolate
+      m_ID: -370492881
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: canela
+      m_ID: -619351516
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: johny_setas
+      m_ID: -840848411
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: mantecas
+      m_ID: 2085496002
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
 --- !u!114 &6330534342466683426
 MonoBehaviour:
   m_ObjectHideFlags: 0
