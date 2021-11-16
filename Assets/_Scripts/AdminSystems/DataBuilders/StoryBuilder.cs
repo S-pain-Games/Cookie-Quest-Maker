@@ -72,7 +72,8 @@ namespace CQM.Databases
             //  STORY 1
             // =============================================================================================
 
-            StartCreatingStory("mayor_problem", "El problema del alcalde", new List<string>() {
+            StartCreatingStory("mayor_problem", "El problema del alcalde", "mayor",
+                "Unos lobos están amenazando a los habitantes del pueblo. El alcalde quiere hacer algo al respecto pero es muy tacaño.", new List<string>() {
                 "Últimamente una manada de lobos nos está causando muchos problemas.",
                 "Estos acechan a nuestro ganado y a los comerciantes que quieren llegar al pueblo.",
                 "Si esto sigue así, tendremos que contratar a un cazador profesional, pero nos va a costar una fortuna.",
@@ -227,7 +228,8 @@ namespace CQM.Databases
             //  STORY 2
             // =============================================================================================
 
-            StartCreatingStory("out_of_lactose", "Falta de lactosa", new List<string>() {
+            StartCreatingStory("out_of_lactose", "Falta de lactosa", "meri",
+                "Las vacas de Meri dan muy poca leche últimamente. Teme que no vaya a tener suficientes productos lácteos para la Feria.", new List<string>() {
                 "Necesito tener muchos productos lácteos para vender en la Feria de verano, que se celebrará pronto.",
                 "El problema es que las vacas del pueblo no dan suficiente leche para producir tanto.",
                 "La sequía de este año ha disminuido la calidad de los pastos en los alrededores, por lo que no pueden alimentarse lo suficiente.",
@@ -324,7 +326,8 @@ namespace CQM.Databases
             //STORY 3
             // =============================================================================================
             
-            StartCreatingStory("sacred_egg", "El Huevo Sagrado", new List<string>() {
+            StartCreatingStory("sacred_egg", "El Huevo Sagrado", "canela",
+                "Canela ha adquirido un huevo dorado para su exposición. Pero una secta amenaza con arrebatárselo.", new List<string>() {
                 "Hace unos días estuve de visita por las subastas de la ciudad, buscando artefactos llamativos para decorar mi salón, ya sabes.",
                 "El caso es que uno de los artículos más llamativos fue un huevo dorado, que aseguran que es auténtico.",
                 "Por supuesto que lo compré y me lo traje a casa. Pero desde entonces me han surgido problemas.",
@@ -425,7 +428,8 @@ namespace CQM.Databases
             //STORY 4
             // =============================================================================================
 
-            StartCreatingStory("explosive_chocolate", "Chocolate explosivo", new List<string>() {
+            StartCreatingStory("explosive_chocolate", "Chocolate explosivo", "miss_chocolate",
+                "Miss Chocolate quiere experimentar con pólvora para hacer chocolate experimental. Los mercaderes se niegan a vender más polvora por ser peligroso.", new List<string>() {
                 "Estoy muy cerca de conseguir la receta de chocolate definitiva. ¡Va a ser un pelotazo!",
                 "He teorizado una receta que puede ser toda una revolución.",
                 "Mezclar chocolate con pólvora, ¡todo para lograr una mezcla de sabor explosiva!",
@@ -533,7 +537,8 @@ namespace CQM.Databases
             //STORY 5
             // =============================================================================================
 
-            StartCreatingStory("not_so_dirty_rats", "Ratas no tan sucias", new List<string>() {
+            StartCreatingStory("not_so_dirty_rats", "Ratas no tan sucias", "mantecas",
+                "Una colonia de ratas inteligentes ha invadido el granero del Mantecas y se dedican a robar sus hortalizas.", new List<string>() {
                 "¡Estoy harto de que las ratas me destrocen el granero! ¡Todos los años igual!",
                 "No sé qué es lo que les echa de comer el Johnny, pero te juro que son cada vez más inteligentes.",
                 "¡Esta vez han ido demasiado lejos, si hasta han construido un mercadillo en mi propiedad!",
@@ -669,7 +674,8 @@ namespace CQM.Databases
             //STORY 6
             // =============================================================================================
 
-            StartCreatingStory("stingy_taxes", "Impuestos para el tacaño", new List<string>() {
+            StartCreatingStory("stingy_taxes", "Impuestos para el tacaño", "mayor",
+                "El alcalde está muy descontento con la escasa recaudación de impuestos. Por otra parte la gente está muy descontenta con sus reformas de poca utilidad.", new List<string>() {
                 "Los impuestos recaudados este año han caído en mínimos históricos ¡Es una ruina!",
                 "Me niego a pensar que la gente no pueda contribuir ¡La gente está guardándose el dinero, seguro!",
                 "Tengo la sensación de que la gente todavía no confía en mí, ¡Después de todo lo que he hecho por ellos!",
@@ -790,7 +796,8 @@ namespace CQM.Databases
             //STORY 7
             // =============================================================================================
 
-            StartCreatingStory("crazy_cows", "Las vacas locas", new List<string>() {
+            StartCreatingStory("crazy_cows", "Las vacas locas", "meri",
+                "Las vacas de Meri se han transformado parcialmente en cabras tras ingerir un pienso especial. Quiere que recuperen su estado original.", new List<string>() {
                 "¡Mis vacas se han vuelto locas! ¡Son como cabras!",
                 "Lo digo literalmente, mis vacas ahora tienen complejo de cabras.",
                 "Se suponía que el pienso especial de Johnny las iba a ayudar a atravesar montañas con facilidad.",
@@ -903,13 +910,16 @@ namespace CQM.Databases
             }
         }
 
-        public void StartCreatingStory(string idName, string title, List<string> introductionDialogue)
+        public void StartCreatingStory(string idName, string title, string questGiver, string description, List<string> introductionDialogue)
         {
             m_StoryData = new StoryData();
             m_StoryData.m_ID = new ID(idName);
 
             m_StoryData.m_Title = title;
             m_StoryData.m_IntroductionDialogue = introductionDialogue;
+
+            m_StoryData.m_QuestGiver = questGiver;
+            m_StoryData.m_Description = description;
         }
 
         public void StartStoryBranch()

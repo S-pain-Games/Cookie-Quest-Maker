@@ -35,6 +35,10 @@ namespace CQM.Components
         public ID m_ID;
         public string m_Title = "";
         public List<string> m_IntroductionDialogue = new List<string>();
+        public string m_QuestGiver = "";
+        public string m_Description = "";
+
+
         public List<BranchOption> m_BranchOptions = new List<BranchOption>();
 
         // We cache all the targets on build
