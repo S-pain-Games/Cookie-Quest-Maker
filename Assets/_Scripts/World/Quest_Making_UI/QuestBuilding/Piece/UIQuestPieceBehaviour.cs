@@ -37,15 +37,21 @@ namespace CQM.UI.QuestMakingTable
 
         public void Initialize(Canvas canvas, UIQuestPieceComponent uiData, QuestPieceFunctionalComponent piece)
         {
-            _draggable = GetComponent<UIDraggable>();
-            _pressable = GetComponent<UIPressable>();
-
             _canvas = canvas;
             _raycaster = canvas.GetComponent<GraphicRaycaster>();
             Piece = piece;
             _draggable.Initialize(canvas);
             _image.sprite = uiData.m_QuestBuildingSprite;
+        }
 
+        private void Awake()
+        {
+            _draggable = GetComponent<UIDraggable>();
+            _pressable = GetComponent<UIPressable>();
+        }
+
+        private void OnEnable()
+        {
             _draggable.OnBeginDragEvent += TryToUnsocket;
             _draggable.OnEndDragEvent += TryToFitInSocket;
             _pressable.OnPointerDownEvent += OnSelectedHandle;

@@ -18,6 +18,9 @@ namespace CQM.UI.QuestMakingTable
         public event Action<QuestPieceFunctionalComponent> OnRemoveQuestPiece;
         public event Action OnFinishQuest;
 
+        QuestMakerTableState _state;
+        private ID _previousStoryID;
+
         public Transform pieceSpawnPosition;
         [SerializeField] private Button _finishQuestButton;
         [SerializeField] private Button _exitButton;
@@ -67,8 +70,15 @@ namespace CQM.UI.QuestMakingTable
             _finishQuestButton.onClick.AddListener(OnFinishQuestButtonClicked);
             _exitButton.onClick.AddListener(OnExitButton);
             _openStorageButton.onClick.AddListener(OnOpenStorageButton);
-        }
 
+
+            // Clear all the pieces only if a different story has been selected
+            if (_previousStoryID != _state.m_SelectedStoryID)
+            {
+                ClearAllPieces();
+            }
+            _previousStoryID = _state.m_SelectedStoryID;
+        }
 
         private void OnDisable()
         {
@@ -78,7 +88,12 @@ namespace CQM.UI.QuestMakingTable
             _openStorageButton.onClick.RemoveListener(OnOpenStorageButton);
         }
 
-        public void SetCanvas(Canvas canvas) => _canvas = canvas;
+
+        public void Initialize(QuestMakerTableState state, Canvas canvas)
+        {
+            _state = state;
+            _canvas = canvas;
+        }
 
         private void UnregisterPiecesAndSocketsEvents()
         {

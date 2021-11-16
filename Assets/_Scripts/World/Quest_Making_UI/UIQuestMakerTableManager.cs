@@ -11,7 +11,7 @@ namespace CQM.UI.QuestMakingTable
     // and also communication between those 2
     public class UIQuestMakerTableManager : MonoBehaviour
     {
-        private QuestMakerTableState m_State = new QuestMakerTableState();
+        [SerializeField] private QuestMakerTableState m_State = new QuestMakerTableState();
 
         [SerializeField] private Canvas _canvas;
 
@@ -31,7 +31,7 @@ namespace CQM.UI.QuestMakingTable
 
             _pieceStorage.Initialize(m_State);
 
-            _questBuilding.SetCanvas(_canvas);
+            _questBuilding.Initialize(m_State, _canvas);
         }
 
         private void OnEnable()
@@ -46,7 +46,7 @@ namespace CQM.UI.QuestMakingTable
             _pieceStorage.OnExit += EnableQuestBuilding;
 
             _storySelection.OnStorySelected += StorySelection_OnStorySelected;
-            _storySelection.OnExit += ExitTable;
+            _storySelection.OnExit += ExitTableHandle;
 
             EnableStorySelection();
         }
@@ -63,7 +63,7 @@ namespace CQM.UI.QuestMakingTable
             _pieceStorage.OnExit -= EnableQuestBuilding;
 
             _storySelection.OnStorySelected -= StorySelection_OnStorySelected;
-            _storySelection.OnExit -= ExitTable;
+            _storySelection.OnExit -= ExitTableHandle;
         }
 
 
@@ -77,11 +77,13 @@ namespace CQM.UI.QuestMakingTable
 
         private void RemovePieceFromQuestHandle(QuestPieceFunctionalComponent piece)
         {
+            m_State.m_PiecesInUse.Remove(piece.m_ID);
             _questMakingSys.RemovePiece(piece);
         }
 
         private void AddPieceToQuestHandle(QuestPieceFunctionalComponent piece)
         {
+            m_State.m_PiecesInUse.Add(piece.m_ID);
             _questMakingSys.AddPiece(piece);
         }
 
@@ -94,7 +96,7 @@ namespace CQM.UI.QuestMakingTable
             }
         }
 
-        private void ExitTable()
+        private void ExitTableHandle()
         {
             _toggleQuestMakingUI.Invoke();
         }
@@ -110,7 +112,6 @@ namespace CQM.UI.QuestMakingTable
 
         public void EnableStorySelection()
         {
-            _questBuilding.ClearAllPieces();
             _questBuilding.gameObject.SetActive(false);
             _storySelection.gameObject.SetActive(true);
         }
@@ -129,8 +130,11 @@ namespace CQM.UI.QuestMakingTable
         }
     }
 
+
+    [System.Serializable]
     public class QuestMakerTableState
     {
         public ID m_SelectedStoryID;
+        public List<ID> m_PiecesInUse = new List<ID>();
     }
 }
