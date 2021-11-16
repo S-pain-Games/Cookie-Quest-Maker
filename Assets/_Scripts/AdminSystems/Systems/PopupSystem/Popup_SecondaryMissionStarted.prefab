@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3051747195124859968}
   - component: {fileID: 3051747195124859969}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Mission_Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,10 +92,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 56.2
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 3051747195762855826}
   - component: {fileID: 3051747195762855827}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Popup_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 19492652e75c0e24bb1a0b5d9c0bf37c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e368de3cdb12c134dade8830510bc757, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -218,9 +218,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3051747196200662066}
-  - component: {fileID: 786294446373861161}
+  - component: {fileID: 8528304752258417}
   m_Layer: 5
-  m_Name: Popup
+  m_Name: Popup_SecondaryMissionStarted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -247,7 +247,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &786294446373861161
+--- !u!114 &8528304752258417
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3051747196200662067}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b78b4986fd39d3846bdf61eea1eddebb, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e0d03be7f480cd40a079de9cf82ae4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_textMesh: {fileID: 3051747195124859969}

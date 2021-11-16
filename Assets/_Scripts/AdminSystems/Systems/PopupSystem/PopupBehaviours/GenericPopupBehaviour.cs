@@ -1,13 +1,14 @@
-﻿using System.Collections;
-using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
+using UnityEngine;
 
-public class PopupBehaviour : MonoBehaviour
+public class GenericPopupBehaviour : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI m_textMesh;
 
-    public void Initialize(PopupData popData)
+    public void Initialize(PopupData_GenericPopup popData)
     {
         m_textMesh.text = popData.m_Text;
         StartCoroutine(Lifetime(popData.m_TimeAlive));

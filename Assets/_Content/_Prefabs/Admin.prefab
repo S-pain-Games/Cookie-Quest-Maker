@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2041105134198296794}
   - component: {fileID: 7085979173324703691}
   - component: {fileID: 585195714406842495}
+  - component: {fileID: 68600190}
   m_Layer: 0
   m_Name: Admin
   m_TagString: Untagged
@@ -81,9 +82,7 @@ MonoBehaviour:
   m_IngredientsComponents:
     m_ComponentsList: []
   m_GameState: {fileID: 585195714406842495}
-  m_Popups:
-    m_InstantiationTransform: {fileID: 0}
-    m_PopupPrefab: {fileID: 3051747196200662067, guid: ea922bc99ae428843ba685267cf72fb6, type: 3}
+  m_Popups: {fileID: 68600190}
   m_Cameras:
     m_MainCam: {fileID: 0}
   m_NewspaperRefs: {fileID: 0}
@@ -138,6 +137,22 @@ MonoBehaviour:
   m_MainMenu: {fileID: 0}
   m_CookieMaking: {fileID: 0}
   m_BakeryNight: {fileID: 0}
+--- !u!114 &68600190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539d590cd79a0e548a2bfdac3acbd9e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InstantiationTransform: {fileID: 0}
+  m_PrimaryMissionPrefab: {fileID: 3051747196200662067, guid: ea922bc99ae428843ba685267cf72fb6, type: 3}
+  m_SecondaryMissionPrefab: {fileID: 3051747196200662067, guid: d6b33dc6a73388a42830ecf9dbb2c411, type: 3}
+  m_GenericPrefab: {fileID: 3051747196200662067, guid: a5afa862d5b7d9a409e606879d337cd1, type: 3}
 --- !u!1001 &6330534342015407443
 PrefabInstance:
   m_ObjectHideFlags: 0
