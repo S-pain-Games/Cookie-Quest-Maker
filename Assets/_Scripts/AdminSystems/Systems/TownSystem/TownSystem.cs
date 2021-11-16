@@ -1,5 +1,4 @@
 ﻿using CQM.Components;
-using CQM.Databases;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -57,7 +56,7 @@ namespace CQM.Systems
 }
 
 
-namespace CQM.Databases
+namespace CQM.Components
 {
     [SerializeField]
     public class Singleton_TownComponent

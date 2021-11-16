@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 
-public class OpenNewspaperButton : MonoBehaviour
+public class OpenTownUIButton : MonoBehaviour
 {
     private Button _button;
 
@@ -11,7 +13,7 @@ public class OpenNewspaperButton : MonoBehaviour
     private void Awake()
     {
         _button = GetComponent<Button>();
-        _openNewspaperCmd = Admin.Global.EventSystem.GetCommandByName<EventVoid>("ui_sys", "toggle_newspaper");
+        _openNewspaperCmd = Admin.Global.EventSystem.GetCommandByName<EventVoid>("ui_sys", "toggle_town");
     }
 
     private void OnEnable()

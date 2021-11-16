@@ -31,6 +31,7 @@ namespace CQM.Systems
 
             commands.AddEvent(new ID("toggle_newspaper")).OnInvoked += ToggleNewspaper;
             commands.AddEvent(new ID("toggle_quest_making")).OnInvoked += ShowQuestMaking;
+            commands.AddEvent(new ID("toggle_town")).OnInvoked += ShowTown;
         }
 
         private void ToggleNewspaper()
@@ -45,6 +46,21 @@ namespace CQM.Systems
         private void ShowQuestMaking()
         {
             var ui = _references.m_QuestMakingUi;
+            if (ui.activeSelf)
+            {
+                ui.SetActive(false);
+                _enableCharacterMovementCmd.Invoke();
+            }
+            else
+            {
+                _disableCharacterMovementCmd.Invoke();
+                ui.SetActive(true);
+            }
+        }
+
+        private void ShowTown()
+        {
+            var ui = _references.m_TownUi;
             if (ui.activeSelf)
             {
                 ui.SetActive(false);
