@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.UI;
 
 public class DialogueSystem : ISystemEvents
 {
@@ -48,6 +49,7 @@ public class DialogueSystem : ISystemEvents
 
 
         data.m_CaracterName.text = _characters[characterID].m_FullName;
+        data.m_CharacterImage.sprite = _characters[characterID].m_CharacterSprite;
         data.m_Container.StartCoroutine(ShowText(data.m_CurrentDialogueLines[data.m_CurrentLineIndex]));
         data.m_CallbackOnDialogueEnd = callback;
 
@@ -124,6 +126,8 @@ public class Singleton_DialogueReferencesComponent
 
     [HideInInspector] public int m_CurrentLineIndex = 0;
     public Action m_CallbackOnDialogueEnd;
+
+    public Image m_CharacterImage;
 }
 
 [Serializable]

@@ -9,4 +9,5 @@ public class CharacterComponent
     public string m_FullName;
     public string m_ShortName;
     public string m_Description;
+    public Sprite m_CharacterSprite;
 }
