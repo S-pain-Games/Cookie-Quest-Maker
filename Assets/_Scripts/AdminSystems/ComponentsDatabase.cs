@@ -56,23 +56,10 @@ namespace CQM.Databases
         public Singleton_LocalizationComponent m_LocalizationComponent = new Singleton_LocalizationComponent();
         public Singleton_AudioDataComponent m_AudioDataComponent;
         public Singleton_AudioClipsDataComponent m_AudioClipsComponent;
-
+        public Singleton_StoriesStateComponent m_StoriesStateComponent = new Singleton_StoriesStateComponent();
 
         [Header("Non-Component Misc Data")]
         public ComponentsContainer<QuestDataComponent> m_CompletedQuestData = new ComponentsContainer<QuestDataComponent>();
-
-
-
-        // AAAALL of this should be a singleton component
-        // IDs of the stories in the order in which they will be started
-        public List<ID> m_MainStoriesToStartOrder = new List<ID>();
-        public List<ID> m_SecondaryStories = new List<ID>();
-        public List<ID> m_OngoingStories = new List<ID>();
-        // Stories which were completed with a quest but the player hasnt seen the result yet
-        // At the start of the day the system that handles the spawning of the NPCs must assign them 
-        public List<ID> m_CompletedStories = new List<ID>();
-        // Stories that have been completely finished
-        public List<ID> m_FinalizedStories = new List<ID>();
 
 
         private Dictionary<Type, object> m_ComponentContainers = new Dictionary<Type, object>();

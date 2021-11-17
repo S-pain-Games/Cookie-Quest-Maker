@@ -38,7 +38,7 @@ namespace CQM.UI.QuestMakingTable
 
         private void Awake()
         {
-            _ongoingStories = Admin.Global.Components.m_OngoingStories;
+            _ongoingStories = Admin.Global.Components.m_StoriesStateComponent.m_OngoingStories;
             _storyUIComponents = Admin.Global.Components.GetComponentContainer<StoryUIDataComponent>();
         }
 

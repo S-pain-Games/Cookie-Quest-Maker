@@ -26,16 +26,13 @@ public class StorySystem : ISystemEvents
 
 
     public void Initialize(ComponentsContainer<StoryInfoComponent> storiesInfo,
-                           List<ID> ongoingStories,
-                           List<ID> storiesToStart,
-                           List<ID> completedStories,
-                           List<ID> finalizedStories)
+                           Singleton_StoriesStateComponent storiesState)
     {
         m_StoriesInfo = storiesInfo;
-        _ongoingStories = ongoingStories;
-        _storiesToStart = storiesToStart;
-        _completedStories = completedStories;
-        _finalizedStories = finalizedStories;
+        _ongoingStories = storiesState.m_OngoingStories;
+        _storiesToStart = storiesState.m_MainStoriesToStartOrder;
+        _completedStories = storiesState.m_CompletedStories;
+        _finalizedStories = storiesState.m_FinalizedStories;
     }
 
     public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
