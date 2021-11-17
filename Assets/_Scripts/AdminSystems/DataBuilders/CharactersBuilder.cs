@@ -77,6 +77,7 @@ public class CharactersBuilder : MonoBehaviour
         c.m_FullName = longName;
 
         c.m_NewspaperSprite = _characterReferences.GetNewspaperSprite(new ID(idName));
+        c.m_CharacterWorldPrefab = _characterReferences.GetWorldPrefab(new ID(idName));
         d.m_CharacterImg = _characterReferences.GetDialogueSprite(new ID(idName));
 
         d.m_ID = new ID(idName);

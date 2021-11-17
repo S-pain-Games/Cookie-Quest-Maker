@@ -12,4 +12,5 @@ public class CharacterComponent
 
     // This should be in other component but wachugonadu no time
     public Sprite m_NewspaperSprite;
+    public GameObject m_CharacterWorldPrefab;
 }

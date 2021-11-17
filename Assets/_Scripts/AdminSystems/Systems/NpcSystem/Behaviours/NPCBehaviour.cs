@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NPCBehaviour : MonoBehaviour, IInteractableEntity
 {
+    [SerializeField] private GameObject m_NpcCharacterGameobject;
+
     public NPCBehaviourData m_NpcData = new NPCBehaviourData();
 
     private bool m_Interacting = false;
@@ -18,6 +20,16 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
         _showDialogueCmd = evtSys.GetCommandByName<Event<ShowDialogueEvtArgs>>("dialogue_sys", "show_dialogue");
         _startStoryCmd = evtSys.GetCommandByName<Event<ID>>("story_sys", "start_story");
         _finalizeStoryCmd = evtSys.GetCommandByName<Event<ID>>("story_sys", "finalize_story");
+    }
+
+    private void OnEnable()
+    {
+        Destroy(m_NpcCharacterGameobject);
+        ID charID = m_NpcData.m_CharacterID;
+        var cComp = Admin.Global.Components.GetComponentContainer<CharacterComponent>();
+        var comp = cComp.GetComponentByID(charID);
+        var prefab = comp.m_CharacterWorldPrefab;
+        m_NpcCharacterGameobject = Instantiate(prefab, transform);
     }
 
     public void OnInteract()

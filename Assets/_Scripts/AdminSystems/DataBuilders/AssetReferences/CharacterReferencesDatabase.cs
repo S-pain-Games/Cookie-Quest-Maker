@@ -33,10 +33,16 @@ namespace CQM.AssetReferences
             return m_ReferencesMap[id].m_NewspaperSprite;
         }
 
+        public GameObject GetWorldPrefab(ID id)
+        {
+            return m_ReferencesMap[id].m_CharacterWorldPrefab;
+        }
+
         [System.Serializable]
         public class CharacterReference
         {
             public string m_IDName;
+            public GameObject m_CharacterWorldPrefab;
             public Sprite m_DialogueSprite;
             public Sprite m_NewspaperSprite;
         }

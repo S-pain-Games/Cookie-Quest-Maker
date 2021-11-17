@@ -13,8 +13,8 @@ public class CharacterReferencesPropDrawer : PropertyDrawer
         Rect p = position;
         p.height = sLine;
         EditorGUI.PropertyField(p, property.FindPropertyRelative("m_IDName"));
-        //p.y += sLine + 1f;
-        //EditorGUI.PropertyField(p, property.FindPropertyRelative("m_QuestBuildingPrefab"));
+        p.y += sLine + 1f;
+        EditorGUI.PropertyField(p, property.FindPropertyRelative("m_CharacterWorldPrefab"));
         p.y += sLine + 1f;
         p.height = sLine * 9;
         p.width /= 2.0f;
@@ -35,6 +35,6 @@ public class CharacterReferencesPropDrawer : PropertyDrawer
 
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-        return EditorGUIUtility.singleLineHeight * 11 + 2f;
+        return EditorGUIUtility.singleLineHeight * 12 + 2f;
     }
 }

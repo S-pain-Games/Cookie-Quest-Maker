@@ -16,7 +16,8 @@ namespace CQM.Systems
     public class NpcSystem : ISystemEvents
     {
         private ComponentsContainer<StoryInfoComponent> _storyInfoComponents;
-        private List<ID> _storiesToStart;
+        private List<ID> _mainStoriesToStartOrder;
+        private List<ID> _secondaryStories;
         private List<ID> _completedStories;
         private Singleton_NpcReferencesComponent _npcReferencesComponent;
 
@@ -24,12 +25,14 @@ namespace CQM.Systems
         public void Initialize(Singleton_NpcReferencesComponent npcReferencesComponent,
                                ComponentsContainer<StoryInfoComponent> storyInfoComponents,
                                List<ID> storiesToStart,
+                               List<ID> secondaryStories,
                                List<ID> completedStories,
                                GameEventSystem evtSys)
         {
             _storyInfoComponents = storyInfoComponents;
             _npcReferencesComponent = npcReferencesComponent;
-            _storiesToStart = storiesToStart;
+            _mainStoriesToStartOrder = storiesToStart;
+            _secondaryStories = secondaryStories;
             _completedStories = completedStories;
 
             evtSys.GetCallbackByName<EventVoid>("day_sys", "night_begin").OnInvoked += PopulateDeitiesData;
@@ -67,6 +70,7 @@ namespace CQM.Systems
             {
                 NPCBehaviourData npcData = _npcReferencesComponent.m_NpcBehaviour[i].m_NpcData;
 
+                npcData.m_CharacterID = new ID("meri");
                 npcData.m_AlreadySpokenTo = false;
                 npcData.m_Dialogue.Clear();
 
@@ -97,7 +101,10 @@ namespace CQM.Systems
                 // only if there are new stories to append
                 if (storiesToStart.Count > 0)
                 {
-                    var introductionDialogue = _storyInfoComponents[storiesToStart[0]].m_StoryData.m_IntroductionDialogue;
+                    StoryInfoComponent s = _storyInfoComponents[storiesToStart[0]];
+                    npcData.m_CharacterID = new ID(s.m_StoryData.m_QuestGiver);
+
+                    var introductionDialogue = s.m_StoryData.m_IntroductionDialogue;
                     for (int j = 0; j < introductionDialogue.Count; j++)
                     {
                         npcData.m_Dialogue.Add(introductionDialogue[j]);
@@ -110,7 +117,6 @@ namespace CQM.Systems
                 else
                 {
                     npcData.m_HasToStartAStory = false;
-                    //_showPopupCmd.Invoke(new PopupData { m_Text = "You have completed all stories, thank you for playing the alpha", m_TimeAlive = 999999999 });
                 }
             }
         }
@@ -151,7 +157,7 @@ namespace CQM.Systems
 
         private List<ID> SelectStoriesThatShouldBeStarted(int maxStoriesToSelect)
         {
-            var storiesToStartIds = _storiesToStart;
+            var storiesToStartIds = _mainStoriesToStartOrder;
             int availableStoriesToStart = Mathf.Min(storiesToStartIds.Count, maxStoriesToSelect);
             List<ID> sStory = new List<ID>();
             for (int j = 0; j < availableStoriesToStart; j++)
@@ -181,6 +187,7 @@ namespace CQM.Components
 {
     public class NPCBehaviourData
     {
+        public ID m_CharacterID;
         // Dialogue lines that the npc has to say
         public List<string> m_Dialogue = new List<string>();
         // The ID of the story that will start when the player interacts with the NPC

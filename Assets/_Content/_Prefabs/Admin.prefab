@@ -93,6 +93,8 @@ MonoBehaviour:
   m_NpcReferencesComponent:
     m_NpcBehaviour:
     - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     m_Evith: {fileID: 0}
     m_Nu: {fileID: 0}
   m_CalendarComponent:
@@ -120,7 +122,8 @@ MonoBehaviour:
   m_AudioClipsComponent: {fileID: 11400000, guid: 6cc4b39f34e60f94b8a39ec0b52f6263, type: 2}
   m_CompletedQuestData:
     m_ComponentsList: []
-  m_StoriesToStart: []
+  m_MainStoriesToStartOrder: []
+  m_SecondaryStories: []
   m_OngoingStories: []
   m_CompletedStories: []
   m_FinalizedStories: []
