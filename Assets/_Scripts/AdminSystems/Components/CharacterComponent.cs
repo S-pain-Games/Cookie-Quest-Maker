@@ -9,4 +9,7 @@ public class CharacterComponent
     public string m_FullName;
     public string m_ShortName;
     public string m_Description;
+
+    // This should be in other component but wachugonadu no time
+    public Sprite m_NewspaperSprite;
 }

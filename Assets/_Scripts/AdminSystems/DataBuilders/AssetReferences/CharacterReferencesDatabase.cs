@@ -28,11 +28,17 @@ namespace CQM.AssetReferences
             return m_ReferencesMap[id].m_DialogueSprite;
         }
 
+        public Sprite GetNewspaperSprite(ID id)
+        {
+            return m_ReferencesMap[id].m_NewspaperSprite;
+        }
+
         [System.Serializable]
         public class CharacterReference
         {
             public string m_IDName;
             public Sprite m_DialogueSprite;
+            public Sprite m_NewspaperSprite;
         }
     }
 }

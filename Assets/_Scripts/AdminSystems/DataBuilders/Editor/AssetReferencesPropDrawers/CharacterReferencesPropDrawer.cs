@@ -13,12 +13,14 @@ public class CharacterReferencesPropDrawer : PropertyDrawer
         Rect p = position;
         p.height = sLine;
         EditorGUI.PropertyField(p, property.FindPropertyRelative("m_IDName"));
-
+        //p.y += sLine + 1f;
+        //EditorGUI.PropertyField(p, property.FindPropertyRelative("m_QuestBuildingPrefab"));
         p.y += sLine + 1f;
         p.height = sLine * 9;
         p.width /= 2.0f;
-        p.x += p.width / 2.0f;
         EditorGUI.ObjectField(p, property.FindPropertyRelative("m_DialogueSprite"), typeof(Sprite), GUIContent.none);
+        p.x += p.width;
+        EditorGUI.ObjectField(p, property.FindPropertyRelative("m_NewspaperSprite"), typeof(Sprite), GUIContent.none);
 
         p.y += sLine * 9;
         p.height = sLine;
@@ -26,7 +28,9 @@ public class CharacterReferencesPropDrawer : PropertyDrawer
         var style = new GUIStyle { alignment = TextAnchor.MiddleCenter };
         style.normal.textColor = Color.white;
         style.fontStyle = FontStyle.Bold;
-        EditorGUI.LabelField(p, "Dialogue Character Sprite", style);
+        EditorGUI.LabelField(p, "Newspaper Sprite", style);
+        p.x -= p.width;
+        EditorGUI.LabelField(p, "Dialogue Sprite", style);
     }
 
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)

@@ -76,6 +76,7 @@ public class CharactersBuilder : MonoBehaviour
         c.m_ShortName = shortName;
         c.m_FullName = longName;
 
+        c.m_NewspaperSprite = _characterReferences.GetNewspaperSprite(new ID(idName));
         d.m_CharacterImg = _characterReferences.GetDialogueSprite(new ID(idName));
 
         d.m_ID = new ID(idName);

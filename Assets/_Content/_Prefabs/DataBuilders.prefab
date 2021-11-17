@@ -2364,6 +2364,7 @@ MonoBehaviour:
     m_FullName: Hio
     m_ShortName: Hio
     m_Description: She is the owner of the town's farm
+    m_NewspaperSprite: {fileID: 21300000, guid: 34e5756d697846b4bb3a6ffdb0c2cb74, type: 3}
   - m_ID:
       m_NameID: nu
       m_ID: -1991483173
@@ -2371,6 +2372,7 @@ MonoBehaviour:
     m_FullName: Nu
     m_ShortName: Nu Nu
     m_Description: She is the owner of the town's farm
+    m_NewspaperSprite: {fileID: 0}
   - m_ID:
       m_NameID: evith
       m_ID: 573504420
@@ -2378,6 +2380,7 @@ MonoBehaviour:
     m_FullName: Evith
     m_ShortName: Evith
     m_Description: She is the owner of the town's farm
+    m_NewspaperSprite: {fileID: 0}
   - m_ID:
       m_NameID: meri
       m_ID: -918260377
@@ -2385,6 +2388,7 @@ MonoBehaviour:
     m_FullName: Meri la Leches
     m_ShortName: Meri
     m_Description: She is the owner of the town's farm
+    m_NewspaperSprite: {fileID: 21300000, guid: bedab464ddb364b4aa124ef597b4d78a, type: 3}
   - m_ID:
       m_NameID: mayor
       m_ID: 996742298
@@ -2392,6 +2396,7 @@ MonoBehaviour:
     m_FullName: Alcalde, Antonio
     m_ShortName: Alcalde
     m_Description: She is the owner of the town's farm
+    m_NewspaperSprite: {fileID: 21300000, guid: 0de9e38e070a379428cde1f51f6085f4, type: 3}
   - m_ID:
       m_NameID: miss_chocolate
       m_ID: -370492881
@@ -2399,6 +2404,7 @@ MonoBehaviour:
     m_FullName: Miss Chocolate
     m_ShortName: Ms.Chocolate
     m_Description: She is the owner of the town's farm
+    m_NewspaperSprite: {fileID: 21300000, guid: 6b4b0b9042011be4192a2e28f4d991fd, type: 3}
   - m_ID:
       m_NameID: canela
       m_ID: -619351516
@@ -2406,6 +2412,7 @@ MonoBehaviour:
     m_FullName: Canela N Rama
     m_ShortName: Cane
     m_Description: She is the owner of the town's farm
+    m_NewspaperSprite: {fileID: 21300000, guid: 3d2a3106a6ba6d0439e9e8835468edce, type: 3}
   - m_ID:
       m_NameID: johny_setas
       m_ID: -840848411
@@ -2413,6 +2420,7 @@ MonoBehaviour:
     m_FullName: Johny, el setas
     m_ShortName: Johny
     m_Description: She is the owner of the town's farm
+    m_NewspaperSprite: {fileID: 21300000, guid: 6c1a0fdfc124374438e23145d2b84edc, type: 3}
   - m_ID:
       m_NameID: mantecas
       m_ID: 2085496002
@@ -2420,6 +2428,7 @@ MonoBehaviour:
     m_FullName: Juanjo, el mantecas
     m_ShortName: Juanjo
     m_Description: She is the owner of the town's farm
+    m_NewspaperSprite: {fileID: 21300000, guid: 57b59e78428947c4c821038127ff95a3, type: 3}
   m_CharacterDialogueList:
   - m_ID:
       m_NameID: hio
@@ -2544,6 +2553,51 @@ MonoBehaviour:
   - m_ID:
       m_NameID: mamarrachus
       m_ID: 689543378
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: hio
+      m_ID: 339799166
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: nu
+      m_ID: -1991483173
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: evith
+      m_ID: 573504420
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: meri
+      m_ID: -918260377
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: mayor
+      m_ID: 996742298
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: miss_chocolate
+      m_ID: -370492881
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: canela
+      m_ID: -619351516
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: johny_setas
+      m_ID: -840848411
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: mantecas
+      m_ID: 2085496002
       m_Initialized: 1
     m_Prefab: {fileID: 0}
   - m_ID:
