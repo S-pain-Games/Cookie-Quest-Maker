@@ -4,45 +4,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 namespace CQM.UI.QuestMakingTable
 {
     public class UIPieceTypeSelectionMenu : MonoBehaviour
     {
-        public event Action<QuestPieceFunctionalComponent.PieceType> OnPieceTypeSelected;
+        [SerializeField] private List<UIPieceTypeSelectionButton> m_Buttons = new List<UIPieceTypeSelectionButton>();
+        private UIPieceStorageManager _storage;
+        private QuestMakerTableState _state;
 
-        [SerializeField]
-        private List<UIPieceTypeSelectionButton> m_Buttons = new List<UIPieceTypeSelectionButton>();
-
-        private void OnEnable()
+        public void Initialize(QuestMakerTableState state, UIPieceStorageManager storage)
         {
+            _state = state;
+            _storage = storage;
+        }
+
+        private void Awake()
+        {
+            // We never unsubscribe from the events, this *could* be bad
             for (int i = 0; i < m_Buttons.Count; i++)
             {
-                m_Buttons[i].OnPieceTypeSelected += ButtonClickedHandle;
+                m_Buttons[i].OnPieceTypeSelected += SelectPieceType;
             }
         }
 
-        private void OnDisable()
+        public void SelectPieceType(QuestPieceFunctionalComponent.PieceType type)
         {
-            for (int i = 0; i < m_Buttons.Count; i++)
-            {
-                m_Buttons[i].OnPieceTypeSelected -= ButtonClickedHandle;
-            }
+            UnselectAllButtons();
+            SelectButtonOfType(type);
+
+            _storage.SelectPieceType(type);
         }
 
-        private void ButtonClickedHandle(QuestPieceFunctionalComponent.PieceType type)
+        private void UnselectAllButtons()
         {
             for (int i = 0; i < m_Buttons.Count; i++)
-            {
                 m_Buttons[i].SetAsUnselected();
-            }
-
-            var b = m_Buttons.Find((b) => b.PieceType == type);
-            b.SetAsSelected();
-
-            OnPieceTypeSelected?.Invoke(type);
         }
 
-        public void SetSelectedType(QuestPieceFunctionalComponent.PieceType m_SelectedType)
+        private void SelectButtonOfType(QuestPieceFunctionalComponent.PieceType m_SelectedType)
         {
             var b = m_Buttons.Find((b) => b.PieceType == m_SelectedType);
             b.SetAsSelected();

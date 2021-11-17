@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _usePieceButton: {fileID: 2758961693802839259}
-  _uiSelectedPieceView: {fileID: 7133834477274103565}
-  elementPrefab: {fileID: 4268874464596314010, guid: ceaaf49e13e315840bb7dfeabeb14893, type: 3}
+  m_SelectedPieceStatsView: {fileID: 7133834477274103565}
+  _piecePrefab: {fileID: 4268874464596314010, guid: ceaaf49e13e315840bb7dfeabeb14893, type: 3}
 --- !u!1 &228332889755444416
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,7 +1212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a92cc33f252af4990d08f1b342cb87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SelectedType: 0
+  m_SelectedType: 1
   _pieceFilteringMenu: {fileID: 8850013520676955522}
   _pieceSelectionMenu: {fileID: 2668796055484338727}
   _exitButton: {fileID: 6492957020231161710}

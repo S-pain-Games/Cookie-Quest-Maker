@@ -12,51 +12,45 @@ namespace CQM.UI.QuestMakingTable
     // Handles the UI that shows all the available pieces of the selected type
     public class UIPieceSelectionMenu : MonoBehaviour
     {
-        // Use Piece Handling
-        public event Action<ID> OnUsePiece;
-
         private QuestMakerTableState _state;
+        private UIPieceStorageManager _storage;
         private ID m_SelectedPieceID;
 
         private bool m_IsAPieceSelected;
         [SerializeField] private Button _usePieceButton;
-        [SerializeField] private UISelectedPieceView _uiSelectedPieceView;
+        [SerializeField] private UISelectedPieceView m_SelectedPieceStatsView;
 
         // Managing Piece UI Elements variables
-        [SerializeField] private GameObject elementPrefab;
-        private List<UIStorageElement> m_Elements = new List<UIStorageElement>();
+        [SerializeField] private GameObject _piecePrefab;
+        private List<UIStorageElement> m_SelectablePiecesOfType = new List<UIStorageElement>();
 
 
         private void OnEnable()
         {
-            ClearSelectablePieces();
-            _usePieceButton.onClick.AddListener(UsePieceButton_OnClick);
+            _usePieceButton.onClick.AddListener(ConfirmPieceSelection);
+            UnselectPiece();
+            SelectFirstPieceOfType();
         }
 
         private void OnDisable()
         {
-            _usePieceButton.onClick.RemoveListener(UsePieceButton_OnClick);
+            _usePieceButton.onClick.RemoveListener(ConfirmPieceSelection);
         }
 
-        public void Initialize(QuestMakerTableState state)
+        public void Initialize(QuestMakerTableState state, UIPieceStorageManager storage)
         {
             _state = state;
+            _storage = storage;
         }
 
-        private void ClearSelectablePieces()
-        {
-            m_IsAPieceSelected = false;
-            _uiSelectedPieceView.Clear();
-        }
-
-        public void RefreshSelectablePieces(QuestPieceFunctionalComponent.PieceType pieceType)
+        public void ShowPiecesOfType(QuestPieceFunctionalComponent.PieceType pieceType)
         {
             // Delete previous elements
-            for (int i = m_Elements.Count - 1; i >= 0; i--)
+            for (int i = m_SelectablePiecesOfType.Count - 1; i >= 0; i--)
             {
-                Destroy(m_Elements[i].gameObject);
+                Destroy(m_SelectablePiecesOfType[i].gameObject);
             }
-            m_Elements.Clear();
+            m_SelectablePiecesOfType.Clear();
 
             // Prepare start position for UI Pieces
             Vector3 pos = Vector3.zero;
@@ -88,27 +82,33 @@ namespace CQM.UI.QuestMakingTable
                     pos = AddPieceToUI(pos, piece);
                 }
             }
+
+            Vector3 AddPieceToUI(Vector3 pos, QuestPieceFunctionalComponent questPiece)
+            {
+                // Create and position corresponding elements in UI
+                pos += new Vector3(250, 0, 0);
+                var UIstorageElem = Instantiate(_piecePrefab, pos, Quaternion.identity, transform).GetComponent<UIStorageElement>();
+                UIstorageElem.transform.localPosition = pos;
+
+                // Initialize Element Data and Events
+                UIstorageElem.pieceID = questPiece.m_ID;
+                UIstorageElem.OnSelected += SelectPieceWithId;
+
+                UIQuestPieceComponent uiData = Admin.Global.Components.m_QuestPieceUIComponent[questPiece.m_ID];
+                // Initialize UI element with piece data
+                UIstorageElem.Build(uiData);
+                m_SelectablePiecesOfType.Add(UIstorageElem);
+                return pos;
+            }
         }
 
-        private Vector3 AddPieceToUI(Vector3 pos, QuestPieceFunctionalComponent questPiece)
+        public void UnselectPiece()
         {
-            // Create and position corresponding elements in UI
-            pos += new Vector3(250, 0, 0);
-            var UIstorageElem = Instantiate(elementPrefab, pos, Quaternion.identity, transform).GetComponent<UIStorageElement>();
-            UIstorageElem.transform.localPosition = pos;
-
-            // Initialize Element Data and Events
-            UIstorageElem.pieceID = questPiece.m_ID;
-            UIstorageElem.OnSelected += StoragePiece_OnClicked;
-
-            UIQuestPieceComponent uiData = Admin.Global.Components.m_QuestPieceUIComponent[questPiece.m_ID];
-            // Initialize UI element with piece data
-            UIstorageElem.Build(uiData);
-            m_Elements.Add(UIstorageElem);
-            return pos;
+            m_IsAPieceSelected = false;
+            m_SelectedPieceStatsView.Clear();
         }
 
-        private void StoragePiece_OnClicked(ID questPieceID)
+        private void SelectPieceWithId(ID questPieceID)
         {
             m_SelectedPieceID = questPieceID;
             m_IsAPieceSelected = true;
@@ -129,13 +129,20 @@ namespace CQM.UI.QuestMakingTable
             if (l != null)
                 harm = l.m_Value;
 
-            _uiSelectedPieceView.UpdateUI(UIPieceData.m_SimpleSprite, UIPieceData.m_Name, UIPieceData.m_Description, convince, help, harm);
+            m_SelectedPieceStatsView.UpdateUI(UIPieceData.m_SimpleSprite, UIPieceData.m_Name, UIPieceData.m_Description, convince, help, harm);
         }
 
-        public void UsePieceButton_OnClick()
+        public void SelectFirstPieceOfType()
+        {
+            if (m_SelectablePiecesOfType.Count == 0) return;
+            ID pieceID = m_SelectablePiecesOfType[0].pieceID;
+            SelectPieceWithId(pieceID);
+        }
+
+        public void ConfirmPieceSelection()
         {
             if (m_IsAPieceSelected)
-                OnUsePiece?.Invoke(m_SelectedPieceID);
+                _storage.SelectPieceFromStorage(m_SelectedPieceID);
         }
     }
 }

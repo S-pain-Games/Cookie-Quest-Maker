@@ -1,4 +1,5 @@
 using CQM.Components;
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -25,6 +26,7 @@ namespace CQM.UI.QuestMakingTable
             _button = GetComponent<Button>();
         }
 
+
         private void OnEnable()
         {
             _button.onClick.AddListener(OnClickHandle);
@@ -42,12 +44,14 @@ namespace CQM.UI.QuestMakingTable
 
         public void SetAsSelected()
         {
-            OnSelected?.Invoke();
+            transform.DOKill();
+            transform.DOScale(1.7f, 0.3f).OnComplete(() => transform.DOScale(1.5f, 0.3f).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo));
         }
 
         public void SetAsUnselected()
         {
-            OnUnselected?.Invoke();
+            transform.DOKill();
+            transform.DOScale(1.0f, 0.3f);
         }
     }
 }

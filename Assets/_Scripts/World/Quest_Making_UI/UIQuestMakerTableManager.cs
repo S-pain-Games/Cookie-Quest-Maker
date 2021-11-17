@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using CQM.Databases.UI;
 using CQM.Components;
 
 
@@ -30,7 +29,6 @@ namespace CQM.UI.QuestMakingTable
             _toggleQuestMakingUI = evtSys.GetCommandByName<EventVoid>("ui_sys", "toggle_quest_making");
 
             _pieceStorage.Initialize(m_State);
-
             _questBuilding.Initialize(m_State, _canvas);
         }
 
@@ -42,7 +40,7 @@ namespace CQM.UI.QuestMakingTable
             _questBuilding.OnExit += EnableStorySelection;
             _questBuilding.OnOpenStorage += EnablePieceStorage;
 
-            _pieceStorage.OnPickPiece += TakePieceOutOfStorage;
+            _pieceStorage.OnSelectPieceFromStorage += TakePieceOutOfStorage;
             _pieceStorage.OnExit += EnableQuestBuilding;
 
             _storySelection.OnStorySelected += SelectStory;
@@ -59,7 +57,7 @@ namespace CQM.UI.QuestMakingTable
             _questBuilding.OnExit -= EnableStorySelection;
             _questBuilding.OnOpenStorage -= EnablePieceStorage;
 
-            _pieceStorage.OnPickPiece -= TakePieceOutOfStorage;
+            _pieceStorage.OnSelectPieceFromStorage -= TakePieceOutOfStorage;
             _pieceStorage.OnExit -= EnableQuestBuilding;
 
             _storySelection.OnStorySelected -= SelectStory;
