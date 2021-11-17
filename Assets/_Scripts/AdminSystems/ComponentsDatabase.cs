@@ -54,6 +54,8 @@ namespace CQM.Databases
         public Singleton_InventoryComponent m_InventoryComponent;
 
         public Singleton_LocalizationComponent m_LocalizationComponent = new Singleton_LocalizationComponent();
+        public Singleton_AudioDataComponent m_AudioDataComponent;
+        public Singleton_AudioClipsDataComponent m_AudioClipsComponent;
 
 
         [Header("Non-Component Misc Data")]

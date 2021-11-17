@@ -20,7 +20,7 @@ public class Systems
     private NpcSystem m_NpcSystem = new NpcSystem();
     private PopupSystem m_PopupSystem = new PopupSystem();
     private CharacterSystem m_CharacterSystem = new CharacterSystem();
-    public InventorySystem m_InventorySystem = new InventorySystem();
+    private InventorySystem m_InventorySystem = new InventorySystem();
 
     private DaySystem m_DaySystem = new DaySystem();
     private TownSystem m_TownSystem = new TownSystem();
@@ -28,6 +28,7 @@ public class Systems
     private NewspaperSystem m_NewspaperSystem = new NewspaperSystem();
 
     private UISystem m_UISystem = new UISystem();
+    private AudioSystem m_AudioSystem = new AudioSystem();
 
 
     public void InitializeGameState(Singleton_GameStateComponent gameStateComp, GameStateSystem.Singleton_TransitionsComponent transitionsComp)
@@ -54,6 +55,7 @@ public class Systems
         m_NewspaperSystem.Initialize(d.m_NewspaperRefs, d.m_Newspaper, d.GetComponentContainer<StoryInfoComponent>());
         m_UISystem.Initialize(d.m_UIRefs);
         m_LocalizationSystem.Initialize(d.m_LocalizationComponent);
+        m_AudioSystem.Initialize(d.m_AudioDataComponent, d.m_AudioClipsComponent);
     }
 
     public List<ISystemEvents> GetSystemsEvents()
@@ -73,6 +75,7 @@ public class Systems
         systems.Add(m_ShopSystem); // NEW
         systems.Add(m_NewspaperSystem);
         systems.Add(m_UISystem);
+        systems.Add(m_AudioSystem);
 
         return systems;
     }

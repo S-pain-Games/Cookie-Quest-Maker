@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7085979173324703691}
   - component: {fileID: 585195714406842495}
   - component: {fileID: 68600190}
+  - component: {fileID: 6237327885706763189}
   m_Layer: 0
   m_Name: Admin
   m_TagString: Untagged
@@ -115,6 +116,8 @@ MonoBehaviour:
     m_UnlockedRecipes: []
     m_Pieces: []
     m_Ingredients: []
+  m_AudioDataComponent: {fileID: 6237327885706763189}
+  m_AudioClipsComponent: {fileID: 11400000, guid: 6cc4b39f34e60f94b8a39ec0b52f6263, type: 2}
   m_CompletedQuestData:
     m_ComponentsList: []
   m_StoriesToStart: []
@@ -153,6 +156,20 @@ MonoBehaviour:
   m_PrimaryMissionPrefab: {fileID: 3051747196200662067, guid: ea922bc99ae428843ba685267cf72fb6, type: 3}
   m_SecondaryMissionPrefab: {fileID: 3051747196200662067, guid: d6b33dc6a73388a42830ecf9dbb2c411, type: 3}
   m_GenericPrefab: {fileID: 3051747196200662067, guid: a5afa862d5b7d9a409e606879d337cd1, type: 3}
+--- !u!114 &6237327885706763189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041105134198296772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3ef52cbe94f5048bc5ff94de95696b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SoundEmitterPrefab: {fileID: 591865896501629337, guid: 272e5457d48245d4aa6a3e70aceaeb07, type: 3}
+  m_MusicEmitter: {fileID: 0}
 --- !u!1001 &6330534342015407443
 PrefabInstance:
   m_ObjectHideFlags: 0
