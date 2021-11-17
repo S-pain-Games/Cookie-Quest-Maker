@@ -894,6 +894,430 @@ namespace CQM.Databases
             AddStorySelectionUIData("Las vacas locas");
 
             FinishCreatingStory();
+
+            // =============================================================================================
+            //STORY 8
+            // =============================================================================================
+
+            StartCreatingStory("the_cake_was_not_a_lie", "La tarta no era mentira", "johnny",
+               "Johnny quiere participar en el próximo concurso de repostería. Piensa utilizar hongos que podrían poner en peligro el concurso.", new List<string>() {
+                "La Feria va a ser pronto, de normal no me suelen interesar esos eventos, son muy aburridos, colega.",
+                "Pero por lo visto este año va a hacer un concurso de repostería, eso de hacer tartas y tal, colega.",
+                "¡Pienso hacer la tarta más flipante que se haya visto, colega!",
+                "Tan solo necesito una Seta de la Pirueta, con ella los jueces darán saltos del sabor, colega.",
+                "Iré esta misma noche a buscar algunas, espero tener suerte, porque son muy raras, colega."
+               });
+
+            CreateRepercusion("competition_judges_stoned", "Competition Judges Stoned", -15);
+            AddStoryRepercusionNewspaperArticle("La Tarta del Caos",
+                "El pasado concurso de repostería se ha cancelado debido a los efectos que ha provocado una tarta en los jueces. Los jueces sufren alucinaciones hasta el día de hoy. Se sospecha de un alquimista local.");
+
+            CreateRepercusion("competition_safe", "Competition Safe", 15);
+            AddStoryRepercusionNewspaperArticle("Un concurso sin incidentes",
+                "El concurso anual de repostería ha finalizado sin incidentes.");
+
+            //TARGET: JOHNNY
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("competition_judges_stoned");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Fuí ayer a buscar un par de setas para la tarta, pero no he podido sacar ninguna, colega.",
+                "Los animalejos del bosque están cada año más agresivos. No me han dejado en paz, colega.",
+                "Pero no todo está perdido. Tengo algunas Setas de la Pirueta guardadas del año pasado, colega.",
+                "No estarán en las mejores condiciones, ¡pero seguro que algún premio me llevo, colega!"
+            }, Tag.Harm, 1, "johnny");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡La cosa va a ponerse muy interesante en el concurso! ¡Tengo un presentimiento de que así será!" });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Ese tal Johnny parece un sujeto interesante. Tiene un aura muy peculiar." });
+
+            //HARM >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("competition_safe");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Tíiiiiiio, la cosa se ha puesto fina! Fuí a por setas por la noche y cuando volví mi laboratorio estaba ardiendo, colega!",
+                "Se han echado a perder muchas pócimas e ingredientes que tenía guardados, colega.",
+                "¿El concurso?, ya no va a poder ser. Estas cosas pasan, colega."
+            }, Tag.Harm, 3, "johnny");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡¿Por qué interferir en el concurso?! ¡Deja que el mundo siga su curso, que se iba a poner interesante!" });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Estoy convencido de que vas a evitar una situación… inusual con esa decisión." });
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("competition_judges_stoned");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "He encontrado las setas que buscaba, colega.",
+                "Suerte que alguien ha puesto señales por el bosque para encontrarlas, colega.",
+                "¿Qué si es raro que haya señales? No sé, mucha gente se perderá por el bosque, colega.",
+                "En fin, ¡mi tarta va a ser tremenda, colega!"
+            }, Tag.Help, 1, "johnny");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡La cosa va a ponerse muy interesante en el concurso! ¡Tengo un presentimiento de que así será!" });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Ese tal Johnny parece un sujeto interesante. Tiene un aura muy peculiar." });
+
+            //HELP >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("competition_judges_stoned");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Tíiiiiiio! Fuí a buscar cobre y encontré oro, colega.",
+                "Buscando un par de Setas de la Pirueta me he topado con otra mucho más rara, colega.",
+                "Nada más y nada menos que el Champiñón de la Visión, ¡mi favorito, colega!",
+                "Ese champiñón te permite ver todo, colega, ¡toooodo!",
+                "¡Los jueces van a flipar, colega!"
+            }, Tag.Help, 3, "johnny");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡La cosa va a ponerse muy interesante en el concurso! ¡Tengo un presentimiento de que así será!" });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Ese tal Johnny parece un sujeto interesante. Tiene un aura muy peculiar." });
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("competition_safe");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Encontré todas las setas que necesitaba, colega.",
+                "Pero, lo he estado meditando y ya no me apetece participar, colega.",
+                "¿Mi meditación? Dejo que las setas me indiquen el camino a seguir, así de simple, colega.",
+                "He visto cosas más extrañas de lo habitual, eso no puede ser buena señal, colega."
+            }, Tag.Convince, 1, "johnny");
+
+            //CONVINCE >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("competition_safe");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Al final encontré todas las setas que necesitaba y muchas más, colega.",
+                "Pero, ya no voy a participar en el concurso, no merece la pena, colega.",
+                "El Señor Galleta tiene razón, los jueces no sabrían apreciar mi obra, colega.",
+                "¿El Señor Galleta? Lo he visto durante mi meditación nocturna, colega.",
+                "¡Todo es posible cuando se consumen Champiñones de la Visión, son alucinantes, colega!"
+            }, Tag.Convince, 3, "johnny");
+
+            AddStorySelectionUIData("La tarta no era de mentira");
+            FinishCreatingStory();
+
+            // =============================================================================================
+            //STORY 9
+            // =============================================================================================
+
+            StartCreatingStory("the_lord_of_the_ducks", "El Señor de los Patos", "mantecas",
+             "Unos patos muy agresivos causan el caos destrozando los cultivos en la granja del Mantecas.", new List<string>() {
+                "¡Siempre tiene que pasar algo en mi granja! ¡Nunca me dejarán en paz!",
+                "¡Si no son ratas que me roban mis hortalizas, ahora son patos que me destrozan lo sembrado!",
+                "Esto tiene que ser cosa del Johnny ¡Ese merluzo debe de haber vertido sus mejunjes en la charca!",
+                "¡Los patos se han vuelto muy agresivos, no puedo acercarme a mis cultivos!",
+                "Voy a tener que tomar medidas al respecto. ¡No se saldrán con la suya!"
+             });
+
+            CreateRepercusion("ducks_stay", "Ducks Stay", -15);
+            AddStoryRepercusionNewspaperArticle("Invasión aviar",
+                "Una bandada de patos muy agresivos han ocupado el granero de un granjero local. El dueño de la granja expresa su descontento con un rastrillo en mano.");
+
+            CreateRepercusion("ducks_gone", "Ducks Gone", 15);
+            AddStoryRepercusionNewspaperArticle("La Paz de los Patos.",
+                "La guerra entre la bandada de patos agresivos y un granjero local ha finalizado. Los patos aceptaron su derrota y partieron fuera del pueblo. ¿Buscarán otras tierras que conquistar?");
+
+            CreateRepercusion("ducks_help", "Ducks Help", 30);
+            AddStoryRepercusionNewspaperArticle("Lo nuevo en pesticidas.",
+                "La comunidad agrícola se encuentra asombrada ante el nuevo método de control de plagas que un granjero local está utilizando. Se trata nada más y nada menos que de patos. Con el cuidado adecuado, estos se encargan de cualquier alimaña sin que afecte a los cultivos.");
+
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("ducks_stay");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Sucias ratas del aire! ¡Los patos han ocupado mi granero! ¡¿Cómo diantres han logrado entrar?!",
+                "Este va a ser un problema mucho mayor que las ratas, no voy a poder echarlas de allí tan fácilmente.",
+                "¡¿Con quién creen que están tratando?! ¡Han venido a conquistar la granja equivocada!"
+            }, Tag.Harm, 1, "mantecas");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡Imagínate qué guay sería que los patos pudieran llevar armas!" });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Nadie se hubiera imaginado aves tan gráciles pudieran llegar a ser tan agresivas." });
+
+            //HARM >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("ducks_stay");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡La próxima vez que vea al Johnny, va a continuar con sus experimentos desde el fondo de un pozo!",
+                "¡Los patos se han apoderado de mi casa! ¡¿Cómo es esto posible?! ¡¿Cómo han entrado para empezar?!",
+                "¡Esto tiene que ser una broma! ¡Unos estúpidos patos me han vencido, a mí!",
+                "No me queda más remedio que darles parte de mi cosecha para que me dejen tranquilo."
+            }, Tag.Harm, 3, "mantecas");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡Imagínate qué guay sería que los patos pudieran llevar armas!" });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Nadie se hubiera imaginado aves tan gráciles pudieran llegar a ser tan agresivas." });
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("ducks_gone");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Ayer llegó otra bandada de patos a destrozar mi granja! ¡Por si una sola bandada no fuera suficiente!",
+                "¡Encima se están peleando entre ellas, haciendo aún más destrozos!",
+                "¡Esto es un circo! ¡Es inaudito! Al menos será más fácil echarlas de mi granja."
+            }, Tag.Help, 1, "mantecas");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡Ojalá pudiera tener una bandada de patos a mi disposición! ¡Me lo pasaría en grande!" });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Habría que evitar que ese tal Johnny siguiera provocando situaciones como esta." });
+
+            //HELP >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("ducks_gone");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Los patos se han largado de mi granja.¡ Aunque la cosa está lejos de estar bien!",
+                "¡Las ratas han regresado de su escondrijo y han echado a los patos! ¡Me están tomando el pelo!",
+                "No sé que las habrá hecho volver, pero prefiero lidiar con ratas inteligentes antes que con esos patos.",
+                "¡Si esto es obra del Johnny, me encargaré de trasladar su laboratorio al fondo del mar!"
+            }, Tag.Help, 3, "mantecas");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡Ojalá pudiera tener una bandada de patos a mi disposición! ¡Me lo pasaría en grande!" });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Habría que evitar que ese tal Johnny siguiera provocando situaciones como esta." });
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("ducks_help");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Por fín se han tranquilizado los patos! han dejado de causarme problemas, por ahora.",
+                "Todavía siguen rondando por mi granja, pero ya no son tanto problema.",
+                "En esta época del año hay bichos a punta pala, y tengo que andar fumigando los cultivos todo el día.",
+                "Por suerte los patos se comen los bichos que pululan por mis cultivos.",
+                "¡Pero esto no significa que vayan a quedarse! ¡En cuanto llegue el momento, me encargaré de echarlos!"
+            }, Tag.Convince, 1, "mantecas");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿Se puede realmente negociar con un pato? Espero que al menos entiendan el lenguaje universal de la violencia." });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Pienso que todos los seres del mundo pueden llegar a convivir en paz.",
+                "Aunque a veces pienso que a algunos seres es mejor tenerlos apartados."});
+
+            AddStorySelectionUIData("El Señor de los Patos");
+            FinishCreatingStory();
+
+            // =============================================================================================
+            //STORY 10
+            // =============================================================================================
+
+            StartCreatingStory("natural_chocolate_milkshake", "Batido de chocolate 100% natural", "miss_chocolate",
+             "Miss Chocolate quiere experimentar con las vacas de Meri para obtener de estas un batido de chocolate al ordeñarlas.", new List<string>() {
+                "¿El sabor explosivo? Lo he dejado de lado por el momento, pero tengo una idea mucho mejor.",
+                "La mayor preocupación de toda chocolatera que se precie es de donde obtener chocolate de calidad.",
+                "He oído rumores de pueblos lejanos que hablan de que los batidos de chocolate se obtienen de las vacas marrones.",
+                "Estoy segura de que las vacas son capaces de producir batidos de chocolate con la alimentación adecuada.",
+                "Después de insistir mucho, he logrado que Meri me ceda sus vacas para este noble propósito.",
+                "¡Qué emoción! ¡No puedo esperar a ponerme manos a la obra!"
+             });
+
+            CreateRepercusion("cows_poisoned", "Cows Poisoned", -15);
+            AddStoryRepercusionNewspaperArticle("Experimentos extremos.",
+                "La célebre chocolatera local, Miss Chocolate la Bomb ha sido el foco de una nueva polémica tras el fracaso rotundo en su nuevo experimento. El experimento ha resultado en el envenenamiento leve de las vacas de una ganadera local.");
+
+            CreateRepercusion("cows_experiment_success", "Cows Experiment Success", 15);
+            AddStoryRepercusionNewspaperArticle("Los batidos de chocolate 100% naturales.",
+                "La conocida chocolatera local, Miss Chocolate la Bomb, ha obtenido resultados impresionantes en su nueva investigación. De alguna manera ha logrado obtener muestras de batido de chocolate al ordeñar vacas marrones. ¿Ha llegado la ciencia demasiado lejos?");
+
+            CreateRepercusion("cows_experiment_delayed", "Cows Experiment Delayed", -15);
+            AddStoryRepercusionNewspaperArticle("Rechazo vacuno.",
+                "La famosa chocolatera local, Miss Chocolate la Bomb, ha sufrido heridas leves tras ser atacada por las vacas con las que experimentaba.");
+
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("cows_poisoned");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "El experimento no va por buen camino, algunas vacas están enfermando.",
+                "Quiero estudiar muestras de leche de las vacas alimentadas con mi pienso especial.",
+                "Pero parece que he cometido un error garrafal, ¡añadir bellotas a la mezcla!",
+                "No me he dado cuenta hasta que lo he revisado, ¡¿Cómo he sido tan descuidada?!",
+                "Si la cosa no mejora, voy a tener que abandonar el experimento. Meri ya me está mirando mal."
+            }, Tag.Harm, 1, "miss_chocolate");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Me pregunto hasta qué punto será posible obtener batidos de chocolate de las vacas.",
+                "Bueno, me da a mí que va a ser tarde para averiguarlo."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Hay algunas personas que quieren jugar a ser Dios. Y luego están quienes lo intentan de verdad." });
+
+            //HARM >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("cows_poisoned");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡¿Cómo ha podido salir tan mal?! Las vacas están para el arrastre. A Meri le va a dar un patatús.",
+                "¡¿Dónde me he equivocado?! Juraría haber utilizado los ingredientes correctos para el pienso especial.",
+                "Empiezo a sospechar que alguien ha manipulado el pienso antes de dárselo a las vacas.",
+                "En fin, tendré que pedir a otro vecino que me ceda sus vacas, aunque será difícil después de esto."
+            }, Tag.Harm, 3, "miss_chocolate");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Me pregunto hasta qué punto será posible obtener batidos de chocolate de las vacas.",
+                "Bueno, me da a mí que va a ser tarde para averiguarlo."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Hay algunas personas que quieren jugar a ser Dios. Y luego están quienes lo intentan de verdad." });
+
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("cows_experiment_success");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Mis experimentos con las vacas dan frutos, aunque también surgen complicaciones.",
+                "Tras ingerir un pienso especial que he preparado yo misma, han empezado a comportarse de manera extraña.",
+                "Poco después de ingerir el pienso las vacas empezaron a ladrar, ¡Te lo juro!",
+                "Meri casi se desmaya al verlo, parece ser que ya ha pasado por algo parecido.",
+                "Al menos las muestras de leche ordeñadas contienen muestras de chocolate, que ya es algo."
+            }, Tag.Help, 1, "miss_chocolate");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿Hasta dónde llegará esa tal Miss Chocolate con tal de lograr sus experimentos? Quizás sea de las mías."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "No tiene nada de malo ayudar en una causa aparentemente imposible. No será malo, pero sí que puede ser estúpido." });
+
+            //HELP >=5
+            StartStoryBranch();
+            SetRepercusionToBranch("cows_experiment_success");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡El experimento ha salido mucho mejor de lo que esperaba!",
+                "Después de ingerir el pienso especial con galletas y dulces que he preparado, ¡he logrado resultados!",
+                "Eso sí, parece ser que, en un descuido mío, se ha derramado una de las pócimas de Johnny sobre el pienso.",
+                "No lo he sabido hasta mucho después de que se lo hayan comido. ¡Puede que esa sea la clave!",
+                "La leche ordeñada de las vacas se asemeja a un batido de chocolate, o a algo parecido al menos.",
+                "¡Qué alegría! Estoy cerca de cumplir mi objetivo. ¡Tengo que seguir trabajando!"
+            }, Tag.Help, 5, "miss_chocolate");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿Hasta dónde llegará esa tal Miss Chocolate con tal de lograr sus experimentos? Quizás sea de las mías."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "No tiene nada de malo ayudar en una causa aparentemente imposible. No será malo, pero sí que puede ser estúpido." });
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("cows_experiment_delayed");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "No estoy avanzando apenas en mi investigación con las vacas. Son más agresivas de lo que esperaba.",
+                "Meri me dijo que eran muy apacibles con todo el mundo, ¿Les caeré mal?",
+                "¡Qué fastidio! Parece que tengo que buscar otras opciones. ¡Pero no me rendiré!"
+            }, Tag.Convince, 1, "miss_chocolate");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Incluso yo, que me regocijo en el caos, adoro a las vacas ¡Nadie debería hacerles daño!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "A veces la gente necesita un pequeño susto para darse cuenta del error que cometen." });
+
+            //CONVINCE >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("cows_experiment_delayed");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡¿Cómo hace Meri para tratar con sus vacas día a día?! Son muy agresivas conmigo.",
+                "Pensaba hacerlas ingerir un pienso especial, pero parece que va a ser imposible.",
+                "¡No creas que he abandonado mi búsqueda, es sólo que tengo que cambiar mi enfoque!"
+            }, Tag.Convince, 3, "miss_chocolate");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Incluso yo, que me regocijo en el caos, adoro a las vacas ¡Nadie debería hacerles daño!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "A veces la gente necesita un pequeño susto para darse cuenta del error que cometen." });
+
+            AddStorySelectionUIData("Batido de chocolate 100% natural");
+            FinishCreatingStory();
+
+
+            // =============================================================================================
+            //STORY 11
+            // =============================================================================================
+
+            StartCreatingStory("the_stolen_pendant", "El Colgante Robado", "canela",
+             "La última adquisición de Canela, un colgante de mucho valor, ha sido robado por una rival suya. Su rival afirma que Canela tiene en su posesión artefactos suyos.", new List<string>() {
+                "¡Qué dura es la vida de una adquisidora de reliquias! Nunca te aburres, lo creas o no",
+                "Volví de una de mis visitas a las subastas de la ciudad e hice una nueva adquisición.",
+                "Se trataba de un colgante enjoyado muy antiguo de mucho valor. ¡Y esta vez es auténtico, no como el huevo aquel!",
+                "El caso es que he perdido el colgante, debe de ser cosa de mi rival, otra adquisidora de reliquias.",
+                "¡Me tiene mucha manía! Insiste en que muchos de mis artefactos le pertenecen a su familia por derecho.",
+                "Quiero recuperar el colgante, ¡yo lo he comprado así que tengo más derecho que ella!"
+             });
+
+            CreateRepercusion("artifacts_stolen", "Artifacts Stolen", -30);
+            AddStoryRepercusionNewspaperArticle("Robo en la exposición",
+                "Muchos de los artefactos de la coleccionista, Canela N Rama, han desaparecido sin dejar rastro. No se han encontrado pruebas en la escena del crimen.");
+
+            CreateRepercusion("pendant_damaged", "Pendant Damaged", -15);
+            AddStoryRepercusionNewspaperArticle("La nueva joya de la exposición regresa a su vitrina",
+                "El colgante enjoyado que se creía desaparecido ha vuelto a las manos de Canela N Rama. Por desgracia, se encuentra en un estado lamentable.");
+
+            CreateRepercusion("pendant_recovered", "Pendant Recovered", 30);
+            AddStoryRepercusionNewspaperArticle("La  joya de la exposición regresa intacta.",
+                "El colgante enjoyado desaparecido de la colección ha regresado intacto a la exposición.");
+
+
+            CreateRepercusion("artifacts_stolen", "Artifacts Stolen", -15);
+            AddStoryRepercusionNewspaperArticle("El colgante enjoyado sigue desaparecido.",
+                "La nueva joya de la exposición de Canela N Rama sigue en paradero desconocido.");
+
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("artifacts_stolen");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Mi colección está arruinada, sabía que esto podía pasar!",
+                "Alguien entró en mi casa por la noche y me ha robado mis preciados artefactos.",
+                "¡¿Por qué tengo guardias tan incompetentes?! ¡Reforcé la seguridad desde el problema con la secta!",
+                "No han encontrado rastro del culpable, ¡pero ha tenido que ser cosa de mi rival, seguro!"
+            }, Tag.Harm, 1, "canela");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "El robo me parece bien. Al fin y al cabo, es mejor que te roben a que te destrocen las cosas."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "¿Qué ocurriría al robar a un ladrón? Es discutible, pero pienso que te conviertes en otro." });
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("pendant_damaged");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¿Mi colgante? Ha regresado a mis manos, pero… Está muy dañado.",
+                "Alguien ha debido de recuperarlo por mí, pero casi desearía que no lo hubiera hecho.",
+                "Quien quiera que haya sido, parece que no era consciente de lo frágil que era.",
+                "Al menos lo he recuperado, así que no me puedo quejar, supongo."
+            }, Tag.Help, 1, "canela");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿Un ladrón que roba a otro ladrón? Soy más partidaria de eliminar a la competencia."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Estoy bastante seguro de haberme encontrado con alguno de esos artefactos en su época." });
+
+            //HELP >=5
+            StartStoryBranch();
+            SetRepercusionToBranch("pendant_recovered");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¿El colgante? ¡Ha regresado a mis manos, no sabes cómo de aliviada estoy!",
+                "Lo que me extraña todavía es quién se ha encargado de traerlo de vuelta.",
+                "El rumor se ha debido de extender por el pueblo, ¡y algún justiciero se ha hecho cargo!",
+                "Ha debido de ser todo un profesional, porque el colgante se encuentra en perfectas condiciones.",
+                "¡Ahora podré exponerlo junto al resto de mi colección!"
+            }, Tag.Help, 5, "canela");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "No entiendo el afán de acaparar tantos cachivaches. ¿No era un síndrome o algo así?"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Quizás de aquí a cinco mil años tu pala se considerará como un artefacto valioso." });
+
+            //CONVINCE >= 1
+            StartStoryBranch();
+            SetRepercusionToBranch("pendant_lost");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Me han enviado un colgante que se parece mucho al original, empezaba a pensar que podría ser valioso.",
+                "Pero resultó ser una burda falsificación ¡¿Qué clase de broma es esta?! ¡Esa necia se está burlando de mí!",
+                "¡No dejaré que esa ladrona se ría de mí! ¡Pienso recuperar mi colgante!",
+                "¡Y si no puedo recuperarlo, lo haré añicos con tal de que no lo tenga ella!"
+            }, Tag.Convince, 1, "canela");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Siempre me he preguntado cuánto tiempo tiene que pasar para que el saqueo de tumbas pase a considerarse arqueología."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "No veo nada malo en conservar artefactos antiguos, siempre que no sean peligrosos." });
+
+            //CONVINCE >= 3
+            StartStoryBranch();
+            SetRepercusionToBranch("pendant_recovered");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "He recuperado mi colgante… Bueno, realmente no es el mismo colgante pero como si lo fuera.",
+                "Ha debido de ser mi rival, aunque no pensaba que fuera capaz de regalarme otro colgante en compensación.",
+                "Lo he estudiado y tiene un valor muy similar al que tenía originalmente. Pero sigo sin estar conforme.",
+                "No me malinterpretes, sigo disgustada por lo que ha hecho, aunque quizás ella no sea tan ruin como pensaba."
+            }, Tag.Convince, 3, "canela");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "No entiendo el afán de acaparar tantos cachivaches. ¿No era un síndrome o algo así?"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Quizás de aquí a cinco mil años tu pala se considerará como un artefacto valioso." });
+
+            AddStorySelectionUIData("El Colgante Robado");
+            FinishCreatingStory();
         }
 
         public void SyncReferences()
