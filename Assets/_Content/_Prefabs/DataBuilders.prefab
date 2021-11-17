@@ -1306,8 +1306,9 @@ MonoBehaviour:
       - "Si esto sigue as\xED, tendremos que contratar a un cazador profesional,
         pero nos va a costar una fortuna."
       - "\xA1No s\xE9 qu\xE9 hacer!"
-      m_QuestGiver: 
-      m_Description: 
+      m_QuestGiver: mayor
+      m_Description: "Unos lobos est\xE1n amenazando a los habitantes del pueblo.
+        El alcalde quiere hacer algo al respecto pero es muy taca\xF1o."
       m_BranchOptions:
       - m_Condition:
           m_Target:
@@ -1391,9 +1392,9 @@ MonoBehaviour:
           creerlo."
         - "\xA1La manada entera fue aniquilada de la noche a la ma\xF1ana, no ha
           quedado ni uno!"
-        - Me alegra que el problema se haya solucionado, pero me preocupa pensar
-          que haya una criatura
-        - "m\xE1s peligrosa que esos lobos merodeando en los alrededores."
+        - "Me alegra que el problema se haya solucionado, pero me preocupa pensar
+          que haya una criatura m\xE1s peligrosa que esos lobos merodeando en los
+          alrededores."
         m_DeitiesResultDialogue:
         - m_DeityID: 1
           m_Dialogue:
@@ -1698,8 +1699,9 @@ MonoBehaviour:
       - "Tampoco puedo comprar leche a los dem\xE1s ganaderos, ya que la venden demasiado
         cara estos d\xEDas."
       - Quiero hacer algo al respecto, pero no puedo hacer nada.
-      m_QuestGiver: 
-      m_Description: 
+      m_QuestGiver: meri
+      m_Description: "Las vacas de Meri dan muy poca leche \xFAltimamente. Teme que
+        no vaya a tener suficientes productos l\xE1cteos para la Feria."
       m_BranchOptions:
       - m_Condition:
           m_Target:
@@ -1943,8 +1945,9 @@ MonoBehaviour:
       - "Por supuesto que me negu\xE9 a d\xE1rselo. Pero estoy preocupada de que
         entren a robar o algo peor."
       - "\xA1Ese huevo me ha costado una fortuna, y no pienso deshacerme de \xE9l!"
-      m_QuestGiver: 
-      m_Description: 
+      m_QuestGiver: canela
+      m_Description: "Canela ha adquirido un huevo dorado para su exposici\xF3n.
+        Pero una secta amenaza con arrebat\xE1rselo."
       m_BranchOptions:
       - m_Condition:
           m_Target:
@@ -2172,6 +2175,1136 @@ MonoBehaviour:
       m_Name: 
       m_Active: 0
       m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: explosive_chocolate
+        m_ID: -819324724
+        m_Initialized: 1
+      m_Title: Chocolate explosivo
+      m_IntroductionDialogue:
+      - "Estoy muy cerca de conseguir la receta de chocolate definitiva. \xA1Va a
+        ser un pelotazo!"
+      - "He teorizado una receta que puede ser toda una revoluci\xF3n."
+      - "Mezclar chocolate con p\xF3lvora, \xA1todo para lograr una mezcla de sabor
+        explosiva!"
+      - "\xBFQue si va a ser peligroso? \xA1Qu\xE9 va! La receta necesitar\xE1 una
+        pizquita de nada."
+      - "Tan solo necesito que los mercaderes accedan a venderme mucha m\xE1s p\xF3lvora."
+      - "Insisten en que puede ser muy peligroso, que podr\xEDa salir el pueblo por
+        los aires\u2026 \xA1Bah!"
+      - "A no ser que encuentre otro ingrediente alternativo, tendr\xE9 que seguir
+        trasteando con lo que tengo."
+      m_QuestGiver: miss_chocolate
+      m_Description: "Miss Chocolate quiere experimentar con p\xF3lvora para hacer
+        chocolate experimental. Los mercaderes se niegan a vender m\xE1s polvora
+        por ser peligroso."
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: ms chocolate
+            m_ID: 445555216
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "Esta misma ma\xF1ana he vuelto a buscar m\xE1s p\xF3lvora para la receta,
+          pero he encontrado algo mejor."
+        - "Uno de los mercaderes me ha ofrecido muestras de especias provenientes
+          de un pa\xEDs lejano."
+        - "Tienen propiedades casi id\xE9nticas que la p\xF3lvora, pero sin los riesgos
+          de salir por los aires."
+        - "Ese tipo de ingredientes son tan raros por aqu\xED que es impensable comprarlos
+          \xA1Pero la suerte me sonr\xEDe!"
+        - "\xA1Estoy cada vez m\xE1s cerca de lograr la f\xF3rmula del chocolate
+          definitivo! \xA1Tengo que seguir trabajando!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1El fin justifica los medios! Y si medio pueblo sale por los aires,
+            \xA1todav\xEDa mejor!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - El deseo de crear algo revolucionario es una meta encomiable.
+          - Aunque deja de serlo tanto si se ponen en peligro vidas en el proceso.
+        m_Repercusion:
+          m_ID:
+            m_NameID: ms_chocolate_gunpowder
+            m_ID: -1828434159
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: explosive_chocolate
+            m_ID: -819324724
+            m_Initialized: 1
+          m_Name: MS Chocolate Gunpowder
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: ms chocolate
+            m_ID: 445555216
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "De todas las cosas que podr\xEDan haber salido mal\u2026 \xA1\xBFPor qu\xE9
+          ha ocurrido lo peor?!"
+        - "Pensaba que hab\xEDa tomado todas las precauciones necesarias para que
+          algo as\xED no ocurra."
+        - "Todo indica a que la p\xF3lvora que ten\xEDa almacenada se prendi\xF3,
+          lo que no s\xE9 es c\xF3mo."
+        - "Yo estaba fuera tomando el aire fresco en el momento de la explosi\xF3n,
+          por suerte."
+        - "Toda mi investigaci\xF3n se ha echado a perder. Tan solo han quedado intactos
+          algunos inventos."
+        - "Tendr\xE9 que comenzar desde cero, \xA1Pero no me dar\xE9 por vencida!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1Esta noche presiento que va a ocurrir algo genial! Buena decisi\xF3n,
+            por cierto."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Hacer ver a los dem\xE1s sus errores puede ser incluso m\xE1s dif\xEDcil
+            que partir una monta\xF1a."
+        m_Repercusion:
+          m_ID:
+            m_NameID: ms_chocolate_sabotaged
+            m_ID: -1115469212
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: explosive_chocolate
+            m_ID: -819324724
+            m_Initialized: 1
+          m_Name: MS Chocolate Sabotaged
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: ms chocolate
+            m_ID: 445555216
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Por fin podr\xE9 continuar con mis experimentos! Pensaba que ya ser\xEDa
+          imposible."
+        - "Algunos mercaderes finalmente han accedido a ofrecerme toda la p\xF3lvora
+          que necesito."
+        - "Por supuesto siguen insistiendo en que es muy peligroso, por eso he accedido
+          a experimentar con peque\xF1as dosis muy controladas."
+        - "Mi investigaci\xF3n no progresar\xE1 tanto como me gustar\xEDa, pero,
+          \xA1poco a poco lograr\xE9 mi objetivo!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1El fin justifica los medios! Y si medio pueblo sale por los aires,
+            \xA1todav\xEDa mejor!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - El deseo de crear algo revolucionario es una meta encomiable.
+          - Aunque deja de serlo tanto si se ponen en peligro vidas en el proceso.
+        m_Repercusion:
+          m_ID:
+            m_NameID: ms_chocolate_gunpowder
+            m_ID: -1828434159
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: explosive_chocolate
+            m_ID: -819324724
+            m_Initialized: 1
+          m_Name: MS Chocolate Gunpowder
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: ms chocolate
+            m_ID: 445555216
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "He dejado de utilizar p\xF3lvora para mi receta definitiva. \xA1Porque
+          he encontrado algo mucho mejor!"
+        - "Me di cuenta en el momento en que me cay\xF3 un bote de pimienta en la
+          cabeza. \xA1Qu\xE9 cosas!"
+        - "\xA1El verdadero sabor explosivo que buscaba en realidad proviene del
+          picante!"
+        - "Por eso utilizo ahora pimienta en lugar de p\xF3lvora, \xA1En mayores
+          cantidades!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Sea lo que sea que salga de ese experimento, \xA1me gustar\xEDa probarlo!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - La menor de nuestras acciones es suficiente para alterar el destino del
+            mundo.
+        m_Repercusion:
+          m_ID:
+            m_NameID: ms_chocolate_pepper
+            m_ID: -838266464
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: explosive_chocolate
+            m_ID: -819324724
+            m_Initialized: 1
+          m_Name: MS Chocolate Pepper
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: ms chocolate
+            m_ID: 445555216
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1\xBFQu\xE9 ha podido salir mal?! \xA1Lo ten\xEDa todo controlado!"
+        - "\xBFQu\xE9 si ha ocurrido algo? Nada, tan solo un peque\xF1o accidente."
+        - "Algunos de los viales con la mezcla que ten\xEDa preparados se han ca\xEDdo
+          de su estante."
+        - "El problema es que han ca\xEDdo ligeramente cerca de la chimenea... estando
+          encendida."
+        - Nadie ha resultado herido, tan solo han saltado por los aires algunos de
+          mis aparatos.
+        - "Supongo que yo soy la culpable, ten\xEDa que haber tenido m\xE1s cuidado.
+          \xA1Pero no me rendir\xE9!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1Esta noche presiento que va a ocurrir algo genial! Buena decisi\xF3n,
+            por cierto."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Hacer ver a los dem\xE1s sus errores puede ser incluso m\xE1s dif\xEDcil
+            que partir una monta\xF1a."
+        m_Repercusion:
+          m_ID:
+            m_NameID: ms_chocolate_sabotaged
+            m_ID: -1115469212
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: explosive_chocolate
+            m_ID: -819324724
+            m_Initialized: 1
+          m_Name: MS Chocolate Sabotaged
+          m_Active: 0
+          m_Value: -15
+      m_AllPossibleTargets:
+      - m_NameID: ms chocolate
+        m_ID: 445555216
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: not_so_dirty_rats
+        m_ID: 1589037026
+        m_Initialized: 1
+      m_Title: Ratas no tan sucias
+      m_IntroductionDialogue:
+      - "\xA1Estoy harto de que las ratas me destrocen el granero! \xA1Todos los
+        a\xF1os igual!"
+      - "No s\xE9 qu\xE9 es lo que les echa de comer el Johnny, pero te juro que
+        son cada vez m\xE1s inteligentes."
+      - "\xA1Esta vez han ido demasiado lejos, si hasta han construido un mercadillo
+        en mi propiedad!"
+      - "Es como lo oyes, \xA1se rifan mis vegetales en su propio mercadillo! \xA1Se
+        est\xE1n riendo de m\xED!"
+      m_QuestGiver: mantecas
+      m_Description: Una colonia de ratas inteligentes ha invadido el granero del
+        Mantecas y se dedican a robar sus hortalizas.
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: rats
+            m_ID: -1872639626
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "\xA1Pero esto qu\xE9 es! Ya era un insulto que las ratas tuvieran su propio
+          mercadillo a mi costa."
+        - "\xA1Ahora resulta que han construido una fortaleza! \xA1En mi propio granero!
+          \xA1Con sus torres vig\xEDa y todo!"
+        - "\xA1\xBFMe quieren tomar el pelo?! \xA1Pienso sacarlas de ah\xED aunque
+          tenga que prender fuego a toda mi granja!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Tengo ganas de ver qu\xE9 tan lejos llegar\xE1n esas ratas. Puede que
+            alg\xFAn d\xEDa exista una rata experta en reposter\xEDa."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Ocurra lo que ocurra, la naturaleza seguir\xE1 su curso."
+        m_Repercusion:
+          m_ID:
+            m_NameID: smart_rats_stay
+            m_ID: -333686544
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: not_so_dirty_rats
+            m_ID: 1589037026
+            m_Initialized: 1
+          m_Name: Smart rats stay
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: rats
+            m_ID: -1872639626
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - Ahora las ratas se pelean entre ellas por mi comida, recurren al robo y
+          al vandalismo.
+        - "Su sociedad ha ca\xEDdo y vuelven a ser como antes \xA1Que regresen al
+          agujero del que salieron!"
+        - "Aunque la rata se vista de seda, \xA1Rata se queda!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Es universal que todo el mundo odie a las ratas. \xA1Pero a m\xED me
+            encantan!"
+          - "Son como hamsters pero con cola. Y pueden ser m\xE1s inteligentes que
+            muchos humanos."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Ninguna naci\xF3n ni imperio dura para siempre. Ese hecho se aplica
+            a todos los seres vivos."
+        m_Repercusion:
+          m_ID:
+            m_NameID: smart_rats_gone
+            m_ID: 244518502
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: not_so_dirty_rats
+            m_ID: 1589037026
+            m_Initialized: 1
+          m_Name: Smart rats gone
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: rats
+            m_ID: -1872639626
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Esas est\xFApidas ratas han abandonado mi granero. \xA1Ya no se atreven
+          a enfrentarme!"
+        - "Parece ser que ahora se han instalado en la despensa del Johnny. \xA1Se
+          lo tiene merecido!"
+        - "Eso s\xED, \xA1Como las ratas vuelvan a dar por saco, pienso hacer que
+          se trague todas sus p\xF3cimas!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Es universal que todo el mundo odie a las ratas. \xA1Pero a m\xED me
+            encantan!"
+          - "Son como hamsters pero con cola. Y pueden ser m\xE1s inteligentes que
+            muchos humanos."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Ninguna naci\xF3n ni imperio dura para siempre. Ese hecho se aplica
+            a todos los seres vivos."
+        m_Repercusion:
+          m_ID:
+            m_NameID: smart_rats_gone
+            m_ID: 244518502
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: not_so_dirty_rats
+            m_ID: 1589037026
+            m_Initialized: 1
+          m_Name: Smart rats gone
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: rats
+            m_ID: -1872639626
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Est\xFApidas ratas! No contentas con robarme mis vegetales, \xA1ahora
+          me roban dinero para comprar en su mercadillo!"
+        - "\xA1Pagar\xE1n por esta ofensa! \xA1No saben contra qui\xE9n se est\xE1n
+          enfrentando!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Tengo ganas de ver qu\xE9 tan lejos llegar\xE1n esas ratas. Puede que
+            alg\xFAn d\xEDa exista una rata experta en reposter\xEDa."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Ocurra lo que ocurra, la naturaleza seguir\xE1 su curso."
+        m_Repercusion:
+          m_ID:
+            m_NameID: smart_rats_stay
+            m_ID: -333686544
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: not_so_dirty_rats
+            m_ID: 1589037026
+            m_Initialized: 1
+          m_Name: Smart rats stay
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: rats
+            m_ID: -1872639626
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Aunque esas dichosas ratas sean inteligentes, \xA1no pueden evitar sus
+          propias plagas!"
+        - Parece ser que parte de mi cosecha robada estaba en mal estado, muchas
+          de ellas han enfermado.
+        - "\xA1Seguro que las han envenenado con sus sucias garras! \xA1Se lo tienen
+          merecido!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Es universal que todo el mundo odie a las ratas. \xA1Pero a m\xED me
+            encantan!"
+          - "Son como hamsters pero con cola. Y pueden ser m\xE1s inteligentes que
+            muchos humanos."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Ninguna naci\xF3n ni imperio dura para siempre. Ese hecho se aplica
+            a todos los seres vivos."
+        m_Repercusion:
+          m_ID:
+            m_NameID: smart_rats_gone
+            m_ID: 244518502
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: not_so_dirty_rats
+            m_ID: 1589037026
+            m_Initialized: 1
+          m_Name: Smart rats gone
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: mantecas
+            m_ID: 2085496002
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1\xBFPero qu\xE9 locura es esta?! \xA1Las ratas est\xE1n recolectando
+          dinero del suelo!"
+        - "\xA1S\xED, ahora las ratas recogen el dinero que la gente pierde por ah\xED
+          y lo dejan delante de mi puerta!"
+        - "\xA1\xBFPiensan que por que me den tributo las voy a perdonar?! \xA1Habrase
+          visto!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1Eres toda una caja de sorpresas! Ya empezaba a pensar que ser\xEDas
+            otro humano aburrido."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Estoy seguro de que esa decisi\xF3n llevar\xE1 a consecuencias que nadie
+            esperar\xEDa."
+        m_Repercusion:
+          m_ID:
+            m_NameID: smart_rats_tribute
+            m_ID: 138659744
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: not_so_dirty_rats
+            m_ID: 1589037026
+            m_Initialized: 1
+          m_Name: Smart rats tribute
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: mantecas
+            m_ID: 2085496002
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Esto es inconcebible! \xA1Otra colonia de ratas ha atacado a las ratas
+          de mi granero!"
+        - "Ahora por lo menos las ratas que quedan son normales\xA1 \xA1Pero siguen
+          siendo ratas!"
+        - "Si esto es obra del Johnny, \xA1te juro que va a preparar sus pociones
+          desde el fondo del mar!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Es universal que todo el mundo odie a las ratas. \xA1Pero a m\xED me
+            encantan!"
+          - "Son como hamsters pero con cola. Y pueden ser m\xE1s inteligentes que
+            muchos humanos."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Ninguna naci\xF3n ni imperio dura para siempre. Ese hecho se aplica
+            a todos los seres vivos."
+        m_Repercusion:
+          m_ID:
+            m_NameID: smart_rats_gone
+            m_ID: 244518502
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: not_so_dirty_rats
+            m_ID: 1589037026
+            m_Initialized: 1
+          m_Name: Smart rats gone
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: mantecas
+            m_ID: 2085496002
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Malditas ratas inmundas! \xA1No solo me roban mis vegetales si no
+          que encima me atacan!"
+        - "\xA1Han colocado trampas en mi casa, como si fuera yo el intruso!"
+        - "\xA1\xBFQui\xE9n se creen que son?! \xA1Esto es una declaraci\xF3n de
+          guerra! \xA1No saben contra quien se enfrentan!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Tengo ganas de ver qu\xE9 tan lejos llegar\xE1n esas ratas. Puede que
+            alg\xFAn d\xEDa exista una rata experta en reposter\xEDa."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Ocurra lo que ocurra, la naturaleza seguir\xE1 su curso."
+        m_Repercusion:
+          m_ID:
+            m_NameID: smart_rats_stay
+            m_ID: -333686544
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: not_so_dirty_rats
+            m_ID: 1589037026
+            m_Initialized: 1
+          m_Name: Smart rats stay
+          m_Active: 0
+          m_Value: -15
+      m_AllPossibleTargets:
+      - m_NameID: rats
+        m_ID: -1872639626
+        m_Initialized: 1
+      - m_NameID: mantecas
+        m_ID: 2085496002
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: stingy_taxes
+        m_ID: 1184286464
+        m_Initialized: 1
+      m_Title: "Impuestos para el taca\xF1o"
+      m_IntroductionDialogue:
+      - "Los impuestos recaudados este a\xF1o han ca\xEDdo en m\xEDnimos hist\xF3ricos
+        \xA1Es una ruina!"
+      - "Me niego a pensar que la gente no pueda contribuir \xA1La gente est\xE1
+        guard\xE1ndose el dinero, seguro!"
+      - "Tengo la sensaci\xF3n de que la gente todav\xEDa no conf\xEDa en m\xED,
+        \xA1Despu\xE9s de todo lo que he hecho por ellos!"
+      - "\xA1Se han olvidado del gran puerto en la Charca local, o los tres arbustos
+        nuevos de la Plaza!"
+      - "\xA1Si hasta hice cambiar un estante de la biblioteca y mand\xE9 construir
+        una estatua de mi persona!"
+      - Son unos desagradecidos.
+      m_QuestGiver: mayor
+      m_Description: "El alcalde est\xE1 muy descontento con la escasa recaudaci\xF3n
+        de impuestos. Por otra parte la gente est\xE1 muy descontenta con sus reformas
+        de poca utilidad."
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "\xA1Ha ocurrido algo terrible! \xA1El dinero de la caja fuerte ha desaparecido!
+          \xA1Ya no queda nada!"
+        - "Debe de tratarse de alguien muy habilidoso para cometer tal haza\xF1a.
+          \xA1Todo un profesional!"
+        - Parece ser que el dinero se ha repartido por todos los habitantes del pueblo.
+        - "Todo el mundo est\xE1 muy feliz al respecto, como es de esperar. \xA1Pero
+          no puedo dejar que ocurran cosas as\xED!"
+        - "No me queda m\xE1s remedio que gastar mis ahorros para cubrir el presupuesto
+          del resto del a\xF1o."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFQu\xE9 har\xEDas t\xFA si fueras el alcalde? \xA1Espero que muchas
+            tropel\xEDas!"
+          - "Sinceramente no te veo siendo un santurr\xF3n como Nu."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Hay veces en las que uno debe tomar las riendas de la situaci\xF3n para
+            resolver un problema ajeno."
+          - Especialmente si aquel no sabe lo que hace.
+        m_Repercusion:
+          m_ID:
+            m_NameID: mayor_robbed
+            m_ID: -2038562937
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: stingy_taxes
+            m_ID: 1184286464
+            m_Initialized: 1
+          m_Name: Mayor robbed
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "Esta misma ma\xF1ana me han llegado varios sacos con dinero sobre mi escritorio."
+        - "Debe de ser todo el dinero que faltaba de la recaudaci\xF3n, aunque me
+          extra\xF1a que no se me haya notificado."
+        - "El caso es que se ha recaudado m\xE1s dinero de lo que se recauda normalmente.
+          \xA1Es maravilloso!"
+        - "\xA1Ahora podr\xE9 embadurnar de plata mi estatua y ampliar el puerto
+          de la charca!"
+        - "\xA1Ya solo falta que puedan llegar barcos mercantes! \xA1La gente me
+          adorar\xE1!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Incluso el santurr\xF3n presuntuoso de Nu y yo podemos estar de acuerdo
+            en que a ese alcalde le faltan un par de veranos."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "\xBFRealmente el alcalde sabr\xE1 lo que est\xE1 haciendo? Sus intenciones
+            parecen buenas pero..."
+        m_Repercusion:
+          m_ID:
+            m_NameID: mayor_waste
+            m_ID: 745825927
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: stingy_taxes
+            m_ID: 1184286464
+            m_Initialized: 1
+          m_Name: Mayor waste
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "\xA1Esto es un esc\xE1ndalo! \xA1\xBFC\xF3mo es posible que yo, el alcalde,
+          haya sido agredido m\xFAltiples veces en una misma noche?!"
+        - "\xA1La gente ya no me respeta! \xA1\xBFQu\xE9 es lo que estoy haciendo
+          mal?!"
+        - "\xA1Con todo lo que he hecho por el pueblo! \xBFSer\xE1 que mis reformas
+          no gustan a la gente?"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1\xBFC\xF3mo se atreve ese alcalde a construir una estatua de su
+            persona?! \xA1Tendr\xE1 su merecido!"
+          - "\xA1Toda estatua deber\xEDa de representar la grandeza de la gran Evith!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Es dif\xEDcil asimilar la idea de que el llamado sentido com\xFAn no
+            es t\xE1n com\xFAn como suponemos."
+        m_Repercusion:
+          m_ID:
+            m_NameID: mayor_assaulted
+            m_ID: 1982058079
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: stingy_taxes
+            m_ID: 1184286464
+            m_Initialized: 1
+          m_Name: Mayor assaulted
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Acerca de la recaudaci\xF3n de este a\xF1o\u2026 \xA1Ha desaparecido parte
+          del dinero! \xA1\xBFC\xF3mo ha podido ser?!"
+        - "No se ha encontrado rastro alguno del ladr\xF3n. Estoy buscando al culpable
+          por todos los medios posibles, pero no hay rastro de \xE9l."
+        - "Pero m\xE1s importante, \xA1ya no hay dinero para ampliar el puerto de
+          la charca!"
+        - "Menos mal que para estos casos tengo bastante dinero almacenado. \xA1Siempre
+          es bueno ser previsor!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFQu\xE9 har\xEDas t\xFA si fueras el alcalde? \xA1Espero que muchas
+            tropel\xEDas!"
+          - "Sinceramente no te veo siendo un santurr\xF3n como Nu."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Hay veces en las que uno debe tomar las riendas de la situaci\xF3n para
+            resolver un problema ajeno."
+          - Especialmente si aquel no sabe lo que hace.
+        m_Repercusion:
+          m_ID:
+            m_NameID: mayor_robbed
+            m_ID: -2038562937
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: stingy_taxes
+            m_ID: 1184286464
+            m_Initialized: 1
+          m_Name: Mayor robbed
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Esta ma\xF1ana cuando he entrado en mi oficina he visto un saco con dinero
+          sobre mi escritorio."
+        - "Doy por hecho que es parte del dinero faltante, aunque preferir\xEDa que
+          me hubiera llegado por medios oficiales."
+        - "\xA1El caso es que ahora tendremos dinero suficiente para arreglar las
+          aceras de mi casa y pintar mi fachada!"
+        - "El resto del dinero quedar\xE1 en reserva en caso de emergencias, \xA1nunca
+          se sabe lo que puede ocurrir en estos tiempos!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Incluso el santurr\xF3n presuntuoso de Nu y yo podemos estar de acuerdo
+            en que a ese alcalde le faltan un par de veranos."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "\xBFRealmente el alcalde sabr\xE1 lo que est\xE1 haciendo? Sus intenciones
+            parecen buenas pero..."
+        m_Repercusion:
+          m_ID:
+            m_NameID: mayor_waste
+            m_ID: 745825927
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: stingy_taxes
+            m_ID: 1184286464
+            m_Initialized: 1
+          m_Name: Mayor waste
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Qu\xE9 disparate! \xA1He sido agredido en plena noche mientras paseaba!"
+        - Al responsable de esta afrenta se le va a caer el pelo, en cuanto sepa
+          quien ha sido.
+        - "\xA1Soy el que m\xE1s se preocupa por el bienestar de este pueblo! \xA1\xBFC\xF3mo
+          se atreven a hacerme esto?!"
+        - "Siempre sigo mi buen juicio, aunque a veces me pregunto si estar\xE9 haciendo
+          algo mal."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1\xBFC\xF3mo se atreve ese alcalde a construir una estatua de su
+            persona?! \xA1Tendr\xE1 su merecido!"
+          - "\xA1Toda estatua deber\xEDa de representar la grandeza de la gran Evith!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Es dif\xEDcil asimilar la idea de que el llamado sentido com\xFAn no
+            es t\xE1n com\xFAn como suponemos."
+        m_Repercusion:
+          m_ID:
+            m_NameID: mayor_assaulted
+            m_ID: 1982058079
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: stingy_taxes
+            m_ID: 1184286464
+            m_Initialized: 1
+          m_Name: Mayor assaulted
+          m_Active: 0
+          m_Value: -15
+      m_AllPossibleTargets:
+      - m_NameID: mayor
+        m_ID: 996742298
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: crazy_cows
+        m_ID: -112750320
+        m_Initialized: 1
+      m_Title: Las vacas locas
+      m_IntroductionDialogue:
+      - "\xA1Mis vacas se han vuelto locas! \xA1Son como cabras!"
+      - Lo digo literalmente, mis vacas ahora tienen complejo de cabras.
+      - "Se supon\xEDa que el pienso especial de Johnny las iba a ayudar a atravesar
+        monta\xF1as con facilidad."
+      - "\xA1Ahora se comen cualquier cosa, son muy testarudas y hasta se suben a
+        cualquier sitio!"
+      - "No puedo trabajar con ellas as\xED, \xA1No s\xE9 que voy a hacer!"
+      m_QuestGiver: meri
+      m_Description: Las vacas de Meri se han transformado parcialmente en cabras
+        tras ingerir un pienso especial. Quiere que recuperen su estado original.
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: meri
+            m_ID: -918260377
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "El problema con mis vacas se ha solucionado, m\xE1s o menos..."
+        - "Parece ser que alguien le ha dado de beber a mis vacas varias p\xF3cimas
+          de Johnny."
+        - "\xBFC\xF3mo lo s\xE9? \xC9l mismo ha venido a mi granja a preguntar por
+          ellas."
+        - "Parece ser que alguien se las rob\xF3 ayer de su laboratorio."
+        - El caso es que mis vacas ahora se comportan como vacas... generalmente.
+        - "Todav\xEDa siguen subi\xE9ndose a sitios extra\xF1os, pero por lo menos
+          puedo tratar con ellas."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFEn serio vas a ayudar a que vuelvan a la normalidad? \xA1Yo quer\xEDa
+            hasta donde llegaba la cosa!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - Es mejor que la naturaleza siga su curso. Hay cosas que es mejor dejar
+            inalteradas.
+        m_Repercusion:
+          m_ID:
+            m_NameID: cows_back_to_normal
+            m_ID: 1494518570
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: crazy_cows
+            m_ID: -112750320
+            m_Initialized: 1
+          m_Name: Cows back to normal
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: meri
+            m_ID: -918260377
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "El asunto de mis vacas, si pueden seguir llam\xE1ndose vacas, se ha ido
+          de madre."
+        - "De alguna manera han conseguido comerse todo el pienso especial que ten\xEDa
+          que quemar."
+        - "\xA1Ahora, adem\xE1s de balar, son m\xE1s peque\xF1as y les han salido
+          cuernos! Lo que tengo ya no son vacas."
+        - "Ser\xE1 mejor que Johnny no haya vertido sus p\xF3cimas al r\xEDo, no
+          quiero que se conviertan en morsas o algo similar."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFEntonces cualquier cosa que se coma el pienso especial ser\xE1 transformado
+            en cabra? \xBFQu\xE9 ocurrir\xEDa entonces si se lo echan a las cabras?"
+        - m_DeityID: 0
+          m_Dialogue:
+          - Si Evith se comiera el pienso especial, no creo que le surte efecto.
+            Ya presenta cualidades de cabra.
+        m_Repercusion:
+          m_ID:
+            m_NameID: cows_transformed
+            m_ID: 1469249696
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: crazy_cows
+            m_ID: -112750320
+            m_Initialized: 1
+          m_Name: Cows transformed
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: meri
+            m_ID: -918260377
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Ahora resulta que las cabras de mi vecino se est\xE1n comportando como
+          vacas. \xA1Esto no tiene sentido!"
+        - "Alguien le ha dado de comer el pienso especial a las cabras. \xA1\xBFQui\xE9n
+          en su sano juicio har\xEDa algo as\xED?!"
+        - "Ahora las cabras del vecino mugen y son m\xE1s amigables. \xA1Y hasta
+          dan leche de vaca!"
+        - "Todo esto es una locura, \xBFpero el problema se ha solucionado, supongo?"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Con esa decisi\xF3n, parece que vas a ayudarme a resolver una duda que
+            ten\xEDa."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "A\xFAn cuando la naturaleza se vuelve confusa, ha de seguir su curso."
+        m_Repercusion:
+          m_ID:
+            m_NameID: cows_and_goats_reversed
+            m_ID: 739513102
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: crazy_cows
+            m_ID: -112750320
+            m_Initialized: 1
+          m_Name: Cows and goats reversed
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: meri
+            m_ID: -918260377
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Esta ma\xF1ana he encontrado un frasco vac\xEDo junto al pienso normal
+          que suelo darle a mis vacas."
+        - Parece ser que alguien vino por la noche a vaciar el contenido del frasco
+          sobre el pienso.
+        - "Por suerte parece que el efecto del l\xEDquido ha sido revertir en parte
+          la transformaci\xF3n de las vacas."
+        - Ahora al menos se han tranquilizado y siguen dando leche de vaca.
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFEn serio vas a ayudar a que vuelvan a la normalidad? \xA1Yo quer\xEDa
+            hasta donde llegaba la cosa!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - Es mejor que la naturaleza siga su curso. Hay cosas que es mejor dejar
+            inalteradas.
+        m_Repercusion:
+          m_ID:
+            m_NameID: cows_back_to_normal
+            m_ID: 1494518570
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: crazy_cows
+            m_ID: -112750320
+            m_Initialized: 1
+          m_Name: Cows back to normal
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: meri
+            m_ID: -918260377
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Esto es una locura! Mis vacas han comido m\xE1s pienso especial antes
+          de que pudiera deshacerme de \xE9l."
+        - "\xA1Ahora las vacas balan y se dan de cabezazos entre ellas!"
+        - "A este paso voy a tener que dedicarme al pastoreo de cabras. \xA1\xBFPor
+          qu\xE9 me pasa esto a m\xED?!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFEntonces cualquier cosa que se coma el pienso especial ser\xE1 transformado
+            en cabra? \xBFQu\xE9 ocurrir\xEDa entonces si se lo echan a las cabras?"
+        - m_DeityID: 0
+          m_Dialogue:
+          - Si Evith se comiera el pienso especial, no creo que le surte efecto.
+            Ya presenta cualidades de cabra.
+        m_Repercusion:
+          m_ID:
+            m_NameID: cows_transformed
+            m_ID: 1469249696
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: crazy_cows
+            m_ID: -112750320
+            m_Initialized: 1
+          m_Name: Cows transformed
+          m_Active: 0
+          m_Value: -15
+      m_AllPossibleTargets:
+      - m_NameID: meri
+        m_ID: -918260377
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
   m_Repercusions:
   - m_ID:
       m_NameID: wolves_gone
@@ -2250,6 +3383,138 @@ MonoBehaviour:
     m_Name: Golden Egg Gone
     m_Active: 0
     m_Value: -15
+  - m_ID:
+      m_NameID: ms_chocolate_sabotaged
+      m_ID: -1115469212
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: explosive_chocolate
+      m_ID: -819324724
+      m_Initialized: 1
+    m_Name: MS Chocolate Sabotaged
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: ms_chocolate_gunpowder
+      m_ID: -1828434159
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: explosive_chocolate
+      m_ID: -819324724
+      m_Initialized: 1
+    m_Name: MS Chocolate Gunpowder
+    m_Active: 0
+    m_Value: 15
+  - m_ID:
+      m_NameID: ms_chocolate_pepper
+      m_ID: -838266464
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: explosive_chocolate
+      m_ID: -819324724
+      m_Initialized: 1
+    m_Name: MS Chocolate Pepper
+    m_Active: 0
+    m_Value: 15
+  - m_ID:
+      m_NameID: smart_rats_stay
+      m_ID: -333686544
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: not_so_dirty_rats
+      m_ID: 1589037026
+      m_Initialized: 1
+    m_Name: Smart rats stay
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: smart_rats_gone
+      m_ID: 244518502
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: not_so_dirty_rats
+      m_ID: 1589037026
+      m_Initialized: 1
+    m_Name: Smart rats gone
+    m_Active: 0
+    m_Value: 15
+  - m_ID:
+      m_NameID: smart_rats_tribute
+      m_ID: 138659744
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: not_so_dirty_rats
+      m_ID: 1589037026
+      m_Initialized: 1
+    m_Name: Smart rats tribute
+    m_Active: 0
+    m_Value: 15
+  - m_ID:
+      m_NameID: mayor_assaulted
+      m_ID: 1982058079
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: stingy_taxes
+      m_ID: 1184286464
+      m_Initialized: 1
+    m_Name: Mayor assaulted
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: mayor_waste
+      m_ID: 745825927
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: stingy_taxes
+      m_ID: 1184286464
+      m_Initialized: 1
+    m_Name: Mayor waste
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: mayor_robbed
+      m_ID: -2038562937
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: stingy_taxes
+      m_ID: 1184286464
+      m_Initialized: 1
+    m_Name: Mayor robbed
+    m_Active: 0
+    m_Value: 15
+  - m_ID:
+      m_NameID: cows_transformed
+      m_ID: 1469249696
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: crazy_cows
+      m_ID: -112750320
+      m_Initialized: 1
+    m_Name: Cows transformed
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: cows_back_to_normal
+      m_ID: 1494518570
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: crazy_cows
+      m_ID: -112750320
+      m_Initialized: 1
+    m_Name: Cows back to normal
+    m_Active: 0
+    m_Value: 15
+  - m_ID:
+      m_NameID: cows_and_goats_reversed
+      m_ID: 739513102
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: crazy_cows
+      m_ID: -112750320
+      m_Initialized: 1
+    m_Name: Cows and goats reversed
+    m_Active: 0
+    m_Value: -15
   m_RepercusionNewspaperArticles:
   - m_RepID:
       m_NameID: wolves_gone
@@ -2305,43 +3570,185 @@ MonoBehaviour:
     m_Body: "El Huevo Dorado, el artefacto que iba a ser la joya de la colecci\xF3n
       de la prestigiosa Canela N Rama, ha sido retirado de la exposici\xF3n. La coleccionista
       insinu\xF3 que el artefacto podr\xEDa estar maldito"
+  - m_RepID:
+      m_NameID: ms_chocolate_sabotaged
+      m_ID: -1115469212
+      m_Initialized: 1
+    m_Title: Accidente explosivo.
+    m_Body: "La explosi\xF3n que despert\xF3 a todos los vecinos del pueblo fu\xE9
+      causa de un accidente por parte de Miss Chocolate la Bomb, una chocolatera
+      local. La chocolatera se encuentra ilesa y se ha disculpado p\xFAblicamente."
+  - m_RepID:
+      m_NameID: ms_chocolate_gunpowder
+      m_ID: -1828434159
+      m_Initialized: 1
+    m_Title: Experimentos explosivos.
+    m_Body: "Los experimentos de Miss Chocolate la Bomb tienen preocupados a toda
+      la comunidad de vecinos tras adquirir grandes cantidades de p\xF3lvora. \xBFQu\xE9
+      es lo que pretende la chocolatera?"
+  - m_RepID:
+      m_NameID: ms_chocolate_pepper
+      m_ID: -838266464
+      m_Initialized: 1
+    m_Title: "El nuevo ingrediente secreto que revolucionar\xE1 la chocolater\xEDa."
+    m_Body: "La comunidad de chocolateros de la regi\xF3n se encuentra intrigada
+      ante el nuevo ingrediente que utilizar\xE1 Miss Chocolate la Bomb en sus productos,
+      la pimienta."
+  - m_RepID:
+      m_NameID: smart_rats_stay
+      m_ID: -333686544
+      m_Initialized: 1
+    m_Title: Los nuevos vecinos roedores.
+    m_Body: "Una colonia de ratas aparentemente inteligentes se ha establecido en
+      el granero de un granjero local. El due\xF1o de la granja expresa su disgusto
+      con la situaci\xF3n."
+  - m_RepID:
+      m_NameID: smart_rats_gone
+      m_ID: 244518502
+      m_Initialized: 1
+    m_Title: "La ca\xEDda de la sociedad de las ratas."
+    m_Body: La colonia de ratas aparentemente inteligentes que atormentaba los cultivos
+      de los granjeros locales parece haberse disuelto, para el contento de todos.
+  - m_RepID:
+      m_NameID: smart_rats_tribute
+      m_ID: 138659744
+      m_Initialized: 1
+    m_Title: "\xBFRelaci\xF3n simbi\xF3tica entre humanos y ratas?"
+    m_Body: "La ancestral relaci\xF3n de odio entre humanos y ratas podr\xEDa llegar
+      a su fin. Una colonia de ratas inteligentes coopera con un granjero local a
+      cambio de cobijo en su granero. El due\xF1o de la granja niega tales afirmaciones."
+  - m_RepID:
+      m_NameID: mayor_assaulted
+      m_ID: 1982058079
+      m_Initialized: 1
+    m_Title: El misterioso agresor nocturno.
+    m_Body: "Nuestro alcalde ha sido asaltado mientras paseaba por un misterioso
+      atacante. Se cree que es un ciudadano descontento con la reciente recaudaci\xF3n
+      de impuestos."
+  - m_RepID:
+      m_NameID: mayor_waste
+      m_ID: 745825927
+      m_Initialized: 1
+    m_Title: Las nuevas reformas.
+    m_Body: "Gracias a la exitosa recaudaci\xF3n de impuestos, el alcalde contin\xFAa
+      con su proyecto de embellecer el pueblo a pesar de las voces cr\xEDticas de
+      muchos vecinos."
+  - m_RepID:
+      m_NameID: mayor_robbed
+      m_ID: -2038562937
+      m_Initialized: 1
+    m_Title: "El ladr\xF3n misterioso."
+    m_Body: "Un misterioso desconocido ha robado los fondos recaudados recientemente
+      y los ha devuelto a los vecinos del pueblo. Algunos lo aclaman como un h\xE9roe
+      sin corcel."
+  - m_RepID:
+      m_NameID: cows_transformed
+      m_ID: 1469249696
+      m_Initialized: 1
+    m_Title: "\xBFLa epidemia de las vacas locas?"
+    m_Body: "Las vacas de una ganadera local han sufrido una extra\xF1a transformaci\xF3n
+      que las ha convertido en cabras. Los vecinos tienen miedo de que sea contagioso."
+  - m_RepID:
+      m_NameID: cows_back_to_normal
+      m_ID: 1494518570
+      m_Initialized: 1
+    m_Title: Las vacas todoterreno.
+    m_Body: "Las vacas de una ganadera local se han convertido en el centro de atenci\xF3n
+      de la comunidad ganadera tras ver las impactantes im\xE1genes de vacas escalando
+      riscos."
+  - m_RepID:
+      m_NameID: cows_and_goats_reversed
+      m_ID: 739513102
+      m_Initialized: 1
+    m_Title: "Confusi\xF3n ganadera."
+    m_Body: "Un extra\xF1o incidente ha provocado que las vacas se transformen en
+      cabras y las cabras en vacas. \xBFCu\xE1n confuso puede llegar a ser el mundo
+      en el que vivimos?"
   m_StoryUI:
   - m_ParentStoryID:
       m_NameID: mayor_problem
       m_ID: -600069758
       m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: 955648f86f7437c4d83f982a26431630, type: 3}
+    m_Sprite: {fileID: 0}
     m_Title: El Problema del Alcalde
   - m_ParentStoryID:
       m_NameID: out_of_lactose
       m_ID: 1134344292
       m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: 6f5f7f2fb0ff53544ade6dca2233f3f3, type: 3}
+    m_Sprite: {fileID: 0}
     m_Title: Falta de Lactosa
   - m_ParentStoryID:
       m_NameID: sacred_egg
       m_ID: 2133386136
       m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+    m_Sprite: {fileID: 0}
     m_Title: El Huevo Sagrado
+  - m_ParentStoryID:
+      m_NameID: explosive_chocolate
+      m_ID: -819324724
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+    m_Title: Chocolate explosivo
+  - m_ParentStoryID:
+      m_NameID: not_so_dirty_rats
+      m_ID: 1589037026
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+    m_Title: Ratas no tan sucias
+  - m_ParentStoryID:
+      m_NameID: stingy_taxes
+      m_ID: 1184286464
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+    m_Title: "Impuestos para el taca\xF1o"
+  - m_ParentStoryID:
+      m_NameID: crazy_cows
+      m_ID: -112750320
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+    m_Title: Las vacas locas
   m_References:
   - m_ParentStoryID:
       m_NameID: mayor_problem
       m_ID: -600069758
       m_Initialized: 1
-    m_StoryName: El Problema del Alcalde
-    m_StorySelectionUiSprite: {fileID: 21300000, guid: 955648f86f7437c4d83f982a26431630, type: 3}
+    m_StoryName: El problema del alcalde
+    m_StorySelectionUiSprite: {fileID: 0}
   - m_ParentStoryID:
       m_NameID: out_of_lactose
       m_ID: 1134344292
       m_Initialized: 1
     m_StoryName: Falta de lactosa
-    m_StorySelectionUiSprite: {fileID: 21300000, guid: 6f5f7f2fb0ff53544ade6dca2233f3f3, type: 3}
+    m_StorySelectionUiSprite: {fileID: 0}
   - m_ParentStoryID:
       m_NameID: sacred_egg
       m_ID: 2133386136
       m_Initialized: 1
     m_StoryName: El Huevo Sagrado
+    m_StorySelectionUiSprite: {fileID: 0}
+  - m_ParentStoryID:
+      m_NameID: explosive_chocolate
+      m_ID: -819324724
+      m_Initialized: 1
+    m_StoryName: Chocolate explosivo
+    m_StorySelectionUiSprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+  - m_ParentStoryID:
+      m_NameID: not_so_dirty_rats
+      m_ID: 1589037026
+      m_Initialized: 1
+    m_StoryName: Ratas no tan sucias
+    m_StorySelectionUiSprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+  - m_ParentStoryID:
+      m_NameID: stingy_taxes
+      m_ID: 1184286464
+      m_Initialized: 1
+    m_StoryName: "Impuestos para el taca\xF1o"
+    m_StorySelectionUiSprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+  - m_ParentStoryID:
+      m_NameID: crazy_cows
+      m_ID: -112750320
+      m_Initialized: 1
+    m_StoryName: Las vacas locas
     m_StorySelectionUiSprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
 --- !u!114 &6330534342466683427
 MonoBehaviour:

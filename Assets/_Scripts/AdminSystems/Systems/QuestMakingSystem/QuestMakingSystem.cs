@@ -35,9 +35,7 @@ public class QuestMakingSystem : ISystemEvents
     {
         // We generate garbage when selecting a story multiple times
         // but wachugonadu its not a priority right now
-        m_Data = new QMGameplayData();
         m_Data.m_StoryID = storyId;
-        m_Data.m_CurrentQuest = new QuestDataComponent();
     }
 
     public void AddPiece(QuestPieceFunctionalComponent piece)
@@ -110,7 +108,7 @@ public struct StorySys_CompleteStoyEvtArgs
 
 public class QMGameplayData
 {
-    public QuestDataComponent m_CurrentQuest;
+    public QuestDataComponent m_CurrentQuest = new QuestDataComponent();
     public bool m_CookieAdded;
     public bool m_TargetAdded;
     public bool m_ActionAdded;

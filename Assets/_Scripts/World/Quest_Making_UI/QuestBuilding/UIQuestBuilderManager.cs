@@ -54,6 +54,13 @@ namespace CQM.UI.QuestMakingTable
 
         private void OnEnable()
         {
+            // Clear all the pieces only if a different story has been selected
+            if (_previousStoryID != _state.m_SelectedStoryID)
+            {
+                ClearAllPieces();
+            }
+            _previousStoryID = _state.m_SelectedStoryID;
+
             // Register Sockets Events
             for (int i = 0; i < _sockets.Count; i++)
             {
@@ -70,14 +77,6 @@ namespace CQM.UI.QuestMakingTable
             _finishQuestButton.onClick.AddListener(OnFinishQuestButtonClicked);
             _exitButton.onClick.AddListener(OnExitButton);
             _openStorageButton.onClick.AddListener(OnOpenStorageButton);
-
-
-            // Clear all the pieces only if a different story has been selected
-            if (_previousStoryID != _state.m_SelectedStoryID)
-            {
-                ClearAllPieces();
-            }
-            _previousStoryID = _state.m_SelectedStoryID;
         }
 
         private void OnDisable()
