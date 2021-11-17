@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 2039540421586444387}
   - component: {fileID: 1495865845857660757}
   - component: {fileID: 8684596141616565838}
+  - component: {fileID: 4622157071153643714}
   m_Layer: 5
   m_Name: Btn_News
   m_TagString: Untagged
@@ -208,6 +209,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c2c6fa024add454db4cb735eb696a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4622157071153643714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2947505048392824298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def2f8acd81d36141b022d4a51731e9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clipIDName: bell_sound_1
 --- !u!1 &4265434107107166167
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,6 +521,7 @@ GameObject:
   - component: {fileID: 3622767694951742268}
   - component: {fileID: 2709508808410571958}
   - component: {fileID: 1809563409110735868}
+  - component: {fileID: 7266685563101020066}
   m_Layer: 5
   m_Name: Btn_Town
   m_TagString: Untagged
@@ -627,6 +642,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18635bbee776bdf4387c237fc5d47521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7266685563101020066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7773108690712190729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def2f8acd81d36141b022d4a51731e9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clipIDName: bell_sound_1
 --- !u!1 &8508552006714502968
 GameObject:
   m_ObjectHideFlags: 0
