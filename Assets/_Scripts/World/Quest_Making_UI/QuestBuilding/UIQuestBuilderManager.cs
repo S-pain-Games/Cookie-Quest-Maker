@@ -19,7 +19,6 @@ namespace CQM.UI.QuestMakingTable
         public event Action OnFinishQuest;
 
         QuestMakerTableState _state;
-        private ID _previousStoryID;
 
         public Transform pieceSpawnPosition;
         [SerializeField] private Button _finishQuestButton;
@@ -50,16 +49,6 @@ namespace CQM.UI.QuestMakingTable
             var evtSys = Admin.Global.EventSystem;
             _addPieceCmd = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_piece");
             _removePieceCmd = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "remove_piece");
-        }
-
-        private void OnEnable()
-        {
-            // Clear all the pieces only if a different story has been selected
-            if (_previousStoryID != _state.m_SelectedStoryID)
-            {
-                ClearAllPieces();
-            }
-            _previousStoryID = _state.m_SelectedStoryID;
 
             // Register Sockets Events
             for (int i = 0; i < _sockets.Count; i++)
@@ -79,45 +68,17 @@ namespace CQM.UI.QuestMakingTable
             _openStorageButton.onClick.AddListener(OnOpenStorageButton);
         }
 
-        private void OnDisable()
-        {
-            UnregisterPiecesAndSocketsEvents();
-            _finishQuestButton.onClick.RemoveListener(OnFinishQuestButtonClicked);
-            _exitButton.onClick.RemoveListener(OnExitButton);
-            _openStorageButton.onClick.RemoveListener(OnOpenStorageButton);
-        }
-
-
         public void Initialize(QuestMakerTableState state, Canvas canvas)
         {
             _state = state;
             _canvas = canvas;
         }
 
-        private void UnregisterPiecesAndSocketsEvents()
+        public void ReturnAllPiecesToStorage()
         {
-            // Unregister Socket Events
             for (int i = 0; i < _sockets.Count; i++)
-            {
-                _sockets[i].OnPieceSocketed -= OnPieceSocketedHandle;
-                _sockets[i].OnPieceUnsocketed -= OnPieceUnsocketedHandle;
-            }
-
-            // Unregister Pieces Events
-            for (int i = 0; i < _questPieces.Count; i++)
-            {
-                _questPieces[i].OnSelected -= OnPieceSelectedBroadcast;
-                _questPieces[i].OnUnselect -= OnPieceUnselectedBroadcast;
-            }
-        }
-
-        public void ClearAllPieces()
-        {
-            UnregisterPiecesAndSocketsEvents();
-            for (int i = 0; i < _sockets.Count; i++)
-            {
                 _sockets[i].Clear();
-            }
+
             for (int i = 0; i < _questPieces.Count; i++)
             {
                 _addPieceCmd.Invoke(new ItemData(_questPieces[i].Piece.m_ID, 1));
@@ -126,13 +87,11 @@ namespace CQM.UI.QuestMakingTable
             _questPieces.Clear();
         }
 
-        public void ConsumeQuest()
+        public void ConsumeAllPieces()
         {
-            UnregisterPiecesAndSocketsEvents();
             for (int i = 0; i < _sockets.Count; i++)
-            {
                 _sockets[i].Clear();
-            }
+
             for (int i = 0; i < _questPieces.Count; i++)
             {
                 Destroy(_questPieces[i].gameObject); // Pooling?

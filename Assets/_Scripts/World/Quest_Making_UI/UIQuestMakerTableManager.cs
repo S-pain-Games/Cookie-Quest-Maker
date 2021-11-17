@@ -36,72 +36,98 @@ namespace CQM.UI.QuestMakingTable
 
         private void OnEnable()
         {
-            _questBuilding.OnAddQuestPiece += AddPieceToQuestHandle;
-            _questBuilding.OnRemoveQuestPiece += RemovePieceFromQuestHandle;
-            _questBuilding.OnFinishQuest += FinishQuestHandle;
+            _questBuilding.OnAddQuestPiece += AddPieceToQuest;
+            _questBuilding.OnRemoveQuestPiece += RemovePieceFromQuest;
+            _questBuilding.OnFinishQuest += FinishQuestMaking;
             _questBuilding.OnExit += EnableStorySelection;
             _questBuilding.OnOpenStorage += EnablePieceStorage;
 
-            _pieceStorage.OnPickPiece += PieceTakenOutOfStorageHandle;
+            _pieceStorage.OnPickPiece += TakePieceOutOfStorage;
             _pieceStorage.OnExit += EnableQuestBuilding;
 
-            _storySelection.OnStorySelected += StorySelection_OnStorySelected;
-            _storySelection.OnExit += ExitTableHandle;
+            _storySelection.OnStorySelected += SelectStory;
+            _storySelection.OnExit += ExitTable;
 
             EnableStorySelection();
         }
 
         private void OnDisable()
         {
-            _questBuilding.OnAddQuestPiece -= AddPieceToQuestHandle;
-            _questBuilding.OnRemoveQuestPiece -= RemovePieceFromQuestHandle;
-            _questBuilding.OnFinishQuest -= FinishQuestHandle;
+            _questBuilding.OnAddQuestPiece -= AddPieceToQuest;
+            _questBuilding.OnRemoveQuestPiece -= RemovePieceFromQuest;
+            _questBuilding.OnFinishQuest -= FinishQuestMaking;
             _questBuilding.OnExit -= EnableStorySelection;
             _questBuilding.OnOpenStorage -= EnablePieceStorage;
 
-            _pieceStorage.OnPickPiece -= PieceTakenOutOfStorageHandle;
+            _pieceStorage.OnPickPiece -= TakePieceOutOfStorage;
             _pieceStorage.OnExit -= EnableQuestBuilding;
 
-            _storySelection.OnStorySelected -= StorySelection_OnStorySelected;
-            _storySelection.OnExit -= ExitTableHandle;
+            _storySelection.OnStorySelected -= SelectStory;
+            _storySelection.OnExit -= ExitTable;
         }
 
 
-        private void StorySelection_OnStorySelected(ID storyId)
+        private void SelectStory(ID storyId)
         {
             EnableQuestBuilding();
             m_State.m_SelectedStoryID = storyId;
             _questMakingSys.SelectStory(storyId);
+
+
+            // Clear all the pieces only if a different story has been selected
+            var s = m_State;
+            if (s.m_PreviousStoryID != s.m_SelectedStoryID)
+            {
+                _questBuilding.ReturnAllPiecesToStorage();
+            }
+            s.m_PreviousStoryID = s.m_SelectedStoryID;
         }
 
-
-        private void RemovePieceFromQuestHandle(QuestPieceFunctionalComponent piece)
+        private void RemovePieceFromQuest(QuestPieceFunctionalComponent piece)
         {
-            m_State.m_PiecesInUse.Remove(piece.m_ID);
-            _questMakingSys.RemovePiece(piece);
+            m_State.m_PiecesInUse.Remove(piece);
         }
 
-        private void AddPieceToQuestHandle(QuestPieceFunctionalComponent piece)
+        private void AddPieceToQuest(QuestPieceFunctionalComponent piece)
         {
-            m_State.m_PiecesInUse.Add(piece.m_ID);
-            _questMakingSys.AddPiece(piece);
+            m_State.m_PiecesInUse.Add(piece);
         }
 
-        private void FinishQuestHandle()
+        private void FinishQuestMaking()
         {
+            for (int i = 0; i < m_State.m_PiecesInUse.Count; i++)
+            {
+                var p = m_State.m_PiecesInUse[i];
+                _questMakingSys.AddPiece(p);
+            }
+
             if (_questMakingSys.TryFinishMakingQuest())
             {
-                _questBuilding.ConsumeQuest();
+                for (int i = 0; i < m_State.m_PiecesInUse.Count; i++)
+                {
+                    var p = m_State.m_PiecesInUse[i];
+                    _questMakingSys.RemovePiece(p);
+                }
+
+                _questBuilding.ConsumeAllPieces();
                 _toggleQuestMakingUI.Invoke();
+            }
+            else
+            {
+                for (int i = 0; i < m_State.m_PiecesInUse.Count; i++)
+                {
+                    var p = m_State.m_PiecesInUse[i];
+                    _questMakingSys.RemovePiece(p);
+                }
             }
         }
 
-        private void ExitTableHandle()
+        private void ExitTable()
         {
             _toggleQuestMakingUI.Invoke();
         }
 
-        private void PieceTakenOutOfStorageHandle(ID pieceID)
+        private void TakePieceOutOfStorage(ID pieceID)
         {
             EnableQuestBuilding();
             _questBuilding.SpawnPiece(pieceID);
@@ -134,7 +160,8 @@ namespace CQM.UI.QuestMakingTable
     [System.Serializable]
     public class QuestMakerTableState
     {
+        public ID m_PreviousStoryID;
         public ID m_SelectedStoryID;
-        public List<ID> m_PiecesInUse = new List<ID>();
+        public List<QuestPieceFunctionalComponent> m_PiecesInUse = new List<QuestPieceFunctionalComponent>();
     }
 }

@@ -26,8 +26,9 @@ namespace CQM.UI.QuestMakingTable
 
         public void Clear()
         {
-            m_Filled = false;
-            m_CurrentPiece = null;
+            //m_Filled = false;
+            //m_CurrentPiece = null;
+            RemovePiece();
             GetComponent<Image>().color = m_BaseColor;
         }
 
