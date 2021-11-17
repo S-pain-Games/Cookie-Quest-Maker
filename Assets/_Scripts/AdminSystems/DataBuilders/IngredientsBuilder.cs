@@ -3,19 +3,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CQM.AssetReferences;
 
 public class IngredientsBuilder : MonoBehaviour
 {
-    [SerializeField] private List<IngredientComponent> m_IngredientsList = new List<IngredientComponent>();
 
-    [SerializeField] private List<IngredientReferences> m_References = new List<IngredientReferences>();
+    [SerializeField] private IngredientsReferencesDatabase _ingredientsReferences;
+
+    [SerializeField] private List<IngredientComponent> m_IngredientsList = new List<IngredientComponent>();
 
     private IngredientComponent i;
 
     public void LoadDataFromCode()
     {
         m_IngredientsList.Clear();
-        m_References.Clear();
 
         CreateIngredient("masa_de_galletas_encantada", "Masa de galletas encantada", 0, Reputation.GoodCookieReputation);
         CreateIngredient("compota_de_mora_infernal", "Compota de mora infernal", 0, Reputation.EvilCookieReputation);
@@ -38,20 +39,6 @@ public class IngredientsBuilder : MonoBehaviour
         }
     }
 
-    public void ApplyReferences()
-    {
-        for (int i = 0; i < m_References.Count; i++)
-        {
-            var reference = m_References[i];
-            for (int j = 0; j < m_IngredientsList.Count; j++)
-            {
-                var ingredient = m_IngredientsList[j];
-                if (ingredient.m_ID == reference.m_ID)
-                    ingredient.m_Sprite = reference.m_Sprite;
-            }
-        }
-    }
-
     private void CreateIngredient(string idName, string name, int price, Reputation repType)
     {
         i = new IngredientComponent();
@@ -59,24 +46,7 @@ public class IngredientsBuilder : MonoBehaviour
         i.m_Name = name;
         i.m_Price = price;
         i.m_ReputationTypePrice = repType;
+        i.m_Sprite = _ingredientsReferences.GetSprite(i.m_ID);
         m_IngredientsList.Add(i);
-
-        var r = new IngredientReferences();
-        r.m_ID = i.m_ID;
-        r.m_Name = i.m_Name;
-        r.m_Price = price;
-        r.m_ReputationTypePrice = repType;
-        m_References.Add(r);
-    }
-
-    [System.Serializable]
-    private class IngredientReferences
-    {
-        [HideInInspector]
-        public ID m_ID;
-        public string m_Name;
-        public Sprite m_Sprite;
-        public Reputation m_ReputationTypePrice;
-        public int m_Price;
     }
 }
