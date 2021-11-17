@@ -41,7 +41,7 @@ namespace CQM.UI.QuestMakingTable
             _raycaster = canvas.GetComponent<GraphicRaycaster>();
             Piece = piece;
             _draggable.Initialize(canvas);
-            _image.sprite = uiData.m_QuestBuildingSprite;
+            _image.sprite = uiData.m_CookiePieceSprite;
         }
 
         private void Awake()

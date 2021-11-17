@@ -266,200 +266,250 @@ MonoBehaviour:
     m_Type: 1
     m_Tags: []
   m_QuestPieceUIComponent:
-  - m_Sprite: {fileID: 21300000, guid: 7afe679d93622b64587e17f8edf29859, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: adc4d268e55a60c438be560b26614ddb, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: 7afe679d93622b64587e17f8edf29859, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: adc4d268e55a60c438be560b26614ddb, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 2207a64eb580998469702472070a540b, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 75da8650bae999440805dc073705a1ef, type: 3}
     m_Name: Galleta normal
     m_Description: Es una galleta normal.
     m_ID:
       m_NameID: plain_cookie
       m_ID: 1473648501
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: 9765c5238660b4d4ebe852b6572540b7, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: b70affcf69ee9034fa79a8efeca045cb, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: 9765c5238660b4d4ebe852b6572540b7, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: b70affcf69ee9034fa79a8efeca045cb, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: f0d61aa930a04bf498b974d74cbad946, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: c434bc00fb4c06446864d5aef58eea6d, type: 3}
     m_Name: "La jaur\xEDa"
     m_Description: "Descripci\xF3n de galleta jaur\xEDa."
     m_ID:
       m_NameID: plain_cookie_2
       m_ID: 390974588
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: ae62f49ef96b51941a9c2a96e68de2cc, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: b51aca76c7c871941a08578d590aebb9, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: ae62f49ef96b51941a9c2a96e68de2cc, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: b51aca76c7c871941a08578d590aebb9, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: ae62f49ef96b51941a9c2a96e68de2cc, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: b51aca76c7c871941a08578d590aebb9, type: 3}
     m_Name: Attack
     m_Description: Very Agressive
     m_ID:
       m_NameID: attack
       m_ID: -143907494
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: 88210d859f042ba4f9a595a71155e01a, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: 85119a0d9cb3a444d9d8fc0394920391, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: 88210d859f042ba4f9a595a71155e01a, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 85119a0d9cb3a444d9d8fc0394920391, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 88210d859f042ba4f9a595a71155e01a, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 85119a0d9cb3a444d9d8fc0394920391, type: 3}
     m_Name: Dialogate
     m_Description: Very Assistive
     m_ID:
       m_NameID: dialogate
       m_ID: -949047606
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: d7ade6fb00e3d8945bdec751af798476, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: 508a82d941ad7684fb3a9a7fc82ef9f7, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: d7ade6fb00e3d8945bdec751af798476, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 508a82d941ad7684fb3a9a7fc82ef9f7, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: d7ade6fb00e3d8945bdec751af798476, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 508a82d941ad7684fb3a9a7fc82ef9f7, type: 3}
     m_Name: Assist
     m_Description: Very Assistive
     m_ID:
       m_NameID: assist
       m_ID: 223879643
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: 2684808f70b59be458db89c422593d90, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: 23f676d1f4a71db49b4a4b089729a845, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: 2684808f70b59be458db89c422593d90, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 23f676d1f4a71db49b4a4b089729a845, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 2684808f70b59be458db89c422593d90, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 23f676d1f4a71db49b4a4b089729a845, type: 3}
     m_Name: Look
     m_Description: Very Assistive
     m_ID:
       m_NameID: look
       m_ID: 963906251
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: df632e2db0369a841b39f4eee8d3ef67, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: 15f10baa2b52b044f80c8d7a883ed103, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: df632e2db0369a841b39f4eee8d3ef67, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 15f10baa2b52b044f80c8d7a883ed103, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: df632e2db0369a841b39f4eee8d3ef67, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 15f10baa2b52b044f80c8d7a883ed103, type: 3}
     m_Name: Stare
     m_Description: Very Assistive
     m_ID:
       m_NameID: stare
       m_ID: -1436242079
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: d21a7f9e36dcbb54181d0aa4c3ecff9b, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: a949079572f22904b844fb14a47f017c, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: d21a7f9e36dcbb54181d0aa4c3ecff9b, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: a949079572f22904b844fb14a47f017c, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: d21a7f9e36dcbb54181d0aa4c3ecff9b, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: a949079572f22904b844fb14a47f017c, type: 3}
     m_Name: Steal
     m_Description: Very Assistive
     m_ID:
       m_NameID: steal
       m_ID: 1742979855
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: b5b3a07137f48e649a5e9543177286da, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: 28b7d793a8173cc469991ac4c93c963a, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: b5b3a07137f48e649a5e9543177286da, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 28b7d793a8173cc469991ac4c93c963a, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: b5b3a07137f48e649a5e9543177286da, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 28b7d793a8173cc469991ac4c93c963a, type: 3}
     m_Name: Baseball Bat
     m_Description: Very Bat
     m_ID:
       m_NameID: baseball_bat
       m_ID: -673659770
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: a0cf0df16b02749429693b71b8257071, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: f675673fd14c4bc4f8eae48d78319d8c, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: a0cf0df16b02749429693b71b8257071, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: f675673fd14c4bc4f8eae48d78319d8c, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: a0cf0df16b02749429693b71b8257071, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: f675673fd14c4bc4f8eae48d78319d8c, type: 3}
     m_Name: Scissor
     m_Description: Very Bat
     m_ID:
       m_NameID: scissors
       m_ID: 224560939
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: 5970629215b8a004d940d4b90708917d, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: 381ea50766ff9e946a372f6f902de103, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: 5970629215b8a004d940d4b90708917d, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 381ea50766ff9e946a372f6f902de103, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 5970629215b8a004d940d4b90708917d, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 381ea50766ff9e946a372f6f902de103, type: 3}
     m_Name: Flip Flops
     m_Description: Very Bat
     m_ID:
       m_NameID: flip_flops
       m_ID: 738388376
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: ccfe033985c79e443a74ac9462574f5f, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: a238624f623ea254b9817bdf8c5cf92f, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: ccfe033985c79e443a74ac9462574f5f, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: a238624f623ea254b9817bdf8c5cf92f, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: ccfe033985c79e443a74ac9462574f5f, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: a238624f623ea254b9817bdf8c5cf92f, type: 3}
     m_Name: Cake
     m_Description: Very Bat
     m_ID:
       m_NameID: cake
       m_ID: -1966748430
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: e672bca8424e4a3478264902eac3108a, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: 6cfd658b7d0f18c4ca8c3aae2182d699, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: e672bca8424e4a3478264902eac3108a, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 6cfd658b7d0f18c4ca8c3aae2182d699, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: e672bca8424e4a3478264902eac3108a, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 6cfd658b7d0f18c4ca8c3aae2182d699, type: 3}
     m_Name: Violently
     m_Description: Very Bat
     m_ID:
       m_NameID: violently
       m_ID: -1715915298
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: 3325e3174902ee84ca5567e1cb9ab96f, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: e3393412cb8a53d4fa51facf3396c935, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: 3325e3174902ee84ca5567e1cb9ab96f, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: e3393412cb8a53d4fa51facf3396c935, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 3325e3174902ee84ca5567e1cb9ab96f, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: e3393412cb8a53d4fa51facf3396c935, type: 3}
     m_Name: Brutally
     m_Description: Very Bat
     m_ID:
       m_NameID: brutally
       m_ID: 83815085
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: 695672ac4af1c334d95857ce713a9865, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: 3309febc2aa5e6f4e9efba6cca370606, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: 695672ac4af1c334d95857ce713a9865, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 3309febc2aa5e6f4e9efba6cca370606, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 695672ac4af1c334d95857ce713a9865, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 3309febc2aa5e6f4e9efba6cca370606, type: 3}
     m_Name: Kindly
     m_Description: Very Bat
     m_ID:
       m_NameID: kindly
       m_ID: 2072750721
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: d508ff50a77a91149a524bcfecd0dbae, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: 2e42295ff8cff0f48a86871af9832f4e, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: d508ff50a77a91149a524bcfecd0dbae, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 2e42295ff8cff0f48a86871af9832f4e, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: d508ff50a77a91149a524bcfecd0dbae, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 2e42295ff8cff0f48a86871af9832f4e, type: 3}
     m_Name: Convincingly
     m_Description: Very Bat
     m_ID:
       m_NameID: convincingly
       m_ID: 1186496505
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: 5f6092fe08f678544afddc11f2f3a372, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: 4150cc859f149f846a48e1010b860bbb, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: 5f6092fe08f678544afddc11f2f3a372, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 4150cc859f149f846a48e1010b860bbb, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 5f6092fe08f678544afddc11f2f3a372, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 4150cc859f149f846a48e1010b860bbb, type: 3}
     m_Name: Mayor
     m_Description: Very Bat
     m_ID:
       m_NameID: mayor
       m_ID: 996742298
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: e174567cb3185b74c93c27244d9b10b3, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: fbc0e27999c58df4e97cac0a6de3a9ca, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: e174567cb3185b74c93c27244d9b10b3, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: fbc0e27999c58df4e97cac0a6de3a9ca, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: e174567cb3185b74c93c27244d9b10b3, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: fbc0e27999c58df4e97cac0a6de3a9ca, type: 3}
     m_Name: Mery
     m_Description: Very Bat
     m_ID:
       m_NameID: meri
       m_ID: -918260377
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: fdd8da237cda300459b69e475d759c52, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: 77eaa71558755064cbca8511be04e884, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: fdd8da237cda300459b69e475d759c52, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 77eaa71558755064cbca8511be04e884, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: fdd8da237cda300459b69e475d759c52, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 77eaa71558755064cbca8511be04e884, type: 3}
     m_Name: Canela
     m_Description: Very Bat
     m_ID:
       m_NameID: canela
       m_ID: -619351516
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: 1565e568885b5b14daf506d27e846fe9, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: eb7fe4a73bd33a940bfcaf4f93f10ae6, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: 1565e568885b5b14daf506d27e846fe9, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: eb7fe4a73bd33a940bfcaf4f93f10ae6, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 1565e568885b5b14daf506d27e846fe9, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: eb7fe4a73bd33a940bfcaf4f93f10ae6, type: 3}
     m_Name: Er Johny el setas
     m_Description: Very Bat
     m_ID:
       m_NameID: johny_setas
       m_ID: -840848411
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: 8a88bfda9c0714d4da7df2f566c1186b, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: 194898324a4688d4994fd80f5332beca, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: 8a88bfda9c0714d4da7df2f566c1186b, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 194898324a4688d4994fd80f5332beca, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 8a88bfda9c0714d4da7df2f566c1186b, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 194898324a4688d4994fd80f5332beca, type: 3}
     m_Name: Miss Chocolate
     m_Description: Very Bat
     m_ID:
       m_NameID: miss_chocolate
       m_ID: -370492881
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: 45f691e6b848f174d8bdeb543e53c344, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: 276ebad8f03140a4095c719e1cdd8a89, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: 45f691e6b848f174d8bdeb543e53c344, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 276ebad8f03140a4095c719e1cdd8a89, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 45f691e6b848f174d8bdeb543e53c344, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 276ebad8f03140a4095c719e1cdd8a89, type: 3}
     m_Name: El Mantecas
     m_Description: Very Bat
     m_ID:
       m_NameID: mantecas
       m_ID: 2085496002
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: dd1495d1750d7e9459816a04e37834d2, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: 403a1ba1c6f85974cbb303ca95a6312e, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: dd1495d1750d7e9459816a04e37834d2, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 403a1ba1c6f85974cbb303ca95a6312e, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: dd1495d1750d7e9459816a04e37834d2, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 403a1ba1c6f85974cbb303ca95a6312e, type: 3}
     m_Name: Lobos
     m_Description: Very Bat
     m_ID:
       m_NameID: wolves
       m_ID: -1938852922
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: 9f691ae598fbf9c4d8eaf18c535bc69c, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: 4766e9563f9dbd244a1c536253f95ce8, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: 9f691ae598fbf9c4d8eaf18c535bc69c, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 4766e9563f9dbd244a1c536253f95ce8, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 9f691ae598fbf9c4d8eaf18c535bc69c, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 4766e9563f9dbd244a1c536253f95ce8, type: 3}
     m_Name: Ratas
     m_Description: Very Bat
     m_ID:
       m_NameID: rats
       m_ID: -1872639626
       m_Initialized: 1
-  - m_Sprite: {fileID: 21300000, guid: 80b5879500c194c4b9257f212baf50d9, type: 3}
-    m_QuestBuildingSprite: {fileID: 21300000, guid: 95f2385038877f64cb098fb629af4685, type: 3}
+  - m_SimpleSprite: {fileID: 21300000, guid: 80b5879500c194c4b9257f212baf50d9, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 95f2385038877f64cb098fb629af4685, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 80b5879500c194c4b9257f212baf50d9, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 95f2385038877f64cb098fb629af4685, type: 3}
     m_Name: Vacas
     m_Description: Deep Mooooo
     m_ID:

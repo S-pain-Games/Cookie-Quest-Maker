@@ -5,7 +5,7 @@ using UnityEditor;
 using CQM.AssetReferences;
 
 
-[CustomPropertyDrawer(typeof(CookieReferencesDatabase.CookieAssetReferences))]
+[CustomPropertyDrawer(typeof(CookieReferencesDatabase.PieceAssetReferences))]
 public class SpritesReferencesPropDrawer : PropertyDrawer
 {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)

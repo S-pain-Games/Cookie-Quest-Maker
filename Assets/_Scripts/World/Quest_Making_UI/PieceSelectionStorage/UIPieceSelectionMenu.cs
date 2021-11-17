@@ -129,7 +129,7 @@ namespace CQM.UI.QuestMakingTable
             if (l != null)
                 harm = l.m_Value;
 
-            _uiSelectedPieceView.UpdateUI(UIPieceData.m_Sprite, UIPieceData.m_Name, UIPieceData.m_Description, convince, help, harm);
+            _uiSelectedPieceView.UpdateUI(UIPieceData.m_SimpleSprite, UIPieceData.m_Name, UIPieceData.m_Description, convince, help, harm);
         }
 
         public void UsePieceButton_OnClick()

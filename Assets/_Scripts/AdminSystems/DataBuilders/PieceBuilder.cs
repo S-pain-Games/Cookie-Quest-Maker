@@ -327,8 +327,19 @@ namespace CQM.Databases
             _cookieData.m_CookieName = name;
             _cookieData.m_CookieDescription = description;
 
-            _uiQP.m_Sprite = _cookieReferences.GetSimpleSprite(_uiQP.m_ID);
-            _uiQP.m_QuestBuildingSprite = _cookieReferences.GetFullSprite(_uiQP.m_ID);
+            ID id = _uiQP.m_ID;
+            _uiQP.m_SimpleSprite = _cookieReferences.GetSimpleSprite(id);
+            _uiQP.m_CookiePieceSprite = _cookieReferences.GetFullSprite(id);
+
+            if (_cookieReferences.GetHDSprite(id, out Sprite hdSprite))
+                _uiQP.m_HDSprite = hdSprite;
+            else
+                _uiQP.m_HDSprite = _uiQP.m_SimpleSprite;
+
+            if (_cookieReferences.GetShopRecipeSprite(id, out Sprite recipeShopSprite))
+                _uiQP.m_ShopRecipeSprite = recipeShopSprite;
+            else
+                _uiQP.m_ShopRecipeSprite = _uiQP.m_CookiePieceSprite;
         }
 
         private void SetRecipeData(string name, string description, Reputation repType, int price)

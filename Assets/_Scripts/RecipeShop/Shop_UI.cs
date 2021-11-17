@@ -185,7 +185,7 @@ public class Shop_UI : MonoBehaviour
             else
                 text_buy.text = "¡Comprado!";
 
-            image_recipe.sprite = pieceUI.m_Sprite;
+            image_recipe.sprite = pieceUI.m_SimpleSprite;
         }
         else
         {
