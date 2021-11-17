@@ -6,7 +6,9 @@ namespace CQM.Components
     {
         // IDs of the stories in the order in which they will be started
         public List<ID> m_MainStoriesToStartOrder = new List<ID>();
-        public List<ID> m_SecondaryStories = new List<ID>();
+        public List<ID> m_AvailableSecondaryStoriesToStart = new List<ID>();
+
+        public List<ID> m_AllSecondaryStories = new List<ID>();
 
         public List<ID> m_OngoingStories = new List<ID>();
         // Stories which were completed with a quest but the player hasnt seen the result yet

@@ -55,7 +55,7 @@ namespace CQM.Systems
             // The completed stories should be "finalized" when the player has seen the 
             // repercusion dialogue not when the dialogue is assigned to an npc
 
-            List<ID> secondaryStoriesToStart = SelectSecondaryStories(1);
+            List<ID> secondaryStoriesToStart = SelectSecondaryStories(3);
             List<ID> availableNPCs = SelectAvailableNPCs();
 
             List<ID> allStoriesToFinalize = SelectStoriesThatHaveToBeFinalized(_storiesStateComponent.m_CompletedStories, 3);
@@ -112,8 +112,8 @@ namespace CQM.Systems
                 }
                 else
                 {
-                    StartSecondaryStory(secondaryStoriesToStart, npcData);
                     FinalizeSecondaryStory(secondaryStoriesToFinalize, npcData);
+                    StartSecondaryStory(secondaryStoriesToStart, npcData);
 
                     if (npcData.m_Dialogue.Count == 0) npcData.m_Dialogue.Add("What a nice day [NO SECONDARY STORIES]");
                 }
@@ -160,7 +160,7 @@ namespace CQM.Systems
             for (int i = 0; i < allStoriesToFinalize.Count; i++)
             {
                 var storyID = allStoriesToFinalize[i];
-                if (_storiesStateComponent.m_SecondaryStories.Contains(storyID))
+                if (_storiesStateComponent.m_AllSecondaryStories.Contains(storyID))
                     secStories.Add(storyID);
             }
             return secStories;
@@ -169,13 +169,13 @@ namespace CQM.Systems
         private List<ID> SelectSecondaryStories(int num)
         {
             List<ID> secondaryStories = new List<ID>();
-            var l = _storiesStateComponent.m_SecondaryStories;
+            var l = _storiesStateComponent.m_AvailableSecondaryStoriesToStart;
+            var length = Mathf.Min(num, l.Count);
             if (l.Count == 0) return secondaryStories;
 
-            for (int i = 0; i < num; i++)
+            for (int i = 0; i < length; i++)
             {
-                int index = (num + UnityEngine.Random.Range(0, 10)) % l.Count;
-                secondaryStories.Add(l[index]);
+                secondaryStories.Add(l[i]);
             }
             return secondaryStories;
         }
@@ -201,7 +201,7 @@ namespace CQM.Systems
             {
                 // If one of the missions that have to be finalized is not a secondary mission
                 // that means that we dont have to start a new mission today
-                if (!_storiesStateComponent.m_SecondaryStories.Contains(storiesToFinalize[i]))
+                if (!_storiesStateComponent.m_AllSecondaryStories.Contains(storiesToFinalize[i]))
                 {
                     should = false;
                 }
@@ -211,7 +211,7 @@ namespace CQM.Systems
 
         private bool IsMainStory(ID storyID)
         {
-            if (!_storiesStateComponent.m_SecondaryStories.Contains(storyID))
+            if (!_storiesStateComponent.m_AllSecondaryStories.Contains(storyID))
                 return true;
             else
                 return false;

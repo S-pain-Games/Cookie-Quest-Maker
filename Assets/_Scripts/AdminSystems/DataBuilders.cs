@@ -25,7 +25,15 @@ namespace CQM.Databases
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("mayor_problem"));
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("out_of_lactose"));
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("sacred_egg"));
-            c.m_StoriesStateComponent.m_SecondaryStories.Add(new ID("explosive_chocolate"));
+
+            c.m_StoriesStateComponent.m_AvailableSecondaryStoriesToStart.Add(new ID("explosive_chocolate"));
+            c.m_StoriesStateComponent.m_AvailableSecondaryStoriesToStart.Add(new ID("not_so_dirty_rats"));
+            c.m_StoriesStateComponent.m_AvailableSecondaryStoriesToStart.Add(new ID("stingy_taxes"));
+            c.m_StoriesStateComponent.m_AvailableSecondaryStoriesToStart.Add(new ID("crazy_cows"));
+            c.m_StoriesStateComponent.m_AllSecondaryStories.Add(new ID("explosive_chocolate"));
+            c.m_StoriesStateComponent.m_AllSecondaryStories.Add(new ID("not_so_dirty_rats"));
+            c.m_StoriesStateComponent.m_AllSecondaryStories.Add(new ID("stingy_taxes"));
+            c.m_StoriesStateComponent.m_AllSecondaryStories.Add(new ID("crazy_cows"));
 
             c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("plain_cookie"));
             c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("attack"));

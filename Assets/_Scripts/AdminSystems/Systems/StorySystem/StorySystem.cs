@@ -70,7 +70,7 @@ public class StorySystem : ISystemEvents
         if (_primaryStoriesToStart.Contains(storyId))
             _primaryStoriesToStart.Remove(storyId);
         else
-            _storiesStateComponent.m_SecondaryStories.Remove(storyId);
+            _storiesStateComponent.m_AvailableSecondaryStoriesToStart.Remove(storyId);
 
         OnStoryStarted.Invoke(storyId);
     }
