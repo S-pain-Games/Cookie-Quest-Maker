@@ -49,7 +49,7 @@ public class DaySystem : ISystemEvents
     private void StoryCompletedCallback(ID storyId)
     {
         _dayData.m_StoriesCompletedToday += 1;
-        if (_dayData.m_StoriesCompletedToday >= 1)
+        if (_dayData.m_StoriesCompletedToday >= _dayData.m_StoriesToCompleteInADay)
         {
             _dailyStoriesCompleted.Invoke();
         }
@@ -73,4 +73,5 @@ public class DaySystem : ISystemEvents
 public class Singleton_DayComponent
 {
     public int m_StoriesCompletedToday = 0;
+    public int m_StoriesToCompleteInADay = 3;
 }
