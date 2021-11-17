@@ -31,6 +31,8 @@ namespace CQM.UI.QuestMakingTable
             _pieceFilteringMenu.OnPieceTypeSelected += PieceFiltering_OnFilterSelected;
             _pieceSelectionMenu.OnUsePiece += PieceSelection_OnUsePiece;
 
+            _pieceFilteringMenu.SetSelectedType(m_SelectedType);
+
             _exitButton.onClick.AddListener(OnExitButton);
         }
 

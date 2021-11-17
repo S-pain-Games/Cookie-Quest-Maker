@@ -17,7 +17,7 @@ namespace CQM.UI.QuestMakingTable
         {
             for (int i = 0; i < m_Buttons.Count; i++)
             {
-                m_Buttons[i].OnButtonClicked += ButtonClickedHandle;
+                m_Buttons[i].OnPieceTypeSelected += ButtonClickedHandle;
             }
         }
 
@@ -25,13 +25,27 @@ namespace CQM.UI.QuestMakingTable
         {
             for (int i = 0; i < m_Buttons.Count; i++)
             {
-                m_Buttons[i].OnButtonClicked -= ButtonClickedHandle;
+                m_Buttons[i].OnPieceTypeSelected -= ButtonClickedHandle;
             }
         }
 
         private void ButtonClickedHandle(QuestPieceFunctionalComponent.PieceType type)
         {
+            for (int i = 0; i < m_Buttons.Count; i++)
+            {
+                m_Buttons[i].SetAsUnselected();
+            }
+
+            var b = m_Buttons.Find((b) => b.PieceType == type);
+            b.SetAsSelected();
+
             OnPieceTypeSelected?.Invoke(type);
+        }
+
+        public void SetSelectedType(QuestPieceFunctionalComponent.PieceType m_SelectedType)
+        {
+            var b = m_Buttons.Find((b) => b.PieceType == m_SelectedType);
+            b.SetAsSelected();
         }
     }
 }

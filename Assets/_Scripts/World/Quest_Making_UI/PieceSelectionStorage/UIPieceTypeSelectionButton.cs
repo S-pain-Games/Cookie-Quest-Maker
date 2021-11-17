@@ -5,32 +5,49 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Button))]
-public class UIPieceTypeSelectionButton : MonoBehaviour
+namespace CQM.UI.QuestMakingTable
 {
-    public event Action<QuestPieceFunctionalComponent.PieceType> OnButtonClicked;
-
-    [SerializeField]
-    private QuestPieceFunctionalComponent.PieceType m_PieceType;
-    private Button _button;
-
-    private void Awake()
+    [RequireComponent(typeof(Button))]
+    public class UIPieceTypeSelectionButton : MonoBehaviour
     {
-        _button = GetComponent<Button>();
-    }
+        public event Action<QuestPieceFunctionalComponent.PieceType> OnPieceTypeSelected;
+        public event Action OnSelected;
+        public event Action OnUnselected;
 
-    private void OnEnable()
-    {
-        _button.onClick.AddListener(OnClickHandle);
-    }
+        public QuestPieceFunctionalComponent.PieceType PieceType => m_PieceType;
 
-    private void OnDisable()
-    {
-        _button.onClick.RemoveListener(OnClickHandle);
-    }
 
-    private void OnClickHandle()
-    {
-        OnButtonClicked?.Invoke(m_PieceType);
+        [SerializeField] private QuestPieceFunctionalComponent.PieceType m_PieceType;
+        private Button _button;
+
+        private void Awake()
+        {
+            _button = GetComponent<Button>();
+        }
+
+        private void OnEnable()
+        {
+            _button.onClick.AddListener(OnClickHandle);
+        }
+
+        private void OnDisable()
+        {
+            _button.onClick.RemoveListener(OnClickHandle);
+        }
+
+        private void OnClickHandle()
+        {
+            OnPieceTypeSelected?.Invoke(m_PieceType);
+        }
+
+        public void SetAsSelected()
+        {
+            OnSelected?.Invoke();
+        }
+
+        public void SetAsUnselected()
+        {
+            OnUnselected?.Invoke();
+        }
     }
 }
