@@ -41,7 +41,7 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
         {
             _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(
                 m_NpcData.m_Dialogue,
-                new ID("meri"),
+                m_NpcData.m_CharacterID,
                 () => { DialogueWithNpcFinishedCallback(); }));
 
             m_NpcData.m_AlreadySpokenTo = true;
@@ -50,7 +50,7 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
         {
             _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(
                new List<string> { m_NpcData.m_AlreadySpokenToDialogue[Random.Range(0, m_NpcData.m_AlreadySpokenToDialogue.Count)] }, // TODO: Fix this atrocity
-               new ID("meri"),
+               m_NpcData.m_CharacterID,
                () => m_Interacting = false));
         }
     }

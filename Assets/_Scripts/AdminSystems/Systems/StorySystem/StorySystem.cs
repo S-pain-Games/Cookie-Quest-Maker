@@ -11,8 +11,9 @@ using CQM.Databases;
 public class StorySystem : ISystemEvents
 {
     private ComponentsContainer<StoryInfoComponent> m_StoriesInfo;
+    private Singleton_StoriesStateComponent _storiesStateComponent;
     private List<ID> _ongoingStories;
-    private List<ID> _storiesToStart;
+    private List<ID> _primaryStoriesToStart;
     private List<ID> _completedStories;
     private List<ID> _finalizedStories;
 
@@ -29,8 +30,9 @@ public class StorySystem : ISystemEvents
                            Singleton_StoriesStateComponent storiesState)
     {
         m_StoriesInfo = storiesInfo;
+        _storiesStateComponent = storiesState;
         _ongoingStories = storiesState.m_OngoingStories;
-        _storiesToStart = storiesState.m_MainStoriesToStartOrder;
+        _primaryStoriesToStart = storiesState.m_MainStoriesToStartOrder;
         _completedStories = storiesState.m_CompletedStories;
         _finalizedStories = storiesState.m_FinalizedStories;
     }
@@ -64,7 +66,11 @@ public class StorySystem : ISystemEvents
 
         story.m_State = StoryInfoComponent.State.InProgress;
         _ongoingStories.Add(storyId);
-        _storiesToStart.Remove(storyId);
+
+        if (_primaryStoriesToStart.Contains(storyId))
+            _primaryStoriesToStart.Remove(storyId);
+        else
+            _storiesStateComponent.m_SecondaryStories.Remove(storyId);
 
         OnStoryStarted.Invoke(storyId);
     }
@@ -100,7 +106,7 @@ public class StorySystem : ISystemEvents
 
         OnStoryCompleted.Invoke(storyId);
 
-        if (_storiesToStart.Count == 0
+        if (_primaryStoriesToStart.Count == 0
             && _ongoingStories.Count == 0)
         {
             OnAllStoriesCompleted.OnInvoked += () => { Debug.Log("All Stories Completed"); };
@@ -117,7 +123,7 @@ public class StorySystem : ISystemEvents
 
         OnStoryFinalized.Invoke(storyId);
 
-        if (_storiesToStart.Count == 0
+        if (_primaryStoriesToStart.Count == 0
             && _ongoingStories.Count == 0
             && _completedStories.Count == 0)
         {

@@ -451,7 +451,7 @@ namespace CQM.Databases
             AddStoryRepercusionNewspaperArticle("El nuevo ingrediente secreto que revolucionará la chocolatería.",
                "La comunidad de chocolateros de la región se encuentra intrigada ante el nuevo ingrediente que utilizará Miss Chocolate la Bomb en sus productos, la pimienta.");
 
-            //TARGET: MS CHOCOLATE
+            //TARGET: miss_chocolate
             //HARM >=1
             StartStoryBranch();
             SetRepercusionToBranch("ms_chocolate_sabotaged");
@@ -462,7 +462,7 @@ namespace CQM.Databases
                 "El problema es que han caído ligeramente cerca de la chimenea... estando encendida.",
                 "Nadie ha resultado herido, tan solo han saltado por los aires algunos de mis aparatos.",
                 "Supongo que yo soy la culpable, tenía que haber tenido más cuidado. ¡Pero no me rendiré!"
-            }, Tag.Harm, 1, "ms chocolate");
+            }, Tag.Harm, 1, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡Esta noche presiento que va a ocurrir algo genial! Buena decisión, por cierto." });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -478,7 +478,7 @@ namespace CQM.Databases
                 "Yo estaba fuera tomando el aire fresco en el momento de la explosión, por suerte.",
                 "Toda mi investigación se ha echado a perder. Tan solo han quedado intactos algunos inventos.",
                 "Tendré que comenzar desde cero, ¡Pero no me daré por vencida!"
-            }, Tag.Harm, 3, "ms chocolate");
+            }, Tag.Harm, 3, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡Esta noche presiento que va a ocurrir algo genial! Buena decisión, por cierto." });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -492,7 +492,7 @@ namespace CQM.Databases
                 "Me di cuenta en el momento en que me cayó un bote de pimienta en la cabeza. ¡Qué cosas!",
                 "¡El verdadero sabor explosivo que buscaba en realidad proviene del picante!",
                 "Por eso utilizo ahora pimienta en lugar de pólvora, ¡En mayores cantidades!"
-            }, Tag.Help, 1, "ms chocolate");
+            }, Tag.Help, 1, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Sea lo que sea que salga de ese experimento, ¡me gustaría probarlo!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -506,7 +506,7 @@ namespace CQM.Databases
                 "Algunos mercaderes finalmente han accedido a ofrecerme toda la pólvora que necesito.",
                 "Por supuesto siguen insistiendo en que es muy peligroso, por eso he accedido a experimentar con pequeñas dosis muy controladas.",
                 "Mi investigación no progresará tanto como me gustaría, pero, ¡poco a poco lograré mi objetivo!"
-            }, Tag.Convince, 1, "ms chocolate");
+            }, Tag.Convince, 1, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡El fin justifica los medios! Y si medio pueblo sale por los aires, ¡todavía mejor!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -522,7 +522,7 @@ namespace CQM.Databases
                 "Tienen propiedades casi idénticas que la pólvora, pero sin los riesgos de salir por los aires.",
                 "Ese tipo de ingredientes son tan raros por aquí que es impensable comprarlos ¡Pero la suerte me sonríe!",
                 "¡Estoy cada vez más cerca de lograr la fórmula del chocolate definitivo! ¡Tengo que seguir trabajando!"
-            }, Tag.Convince, 3, "ms chocolate");
+            }, Tag.Convince, 3, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡El fin justifica los medios! Y si medio pueblo sale por los aires, ¡todavía mejor!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {

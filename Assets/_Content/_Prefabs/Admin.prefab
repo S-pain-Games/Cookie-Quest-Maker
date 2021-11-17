@@ -122,11 +122,6 @@ MonoBehaviour:
   m_AudioClipsComponent: {fileID: 11400000, guid: 6cc4b39f34e60f94b8a39ec0b52f6263, type: 2}
   m_CompletedQuestData:
     m_ComponentsList: []
-  m_MainStoriesToStartOrder: []
-  m_SecondaryStories: []
-  m_OngoingStories: []
-  m_CompletedStories: []
-  m_FinalizedStories: []
 --- !u!114 &585195714406842495
 MonoBehaviour:
   m_ObjectHideFlags: 0

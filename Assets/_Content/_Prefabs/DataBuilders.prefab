@@ -2201,8 +2201,8 @@ MonoBehaviour:
       m_BranchOptions:
       - m_Condition:
           m_Target:
-            m_NameID: ms chocolate
-            m_ID: 445555216
+            m_NameID: miss_chocolate
+            m_ID: -370492881
             m_Initialized: 1
           m_Tag: 1
           m_Value: 3
@@ -2240,10 +2240,10 @@ MonoBehaviour:
           m_Value: 15
       - m_Condition:
           m_Target:
-            m_NameID: ms chocolate
-            m_ID: 445555216
+            m_NameID: miss_chocolate
+            m_ID: -370492881
             m_Initialized: 1
-          m_Tag: 2
+          m_Tag: 0
           m_Value: 3
         m_ResultNPCDialogue:
         - "De todas las cosas que podr\xEDan haber salido mal\u2026 \xA1\xBFPor qu\xE9
@@ -2280,8 +2280,8 @@ MonoBehaviour:
           m_Value: -15
       - m_Condition:
           m_Target:
-            m_NameID: ms chocolate
-            m_ID: 445555216
+            m_NameID: miss_chocolate
+            m_ID: -370492881
             m_Initialized: 1
           m_Tag: 1
           m_Value: 1
@@ -2317,8 +2317,8 @@ MonoBehaviour:
           m_Value: 15
       - m_Condition:
           m_Target:
-            m_NameID: ms chocolate
-            m_ID: 445555216
+            m_NameID: miss_chocolate
+            m_ID: -370492881
             m_Initialized: 1
           m_Tag: 2
           m_Value: 1
@@ -2353,8 +2353,8 @@ MonoBehaviour:
           m_Value: 15
       - m_Condition:
           m_Target:
-            m_NameID: ms chocolate
-            m_ID: 445555216
+            m_NameID: miss_chocolate
+            m_ID: -370492881
             m_Initialized: 1
           m_Tag: 0
           m_Value: 1
@@ -2391,8 +2391,8 @@ MonoBehaviour:
           m_Active: 0
           m_Value: -15
       m_AllPossibleTargets:
-      - m_NameID: ms chocolate
-        m_ID: 445555216
+      - m_NameID: miss_chocolate
+        m_ID: -370492881
         m_Initialized: 1
     m_State: 0
     m_QuestData:
@@ -2489,7 +2489,7 @@ MonoBehaviour:
             m_NameID: rats
             m_ID: -1872639626
             m_Initialized: 1
-          m_Tag: 2
+          m_Tag: 0
           m_Value: 3
         m_ResultNPCDialogue:
         - Ahora las ratas se pelean entre ellas por mi comida, recurren al robo y
@@ -2881,7 +2881,7 @@ MonoBehaviour:
             m_NameID: mayor
             m_ID: 996742298
             m_Initialized: 1
-          m_Tag: 1
+          m_Tag: 0
           m_Value: 3
         m_ResultNPCDialogue:
         - "\xA1Esto es un esc\xE1ndalo! \xA1\xBFC\xF3mo es posible que yo, el alcalde,
@@ -3127,7 +3127,7 @@ MonoBehaviour:
             m_NameID: meri
             m_ID: -918260377
             m_Initialized: 1
-          m_Tag: 2
+          m_Tag: 0
           m_Value: 3
         m_ResultNPCDialogue:
         - "El asunto de mis vacas, si pueden seguir llam\xE1ndose vacas, se ha ido
@@ -3687,25 +3687,25 @@ MonoBehaviour:
       m_NameID: explosive_chocolate
       m_ID: -819324724
       m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+    m_Sprite: {fileID: 0}
     m_Title: Chocolate explosivo
   - m_ParentStoryID:
       m_NameID: not_so_dirty_rats
       m_ID: 1589037026
       m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+    m_Sprite: {fileID: 0}
     m_Title: Ratas no tan sucias
   - m_ParentStoryID:
       m_NameID: stingy_taxes
       m_ID: 1184286464
       m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+    m_Sprite: {fileID: 0}
     m_Title: "Impuestos para el taca\xF1o"
   - m_ParentStoryID:
       m_NameID: crazy_cows
       m_ID: -112750320
       m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+    m_Sprite: {fileID: 0}
     m_Title: Las vacas locas
   m_References:
   - m_ParentStoryID:
@@ -3731,25 +3731,25 @@ MonoBehaviour:
       m_ID: -819324724
       m_Initialized: 1
     m_StoryName: Chocolate explosivo
-    m_StorySelectionUiSprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+    m_StorySelectionUiSprite: {fileID: 0}
   - m_ParentStoryID:
       m_NameID: not_so_dirty_rats
       m_ID: 1589037026
       m_Initialized: 1
     m_StoryName: Ratas no tan sucias
-    m_StorySelectionUiSprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+    m_StorySelectionUiSprite: {fileID: 0}
   - m_ParentStoryID:
       m_NameID: stingy_taxes
       m_ID: 1184286464
       m_Initialized: 1
     m_StoryName: "Impuestos para el taca\xF1o"
-    m_StorySelectionUiSprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+    m_StorySelectionUiSprite: {fileID: 0}
   - m_ParentStoryID:
       m_NameID: crazy_cows
       m_ID: -112750320
       m_Initialized: 1
     m_StoryName: Las vacas locas
-    m_StorySelectionUiSprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+    m_StorySelectionUiSprite: {fileID: 0}
 --- !u!114 &6330534342466683427
 MonoBehaviour:
   m_ObjectHideFlags: 0

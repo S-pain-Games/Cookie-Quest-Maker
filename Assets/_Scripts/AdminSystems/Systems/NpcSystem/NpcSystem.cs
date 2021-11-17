@@ -1,9 +1,7 @@
 using CQM.Components;
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-using CQM.Databases;
-using System;
 
 namespace CQM.Systems
 {
@@ -57,13 +55,15 @@ namespace CQM.Systems
             // The completed stories should be "finalized" when the player has seen the 
             // repercusion dialogue not when the dialogue is assigned to an npc
 
-            // In this code we also assume that we might have more stories to show than npcs
-            // so we have to "cache" and take into account the remaining unshown stories
-            // to show them the next day
-            List<ID> allFinalizableStories = SelectStoriesThatHaveToBeFinalized(_storiesStateComponent.m_CompletedStories, 3);
-            List<ID> mainStoriesToStart = SelectStoriesThatShouldBeStarted(3);
-
+            List<ID> secondaryStoriesToStart = SelectSecondaryStories(1);
             List<ID> availableNPCs = SelectAvailableNPCs();
+
+            List<ID> allStoriesToFinalize = SelectStoriesThatHaveToBeFinalized(_storiesStateComponent.m_CompletedStories, 3);
+            List<ID> secondaryStoriesToFinalize = SelectSecondaryStoriesThatHaveToBeFinalized(allStoriesToFinalize);
+
+            bool haveToStartAPrimaryStory = CheckIfShouldStartAPrimaryStory(allStoriesToFinalize);
+            bool haveToFinalizeAPrimaryStory = SelectMainStoriesToFinalize(allStoriesToFinalize, out ID finalizeMainStoryID);
+            ID primaryStoryToStart = SelectMainStoryToStart();
 
             for (int i = 0; i < _npcReferencesComponent.m_NpcBehaviour.Count; i++)
             {
@@ -77,45 +77,144 @@ namespace CQM.Systems
                 npcData.m_HasToStartAStory = false;
 
 
-                // Try to preappend a result of a completed story
-                // only if there are remaining stories to show
-                if (allFinalizableStories.Count > 0)
+                if (haveToFinalizeAPrimaryStory)
                 {
-                    StoryInfoComponent s = _storyInfoComponents[allFinalizableStories[0]];
-                    npcData.m_CharacterID = new ID(s.m_StoryData.m_QuestGiver);
+                    StoryInfoComponent s = _storyInfoComponents[finalizeMainStoryID];
 
+                    npcData.m_CharacterID = new ID(s.m_StoryData.m_QuestGiver);
                     for (int c = 0; c < s.m_QuestBranchResult.m_ResultNPCDialogue.Count; c++)
-                    {
                         npcData.m_Dialogue.Add(s.m_QuestBranchResult.m_ResultNPCDialogue[c]);
-                    }
 
                     npcData.m_HasToFinalizeAStory = true;
-                    npcData.m_StoryIDToFinalizeOnInteract = allFinalizableStories[0];
+                    npcData.m_StoryIDToFinalizeOnInteract = finalizeMainStoryID;
 
-                    allFinalizableStories.RemoveAt(0);
+                    haveToFinalizeAPrimaryStory = false;
+                    haveToStartAPrimaryStory = false;
 
                     npcData.m_Dialogue.Add("Menuda Historia...");
+
+                    StartSecondaryStory(secondaryStoriesToStart, npcData);
                 }
-
-
-                // Append a new story dialogue
-                // only if there are new stories to append
-                if (mainStoriesToStart.Count > 0)
+                else if (haveToStartAPrimaryStory)
                 {
-                    StoryInfoComponent s = _storyInfoComponents[mainStoriesToStart[0]];
+                    FinalizeSecondaryStory(secondaryStoriesToFinalize, npcData);
+
+                    StoryInfoComponent s = _storyInfoComponents[primaryStoryToStart];
                     npcData.m_CharacterID = new ID(s.m_StoryData.m_QuestGiver);
 
                     var introductionDialogue = s.m_StoryData.m_IntroductionDialogue;
                     for (int j = 0; j < introductionDialogue.Count; j++)
-                    {
                         npcData.m_Dialogue.Add(introductionDialogue[j]);
-                    }
 
+                    haveToStartAPrimaryStory = false;
                     npcData.m_HasToStartAStory = true;
-                    npcData.m_StoryIDToStartOnInteract = mainStoriesToStart[0];
-                    mainStoriesToStart.RemoveAt(0);
+                    npcData.m_StoryIDToStartOnInteract = primaryStoryToStart;
+                }
+                else
+                {
+                    StartSecondaryStory(secondaryStoriesToStart, npcData);
+                    FinalizeSecondaryStory(secondaryStoriesToFinalize, npcData);
+
+                    if (npcData.m_Dialogue.Count == 0) npcData.m_Dialogue.Add("What a nice day [NO SECONDARY STORIES]");
                 }
             }
+        }
+
+        private void StartSecondaryStory(List<ID> secondaryStoriesToStart, NPCBehaviourData npcData)
+        {
+            if (secondaryStoriesToStart.Count > 0)
+            {
+                StoryInfoComponent secStoryInfo = _storyInfoComponents[secondaryStoriesToStart[0]];
+
+                var introductionDialogue = secStoryInfo.m_StoryData.m_IntroductionDialogue;
+                for (int j = 0; j < introductionDialogue.Count; j++)
+                    npcData.m_Dialogue.Add(introductionDialogue[j]);
+
+                npcData.m_HasToStartAStory = true;
+                npcData.m_StoryIDToStartOnInteract = secondaryStoriesToStart[0];
+                secondaryStoriesToStart.RemoveAt(0);
+            }
+        }
+
+        private void FinalizeSecondaryStory(List<ID> secondaryStoriesToFinalize, NPCBehaviourData npcData)
+        {
+            if (secondaryStoriesToFinalize.Count > 0)
+            {
+                StoryInfoComponent secStory = _storyInfoComponents[secondaryStoriesToFinalize[0]];
+
+                for (int c = 0; c < secStory.m_QuestBranchResult.m_ResultNPCDialogue.Count; c++)
+                    npcData.m_Dialogue.Add(secStory.m_QuestBranchResult.m_ResultNPCDialogue[c]);
+
+                npcData.m_HasToFinalizeAStory = true;
+                npcData.m_StoryIDToFinalizeOnInteract = secondaryStoriesToFinalize[0];
+
+                secondaryStoriesToFinalize.RemoveAt(0);
+
+                npcData.m_Dialogue.Add("Menuda Historia...");
+            }
+        }
+
+        private List<ID> SelectSecondaryStoriesThatHaveToBeFinalized(List<ID> allStoriesToFinalize)
+        {
+            List<ID> secStories = new List<ID>();
+            for (int i = 0; i < allStoriesToFinalize.Count; i++)
+            {
+                var storyID = allStoriesToFinalize[i];
+                if (_storiesStateComponent.m_SecondaryStories.Contains(storyID))
+                    secStories.Add(storyID);
+            }
+            return secStories;
+        }
+
+        private List<ID> SelectSecondaryStories(int num)
+        {
+            List<ID> secondaryStories = new List<ID>();
+            var l = _storiesStateComponent.m_SecondaryStories;
+            if (l.Count == 0) return secondaryStories;
+
+            for (int i = 0; i < num; i++)
+            {
+                int index = (num + UnityEngine.Random.Range(0, 10)) % l.Count;
+                secondaryStories.Add(l[index]);
+            }
+            return secondaryStories;
+        }
+
+        private bool SelectMainStoriesToFinalize(List<ID> allStoriesToFinalize, out ID id)
+        {
+            id = new ID();
+            for (int i = 0; i < allStoriesToFinalize.Count; i++)
+            {
+                if (IsMainStory(allStoriesToFinalize[i]))
+                {
+                    id = allStoriesToFinalize[i];
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private bool CheckIfShouldStartAPrimaryStory(List<ID> storiesToFinalize)
+        {
+            bool should = true;
+            for (int i = 0; i < storiesToFinalize.Count; i++)
+            {
+                // If one of the missions that have to be finalized is not a secondary mission
+                // that means that we dont have to start a new mission today
+                if (!_storiesStateComponent.m_SecondaryStories.Contains(storiesToFinalize[i]))
+                {
+                    should = false;
+                }
+            }
+            return should;
+        }
+
+        private bool IsMainStory(ID storyID)
+        {
+            if (!_storiesStateComponent.m_SecondaryStories.Contains(storyID))
+                return true;
+            else
+                return false;
         }
 
         private List<ID> SelectAvailableNPCs()
@@ -130,6 +229,32 @@ namespace CQM.Systems
             l.Remove(new ID("nu"));
             l.Remove(new ID("evith"));
             return l;
+        }
+
+        private ID SelectMainStoryToStart()
+        {
+            var storiesToStartIds = _storiesStateComponent.m_MainStoriesToStartOrder;
+            //int availableStoriesToStart = Mathf.Min(storiesToStartIds.Count, maxStoriesToSelect);
+            //List<ID> sStory = new List<ID>();
+            //for (int j = 0; j < availableStoriesToStart; j++)
+            //{
+            //    sStory.Add(storiesToStartIds[j]);
+            //}
+
+            //return sStory;
+            return storiesToStartIds[0];
+        }
+
+        private List<ID> SelectStoriesThatHaveToBeFinalized(List<ID> completedStoriesIDList, int maxStoriesToComplete)
+        {
+            int avaliableCompletedStories = Mathf.Min(completedStoriesIDList.Count, maxStoriesToComplete);
+            List<ID> cStoriesIds = new List<ID>(); // Completed Stories Ids
+            for (int i = 0; i < avaliableCompletedStories; i++)
+            {
+                cStoriesIds.Add(completedStoriesIDList[i]);
+            }
+
+            return cStoriesIds;
         }
 
         public void PopulateDeitiesData()
@@ -166,29 +291,51 @@ namespace CQM.Systems
             }
         }
 
-        private List<ID> SelectStoriesThatShouldBeStarted(int maxStoriesToSelect)
+        private void OldPopulateMethod(List<ID> storiesToFinalize, List<ID> mainStoriesToStart, int i)
         {
-            var storiesToStartIds = _storiesStateComponent.m_MainStoriesToStartOrder;
-            int availableStoriesToStart = Mathf.Min(storiesToStartIds.Count, maxStoriesToSelect);
-            List<ID> sStory = new List<ID>();
-            for (int j = 0; j < availableStoriesToStart; j++)
+            NPCBehaviourData npcData = _npcReferencesComponent.m_NpcBehaviour[i].m_NpcData;
+
+            // Reset Data
+            npcData.m_CharacterID = new ID("meri");
+            npcData.m_AlreadySpokenTo = false;
+            npcData.m_Dialogue.Clear();
+            npcData.m_HasToFinalizeAStory = false;
+            npcData.m_HasToStartAStory = false;
+
+
+            // Try to preappend a result of a completed story
+            // only if there are remaining stories to show
+            if (storiesToFinalize.Count > 0)
             {
-                sStory.Add(storiesToStartIds[j]);
+                StoryInfoComponent s = _storyInfoComponents[storiesToFinalize[0]];
+
+                for (int c = 0; c < s.m_QuestBranchResult.m_ResultNPCDialogue.Count; c++)
+                    npcData.m_Dialogue.Add(s.m_QuestBranchResult.m_ResultNPCDialogue[c]);
+
+                npcData.m_HasToFinalizeAStory = true;
+                npcData.m_StoryIDToFinalizeOnInteract = storiesToFinalize[0];
+
+                storiesToFinalize.RemoveAt(0);
+
+                npcData.m_Dialogue.Add("Menuda Historia...");
             }
 
-            return sStory;
-        }
 
-        private List<ID> SelectStoriesThatHaveToBeFinalized(List<ID> completedStoriesIDList, int maxStoriesToComplete)
-        {
-            int avaliableCompletedStories = Mathf.Min(completedStoriesIDList.Count, maxStoriesToComplete);
-            List<ID> cStoriesIds = new List<ID>(); // Completed Stories Ids
-            for (int i = 0; i < avaliableCompletedStories; i++)
+            // Append a new story dialogue
+            // only if there are new stories to append
+            if (mainStoriesToStart.Count > 0)
             {
-                cStoriesIds.Add(completedStoriesIDList[i]);
-            }
+                StoryInfoComponent s = _storyInfoComponents[mainStoriesToStart[0]];
+                npcData.m_CharacterID = new ID(s.m_StoryData.m_QuestGiver);
 
-            return cStoriesIds;
+                var introductionDialogue = s.m_StoryData.m_IntroductionDialogue;
+                for (int j = 0; j < introductionDialogue.Count; j++)
+                    npcData.m_Dialogue.Add(introductionDialogue[j]);
+
+                npcData.m_HasToStartAStory = true;
+                npcData.m_StoryIDToStartOnInteract = mainStoriesToStart[0];
+                mainStoriesToStart.RemoveAt(0);
+            }
         }
     }
 }

@@ -25,6 +25,7 @@ namespace CQM.Databases
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("mayor_problem"));
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("out_of_lactose"));
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("sacred_egg"));
+            c.m_StoriesStateComponent.m_SecondaryStories.Add(new ID("explosive_chocolate"));
 
             c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("plain_cookie"));
             c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("attack"));
