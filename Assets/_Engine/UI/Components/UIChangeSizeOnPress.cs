@@ -38,7 +38,7 @@ public class UIChangeSizeOnPress : MonoBehaviour
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        _rect.localScale *= _holdScale;
+        _rect.localScale = _holdScale * _startScale;
     }
 
     public void OnPointerUp(PointerEventData eventData)
