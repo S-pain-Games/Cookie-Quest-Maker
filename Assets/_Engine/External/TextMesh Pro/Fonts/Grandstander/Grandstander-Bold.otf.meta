@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 057bba1ab2d719a408f80fa46b9148cd
+guid: cd36e754b45c5c74a827f29ada865201
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,9 +9,9 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Granstander Clean
+  - Grandstander
   fallbackFontReferences:
-  - {fileID: 12800000, guid: c061976fd46d86c42838a32bf76bd414, type: 3}
+  - {fileID: 12800000, guid: 0ad4ee2e5f6427e47b70e5624116f3a3, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
