@@ -6,6 +6,7 @@ public class InventorySystem : ISystemEvents
 {
     private Singleton_InventoryComponent _inventoryData;
 
+    private EventVoid OnReputationChanged;
 
     public void Initialize(Singleton_InventoryComponent data)
     {
@@ -46,6 +47,8 @@ public class InventorySystem : ISystemEvents
             };
 
         commands.AddEvent<ID>(new ID("unlock_recipe")).OnInvoked += UnlockRecipe;
+
+        OnReputationChanged = callbacks.AddEvent(new ID("reputation_changed"));
     }
 
 
@@ -104,6 +107,8 @@ public class InventorySystem : ISystemEvents
             _inventoryData.m_GoodCookieReputation += amount;
         else
             Debug.LogError("Tried to remove more currency than available");
+
+        OnReputationChanged.Invoke();
     }
     public void ChangeEvilCookieRep(int amount)
     {
@@ -111,6 +116,8 @@ public class InventorySystem : ISystemEvents
             _inventoryData.m_EvilCookieReputation += amount;
         else
             Debug.LogError("Tried to remove more currency than available");
+
+        OnReputationChanged.Invoke();
     }
 }
 
