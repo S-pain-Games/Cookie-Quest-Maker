@@ -88,8 +88,10 @@ public class DialogueSystem : ISystemEvents
 
             if (data.m_CallbackOnDialogueEnd != null)
             {
-                data.m_CallbackOnDialogueEnd.Invoke();
+                // We do this to allow a chain of dialogues
+                var callback = data.m_CallbackOnDialogueEnd;
                 data.m_CallbackOnDialogueEnd = null;
+                callback.Invoke();
             }
         }
     }
