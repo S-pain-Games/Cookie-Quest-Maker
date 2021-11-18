@@ -15,7 +15,7 @@ public class TownBuilder : MonoBehaviour
     {
         m_Locations.Clear();
 
-        CreateLocation("mayor_home", "Town Center", "description");
+        CreateLocation("mayor_home", "Casa de Antonio", "description");
         AddRepercusion("wolves_gone");
         AddRepercusion("wolves_stay");
         AddRepercusion("mayor_assaulted");
@@ -23,7 +23,7 @@ public class TownBuilder : MonoBehaviour
         AddRepercusion("mayor_robbed");
         FinishCreatingLocation();
 
-        CreateLocation("meri_rancho", "Town Center", "description");
+        CreateLocation("meri_rancho", "Rancho de Meri", "description");
         AddRepercusion("cows_harmed");
         AddRepercusion("cows_saved");
         AddRepercusion("cows_transformed");
@@ -31,18 +31,17 @@ public class TownBuilder : MonoBehaviour
         AddRepercusion("cows_and_goats_reversed");
         FinishCreatingLocation();
 
-        CreateLocation("canela_home", "Town Center", "description");
+        CreateLocation("canela_home", "Casa de Canela", "description");
         AddRepercusion("golden_egg_destroyed");
         AddRepercusion("golden_egg_safe");
         AddRepercusion("golden_egg_gone");
-
         AddRepercusion("artifacts_stolen");
         AddRepercusion("pendant_damaged");
         AddRepercusion("pendant_recovered");
         AddRepercusion("pendant_lost");
         FinishCreatingLocation();
 
-        CreateLocation("chocolate_home", "Town Center", "description");
+        CreateLocation("chocolate_home", "Casa de Miss Chocolate", "description");
         AddRepercusion("ms_chocolate_sabotaged");
         AddRepercusion("ms_chocolate_gunpowder");
         AddRepercusion("ms_chocolate_pepper");
@@ -51,7 +50,7 @@ public class TownBuilder : MonoBehaviour
         AddRepercusion("cows_experiment_delayed");
         FinishCreatingLocation();
 
-        CreateLocation("mantecas_home", "Town Center", "description");
+        CreateLocation("mantecas_home", "Casa del Mantecas", "description");
         AddRepercusion("smart_rats_stay");
         AddRepercusion("smart_rats_gone");
         AddRepercusion("smart_rats_tribute");
@@ -60,7 +59,7 @@ public class TownBuilder : MonoBehaviour
         AddRepercusion("ducks_help");
         FinishCreatingLocation();
 
-        CreateLocation("johnny_home", "Town Center", "description");
+        CreateLocation("johnny_home", "Casa derJohnny", "description");
         AddRepercusion("competition_judges_stoned");
         AddRepercusion("competition_safe");
         FinishCreatingLocation();

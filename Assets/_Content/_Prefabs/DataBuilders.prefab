@@ -5628,7 +5628,7 @@ MonoBehaviour:
       m_NameID: mayor_home
       m_ID: 550075868
       m_Initialized: 1
-    m_LocName: Town Center
+    m_LocName: Casa de Antonio
     m_LocDesc: description
     m_Happiness: 0
     m_StoryRepercusionsIDs:
@@ -5651,7 +5651,7 @@ MonoBehaviour:
       m_NameID: meri_rancho
       m_ID: -1291356903
       m_Initialized: 1
-    m_LocName: Town Center
+    m_LocName: Rancho de Meri
     m_LocDesc: description
     m_Happiness: 0
     m_StoryRepercusionsIDs:
@@ -5674,7 +5674,7 @@ MonoBehaviour:
       m_NameID: canela_home
       m_ID: -726187318
       m_Initialized: 1
-    m_LocName: Town Center
+    m_LocName: Casa de Canela
     m_LocDesc: description
     m_Happiness: 0
     m_StoryRepercusionsIDs:
@@ -5703,7 +5703,7 @@ MonoBehaviour:
       m_NameID: chocolate_home
       m_ID: 1959417174
       m_Initialized: 1
-    m_LocName: Town Center
+    m_LocName: Casa de Miss Chocolate
     m_LocDesc: description
     m_Happiness: 0
     m_StoryRepercusionsIDs:
@@ -5729,7 +5729,7 @@ MonoBehaviour:
       m_NameID: mantecas_home
       m_ID: 1846525232
       m_Initialized: 1
-    m_LocName: Town Center
+    m_LocName: Casa del Mantecas
     m_LocDesc: description
     m_Happiness: 0
     m_StoryRepercusionsIDs:
@@ -5755,7 +5755,7 @@ MonoBehaviour:
       m_NameID: johnny_home
       m_ID: -614040492
       m_Initialized: 1
-    m_LocName: Town Center
+    m_LocName: Casa derJohnny
     m_LocDesc: description
     m_Happiness: 0
     m_StoryRepercusionsIDs:

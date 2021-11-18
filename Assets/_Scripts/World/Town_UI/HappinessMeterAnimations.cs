@@ -1,12 +1,19 @@
 ﻿using UnityEngine;
 using DG.Tweening;
+using TMPro;
 
 namespace CQM.UI.Town
 {
     public class HappinessMeterAnimations : MonoBehaviour
     {
-        public void EnableForBuilding(Vector3 buildingPos)
+        [SerializeField] private RectTransform _slider;
+        [SerializeField] private TextMeshProUGUI _text;
+
+        public void EnableForBuilding(Vector3 buildingPos, int buildingHappiness, string buildingName)
         {
+            UpdateSlider(buildingHappiness);
+            _text.text = buildingName;
+
             Vector3 pos = buildingPos;
             pos.y -= 200.0f;
             transform.position = pos;
@@ -16,6 +23,13 @@ namespace CQM.UI.Town
         public void Hide()
         {
             transform.position = new Vector3(-2000, -2000, -2000);
+        }
+
+        public void UpdateSlider(int newValue)
+        {
+            Vector2 newPos = _slider.anchoredPosition;
+            newPos.x = newValue;
+            _slider.DOAnchorPos(newPos, 0.3f);
         }
     }
 }

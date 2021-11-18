@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8346408321802194184}
   - component: {fileID: 1061291643311248607}
   m_Layer: 5
-  m_Name: Image (7)
+  m_Name: JohnySetasHome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -88,6 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1acf99436af01394ba5f666c35131b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_BuildingIDName: johnny_home
 --- !u!1 &1965216253552005360
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,7 +102,7 @@ GameObject:
   - component: {fileID: 1965216253552005374}
   - component: {fileID: 7297722658452676934}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Canelas_Home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -176,6 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1acf99436af01394ba5f666c35131b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_BuildingIDName: canela_home
 --- !u!1 &1965216253815315320
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,12 +236,10 @@ MonoBehaviour:
   - {fileID: 7930439734768448635}
   - {fileID: 7297722658452676934}
   - {fileID: 6653888875157953712}
-  - {fileID: 5395323287190994938}
   - {fileID: 5421749897630099973}
   - {fileID: 3433300777095246972}
-  - {fileID: 7866216333511947574}
   - {fileID: 1061291643311248607}
-  m_currentMeter: {fileID: 7948284294595386554}
+  m_currentMeter: {fileID: 6237320630788769515}
 --- !u!1 &1965216253896592655
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1965216254096912793
 RectTransform:
   m_ObjectHideFlags: 0
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -403,6 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1acf99436af01394ba5f666c35131b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_BuildingIDName: 
 --- !u!1 &1965216254197696226
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,7 +417,7 @@ GameObject:
   - component: {fileID: 1965216254197696224}
   - component: {fileID: 5421749897630099973}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: Mantecas_Home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -462,7 +463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -491,6 +492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1acf99436af01394ba5f666c35131b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_BuildingIDName: mantecas_home
 --- !u!1 &1965216254221003125
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,7 +506,7 @@ GameObject:
   - component: {fileID: 1965216254221003123}
   - component: {fileID: 7930439734768448635}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Meris_Home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -550,7 +552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -579,6 +581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1acf99436af01394ba5f666c35131b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_BuildingIDName: meri_rancho
 --- !u!1 &1965216254510168770
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,7 +595,7 @@ GameObject:
   - component: {fileID: 1965216254510168768}
   - component: {fileID: 6653888875157953712}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Mayors_Home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -638,7 +641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -667,6 +670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1acf99436af01394ba5f666c35131b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_BuildingIDName: mayor_home
 --- !u!1 &1965216254669659704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,7 +1009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6469188755665707987
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1046,7 +1050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1075,6 +1079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1acf99436af01394ba5f666c35131b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_BuildingIDName: 
 --- !u!1 &7815649075567355354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,7 +1227,7 @@ GameObject:
   - component: {fileID: 5047749198811496642}
   - component: {fileID: 3433300777095246972}
   m_Layer: 5
-  m_Name: Image (5)
+  m_Name: MissChocolates_Home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1268,7 +1273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1297,6 +1302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1acf99436af01394ba5f666c35131b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_BuildingIDName: chocolate_home
 --- !u!1001 &2530828984505988522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1399,3 +1405,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5571715770893822224, guid: d24174bec99684642a272a2b58d8ccdd, type: 3}
   m_PrefabInstance: {fileID: 2530828984505988522}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6237320630788769515 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8471312252452778817, guid: d24174bec99684642a272a2b58d8ccdd, type: 3}
+  m_PrefabInstance: {fileID: 2530828984505988522}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb9d37c816f3d244da212c456cdb966c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

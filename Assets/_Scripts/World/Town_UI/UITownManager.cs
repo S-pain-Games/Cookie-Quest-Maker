@@ -1,3 +1,4 @@
+using CQM.Components;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,7 +20,9 @@ namespace CQM.UI.Town
 
         public void SelectTownBuilding(TownBuildingBehaviour building)
         {
-            m_currentMeter.EnableForBuilding(building.transform.position);
+            // We could definitely cache this
+            var locationComponent = Admin.Global.Components.GetComponentContainer<LocationComponent>().GetComponentByID(building.BuildingID);
+            m_currentMeter.EnableForBuilding(building.transform.position, locationComponent.m_Happiness, locationComponent.m_LocName);
         }
 
         public void UnselectTownBuilding(TownBuildingBehaviour building)

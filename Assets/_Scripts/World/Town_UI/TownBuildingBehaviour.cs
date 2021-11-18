@@ -8,6 +8,8 @@ namespace CQM.UI.Town
 {
     public class TownBuildingBehaviour : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
     {
+        public ID BuildingID => new ID(m_BuildingIDName);
+        [SerializeField] private string m_BuildingIDName;
         private UITownManager _townManager;
 
         public void Initialize(UITownManager townManager)
