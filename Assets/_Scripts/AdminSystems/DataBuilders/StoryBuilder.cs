@@ -1,4 +1,5 @@
-﻿using CQM.Components;
+﻿using CQM.AssetReferences;
+using CQM.Components;
 using System.Collections.Generic;
 using UnityEngine;
 using PieceType = CQM.Components.QuestPieceFunctionalComponent.PieceType;
@@ -9,6 +10,8 @@ namespace CQM.Databases
 {
     public class StoryBuilder : MonoBehaviour
     {
+        [SerializeField] private StoriesReferencesDatabase _assetRefs;
+
         public List<StoryInfoComponent> Stories => m_StoriesList;
         public List<StoryRepercusionComponent> Repercusions => m_Repercusions;
         public List<StoryUIDataComponent> StoryUI => m_StoryUI;
@@ -28,15 +31,11 @@ namespace CQM.Databases
         private BranchOption m_Branch;
         private StoryRepercusionComponent m_Repercusion;
 
-        [SerializeField]
-        private List<References> m_References = new List<References>();
-
         public void LoadDataFromCode()
         {
             m_StoriesList.Clear();
             m_Repercusions.Clear();
             m_StoryUI.Clear();
-            m_References.Clear();
             m_RepercusionNewspaperArticles.Clear();
 
             /*
@@ -325,7 +324,7 @@ namespace CQM.Databases
             // =============================================================================================
             //STORY 3
             // =============================================================================================
-            
+
             StartCreatingStory("sacred_egg", "El Huevo Sagrado", "canela",
                 "Canela ha adquirido un huevo dorado para su exposición. Pero una secta amenaza con arrebatárselo.", new List<string>() {
                 "Hace unos días estuve de visita por las subastas de la ciudad, buscando artefactos llamativos para decorar mi salón, ya sabes.",
@@ -1240,8 +1239,7 @@ namespace CQM.Databases
             AddStoryRepercusionNewspaperArticle("La  joya de la exposición regresa intacta.",
                 "El colgante enjoyado desaparecido de la colección ha regresado intacto a la exposición.");
 
-
-            CreateRepercusion("artifacts_stolen", "Artifacts Stolen", -15);
+            CreateRepercusion("pendant_lost", "Pendant Lost", -15);
             AddStoryRepercusionNewspaperArticle("El colgante enjoyado sigue desaparecido.",
                 "La nueva joya de la exposición de Canela N Rama sigue en paradero desconocido.");
 
@@ -1318,20 +1316,6 @@ namespace CQM.Databases
 
             AddStorySelectionUIData("El Colgante Robado");
             FinishCreatingStory();
-        }
-
-        public void SyncReferences()
-        {
-            for (int i = 0; i < m_References.Count; i++)
-            {
-                var r = m_References[i];
-
-                for (int j = 0; j < m_StoryUI.Count; j++)
-                {
-                    if (r.m_ParentStoryID == m_StoryUI[j].m_ParentStoryID)
-                        m_StoryUI[j].m_Sprite = r.m_StorySelectionUiSprite;
-                }
-            }
         }
 
         public void StartCreatingStory(string idName, string title, string questGiver, string description, List<string> introductionDialogue)
@@ -1426,12 +1410,8 @@ namespace CQM.Databases
             var s = new StoryUIDataComponent();
             s.m_Title = title;
             s.m_ParentStoryID = m_StoryData.m_ID;
+            s.m_Sprite = _assetRefs.GetStorySelectionSprite(s.m_ParentStoryID);
             m_StoryUI.Add(s);
-
-            var re = new References();
-            re.m_ParentStoryID = m_StoryData.m_ID;
-            re.m_StoryName = m_StoryData.m_Title;
-            m_References.Add(re);
         }
 
 
@@ -1443,15 +1423,6 @@ namespace CQM.Databases
             m_Story.m_StoryData = m_StoryData;
 
             m_StoriesList.Add(m_Story);
-        }
-
-        [System.Serializable]
-        private class References
-        {
-            [HideInInspector]
-            public ID m_ParentStoryID;
-            public string m_StoryName;
-            public Sprite m_StorySelectionUiSprite;
         }
     }
 }

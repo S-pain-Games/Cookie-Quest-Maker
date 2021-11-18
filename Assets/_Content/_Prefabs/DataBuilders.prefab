@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6330534342466683427}
   - component: {fileID: 6330534342466683426}
   - component: {fileID: 6330534342466683425}
+  - component: {fileID: 1241280839235921238}
   m_Layer: 0
   m_Name: DataBuilders
   m_TagString: Untagged
@@ -1292,6 +1293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43f08a15d8ebae24b99b20e9637457ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _assetRefs: {fileID: 11400000, guid: c4d053dd4d6abaf4cbc0abe9d44c9cb2, type: 2}
   m_StoriesList:
   - m_StoryData:
       m_ID:
@@ -3305,6 +3307,1052 @@ MonoBehaviour:
       m_Name: 
       m_Active: 0
       m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: the_cake_was_not_a_lie
+        m_ID: 2026914235
+        m_Initialized: 1
+      m_Title: La tarta no era mentira
+      m_IntroductionDialogue:
+      - La Feria va a ser pronto, de normal no me suelen interesar esos eventos,
+        son muy aburridos, colega.
+      - "Pero por lo visto este a\xF1o va a hacer un concurso de reposter\xEDa, eso
+        de hacer tartas y tal, colega."
+      - "\xA1Pienso hacer la tarta m\xE1s flipante que se haya visto, colega!"
+      - "Tan solo necesito una Seta de la Pirueta, con ella los jueces dar\xE1n saltos
+        del sabor, colega."
+      - "Ir\xE9 esta misma noche a buscar algunas, espero tener suerte, porque son
+        muy raras, colega."
+      m_QuestGiver: johnny
+      m_Description: "Johnny quiere participar en el pr\xF3ximo concurso de reposter\xEDa.
+        Piensa utilizar hongos que podr\xEDan poner en peligro el concurso."
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: johnny
+            m_ID: -1650144070
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "Al final encontr\xE9 todas las setas que necesitaba y muchas m\xE1s, colega."
+        - Pero, ya no voy a participar en el concurso, no merece la pena, colega.
+        - "El Se\xF1or Galleta tiene raz\xF3n, los jueces no sabr\xEDan apreciar
+          mi obra, colega."
+        - "\xBFEl Se\xF1or Galleta? Lo he visto durante mi meditaci\xF3n nocturna,
+          colega."
+        - "\xA1Todo es posible cuando se consumen Champi\xF1ones de la Visi\xF3n,
+          son alucinantes, colega!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFEn serio vas a ayudar a que vuelvan a la normalidad? \xA1Yo quer\xEDa
+            hasta donde llegaba la cosa!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - Es mejor que la naturaleza siga su curso. Hay cosas que es mejor dejar
+            inalteradas.
+        m_Repercusion:
+          m_ID:
+            m_NameID: competition_safe
+            m_ID: -1165341605
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: the_cake_was_not_a_lie
+            m_ID: 2026914235
+            m_Initialized: 1
+          m_Name: Competition Safe
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: johnny
+            m_ID: -1650144070
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "\xA1T\xEDiiiiiio! Fu\xED a buscar cobre y encontr\xE9 oro, colega."
+        - "Buscando un par de Setas de la Pirueta me he topado con otra mucho m\xE1s
+          rara, colega."
+        - "Nada m\xE1s y nada menos que el Champi\xF1\xF3n de la Visi\xF3n, \xA1mi
+          favorito, colega!"
+        - "Ese champi\xF1\xF3n te permite ver todo, colega, \xA1toooodo!"
+        - "\xA1Los jueces van a flipar, colega!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1La cosa va a ponerse muy interesante en el concurso! \xA1Tengo un
+            presentimiento de que as\xED ser\xE1!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - Ese tal Johnny parece un sujeto interesante. Tiene un aura muy peculiar.
+        m_Repercusion:
+          m_ID:
+            m_NameID: competition_judges_stoned
+            m_ID: -1778757852
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: the_cake_was_not_a_lie
+            m_ID: 2026914235
+            m_Initialized: 1
+          m_Name: Competition Judges Stoned
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: johnny
+            m_ID: -1650144070
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "\xA1T\xEDiiiiiio, la cosa se ha puesto fina! Fu\xED a por setas por la
+          noche y cuando volv\xED mi laboratorio estaba ardiendo, colega!"
+        - "Se han echado a perder muchas p\xF3cimas e ingredientes que ten\xEDa guardados,
+          colega."
+        - "\xBFEl concurso?, ya no va a poder ser. Estas cosas pasan, colega."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1\xBFPor qu\xE9 interferir en el concurso?! \xA1Deja que el mundo
+            siga su curso, que se iba a poner interesante!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Estoy convencido de que vas a evitar una situaci\xF3n\u2026 inusual
+            con esa decisi\xF3n."
+        m_Repercusion:
+          m_ID:
+            m_NameID: competition_safe
+            m_ID: -1165341605
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: the_cake_was_not_a_lie
+            m_ID: 2026914235
+            m_Initialized: 1
+          m_Name: Competition Safe
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: johnny
+            m_ID: -1650144070
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Encontr\xE9 todas las setas que necesitaba, colega."
+        - Pero, lo he estado meditando y ya no me apetece participar, colega.
+        - "\xBFMi meditaci\xF3n? Dejo que las setas me indiquen el camino a seguir,
+          as\xED de simple, colega."
+        - "He visto cosas m\xE1s extra\xF1as de lo habitual, eso no puede ser buena
+          se\xF1al, colega."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFEn serio vas a ayudar a que vuelvan a la normalidad? \xA1Yo quer\xEDa
+            hasta donde llegaba la cosa!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - Es mejor que la naturaleza siga su curso. Hay cosas que es mejor dejar
+            inalteradas.
+        m_Repercusion:
+          m_ID:
+            m_NameID: competition_safe
+            m_ID: -1165341605
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: the_cake_was_not_a_lie
+            m_ID: 2026914235
+            m_Initialized: 1
+          m_Name: Competition Safe
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: johnny
+            m_ID: -1650144070
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - He encontrado las setas que buscaba, colega.
+        - "Suerte que alguien ha puesto se\xF1ales por el bosque para encontrarlas,
+          colega."
+        - "\xBFQu\xE9 si es raro que haya se\xF1ales? No s\xE9, mucha gente se perder\xE1
+          por el bosque, colega."
+        - "En fin, \xA1mi tarta va a ser tremenda, colega!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1La cosa va a ponerse muy interesante en el concurso! \xA1Tengo un
+            presentimiento de que as\xED ser\xE1!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - Ese tal Johnny parece un sujeto interesante. Tiene un aura muy peculiar.
+        m_Repercusion:
+          m_ID:
+            m_NameID: competition_judges_stoned
+            m_ID: -1778757852
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: the_cake_was_not_a_lie
+            m_ID: 2026914235
+            m_Initialized: 1
+          m_Name: Competition Judges Stoned
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: johnny
+            m_ID: -1650144070
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Fu\xED ayer a buscar un par de setas para la tarta, pero no he podido
+          sacar ninguna, colega."
+        - "Los animalejos del bosque est\xE1n cada a\xF1o m\xE1s agresivos. No me
+          han dejado en paz, colega."
+        - "Pero no todo est\xE1 perdido. Tengo algunas Setas de la Pirueta guardadas
+          del a\xF1o pasado, colega."
+        - "No estar\xE1n en las mejores condiciones, \xA1pero seguro que alg\xFAn
+          premio me llevo, colega!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1La cosa va a ponerse muy interesante en el concurso! \xA1Tengo un
+            presentimiento de que as\xED ser\xE1!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - Ese tal Johnny parece un sujeto interesante. Tiene un aura muy peculiar.
+        m_Repercusion:
+          m_ID:
+            m_NameID: competition_judges_stoned
+            m_ID: -1778757852
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: the_cake_was_not_a_lie
+            m_ID: 2026914235
+            m_Initialized: 1
+          m_Name: Competition Judges Stoned
+          m_Active: 0
+          m_Value: -15
+      m_AllPossibleTargets:
+      - m_NameID: johnny
+        m_ID: -1650144070
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: the_lord_of_the_ducks
+        m_ID: -1752020074
+        m_Initialized: 1
+      m_Title: "El Se\xF1or de los Patos"
+      m_IntroductionDialogue:
+      - "\xA1Siempre tiene que pasar algo en mi granja! \xA1Nunca me dejar\xE1n en
+        paz!"
+      - "\xA1Si no son ratas que me roban mis hortalizas, ahora son patos que me
+        destrozan lo sembrado!"
+      - "Esto tiene que ser cosa del Johnny \xA1Ese merluzo debe de haber vertido
+        sus mejunjes en la charca!"
+      - "\xA1Los patos se han vuelto muy agresivos, no puedo acercarme a mis cultivos!"
+      - "Voy a tener que tomar medidas al respecto. \xA1No se saldr\xE1n con la suya!"
+      m_QuestGiver: mantecas
+      m_Description: Unos patos muy agresivos causan el caos destrozando los cultivos
+        en la granja del Mantecas.
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: mantecas
+            m_ID: 2085496002
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "Los patos se han largado de mi granja.\xA1 Aunque la cosa est\xE1 lejos
+          de estar bien!"
+        - "\xA1Las ratas han regresado de su escondrijo y han echado a los patos!
+          \xA1Me est\xE1n tomando el pelo!"
+        - "No s\xE9 que las habr\xE1 hecho volver, pero prefiero lidiar con ratas
+          inteligentes antes que con esos patos."
+        - "\xA1Si esto es obra del Johnny, me encargar\xE9 de trasladar su laboratorio
+          al fondo del mar!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1Ojal\xE1 pudiera tener una bandada de patos a mi disposici\xF3n!
+            \xA1Me lo pasar\xEDa en grande!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Habr\xEDa que evitar que ese tal Johnny siguiera provocando situaciones
+            como esta."
+        m_Repercusion:
+          m_ID:
+            m_NameID: ducks_gone
+            m_ID: 1134127230
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: the_lord_of_the_ducks
+            m_ID: -1752020074
+            m_Initialized: 1
+          m_Name: Ducks Gone
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: mantecas
+            m_ID: 2085496002
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "\xA1La pr\xF3xima vez que vea al Johnny, va a continuar con sus experimentos
+          desde el fondo de un pozo!"
+        - "\xA1Los patos se han apoderado de mi casa! \xA1\xBFC\xF3mo es esto posible?!
+          \xA1\xBFC\xF3mo han entrado para empezar?!"
+        - "\xA1Esto tiene que ser una broma! \xA1Unos est\xFApidos patos me han vencido,
+          a m\xED!"
+        - "No me queda m\xE1s remedio que darles parte de mi cosecha para que me
+          dejen tranquilo."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1Imag\xEDnate qu\xE9 guay ser\xEDa que los patos pudieran llevar
+            armas!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Nadie se hubiera imaginado aves tan gr\xE1ciles pudieran llegar a ser
+            tan agresivas."
+        m_Repercusion:
+          m_ID:
+            m_NameID: ducks_stay
+            m_ID: 1913844432
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: the_lord_of_the_ducks
+            m_ID: -1752020074
+            m_Initialized: 1
+          m_Name: Ducks Stay
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: mantecas
+            m_ID: 2085496002
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Por f\xEDn se han tranquilizado los patos! han dejado de causarme
+          problemas, por ahora."
+        - "Todav\xEDa siguen rondando por mi granja, pero ya no son tanto problema."
+        - "En esta \xE9poca del a\xF1o hay bichos a punta pala, y tengo que andar
+          fumigando los cultivos todo el d\xEDa."
+        - Por suerte los patos se comen los bichos que pululan por mis cultivos.
+        - "\xA1Pero esto no significa que vayan a quedarse! \xA1En cuanto llegue
+          el momento, me encargar\xE9 de echarlos!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFSe puede realmente negociar con un pato? Espero que al menos entiendan
+            el lenguaje universal de la violencia."
+        - m_DeityID: 0
+          m_Dialogue:
+          - Pienso que todos los seres del mundo pueden llegar a convivir en paz.
+          - Aunque a veces pienso que a algunos seres es mejor tenerlos apartados.
+        m_Repercusion:
+          m_ID:
+            m_NameID: ducks_help
+            m_ID: 11475594
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: the_lord_of_the_ducks
+            m_ID: -1752020074
+            m_Initialized: 1
+          m_Name: Ducks Help
+          m_Active: 0
+          m_Value: 30
+      - m_Condition:
+          m_Target:
+            m_NameID: mantecas
+            m_ID: 2085496002
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Ayer lleg\xF3 otra bandada de patos a destrozar mi granja! \xA1Por
+          si una sola bandada no fuera suficiente!"
+        - "\xA1Encima se est\xE1n peleando entre ellas, haciendo a\xFAn m\xE1s destrozos!"
+        - "\xA1Esto es un circo! \xA1Es inaudito! Al menos ser\xE1 m\xE1s f\xE1cil
+          echarlas de mi granja."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1Ojal\xE1 pudiera tener una bandada de patos a mi disposici\xF3n!
+            \xA1Me lo pasar\xEDa en grande!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Habr\xEDa que evitar que ese tal Johnny siguiera provocando situaciones
+            como esta."
+        m_Repercusion:
+          m_ID:
+            m_NameID: ducks_gone
+            m_ID: 1134127230
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: the_lord_of_the_ducks
+            m_ID: -1752020074
+            m_Initialized: 1
+          m_Name: Ducks Gone
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: mantecas
+            m_ID: 2085496002
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Sucias ratas del aire! \xA1Los patos han ocupado mi granero! \xA1\xBFC\xF3mo
+          diantres han logrado entrar?!"
+        - "Este va a ser un problema mucho mayor que las ratas, no voy a poder echarlas
+          de all\xED tan f\xE1cilmente."
+        - "\xA1\xBFCon qui\xE9n creen que est\xE1n tratando?! \xA1Han venido a conquistar
+          la granja equivocada!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1Imag\xEDnate qu\xE9 guay ser\xEDa que los patos pudieran llevar
+            armas!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Nadie se hubiera imaginado aves tan gr\xE1ciles pudieran llegar a ser
+            tan agresivas."
+        m_Repercusion:
+          m_ID:
+            m_NameID: ducks_stay
+            m_ID: 1913844432
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: the_lord_of_the_ducks
+            m_ID: -1752020074
+            m_Initialized: 1
+          m_Name: Ducks Stay
+          m_Active: 0
+          m_Value: -15
+      m_AllPossibleTargets:
+      - m_NameID: mantecas
+        m_ID: 2085496002
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: natural_chocolate_milkshake
+        m_ID: 1761273306
+        m_Initialized: 1
+      m_Title: Batido de chocolate 100% natural
+      m_IntroductionDialogue:
+      - "\xBFEl sabor explosivo? Lo he dejado de lado por el momento, pero tengo
+        una idea mucho mejor."
+      - "La mayor preocupaci\xF3n de toda chocolatera que se precie es de donde obtener
+        chocolate de calidad."
+      - "He o\xEDdo rumores de pueblos lejanos que hablan de que los batidos de chocolate
+        se obtienen de las vacas marrones."
+      - "Estoy segura de que las vacas son capaces de producir batidos de chocolate
+        con la alimentaci\xF3n adecuada."
+      - "Despu\xE9s de insistir mucho, he logrado que Meri me ceda sus vacas para
+        este noble prop\xF3sito."
+      - "\xA1Qu\xE9 emoci\xF3n! \xA1No puedo esperar a ponerme manos a la obra!"
+      m_QuestGiver: miss_chocolate
+      m_Description: "Miss Chocolate quiere experimentar con las vacas de Meri para
+        obtener de estas un batido de chocolate al orde\xF1arlas."
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: miss_chocolate
+            m_ID: -370492881
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 5
+        m_ResultNPCDialogue:
+        - "\xA1El experimento ha salido mucho mejor de lo que esperaba!"
+        - "Despu\xE9s de ingerir el pienso especial con galletas y dulces que he
+          preparado, \xA1he logrado resultados!"
+        - "Eso s\xED, parece ser que, en un descuido m\xEDo, se ha derramado una
+          de las p\xF3cimas de Johnny sobre el pienso."
+        - "No lo he sabido hasta mucho despu\xE9s de que se lo hayan comido. \xA1Puede
+          que esa sea la clave!"
+        - "La leche orde\xF1ada de las vacas se asemeja a un batido de chocolate,
+          o a algo parecido al menos."
+        - "\xA1Qu\xE9 alegr\xEDa! Estoy cerca de cumplir mi objetivo. \xA1Tengo que
+          seguir trabajando!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFHasta d\xF3nde llegar\xE1 esa tal Miss Chocolate con tal de lograr
+            sus experimentos? Quiz\xE1s sea de las m\xEDas."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "No tiene nada de malo ayudar en una causa aparentemente imposible. No
+            ser\xE1 malo, pero s\xED que puede ser est\xFApido."
+        m_Repercusion:
+          m_ID:
+            m_NameID: cows_experiment_success
+            m_ID: 1381373264
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: natural_chocolate_milkshake
+            m_ID: 1761273306
+            m_Initialized: 1
+          m_Name: Cows Experiment Success
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: miss_chocolate
+            m_ID: -370492881
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "\xA1\xBFC\xF3mo hace Meri para tratar con sus vacas d\xEDa a d\xEDa?!
+          Son muy agresivas conmigo."
+        - Pensaba hacerlas ingerir un pienso especial, pero parece que va a ser imposible.
+        - "\xA1No creas que he abandonado mi b\xFAsqueda, es s\xF3lo que tengo que
+          cambiar mi enfoque!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Incluso yo, que me regocijo en el caos, adoro a las vacas \xA1Nadie
+            deber\xEDa hacerles da\xF1o!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "A veces la gente necesita un peque\xF1o susto para darse cuenta del
+            error que cometen."
+        m_Repercusion:
+          m_ID:
+            m_NameID: cows_experiment_delayed
+            m_ID: 29767469
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: natural_chocolate_milkshake
+            m_ID: 1761273306
+            m_Initialized: 1
+          m_Name: Cows Experiment Delayed
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: miss_chocolate
+            m_ID: -370492881
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "\xA1\xBFC\xF3mo ha podido salir tan mal?! Las vacas est\xE1n para el arrastre.
+          A Meri le va a dar un patat\xFAs."
+        - "\xA1\xBFD\xF3nde me he equivocado?! Jurar\xEDa haber utilizado los ingredientes
+          correctos para el pienso especial."
+        - "Empiezo a sospechar que alguien ha manipulado el pienso antes de d\xE1rselo
+          a las vacas."
+        - "En fin, tendr\xE9 que pedir a otro vecino que me ceda sus vacas, aunque
+          ser\xE1 dif\xEDcil despu\xE9s de esto."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Me pregunto hasta qu\xE9 punto ser\xE1 posible obtener batidos de chocolate
+            de las vacas."
+          - "Bueno, me da a m\xED que va a ser tarde para averiguarlo."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Hay algunas personas que quieren jugar a ser Dios. Y luego est\xE1n
+            quienes lo intentan de verdad."
+        m_Repercusion:
+          m_ID:
+            m_NameID: cows_poisoned
+            m_ID: -932896982
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: natural_chocolate_milkshake
+            m_ID: 1761273306
+            m_Initialized: 1
+          m_Name: Cows Poisoned
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: miss_chocolate
+            m_ID: -370492881
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "No estoy avanzando apenas en mi investigaci\xF3n con las vacas. Son m\xE1s
+          agresivas de lo que esperaba."
+        - "Meri me dijo que eran muy apacibles con todo el mundo, \xBFLes caer\xE9
+          mal?"
+        - "\xA1Qu\xE9 fastidio! Parece que tengo que buscar otras opciones. \xA1Pero
+          no me rendir\xE9!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Incluso yo, que me regocijo en el caos, adoro a las vacas \xA1Nadie
+            deber\xEDa hacerles da\xF1o!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "A veces la gente necesita un peque\xF1o susto para darse cuenta del
+            error que cometen."
+        m_Repercusion:
+          m_ID:
+            m_NameID: cows_experiment_delayed
+            m_ID: 29767469
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: natural_chocolate_milkshake
+            m_ID: 1761273306
+            m_Initialized: 1
+          m_Name: Cows Experiment Delayed
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: miss_chocolate
+            m_ID: -370492881
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Mis experimentos con las vacas dan frutos, aunque tambi\xE9n surgen complicaciones."
+        - "Tras ingerir un pienso especial que he preparado yo misma, han empezado
+          a comportarse de manera extra\xF1a."
+        - "Poco despu\xE9s de ingerir el pienso las vacas empezaron a ladrar, \xA1Te
+          lo juro!"
+        - Meri casi se desmaya al verlo, parece ser que ya ha pasado por algo parecido.
+        - "Al menos las muestras de leche orde\xF1adas contienen muestras de chocolate,
+          que ya es algo."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFHasta d\xF3nde llegar\xE1 esa tal Miss Chocolate con tal de lograr
+            sus experimentos? Quiz\xE1s sea de las m\xEDas."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "No tiene nada de malo ayudar en una causa aparentemente imposible. No
+            ser\xE1 malo, pero s\xED que puede ser est\xFApido."
+        m_Repercusion:
+          m_ID:
+            m_NameID: cows_experiment_success
+            m_ID: 1381373264
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: natural_chocolate_milkshake
+            m_ID: 1761273306
+            m_Initialized: 1
+          m_Name: Cows Experiment Success
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: miss_chocolate
+            m_ID: -370492881
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "El experimento no va por buen camino, algunas vacas est\xE1n enfermando."
+        - Quiero estudiar muestras de leche de las vacas alimentadas con mi pienso
+          especial.
+        - "Pero parece que he cometido un error garrafal, \xA1a\xF1adir bellotas
+          a la mezcla!"
+        - "No me he dado cuenta hasta que lo he revisado, \xA1\xBFC\xF3mo he sido
+          tan descuidada?!"
+        - "Si la cosa no mejora, voy a tener que abandonar el experimento. Meri ya
+          me est\xE1 mirando mal."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Me pregunto hasta qu\xE9 punto ser\xE1 posible obtener batidos de chocolate
+            de las vacas."
+          - "Bueno, me da a m\xED que va a ser tarde para averiguarlo."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Hay algunas personas que quieren jugar a ser Dios. Y luego est\xE1n
+            quienes lo intentan de verdad."
+        m_Repercusion:
+          m_ID:
+            m_NameID: cows_poisoned
+            m_ID: -932896982
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: natural_chocolate_milkshake
+            m_ID: 1761273306
+            m_Initialized: 1
+          m_Name: Cows Poisoned
+          m_Active: 0
+          m_Value: -15
+      m_AllPossibleTargets:
+      - m_NameID: miss_chocolate
+        m_ID: -370492881
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: the_stolen_pendant
+        m_ID: -277480216
+        m_Initialized: 1
+      m_Title: El Colgante Robado
+      m_IntroductionDialogue:
+      - "\xA1Qu\xE9 dura es la vida de una adquisidora de reliquias! Nunca te aburres,
+        lo creas o no"
+      - "Volv\xED de una de mis visitas a las subastas de la ciudad e hice una nueva
+        adquisici\xF3n."
+      - "Se trataba de un colgante enjoyado muy antiguo de mucho valor. \xA1Y esta
+        vez es aut\xE9ntico, no como el huevo aquel!"
+      - El caso es que he perdido el colgante, debe de ser cosa de mi rival, otra
+        adquisidora de reliquias.
+      - "\xA1Me tiene mucha man\xEDa! Insiste en que muchos de mis artefactos le
+        pertenecen a su familia por derecho."
+      - "Quiero recuperar el colgante, \xA1yo lo he comprado as\xED que tengo m\xE1s
+        derecho que ella!"
+      m_QuestGiver: canela
+      m_Description: "La \xFAltima adquisici\xF3n de Canela, un colgante de mucho
+        valor, ha sido robado por una rival suya. Su rival afirma que Canela tiene
+        en su posesi\xF3n artefactos suyos."
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 5
+        m_ResultNPCDialogue:
+        - "\xBFEl colgante? \xA1Ha regresado a mis manos, no sabes c\xF3mo de aliviada
+          estoy!"
+        - "Lo que me extra\xF1a todav\xEDa es qui\xE9n se ha encargado de traerlo
+          de vuelta."
+        - "El rumor se ha debido de extender por el pueblo, \xA1y alg\xFAn justiciero
+          se ha hecho cargo!"
+        - Ha debido de ser todo un profesional, porque el colgante se encuentra en
+          perfectas condiciones.
+        - "\xA1Ahora podr\xE9 exponerlo junto al resto de mi colecci\xF3n!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "No entiendo el af\xE1n de acaparar tantos cachivaches. \xBFNo era un
+            s\xEDndrome o algo as\xED?"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Quiz\xE1s de aqu\xED a cinco mil a\xF1os tu pala se considerar\xE1 como
+            un artefacto valioso."
+        m_Repercusion:
+          m_ID:
+            m_NameID: pendant_recovered
+            m_ID: 694200378
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: the_stolen_pendant
+            m_ID: -277480216
+            m_Initialized: 1
+          m_Name: Pendant Recovered
+          m_Active: 0
+          m_Value: 30
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "He recuperado mi colgante\u2026 Bueno, realmente no es el mismo colgante
+          pero como si lo fuera."
+        - "Ha debido de ser mi rival, aunque no pensaba que fuera capaz de regalarme
+          otro colgante en compensaci\xF3n."
+        - "Lo he estudiado y tiene un valor muy similar al que ten\xEDa originalmente.
+          Pero sigo sin estar conforme."
+        - "No me malinterpretes, sigo disgustada por lo que ha hecho, aunque quiz\xE1s
+          ella no sea tan ruin como pensaba."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "No entiendo el af\xE1n de acaparar tantos cachivaches. \xBFNo era un
+            s\xEDndrome o algo as\xED?"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Quiz\xE1s de aqu\xED a cinco mil a\xF1os tu pala se considerar\xE1 como
+            un artefacto valioso."
+        m_Repercusion:
+          m_ID:
+            m_NameID: pendant_recovered
+            m_ID: 694200378
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: the_stolen_pendant
+            m_ID: -277480216
+            m_Initialized: 1
+          m_Name: Pendant Recovered
+          m_Active: 0
+          m_Value: 30
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Me han enviado un colgante que se parece mucho al original, empezaba a
+          pensar que podr\xEDa ser valioso."
+        - "Pero result\xF3 ser una burda falsificaci\xF3n \xA1\xBFQu\xE9 clase de
+          broma es esta?! \xA1Esa necia se est\xE1 burlando de m\xED!"
+        - "\xA1No dejar\xE9 que esa ladrona se r\xEDa de m\xED! \xA1Pienso recuperar
+          mi colgante!"
+        - "\xA1Y si no puedo recuperarlo, lo har\xE9 a\xF1icos con tal de que no
+          lo tenga ella!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Siempre me he preguntado cu\xE1nto tiempo tiene que pasar para que el
+            saqueo de tumbas pase a considerarse arqueolog\xEDa."
+        - m_DeityID: 0
+          m_Dialogue:
+          - No veo nada malo en conservar artefactos antiguos, siempre que no sean
+            peligrosos.
+        m_Repercusion:
+          m_ID:
+            m_NameID: pendant_lost
+            m_ID: -421804841
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: the_stolen_pendant
+            m_ID: -277480216
+            m_Initialized: 1
+          m_Name: Pendant Lost
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xBFMi colgante? Ha regresado a mis manos, pero\u2026 Est\xE1 muy da\xF1ado."
+        - "Alguien ha debido de recuperarlo por m\xED, pero casi desear\xEDa que
+          no lo hubiera hecho."
+        - "Quien quiera que haya sido, parece que no era consciente de lo fr\xE1gil
+          que era."
+        - "Al menos lo he recuperado, as\xED que no me puedo quejar, supongo."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFUn ladr\xF3n que roba a otro ladr\xF3n? Soy m\xE1s partidaria de
+            eliminar a la competencia."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Estoy bastante seguro de haberme encontrado con alguno de esos artefactos
+            en su \xE9poca."
+        m_Repercusion:
+          m_ID:
+            m_NameID: pendant_damaged
+            m_ID: 1240076084
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: the_stolen_pendant
+            m_ID: -277480216
+            m_Initialized: 1
+          m_Name: Pendant Damaged
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Mi colecci\xF3n est\xE1 arruinada, sab\xEDa que esto pod\xEDa pasar!"
+        - "Alguien entr\xF3 en mi casa por la noche y me ha robado mis preciados
+          artefactos."
+        - "\xA1\xBFPor qu\xE9 tengo guardias tan incompetentes?! \xA1Reforc\xE9 la
+          seguridad desde el problema con la secta!"
+        - "No han encontrado rastro del culpable, \xA1pero ha tenido que ser cosa
+          de mi rival, seguro!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - El robo me parece bien. Al fin y al cabo, es mejor que te roben a que
+            te destrocen las cosas.
+        - m_DeityID: 0
+          m_Dialogue:
+          - "\xBFQu\xE9 ocurrir\xEDa al robar a un ladr\xF3n? Es discutible, pero
+            pienso que te conviertes en otro."
+        m_Repercusion:
+          m_ID:
+            m_NameID: artifacts_stolen
+            m_ID: 2051898921
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: the_stolen_pendant
+            m_ID: -277480216
+            m_Initialized: 1
+          m_Name: Artifacts Stolen
+          m_Active: 0
+          m_Value: -30
+      m_AllPossibleTargets:
+      - m_NameID: canela
+        m_ID: -619351516
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
   m_Repercusions:
   - m_ID:
       m_NameID: wolves_gone
@@ -3515,6 +4563,138 @@ MonoBehaviour:
     m_Name: Cows and goats reversed
     m_Active: 0
     m_Value: -15
+  - m_ID:
+      m_NameID: competition_judges_stoned
+      m_ID: -1778757852
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: the_cake_was_not_a_lie
+      m_ID: 2026914235
+      m_Initialized: 1
+    m_Name: Competition Judges Stoned
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: competition_safe
+      m_ID: -1165341605
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: the_cake_was_not_a_lie
+      m_ID: 2026914235
+      m_Initialized: 1
+    m_Name: Competition Safe
+    m_Active: 0
+    m_Value: 15
+  - m_ID:
+      m_NameID: ducks_stay
+      m_ID: 1913844432
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: the_lord_of_the_ducks
+      m_ID: -1752020074
+      m_Initialized: 1
+    m_Name: Ducks Stay
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: ducks_gone
+      m_ID: 1134127230
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: the_lord_of_the_ducks
+      m_ID: -1752020074
+      m_Initialized: 1
+    m_Name: Ducks Gone
+    m_Active: 0
+    m_Value: 15
+  - m_ID:
+      m_NameID: ducks_help
+      m_ID: 11475594
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: the_lord_of_the_ducks
+      m_ID: -1752020074
+      m_Initialized: 1
+    m_Name: Ducks Help
+    m_Active: 0
+    m_Value: 30
+  - m_ID:
+      m_NameID: cows_poisoned
+      m_ID: -932896982
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: natural_chocolate_milkshake
+      m_ID: 1761273306
+      m_Initialized: 1
+    m_Name: Cows Poisoned
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: cows_experiment_success
+      m_ID: 1381373264
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: natural_chocolate_milkshake
+      m_ID: 1761273306
+      m_Initialized: 1
+    m_Name: Cows Experiment Success
+    m_Active: 0
+    m_Value: 15
+  - m_ID:
+      m_NameID: cows_experiment_delayed
+      m_ID: 29767469
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: natural_chocolate_milkshake
+      m_ID: 1761273306
+      m_Initialized: 1
+    m_Name: Cows Experiment Delayed
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: artifacts_stolen
+      m_ID: 2051898921
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: the_stolen_pendant
+      m_ID: -277480216
+      m_Initialized: 1
+    m_Name: Artifacts Stolen
+    m_Active: 0
+    m_Value: -30
+  - m_ID:
+      m_NameID: pendant_damaged
+      m_ID: 1240076084
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: the_stolen_pendant
+      m_ID: -277480216
+      m_Initialized: 1
+    m_Name: Pendant Damaged
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: pendant_recovered
+      m_ID: 694200378
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: the_stolen_pendant
+      m_ID: -277480216
+      m_Initialized: 1
+    m_Name: Pendant Recovered
+    m_Active: 0
+    m_Value: 30
+  - m_ID:
+      m_NameID: pendant_lost
+      m_ID: -421804841
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: the_stolen_pendant
+      m_ID: -277480216
+      m_Initialized: 1
+    m_Name: Pendant Lost
+    m_Active: 0
+    m_Value: -15
   m_RepercusionNewspaperArticles:
   - m_RepID:
       m_NameID: wolves_gone
@@ -3664,92 +4844,165 @@ MonoBehaviour:
     m_Body: "Un extra\xF1o incidente ha provocado que las vacas se transformen en
       cabras y las cabras en vacas. \xBFCu\xE1n confuso puede llegar a ser el mundo
       en el que vivimos?"
+  - m_RepID:
+      m_NameID: competition_judges_stoned
+      m_ID: -1778757852
+      m_Initialized: 1
+    m_Title: La Tarta del Caos
+    m_Body: "El pasado concurso de reposter\xEDa se ha cancelado debido a los efectos
+      que ha provocado una tarta en los jueces. Los jueces sufren alucinaciones hasta
+      el d\xEDa de hoy. Se sospecha de un alquimista local."
+  - m_RepID:
+      m_NameID: competition_safe
+      m_ID: -1165341605
+      m_Initialized: 1
+    m_Title: Un concurso sin incidentes
+    m_Body: "El concurso anual de reposter\xEDa ha finalizado sin incidentes."
+  - m_RepID:
+      m_NameID: ducks_stay
+      m_ID: 1913844432
+      m_Initialized: 1
+    m_Title: "Invasi\xF3n aviar"
+    m_Body: "Una bandada de patos muy agresivos han ocupado el granero de un granjero
+      local. El due\xF1o de la granja expresa su descontento con un rastrillo en
+      mano."
+  - m_RepID:
+      m_NameID: ducks_gone
+      m_ID: 1134127230
+      m_Initialized: 1
+    m_Title: La Paz de los Patos.
+    m_Body: "La guerra entre la bandada de patos agresivos y un granjero local ha
+      finalizado. Los patos aceptaron su derrota y partieron fuera del pueblo. \xBFBuscar\xE1n
+      otras tierras que conquistar?"
+  - m_RepID:
+      m_NameID: ducks_help
+      m_ID: 11475594
+      m_Initialized: 1
+    m_Title: Lo nuevo en pesticidas.
+    m_Body: "La comunidad agr\xEDcola se encuentra asombrada ante el nuevo m\xE9todo
+      de control de plagas que un granjero local est\xE1 utilizando. Se trata nada
+      m\xE1s y nada menos que de patos. Con el cuidado adecuado, estos se encargan
+      de cualquier alima\xF1a sin que afecte a los cultivos."
+  - m_RepID:
+      m_NameID: cows_poisoned
+      m_ID: -932896982
+      m_Initialized: 1
+    m_Title: Experimentos extremos.
+    m_Body: "La c\xE9lebre chocolatera local, Miss Chocolate la Bomb ha sido el foco
+      de una nueva pol\xE9mica tras el fracaso rotundo en su nuevo experimento. El
+      experimento ha resultado en el envenenamiento leve de las vacas de una ganadera
+      local."
+  - m_RepID:
+      m_NameID: cows_experiment_success
+      m_ID: 1381373264
+      m_Initialized: 1
+    m_Title: Los batidos de chocolate 100% naturales.
+    m_Body: "La conocida chocolatera local, Miss Chocolate la Bomb, ha obtenido resultados
+      impresionantes en su nueva investigaci\xF3n. De alguna manera ha logrado obtener
+      muestras de batido de chocolate al orde\xF1ar vacas marrones. \xBFHa llegado
+      la ciencia demasiado lejos?"
+  - m_RepID:
+      m_NameID: cows_experiment_delayed
+      m_ID: 29767469
+      m_Initialized: 1
+    m_Title: Rechazo vacuno.
+    m_Body: La famosa chocolatera local, Miss Chocolate la Bomb, ha sufrido heridas
+      leves tras ser atacada por las vacas con las que experimentaba.
+  - m_RepID:
+      m_NameID: artifacts_stolen
+      m_ID: 2051898921
+      m_Initialized: 1
+    m_Title: "Robo en la exposici\xF3n"
+    m_Body: Muchos de los artefactos de la coleccionista, Canela N Rama, han desaparecido
+      sin dejar rastro. No se han encontrado pruebas en la escena del crimen.
+  - m_RepID:
+      m_NameID: pendant_damaged
+      m_ID: 1240076084
+      m_Initialized: 1
+    m_Title: "La nueva joya de la exposici\xF3n regresa a su vitrina"
+    m_Body: "El colgante enjoyado que se cre\xEDa desaparecido ha vuelto a las manos
+      de Canela N Rama. Por desgracia, se encuentra en un estado lamentable."
+  - m_RepID:
+      m_NameID: pendant_recovered
+      m_ID: 694200378
+      m_Initialized: 1
+    m_Title: "La  joya de la exposici\xF3n regresa intacta."
+    m_Body: "El colgante enjoyado desaparecido de la colecci\xF3n ha regresado intacto
+      a la exposici\xF3n."
+  - m_RepID:
+      m_NameID: pendant_lost
+      m_ID: -421804841
+      m_Initialized: 1
+    m_Title: El colgante enjoyado sigue desaparecido.
+    m_Body: "La nueva joya de la exposici\xF3n de Canela N Rama sigue en paradero
+      desconocido."
   m_StoryUI:
   - m_ParentStoryID:
       m_NameID: mayor_problem
       m_ID: -600069758
       m_Initialized: 1
-    m_Sprite: {fileID: 0}
+    m_Sprite: {fileID: 21300000, guid: 955648f86f7437c4d83f982a26431630, type: 3}
     m_Title: El Problema del Alcalde
   - m_ParentStoryID:
       m_NameID: out_of_lactose
       m_ID: 1134344292
       m_Initialized: 1
-    m_Sprite: {fileID: 0}
+    m_Sprite: {fileID: 21300000, guid: 6f5f7f2fb0ff53544ade6dca2233f3f3, type: 3}
     m_Title: Falta de Lactosa
   - m_ParentStoryID:
       m_NameID: sacred_egg
       m_ID: 2133386136
       m_Initialized: 1
-    m_Sprite: {fileID: 0}
+    m_Sprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
     m_Title: El Huevo Sagrado
   - m_ParentStoryID:
       m_NameID: explosive_chocolate
       m_ID: -819324724
       m_Initialized: 1
-    m_Sprite: {fileID: 0}
+    m_Sprite: {fileID: 21300000, guid: 0b01fc78af86a0a4fb521de9914dcb07, type: 3}
     m_Title: Chocolate explosivo
   - m_ParentStoryID:
       m_NameID: not_so_dirty_rats
       m_ID: 1589037026
       m_Initialized: 1
-    m_Sprite: {fileID: 0}
+    m_Sprite: {fileID: 21300000, guid: aa803b24573e9ed40bb9e977d2e0551b, type: 3}
     m_Title: Ratas no tan sucias
   - m_ParentStoryID:
       m_NameID: stingy_taxes
       m_ID: 1184286464
       m_Initialized: 1
-    m_Sprite: {fileID: 0}
+    m_Sprite: {fileID: 21300000, guid: e212c421c506dff46bdeec1804b46400, type: 3}
     m_Title: "Impuestos para el taca\xF1o"
   - m_ParentStoryID:
       m_NameID: crazy_cows
       m_ID: -112750320
       m_Initialized: 1
-    m_Sprite: {fileID: 0}
+    m_Sprite: {fileID: 21300000, guid: 59e16419a5901d745b465b8fc2eba137, type: 3}
     m_Title: Las vacas locas
-  m_References:
   - m_ParentStoryID:
-      m_NameID: mayor_problem
-      m_ID: -600069758
+      m_NameID: the_cake_was_not_a_lie
+      m_ID: 2026914235
       m_Initialized: 1
-    m_StoryName: El problema del alcalde
-    m_StorySelectionUiSprite: {fileID: 0}
+    m_Sprite: {fileID: 21300000, guid: e0229d153771a4b439a803d2b546a4df, type: 3}
+    m_Title: La tarta no era de mentira
   - m_ParentStoryID:
-      m_NameID: out_of_lactose
-      m_ID: 1134344292
+      m_NameID: the_lord_of_the_ducks
+      m_ID: -1752020074
       m_Initialized: 1
-    m_StoryName: Falta de lactosa
-    m_StorySelectionUiSprite: {fileID: 0}
+    m_Sprite: {fileID: 21300000, guid: e8d442410434b174d92c1b1972ca01eb, type: 3}
+    m_Title: "El Se\xF1or de los Patos"
   - m_ParentStoryID:
-      m_NameID: sacred_egg
-      m_ID: 2133386136
+      m_NameID: natural_chocolate_milkshake
+      m_ID: 1761273306
       m_Initialized: 1
-    m_StoryName: El Huevo Sagrado
-    m_StorySelectionUiSprite: {fileID: 0}
+    m_Sprite: {fileID: 21300000, guid: edb495e164252af4ab49399e5214ed20, type: 3}
+    m_Title: Batido de chocolate 100% natural
   - m_ParentStoryID:
-      m_NameID: explosive_chocolate
-      m_ID: -819324724
+      m_NameID: the_stolen_pendant
+      m_ID: -277480216
       m_Initialized: 1
-    m_StoryName: Chocolate explosivo
-    m_StorySelectionUiSprite: {fileID: 0}
-  - m_ParentStoryID:
-      m_NameID: not_so_dirty_rats
-      m_ID: 1589037026
-      m_Initialized: 1
-    m_StoryName: Ratas no tan sucias
-    m_StorySelectionUiSprite: {fileID: 0}
-  - m_ParentStoryID:
-      m_NameID: stingy_taxes
-      m_ID: 1184286464
-      m_Initialized: 1
-    m_StoryName: "Impuestos para el taca\xF1o"
-    m_StorySelectionUiSprite: {fileID: 0}
-  - m_ParentStoryID:
-      m_NameID: crazy_cows
-      m_ID: -112750320
-      m_Initialized: 1
-    m_StoryName: Las vacas locas
-    m_StorySelectionUiSprite: {fileID: 0}
+    m_Sprite: {fileID: 21300000, guid: f680bc7e40d2ef442af1dfe3f23f7214, type: 3}
+    m_Title: El Colgante Robado
 --- !u!114 &6330534342466683427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4357,3 +5610,157 @@ MonoBehaviour:
     m_Sprite: {fileID: 21300000, guid: c6c0dbea8b1cd9245a274ab113a9a19f, type: 3}
     m_ReputationTypePrice: 0
     m_Price: 0
+--- !u!114 &1241280839235921238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6330534342466683448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fcfa8146e6c2e1468fd40a50bfc93d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Locations:
+  - m_ID:
+      m_NameID: mayor_home
+      m_ID: 550075868
+      m_Initialized: 1
+    m_LocName: Town Center
+    m_LocDesc: description
+    m_Happiness: 0
+    m_StoryRepercusionsIDs:
+    - m_NameID: wolves_gone
+      m_ID: -1222842292
+      m_Initialized: 1
+    - m_NameID: wolves_stay
+      m_ID: 2003692602
+      m_Initialized: 1
+    - m_NameID: mayor_assaulted
+      m_ID: 1982058079
+      m_Initialized: 1
+    - m_NameID: mayor_waste
+      m_ID: 745825927
+      m_Initialized: 1
+    - m_NameID: mayor_robbed
+      m_ID: -2038562937
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: meri_rancho
+      m_ID: -1291356903
+      m_Initialized: 1
+    m_LocName: Town Center
+    m_LocDesc: description
+    m_Happiness: 0
+    m_StoryRepercusionsIDs:
+    - m_NameID: cows_harmed
+      m_ID: 551016836
+      m_Initialized: 1
+    - m_NameID: cows_saved
+      m_ID: -1668179774
+      m_Initialized: 1
+    - m_NameID: cows_transformed
+      m_ID: 1469249696
+      m_Initialized: 1
+    - m_NameID: cows_back_to_normal
+      m_ID: 1494518570
+      m_Initialized: 1
+    - m_NameID: cows_and_goats_reversed
+      m_ID: 739513102
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: canela_home
+      m_ID: -726187318
+      m_Initialized: 1
+    m_LocName: Town Center
+    m_LocDesc: description
+    m_Happiness: 0
+    m_StoryRepercusionsIDs:
+    - m_NameID: golden_egg_destroyed
+      m_ID: -1052392455
+      m_Initialized: 1
+    - m_NameID: golden_egg_safe
+      m_ID: -704593445
+      m_Initialized: 1
+    - m_NameID: golden_egg_gone
+      m_ID: 1896423645
+      m_Initialized: 1
+    - m_NameID: artifacts_stolen
+      m_ID: 2051898921
+      m_Initialized: 1
+    - m_NameID: pendant_damaged
+      m_ID: 1240076084
+      m_Initialized: 1
+    - m_NameID: pendant_recovered
+      m_ID: 694200378
+      m_Initialized: 1
+    - m_NameID: pendant_lost
+      m_ID: -421804841
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: chocolate_home
+      m_ID: 1959417174
+      m_Initialized: 1
+    m_LocName: Town Center
+    m_LocDesc: description
+    m_Happiness: 0
+    m_StoryRepercusionsIDs:
+    - m_NameID: ms_chocolate_sabotaged
+      m_ID: -1115469212
+      m_Initialized: 1
+    - m_NameID: ms_chocolate_gunpowder
+      m_ID: -1828434159
+      m_Initialized: 1
+    - m_NameID: ms_chocolate_pepper
+      m_ID: -838266464
+      m_Initialized: 1
+    - m_NameID: cows_poisoned
+      m_ID: -932896982
+      m_Initialized: 1
+    - m_NameID: cows_experiment_success
+      m_ID: 1381373264
+      m_Initialized: 1
+    - m_NameID: cows_experiment_delayed
+      m_ID: 29767469
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: mantecas_home
+      m_ID: 1846525232
+      m_Initialized: 1
+    m_LocName: Town Center
+    m_LocDesc: description
+    m_Happiness: 0
+    m_StoryRepercusionsIDs:
+    - m_NameID: smart_rats_stay
+      m_ID: -333686544
+      m_Initialized: 1
+    - m_NameID: smart_rats_gone
+      m_ID: 244518502
+      m_Initialized: 1
+    - m_NameID: smart_rats_tribute
+      m_ID: 138659744
+      m_Initialized: 1
+    - m_NameID: ducks_stay
+      m_ID: 1913844432
+      m_Initialized: 1
+    - m_NameID: ducks_gone
+      m_ID: 1134127230
+      m_Initialized: 1
+    - m_NameID: ducks_help
+      m_ID: 11475594
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: johnny_home
+      m_ID: -614040492
+      m_Initialized: 1
+    m_LocName: Town Center
+    m_LocDesc: description
+    m_Happiness: 0
+    m_StoryRepercusionsIDs:
+    - m_NameID: competition_judges_stoned
+      m_ID: -1778757852
+      m_Initialized: 1
+    - m_NameID: competition_safe
+      m_ID: -1165341605
+      m_Initialized: 1

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf31e275565ad0e419f0a99fc591d56a, type: 3}
+  m_Name: StoriesAssetsReferences
+  m_EditorClassIdentifier: 
+  m_Stories:
+  - m_IDName: mayor_problem
+    m_Sprite: {fileID: 21300000, guid: 955648f86f7437c4d83f982a26431630, type: 3}
+  - m_IDName: out_of_lactose
+    m_Sprite: {fileID: 21300000, guid: 6f5f7f2fb0ff53544ade6dca2233f3f3, type: 3}
+  - m_IDName: sacred_egg
+    m_Sprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+  - m_IDName: explosive_chocolate
+    m_Sprite: {fileID: 21300000, guid: 0b01fc78af86a0a4fb521de9914dcb07, type: 3}
+  - m_IDName: not_so_dirty_rats
+    m_Sprite: {fileID: 21300000, guid: aa803b24573e9ed40bb9e977d2e0551b, type: 3}
+  - m_IDName: stingy_taxes
+    m_Sprite: {fileID: 21300000, guid: e212c421c506dff46bdeec1804b46400, type: 3}
+  - m_IDName: crazy_cows
+    m_Sprite: {fileID: 21300000, guid: 59e16419a5901d745b465b8fc2eba137, type: 3}
+  - m_IDName: the_cake_was_not_a_lie
+    m_Sprite: {fileID: 21300000, guid: e0229d153771a4b439a803d2b546a4df, type: 3}
+  - m_IDName: the_lord_of_the_ducks
+    m_Sprite: {fileID: 21300000, guid: e8d442410434b174d92c1b1972ca01eb, type: 3}
+  - m_IDName: natural_chocolate_milkshake
+    m_Sprite: {fileID: 21300000, guid: edb495e164252af4ab49399e5214ed20, type: 3}
+  - m_IDName: the_stolen_pendant
+    m_Sprite: {fileID: 21300000, guid: f680bc7e40d2ef442af1dfe3f23f7214, type: 3}
