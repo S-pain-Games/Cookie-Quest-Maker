@@ -28,6 +28,10 @@ public class IngredientsBuilder : MonoBehaviour
         CreateIngredient("levadura_ancestral_de_la_pereza", "Levadura Ancestral de la pereza", 40, 40, Reputation.EvilCookieReputation);
         CreateIngredient("chocolate_negro_sempiterno", "Chocolate negro Sempiterno", 0, 20, Reputation.EvilCookieReputation);
         CreateIngredient("harina_de_fuerza_titanica", "Harina de fuerza titánica", 15, 15, Reputation.GoodCookieReputation);
+
+        CreateIngredient("polvo_impetuoso", "Polvo para hornear impetuoso", 0, 10, Reputation.GoodCookieReputation);
+        CreateIngredient("polvo_persuasivo", "Polvo para hornear persuasivo", 5, 5, Reputation.GoodCookieReputation);
+        CreateIngredient("polvo_auxilio", "Polvo para hornear del auxilio", 10, 0, Reputation.GoodCookieReputation);
     }
 
     public void BuildPieces(ComponentsDatabase c)

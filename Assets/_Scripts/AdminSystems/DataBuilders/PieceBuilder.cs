@@ -89,6 +89,9 @@ namespace CQM.Databases
                 CreateNew();
                 SetIDName("merengue_fantasma_tostado");
                 SetPieceType(PieceType.Cookie);
+                AddFunctionalTag(Tag.Harm, 1);
+                AddFunctionalTag(Tag.Convince, 1);
+                AddFunctionalTag(Tag.Help, 1);
                 SetUIData("Merengue Fantasma Tostado", "Descripción.");
                 SetRecipeData("Receta de Merengue Fantasma Tostado", "Descripción.", Reputation.GoodCookieReputation, 75, 75);
                 AddIngredientToRecipe("crema_pastelera_arcana", 2);
@@ -97,6 +100,8 @@ namespace CQM.Databases
                 CreateNew();
                 SetIDName("pepito_de_ternura");
                 SetPieceType(PieceType.Cookie);
+                AddFunctionalTag(Tag.Convince, 1);
+                AddFunctionalTag(Tag.Help, 2);
                 SetUIData("Pepito de Ternura", "Descripción.");
                 SetRecipeData("Receta de Pepito de Ternura", "Descripción.", Reputation.GoodCookieReputation, 250, 0);
                 AddIngredientToRecipe("chocolate_negro_sempiterno", 2);
@@ -105,8 +110,10 @@ namespace CQM.Databases
                 CreateNew();
                 SetIDName("bizcotroll");
                 SetPieceType(PieceType.Cookie);
-                SetUIData("Bizcotroll de Naranjas", "Descripción.");
-                SetRecipeData("Receta de Bizcotroll de Naranjas", "Descripción.", Reputation.GoodCookieReputation, 500, 0);
+                AddFunctionalTag(Tag.Harm, 2);
+                AddFunctionalTag(Tag.Help, 3);
+                SetUIData("Bizcotroll de Naranjas Somnolientas", "Descripción.");
+                SetRecipeData("Receta de Bizcotroll de Naranjas Somnolientas", "Descripción.", Reputation.GoodCookieReputation, 500, 0);
                 AddIngredientToRecipe("harina_de_fuerza_titanica", 1);
                 AddIngredientToRecipe("caramelo_fundido_candiscente", 2);
                 AddIngredientToRecipe("levadura_ancestral_de_la_pereza", 1);
@@ -114,6 +121,8 @@ namespace CQM.Databases
                 CreateNew();
                 SetIDName("jauria_bombon");
                 SetPieceType(PieceType.Cookie);
+                AddFunctionalTag(Tag.Harm, 2);
+                AddFunctionalTag(Tag.Help, 3);
                 SetUIData("Jauría Bombón Infernal", "Descripción.");
                 SetRecipeData("Receta de Jauría Bombón Infernal", "Descripción.", Reputation.GoodCookieReputation, 0, 250);
                 AddIngredientToRecipe("compota_de_mora_infernal", 2);
@@ -122,6 +131,8 @@ namespace CQM.Databases
                 CreateNew();
                 SetIDName("paladin_tortita");
                 SetPieceType(PieceType.Cookie);
+                AddFunctionalTag(Tag.Harm, 3);
+                AddFunctionalTag(Tag.Help, 1);
                 SetUIData("Paladín Tortita", "Descripción.");
                 SetRecipeData("Receta de Paladín Tortita", "Descripción.", Reputation.GoodCookieReputation, 350, 150);
                 AddIngredientToRecipe("nucleo_de_cereza_animico", 1);
@@ -131,6 +142,8 @@ namespace CQM.Databases
                 CreateNew();
                 SetIDName("bizquiborracho");
                 SetPieceType(PieceType.Cookie);
+                AddFunctionalTag(Tag.Harm, 1);
+                AddFunctionalTag(Tag.Convince, 2);
                 SetUIData("Bizquiborracho de Mora", "Descripción.");
                 SetRecipeData("Receta de Bizquiborracho de Mora", "Descripción.", Reputation.GoodCookieReputation, 0, 250);
                 AddIngredientToRecipe("crema_pastelera_arcana", 2);
@@ -139,6 +152,8 @@ namespace CQM.Databases
                 CreateNew();
                 SetIDName("citrielfo");
                 SetPieceType(PieceType.Cookie);
+                AddFunctionalTag(Tag.Convince, 3);
+                AddFunctionalTag(Tag.Help, 2);
                 SetUIData("Citrielfo en Copa", "Descripción.");
                 SetRecipeData("Receta de Citrielfo en Copa", "Descripción.", Reputation.GoodCookieReputation, 150, 350);
                 AddIngredientToRecipe("esencia_de_limon_purificadora", 2);
