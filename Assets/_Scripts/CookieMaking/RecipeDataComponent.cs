@@ -18,7 +18,8 @@ public class RecipeDataComponent
     public Image m_Image;
 
     public Reputation m_ReputationTypePrice = Reputation.GoodCookieReputation;
-    public int m_Price;
+    public int m_Price_Good;
+    public int m_Price_Evil;
 
     public List<InventoryItem> m_IngredientsList = new List<InventoryItem>();
 

@@ -37,7 +37,7 @@ namespace CQM.Databases
             c.m_StoriesStateComponent.m_AllSecondaryStories.Add(new ID("stingy_taxes"));
             c.m_StoriesStateComponent.m_AllSecondaryStories.Add(new ID("crazy_cows"));
 
-            c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("plain_cookie"));
+            c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("malvavisco_fantasma_tostado"));
             c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("attack"));
             c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("dialogate"));
             c.m_InventoryComponent.m_UnlockedRecipes.Add(new ID("assist"));

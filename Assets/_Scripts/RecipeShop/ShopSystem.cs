@@ -55,14 +55,17 @@ public class ShopSystem : ISystemEvents
         if (_inventoryData.m_UnlockedRecipes.Contains(selectedRecipeId)) return;
 
         bool enoughMoneyToBuy = false;
-        if (recipe.m_ReputationTypePrice == Reputation.GoodCookieReputation)
-            enoughMoneyToBuy = _inventoryData.m_GoodCookieReputation >= recipe.m_Price;
-        else if (recipe.m_ReputationTypePrice == Reputation.EvilCookieReputation)
-            enoughMoneyToBuy = _inventoryData.m_EvilCookieReputation >= recipe.m_Price;
+        if (recipe.m_Price_Good > 0)
+            enoughMoneyToBuy = _inventoryData.m_GoodCookieReputation >= recipe.m_Price_Good;
+        if (recipe.m_Price_Evil > 0)
+            enoughMoneyToBuy = _inventoryData.m_EvilCookieReputation >= recipe.m_Price_Evil;
 
         if (enoughMoneyToBuy)
         {
-            _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(recipe.m_ReputationTypePrice, -recipe.m_Price));
+            if (recipe.m_Price_Good > 0)
+                _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(Reputation.GoodCookieReputation, -recipe.m_Price_Good));
+            if (recipe.m_Price_Evil > 0)
+                _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(Reputation.EvilCookieReputation, -recipe.m_Price_Evil));
             _unlockRecipeCmd.Invoke(recipe.m_PieceID);
             _updateShopCallback.Invoke();
             //_buyRecipeCmdREFACTOR.Invoke();
@@ -77,14 +80,17 @@ public class ShopSystem : ISystemEvents
         if(ingredient != null)
         {
             bool enoughMoneyToBuy = false;
-            if (ingredient.m_ReputationTypePrice == Reputation.GoodCookieReputation)
-                enoughMoneyToBuy = _inventoryData.m_GoodCookieReputation >= ingredient.m_Price;
-            else if (ingredient.m_ReputationTypePrice == Reputation.EvilCookieReputation)
-                enoughMoneyToBuy = _inventoryData.m_EvilCookieReputation >= ingredient.m_Price;
+            if (ingredient.m_Price_Good > 0)
+                enoughMoneyToBuy = _inventoryData.m_GoodCookieReputation >= ingredient.m_Price_Good;
+            if (ingredient.m_Price_Evil > 0)
+                enoughMoneyToBuy = _inventoryData.m_EvilCookieReputation >= ingredient.m_Price_Evil;
 
             if (enoughMoneyToBuy)
             {
-                _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(ingredient.m_ReputationTypePrice, -ingredient.m_Price));
+                if (ingredient.m_Price_Good > 0)
+                    _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(Reputation.GoodCookieReputation, -ingredient.m_Price_Good));
+                if (ingredient.m_Price_Evil > 0)
+                    _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(Reputation.EvilCookieReputation, -ingredient.m_Price_Evil));
                 //_unlockRecipeCmd.Invoke(recipe.m_PieceID);
                 ItemData newIngredient = new ItemData(selectedIngredientId, 1);
                 _addIngredient.Invoke(newIngredient);
