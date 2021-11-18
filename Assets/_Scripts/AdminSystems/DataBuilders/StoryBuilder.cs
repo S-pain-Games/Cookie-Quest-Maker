@@ -1316,6 +1316,670 @@ namespace CQM.Databases
 
             AddStorySelectionUIData("El Colgante Robado");
             FinishCreatingStory();
+
+            // =============================================================================================
+            //STORY 12
+            // =============================================================================================
+
+            StartCreatingStory("a_regular_day", "Un día normal", "mantecas",
+            "El Mantecas está muy preocupado después de tener unos días de tranquilidad. Está esperando a que ocurra el siguiente desastre en su granja.", new List<string>() {
+                "Últimamente no ha ocurrido nada inusual en mi granja. Todo va bien, ¡demasiado bien!",
+                "¡¿Por qué estoy enfadado, me preguntas?! ¡Pues porque claramente se avecinan nuevos problemas!",
+                "¡Lo siento en mis huesos, mis momentos de tranquilidad se van a acabar pronto!",
+                "En el momento que baje la guardia… ¡Pum! El desastre volverá a mis tierras."
+            });
+
+            CreateRepercusion("mantecas_farm_damaged", "Mantecas Farm Damaged", -15);
+            AddStoryRepercusionNewspaperArticle("Una nueva plaga asola nuestros campos.",
+                "Una plaga de topos ha hecho estragos en los cultivos de una granja local. Sorprendentemente, el dueño no parecía estar muy disgustado al respecto.");
+
+            CreateRepercusion("mantecas_farm_devastated", "Mantecas Farm Devastated", -30);
+            AddStoryRepercusionNewspaperArticle("La devastación de nuestros campos.",
+                "Una terrible plaga de langostas, topos y ratas han arrasado de la noche a la mañana el esfuerzo de un agricultor local. Para nuestra sorpresa, el dueño esbozó una sonrisa.");
+
+            CreateRepercusion("mantecas_farm_revitalized", "Mantecas Farn Revitalized", 30);
+            AddStoryRepercusionNewspaperArticle("Buenos tiempos para nuestros campos.",
+                "La prolongada serie de desgracias que acechaban a los cultivos de un granjero local parece haberse detenido. Aun así, las preocupaciones se mantienen, declaró el dueño.");
+
+            CreateRepercusion("mantecas_paranoic", "mantecas_paranoic", -15);
+            AddStoryRepercusionNewspaperArticle("¿Se avecinan tiempos terribles?",
+                "Un granjero local asegura con total seguridad que un nuevo desastre se avecina sobre sus campos después de percatarse de fenómenos extraños. ¿Podría tratarse de una broma?");
+
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("mantecas_farm_damaged");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Han aparecido topos en mi granja! ¡Están destrozando mis cultivos!",
+                "¡Sabía que algo estaba por suceder! ¡Mi intuición nunca falla!",
+                "¡Esos malditos estaban esperando su oportunidad para amargarme la existencia! ¡Tendrán su merecido!"
+            }, Tag.Harm, 1, "mantecas");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Veo que te has tomado muy en serio la petición de ese tipo. ¡Conseguirá lo que desea!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Me da un poco de pena ese granjero, parece que sólo vive para sobrevivir un desastre tras otro." });
+
+            //HARM >=5
+            StartStoryBranch();
+            SetRepercusionToBranch("mantecas_farm_devastated");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡El caos ha vuelto a mi granja! ¡Sabía que algo gordo se avecinaba!",
+                "¡Han aparecido topos y langostas para destrozarme los cultivos! ¡Además las ratas han vuelto a ocupar mi granero!",
+                "¡Sucias alimañas! ¡¿Creen que pueden conmigo?! ¡Qué vengan! ¡Se van a llevar su merecido!"
+            }, Tag.Harm, 5, "mantecas");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Lo estás dando todo para cumplir el deseo de ese tipo, ¿no? ¡Espero que no se arrepienta!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Si bien la petición de ese granjero es muy extraña, no creo necesario llegar tan lejos." });
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("mantecas_farm_revitalized");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Todavía no ha ocurrido nada raro, de hecho, todo lo contrario, ¡mi granja va bien!",
+                "¡Mis cultivos están en mejores condiciones y los pastos son más verdes!",
+                "¿Puede ser que después de tantas desgracias, por fin mi trabajo haya dado sus frutos?",
+                "¡Ni de broma! ¡Algo va a pasar, seguro!"
+            }, Tag.Help, 1, "mantecas");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Pensaba que ibas a ayudar a ese pobre granjero con su escasez de desastres. ¡Una pena!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "No siempre lo que queremos tener y lo que necesitamos de verdad coinciden." });
+
+            //HELP >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("mantecas_farm_revitalized");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "No ha vuelto a ocurrir nada en mi granja. ¡De hecho, está mejor que nunca!",
+                "Mis cultivos crecen sanos, la calidad del suelo ha mejorado y no hay ninguna plaga que erradicar.",
+                "¡¿Me toman por tonto?!	¡¿Cuándo van a volver a fastidiarme?! ¡Me estoy impacientando!",
+                "¡Es imposible que de repente todo me vaya bien! ¡Impensable! ¡Debe de avecinarse el fin del mundo!"
+            }, Tag.Help, 3, "mantecas");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Pensaba que ibas a ayudar a ese pobre granjero con su escasez de desastres. ¡Una pena!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "No siempre lo que queremos tener y lo que necesitamos de verdad coinciden." });
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("mantecas_paranoic");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Una nueva amenaza se cierne sobre mi granja! ¡Tengo que prepararme para lo peor!",
+                "¡Han aparecido unas marcas extrañas en la pared de mi casa, y también he escuchado ruidos extraños por la noche!",
+                "¡Hay algo ahí fuera que se está preparando para amargarme la vida, pero estoy preparado para cualquier cosa!"
+            }, Tag.Convince, 1, "mantecas");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Iría yo misma a causar el caos en su granja, pero soy una deidad muy ocupada, ¿sabes?"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "¿Será mala suerte lo de ese granjero o él mismo se busca sus problemas?" });
+
+            //CONVINCE >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("mantecas_paranoic");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Se avecinan grandes problemas en mi granja!  ¡Vuelven a ocurrir cosas extrañas!",
+                "¡Han aparecido formas en mis cultivos con forma de calavera! ¡Esto solo puede ser una señal de que algo se aproxima!",
+                "¡Va a ocurrir en cualquier momento, me estoy impacientando!",
+                "¡Ardo en deseos de ver a qué me enfrentaré esta vez! ¡Sea lo que sea, mi granja no caerá!"
+            }, Tag.Convince, 3, "mantecas");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Iría yo misma a causar el caos en su granja, pero soy una deidad muy ocupada, ¿sabes?"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "¿Será mala suerte lo de ese granjero o él mismo se busca sus problemas?" });
+
+            AddStorySelectionUIData("Un día normal");
+            FinishCreatingStory();
+
+
+            // =============================================================================================
+            //STORY 13
+            // =============================================================================================
+
+            StartCreatingStory("mushroom_profecy", "La profecía del hongo", "johnny",
+          "En su última sesión de meditación, Johnny ha tenido la visión de una luz muy brillante. Está convencido de que se trata de un augurio.", new List<string>() {
+                "Estoy muy rayado estos días, en plan, no soy capaz de pensar en cualquier otra cosa, colega.",
+                "De normal cuando medito, veo formas y colores fuera de la comprensión humana, colega.",
+                "El caso es que el otro día me llamó la atención una luz más resplandeciente que cualquier cosa, colega.",
+                "No sabría describirte nada más, pero tiene que ser una señal de algo importante, colega."
+          });
+
+            CreateRepercusion("johnny_sabotaged", "Johnny Sabotaged", -15);
+            AddStoryRepercusionNewspaperArticle("Incendio en la casa del alquimista.",
+                "El repentino incendio que por poco asola la casa del alquimista local y que podría haber afectado al bosque ha sido detenido con éxito.  Por suerte, el alquimista se encuentra en su estado habitual.");
+
+            CreateRepercusion("johnny_enhanced", "Johnny Enhanced", 15);
+            AddStoryRepercusionNewspaperArticle("La alquimia renovada.",
+                "La comunidad de vecinos se alegra por el gran hallazgo de un alquimista local. Con dicho hallazgo hará grandes cosas para el pueblo, declaró el alquimista. ¿Qué tendrá preparado? ¡Esperemos que nada malo!");
+
+            CreateRepercusion("johnny_neutral", "Johnny Neutral", 15);
+            AddStoryRepercusionNewspaperArticle("El alquimista ausente.",
+                "Parte de la comunidad de vecinos se encuentra preocupada por la salud del alquimista local. Este misteriosamente ya no abre tanto su tienda como lo hacía antes. ¿Qué le ocurre al joven alquimista?");
+
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("johnny_sabotaged");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡He descubierto el significado de esa luz, colega!",
+                "Bueno, menos mal que lo he descubierto pronto, ¡porque se podía liar bastante parda, colega!",
+                "Estaba yo meditando como todas las noches y ocurrió de repente, así sin previo aviso, colega.",
+                "¡El saco con mis... materiales de meditación empezó a arder, tal cual te lo digo colega!",
+                "Suerte que no estaba en un trance profundo, porque si no, no me hubiera ni inmutado, colega.",
+                "Un poco más y se me quema la casa. ¡Pero definitivamente la luz que ví se trataba de eso, colega!"
+            }, Tag.Harm, 1, "johnny");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+               "La meditación es para la gente que quiere dormir pero no puede dormir. No le veo la gracia."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Entrar en el mundo de la meditación es demasiado peligroso para gente corriente.",
+            "En serio, un novicio podría perder facultades mentales si se adentra demasiado."});
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("johnny_enhanced");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡La suerte me sonríe! Vagando por el bosque me he encontrado con un pequeño tesoro, colega.",
+                "¿Quién hubiera pensado que encontraría un saco con monedas en mitad del bosque? ¡Es flipante, colega!",
+                "Parecía que algo me guiaba hacia el lugar donde lo encontré, yo tan solo me dejé llevar, colega.",
+                "Estoy seguro de que la luz que ví fue el brillo del pequeño tesoro. ¡Es pura lógica, colega!",
+                "Aunque no sea gran cosa, puedo permitirme comprar algunos materiales raros, colega."
+            }, Tag.Help, 1, "johnny");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Nu es muy fan de la meditación y ese tipo de actividades inactivas. ¡Pero yo las odio!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "¿Podría ese joven alcanzar el estado más profundo del trance? Muy pocos lo han logrado." });
+
+            //HELP >=5
+            StartStoryBranch();
+            SetRepercusionToBranch("johnny_enhanced");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Tíiiiio, ayer encontré algo flipante!  ¡Nada más y nada menos que un Ámbar Perezoso, colega!",
+                "¡Es súper resplandeciente, tiene el mismo brillo que ví en la profecía, colega!",
+                "¡Llevaba mucho tiempo buscándolo! Pensaba que ya no quedaba ninguno por aquí, colega.",
+                "Hice bien en vagar por el bosque de noche, mi intuición me llevó hasta donde se encontraba, colega.",
+                "Si trituras uno de esos con cuidado, se pueden utilizar para medicina y alquimia, colega.",
+                "¡Y además era uno de los gordos, con esto podré hacer cosas flipantes, colega!"
+            }, Tag.Help, 5, "johnny");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Nu es muy fan de la meditación y ese tipo de actividades inactivas. ¡Pero yo las odio!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "¿Podría ese joven alcanzar el estado más profundo del trance? Muy pocos lo han logrado." });
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("johnny_neutral");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Llevo ya bastante rato meditando sobre la luz que ví, colega.",
+                "Aún no lo tengo muy claro, pero ayer escuché voces extrañas, diferentes a las habituales, colega.",
+                "¡Esto solo puede significar que estoy adentrándome en un trance cada vez más profundo, colega!",
+                "¿El trance? Es un estado mental donde se puede apreciar las costuras de la realidad, colega.",
+                "Se necesita mucha concentración para alcanzarlo, y muchas setas, colega."
+            }, Tag.Convince, 1, "johnny");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "No entiendo el interés de Nu por ese tal Johnny. ¡Si sólo se dedica a hacer el vago!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Quizás sea adecuado persuadir a ese joven antes de que pueda llegar a perjudicarse más." });
+
+            //CONVINCE >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("johnny_neutral");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Tíiiiiio, se me ha revelado el auntèntico significado de la luz que ví el otro día, colega!",
+                "Mientras meditaba, el legendario Señor Galleta me reveló su significado, colega.",
+                "¿El Señor Galleta? Pude vislumbrar su figura ¡Se necesita mucha concentración para eso, colega!",
+                "Cuanto más profundo es el trance, más cosas increíbles puedes llegar a ver, colega.",
+                "¿La luz? Resultó ser la luz del Sol dándome en la cara, ¡una señal de un mañana mejor, colega!"
+            }, Tag.Convince, 3, "johnny");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "No entiendo el interés de Nu por ese tal Johnny. ¡Si sólo se dedica a hacer el vago!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Quizás sea adecuado persuadir a ese joven antes de que pueda llegar a perjudicarse más." });
+
+            AddStorySelectionUIData("La profecía del hongo");
+            FinishCreatingStory();
+
+            // =============================================================================================
+            //STORY 14
+            // =============================================================================================
+
+            StartCreatingStory("mayor_worries", "Preocupaciones mayores", "mayor",
+            "El alcalde está preocupado por el disgusto general de la población con su gestión. Quiere hacer las cosas bien pero teme que el pueblo se rebele en su contra.", new List<string>() {
+                "Desde hace ya un tiempo, no paran de ocurrir problemas en el pueblo, estoy muy preocupado.",
+                "Lo peor es que mucha gente me echa las culpas a mí, como si fuera mi culpa.",
+                "Siempre he actuado en beneficio del pueblo, aunque eso seguro que ya lo sabes.",
+                "Aunque bueno, lo cierto es que normalmente…hago medidas a muy largo plazo.",
+                "¡No quiero que la gente se rebele contra mí, entonces sí que estaríamos en la ruina!",
+                "Mi mayor prioridad va a ser arreglar las cosas en el pueblo, pero no sé que puedo hacer."
+            });
+
+            CreateRepercusion("mayor_alerted", "Mayor Alerted", 15);
+            AddStoryRepercusionNewspaperArticle("Convocada asamblea de emergencia.",
+                "Nuestro excelentísimo alcalde ha convocado la asamblea mensual mucho antes de la fecha habitual. Según declara, es necesario tomar medidas inmediatamente y escuchar las sugerencias de los vecinos.");
+
+            CreateRepercusion("mayor_relaxed", "Mayor Relaxed", 30);
+            AddStoryRepercusionNewspaperArticle("Un cambio de planes inesperado.",
+                "El alcalde ha sustituído su plan de reformas por otro nuevo de manera repentina. El alcalde declara que los planes de embellecimiento del pueblo y la ampliación del puerto se dejarán para otro momento.");
+
+            CreateRepercusion("mayor_ignore", "Mayor_Ignore", -15);
+            AddStoryRepercusionNewspaperArticle("Las críticas continúan.",
+                "El alcalde sigue siendo objeto de duras críticas tras resumir su plan de ampliación del puerto local. Muchos vecinos creen que es una pérdida de tiempo, pero el alcalde planea seguir el plan a rajatabla.");
+
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("mayor_alerted");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Es mucho peor de lo que pensaba! ¡La gente me odia y no duda en hacer pintadas en mi casa!",
+                "Para variar, no sé quién es el responsable de tales actos, pero eso no importa ahora mismo.",
+                "¡¿No se dan cuenta de que ya estoy haciendo todo lo que puedo?! ¡Deberían ser más pacientes!",
+                "Tendré que adelantar la asamblea del mes que viene para ver qué se puede hacer.",
+                "No nos queda demasiado dinero después de los gastos del mes pasado, pero para emergencias cubre."
+            }, Tag.Harm, 1, "mayor");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿Cuándo estallará entonces la revolución? ¡Quiero estar allí en primera fila liderando los saqueos!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Amenazar a un gobernante puede ser una forma efectiva de hacerlo razonar. Si respeta a su pueblo, claro está." });
+
+            //HARM >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("mayor_alerted");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Esto es un desastre! ¡No solo me asaltan por la calle si no que además me envían amenazas por correo!",
+                "¡Menuda falta de respeto a mi persona! ¡Es inaceptable!",
+                "Pero ahora no hay tiempo de buscar al responsable. ¡Muy pronto puede ocurrir una revuelta!",
+                "¡Mi cabeza rodará por las escaleras del ayuntamiento! Tengo que hacer algo al respecto yo mismo.",
+                "Voy a convocar una asamblea de emergencia mañana mismo."
+            }, Tag.Harm, 3, "mayor");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿Cuándo estallará entonces la revolución? ¡Quiero estar allí en primera fila liderando los saqueos!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Amenazar a un gobernante puede ser una forma efectiva de hacerlo razonar. Si respeta a su pueblo, claro está." });
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("mayor_relaxed");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Puede ser que me haya precipitado al pensar que la situación se iba a descontrolar en el pueblo.",
+                "Durante la noche, alguien ha hecho pintadas en las paredes del ayuntamiento.",
+                "Son pintadas sobre el mal estado de los caminos por el campo y sobre lo intransitables que son.",
+                "Hacer pintadas es un acto vandálico, sí. Pero… me doy cuenta de que tienen un poco de razón.",
+                "Llevo tanto tiempo centrado en la decoración de los parques que había olvidado todo lo demás.",
+                "Supongo que tendré que posponer mis planes para otro momento."
+            }, Tag.Help, 1, "mayor");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿El puerto de la charca? ¡¿El alcalde piensa hacer que los barcos lleguen por tierra o qué?!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Pienso que sería más plausible construir máquinas voladoras antes que un puerto en un lugar como ese." });
+
+            //HELP >=3
+            StartStoryBranch();
+            SetRepercusionToBranch("mayor_relaxed");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Todo ha sido un malentendido! Me había hecho la idea equivocada de la situación.",
+                "Alguien ha hecho múltiples pintadas en la fachada de mi casa, y no son pequeñas precisamente.",
+                "Normalmente condenaría tal acto vandálico, pero he captado el mensaje del perpetrador en ellas.",
+                "La gente del pueblo no necesita grandes estatuas de mi persona, ni arbustos nuevos en los parques.",
+                "Y lo que más me duele, ¡tampoco necesitan un puerto mercante en la Charca!",
+                "¡Jamás abandonaré mi proyecto de construir un bullicioso puerto, aunque sea para muy largo plazo!",
+                "Pero aun así no me queda más remedio que destinar fondos a otros asuntos más importantes."
+            }, Tag.Help, 3, "mayor");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿El puerto de la charca? ¡¿El alcalde piensa hacer que los barcos lleguen por tierra o qué?!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Pienso que sería más plausible construir máquinas voladoras antes que un puerto en un lugar como ese." });
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("mayor_ignore");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Parece ser que me estaba preocupando demasiado por el descontento de la gente.",
+                "He recibido una carta anónima esta mañana diciendo maravillas sobre cómo ha quedado la plaza.",
+                "¡Cuánta razón tiene, esa estatua mía le queda de maravilla! Sabía que quedaría bien.",
+                "Estamos lejos de estar en nuestro mejor momento, pero la cosa va mejorando poco a poco.",
+                "¡El día en que lleguen barcos mercantes al puerto, la prosperidad llegará a la ciudad, ya lo verán!"
+            }, Tag.Convince, 1, "mayor");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡Ese alcalde no sabe hacer sufrir a su pueblo en condiciones! ¡Debería de asesorarle para que lo haga mejor!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "No es raro que un gobernante pierda el sentido común con el tiempo. Aunque este caso es un tanto exagerado." });
+
+
+            AddStorySelectionUIData("Preocupaciones mayores");
+            FinishCreatingStory();
+
+            // =============================================================================================
+            //STORY 15
+            // =============================================================================================
+
+            StartCreatingStory("old_friends", "Viejos amigos", "meri",
+            "Los lobos y las ratas inteligentes han vuelto para hacer estragos en la granja de Meri. Por suerte, las ratas defienden la granja de los lobos.", new List<string>() {
+                "¿Recuerdas a las ratas inteligentes con las que estuvo lidiando el Mantecas? ¡Han vuelto otra vez!",
+                "¡Y no han escogido otro lugar que mi granja como su nuevo hogar! ¡Qué espanto!",
+                "¡Pero la cosa no termina ahí! ¿Recuerdas a los lobos que nos dieron problemas hace un tiempo?",
+                "¡Pues adivina! ¡También han decidido volver para acosar a mis pobres vacas!",
+                "Al menos las ratas, siendo tan territoriales, están defendiendo la granja de los lobos, no todo es malo.",
+                "Obviamente quiero que dejen mi granja en paz, ¡¿Pero qué puedo hacer ante este caos?!"
+            });
+
+            CreateRepercusion("wolves_victorious", "Wolves victorious", -15);
+            AddStoryRepercusionNewspaperArticle("El baluarte de los roedores cae.",
+                "La colonia de ratas inteligentes ha abandonado la granja de una ganadera local después de capitular ante la manada de lobos. ¿Qué ocurrirá con la granja? ¿Será ahora ocupada por los lobos?");
+
+            CreateRepercusion("rats_victorious", "Rats Victorious", 15);
+            AddStoryRepercusionNewspaperArticle("El asedio a los roedores termina.",
+                "La colonia de ratas inteligentes, que ha invadido la granja de una ganadera local, ha logrado de manera audaz repeler a la manada de lobos que amenazaba la granja. La impresionante hazaña ha dejado perplejos a los vecinos. ¿Estaremos ante el alzamiento de una nueva urbe de ratas? Por el bien de la desafortunada ganadera, esperemos que no.");
+
+            CreateRepercusion("rats_mounting_wolves", "Rats Mounting Wolves", 30);
+            AddStoryRepercusionNewspaperArticle("El galope de los jinetes roedores.",
+                "Una inusual imagen quedará grabada en la mente de los vecinos. La colonia de ratas, que invadía la granja de una ganadera local, ha abandonado el pueblo a lomos de la manada de lobos que hasta hace poco se enfrentaba. ¿Podrían los lobos cabalgar sobre las ratas? ¡La ciencia afirma que no!");
+
+
+            //TARGET: RATS
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("wolves_victorious");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "No entiendo cómo ha podido ocurrir, pero desde anoche no he visto muchas ratas por mi granja.",
+                "Dudo bastante que hayan sido los lobos, pero al menos será más fácil echar a las que quedan.",
+                "Los lobos siguen siendo un problema. Las ratas ya no serán de ayuda, ¡pero defenderé mi granja!"
+            }, Tag.Harm, 1, "rats");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡Me cuesta mucho decidirme por un bando ganador! ¿No podría haber alguna forma de que ganen ambos lados?"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "En este conflicto solo veo un claro perdedor. La pobre ganadera y sus vacas." });
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("rats_victorious");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "La situación ha mejorado en parte, al menos por parte de los lobos, que ya no son mucho problema.",
+                "Había oído del Mantecas las hazañas de las ratas inteligentes, pero no pensaba que fueran más allá.",
+                "Por lo visto han construido una cerca reforzada alrededor de mi granja para repeler a los lobos.",
+                "Ahora puedo ocuparme de las ratas sin que los lobos se coman a mis vacas, que ya es algo."
+            }, Tag.Help, 1, "rats");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Alguien debería de enseñarle a esas ratas cómo forjar y portar armas",
+                "Aunque seguro que aprenderán ellas solas si les damos tiempo."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "No sería mala idea a estas alturas entablar relaciones diplomáticas con las ratas." });
+
+            //HELP >=5
+            StartStoryBranch();
+            SetRepercusionToBranch("rats_mounting_wolves");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "La cosa se ha tranquilizado un poco en mi granja. Aunque no doy crédito por lo que ha ocurrido.",
+                "¡De alguna manera, las ratas han conseguido domesticar a los lobos! ¡Los utilizan de montura y todo!",
+                "Por lo menos ya han abandonado mi granja, supongo que ahora pueden ir a donde quieran."
+            }, Tag.Help, 5, "rats");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿Y si las ratas pudieran cabalgar sobre las vacas? ¡¿No sería genial?!",
+                "¡Tengo que intentarlo un día de estos!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "¿Cómo resolvería yo esta situación? Intentaría que las ratas y los lobos pudieran convivir en paz.",
+                "Aunque no creo que vaya a ser posible." });
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("wolves_victorious");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "De la noche a la mañana, las ratas han abandonado mi granja. No tengo ni idea del por qué",
+                "Parece que han regresado al granero del Mantecas, el hombre no está muy contento al respecto.",
+                "¿Cómo lo sé? ¡Se pueden oír sus gritos desde mi granja, y eso que vive en la otra punta del pueblo!",
+                "Aún tengo que lidiar con los lobos. ¡No pienso permitir que se coman a mis vacas!"
+            }, Tag.Convince, 1, "rats");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡Me cuesta mucho decidirme por un bando ganador! ¿No podría haber alguna forma de que ganen ambos lados?"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "En este conflicto solo veo un claro perdedor. La pobre ganadera y sus vacas." });
+
+            //TARGET: WOLVES
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("rats_victorious");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Mi problema con los lobos y las ratas se ha solucionado en parte. Aunque ha ocurrido muy rápido.",
+                "Parece ser que las ratas han logrado repeler a los lobos. Me alivia que ya no sean un problema pero… ",
+                "He visto algunos cadáveres de lobo en los alrededores y… ",
+                "Me da miedo pensar en lo que me podrían llegar a hacer las ratas si las hago enfadar.",
+                "Voy a tener que pedir ayuda al Mantecas. Él ya tiene experiencia lidiando con esas ratas."
+            }, Tag.Harm, 1, "wolves");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Alguien debería de enseñarle a esas ratas cómo forjar y portar armas",
+                "Aunque seguro que aprenderán ellas solas si les damos tiempo."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "No sería mala idea a estas alturas entablar relaciones diplomáticas con las ratas." });
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("wolves_victorious");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Mi problema con los lobos y las ratas ha empeorado mucho.",
+                "De alguna forma los lobos se han vuelto mucho más inteligentes ¡No doy crédito!",
+                "¡Han excavado un túnel bajo la verja de mi granja y han campado a sus anchas dentro de mi recinto!",
+                "Suerte que han atacado a las ratas y han ignorado a mis vacas. Pero son un problema muy serio.",
+                "Ya no quedan muchas ratas, pero los lobos pueden entrar cuando quieran, voy a tener que pedir ayuda. "
+            }, Tag.Help, 1, "wolves");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡Me cuesta mucho decidirme por un bando ganador! ¿No podría haber alguna forma de que ganen ambos lados?"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "En este conflicto solo veo un claro perdedor. La pobre ganadera y sus vacas." });
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("rats_victorious");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Los lobos han dejado de molestarme, aunque no sé por qué se han ido. Ahora solo quedan las ratas.",
+                "Por lo visto han ido a atacar al Johnny mientras deambulaba por el bosque.",
+                "¡Espera a que termine! El Johnny se encuentra perfectamente, bueno.. a su manera, ya sabes.",
+                "Dicen que consiguió salvarse gracias a que estaba impregnado con el fuerte olor de sus mejunjes.",
+                "Es un tipo bastante raro, y nos suele dar problemas con sus experimentos. Pero no es un mal tipo."
+            }, Tag.Convince, 1, "wolves");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Alguien debería de enseñarle a esas ratas cómo forjar y portar armas",
+                "Aunque seguro que aprenderán ellas solas si les damos tiempo."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "No sería mala idea a estas alturas entablar relaciones diplomáticas con las ratas." });
+
+            AddStorySelectionUIData("Viejos amigos");
+            FinishCreatingStory();
+
+            // =============================================================================================
+            //STORY 16
+            // =============================================================================================
+
+            StartCreatingStory("high_voltage_treatment", "Tratamiento de alto voltaje", "miss_chocolate",
+            "Miss Chocolate necesita la energía de un rayo para sus experimentos. Necesita un artefacto de Canela para que sirva de pararrayos, pero esta se niega a prestárselo.", new List<string>() {
+                "¿Los batidos de chocolate extraídos directamente de las vacas? No obtuve grandes resultados.",
+                "Después de darle muchas vueltas, he decidido cambiar mi enfoque.",
+                "¡Quiero comprobar si puedo transformar el chocolate mediocre que ya tengo en un chocolate puro!",
+                "Tengo todo planeado, es un proceso complicado pero, resumiendo, necesito la energía de un rayo.",
+                "Además estoy de suerte porque se avecina esta noche una tormenta de las grandes.",
+                "Y Canela tiene un artefacto perfecto como pararrayos, pero se niega a prestármelo.",
+                "Insiste mucho en que se podría romper. ¡Qué tontería, si atraer rayos es su función para empezar!"
+            });
+
+            CreateRepercusion("ms_chocolate_experiment_canceled", "Ms Chocolate Experiment Canceled", -15);
+            AddStoryRepercusionNewspaperArticle("La gran decepción.",
+                "El muy esperado experimento de Miss Chocolate la Bomb ha tenido que ser retrasado debido a condiciones imprevistas.");
+
+            CreateRepercusion("ms_chocolate_experiment_success", "Ms Chocolate Experiment Success", 15);
+            AddStoryRepercusionNewspaperArticle("El experimento chocolatero da sus frutos.",
+                "El último experimento de la célebre Miss Chocolate la Bomb ha sido un relativo éxito. Todo gracias a la colaboración con la prestigiosa coleccionista Canela N Rama.");
+
+            CreateRepercusion("ms_chocolate_great_success", "Ms Chocolate Great Success", 15);
+            AddStoryRepercusionNewspaperArticle("La destilación del chocolate purificado.",
+                "La célebre chocolatera local, Miss Chocolate la Bomb, ha logrado con su último experimento purificar veinte litros de chocolate líquido en un par de gotas de chocolate purificado. Lamentablemente, la chocolatera ha declarado que no tiene intenciones de seguir investigando el asunto.");
+
+            //TARGET MS CHOCOLATE
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("ms_chocolate_experiment_canceled");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Anoche repentinamente empezaron a fallar varios de mis aparatos para el experimento.",
+                "Supongo que no hice un mantenimiento adecuado. Estas cosas pasan, pero aun así me frustra.",
+                "Por mucho que me duela, he tenido que cancelar el experimento. Tendré que esperar a la siguiente tormenta."
+            }, Tag.Harm, 1, "miss_chocolate");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡Es un experimento estúpido que no llevará a ninguna parte, y lo sabes!",
+                "Pero por si acaso, lo impediría por todos los medios. No sea que salga bien.",
+                "No quiero arriesgarme a estar equivocada. ¡¿Qué problema hay con eso?!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Evith es alérgica a estar equivocada. Nada la hace sufrir más que admitir sus errores." });
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("ms_chocolate_experiment_success");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¿El artefacto? No esperaba que Canela fuera a prestármelo, estaba a punto de darme por vencida.",
+                "Bueno, el artefacto me llegó a mi casa en una caja, así que voy a suponer que cambió de opinión.",
+                "Eso sí, después de que le cayese un rayo se hizo añicos, Canela no va a estar muy contenta.",
+                "Pero al final he obtenido resultados mucho menores de lo esperado. ¡Pero siguen siendo positivos!"
+            }, Tag.Help, 1, "miss_chocolate");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "A mí solo me gustan los experimentos violentos. Deberías de realizarlos algún día.",
+                "¡Comprobar qué cosas pueden destrozar otras cosas es fascinante! ¡Nunca me canso de ellos!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Nunca sabrás si algo funciona hasta que no se ponga a prueba. Aunque pueda ser estúpido." });
+
+            //HELP >=5
+            StartStoryBranch();
+            SetRepercusionToBranch("ms_chocolate_great_success");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Puedo declarar orgullosamente que el experimento ha sido todo un éxito!",
+                "Canela me cedió un cachivache diferente, mucho más prometedor que el que quería utilizar.",
+                "Lo raro es que no me lo haya dado en persona, simplemente lo dejó delante de mi casa.",
+                "Pero bueno, ¡dejé todo listo y logré obtener los resultados que esperaba!",
+                "¡Los veinte litros de chocolate mediocre se transformaron en dos gotas de chocolate puro!",
+                "Claramente es muy poco para considerarse un método viable, ¡Pero he demostrado que es posible!"
+            }, Tag.Help, 5, "miss_chocolate");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡¿En qué momento dejar que le caiga un rayo a las cosas se le llama experimento?!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "El afán por hacer nuevos descubrimientos es una bendición y una maldición a la vez.",
+                "Por muchos avances que hagas, nunca llegarás a estar satisfecho."});
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("ms_chocolate_experiment_canceled");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "El experimento va a tener que esperar. A pesar de que Canela envió el artefacto a mi casa.",
+                "Pensaba que me lo daría en persona, pero bueno, el caso es que el artefacto resulta ser inservible.",
+                "Resultó ser mucho más frágil de lo que había estimado, se lo he devuelto antes de venir aquí.",
+                "Es curioso porque ella misma parece no acordarse de habérmelo dado. Estará liada con sus cosas."
+            }, Tag.Convince, 1, "miss_chocolate");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡Es un experimento estúpido que no llevará a ninguna parte, y lo sabes!",
+                "Pero por si acaso, lo impediría por todos los medios. No sea que salga bien.",
+                "No quiero arriesgarme a estar equivocada. ¡¿Qué problema hay con eso?!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Evith es alérgica a estar equivocada. Nada la hace sufrir más que admitir sus errores." });
+
+            //TARGET CANELA
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("ms_chocolate_experiment_canceled");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Lo del experimento… va a tener que posponerse indefinidamente.",
+                "Parece ser que ayer alguien hizo un destrozo en la colección de Canela. ¡Estaba hecha una furia!",
+                "Va a ser imposible que me ceda el artefacto. Tendré que buscar otra alternativa ¡Pero no me rendiré!"
+            }, Tag.Harm, 1, "canela");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡Es un experimento estúpido que no llevará a ninguna parte, y lo sabes!",
+                "Pero por si acaso, lo impediría por todos los medios. No sea que salga bien.",
+                "No quiero arriesgarme a estar equivocada. ¡¿Qué problema hay con eso?!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Evith es alérgica a estar equivocada. Nada la hace sufrir más que admitir sus errores." });
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("ms_chocolate_experiment_success");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Después de insistir mucho, Canela por fin me prestó su artefacto. Pensaba que no cambiaría de opinión.",
+                "Estaba muy contenta, por lo visto ha encontrado tirado cerca de su casa un artefacto valiosísimo.",
+                "Me dijo que me quede con el artefacto, ya que lo va a sustituir por el nuevo que ha encontrado.",
+                "Yo por mi parte obtuve los resultados que buscaba. No sale nada rentable, ¡pero he cumplido!"
+            }, Tag.Help, 1, "canela");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "A mí solo me gustan los experimentos violentos. Deberías de realizarlos algún día.",
+                "¡Comprobar qué cosas pueden destrozar otras cosas es fascinante! ¡Nunca me canso de ellos!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Nunca sabrás si algo funciona hasta que no se ponga a prueba. Aunque pueda ser estúpido." });
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("ms_chocolate_experiment_success");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Canela me cedió el artefacto inmediatamente después de pedírselo de nuevo.",
+                "De hecho dice que me lo quede, por lo visto el artefacto realmente es una baratija sin valor.",
+                "Me da un poco de pena, últimamente no está teniendo suerte con su colección.",
+                "¿El experimento? Pude llevarlo a cabo, aunque todavía me falta mucho para considerarlo un éxito."
+            }, Tag.Convince, 1, "canela");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "A mí solo me gustan los experimentos violentos. Deberías de realizarlos algún día.",
+                "¡Comprobar qué cosas pueden destrozar otras cosas es fascinante! ¡Nunca me canso de ellos!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Nunca sabrás si algo funciona hasta que no se ponga a prueba. Aunque pueda ser estúpido." });
+
+
+            AddStorySelectionUIData("Tratamiento de alto voltaje");
+            FinishCreatingStory();
+
+            /*
+            // =============================================================================================
+            //STORY X
+            // =============================================================================================
+
+            StartCreatingStory("quest_id", "quest name", "giver",
+            "desc", new List<string>() {
+                "Tal tal tal"
+            });
+
+            CreateRepercusion("", "", -15);
+            AddStoryRepercusionNewspaperArticle("",
+                "");
+
+            CreateRepercusion("", "", -30);
+            AddStoryRepercusionNewspaperArticle("",
+                "");
+
+            CreateRepercusion("", "", 15);
+            AddStoryRepercusionNewspaperArticle("",
+                "");
+
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                ""
+            }, Tag.Harm, 1, "");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                ""});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "" });
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("mantecas_farm_revitalized");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                ""
+            }, Tag.Help, 1, "");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                ""});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "" });
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                ""
+            }, Tag.Convince, 1, "");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                ""});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "" });
+
+
+
+            AddStorySelectionUIData("Un día normal");
+            FinishCreatingStory();
+            */
         }
 
         public void StartCreatingStory(string idName, string title, string questGiver, string description, List<string> introductionDialogue)
