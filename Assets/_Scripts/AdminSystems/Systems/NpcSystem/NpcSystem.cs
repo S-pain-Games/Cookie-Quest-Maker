@@ -83,6 +83,8 @@ namespace CQM.Systems
                     StoryInfoComponent s = _storyInfoComponents[finalizeMainStoryID];
 
                     npcData.m_CharacterID = new ID(s.m_StoryData.m_QuestGiver);
+                    availableNPCs.Remove(npcData.m_CharacterID);
+
                     for (int c = 0; c < s.m_QuestBranchResult.m_ResultNPCDialogue.Count; c++)
                         npcData.m_Dialogue.Add(s.m_QuestBranchResult.m_ResultNPCDialogue[c]);
 
@@ -102,6 +104,7 @@ namespace CQM.Systems
 
                     StoryInfoComponent s = _storyInfoComponents[primaryStoryToStart];
                     npcData.m_CharacterID = new ID(s.m_StoryData.m_QuestGiver);
+                    availableNPCs.Remove(npcData.m_CharacterID);
 
                     var introductionDialogue = s.m_StoryData.m_IntroductionDialogue;
                     for (int j = 0; j < introductionDialogue.Count; j++)
@@ -114,6 +117,10 @@ namespace CQM.Systems
                 }
                 else
                 {
+                    int charIndex = UnityEngine.Random.Range(0, availableNPCs.Count);
+                    npcData.m_CharacterID = availableNPCs[charIndex];
+                    availableNPCs.RemoveAt(charIndex);
+
                     FinalizeSecondaryStory(secondaryStoriesToFinalize, npcData);
                     StartSecondaryStory(secondaryStoriesToStart, npcData);
 
