@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 693424fa550a63a488a97c73beb57a4e
+guid: 057bba1ab2d719a408f80fa46b9148cd
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,8 +9,9 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Chalkboard SE
-  fallbackFontReferences: []
+  - Granstander Clean
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c061976fd46d86c42838a32bf76bd414, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
