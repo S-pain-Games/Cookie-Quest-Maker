@@ -14,7 +14,7 @@ public class DaySystem : ISystemEvents
 
     // External Commands
     private Event<GameStateSystem.State> _setGameStateCommand;
-    private EventVoid _populateNpcsCommand;
+    private Event<int> _populateNpcsCommand;
 
 
     public void Initialize(GameEventSystem evtSys, Singleton_DayComponent dayData)
@@ -25,7 +25,7 @@ public class DaySystem : ISystemEvents
 
         // Initialize external Commands
         _setGameStateCommand = evtSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
-        _populateNpcsCommand = evtSys.GetCommandByName<EventVoid>("npc_sys", "cmd_populate_npcs");
+        _populateNpcsCommand = evtSys.GetCommandByName<Event<int>>("npc_sys", "cmd_populate_npcs");
 
         _dayData = dayData;
     }
@@ -41,7 +41,8 @@ public class DaySystem : ISystemEvents
         _nightBeginCallback = callbacks.AddEvent(new ID("night_begin"));
         _dailyStoriesCompleted = callbacks.AddEvent(new ID("all_daily_stories_completed"));
 
-        commands.AddEvent(new ID("start_new_day")).OnInvoked += StartNewDay;
+        commands.AddEvent(new ID("start_new_day")).OnInvoked += StartNormalDay;
+        commands.AddEvent(new ID("start_tutorial_day")).OnInvoked += StartTutorialDay;
         commands.AddEvent(new ID("begin_night")).OnInvoked += StartNight;
     }
 
@@ -55,16 +56,24 @@ public class DaySystem : ISystemEvents
         }
     }
 
-    public void StartNight()
+    private void StartNight()
     {
         _setGameStateCommand.Invoke(GameStateSystem.State.BakeryNight);
         _nightBeginCallback.Invoke();
     }
 
-    public void StartNewDay()
+    private void StartNormalDay()
     {
         _dayEndedCallbacks.Invoke();
-        _populateNpcsCommand.Invoke();
+        _populateNpcsCommand.Invoke(3);
+        _setGameStateCommand.Invoke(GameStateSystem.State.Bakery);
+        _dayStartedCallbacks.Invoke();
+    }
+
+    private void StartTutorialDay()
+    {
+        _dayEndedCallbacks.Invoke();
+        _populateNpcsCommand.Invoke(0);
         _setGameStateCommand.Invoke(GameStateSystem.State.Bakery);
         _dayStartedCallbacks.Invoke();
     }

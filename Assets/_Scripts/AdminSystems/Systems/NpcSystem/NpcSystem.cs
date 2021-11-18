@@ -42,20 +42,20 @@ namespace CQM.Systems
             sysID = new ID("npc_sys");
 
             // Commands
-            commands.AddEvent(new ID("cmd_populate_npcs")).OnInvoked += PopulateNpcsData;
+            commands.AddEvent<int>(new ID("cmd_populate_npcs")).OnInvoked += PopulateNpcsData;
             commands.AddEvent(new ID("populate_deities")).OnInvoked += PopulateDeitiesData;
         }
 
 
         // Called just before the start of the day to set the
         // dialogue that each NPC has to say that day
-        public void PopulateNpcsData()
+        public void PopulateNpcsData(int maxSecondaryStories)
         {
             // We make a copy because we dont want to remove elements from the storyDB list.
             // The completed stories should be "finalized" when the player has seen the 
             // repercusion dialogue not when the dialogue is assigned to an npc
 
-            List<ID> secondaryStoriesToStart = SelectSecondaryStories(3);
+            List<ID> secondaryStoriesToStart = SelectSecondaryStories(maxSecondaryStories);
             List<ID> availableNPCs = SelectAvailableNPCs();
 
             List<ID> allStoriesToFinalize = SelectStoriesThatHaveToBeFinalized(_storiesStateComponent.m_CompletedStories, 3);
