@@ -75,6 +75,7 @@ namespace CQM.Systems
                 npcData.m_Dialogue.Clear();
                 npcData.m_HasToFinalizeAStory = false;
                 npcData.m_HasToStartAStory = false;
+                npcData.m_IsAPrimaryStory = false;
 
 
                 if (haveToFinalizeAPrimaryStory)
@@ -108,6 +109,7 @@ namespace CQM.Systems
 
                     haveToStartAPrimaryStory = false;
                     npcData.m_HasToStartAStory = true;
+                    npcData.m_IsAPrimaryStory = true;
                     npcData.m_StoryIDToStartOnInteract = primaryStoryToStart;
                 }
                 else
@@ -350,6 +352,7 @@ namespace CQM.Components
         public List<string> m_Dialogue = new List<string>();
         // The ID of the story that will start when the player interacts with the NPC
         public bool m_HasToStartAStory;
+        public bool m_IsAPrimaryStory;
         public ID m_StoryIDToStartOnInteract;
         // ID of the story to finalize on dialogue
         public bool m_HasToFinalizeAStory;

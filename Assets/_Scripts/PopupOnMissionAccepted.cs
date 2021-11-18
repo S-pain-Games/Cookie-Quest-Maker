@@ -8,41 +8,51 @@ public class PopupOnMissionAccepted : MonoBehaviour
     private Event<ID> _storyStartedCallback;
     private EventVoid _allStoriesCompletedTodayCallback;
 
-    private Event<PopupData_MissionStarted> _showPopupCommand;
+    private Event<PopupData_MissionStarted> _showPrimaryStoryPopup;
+    private Event<PopupData_MissionStarted> _showSecondaryStoryPopup;
 
     private void Awake()
     {
         var evtSys = Admin.Global.EventSystem;
         _storyStartedCallback = evtSys.GetCallbackByName<Event<ID>>("story_sys", "story_started");
         _allStoriesCompletedTodayCallback = evtSys.GetCallbackByName<EventVoid>("day_sys", "all_daily_stories_completed");
-        _showPopupCommand = evtSys.GetCommandByName<Event<PopupData_MissionStarted>>("popup_sys", "primary_mission_started");
+        _showPrimaryStoryPopup = evtSys.GetCommandByName<Event<PopupData_MissionStarted>>("popup_sys", "primary_mission_started");
+        _showSecondaryStoryPopup = evtSys.GetCommandByName<Event<PopupData_MissionStarted>>("popup_sys", "secondary_mission_started");
     }
 
     private void OnEnable()
     {
-        _storyStartedCallback.OnInvoked += StoryStartedCallback_OnInvoked;
-        _allStoriesCompletedTodayCallback.OnInvoked += AllStoriesCompletedCallback_OnInvoked;
+        _storyStartedCallback.OnInvoked += ShowPopupOfStory;
+        _allStoriesCompletedTodayCallback.OnInvoked += ShowAllStoriesCompletedPopup;
     }
 
     private void OnDisable()
     {
-        _storyStartedCallback.OnInvoked -= StoryStartedCallback_OnInvoked;
-        _allStoriesCompletedTodayCallback.OnInvoked -= AllStoriesCompletedCallback_OnInvoked;
+        _storyStartedCallback.OnInvoked -= ShowPopupOfStory;
+        _allStoriesCompletedTodayCallback.OnInvoked -= ShowAllStoriesCompletedPopup;
     }
 
-    private void StoryStartedCallback_OnInvoked(ID storyId)
+    private void ShowPopupOfStory(ID storyId)
     {
         PopupData_MissionStarted pData = new PopupData_MissionStarted();
-        pData.m_MissionTitle = Admin.Global.Components.GetComponentContainer<StoryInfoComponent>()[storyId].m_StoryData.m_Title;
+        var compDatabase = Admin.Global.Components;
+        List<ID> secondaryStories = compDatabase.m_StoriesStateComponent.m_AllSecondaryStories;
+
+        pData.m_MissionTitle = compDatabase.GetComponentContainer<StoryInfoComponent>()[storyId].m_StoryData.m_Title;
         pData.m_TimeAlive = 2.0f;
-        _showPopupCommand.Invoke(pData);
+
+        // Check if its a primary or a secondary story
+        if (secondaryStories.Contains(storyId))
+            _showSecondaryStoryPopup.Invoke(pData);
+        else
+            _showPrimaryStoryPopup.Invoke(pData);
     }
 
-    private void AllStoriesCompletedCallback_OnInvoked()
+    private void ShowAllStoriesCompletedPopup()
     {
         PopupData_MissionStarted pData = new PopupData_MissionStarted();
         pData.m_MissionTitle = "All Stories Completed Today";
         pData.m_TimeAlive = 5.0f;
-        _showPopupCommand.Invoke(pData);
+        _showPrimaryStoryPopup.Invoke(pData);
     }
 }

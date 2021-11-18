@@ -259,4 +259,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e0d03be7f480cd40a079de9cf82ae4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_textMesh: {fileID: 3051747195124859969}
+  m_TextMesh: {fileID: 3051747195124859969}
+  m_Image: {fileID: 3051747195762855827}
