@@ -32,7 +32,7 @@ namespace CQM.Systems
 
             evtSys.GetCallbackByName<EventVoid>("day_sys", "night_begin").OnInvoked += PopulateDeitiesData;
             // DEV ONLY
-            PopulateNpcsData();
+            //PopulateNpcsData(0);
         }
 
         public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)

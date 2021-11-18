@@ -83,5 +83,6 @@ public class Systems
     public void StartGame()
     {
         m_GameStateSystem.StartGame();
+        Admin.Global.EventSystem.GetCommandByName<EventVoid>("day_sys", "start_tutorial_day").Invoke();
     }
 }
