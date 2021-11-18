@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 
 namespace CQM.UI.QuestMakingTable
 {
@@ -24,13 +25,33 @@ namespace CQM.UI.QuestMakingTable
                 _gameObject.SetActive(true);
 
             _image.color = Color.white;
-            _image.sprite = sprite;
+
+            if (_image.sprite != sprite)
+            {
+                _image.transform.DOKill();
+                _image.sprite = sprite;
+                _image.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+                _image.transform.DOScale(1.0f, 1.0f).SetEase(Ease.OutElastic);
+            }
+
             _nameTextComp.text = name;
             _descTextComp.text = description;
 
-            _convince.text = convince.ToString();
-            _help.text = help.ToString();
-            _harm.text = harm.ToString();
+            if (_convince.text != convince.ToString())
+            {
+                _convince.text = convince.ToString();
+                _convince.transform.DOScale(2.0f, 0.15f).OnComplete(() => _convince.transform.DOScale(1.0f, 0.15f));
+            }
+            if (_help.text != help.ToString())
+            {
+                _help.text = help.ToString();
+                _help.transform.DOScale(2.0f, 0.15f).OnComplete(() => _help.transform.DOScale(1.0f, 0.15f));
+            }
+            if (_harm.text != harm.ToString())
+            {
+                _harm.text = harm.ToString();
+                _harm.transform.DOScale(2.0f, 0.15f).OnComplete(() => _harm.transform.DOScale(1.0f, 0.15f));
+            }
         }
 
         public void Clear()

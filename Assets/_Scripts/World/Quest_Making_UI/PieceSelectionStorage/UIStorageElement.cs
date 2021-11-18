@@ -2,33 +2,24 @@
 using UnityEngine.EventSystems;
 using TMPro;
 using System;
+using UnityEngine.UI;
+using DG.Tweening;
 
-[RequireComponent(typeof(UIPressable))]
-public class UIStorageElement : MonoBehaviour
+public class UIStorageElement : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public event Action<ID> OnSelected;
 
     public ID pieceID; // Used as an ID
 
+    [SerializeField] private Sprite m_IdleSprite;
+    [SerializeField] private Sprite m_HoverSelectedSprite;
     private TextMeshProUGUI _textComp;
-    private UIPressable _pressable;
+    private Image _image;
 
     private void Awake()
     {
-        _pressable = GetComponent<UIPressable>();
         _textComp = GetComponentInChildren<TextMeshProUGUI>();
-    }
-
-    private void OnEnable()
-    {
-        _pressable.OnPointerDownEvent += OnPointerDown;
-        _pressable.OnPointerUpEvent += OnPointerUpEvent;
-    }
-
-    private void OnDisable()
-    {
-        _pressable.OnPointerDownEvent -= OnPointerDown;
-        _pressable.OnPointerUpEvent -= OnPointerUpEvent;
+        _image = GetComponent<Image>();
     }
 
     public void Build(UIQuestPieceComponent piece)
@@ -36,12 +27,20 @@ public class UIStorageElement : MonoBehaviour
         _textComp.text = piece.m_Name;
     }
 
-    private void OnPointerUpEvent(PointerEventData obj)
-    {
-    }
-
-    private void OnPointerDown(PointerEventData obj)
+    public void OnPointerDown(PointerEventData eventData)
     {
         OnSelected?.Invoke(pieceID);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        _image.sprite = m_HoverSelectedSprite;
+        transform.DOScale(1.2f, 0.3f);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        _image.sprite = m_IdleSprite;
+        transform.DOScale(1.0f, 0.3f);
     }
 }

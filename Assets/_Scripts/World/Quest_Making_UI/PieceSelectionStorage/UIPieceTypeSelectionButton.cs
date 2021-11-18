@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 namespace CQM.UI.QuestMakingTable
 {
-    [RequireComponent(typeof(Button))]
     public class UIPieceTypeSelectionButton : MonoBehaviour
     {
         public event Action<QuestPieceFunctionalComponent.PieceType> OnPieceTypeSelected;
@@ -17,14 +16,11 @@ namespace CQM.UI.QuestMakingTable
 
         public QuestPieceFunctionalComponent.PieceType PieceType => m_PieceType;
 
-
+        [SerializeField] private Sprite m_SelectedSprite;
+        [SerializeField] private Sprite m_UnselectedSprite;
         [SerializeField] private QuestPieceFunctionalComponent.PieceType m_PieceType;
-        private Button _button;
-
-        private void Awake()
-        {
-            _button = GetComponent<Button>();
-        }
+        [SerializeField] private Button _button;
+        [SerializeField] private Image _image;
 
 
         private void OnEnable()
@@ -44,14 +40,16 @@ namespace CQM.UI.QuestMakingTable
 
         public void SetAsSelected()
         {
-            transform.DOKill();
-            transform.DOScale(1.7f, 0.3f).OnComplete(() => transform.DOScale(1.5f, 0.3f).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo));
+            _image.transform.DOKill();
+            _image.transform.DOScale(1.7f, 0.3f).OnComplete(() => _image.transform.DOScale(1.5f, 0.3f).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo));
+            _image.sprite = m_SelectedSprite;
         }
 
         public void SetAsUnselected()
         {
-            transform.DOKill();
-            transform.DOScale(1.0f, 0.3f);
+            _image.transform.DOKill();
+            _image.transform.DOScale(1.0f, 0.3f);
+            _image.sprite = m_UnselectedSprite;
         }
     }
 }

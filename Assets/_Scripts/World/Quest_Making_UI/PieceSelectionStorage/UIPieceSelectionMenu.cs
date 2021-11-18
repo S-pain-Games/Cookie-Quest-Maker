@@ -54,7 +54,6 @@ namespace CQM.UI.QuestMakingTable
 
             // Prepare start position for UI Pieces
             Vector3 pos = Vector3.zero;
-            pos.y += 100;
 
             // Loop over all story targets
             if (pieceType == QuestPieceFunctionalComponent.PieceType.Target)
@@ -86,7 +85,7 @@ namespace CQM.UI.QuestMakingTable
             Vector3 AddPieceToUI(Vector3 pos, QuestPieceFunctionalComponent questPiece)
             {
                 // Create and position corresponding elements in UI
-                pos += new Vector3(250, 0, 0);
+                pos += new Vector3(215, 0, 0);
                 var UIstorageElem = Instantiate(_piecePrefab, pos, Quaternion.identity, transform).GetComponent<UIStorageElement>();
                 UIstorageElem.transform.localPosition = pos;
 
