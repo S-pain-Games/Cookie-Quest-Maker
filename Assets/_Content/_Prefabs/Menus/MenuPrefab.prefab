@@ -2392,8 +2392,8 @@ GameObject:
   - component: {fileID: 7478927677272857522}
   - component: {fileID: 7478927677272857523}
   - component: {fileID: 7478927677272857524}
-  - component: {fileID: 8753688472183619540}
   - component: {fileID: 5026431630370616812}
+  - component: {fileID: 2236950726349098841}
   m_Layer: 5
   m_Name: BtnJugar
   m_TagString: Untagged
@@ -2503,19 +2503,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8753688472183619540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7478927677272857526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73e84c4437ddda04e98861574ade0e99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TargetState: 1
 --- !u!114 &5026431630370616812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2529,6 +2516,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _clipIDName: bell_sound_1
+--- !u!114 &2236950726349098841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478927677272857526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2ae4b541d2fcb4fa076d78c9c9d76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7478927677310710801
 GameObject:
   m_ObjectHideFlags: 0
