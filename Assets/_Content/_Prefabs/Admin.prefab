@@ -64,6 +64,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StoriesInfo:
     m_ComponentsList: []
+  m_StoriesUI:
+    m_ComponentsList: []
+  m_Repercusions:
+    m_ComponentsList: []
   m_RecipeData:
     m_ComponentsList: []
   m_CookieData:
@@ -108,6 +112,8 @@ MonoBehaviour:
     m_CurrentDialogueLines: []
     m_CurrentLineIndex: 0
     m_CharacterImage: {fileID: 0}
+  m_TownComponent:
+    m_GlobalHappiness: 0
   m_InputComponent:
     m_Character:
     - {fileID: 0}

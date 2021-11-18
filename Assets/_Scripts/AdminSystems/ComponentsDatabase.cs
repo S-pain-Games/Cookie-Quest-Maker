@@ -13,9 +13,9 @@ namespace CQM.Databases
         // All the Stories Data in the game (Persistent & Runtime)
         [SerializeField] private ComponentsContainer<StoryInfoComponent> m_StoriesInfo = new ComponentsContainer<StoryInfoComponent>();
         // Story UI Data used in the story selection UI (Persistent)
-        private ComponentsContainer<StoryUIDataComponent> m_StoriesUI = new ComponentsContainer<StoryUIDataComponent>();
+        [SerializeField] private ComponentsContainer<StoryUIDataComponent> m_StoriesUI = new ComponentsContainer<StoryUIDataComponent>();
         // All the repercusions in the game (Persistent)
-        private ComponentsContainer<StoryRepercusionComponent> m_Repercusions = new ComponentsContainer<StoryRepercusionComponent>();
+        [SerializeField] private ComponentsContainer<StoryRepercusionComponent> m_Repercusions = new ComponentsContainer<StoryRepercusionComponent>();
 
         // Contains all the cookie recipes
         [SerializeField] private ComponentsContainer<RecipeDataComponent> m_RecipeData = new ComponentsContainer<RecipeDataComponent>();

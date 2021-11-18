@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CQM.Components;
+using CQM.Databases;
+using System;
 
 public class TownBuilder : MonoBehaviour
 {
@@ -62,6 +64,16 @@ public class TownBuilder : MonoBehaviour
         AddRepercusion("competition_judges_stoned");
         AddRepercusion("competition_safe");
         FinishCreatingLocation();
+    }
+
+    public void BuildTown(ComponentsDatabase c)
+    {
+        var locComponents = c.GetComponentContainer<LocationComponent>();
+        for (int i = 0; i < m_Locations.Count; i++)
+        {
+            var l = m_Locations[i];
+            locComponents.Add(l.m_ID, l);
+        }
     }
 
     private void CreateLocation(string locIDName, string locTitle, string locDescription)

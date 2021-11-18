@@ -11,6 +11,7 @@ namespace CQM.Databases
         [SerializeField] private StoryBuilder m_StoryBuilder;
         [SerializeField] private CharactersBuilder m_CharactersBuilder;
         [SerializeField] private IngredientsBuilder m_IngredientsBuilder;
+        [SerializeField] private TownBuilder m_TownBuilder;
         [SerializeField] private LocalizationBuilder m_LocalizationBuilder;
 
 
@@ -21,6 +22,7 @@ namespace CQM.Databases
             m_IngredientsBuilder.BuildPieces(c);
             BuildStories(c, m_StoryBuilder);
             m_LocalizationBuilder.BuildLocalization(c);
+            m_TownBuilder.BuildTown(c);
 
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("mayor_problem"));
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("out_of_lactose"));

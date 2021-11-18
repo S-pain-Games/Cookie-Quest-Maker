@@ -11,6 +11,7 @@ namespace CQM.Systems
         private ComponentsContainer<LocationComponent> _locationComponents;
         private ComponentsContainer<StoryRepercusionComponent> _repercusionsComponents;
 
+        private Event<ID> _onStoryCompleted;
 
         public void Initialize(Singleton_TownComponent townComponent,
                                ComponentsContainer<LocationComponent> locationComponents,
@@ -19,38 +20,45 @@ namespace CQM.Systems
             _townComponent = townComponent;
             _locationComponents = locationComponents;
             _repercusionsComponents = repercusionsComponents;
+
+            _onStoryCompleted = Admin.Global.EventSystem.GetCallbackByName<Event<ID>>("story_sys", "story_completed");
+            _onStoryCompleted.OnInvoked += (storyID) =>
+            {
+                // This could be in the story system but for now we can leave it here
+                StoryInfoComponent s = Admin.Global.Components.GetComponentContainer<StoryInfoComponent>().GetComponentByID(storyID);
+                SetRepercusionState(s.m_QuestRepercusion.m_ID, true);
+            };
         }
 
-        public void CalculateTownHappiness()
+        private void CalculateTownHappiness()
         {
             List<LocationComponent> locList = _locationComponents.GetList();
 
             int globalHappiness = 0;
             for (int i = 0; i < locList.Count; i++)
             {
-                int locHappiness = 0;
-                for (int j = 0; j < locList[i].m_StoryRepercusionsIDs.Count; j++)
-                {
-                    StoryRepercusionComponent rep = _repercusionsComponents[locList[i].m_StoryRepercusionsIDs[j]];
-                    if (rep.m_Active)
-                        locHappiness += rep.m_Value;
-                }
-                locList[i].m_Happiness = locHappiness;
-                globalHappiness += locHappiness;
+                CalculateLocationHappiness(locList[i]);
+                globalHappiness += locList[i].m_Happiness;
             }
             _townComponent.m_GlobalHappiness = globalHappiness;
         }
 
-        public void SetBuildingRepercusion(ID repercusionID, bool activated)
+        private void SetRepercusionState(ID repercusionID, bool activated)
         {
-            List<LocationComponent> locList = _locationComponents.GetList();
-            for (int i = 0; i < locList.Count; i++)
-            {
-                if (locList[i].m_StoryRepercusionsIDs[i] == repercusionID)
-                {
+            _repercusionsComponents.GetComponentByID(repercusionID).m_Active = true;
+            CalculateTownHappiness();
+        }
 
-                }
+        private void CalculateLocationHappiness(LocationComponent location)
+        {
+            int locHappiness = 0;
+            for (int i = 0; i < location.m_StoryRepercusionsIDs.Count; i++)
+            {
+                StoryRepercusionComponent rep = _repercusionsComponents[location.m_StoryRepercusionsIDs[i]];
+                if (rep.m_Active)
+                    locHappiness += rep.m_Value;
             }
+            location.m_Happiness = locHappiness;
         }
     }
 }
@@ -58,7 +66,7 @@ namespace CQM.Systems
 
 namespace CQM.Components
 {
-    [SerializeField]
+    [System.Serializable]
     public class Singleton_TownComponent
     {
         public int m_GlobalHappiness;

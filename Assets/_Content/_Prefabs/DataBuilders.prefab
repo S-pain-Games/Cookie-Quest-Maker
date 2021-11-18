@@ -53,6 +53,7 @@ MonoBehaviour:
   m_StoryBuilder: {fileID: 6330534342466683452}
   m_CharactersBuilder: {fileID: 6330534342466683427}
   m_IngredientsBuilder: {fileID: 6330534342466683425}
+  m_TownBuilder: {fileID: 1241280839235921238}
   m_LocalizationBuilder: {fileID: 6330534342466683426}
 --- !u!114 &6330534342466683453
 MonoBehaviour:
