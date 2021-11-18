@@ -67,6 +67,9 @@ public class EditorHierarchy
         rect.width = 20;
         bool toggled = EditorGUI.Toggle(rect, gameObject.activeSelf);
         if (toggled != gameObject.activeSelf)
+        {
             gameObject.SetActive(toggled);
+            EditorUtility.SetDirty(gameObject);
+        }
     }
 }
