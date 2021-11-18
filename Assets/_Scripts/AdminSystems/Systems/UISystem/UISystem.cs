@@ -29,38 +29,22 @@ namespace CQM.Systems
             commands = new EventSys();
             callbacks = new EventSys();
 
-            commands.AddEvent(new ID("toggle_newspaper")).OnInvoked += ToggleNewspaper;
-            commands.AddEvent(new ID("toggle_quest_making")).OnInvoked += ShowQuestMaking;
-            commands.AddEvent(new ID("toggle_town")).OnInvoked += ShowTown;
+            commands.AddEvent(new ID("toggle_newspaper")).OnInvoked += () => ToggleUIBlockingMovement(_references.m_NewspaperUi);
+            commands.AddEvent(new ID("toggle_quest_making")).OnInvoked += () => ToggleUIBlockingMovement(_references.m_QuestMakingUi);
+            commands.AddEvent(new ID("toggle_town")).OnInvoked += () => ToggleUIBlockingMovement(_references.m_TownUi);
+            commands.AddEvent(new ID("toggle_settings")).OnInvoked += () => ToggleUIBlockingMovement(_references.m_SettingsGameplayUi);
         }
 
-        private void ToggleNewspaper()
+        private void ToggleUI(GameObject ui)
         {
-            var ui = _references.m_NewspaperUi;
             if (ui.activeSelf)
                 ui.SetActive(false);
             else
                 ui.SetActive(true);
         }
 
-        private void ShowQuestMaking()
+        private void ToggleUIBlockingMovement(GameObject ui)
         {
-            var ui = _references.m_QuestMakingUi;
-            if (ui.activeSelf)
-            {
-                ui.SetActive(false);
-                _enableCharacterMovementCmd.Invoke();
-            }
-            else
-            {
-                _disableCharacterMovementCmd.Invoke();
-                ui.SetActive(true);
-            }
-        }
-
-        private void ShowTown()
-        {
-            var ui = _references.m_TownUi;
             if (ui.activeSelf)
             {
                 ui.SetActive(false);
