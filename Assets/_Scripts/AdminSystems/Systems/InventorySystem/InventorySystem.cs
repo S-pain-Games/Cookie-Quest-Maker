@@ -34,10 +34,10 @@ public class InventorySystem : ISystemEvents
                 switch (args.m_RepType)
                 {
                     case Reputation.GoodCookieReputation:
-                        ChangueGoodCookieRep(args.m_Amount);
+                        ChangeGoodCookieRep(args.m_Amount);
                         break;
                     case Reputation.EvilCookieReputation:
-                        ChangueEvilCookieRep(args.m_Amount);
+                        ChangeEvilCookieRep(args.m_Amount);
                         break;
                     default:
                         Debug.LogError("Oh no");
@@ -98,16 +98,14 @@ public class InventorySystem : ISystemEvents
         _inventoryData.m_UnlockedRecipes.Add(recipeID);
     }
 
-    // TODO: Refactor this
-    public void ChangueGoodCookieRep(int amount)
+    public void ChangeGoodCookieRep(int amount)
     {
         if (_inventoryData.m_GoodCookieReputation + amount >= 0)
             _inventoryData.m_GoodCookieReputation += amount;
         else
             Debug.LogError("Tried to remove more currency than available");
     }
-
-    public void ChangueEvilCookieRep(int amount)
+    public void ChangeEvilCookieRep(int amount)
     {
         if (_inventoryData.m_EvilCookieReputation + amount >= 0)
             _inventoryData.m_EvilCookieReputation += amount;

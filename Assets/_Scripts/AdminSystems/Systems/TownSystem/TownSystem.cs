@@ -21,6 +21,7 @@ namespace CQM.Systems
             _locationComponents = locationComponents;
             _repercusionsComponents = repercusionsComponents;
 
+
             _onStoryCompleted = Admin.Global.EventSystem.GetCallbackByName<Event<ID>>("story_sys", "story_completed");
             _onStoryCompleted.OnInvoked += (storyID) =>
             {
@@ -28,6 +29,42 @@ namespace CQM.Systems
                 StoryInfoComponent s = Admin.Global.Components.GetComponentContainer<StoryInfoComponent>().GetComponentByID(storyID);
                 SetRepercusionState(s.m_QuestRepercusion.m_ID, true);
             };
+
+
+            // This should be in a reward system
+            Admin.Global.EventSystem.GetCallbackByName<Event<ID>>("story_sys", "story_finalized").OnInvoked += CalculateAndAddReward;
+            void CalculateAndAddReward(ID storyID)
+            {
+                StoryInfoComponent s = Admin.Global.Components.GetComponentContainer<StoryInfoComponent>().GetComponentByID(storyID);
+                var invCommands = Admin.Global.EventSystem.GetCommandByName<Event<InventorySys_ChangeReputationEvtArgs>>("inventory_sys", "change_reputation");
+
+                int amount = 0;
+                Reputation repType;
+                int percentage = 0;
+                var loc = _locationComponents.GetList().Find(l => l.m_CharacterOwnerID == new ID(s.m_StoryData.m_QuestGiver));
+
+                if (!Admin.Global.Components.m_StoriesStateComponent.m_AllSecondaryStories.Contains(s.m_StoryData.m_ID))
+                    amount = 300;
+                else
+                    amount = 150;
+
+                if (s.m_QuestRepercusion.m_Value > 0)
+                {
+                    repType = Reputation.GoodCookieReputation;
+                    percentage = loc.m_Happiness + 100;
+                    amount *= percentage;
+                    amount /= 100;
+                }
+                else
+                {
+                    repType = Reputation.EvilCookieReputation;
+                    percentage = -loc.m_Happiness + 100;
+                    amount *= percentage;
+                    amount /= 100;
+                }
+
+                invCommands.Invoke(new InventorySys_ChangeReputationEvtArgs(repType, amount));
+            }
         }
 
         private void CalculateTownHappiness()
@@ -77,6 +114,7 @@ namespace CQM.Components
     public class LocationComponent
     {
         public ID m_ID;
+        public ID m_CharacterOwnerID;
 
         public string m_LocName;
         public string m_LocDesc;

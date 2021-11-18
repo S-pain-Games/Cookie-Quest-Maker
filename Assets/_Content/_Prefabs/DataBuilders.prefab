@@ -829,7 +829,8 @@ MonoBehaviour:
     m_RecipeDescription: Description Plain Cookie
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 50
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
         m_NameID: masa_de_galletas_encantada
@@ -848,7 +849,8 @@ MonoBehaviour:
     m_RecipeDescription: Description Plain Cookie 2
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 50
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
         m_NameID: compota_de_mora_infernal
@@ -872,7 +874,8 @@ MonoBehaviour:
     m_RecipeDescription: Very aggresive
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 1
-    m_Price: 50
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
         m_NameID: masa_de_galletas_encantada
@@ -891,7 +894,8 @@ MonoBehaviour:
     m_RecipeDescription: Very Assistive
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 50
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
         m_NameID: compota_de_mora_infernal
@@ -910,7 +914,8 @@ MonoBehaviour:
     m_RecipeDescription: Very Assistive
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 50
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
         m_NameID: compota_de_mora_infernal
@@ -929,7 +934,8 @@ MonoBehaviour:
     m_RecipeDescription: Very Assistive
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 50
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
         m_NameID: compota_de_mora_infernal
@@ -948,7 +954,8 @@ MonoBehaviour:
     m_RecipeDescription: Very Assistive
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 50
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
         m_NameID: compota_de_mora_infernal
@@ -967,7 +974,8 @@ MonoBehaviour:
     m_RecipeDescription: Very Assistive
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 50
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
         m_NameID: compota_de_mora_infernal
@@ -986,7 +994,8 @@ MonoBehaviour:
     m_RecipeDescription: Desc
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 50
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
         m_NameID: compota_de_mora_infernal
@@ -1005,7 +1014,8 @@ MonoBehaviour:
     m_RecipeDescription: Desc
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 50
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
         m_NameID: compota_de_mora_infernal
@@ -1024,7 +1034,8 @@ MonoBehaviour:
     m_RecipeDescription: Desc
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 50
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
         m_NameID: compota_de_mora_infernal
@@ -1043,7 +1054,8 @@ MonoBehaviour:
     m_RecipeDescription: Desc
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 50
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
         m_NameID: compota_de_mora_infernal
@@ -1067,7 +1079,8 @@ MonoBehaviour:
     m_RecipeDescription: Desc
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 50
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
         m_NameID: nucleo_de_cereza_animico
@@ -1091,7 +1104,8 @@ MonoBehaviour:
     m_RecipeDescription: Desc
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 50
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
         m_NameID: nucleo_de_cereza_animico
@@ -1115,7 +1129,8 @@ MonoBehaviour:
     m_RecipeDescription: Desc
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 50
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
         m_NameID: nucleo_de_cereza_animico
@@ -1139,7 +1154,8 @@ MonoBehaviour:
     m_RecipeDescription: Desc
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 50
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
         m_NameID: nucleo_de_cereza_animico
@@ -1163,7 +1179,8 @@ MonoBehaviour:
     m_RecipeDescription: No description
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList: []
     m_PieceID:
       m_NameID: mayor
@@ -1177,7 +1194,8 @@ MonoBehaviour:
     m_RecipeDescription: No description
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList: []
     m_PieceID:
       m_NameID: meri
@@ -1191,7 +1209,8 @@ MonoBehaviour:
     m_RecipeDescription: No description
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList: []
     m_PieceID:
       m_NameID: canela
@@ -1205,7 +1224,8 @@ MonoBehaviour:
     m_RecipeDescription: No description
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList: []
     m_PieceID:
       m_NameID: johny_setas
@@ -1219,7 +1239,8 @@ MonoBehaviour:
     m_RecipeDescription: No description
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList: []
     m_PieceID:
       m_NameID: miss_chocolate
@@ -1233,7 +1254,8 @@ MonoBehaviour:
     m_RecipeDescription: No description
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList: []
     m_PieceID:
       m_NameID: mantecas
@@ -1247,7 +1269,8 @@ MonoBehaviour:
     m_RecipeDescription: No description
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList: []
     m_PieceID:
       m_NameID: wolves
@@ -1261,7 +1284,8 @@ MonoBehaviour:
     m_RecipeDescription: No description
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList: []
     m_PieceID:
       m_NameID: rats
@@ -1275,7 +1299,8 @@ MonoBehaviour:
     m_RecipeDescription: No description
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
     m_IngredientsList: []
     m_PieceID:
       m_NameID: vacas
@@ -5538,7 +5563,8 @@ MonoBehaviour:
     m_Name: Masa de galletas encantada
     m_Sprite: {fileID: 21300000, guid: d09056cfa8500f049a3cbce0406c7e26, type: 3}
     m_ReputationTypePrice: 0
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
   - m_ID:
       m_NameID: compota_de_mora_infernal
       m_ID: -1959704931
@@ -5546,7 +5572,8 @@ MonoBehaviour:
     m_Name: Compota de mora infernal
     m_Sprite: {fileID: 21300000, guid: f9031271c08413c43bb11496a3b32a00, type: 3}
     m_ReputationTypePrice: 1
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
   - m_ID:
       m_NameID: nucleo_de_cereza_animico
       m_ID: 1174637542
@@ -5554,7 +5581,8 @@ MonoBehaviour:
     m_Name: "N\xFAcleo de cereza an\xEDmico"
     m_Sprite: {fileID: 21300000, guid: a27089fc51fdcaf4181affbc4cd10ec6, type: 3}
     m_ReputationTypePrice: 0
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
   - m_ID:
       m_NameID: crema_pastelera_arcana
       m_ID: -235594117
@@ -5562,7 +5590,8 @@ MonoBehaviour:
     m_Name: Crema pastelera arcana
     m_Sprite: {fileID: 21300000, guid: 39bad943b4b30ad4bbd1af7d8619d31f, type: 3}
     m_ReputationTypePrice: 0
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
   - m_ID:
       m_NameID: vainilla_de_la_iluminacion
       m_ID: 1922958395
@@ -5570,7 +5599,8 @@ MonoBehaviour:
     m_Name: "Vainilla de la iluminaci\xF3n"
     m_Sprite: {fileID: 21300000, guid: f36a0413a581d4b4dab06b5cff233ce2, type: 3}
     m_ReputationTypePrice: 1
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
   - m_ID:
       m_NameID: caramelo_fundido_candiscente
       m_ID: 340510824
@@ -5578,7 +5608,8 @@ MonoBehaviour:
     m_Name: Caramelo fundido candiscente
     m_Sprite: {fileID: 21300000, guid: 82194dd7c988abb4c86e25247aa6e194, type: 3}
     m_ReputationTypePrice: 1
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
   - m_ID:
       m_NameID: esencia_de_limon_purificadora
       m_ID: 334205480
@@ -5586,7 +5617,8 @@ MonoBehaviour:
     m_Name: "Esencia de lim\xF3n purificadora"
     m_Sprite: {fileID: 21300000, guid: 75ae9afafc8dbea46893f0e60e06bcd2, type: 3}
     m_ReputationTypePrice: 0
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
   - m_ID:
       m_NameID: levadura_ancestral_de_la_pereza
       m_ID: -1427575368
@@ -5594,7 +5626,8 @@ MonoBehaviour:
     m_Name: Levadura Ancestral de la pereza
     m_Sprite: {fileID: 21300000, guid: dac919421da07f74686382450856e1ee, type: 3}
     m_ReputationTypePrice: 1
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
   - m_ID:
       m_NameID: chocolate_negro_sempiterno
       m_ID: 1221400841
@@ -5602,7 +5635,8 @@ MonoBehaviour:
     m_Name: Chocolate negro Sempiterno
     m_Sprite: {fileID: 21300000, guid: 14453757a922dbe4084bc58b44d3a8da, type: 3}
     m_ReputationTypePrice: 1
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
   - m_ID:
       m_NameID: harina_de_fuerza_titanica
       m_ID: 1850996025
@@ -5610,7 +5644,8 @@ MonoBehaviour:
     m_Name: "Harina de fuerza tit\xE1nica"
     m_Sprite: {fileID: 21300000, guid: c6c0dbea8b1cd9245a274ab113a9a19f, type: 3}
     m_ReputationTypePrice: 0
-    m_Price: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
 --- !u!114 &1241280839235921238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5627,6 +5662,10 @@ MonoBehaviour:
   - m_ID:
       m_NameID: mayor_home
       m_ID: 550075868
+      m_Initialized: 1
+    m_CharacterOwnerID:
+      m_NameID: mayor
+      m_ID: 996742298
       m_Initialized: 1
     m_LocName: Casa de Antonio
     m_LocDesc: description
@@ -5651,6 +5690,10 @@ MonoBehaviour:
       m_NameID: meri_rancho
       m_ID: -1291356903
       m_Initialized: 1
+    m_CharacterOwnerID:
+      m_NameID: meri
+      m_ID: -918260377
+      m_Initialized: 1
     m_LocName: Rancho de Meri
     m_LocDesc: description
     m_Happiness: 0
@@ -5673,6 +5716,10 @@ MonoBehaviour:
   - m_ID:
       m_NameID: canela_home
       m_ID: -726187318
+      m_Initialized: 1
+    m_CharacterOwnerID:
+      m_NameID: canela
+      m_ID: -619351516
       m_Initialized: 1
     m_LocName: Casa de Canela
     m_LocDesc: description
@@ -5703,6 +5750,10 @@ MonoBehaviour:
       m_NameID: chocolate_home
       m_ID: 1959417174
       m_Initialized: 1
+    m_CharacterOwnerID:
+      m_NameID: miss_chocolate
+      m_ID: -370492881
+      m_Initialized: 1
     m_LocName: Casa de Miss Chocolate
     m_LocDesc: description
     m_Happiness: 0
@@ -5729,6 +5780,10 @@ MonoBehaviour:
       m_NameID: mantecas_home
       m_ID: 1846525232
       m_Initialized: 1
+    m_CharacterOwnerID:
+      m_NameID: mantecas
+      m_ID: 2085496002
+      m_Initialized: 1
     m_LocName: Casa del Mantecas
     m_LocDesc: description
     m_Happiness: 0
@@ -5754,6 +5809,10 @@ MonoBehaviour:
   - m_ID:
       m_NameID: johnny_home
       m_ID: -614040492
+      m_Initialized: 1
+    m_CharacterOwnerID:
+      m_NameID: johny_setas
+      m_ID: -840848411
       m_Initialized: 1
     m_LocName: Casa derJohnny
     m_LocDesc: description
