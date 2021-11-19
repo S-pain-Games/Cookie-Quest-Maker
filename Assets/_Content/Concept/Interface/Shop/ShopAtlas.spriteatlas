@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ShopAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 1024
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: d61c4a72165e21b45b83df82d8ea8138, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: c434bc00fb4c06446864d5aef58eea6d, type: 3}
+  - {fileID: 21300000, guid: 75da8650bae999440805dc073705a1ef, type: 3}
+  - {fileID: 21300000, guid: 8e5767b0df522ee479942fcd096017e0, type: 3}
+  - {fileID: 21300000, guid: 32b5eb91f5a49e144928b1803e364036, type: 3}
+  - {fileID: 21300000, guid: fada20c1b29122243a919957ecd74cf5, type: 3}
+  - {fileID: 21300000, guid: bf19e2131df9b7c4cbbf95e553a2c552, type: 3}
+  - {fileID: 21300000, guid: 76576c746f62146419b30840e74f729c, type: 3}
+  - {fileID: 21300000, guid: 57f3dfd4b651c124fa5782ebd481e529, type: 3}
+  - {fileID: 21300000, guid: b38cf686b2ae06049983b4dc657791e4, type: 3}
+  - {fileID: 21300000, guid: ed8a3ef62501af343a6f97641c9c2e98, type: 3}
+  - {fileID: 21300000, guid: e26720fa7f81dc942a824ddd6ef7a93e, type: 3}
+  - {fileID: 21300000, guid: b3cb941b335f6f4488504404637e3793, type: 3}
+  - {fileID: 21300000, guid: 1749329f44e482d4fb0f447ff4b6364b, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - CookieRecipe_5
+  - CookieRecipe_1
+  - CookieRecipe_2
+  - GoodMoney_icon
+  - CookieRecipe_6
+  - Shop_background
+  - EvilMoney_icon
+  - CookieRecipe_4
+  - ShopImage_Nu
+  - CookieRecipe_3
+  - CookieRecipe_7
+  - CookieRecipe_8
+  - ShopImage_Evith
+  m_RenderDataMap: {}
+  m_Tag: ShopAtlas
+  m_IsVariant: 0

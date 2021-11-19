@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CookiePiecesAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 6a2420ecd5db49949bc06ff569a3c9fa, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: d508ff50a77a91149a524bcfecd0dbae, type: 3}
+  - {fileID: 21300000, guid: b5b3a07137f48e649a5e9543177286da, type: 3}
+  - {fileID: 21300000, guid: dd1495d1750d7e9459816a04e37834d2, type: 3}
+  - {fileID: 21300000, guid: a0cf0df16b02749429693b71b8257071, type: 3}
+  - {fileID: 21300000, guid: 5970629215b8a004d940d4b90708917d, type: 3}
+  - {fileID: 21300000, guid: 9765c5238660b4d4ebe852b6572540b7, type: 3}
+  - {fileID: 21300000, guid: fdd8da237cda300459b69e475d759c52, type: 3}
+  - {fileID: 21300000, guid: e66ca3659f9f9684eb15caf8f6f76684, type: 3}
+  - {fileID: 21300000, guid: 88210d859f042ba4f9a595a71155e01a, type: 3}
+  - {fileID: 21300000, guid: 80b5879500c194c4b9257f212baf50d9, type: 3}
+  - {fileID: 21300000, guid: 9f691ae598fbf9c4d8eaf18c535bc69c, type: 3}
+  - {fileID: 21300000, guid: 45f691e6b848f174d8bdeb543e53c344, type: 3}
+  - {fileID: 21300000, guid: 68794217eaff3c64c9235d761333a439, type: 3}
+  - {fileID: 21300000, guid: 3325e3174902ee84ca5567e1cb9ab96f, type: 3}
+  - {fileID: 21300000, guid: 1565e568885b5b14daf506d27e846fe9, type: 3}
+  - {fileID: 21300000, guid: 4e088888903152242bedc6d2995284e9, type: 3}
+  - {fileID: 21300000, guid: e672bca8424e4a3478264902eac3108a, type: 3}
+  - {fileID: 21300000, guid: ccfe033985c79e443a74ac9462574f5f, type: 3}
+  - {fileID: 21300000, guid: 8a88bfda9c0714d4da7df2f566c1186b, type: 3}
+  - {fileID: 21300000, guid: d7ade6fb00e3d8945bdec751af798476, type: 3}
+  - {fileID: 21300000, guid: e174567cb3185b74c93c27244d9b10b3, type: 3}
+  - {fileID: 21300000, guid: 695672ac4af1c334d95857ce713a9865, type: 3}
+  - {fileID: 21300000, guid: df632e2db0369a841b39f4eee8d3ef67, type: 3}
+  - {fileID: 21300000, guid: 7afe679d93622b64587e17f8edf29859, type: 3}
+  - {fileID: 21300000, guid: fc453cedcfd9b714297bf846cf7a302d, type: 3}
+  - {fileID: 21300000, guid: 63a75a1e83c6d944cb5ae0750faaf4e4, type: 3}
+  - {fileID: 21300000, guid: ae62f49ef96b51941a9c2a96e68de2cc, type: 3}
+  - {fileID: 21300000, guid: d21a7f9e36dcbb54181d0aa4c3ecff9b, type: 3}
+  - {fileID: 21300000, guid: 819777ce0b5cf4e43909920747717e12, type: 3}
+  - {fileID: 21300000, guid: 5f6092fe08f678544afddc11f2f3a372, type: 3}
+  - {fileID: 21300000, guid: 2684808f70b59be458db89c422593d90, type: 3}
+  - {fileID: 21300000, guid: a539138fd9267c3448c614ea2901d47a, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - StorageAction_convincingly
+  - StorageObject_bat
+  - StorageTarget_wolfs
+  - StorageObject_scissors
+  - StorageObject_flipflop
+  - StorageHero_5
+  - StorageTarget_Canela
+  - SelectCookie_background
+  - StorageAction_dialogue
+  - StorageTarget_cows
+  - StorageTarget_rats
+  - StorageTarget_mantecas
+  - StorageHero_2
+  - StorageAction_brutally
+  - StorageTarget_erJohnny
+  - StorageHero_4
+  - StorageActioon_violently
+  - StorageObject_cake
+  - StorageTarget_missChocolate
+  - StorageAction_assist
+  - StorageTarget_mary
+  - StorageAction_kindly
+  - StorageAction_stare
+  - StorageHero_1
+  - StorageHero_8
+  - StorageHero_7
+  - StorageAction_attack
+  - StorageAction_steal
+  - StorageHero_6
+  - StorageTarget_mayor
+  - StorageAction_look
+  - StorageHero_3
+  m_RenderDataMap: {}
+  m_Tag: CookiePiecesAtlas
+  m_IsVariant: 0

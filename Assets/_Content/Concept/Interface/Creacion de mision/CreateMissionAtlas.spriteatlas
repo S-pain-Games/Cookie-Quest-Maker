@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CreateMissionAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 1a99c1072dd7a94499c10616322f1944, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: a2749450cdb9a5345b14bad71a7b11b3, type: 3}
+  - {fileID: 21300000, guid: 95f2385038877f64cb098fb629af4685, type: 3}
+  - {fileID: 21300000, guid: 403a1ba1c6f85974cbb303ca95a6312e, type: 3}
+  - {fileID: 21300000, guid: 54ceb1d13a2ec654ab5b9f4be4635fb4, type: 3}
+  - {fileID: 21300000, guid: 23f676d1f4a71db49b4a4b089729a845, type: 3}
+  - {fileID: 21300000, guid: e3393412cb8a53d4fa51facf3396c935, type: 3}
+  - {fileID: 21300000, guid: 194898324a4688d4994fd80f5332beca, type: 3}
+  - {fileID: 21300000, guid: 7cce4f72391653842a38511dd7871dc2, type: 3}
+  - {fileID: 21300000, guid: 28b7d793a8173cc469991ac4c93c963a, type: 3}
+  - {fileID: 21300000, guid: af2d0f4422768764cbf91c107c5ad74b, type: 3}
+  - {fileID: 21300000, guid: 9f0f7064d8c9e62488007bb5c590eee4, type: 3}
+  - {fileID: 21300000, guid: 77eaa71558755064cbca8511be04e884, type: 3}
+  - {fileID: 21300000, guid: 4150cc859f149f846a48e1010b860bbb, type: 3}
+  - {fileID: 21300000, guid: a949079572f22904b844fb14a47f017c, type: 3}
+  - {fileID: 21300000, guid: 4766e9563f9dbd244a1c536253f95ce8, type: 3}
+  - {fileID: 21300000, guid: b51aca76c7c871941a08578d590aebb9, type: 3}
+  - {fileID: 21300000, guid: 381ea50766ff9e946a372f6f902de103, type: 3}
+  - {fileID: 21300000, guid: eb7fe4a73bd33a940bfcaf4f93f10ae6, type: 3}
+  - {fileID: 21300000, guid: 9cd2f33803c99034289d8e3d1bec3635, type: 3}
+  - {fileID: 21300000, guid: fb7cda5845c36bb47a7f9026fa916019, type: 3}
+  - {fileID: 21300000, guid: adc4d268e55a60c438be560b26614ddb, type: 3}
+  - {fileID: 21300000, guid: 276ebad8f03140a4095c719e1cdd8a89, type: 3}
+  - {fileID: 21300000, guid: fbc0e27999c58df4e97cac0a6de3a9ca, type: 3}
+  - {fileID: 21300000, guid: 3884d879c5ff00640931ec4185284ae3, type: 3}
+  - {fileID: 21300000, guid: 508a82d941ad7684fb3a9a7fc82ef9f7, type: 3}
+  - {fileID: 21300000, guid: 15f10baa2b52b044f80c8d7a883ed103, type: 3}
+  - {fileID: 21300000, guid: 24d1f83b8ea240942a0118e210520d0e, type: 3}
+  - {fileID: 21300000, guid: 6cfd658b7d0f18c4ca8c3aae2182d699, type: 3}
+  - {fileID: 21300000, guid: a6cfc1abbc064644e9d39fedbad9a254, type: 3}
+  - {fileID: 21300000, guid: 3309febc2aa5e6f4e9efba6cca370606, type: 3}
+  - {fileID: 21300000, guid: 85119a0d9cb3a444d9d8fc0394920391, type: 3}
+  - {fileID: 21300000, guid: b973048d6e900844ba6081e0b6ae7990, type: 3}
+  - {fileID: 21300000, guid: 7e7f567e9bfa9894ab38dd2d40c4f780, type: 3}
+  - {fileID: 21300000, guid: f241a53f9d509cc4bb43cf1cea451a29, type: 3}
+  - {fileID: 21300000, guid: f675673fd14c4bc4f8eae48d78319d8c, type: 3}
+  - {fileID: 21300000, guid: a238624f623ea254b9817bdf8c5cf92f, type: 3}
+  - {fileID: 21300000, guid: 2e42295ff8cff0f48a86871af9832f4e, type: 3}
+  - {fileID: 21300000, guid: b70affcf69ee9034fa79a8efeca045cb, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - HeroPiece_4
+  - TargetPiece_Cows
+  - TargetPiece_Wolfs
+  - ModifierPiece_placeholder
+  - ActionPiece_look
+  - ModifierPiece_Brutally
+  - TargetPiece_MissChocolate
+  - CreateMission_background
+  - ObjectPiece_bat
+  - ActionPiece_placeholder
+  - ObjectPiece_placeholder
+  - TargetPiece_Canela
+  - TargetPiece_Mayor
+  - ActionPiece_steal
+  - TargetPiece_Rats
+  - ActionPiece_Attack
+  - ObjectPiece_flipflop
+  - TargetPiece_ErJohnny
+  - OpenStorage_button
+  - HeroPiece_7
+  - HeroPiece_1
+  - TargetPiece_Mantecas
+  - TargetPiece_Mary
+  - HeroPiece_6
+  - ActionPiece_assist
+  - ActionPiece_stare
+  - HeroPiece_3
+  - ModifierPiece_Violently
+  - HeroPiece_8
+  - ModifierPiece_Kindly
+  - ActionPiece_dialogue
+  - HeroPiece_placeholder
+  - TargetPiece_placeholder
+  - HeroPiece_2
+  - ObjectPiece_scissor
+  - ObjectPiece_cake
+  - ModifierPiece_Convincingly
+  - HeroPiece_5
+  m_RenderDataMap: {}
+  m_Tag: CreateMissionAtlas
+  m_IsVariant: 0

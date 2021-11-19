@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CreateCookieAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: d590866a56790db4cbbf1a78437b430c, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 00f23370837251e44b0471d923fe29f7, type: 3}
+  - {fileID: 21300000, guid: 1cb97171176636c4a8d130a1ff109147, type: 3}
+  - {fileID: 21300000, guid: 68323a551a047604ab3cff17955171ad, type: 3}
+  - {fileID: 21300000, guid: 1c4334c55a459fc47ba5217d528371e8, type: 3}
+  - {fileID: 21300000, guid: 2afbc7e651c1dcb468654ee996944ccd, type: 3}
+  - {fileID: 21300000, guid: 5ca7d7d7958643e4c9d7b642cfc01334, type: 3}
+  - {fileID: 21300000, guid: bf668468eb1b107488359671b4676c13, type: 3}
+  - {fileID: 21300000, guid: f0d61aa930a04bf498b974d74cbad946, type: 3}
+  - {fileID: 21300000, guid: 965223ba37d9f134aa45e5455fcae763, type: 3}
+  - {fileID: 21300000, guid: 64cbc25caf84e5542808f332fcbffafb, type: 3}
+  - {fileID: 21300000, guid: 1309868c425c1f54489d373a3d50250f, type: 3}
+  - {fileID: 21300000, guid: 2207a64eb580998469702472070a540b, type: 3}
+  - {fileID: 21300000, guid: b84d0e5f7315d184b874083cab8795c0, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - BakeAlert_4
+  - Hero_4
+  - BakeAlert_2
+  - Hero_8
+  - BakeAlert_1
+  - CreateCookie_background
+  - BakeAlert_3
+  - Hero_5
+  - Hero_7
+  - Hero_2
+  - Hero_3
+  - Hero_1
+  - Hero_6
+  m_RenderDataMap: {}
+  m_Tag: CreateCookieAtlas
+  m_IsVariant: 0
