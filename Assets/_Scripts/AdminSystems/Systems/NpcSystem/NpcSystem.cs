@@ -131,10 +131,10 @@ namespace CQM.Systems
 
                 // Add Random Idle Dialogue
                 npcData.m_RandomIdleDialogue.Clear();
-                List<string> characterRandomDialogueTemp = new List<string>(); // Pooling
                 var serializedDialogue = _characterDialogueComponent.GetComponentByID(npcData.m_CharacterID).m_IdleRandomDialogue;
                 for (int j = 0; j < serializedDialogue.Count; j++)
                 {
+                    List<string> characterRandomDialogueTemp = new List<string>(); // Pooling
                     for (int k = 0; k < serializedDialogue[j].Count; k++)
                     {
                         SerializableList<string> l = serializedDialogue[j];
