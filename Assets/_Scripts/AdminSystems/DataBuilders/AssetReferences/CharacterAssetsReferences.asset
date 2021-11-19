@@ -49,3 +49,7 @@ MonoBehaviour:
     m_CharacterWorldPrefab: {fileID: 0}
     m_DialogueSprite: {fileID: 21300000, guid: 2e377219cb2ecc84791de061d1bc6c10, type: 3}
     m_NewspaperSprite: {fileID: 21300000, guid: 34e5756d697846b4bb3a6ffdb0c2cb74, type: 3}
+  - m_IDName: narrator
+    m_CharacterWorldPrefab: {fileID: 0}
+    m_DialogueSprite: {fileID: 0}
+    m_NewspaperSprite: {fileID: 0}
