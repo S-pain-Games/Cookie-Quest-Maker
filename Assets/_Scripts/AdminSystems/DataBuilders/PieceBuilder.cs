@@ -82,8 +82,8 @@ namespace CQM.Databases
                 CreateNew();
                 SetIDName("malvavisco_fantasma_tostado");
                 SetPieceType(PieceType.Cookie);
-                SetUIData("Malvavisco Fantasma Tostado", "Descripción.");
-                SetRecipeData("Receta para Malvavisco Fantasma Tostado", "Descripción.", Reputation.GoodCookieReputation, 0, 0);
+                SetUIData("Malvavisco Fantasma Tostado", "No es el más hábil, pero actúa con entusiasmo.");
+                SetRecipeData("Receta para Malvavisco Fantasma Tostado", "No es el más hábil, pero actúa con entusiasmo.", Reputation.GoodCookieReputation, 0, 0);
                 AddIngredientToRecipe("masa_de_galletas_encantada", 1);
 
                 CreateNew();
@@ -92,8 +92,8 @@ namespace CQM.Databases
                 AddFunctionalTag(Tag.Harm, 1);
                 AddFunctionalTag(Tag.Convince, 1);
                 AddFunctionalTag(Tag.Help, 1);
-                SetUIData("Merengue Fantasma Tostado", "Descripción.");
-                SetRecipeData("Receta de Merengue Fantasma Tostado", "Descripción.", Reputation.GoodCookieReputation, 75, 75);
+                SetUIData("Merengue Fantasma Tostado", "Ayudante todoterreno perfecto para tareas sencillas.");
+                SetRecipeData("Receta de Merengue Fantasma Tostado", "Ayudante todoterreno perfecto para tareas sencillas.", Reputation.GoodCookieReputation, 75, 75);
                 AddIngredientToRecipe("crema_pastelera_arcana", 2);
                 AddIngredientToRecipe("vainilla_de_la_iluminacion", 1);
 
@@ -102,8 +102,8 @@ namespace CQM.Databases
                 SetPieceType(PieceType.Cookie);
                 AddFunctionalTag(Tag.Convince, 1);
                 AddFunctionalTag(Tag.Help, 2);
-                SetUIData("Pepito de Ternura", "Descripción.");
-                SetRecipeData("Receta de Pepito de Ternura", "Descripción.", Reputation.GoodCookieReputation, 250, 0);
+                SetUIData("Pepito de Ternura", "Siempre dispuesto a ayudar.");
+                SetRecipeData("Receta de Pepito de Ternura", "Siempre dispuesto a ayudar.", Reputation.GoodCookieReputation, 250, 0);
                 AddIngredientToRecipe("chocolate_negro_sempiterno", 2);
                 AddIngredientToRecipe("crema_pastelera_arcana", 1);
 
@@ -112,8 +112,8 @@ namespace CQM.Databases
                 SetPieceType(PieceType.Cookie);
                 AddFunctionalTag(Tag.Harm, 2);
                 AddFunctionalTag(Tag.Help, 3);
-                SetUIData("Bizcotroll de Naranjas Somnolientas", "Descripción.");
-                SetRecipeData("Receta de Bizcotroll de Naranjas Somnolientas", "Descripción.", Reputation.GoodCookieReputation, 500, 0);
+                SetUIData("Bizcotroll de Naranjas Somnolientas", "Es muy pacífico, pero no controla su propia fuerza");
+                SetRecipeData("Receta de Bizcotroll de Naranjas Somnolientas", "Es muy pacífico, pero no controla su propia fuerza", Reputation.GoodCookieReputation, 500, 0);
                 AddIngredientToRecipe("harina_de_fuerza_titanica", 1);
                 AddIngredientToRecipe("caramelo_fundido_candiscente", 2);
                 AddIngredientToRecipe("levadura_ancestral_de_la_pereza", 1);
@@ -122,9 +122,9 @@ namespace CQM.Databases
                 SetIDName("jauria_bombon");
                 SetPieceType(PieceType.Cookie);
                 AddFunctionalTag(Tag.Harm, 2);
-                AddFunctionalTag(Tag.Help, 3);
-                SetUIData("Jauría Bombón Infernal", "Descripción.");
-                SetRecipeData("Receta de Jauría Bombón Infernal", "Descripción.", Reputation.GoodCookieReputation, 0, 250);
+                AddFunctionalTag(Tag.Help, 1);
+                SetUIData("Jauría Bombón Infernal", "Tratan de ayudar de la forma más violenta posible. Los favoritos de Evith.");
+                SetRecipeData("Receta de Jauría Bombón Infernal", "Tratan de ayudar de la forma más violenta posible. Los favoritos de Evith.", Reputation.GoodCookieReputation, 0, 250);
                 AddIngredientToRecipe("compota_de_mora_infernal", 2);
                 AddIngredientToRecipe("chocolate_negro_sempiterno", 1);
 
@@ -132,9 +132,9 @@ namespace CQM.Databases
                 SetIDName("paladin_tortita");
                 SetPieceType(PieceType.Cookie);
                 AddFunctionalTag(Tag.Harm, 3);
-                AddFunctionalTag(Tag.Help, 1);
-                SetUIData("Paladín Tortita", "Descripción.");
-                SetRecipeData("Receta de Paladín Tortita", "Descripción.", Reputation.GoodCookieReputation, 350, 150);
+                AddFunctionalTag(Tag.Help, 2);
+                SetUIData("Paladín Tortita", "Gran defensor de la justicia con métodos muy violentos");
+                SetRecipeData("Receta de Paladín Tortita", "Gran defensor de la justicia con métodos muy violentos", Reputation.GoodCookieReputation, 350, 150);
                 AddIngredientToRecipe("nucleo_de_cereza_animico", 1);
                 AddIngredientToRecipe("caramelo_fundido_candiscente", 2);
                 AddIngredientToRecipe("harina_de_fuerza_titanica", 2);
@@ -144,8 +144,8 @@ namespace CQM.Databases
                 SetPieceType(PieceType.Cookie);
                 AddFunctionalTag(Tag.Harm, 1);
                 AddFunctionalTag(Tag.Convince, 2);
-                SetUIData("Bizquiborracho de Mora", "Descripción.");
-                SetRecipeData("Receta de Bizquiborracho de Mora", "Descripción.", Reputation.GoodCookieReputation, 0, 250);
+                SetUIData("Bizquiborracho de Mora", "Intenta ser persuasivo, pero se le puede ir la mano.");
+                SetRecipeData("Receta de Bizquiborracho de Mora", "Intenta ser persuasivo, pero se le puede ir la mano.", Reputation.GoodCookieReputation, 0, 250);
                 AddIngredientToRecipe("crema_pastelera_arcana", 2);
                 AddIngredientToRecipe("compota_de_mora_infernal", 1);
 
@@ -154,8 +154,8 @@ namespace CQM.Databases
                 SetPieceType(PieceType.Cookie);
                 AddFunctionalTag(Tag.Convince, 3);
                 AddFunctionalTag(Tag.Help, 2);
-                SetUIData("Citrielfo en Copa", "Descripción.");
-                SetRecipeData("Receta de Citrielfo en Copa", "Descripción.", Reputation.GoodCookieReputation, 150, 350);
+                SetUIData("Citrielfo en Copa", "Es capaz de persuadir incluso a una mula. Aprobado por Nu.");
+                SetRecipeData("Receta de Citrielfo en Copa", "Es capaz de persuadir incluso a una mula. Aprobado por Nu.", Reputation.GoodCookieReputation, 150, 350);
                 AddIngredientToRecipe("esencia_de_limon_purificadora", 2);
                 AddIngredientToRecipe("vainilla_de_la_iluminacion", 1);
                 AddIngredientToRecipe("chocolate_negro_sempiterno", 1);
@@ -165,51 +165,50 @@ namespace CQM.Databases
                 CreateNew();
                 SetIDName("attack");
                 SetPieceType(PieceType.Action);
-                AddFunctionalTag(Tag.Harm, 4);
-                SetUIData("Attack", "Very Agressive");
-                SetRecipeData("Attack Piece Recipe", "Very aggresive", Reputation.EvilCookieReputation, 50, 0);
+                AddFunctionalTag(Tag.Harm, 1);
+                SetUIData("Atacar", "Para cuando la violencia puede ser la solución");
+                SetRecipeData("Receta de Atacar", "Para cuando la violencia puede ser la solución.", Reputation.EvilCookieReputation, 50, 0);
                 AddIngredientToRecipe("masa_de_galletas_encantada", 1);
 
                 CreateNew();
                 SetIDName("dialogate");
                 SetPieceType(PieceType.Action);
-                AddFunctionalTag(Tag.Convince, 4);
-                SetUIData("Dialogate", "Very Assistive");
-                SetRecipeData("Dialogate Recipe", "Very Assistive", Reputation.GoodCookieReputation, 0, 50);
-                AddIngredientToRecipe("compota_de_mora_infernal", 1);
+                AddFunctionalTag(Tag.Convince, 1);
+                SetUIData("Dialogar", "La solución más diplomática ante un problema");
+                SetRecipeData("Receta de Dialogar", "La solución más diplomática ante un problema", Reputation.GoodCookieReputation, 0, 50);
+                AddIngredientToRecipe("masa_de_galletas_encantada", 1);
 
                 CreateNew();
                 SetIDName("assist");
                 SetPieceType(PieceType.Action);
-                AddFunctionalTag(Tag.Help, 4);
-                SetUIData("Assist", "Very Assistive");
-                SetRecipeData("Assist Recipe", "Very Assistive", Reputation.GoodCookieReputation, 0, 50);
-                AddIngredientToRecipe("compota_de_mora_infernal", 1);
+                AddFunctionalTag(Tag.Help, 1);
+                SetUIData("Ayudar", "Para echar una mano a alguien en apuros");
+                SetRecipeData("Receta de Ayudar", "Para echar una mano a alguien en apuros", Reputation.GoodCookieReputation, 0, 50);
+                AddIngredientToRecipe("masa_de_galletas_encantada", 1);
 
                 CreateNew();
                 SetIDName("look");
                 SetPieceType(PieceType.Action);
-                AddFunctionalTag(Tag.Convince, 4);
-                SetUIData("Look", "Very Assistive");
-                SetRecipeData("Look Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50, 0);
-                AddIngredientToRecipe("compota_de_mora_infernal", 1);
+                AddFunctionalTag(Tag.Help, 2);
+                SetUIData("Observar", "Observa detenidamente la situación antes de actuar");
+                SetRecipeData("Receta de Observar", "Observa detenidamente la situación antes de actuar", Reputation.GoodCookieReputation, 50, 0);
+                AddIngredientToRecipe("polvo_del_auxilio", 1);
 
                 CreateNew();
                 SetIDName("stare");
                 SetPieceType(PieceType.Action);
-                AddFunctionalTag(Tag.Help, 5);
-                AddFunctionalTag(Tag.Harm, 2);
-                SetUIData("Stare", "Very Assistive");
-                SetRecipeData("Stare Recipe", "Very Assistive", Reputation.GoodCookieReputation, 50, 0);
-                AddIngredientToRecipe("compota_de_mora_infernal", 1);
+                AddFunctionalTag(Tag.Convince, 2);
+                SetUIData("Mirar fijamente", "Observa hasta el punto de llegar a ser incómodo");
+                SetRecipeData("Receta de Mirar fijamente", "Observa hasta el punto de llegar a ser incómodo", Reputation.GoodCookieReputation, 50, 0);
+                AddIngredientToRecipe("polvo_persuasivo", 1);
 
                 CreateNew();
                 SetIDName("steal");
                 SetPieceType(PieceType.Action);
-                AddFunctionalTag(Tag.Harm, 5);
-                SetUIData("Steal", "Very Assistive");
-                SetRecipeData("Steal Recipe", "Very Assistive", Reputation.GoodCookieReputation, 0, 50);
-                AddIngredientToRecipe("compota_de_mora_infernal", 1);
+                AddFunctionalTag(Tag.Harm, 2);
+                SetUIData("Robar", "Para la redistribución de bienes ajenos");
+                SetRecipeData("Receta de Robar", "Para la redistribución de bienes ajenos", Reputation.GoodCookieReputation, 0, 50);
+                AddIngredientToRecipe("polvo_impetuoso", 1);
             }
             void CreateObjects()
             {
@@ -217,128 +216,120 @@ namespace CQM.Databases
                 SetIDName("baseball_bat");
                 SetPieceType(PieceType.Object);
                 AddFunctionalTag(Tag.Harm, 2);
-                AddFunctionalTag(Tag.Convince, 1);
-                SetUIData("Baseball Bat", "Very Bat");
-                SetRecipeData("Grandma's Plain Cookie Recipe", "Desc", Reputation.GoodCookieReputation, 50, 0);
-                AddIngredientToRecipe("compota_de_mora_infernal", 2);
+                SetUIData("Bate de Beisbol", "Una muestra de tus no tan buenas intenciones");
+                SetRecipeData("Receta de bate de beisbol", "Una muestra de tus no tan buenas intenciones", Reputation.GoodCookieReputation, 50, 0);
+                AddIngredientToRecipe("polvo_impetuoso", 2);
 
                 CreateNew();
                 SetIDName("scissors");
                 SetPieceType(PieceType.Object);
                 AddFunctionalTag(Tag.Harm, 2);
                 AddFunctionalTag(Tag.Convince, 1);
-                SetUIData("Scissor", "Very Bat");
-                SetRecipeData("Scissor Recipe", "Desc", Reputation.GoodCookieReputation, 50, 10);
-                AddIngredientToRecipe("compota_de_mora_infernal", 2);
+                SetUIData("Tijeras", "Muy puntiagudas. No es recomendable correr con ellas en la mano");
+                SetRecipeData("Receta de Tijeras", "Muy puntiagudas. No es recomendable correr con ellas en la mano.", Reputation.GoodCookieReputation, 50, 10);
+                AddIngredientToRecipe("polvo_impetuoso", 3);
+                AddIngredientToRecipe("polvo_persuasivo", 1);
 
                 CreateNew();
                 SetIDName("flip_flops");
                 SetPieceType(PieceType.Object);
-                AddFunctionalTag(Tag.Harm, 2);
-                AddFunctionalTag(Tag.Convince, 1);
-                SetUIData("Flip Flops", "Very Bat");
-                SetRecipeData("Flip Flops Recipe", "Desc", Reputation.GoodCookieReputation, 50, 0);
-                AddIngredientToRecipe("compota_de_mora_infernal", 2);
+                AddFunctionalTag(Tag.Harm, 1);
+                AddFunctionalTag(Tag.Convince, 2);
+                SetUIData("Chanclas", "El utensilio disuasorio por excelencia");
+                SetRecipeData("Receta de Chanclas", "El utensilio disuasorio por excelencia", Reputation.GoodCookieReputation, 50, 0);
+                AddIngredientToRecipe("polvo_persuasivo", 3);
+                AddIngredientToRecipe("polvo_impetuoso", 1);
 
                 CreateNew();
                 SetIDName("cake");
                 SetPieceType(PieceType.Object);
-                AddFunctionalTag(Tag.Convince, 2);
-                AddFunctionalTag(Tag.Help, 1);
-                SetUIData("Cake", "Very Bat");
-                SetRecipeData("Cake Recipe", "Desc", Reputation.GoodCookieReputation, 10, 50);
-                AddIngredientToRecipe("compota_de_mora_infernal", 2);
-                AddIngredientToRecipe("nucleo_de_cereza_animico", 2);
+                AddFunctionalTag(Tag.Help, 2);
+                SetUIData("Tarta", "Una muestra de tus buenas intenciones");
+                SetRecipeData("Receta de Tarta", "Una muestra de tus buenas intenciones", Reputation.GoodCookieReputation, 10, 50);
+                AddIngredientToRecipe("polvo_del_auxilio", 2);
             }
             void CreateModifiers()
             {
                 CreateNew();
                 SetIDName("violently");
                 SetPieceType(PieceType.Modifier);
-                AddFunctionalTag(Tag.Convince, 2);
-                AddFunctionalTag(Tag.Help, 1);
-                SetUIData("Violently", "Very Bat");
-                SetRecipeData("Violently Recipe", "Desc", Reputation.GoodCookieReputation, 50, 10);
-                AddIngredientToRecipe("nucleo_de_cereza_animico", 2);
-                AddIngredientToRecipe("crema_pastelera_arcana", 2);
+                AddFunctionalTag(Tag.Harm, 3);
+                SetUIData("Violentamente", "Insiste de manera agresiva");
+                SetRecipeData("Receta de Violentamente", "Insiste de manera agresiva", Reputation.GoodCookieReputation, 50, 10);
+                AddIngredientToRecipe("polvo_impetuoso", 3);
 
                 CreateNew();
                 SetIDName("brutally");
                 SetPieceType(PieceType.Modifier);
-                AddFunctionalTag(Tag.Convince, 2);
-                AddFunctionalTag(Tag.Help, 1);
-                SetUIData("Brutally", "Very Bat");
-                SetRecipeData("Brutally Recipe", "Desc", Reputation.GoodCookieReputation, 10, 50);
-                AddIngredientToRecipe("nucleo_de_cereza_animico", 2);
-                AddIngredientToRecipe("crema_pastelera_arcana", 2);
+                AddFunctionalTag(Tag.Harm, 4);
+                AddFunctionalTag(Tag.Convince, 1);
+                SetUIData("Brutalmente", "La paz nunca fue una opción");
+                SetRecipeData("Receta de Brutalmente", "La paz nunca fue una opción", Reputation.GoodCookieReputation, 10, 50);
+                AddIngredientToRecipe("polvo_impetuoso", 5);
 
                 CreateNew();
                 SetIDName("kindly");
                 SetPieceType(PieceType.Modifier);
-                AddFunctionalTag(Tag.Convince, 2);
-                AddFunctionalTag(Tag.Help, 1);
-                SetUIData("Kindly", "Very Bat");
-                SetRecipeData("Kindly Recipe", "Desc", Reputation.GoodCookieReputation, 0, 50);
-                AddIngredientToRecipe("nucleo_de_cereza_animico", 2);
-                AddIngredientToRecipe("crema_pastelera_arcana", 2);
+                AddFunctionalTag(Tag.Help, 3);
+                SetUIData("Amablemente", "Actúa con ternura");
+                SetRecipeData("Receta de Amablemente", "Actúa con ternura", Reputation.GoodCookieReputation, 0, 50);
+                AddIngredientToRecipe("polvo_del_auxilio", 3);
 
                 CreateNew();
                 SetIDName("convincingly");
                 SetPieceType(PieceType.Modifier);
-                AddFunctionalTag(Tag.Convince, 2);
-                AddFunctionalTag(Tag.Help, 1);
-                SetUIData("Convincingly", "Very Bat");
-                SetRecipeData("Convincingly Recipe", "Desc", Reputation.GoodCookieReputation, 0, 50);
-                AddIngredientToRecipe("nucleo_de_cereza_animico", 2);
-                AddIngredientToRecipe("crema_pastelera_arcana", 2);
+                AddFunctionalTag(Tag.Convince, 3);
+                SetUIData("Convincentemente", "Demuestra que están equivocados");
+                SetRecipeData("Receta de Convincentemente", "Demuestra que están equivocados", Reputation.GoodCookieReputation, 0, 50);
+                AddIngredientToRecipe("polvo_persuasivo", 3);
             }
             void CreateTargets()
             {
                 CreateNew();
                 SetIDName("mayor");
                 SetPieceType(PieceType.Target);
-                SetUIData("Mayor", "Very Bat");
+                SetUIData("Mayor", "El alcalde del pueblo.");
 
                 CreateNew();
                 SetIDName("meri");
                 SetPieceType(PieceType.Target);
-                SetUIData("Mery", "Very Bat");
+                SetUIData("Meri", "Cuidadora de vacas.");
 
                 CreateNew();
                 SetIDName("canela");
                 SetPieceType(PieceType.Target);
-                SetUIData("Canela", "Very Bat");
+                SetUIData("Canela", "Coleccionista de artefactos.");
 
                 CreateNew();
                 SetIDName("johny_setas");
                 SetPieceType(PieceType.Target);
-                SetUIData("Er Johny el setas", "Very Bat");
+                SetUIData("Er Johny el setas", "El peculiar alquimista.");
 
                 CreateNew();
                 SetIDName("miss_chocolate");
                 SetPieceType(PieceType.Target);
-                SetUIData("Miss Chocolate", "Very Bat");
+                SetUIData("Miss Chocolate", "La excéntrica chocolatera.");
 
                 CreateNew();
                 SetIDName("mantecas");
                 SetPieceType(PieceType.Target);
-                SetUIData("El Mantecas", "Very Bat");
+                SetUIData("El Mantecas", "El agricultor malhumorado.");
 
                 CreateNew();
                 SetIDName("wolves");
                 SetPieceType(PieceType.Target);
                 AddFunctionalTag(Tag.Harm, 1);
-                SetUIData("Lobos", "Very Bat");
+                SetUIData("Lobos", "Una manada de lobos.");
 
                 CreateNew();
                 SetIDName("rats");
                 SetPieceType(PieceType.Target);
-                SetUIData("Ratas", "Very Bat");
+                SetUIData("Ratas", "Ratas particularmente inteligentes.");
 
                 CreateNew();
                 SetIDName("vacas");
                 SetPieceType(PieceType.Target);
-                SetUIData("Vacas", "Deep Mooooo");
+                SetUIData("Vacas", "Las mayores víctimas en esta historia.");
             }
         }
 
