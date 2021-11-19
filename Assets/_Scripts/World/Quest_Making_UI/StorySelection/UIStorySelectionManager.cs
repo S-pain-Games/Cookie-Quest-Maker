@@ -67,7 +67,7 @@ namespace CQM.UI.QuestMakingTable
             if (numOngoingStories <= 0)
             {
                 _selectedStoryImage.gameObject.SetActive(false);
-                _selectedStoryTitle.text = "Out of Stories";
+                _selectedStoryTitle.text = "Ninguna Historia Disponible";
             }
             else
             {
