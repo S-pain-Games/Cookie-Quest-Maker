@@ -1920,6 +1920,244 @@ namespace CQM.Databases
             AddStorySelectionUIData("Tratamiento de alto voltaje");
             FinishCreatingStory();
 
+            // =============================================================================================
+            //STORY 17
+            // =============================================================================================
+
+            StartCreatingStory("full_artifact_panic", "Pánico de antiguallas", "canela",
+            "Varios artefactos de Canela cobran vida tras haberlos rociado con un abrillantador especial. Los artefactos vivientes son muy agresivos y están aislados.", new List<string>() {
+                "¡Es la última vez que pido ayuda a Johnny! ¡¿Cómo se las apaña ese hombre para hacer todo mal?!",
+                "El otro día le compré un producto para limpiar mis artefactos y dejarlos relucientes, algo normal.",
+                "Pero en el momento que rocié el producto sobre uno de mis artefactos, ¡empezó a moverse!",
+                "¡No estoy de broma cuando digo que parte de mis artefactos tienen vida propia! ¡Y son agresivos!",
+                "Por suerte, los artefactos solo cobran vida durante la noche, me he encargado de encerrarlos en mi despensa.",
+                "Si no encuentro pronto una solución, voy a tener que deshacerme de ellos."
+            });
+
+            CreateRepercusion("living_artifacts_destroyed", "Living Artifacts Destroyed", -15);
+            AddStoryRepercusionNewspaperArticle("La noche de los artefactos vivientes.",
+                "La colección de artefactos de la prestigiosa Canela N Rama ha sido dañada en muy extrañas circunstancias. La coleccionista ha declarado que sus propios artefactos cobraron vida durante la noche. ¿Quién hubiera pensado que los artefactos tendrían tan mal genio?");
+
+            CreateRepercusion("living_artifacts_stopped", "Living Artifacts Stopped", 15);
+            AddStoryRepercusionNewspaperArticle("La epidemia de los artefactos vivientes termina.",
+                "La prestigiosa coleccionista Canela N Rama declara haber resuelto la inusual situación de los artefactos vivientes. Durante la entrevista, nos dió útiles consejos de qué hacer en este tipo de casos. ¡Se lo contaremos a continuación!");
+
+            CreateRepercusion("living_artifacts_servants", "Living Artifacts Servants", 30);
+            AddStoryRepercusionNewspaperArticle("Los nuevos ayudantes de Canela N Rama.",
+                "La prestigiosa coleccionista Canela N Rama nos ha sorprendido a todos con su nueva mano de obra. Se trata nada más y nada menos que de artefactos vivientes. Estos se encargan de mantener y de proteger al resto de la colección, declaró la coleccionista.");
+
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("living_artifacts_destroyed");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Los artefactos vivientes ya no son un problema, ¡pero aun así me duelen mucho las pérdidas!",
+                "Esta mañana cuando he ido a revisarlos los he encontrado completamente destruidos.",
+                "Espero que sea un efecto del mejunje, ¡porque no quiero tener ahora vándalos entrando y saliendo de mi casa!"
+            }, Tag.Harm, 1, "canela");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿Si en vez de artefactos fueran platos y cubiertos, serían amables o mucho más agresivos?"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Aunque vivas una eternidad, siempre habrá más cosas y situaciones sorprendentes." });
+
+            //HARM >=5
+            StartStoryBranch();
+            SetRepercusionToBranch("living_artifacts_destroyed");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Mi colección se ha ido al traste! ¡No sé si podré recuperarme de esta tragedia!",
+                "¡De alguna manera los artefactos aislados han derribado la puerta y han sembrado el caos!",
+                "Es culpa mía haberlos subestimado. No he tenido más remedio que destruirlos allí mismo.",
+                "¡Cualquier día de estos voy a momificar vivo al besugo Johnny para exponerlo!"
+            }, Tag.Harm, 5, "canela");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿Si en vez de artefactos fueran platos y cubiertos, serían amables o mucho más agresivos?"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Aunque vivas una eternidad, siempre habrá más cosas y situaciones sorprendentes." });
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("living_artifacts_stopped");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Mi colección se encuentra a salvo, aunque todavía sigo tomando precauciones por si las moscas.",
+                "Ayer durante la noche noté cómo los artefactos vivientes dejaron de hacer ruido de repente.",
+                "Cuando entré en la habitación a ver qué había ocurrido me di cuenta de a qué se debía.",
+                "Por lo visto, los artefactos han sido rociados con lejía mientras se movían por la habitación.",
+                "No esperaba que la lejía fuera a ser su punto débil, aunque a estas alturas ya poco me sorprende.",
+                "Lo malo es que los artefactos han perdido su brillo en el proceso, pero al menos se ha terminado."
+            }, Tag.Help, 1, "canela");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿Artefactos inanimados súper agresivos? ¡¿Por qué no se me había ocurrido antes?!",
+                "¡Es una idea genial para sembrar el caos y el desconcierto, mis dos cosas favoritas!" });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "El orden natural de las cosas ha de ser restaurado. Lo que permanece inanimado debe quedar inanimado." });
+
+            //HELP >= 5
+            StartStoryBranch();
+            SetRepercusionToBranch("living_artifacts_stopped");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Mi colección por fin está fuera de peligro! Los artefactos vivientes ahora son sólo artefactos.",
+                "Por lo visto los artefactos dejaron de moverse tras entrar en contacto con chocolate.",
+                "¡No me preguntes por qué, yo tampoco tengo ni idea! Habrá sido una completa casualidad.",
+                "¡Por lo menos mis artefactos ahora tienen un brillo espectacular!"
+            }, Tag.Help, 5, "canela");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿Artefactos inanimados súper agresivos? ¡¿Por qué no se me había ocurrido antes?!",
+                "¡Es una idea genial para sembrar el caos y el desconcierto, mis dos cosas favoritas!" });
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "El orden natural de las cosas ha de ser restaurado. Lo que permanece inanimado debe quedar inanimado." });
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("living_artifacts_servants");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Anoche ocurrió algo más inusual si cabe! ¡Los artefactos vivientes se han vuelto inofensivos!",
+                "En mitad de la noche dejaron de aporrear la puerta y empezaron a limpiar el destrozo de mi despensa.",
+                "¡Todavía no doy crédito! No entiendo el cambio tan repentino, pero estoy pensando en convertirlos en  sirvientes.",
+                "¡Es lo mínimo por haberme causado tanto estrés, pienso yo! ¡Pero me alegro de que haya terminado!"
+            }, Tag.Convince, 1, "canela");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Los artefactos serían unos sirvientes muy aburridos. ¡Nada supera a las Galletas mágicas!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Por el bien de mantener el orden en el mundo. Ese abrillantador debería de ser destruido." });
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("living_artifacts_servants");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¿Los artefactos vivientes? Aún cobran vida durante la noche, aunque ya no son un problema",
+                "¡De repente se han vuelto súper amistosos conmigo y se han puesto a limpiar toda mi casa!",
+                "Además limpian y abrillantan a los demás artefactos de mi colección. ¡Están mejor que nunca!",
+                "Definitivamente los voy a convertir en sirvientes. Después de este calvario no pienso dejar que acabe en nada.",
+                "Quizás me pueda convertir en coleccionista de artefactos vivientes. ¡Sería aún más famosa por ello!"
+            }, Tag.Convince, 5, "canela");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Los artefactos serían unos sirvientes muy aburridos. ¡Nada supera a las Galletas mágicas!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Por el bien de mantener el orden en el mundo. Ese abrillantador debería de ser destruido." });
+
+
+            AddStorySelectionUIData("Pánico de antiguallas");
+            FinishCreatingStory();
+
+            // =============================================================================================
+            //STORY 18
+            // =============================================================================================
+
+            StartCreatingStory("fungal_metamorphosis", "Metaforfosis Fúngica", "johnny",
+            "El cuerpo de Johnny está sufriendo una preocupante transformación tras sus cada vez más intensas sesiones de meditación. Quizá haya que hacer algo al respecto.", new List<string>() {
+                "Últimamente me están pasando cosas muy raras en plan, cosas mazo chungas, colega.",
+                "Después de meditar, me doy cuenta de que me salen raíces y me crecen bultos en la piel, colega.",
+                "Pienso que debe de tratarse de que me estoy acercando al trance más profundo, el Hipnos, colega.",
+                "¿Te había hablado antes del trance? ¡Es un estado superior de la consciencia, colega!",
+                "Tan solo tienes que meditar como yo y ser uno con los hongos. ¡Cuanto más tiempo mejor, colega!",
+                "Lo malo es que poco a poco tu cuerpo se transforma irreversiblemente, ¡pero vale la pena, colega!",
+                "¡Llevaba mucho esperando este momento! ¡Esta noche va a ser flipante, colega!"
+            });
+
+            CreateRepercusion("johnny_trance_interruptded", "Johnny Trance Interrupted", -15);
+            AddStoryRepercusionNewspaperArticle("La extraña enfermedad del alquimista",
+                "Los vecinos se encuentran preocupados por la salud de un alquimista local. El joven presenta extraños bultos en partes de su cuerpo. Afortunadamente busca atención médica.");
+
+            CreateRepercusion("johnny_transformed", "Johnny Transformed", -30);
+            AddStoryRepercusionNewspaperArticle("El abominable hombre seta.",
+                "Los vecinos se encuentran consternados ante la preocupante apariencia de un alquimista local. El joven se encuentra cubierto de hongos y enredaderas que salen de su cuerpo.");
+
+            CreateRepercusion("johnny_trance_achieved", "Johnny Trance Achieved", 30);
+            AddStoryRepercusionNewspaperArticle("El retorno del alquimista.",
+                "El joven alquimista cuyo aspecto preocupaba a los vecinos ha regresado con un aspecto mucho más saludable. ¿Cuál será su secreto?");
+
+            CreateRepercusion("johnny_trance_convinced", "Johnny Trance Convinced", 15);
+            AddStoryRepercusionNewspaperArticle("La nueva afición del alquimista.",
+                "El joven alquimista, cuyo aspecto preocupaba a los vecinos, ha afirmado que va a dedicarse a la venta de galletas de manera paralela a su negocio habitual.");
+
+            //HARM >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("johnny_trance_interruptded");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Tíiio, voy a dejar esto de la meditación de lado de momento! ¡No veas como me duele todo, colega!",
+                "Ayer, en medio de mi meditación profunda, empecé a sentir dolores punzantes en el cuerpo, colega.",
+                "Supongo que será cosa de los bultos y las raíces que brotan de mi piel, ¡pero de normal no duele tanto, colega!"
+            }, Tag.Harm, 1, "johnny");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Ese tal Johnny parece un tipo aburrido. Pero tengo curiosidad de ver hasta donde llega."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Es una necedad poner en peligro tu salud para lograr un objetivo." });
+
+            //HARM >=5
+            StartStoryBranch();
+            SetRepercusionToBranch("johnny_trance_interruptded");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Tíiio, he estado a nada de entrar en el trance más profundo! ¡Me he quedado a las puertas, colega!",
+                "Justo cuando iba a dejar todo preparado, ¡Pum! Se cae parte del techo de mi casa encima, colega!",
+                "He salido ileso, pero casi todo mi material se ha echado a perder. ¡Qué mala suerte tengo, colega!",
+                "No podré reponer mi material hasta el próximo invierno. Así que hasta el año que viene nada, colega."
+            }, Tag.Harm, 5, "johnny");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "Ese tal Johnny parece un tipo aburrido. Pero tengo curiosidad de ver hasta donde llega."});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Es una necedad poner en peligro tu salud para lograr un objetivo." });
+
+            //HELP >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("johnny_transformed");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Tío, no veas que rayada! ¡Ayer logré alcanzar el Hipnos! ¡Pero fué solo por un momento, colega!",
+                "Lo más raro fué que cuando salí del trance no podía moverme, ¡estaba enraizado en el sitio, colega!",
+                "Además, de mis bultos en la espalda han brotado setas. Me pregunto de qué tipo serán, colega.",
+                "Por algún motivo las raíces se marchitaron poco antes de amanecer, Si no, ¡todavía estaría allí plantado, colega!"
+            }, Tag.Help, 1, "johnny");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¡Si un ser cubierto de hongos se me acerca, le prenderé fuego! ¡Me dan asco las setas!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Espero que el joven alquimista pueda recapacitar a tiempo." });
+
+            //HELP >=5
+            StartStoryBranch();
+            SetRepercusionToBranch("johnny_trance_achieved");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Tíiiiiio, lo he alcanzado! ¡He alcanzado el Hipnos! ¡Fué una sensación indescriptible, colega!",
+                "¡Lo he visto todo, colega, toooooodo! ¡Tengo acceso a conocimientos que nadie comprende, colega!",
+                "¿Los bultos y las raíces? Pues, diría que han desaparecido, así por completo, colega.",
+                "Ayer encontré en casa un Champiñón Solar, normalmente no me molesto en recolectarlos, colega.",
+                "Para cambiar un poco, lo utilicé para mi polvo especial. No sabía que servía para contrarrestar la transformación, colega."
+            }, Tag.Help, 5, "johnny");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "No entiendo nada de todo esto. ¡Que alguien me explique por qué es tan importante!"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Las consecuencias de entrar en lo más profundo del trance varía de persona en persona." });
+
+            //CONVINCE >=1
+            StartStoryBranch();
+            SetRepercusionToBranch("johnny_trance_convinced");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Tío, creo que voy a abandonar la búsqueda del Hipnos. No creo que sea lo mío, colega.",
+                "Me lo dijo el Señor Galleta en una visión. Dijo que debería de preocuparme por los bultos y las raíces, colega.",
+                "¿El Señor Galleta? A veces he notado su presencia, ¡pero esta vez me habló directamente, colega!",
+                "Seguramente no entiendas nada de nada, pero se dice que el Señor Galleta rige el destino del mundo, colega."
+            }, Tag.Convince, 1, "johnny");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿No tendrá algo mejor que hacer ese hombre que dedicarse a dormir profundamente?"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Muy pocos seres han alcanzado el Hipnos. Quizás ese joven pueda alcanzarlo con el apoyo suficiente" });
+
+            //CONVINCE >=5
+            StartStoryBranch();
+            SetRepercusionToBranch("johnny_trance_convinced");
+            AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Anoche, mientras entraba en trance, tuve una visión que no me esperaba, colega.",
+                "El legendario Señor Galleta vino a visitarme. Ya percibía su presencia, ¡pero ayer lo ví claramente, colega!",
+                "No recuerdo los detalles, pero sé que ahora tengo otra meta en este plano terrenal, colega.",
+                "¡Lo tengo clarinete! ¡Quiero dedicarme a hacer galletas! Y no de cualquier tipo, colega",
+                "Quiero que contengan todo mi conocimiento sobre los hongos. ¡Será una pasada, colega!",
+                "Quizá así algún día me vuelva a visitar el Señor Galleta, ¡o quizás el Dios Galleta, colega!"
+            }, Tag.Convince, 5, "johnny");
+            AddBranchCompletion_EvithDeityDialogue(new List<string>() {
+                "¿No tendrá algo mejor que hacer ese hombre que dedicarse a dormir profundamente?"});
+            AddBranchCompletion_NuDeityDialogue(new List<string>() {
+                "Muy pocos seres han alcanzado el Hipnos. Quizás ese joven pueda alcanzarlo con el apoyo suficiente" });
+
+            AddStorySelectionUIData("Metamorfosis Fúngica");
+            FinishCreatingStory();
+
             /*
             // =============================================================================================
             //STORY X
@@ -1955,7 +2193,7 @@ namespace CQM.Databases
 
             //HELP >=1
             StartStoryBranch();
-            SetRepercusionToBranch("mantecas_farm_revitalized");
+            SetRepercusionToBranch("");
             AddBranchCompletion_NPCDialogue(new List<string>() {
                 ""
             }, Tag.Help, 1, "");
@@ -1976,8 +2214,7 @@ namespace CQM.Databases
                 "" });
 
 
-
-            AddStorySelectionUIData("Un día normal");
+            AddStorySelectionUIData("Story title");
             FinishCreatingStory();
             */
         }
