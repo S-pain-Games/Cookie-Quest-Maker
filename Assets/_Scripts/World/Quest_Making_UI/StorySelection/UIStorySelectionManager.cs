@@ -32,6 +32,9 @@ namespace CQM.UI.QuestMakingTable
         [SerializeField] private Sprite _mainStoryIconSprite;
         [SerializeField] private Sprite _secondaryStoryIconSprite;
 
+        //Story Description
+        [SerializeField] private TextMeshProUGUI _selectedStoryDescription;
+
         // Game Data
         private List<ID> _ongoingStories;
         private ComponentsContainer<StoryUIDataComponent> _storyUIComponents;
@@ -86,6 +89,9 @@ namespace CQM.UI.QuestMakingTable
                 _selectedStoryTitle.text = data.m_Title;
 
                 UpdateQuestIconImage(storyId);
+
+                _selectedStoryDescription.SetText(Admin.Global.Components.GetComponentContainer<StoryInfoComponent>().GetComponentByID(storyId).m_StoryData.m_Description);
+                //string desc = Admin.Global.Components.GetComponentContainer<StoryInfoComponent>().GetComponentByID(storyId).m_StoryData.m_Description;
             }
         }
 
