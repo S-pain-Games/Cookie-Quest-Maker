@@ -7250,6 +7250,15 @@ MonoBehaviour:
     m_Description: El agricultor malhumorado
     m_NewspaperSprite: {fileID: 21300000, guid: 57b59e78428947c4c821038127ff95a3, type: 3}
     m_CharacterWorldPrefab: {fileID: 3193959261219538360, guid: 470a428eacc6c2848809e62753cbaec5, type: 3}
+  - m_ID:
+      m_NameID: narrator
+      m_ID: -1173567769
+      m_Initialized: 1
+    m_FullName: narrator
+    m_ShortName: narrator
+    m_Description: narrator
+    m_NewspaperSprite: {fileID: 21300000, guid: 57b59e78428947c4c821038127ff95a3, type: 3}
+    m_CharacterWorldPrefab: {fileID: 3193959261219538360, guid: 470a428eacc6c2848809e62753cbaec5, type: 3}
   m_CharacterDialogueList:
   - m_ID:
       m_NameID: hio
@@ -7258,8 +7267,7 @@ MonoBehaviour:
     m_CharacterImg: {fileID: 21300000, guid: 2e377219cb2ecc84791de061d1bc6c10, type: 3}
     m_IdleRandomDialogue:
     - m_List:
-      - Hio frase
-      - frase1Continuacion
+      - "\xBFNo se supon\xEDa que yo era mudo?"
   - m_ID:
       m_NameID: nu
       m_ID: -1991483173
@@ -7267,8 +7275,10 @@ MonoBehaviour:
     m_CharacterImg: {fileID: 21300000, guid: d749a37a6de74434f9cc2fd3accc37a6, type: 3}
     m_IdleRandomDialogue:
     - m_List:
-      - Nu frase
-      - frase1Continuacion
+      - "Ocurra lo que ocurra, jam\xE1s conf\xEDes en Evith."
+    - m_List:
+      - Este pueblo parece un buen sitio para vivir. Si no fuera por la miriada de
+        problemas.
   - m_ID:
       m_NameID: evith
       m_ID: 573504420
@@ -7276,8 +7286,9 @@ MonoBehaviour:
     m_CharacterImg: {fileID: 21300000, guid: 7511b8a306a19604b8eea170e4d2d1b5, type: 3}
     m_IdleRandomDialogue:
     - m_List:
-      - Evith frase
-      - frase1Continuacion
+      - "Nu intentar\xE1 lavarte la cabeza con sus sermones baratos."
+    - m_List:
+      - "Alg\xFAn d\xEDa ser\xE9 reconocida como la reina de este mundo."
   - m_ID:
       m_NameID: meri
       m_ID: -918260377
@@ -7285,8 +7296,12 @@ MonoBehaviour:
     m_CharacterImg: {fileID: 21300000, guid: 803698d8261da90409dedfe796bae79a, type: 3}
     m_IdleRandomDialogue:
     - m_List:
-      - Leches frase
-      - frase1Continuacion
+      - "Las vacas son la alegr\xEDa de mi vida. Ser\xE1 mejor que nadie se meta
+        con ellas."
+    - m_List:
+      - "\xA1No estoy obsesionada con las vacas! Tambi\xE9n me gustan los becerros
+        y los bueyes."
+      - "\xA1\xBFPor qu\xE9 me miras as\xED de raro?! \xBFSon distintos, no?"
   - m_ID:
       m_NameID: mayor
       m_ID: 996742298
@@ -7294,8 +7309,10 @@ MonoBehaviour:
     m_CharacterImg: {fileID: 21300000, guid: 709e4c3eab4ca53429c03291e32391cb, type: 3}
     m_IdleRandomDialogue:
     - m_List:
-      - Alcalde frase
-      - frase1Continuacion
+      - "A este pueblo lo que le falta son m\xE1s bancos donde sentarse."
+    - m_List:
+      - "\xBFEl puerto? \xA1Va de maravilla! Quiz\xE1s el pr\xF3ximo lustro dispondremos
+        de alguna barca."
   - m_ID:
       m_NameID: miss_chocolate
       m_ID: -370492881
@@ -7303,8 +7320,9 @@ MonoBehaviour:
     m_CharacterImg: {fileID: 21300000, guid: 6c55735ad9200d049a649c59319c8a8f, type: 3}
     m_IdleRandomDialogue:
     - m_List:
-      - Miss frase
-      - frase1Continuacion
+      - "El chocolate es el alimento m\xE1s intenso que existe."
+    - m_List:
+      - Dedico todo mi ser a buscar nuevas formas de crear chocolate.
   - m_ID:
       m_NameID: canela
       m_ID: -619351516
@@ -7312,8 +7330,11 @@ MonoBehaviour:
     m_CharacterImg: {fileID: 21300000, guid: f4bd6bfaf6cd3ba4c88a18796a5f1913, type: 3}
     m_IdleRandomDialogue:
     - m_List:
-      - Rama frase
-      - frase1Continuacion
+      - "Mi colecci\xF3n se ha vuelto tan famosa que mucha gente viene de fuera para
+        verla."
+    - m_List:
+      - Este pueblo no tiene nada de nada. Pero al menos se puede vivir en tranquilidad...
+        a veces.
   - m_ID:
       m_NameID: johny_setas
       m_ID: -840848411
@@ -7321,11 +7342,25 @@ MonoBehaviour:
     m_CharacterImg: {fileID: 21300000, guid: 943e21760de78a044942edb2aa18938f, type: 3}
     m_IdleRandomDialogue:
     - m_List:
-      - setas fr
-      - frase1Continuacion
+      - "\xA1Esta pasteler\xEDa que tienes es la leche, colega!"
+    - m_List:
+      - Me gusta todo lo que tenga que ver con los hongos.
+      - "Pero no me importar\xEDa dedicarme a la panader\xEDa alg\xFAn d\xEDa."
   - m_ID:
       m_NameID: mantecas
       m_ID: 2085496002
+      m_Initialized: 1
+    m_CharacterImg: {fileID: 21300000, guid: 9bae7dc6843c36f458ccd314e48bce14, type: 3}
+    m_IdleRandomDialogue:
+    - m_List:
+      - Mis hortalizas son las mejores del mundo entero.
+      - "\xA1Ser\xE1 por eso que no paran de molestarme las plagas!"
+    - m_List:
+      - "\xA1No estoy siempre de mal humor! \xA1De hecho hoy estoy feliz! \xA1\xBFNo
+        se me nota en la cara?!"
+  - m_ID:
+      m_NameID: narrator
+      m_ID: -1173567769
       m_Initialized: 1
     m_CharacterImg: {fileID: 21300000, guid: 9bae7dc6843c36f458ccd314e48bce14, type: 3}
     m_IdleRandomDialogue:
@@ -7376,6 +7411,11 @@ MonoBehaviour:
   - m_ID:
       m_NameID: mantecas
       m_ID: 2085496002
+      m_Initialized: 1
+    m_Prefab: {fileID: 0}
+  - m_ID:
+      m_NameID: narrator
+      m_ID: -1173567769
       m_Initialized: 1
     m_Prefab: {fileID: 0}
 --- !u!114 &6330534342466683426

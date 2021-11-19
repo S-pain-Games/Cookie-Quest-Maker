@@ -91,6 +91,10 @@ public class CharactersBuilder : BaseDataBuilder
         AddRandomDialogue(new List<string>() { "Mis hortalizas son las mejores del mundo entero.", "¡Será por eso que no paran de molestarme las plagas!" });
         AddRandomDialogue(new List<string>() { "¡No estoy siempre de mal humor! ¡De hecho hoy estoy feliz! ¡¿No se me nota en la cara?!" });
         FinishCharacter();
+
+        CreateCharacter("narrator", "narrator", "narrator");
+        SetDescription("narrator");
+        FinishCharacter();
     }
 
     public void CreateCharacter(string idName, string longName, string shortName)
