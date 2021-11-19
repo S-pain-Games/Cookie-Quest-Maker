@@ -289,8 +289,8 @@ namespace CQM.Systems
 
             EvithBehaviour evith = _npcReferencesComponent.m_Evith;
             NuBehaviour nu = _npcReferencesComponent.m_Nu;
-            evith.m_Dialogue.Clear();
-            nu.m_Dialogue.Clear();
+            evith.m_MainDialogue.Clear();
+            nu.m_MainDialogue.Clear();
 
             for (int i = 0; i < completedStories.Count; i++)
             {
@@ -303,14 +303,14 @@ namespace CQM.Systems
                     {
                         for (int k = 0; k < dialogue.m_Dialogue.Count; k++)
                         {
-                            nu.m_Dialogue.Add(dialogue.m_Dialogue[k]);
+                            nu.m_MainDialogue.Add(dialogue.m_Dialogue[k]);
                         }
                     }
                     else
                     {
                         for (int k = 0; k < dialogue.m_Dialogue.Count; k++)
                         {
-                            evith.m_Dialogue.Add(dialogue.m_Dialogue[k]);
+                            evith.m_MainDialogue.Add(dialogue.m_Dialogue[k]);
                         }
                     }
                 }
