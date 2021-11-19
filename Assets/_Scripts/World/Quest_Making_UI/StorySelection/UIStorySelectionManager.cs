@@ -27,6 +27,10 @@ namespace CQM.UI.QuestMakingTable
         [Header("Story Card")]
         [SerializeField] private Image _selectedStoryImage;
         [SerializeField] private TextMeshProUGUI _selectedStoryTitle;
+        [SerializeField] private Image _storyIconImage;
+
+        [SerializeField] private Sprite _mainStoryIconSprite;
+        [SerializeField] private Sprite _secondaryStoryIconSprite;
 
         // Game Data
         private List<ID> _ongoingStories;
@@ -68,6 +72,8 @@ namespace CQM.UI.QuestMakingTable
             {
                 _selectedStoryImage.gameObject.SetActive(false);
                 _selectedStoryTitle.text = "Ninguna Historia Disponible";
+
+                _storyIconImage.gameObject.SetActive(false);
             }
             else
             {
@@ -78,7 +84,24 @@ namespace CQM.UI.QuestMakingTable
                 _selectedStoryImage.gameObject.SetActive(true);
                 _selectedStoryImage.sprite = data.m_Sprite;
                 _selectedStoryTitle.text = data.m_Title;
+
+                UpdateQuestIconImage(storyId);
             }
+        }
+
+        private void UpdateQuestIconImage(ID storyId)
+        {
+            _storyIconImage.gameObject.SetActive(true);
+
+            if (IsSecondaryStory(storyId))
+                _storyIconImage.sprite = _secondaryStoryIconSprite;
+            else
+                _storyIconImage.sprite = _mainStoryIconSprite;
+        }
+
+        private bool IsSecondaryStory(ID storyId)
+        {
+            return Admin.Global.Components.m_StoriesStateComponent.m_AllSecondaryStories.Contains(storyId);
         }
 
         private void NextStory()
