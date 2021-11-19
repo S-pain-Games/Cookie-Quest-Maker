@@ -6,6 +6,11 @@ public class FirstDayIntroductionSequenceScript : MonoBehaviour
 {
     private Event<ShowDialogueEvtArgs> _showDialogueCmd;
 
+    private void Awake()
+    {
+        Admin.Global.EventSystem.GetCallbackByName<EventVoid>("day_sys", "tutorial_day_started").OnInvoked += StartIntroductionSequence;
+    }
+
     public void OnEnable()
     {
         var evtSys = Admin.Global.EventSystem;
@@ -15,7 +20,6 @@ public class FirstDayIntroductionSequenceScript : MonoBehaviour
     public void StartIntroductionSequence()
     {
         //Dentro pantalla en negro
-
 
         _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
             "En un pequeño pueblo, un joven ha abierto una pastelería.",
@@ -31,6 +35,6 @@ public class FirstDayIntroductionSequenceScript : MonoBehaviour
     private void NarratorDialogFinishedCallback()
     {
         //Fuera pantalla en negro
-
+        Admin.Global.EventSystem.GetCallbackByName<EventVoid>("day_sys", "tutorial_day_started").OnInvoked -= StartIntroductionSequence;
     }
 }
