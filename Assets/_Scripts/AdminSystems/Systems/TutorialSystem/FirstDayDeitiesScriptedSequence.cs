@@ -34,6 +34,8 @@ public class FirstDayDeitiesScriptedSequence : MonoBehaviour
     {
         evithRef = Instantiate(evithPrefab, evithSpawnPos);
         nuRef = Instantiate(nuPrefab, nuSpawnPos);
+        evithPrefab.GetComponent<SpriteRenderer>().flipX = true;
+        nuRef.GetComponent<SpriteRenderer>().flipX = true;
         _disableMovementCmd.Invoke();
         _toggleGameplayUiCmd.Invoke();
         StartNuEvithIntroSequence();
