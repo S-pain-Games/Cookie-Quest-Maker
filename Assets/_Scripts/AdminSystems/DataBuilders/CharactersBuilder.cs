@@ -39,31 +39,31 @@ public class CharactersBuilder : BaseDataBuilder
         m_CharacterDialogueList.Clear();
 
         CreateCharacter("hio", "Hio", "Hio");
-        SetDescription("She is the owner of the town's farm");
+        SetDescription("Dueño de una pastelería y protagonista en esta historia.");
 
         CreateCharacter("nu", "Nu", "Nu Nu");
-        SetDescription("She is the owner of the town's farm");
+        SetDescription("Ángel de las Galletas.");
 
         CreateCharacter("evith", "Evith", "Evith");
-        SetDescription("She is the owner of the town's farm");
+        SetDescription("Demonio de las Galletas.");
 
         CreateCharacter("meri", "Meri la Leches", "Meri");
-        SetDescription("She is the owner of the town's farm");
+        SetDescription("Ganadera entusiasta de las vacas.");
 
         CreateCharacter("mayor", "Alcalde, Antonio", "Alcalde");
-        SetDescription("She is the owner of the town's farm");
+        SetDescription("El muy tacaño alcalde del pueblo.");
 
         CreateCharacter("miss_chocolate", "Miss Chocolate", "Ms.Chocolate");
-        SetDescription("She is the owner of the town's farm");
+        SetDescription("Excéntrica chocolatera.");
 
         CreateCharacter("canela", "Canela N Rama", "Cane");
-        SetDescription("She is the owner of the town's farm");
+        SetDescription("Coleccionista de artefactos antiguos.");
 
         CreateCharacter("johny_setas", "Johny, el setas", "Johny");
-        SetDescription("She is the owner of the town's farm");
+        SetDescription("Un alquimista muy peculiar.");
 
         CreateCharacter("mantecas", "Juanjo, el mantecas", "Juanjo");
-        SetDescription("She is the owner of the town's farm");
+        SetDescription("El agricultor malhumorado");
     }
 
     public void CreateCharacter(string idName, string longName, string shortName)
