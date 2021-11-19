@@ -496,11 +496,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[8].m_CookieName
-      value: Attack
+      value: Atacar
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[9].m_CookieName
-      value: Dialogate
+      value: Dialogar
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[0].m_Price_Good
@@ -592,7 +592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[8].m_RecipeName
-      value: Attack Piece Recipe
+      value: Receta de Atacar
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[9].m_Price_Evil
@@ -604,63 +604,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[9].m_RecipeName
-      value: Dialogate Recipe
+      value: Receta de Dialogar
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[10].m_CookieName
-      value: Assist
+      value: Ayudar
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[11].m_CookieName
-      value: Look
+      value: Observar
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[12].m_CookieName
-      value: Stare
+      value: Mirar fijamente
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[13].m_CookieName
-      value: Steal
+      value: Robar
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[14].m_CookieName
-      value: Baseball Bat
+      value: Bate de Beisbol
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[15].m_CookieName
-      value: Scissor
+      value: Tijeras
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[16].m_CookieName
-      value: Flip Flops
+      value: Chanclas
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[17].m_CookieName
-      value: Cake
+      value: Tarta
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[18].m_CookieName
-      value: Violently
+      value: Violentamente
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[19].m_CookieName
-      value: Brutally
+      value: Brutalmente
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[20].m_CookieName
-      value: Kindly
+      value: Amablemente
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[21].m_CookieName
-      value: Convincingly
+      value: Convincentemente
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[22].m_CookieName
-      value: Mayor
+      value: Alcalde
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[23].m_CookieName
-      value: Mery
+      value: Meri
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[24].m_CookieName
@@ -704,7 +704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[10].m_RecipeName
-      value: Assist Recipe
+      value: Receta de Ayudar
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[11].m_Price_Evil
@@ -716,7 +716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[11].m_RecipeName
-      value: Look Recipe
+      value: Receta de Observar
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[12].m_Price_Evil
@@ -728,7 +728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[12].m_RecipeName
-      value: Stare Recipe
+      value: Receta de Mirar fijamente
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[13].m_Price_Evil
@@ -740,7 +740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[13].m_RecipeName
-      value: Steal Recipe
+      value: Receta de Robar
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[14].m_Price_Evil
@@ -752,7 +752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[14].m_RecipeName
-      value: Grandma's Plain Cookie Recipe
+      value: Receta de bate de beisbol
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[15].m_Price_Evil
@@ -764,7 +764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[15].m_RecipeName
-      value: Scissor Recipe
+      value: Receta de Tijeras
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[16].m_Price_Good
@@ -772,7 +772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[16].m_RecipeName
-      value: Flip Flops Recipe
+      value: Receta de Chanclas
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[17].m_Price_Evil
@@ -784,7 +784,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[17].m_RecipeName
-      value: Cake Recipe
+      value: Receta de Tarta
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[18].m_Price_Evil
@@ -796,7 +796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[18].m_RecipeName
-      value: Violently Recipe
+      value: Receta de Violentamente
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[19].m_Price_Evil
@@ -808,7 +808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[19].m_RecipeName
-      value: Brutally Recipe
+      value: Receta de Brutalmente
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[1].m_ID.m_NameID
@@ -820,7 +820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[20].m_RecipeName
-      value: Kindly Recipe
+      value: Receta de Amablemente
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[21].m_Price_Evil
@@ -828,7 +828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[21].m_RecipeName
-      value: Convincingly Recipe
+      value: Receta de Convincentemente
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[25].m_RecipeName
@@ -1256,67 +1256,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[8].m_Name
-      value: Attack
+      value: Atacar
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[9].m_Name
-      value: Dialogate
+      value: Dialogar
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[10].m_Name
-      value: Assist
+      value: Ayudar
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[11].m_Name
-      value: Look
+      value: Observar
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[12].m_Name
-      value: Stare
+      value: Mirar fijamente
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[13].m_Name
-      value: Steal
+      value: Robar
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[14].m_Name
-      value: Baseball Bat
+      value: Bate de Beisbol
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[15].m_Name
-      value: Scissor
+      value: Tijeras
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[16].m_Name
-      value: Flip Flops
+      value: Chanclas
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[17].m_Name
-      value: Cake
+      value: Tarta
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[18].m_Name
-      value: Violently
+      value: Violentamente
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[19].m_Name
-      value: Brutally
+      value: Brutalmente
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[20].m_Name
-      value: Kindly
+      value: Amablemente
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[21].m_Name
-      value: Convincingly
+      value: Convincentemente
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[22].m_Name
-      value: Mayor
+      value: Alcalde
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[23].m_Name
-      value: Mery
+      value: Meri
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[24].m_Name
@@ -1388,7 +1388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[0].m_CookieDescription
-      value: "Descripci\xF3n."
+      value: "No es el m\xE1s h\xE1bil, pero act\xFAa con entusiasmo."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[0].m_ParentID.m_NameID
@@ -1396,7 +1396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[1].m_CookieDescription
-      value: "Descripci\xF3n."
+      value: Ayudante todoterreno perfecto para tareas sencillas.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[1].m_ParentID.m_NameID
@@ -1404,7 +1404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[2].m_CookieDescription
-      value: "Descripci\xF3n."
+      value: Siempre dispuesto a ayudar.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[2].m_ParentID.m_NameID
@@ -1412,7 +1412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[3].m_CookieDescription
-      value: "Descripci\xF3n."
+      value: "Es muy pac\xEDfico, pero no controla su propia fuerza"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[3].m_ParentID.m_NameID
@@ -1420,7 +1420,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[4].m_CookieDescription
-      value: "Descripci\xF3n."
+      value: "Tratan de ayudar de la forma m\xE1s violenta posible. Los favoritos
+        de Evith."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[4].m_ParentID.m_NameID
@@ -1428,7 +1429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[5].m_CookieDescription
-      value: "Descripci\xF3n."
+      value: "Gran defensor de la justicia con m\xE9todos muy violentos"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[5].m_ParentID.m_NameID
@@ -1436,7 +1437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[6].m_CookieDescription
-      value: "Descripci\xF3n."
+      value: Intenta ser persuasivo, pero se le puede ir la mano.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[6].m_ParentID.m_NameID
@@ -1444,7 +1445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[7].m_CookieDescription
-      value: "Descripci\xF3n."
+      value: Es capaz de persuadir incluso a una mula. Aprobado por Nu.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[7].m_ParentID.m_NameID
@@ -1452,7 +1453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[8].m_CookieDescription
-      value: Very Agressive
+      value: "Para cuando la violencia puede ser la soluci\xF3n"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[8].m_ParentID.m_NameID
@@ -1460,7 +1461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[9].m_CookieDescription
-      value: Very Assistive
+      value: "La soluci\xF3n m\xE1s diplom\xE1tica ante un problema"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[9].m_ParentID.m_NameID
@@ -1468,7 +1469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[0].m_RecipeDescription
-      value: "Descripci\xF3n."
+      value: "No es el m\xE1s h\xE1bil, pero act\xFAa con entusiasmo."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[10].m_PieceID.m_NameID
@@ -1512,7 +1513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[1].m_RecipeDescription
-      value: "Descripci\xF3n."
+      value: Ayudante todoterreno perfecto para tareas sencillas.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[20].m_PieceID.m_NameID
@@ -1576,7 +1577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[2].m_RecipeDescription
-      value: "Descripci\xF3n."
+      value: Siempre dispuesto a ayudar.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[30].m_ID.m_Initialized
@@ -1588,35 +1589,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[3].m_RecipeDescription
-      value: "Descripci\xF3n."
+      value: "Es muy pac\xEDfico, pero no controla su propia fuerza"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[4].m_RecipeDescription
-      value: "Descripci\xF3n."
+      value: "Tratan de ayudar de la forma m\xE1s violenta posible. Los favoritos
+        de Evith."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[5].m_RecipeDescription
-      value: "Descripci\xF3n."
+      value: "Gran defensor de la justicia con m\xE9todos muy violentos"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[6].m_RecipeDescription
-      value: "Descripci\xF3n."
+      value: Intenta ser persuasivo, pero se le puede ir la mano.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[7].m_RecipeDescription
-      value: "Descripci\xF3n."
+      value: Es capaz de persuadir incluso a una mula. Aprobado por Nu.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[8].m_RecipeDescription
-      value: Very aggresive
+      value: "Para cuando la violencia puede ser la soluci\xF3n."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[9].m_RecipeDescription
-      value: Very Assistive
+      value: "La soluci\xF3n m\xE1s diplom\xE1tica ante un problema"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[10].m_CookieDescription
-      value: Very Assistive
+      value: Para echar una mano a alguien en apuros
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[10].m_ParentID.m_NameID
@@ -1624,7 +1626,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[11].m_CookieDescription
-      value: Very Assistive
+      value: "Observa detenidamente la situaci\xF3n antes de actuar"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[11].m_ParentID.m_NameID
@@ -1632,7 +1634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[12].m_CookieDescription
-      value: Very Assistive
+      value: "Observa hasta el punto de llegar a ser inc\xF3modo"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[12].m_ParentID.m_NameID
@@ -1640,7 +1642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[13].m_CookieDescription
-      value: Very Assistive
+      value: "Para la redistribuci\xF3n de bienes ajenos"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[13].m_ParentID.m_NameID
@@ -1688,7 +1690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[24].m_CookieDescription
-      value: Very Bat
+      value: Coleccionista de artefactos.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[24].m_ParentID.m_NameID
@@ -1696,7 +1698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[25].m_CookieDescription
-      value: Very Bat
+      value: El peculiar alquimista.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[25].m_ParentID.m_NameID
@@ -1704,7 +1706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[26].m_CookieDescription
-      value: Very Bat
+      value: "La exc\xE9ntrica chocolatera."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[26].m_ParentID.m_NameID
@@ -1712,7 +1714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[27].m_CookieDescription
-      value: Very Bat
+      value: El agricultor malhumorado.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[27].m_ParentID.m_NameID
@@ -1720,7 +1722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[28].m_CookieDescription
-      value: Very Bat
+      value: Una manada de lobos.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[28].m_ParentID.m_NameID
@@ -1728,7 +1730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[29].m_CookieDescription
-      value: Very Bat
+      value: Ratas particularmente inteligentes.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[29].m_ParentID.m_NameID
@@ -1736,7 +1738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[30].m_CookieDescription
-      value: Deep Mooooo
+      value: "Las mayores v\xEDctimas en esta historia."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[30].m_ParentID.m_NameID
@@ -1784,43 +1786,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[10].m_RecipeDescription
-      value: Very Assistive
+      value: Para echar una mano a alguien en apuros
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[11].m_RecipeDescription
-      value: Very Assistive
+      value: "Observa detenidamente la situaci\xF3n antes de actuar"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[12].m_RecipeDescription
-      value: Very Assistive
+      value: "Observa hasta el punto de llegar a ser inc\xF3modo"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[13].m_RecipeDescription
-      value: Very Assistive
+      value: "Para la redistribuci\xF3n de bienes ajenos"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[16].m_RecipeDescription
-      value: Desc
+      value: El utensilio disuasorio por excelencia
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[17].m_RecipeDescription
-      value: Desc
+      value: Una muestra de tus buenas intenciones
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[18].m_RecipeDescription
-      value: Desc
+      value: Insiste de manera agresiva
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[19].m_RecipeDescription
-      value: Desc
+      value: "La paz nunca fue una opci\xF3n"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[20].m_RecipeDescription
-      value: Desc
+      value: "Act\xFAa con ternura"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[21].m_RecipeDescription
-      value: Desc
+      value: "Demuestra que est\xE1n equivocados"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[25].m_RecipeDescription
@@ -2100,7 +2102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[0].m_Description
-      value: "Descripci\xF3n."
+      value: "No es el m\xE1s h\xE1bil, pero act\xFAa con entusiasmo."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[0].m_ID.m_NameID
@@ -2108,7 +2110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[1].m_Description
-      value: "Descripci\xF3n."
+      value: Ayudante todoterreno perfecto para tareas sencillas.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[1].m_ID.m_NameID
@@ -2116,7 +2118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[2].m_Description
-      value: "Descripci\xF3n."
+      value: Siempre dispuesto a ayudar.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[2].m_ID.m_NameID
@@ -2124,7 +2126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[3].m_Description
-      value: "Descripci\xF3n."
+      value: "Es muy pac\xEDfico, pero no controla su propia fuerza"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[3].m_ID.m_NameID
@@ -2132,7 +2134,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[4].m_Description
-      value: "Descripci\xF3n."
+      value: "Tratan de ayudar de la forma m\xE1s violenta posible. Los favoritos
+        de Evith."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[4].m_ID.m_NameID
@@ -2140,7 +2143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[5].m_Description
-      value: "Descripci\xF3n."
+      value: "Gran defensor de la justicia con m\xE9todos muy violentos"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[5].m_ID.m_NameID
@@ -2148,7 +2151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[6].m_Description
-      value: "Descripci\xF3n."
+      value: Intenta ser persuasivo, pero se le puede ir la mano.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[6].m_ID.m_NameID
@@ -2156,7 +2159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[7].m_Description
-      value: "Descripci\xF3n."
+      value: Es capaz de persuadir incluso a una mula. Aprobado por Nu.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[7].m_ID.m_NameID
@@ -2164,7 +2167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[8].m_Description
-      value: Very Agressive
+      value: "Para cuando la violencia puede ser la soluci\xF3n"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[8].m_ID.m_NameID
@@ -2172,7 +2175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[9].m_Description
-      value: Very Assistive
+      value: "La soluci\xF3n m\xE1s diplom\xE1tica ante un problema"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[9].m_ID.m_NameID
@@ -2312,7 +2315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[10].m_Description
-      value: Very Assistive
+      value: Para echar una mano a alguien en apuros
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[10].m_ID.m_NameID
@@ -2320,7 +2323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[11].m_Description
-      value: Very Assistive
+      value: "Observa detenidamente la situaci\xF3n antes de actuar"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[11].m_ID.m_NameID
@@ -2328,7 +2331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[12].m_Description
-      value: Very Assistive
+      value: "Observa hasta el punto de llegar a ser inc\xF3modo"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[12].m_ID.m_NameID
@@ -2336,7 +2339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[13].m_Description
-      value: Very Assistive
+      value: "Para la redistribuci\xF3n de bienes ajenos"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[13].m_ID.m_NameID
@@ -2388,7 +2391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[24].m_Description
-      value: Very Bat
+      value: Coleccionista de artefactos.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[24].m_ID.m_NameID
@@ -2396,7 +2399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[25].m_Description
-      value: Very Bat
+      value: El peculiar alquimista.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[25].m_ID.m_NameID
@@ -2404,7 +2407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[26].m_Description
-      value: Very Bat
+      value: "La exc\xE9ntrica chocolatera."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[26].m_ID.m_NameID
@@ -2412,7 +2415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[27].m_Description
-      value: Very Bat
+      value: El agricultor malhumorado.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[27].m_ID.m_NameID
@@ -2420,7 +2423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[28].m_Description
-      value: Very Bat
+      value: Una manada de lobos.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[28].m_ID.m_NameID
@@ -2428,7 +2431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[29].m_Description
-      value: Very Bat
+      value: Ratas particularmente inteligentes.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[29].m_ID.m_NameID
@@ -2440,7 +2443,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: a539138fd9267c3448c614ea2901d47a, type: 3}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[30].m_Description
-      value: Deep Mooooo
+      value: "Las mayores v\xEDctimas en esta historia."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[30].m_ID.m_NameID
@@ -2904,31 +2907,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[15].m_IngredientsList.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[16].m_IngredientsList.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[17].m_IngredientsList.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[18].m_IngredientsList.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[19].m_IngredientsList.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[20].m_IngredientsList.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[21].m_IngredientsList.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[10].m_ID.m_ID
@@ -3444,11 +3447,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[17].m_Tags.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[18].m_Tags.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[19].m_Tags.Array.size
@@ -3456,11 +3459,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[20].m_Tags.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[21].m_Tags.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[22].m_Tags.Array.size
@@ -3576,7 +3579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[16].m_IngredientsList.Array.data[0].m_Amount
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[17].m_IngredientsList.Array.data[0].m_Amount
@@ -3588,7 +3591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[18].m_IngredientsList.Array.data[0].m_Amount
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[18].m_IngredientsList.Array.data[1].m_Amount
@@ -3596,7 +3599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[19].m_IngredientsList.Array.data[0].m_Amount
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[19].m_IngredientsList.Array.data[1].m_Amount
@@ -3604,7 +3607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[20].m_IngredientsList.Array.data[0].m_Amount
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[20].m_IngredientsList.Array.data[1].m_Amount
@@ -3612,7 +3615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[21].m_IngredientsList.Array.data[0].m_Amount
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[21].m_IngredientsList.Array.data[1].m_Amount
@@ -3712,27 +3715,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[12].m_IngredientsList.Array.data[0].m_ItemID.m_ID
-      value: -1959704931
+      value: -225553538
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[13].m_IngredientsList.Array.data[0].m_ItemID.m_ID
-      value: -1959704931
+      value: -1220311844
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[14].m_IngredientsList.Array.data[0].m_ItemID.m_ID
-      value: -1959704931
+      value: -1220311844
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[15].m_IngredientsList.Array.data[0].m_ItemID.m_ID
-      value: -1959704931
+      value: -1220311844
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[16].m_IngredientsList.Array.data[0].m_ItemID.m_ID
-      value: -1959704931
+      value: -225553538
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[17].m_IngredientsList.Array.data[0].m_ItemID.m_ID
-      value: -1959704931
+      value: -1647740518
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[17].m_IngredientsList.Array.data[1].m_ItemID.m_ID
@@ -3740,7 +3743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[18].m_IngredientsList.Array.data[0].m_ItemID.m_ID
-      value: 1174637542
+      value: -1220311844
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[18].m_IngredientsList.Array.data[1].m_ItemID.m_ID
@@ -3748,7 +3751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[19].m_IngredientsList.Array.data[0].m_ItemID.m_ID
-      value: 1174637542
+      value: -1220311844
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[19].m_IngredientsList.Array.data[1].m_ItemID.m_ID
@@ -3756,7 +3759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[20].m_IngredientsList.Array.data[0].m_ItemID.m_ID
-      value: 1174637542
+      value: -1647740518
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[20].m_IngredientsList.Array.data[1].m_ItemID.m_ID
@@ -3764,7 +3767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[21].m_IngredientsList.Array.data[0].m_ItemID.m_ID
-      value: 1174637542
+      value: -225553538
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[21].m_IngredientsList.Array.data[1].m_ItemID.m_ID
@@ -3836,7 +3839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[12].m_Tags.Array.data[0].m_Type
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[12].m_Tags.Array.data[1].m_Type
@@ -3868,7 +3871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[17].m_Tags.Array.data[0].m_Type
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[17].m_Tags.Array.data[1].m_Type
@@ -3876,7 +3879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[18].m_Tags.Array.data[0].m_Type
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[18].m_Tags.Array.data[1].m_Type
@@ -3884,11 +3887,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[19].m_Tags.Array.data[0].m_Type
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[19].m_Tags.Array.data[1].m_Type
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[1].m_Tags.Array.data[0].m_Value
@@ -3904,7 +3907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[20].m_Tags.Array.data[0].m_Type
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[20].m_Tags.Array.data[1].m_Type
@@ -3940,7 +3943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[4].m_Tags.Array.data[1].m_Value
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[5].m_Tags.Array.data[0].m_Value
@@ -3948,7 +3951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[5].m_Tags.Array.data[1].m_Value
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[6].m_Tags.Array.data[0].m_Value
@@ -3964,23 +3967,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[8].m_Tags.Array.data[0].m_Value
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[9].m_Tags.Array.data[0].m_Value
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[10].m_Tags.Array.data[0].m_Value
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[11].m_Tags.Array.data[0].m_Value
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[12].m_Tags.Array.data[0].m_Value
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[12].m_Tags.Array.data[1].m_Value
@@ -3988,15 +3991,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[13].m_Tags.Array.data[0].m_Value
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
-      propertyPath: m_QuestPieceFunctionalComponents.Array.data[16].m_Tags.Array.data[0].m_Value
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
-      propertyPath: m_QuestPieceFunctionalComponents.Array.data[16].m_Tags.Array.data[1].m_Value
+      propertyPath: m_QuestPieceFunctionalComponents.Array.data[16].m_Tags.Array.data[0].m_Value
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_QuestPieceFunctionalComponents.Array.data[16].m_Tags.Array.data[1].m_Value
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[17].m_Tags.Array.data[0].m_Value
@@ -4008,7 +4011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[18].m_Tags.Array.data[0].m_Value
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[18].m_Tags.Array.data[1].m_Value
@@ -4016,7 +4019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[19].m_Tags.Array.data[0].m_Value
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[19].m_Tags.Array.data[1].m_Value
@@ -4024,7 +4027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[20].m_Tags.Array.data[0].m_Value
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[20].m_Tags.Array.data[1].m_Value
@@ -4032,7 +4035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[21].m_Tags.Array.data[0].m_Value
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceFunctionalComponents.Array.data[21].m_Tags.Array.data[1].m_Value
@@ -4112,27 +4115,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[12].m_IngredientsList.Array.data[0].m_ItemID.m_NameID
-      value: compota_de_mora_infernal
+      value: polvo_persuasivo
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[13].m_IngredientsList.Array.data[0].m_ItemID.m_NameID
-      value: compota_de_mora_infernal
+      value: polvo_impetuoso
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[14].m_IngredientsList.Array.data[0].m_ItemID.m_NameID
-      value: compota_de_mora_infernal
+      value: polvo_impetuoso
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[15].m_IngredientsList.Array.data[0].m_ItemID.m_NameID
-      value: compota_de_mora_infernal
+      value: polvo_impetuoso
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[16].m_IngredientsList.Array.data[0].m_ItemID.m_NameID
-      value: compota_de_mora_infernal
+      value: polvo_persuasivo
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[17].m_IngredientsList.Array.data[0].m_ItemID.m_NameID
-      value: compota_de_mora_infernal
+      value: polvo_auxilio
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[17].m_IngredientsList.Array.data[1].m_ItemID.m_NameID
@@ -4140,7 +4143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[18].m_IngredientsList.Array.data[0].m_ItemID.m_NameID
-      value: nucleo_de_cereza_animico
+      value: polvo_impetuoso
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[18].m_IngredientsList.Array.data[1].m_ItemID.m_NameID
@@ -4148,7 +4151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[19].m_IngredientsList.Array.data[0].m_ItemID.m_NameID
-      value: nucleo_de_cereza_animico
+      value: polvo_impetuoso
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[19].m_IngredientsList.Array.data[1].m_ItemID.m_NameID
@@ -4156,7 +4159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[20].m_IngredientsList.Array.data[0].m_ItemID.m_NameID
-      value: nucleo_de_cereza_animico
+      value: polvo_auxilio
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[20].m_IngredientsList.Array.data[1].m_ItemID.m_NameID
@@ -4164,7 +4167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[21].m_IngredientsList.Array.data[0].m_ItemID.m_NameID
-      value: nucleo_de_cereza_animico
+      value: polvo_persuasivo
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[21].m_IngredientsList.Array.data[1].m_ItemID.m_NameID

@@ -288,7 +288,7 @@ namespace CQM.Databases
                 CreateNew();
                 SetIDName("mayor");
                 SetPieceType(PieceType.Target);
-                SetUIData("Mayor", "El alcalde del pueblo.");
+                SetUIData("Alcalde", "El alcalde del pueblo.");
 
                 CreateNew();
                 SetIDName("meri");
