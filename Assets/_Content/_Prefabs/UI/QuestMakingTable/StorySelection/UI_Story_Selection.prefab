@@ -1124,7 +1124,8 @@ MonoBehaviour:
   _storyIconImage: {fileID: 6783989335389487105}
   _mainStoryIconSprite: {fileID: 21300000, guid: 59334ae335189f945a1c56d11d062ed0, type: 3}
   _secondaryStoryIconSprite: {fileID: 21300000, guid: 6d0bff9d17cf3b046bbb0db27500f081, type: 3}
-  _selectedStoryDescription: {fileID: 0}
+  _showDescriptionButton: {fileID: 3777354779006430794}
+  _selectedStoryDescription: {fileID: 4964356109512293149}
 --- !u!1 &3777354779006430794
 GameObject:
   m_ObjectHideFlags: 0
