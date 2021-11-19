@@ -13,6 +13,7 @@ namespace CQM.Systems
 
         private Event<ID> _onStoryCompleted;
 
+
         public void Initialize(Singleton_TownComponent townComponent,
                                ComponentsContainer<LocationComponent> locationComponents,
                                ComponentsContainer<StoryRepercusionComponent> repercusionsComponents)
@@ -21,15 +22,14 @@ namespace CQM.Systems
             _locationComponents = locationComponents;
             _repercusionsComponents = repercusionsComponents;
 
-
             _onStoryCompleted = Admin.Global.EventSystem.GetCallbackByName<Event<ID>>("story_sys", "story_completed");
             _onStoryCompleted.OnInvoked += (storyID) =>
             {
                 // This could be in the story system but for now we can leave it here
                 StoryInfoComponent s = Admin.Global.Components.GetComponentContainer<StoryInfoComponent>().GetComponentByID(storyID);
-                SetRepercusionState(s.m_QuestRepercusion.m_ID, true);
+                if (!Admin.Global.Components.m_StoriesStateComponent.m_AllSecondaryStories.Contains(storyID))
+                    SetRepercusionState(s.m_QuestRepercusion.m_ID, true);
             };
-
 
             // This should be in a reward system
             Admin.Global.EventSystem.GetCallbackByName<Event<ID>>("story_sys", "story_finalized").OnInvoked += CalculateAndAddReward;
@@ -67,6 +67,12 @@ namespace CQM.Systems
             }
         }
 
+        private void SetRepercusionState(ID repercusionID, bool activated)
+        {
+            _repercusionsComponents.GetComponentByID(repercusionID).m_Active = true;
+            CalculateTownHappiness();
+        }
+
         private void CalculateTownHappiness()
         {
             List<LocationComponent> locList = _locationComponents.GetList();
@@ -78,12 +84,6 @@ namespace CQM.Systems
                 globalHappiness += locList[i].m_Happiness;
             }
             _townComponent.m_GlobalHappiness = globalHappiness;
-        }
-
-        private void SetRepercusionState(ID repercusionID, bool activated)
-        {
-            _repercusionsComponents.GetComponentByID(repercusionID).m_Active = true;
-            CalculateTownHappiness();
         }
 
         private void CalculateLocationHappiness(LocationComponent location)
