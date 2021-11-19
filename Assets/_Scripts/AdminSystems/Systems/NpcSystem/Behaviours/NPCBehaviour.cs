@@ -37,19 +37,19 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
         if (m_Interacting) return;
 
         m_Interacting = true;
-        if (!m_NpcData.m_AlreadySpokenTo)
+        if (!m_NpcData.m_DontHaveImportantDialogue)
         {
             _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(
                 m_NpcData.m_Dialogue,
                 m_NpcData.m_CharacterID,
                 () => { DialogueWithNpcFinishedCallback(); }));
 
-            m_NpcData.m_AlreadySpokenTo = true;
+            m_NpcData.m_DontHaveImportantDialogue = true;
         }
         else
         {
             _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(
-               new List<string> { m_NpcData.m_AlreadySpokenToDialogue[Random.Range(0, m_NpcData.m_AlreadySpokenToDialogue.Count)] }, // TODO: Fix this atrocity
+               m_NpcData.m_RandomIdleDialogue[Random.Range(0, m_NpcData.m_RandomIdleDialogue.Count)],
                m_NpcData.m_CharacterID,
                () => m_Interacting = false));
         }

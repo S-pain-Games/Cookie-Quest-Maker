@@ -33,3 +33,9 @@ MonoBehaviour:
     m_Sprite: {fileID: 21300000, guid: 14453757a922dbe4084bc58b44d3a8da, type: 3}
   - m_IDName: harina_de_fuerza_titanica
     m_Sprite: {fileID: 21300000, guid: c6c0dbea8b1cd9245a274ab113a9a19f, type: 3}
+  - m_IDName: polvo_impetuoso
+    m_Sprite: {fileID: 21300000, guid: 6f6ae653e540ae542b348979d07a6699, type: 3}
+  - m_IDName: polvo_persuasivo
+    m_Sprite: {fileID: 21300000, guid: 181f102c2bdb1cc47a7bcc0c0fbd27f4, type: 3}
+  - m_IDName: polvo_auxilio
+    m_Sprite: {fileID: 21300000, guid: 0e56d4fada01ec54fbc77b725f098b3b, type: 3}

@@ -66,6 +66,7 @@ public class DaySystem : ISystemEvents
     {
         _dayEndedCallbacks.Invoke();
         _populateNpcsCommand.Invoke(3);
+        _dayData.m_StoriesCompletedToday = 0;
         _dayData.m_StoriesToCompleteInADay = 3;
         _setGameStateCommand.Invoke(GameStateSystem.State.Bakery);
         _dayStartedCallbacks.Invoke();

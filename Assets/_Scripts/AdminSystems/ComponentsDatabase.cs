@@ -58,9 +58,6 @@ namespace CQM.Databases
         public Singleton_AudioClipsDataComponent m_AudioClipsComponent;
         public Singleton_StoriesStateComponent m_StoriesStateComponent = new Singleton_StoriesStateComponent();
 
-        [Header("Non-Component Misc Data")]
-        public ComponentsContainer<QuestDataComponent> m_CompletedQuestData = new ComponentsContainer<QuestDataComponent>();
-
 
         private Dictionary<Type, object> m_ComponentContainers = new Dictionary<Type, object>();
         private Dictionary<Type, object> m_SingletonComponents = new Dictionary<Type, object>();

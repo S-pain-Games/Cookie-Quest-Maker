@@ -22,8 +22,8 @@ public class StorySystem : ISystemEvents
     private Event<ID> OnStoryStarted;
     private Event<ID> OnStoryCompleted;
     private Event<ID> OnStoryFinalized;
-    private EventVoid OnAllStoriesCompleted;
-    private EventVoid OnAllStoriesFinalized;
+    private EventVoid OnAllPrimaryStoriesCompleted;
+    private EventVoid OnAllPrimaryStoriesFinalized;
 
 
     public void Initialize(ComponentsContainer<StoryInfoComponent> storiesInfo,
@@ -34,7 +34,7 @@ public class StorySystem : ISystemEvents
         _ongoingStories = storiesState.m_OngoingStories;
         _primaryStoriesToStart = storiesState.m_MainStoriesToStartOrder;
         _completedStories = storiesState.m_CompletedStories;
-        _finalizedStories = storiesState.m_FinalizedStories;
+        _finalizedStories = storiesState.m_FinalizedPrimaryStories;
     }
 
     public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
@@ -46,8 +46,8 @@ public class StorySystem : ISystemEvents
         OnStoryStarted = callbacks.AddEvent<ID>(new ID("story_started"));
         OnStoryCompleted = callbacks.AddEvent<ID>(new ID("story_completed"));
         OnStoryFinalized = callbacks.AddEvent<ID>(new ID("story_finalized"));
-        OnAllStoriesCompleted = callbacks.AddEvent(new ID("all_stories_completed"));
-        OnAllStoriesFinalized = callbacks.AddEvent(new ID("all_stories_finalized"));
+        OnAllPrimaryStoriesCompleted = callbacks.AddEvent(new ID("all_primary_stories_completed"));
+        OnAllPrimaryStoriesFinalized = callbacks.AddEvent(new ID("all_primary_stories_finalized"));
 
         commands.AddEvent<ID>(new ID("start_story")).OnInvoked += StartStory;
         commands.AddEvent<StorySys_CompleteStoyEvtArgs>(new ID("complete_story")).OnInvoked +=
@@ -109,27 +109,36 @@ public class StorySystem : ISystemEvents
         if (_primaryStoriesToStart.Count == 0
             && _ongoingStories.Count == 0)
         {
-            OnAllStoriesCompleted.OnInvoked += () => { Debug.Log("All Stories Completed"); };
-            OnAllStoriesCompleted.Invoke();
+            OnAllPrimaryStoriesCompleted.OnInvoked += () => { Debug.Log("All Stories Completed"); };
+            OnAllPrimaryStoriesCompleted.Invoke();
         }
     }
 
-    // This is called when the Dialogue System or the newspaper shows
+    // This is called when the Dialogue System
     // the player the "Ending"(text) of the story
     private void FinalizeStory(ID storyId)
     {
         _completedStories.Remove(storyId);
-        _finalizedStories.Add(storyId);
+        
+        var s = _storiesStateComponent;
+        if (!s.m_AllSecondaryStories.Contains(storyId))
+        {
+            _finalizedStories.Add(storyId);
+
+            if (_primaryStoriesToStart.Count == 0
+                && _ongoingStories.Count == 0
+                && _completedStories.Count == 0)
+            {
+                OnAllPrimaryStoriesFinalized.OnInvoked += () => { Debug.Log("All Primary Stories Finalized"); };
+                OnAllPrimaryStoriesFinalized.Invoke();
+            }
+        }
+        else
+        {
+            s.m_AvailableSecondaryStoriesToStart.Add(storyId);
+        }
 
         OnStoryFinalized.Invoke(storyId);
-
-        if (_primaryStoriesToStart.Count == 0
-            && _ongoingStories.Count == 0
-            && _completedStories.Count == 0)
-        {
-            OnAllStoriesFinalized.OnInvoked += () => { Debug.Log("All Stories Finalized"); };
-            OnAllStoriesFinalized.Invoke();
-        }
     }
 
     // Process a story with the given tag and value and get the result

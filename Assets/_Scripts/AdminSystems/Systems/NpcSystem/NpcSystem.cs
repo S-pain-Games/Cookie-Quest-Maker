@@ -15,6 +15,7 @@ namespace CQM.Systems
     {
         private ComponentsContainer<StoryInfoComponent> _storyInfoComponents;
         private ComponentsContainer<CharacterComponent> _characterComponents;
+        private ComponentsContainer<DialogueCharacterComponent> _characterDialogueComponent;
         private Singleton_StoriesStateComponent _storiesStateComponent;
         private Singleton_NpcReferencesComponent _npcReferencesComponent;
 
@@ -23,16 +24,16 @@ namespace CQM.Systems
                                Singleton_StoriesStateComponent storiesStateComponent,
                                ComponentsContainer<StoryInfoComponent> storyInfoComponents,
                                ComponentsContainer<CharacterComponent> characterComponents,
+                               ComponentsContainer<DialogueCharacterComponent> characterDialogueComponent,
                                GameEventSystem evtSys)
         {
             _npcReferencesComponent = npcReferencesComponent;
             _storiesStateComponent = storiesStateComponent;
             _characterComponents = characterComponents;
+            _characterDialogueComponent = characterDialogueComponent;
             _storyInfoComponents = storyInfoComponents;
 
             evtSys.GetCallbackByName<EventVoid>("day_sys", "night_begin").OnInvoked += PopulateDeitiesData;
-            // DEV ONLY
-            //PopulateNpcsData(0);
         }
 
         public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
@@ -71,7 +72,7 @@ namespace CQM.Systems
 
                 // Reset Data
                 npcData.m_CharacterID = new ID("meri");
-                npcData.m_AlreadySpokenTo = false;
+                npcData.m_DontHaveImportantDialogue = false;
                 npcData.m_Dialogue.Clear();
                 npcData.m_HasToFinalizeAStory = false;
                 npcData.m_HasToStartAStory = false;
@@ -124,7 +125,22 @@ namespace CQM.Systems
                     FinalizeSecondaryStory(secondaryStoriesToFinalize, npcData);
                     StartSecondaryStory(secondaryStoriesToStart, npcData);
 
-                    if (npcData.m_Dialogue.Count == 0) npcData.m_Dialogue.Add("What a nice day [NO SECONDARY STORIES]");
+                    if (npcData.m_Dialogue.Count == 0) npcData.m_DontHaveImportantDialogue = true;
+                }
+
+
+                // Add Random Idle Dialogue
+                npcData.m_RandomIdleDialogue.Clear();
+                List<string> characterRandomDialogueTemp = new List<string>(); // Pooling
+                var serializedDialogue = _characterDialogueComponent.GetComponentByID(npcData.m_CharacterID).m_IdleRandomDialogue;
+                for (int j = 0; j < serializedDialogue.Count; j++)
+                {
+                    for (int k = 0; k < serializedDialogue[j].Count; k++)
+                    {
+                        SerializableList<string> l = serializedDialogue[j];
+                        characterRandomDialogueTemp.Add(l[k]);
+                    }
+                    npcData.m_RandomIdleDialogue.Add(characterRandomDialogueTemp);
                 }
             }
 
@@ -299,53 +315,6 @@ namespace CQM.Systems
                 }
             }
         }
-
-        private void OldPopulateMethod(List<ID> storiesToFinalize, List<ID> mainStoriesToStart, int i)
-        {
-            NPCBehaviourData npcData = _npcReferencesComponent.m_NpcBehaviour[i].m_NpcData;
-
-            // Reset Data
-            npcData.m_CharacterID = new ID("meri");
-            npcData.m_AlreadySpokenTo = false;
-            npcData.m_Dialogue.Clear();
-            npcData.m_HasToFinalizeAStory = false;
-            npcData.m_HasToStartAStory = false;
-
-
-            // Try to preappend a result of a completed story
-            // only if there are remaining stories to show
-            if (storiesToFinalize.Count > 0)
-            {
-                StoryInfoComponent s = _storyInfoComponents[storiesToFinalize[0]];
-
-                for (int c = 0; c < s.m_QuestBranchResult.m_ResultNPCDialogue.Count; c++)
-                    npcData.m_Dialogue.Add(s.m_QuestBranchResult.m_ResultNPCDialogue[c]);
-
-                npcData.m_HasToFinalizeAStory = true;
-                npcData.m_StoryIDToFinalizeOnInteract = storiesToFinalize[0];
-
-                storiesToFinalize.RemoveAt(0);
-
-                npcData.m_Dialogue.Add("Menuda Historia...");
-            }
-
-
-            // Append a new story dialogue
-            // only if there are new stories to append
-            if (mainStoriesToStart.Count > 0)
-            {
-                StoryInfoComponent s = _storyInfoComponents[mainStoriesToStart[0]];
-                npcData.m_CharacterID = new ID(s.m_StoryData.m_QuestGiver);
-
-                var introductionDialogue = s.m_StoryData.m_IntroductionDialogue;
-                for (int j = 0; j < introductionDialogue.Count; j++)
-                    npcData.m_Dialogue.Add(introductionDialogue[j]);
-
-                npcData.m_HasToStartAStory = true;
-                npcData.m_StoryIDToStartOnInteract = mainStoriesToStart[0];
-                mainStoriesToStart.RemoveAt(0);
-            }
-        }
     }
 }
 
@@ -365,7 +334,7 @@ namespace CQM.Components
         public bool m_HasToFinalizeAStory;
         public ID m_StoryIDToFinalizeOnInteract;
 
-        public bool m_AlreadySpokenTo;
-        public List<string> m_AlreadySpokenToDialogue = new List<string> { "I have nothing more to say", "This is a really nice bakery", "Such a nice weather today" };
+        public bool m_DontHaveImportantDialogue;
+        public List<List<string>> m_RandomIdleDialogue = new List<List<string>>();
     }
 }

@@ -2,6 +2,7 @@
 
 namespace CQM.Components
 {
+    [System.Serializable]
     public class Singleton_StoriesStateComponent
     {
         // IDs of the stories in the order in which they will be started
@@ -15,6 +16,6 @@ namespace CQM.Components
         // At the start of the day the system that handles the spawning of the NPCs must assign them 
         public List<ID> m_CompletedStories = new List<ID>();
         // Stories that have been completely finished
-        public List<ID> m_FinalizedStories = new List<ID>();
+        public List<ID> m_FinalizedPrimaryStories = new List<ID>();
     }
 }

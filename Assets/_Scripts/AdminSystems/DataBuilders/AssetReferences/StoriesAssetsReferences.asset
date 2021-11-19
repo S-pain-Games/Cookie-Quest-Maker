@@ -35,3 +35,13 @@ MonoBehaviour:
     m_Sprite: {fileID: 21300000, guid: edb495e164252af4ab49399e5214ed20, type: 3}
   - m_IDName: the_stolen_pendant
     m_Sprite: {fileID: 21300000, guid: f680bc7e40d2ef442af1dfe3f23f7214, type: 3}
+  - m_IDName: a_regular_day
+    m_Sprite: {fileID: 21300000, guid: 2d0682f5d7d0579499388e5f687b44a3, type: 3}
+  - m_IDName: mushroom_profecy
+    m_Sprite: {fileID: 21300000, guid: 4f755541196e36241af97767d0ad959b, type: 3}
+  - m_IDName: mayor_worries
+    m_Sprite: {fileID: 21300000, guid: d939d6c2b15b03e4394f1b6b5a21f3f1, type: 3}
+  - m_IDName: old_friends
+    m_Sprite: {fileID: 21300000, guid: 10038789df0db1d4d8e5129e38c9b215, type: 3}
+  - m_IDName: high_voltage_treatment
+    m_Sprite: {fileID: 21300000, guid: cd81f4bf9b0dee744bdaa96831c82f0e, type: 3}

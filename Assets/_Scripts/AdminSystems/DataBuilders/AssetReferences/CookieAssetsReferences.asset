@@ -13,17 +13,53 @@ MonoBehaviour:
   m_Name: CookieAssetsReferences
   m_EditorClassIdentifier: 
   m_Cookies:
-  - m_IDName: plain_cookie
+  - m_IDName: malvavisco_fantasma_tostado
     m_SimpleSprite: {fileID: 21300000, guid: 7afe679d93622b64587e17f8edf29859, type: 3}
     m_FullCookieSprite: {fileID: 21300000, guid: adc4d268e55a60c438be560b26614ddb, type: 3}
     m_HDSprite: {fileID: 21300000, guid: 2207a64eb580998469702472070a540b, type: 3}
     m_RecipeSprite: {fileID: 21300000, guid: 75da8650bae999440805dc073705a1ef, type: 3}
     m_QuestBuildingPrefab: {fileID: 0}
-  - m_IDName: plain_cookie_2
+  - m_IDName: merengue_fantasma_tostado
+    m_SimpleSprite: {fileID: 21300000, guid: 68794217eaff3c64c9235d761333a439, type: 3}
+    m_FullCookieSprite: {fileID: 21300000, guid: f241a53f9d509cc4bb43cf1cea451a29, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 64cbc25caf84e5542808f332fcbffafb, type: 3}
+    m_RecipeSprite: {fileID: 21300000, guid: 8e5767b0df522ee479942fcd096017e0, type: 3}
+    m_QuestBuildingPrefab: {fileID: 0}
+  - m_IDName: pepito_de_ternura
+    m_SimpleSprite: {fileID: 21300000, guid: a539138fd9267c3448c614ea2901d47a, type: 3}
+    m_FullCookieSprite: {fileID: 21300000, guid: 24d1f83b8ea240942a0118e210520d0e, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 1309868c425c1f54489d373a3d50250f, type: 3}
+    m_RecipeSprite: {fileID: 21300000, guid: ed8a3ef62501af343a6f97641c9c2e98, type: 3}
+    m_QuestBuildingPrefab: {fileID: 0}
+  - m_IDName: bizcotroll
+    m_SimpleSprite: {fileID: 21300000, guid: 4e088888903152242bedc6d2995284e9, type: 3}
+    m_FullCookieSprite: {fileID: 21300000, guid: a2749450cdb9a5345b14bad71a7b11b3, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 1cb97171176636c4a8d130a1ff109147, type: 3}
+    m_RecipeSprite: {fileID: 21300000, guid: 57f3dfd4b651c124fa5782ebd481e529, type: 3}
+    m_QuestBuildingPrefab: {fileID: 0}
+  - m_IDName: jauria_bombon
     m_SimpleSprite: {fileID: 21300000, guid: 9765c5238660b4d4ebe852b6572540b7, type: 3}
     m_FullCookieSprite: {fileID: 21300000, guid: b70affcf69ee9034fa79a8efeca045cb, type: 3}
     m_HDSprite: {fileID: 21300000, guid: f0d61aa930a04bf498b974d74cbad946, type: 3}
     m_RecipeSprite: {fileID: 21300000, guid: c434bc00fb4c06446864d5aef58eea6d, type: 3}
+    m_QuestBuildingPrefab: {fileID: 0}
+  - m_IDName: paladin_tortita
+    m_SimpleSprite: {fileID: 21300000, guid: 819777ce0b5cf4e43909920747717e12, type: 3}
+    m_FullCookieSprite: {fileID: 21300000, guid: 3884d879c5ff00640931ec4185284ae3, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: b84d0e5f7315d184b874083cab8795c0, type: 3}
+    m_RecipeSprite: {fileID: 21300000, guid: fada20c1b29122243a919957ecd74cf5, type: 3}
+    m_QuestBuildingPrefab: {fileID: 0}
+  - m_IDName: bizquiborracho
+    m_SimpleSprite: {fileID: 21300000, guid: 63a75a1e83c6d944cb5ae0750faaf4e4, type: 3}
+    m_FullCookieSprite: {fileID: 21300000, guid: fb7cda5845c36bb47a7f9026fa916019, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 965223ba37d9f134aa45e5455fcae763, type: 3}
+    m_RecipeSprite: {fileID: 21300000, guid: e26720fa7f81dc942a824ddd6ef7a93e, type: 3}
+    m_QuestBuildingPrefab: {fileID: 0}
+  - m_IDName: citrielfo
+    m_SimpleSprite: {fileID: 21300000, guid: fc453cedcfd9b714297bf846cf7a302d, type: 3}
+    m_FullCookieSprite: {fileID: 21300000, guid: a6cfc1abbc064644e9d39fedbad9a254, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 1c4334c55a459fc47ba5217d528371e8, type: 3}
+    m_RecipeSprite: {fileID: 21300000, guid: b3cb941b335f6f4488504404637e3793, type: 3}
     m_QuestBuildingPrefab: {fileID: 0}
   m_Actions:
   - m_IDName: assist

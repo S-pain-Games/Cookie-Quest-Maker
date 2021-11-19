@@ -37,33 +37,52 @@ public class CharactersBuilder : BaseDataBuilder
     {
         m_CharactersList.Clear();
         m_CharacterDialogueList.Clear();
+        m_CharacterWorldPrefabComponent.Clear();
 
         CreateCharacter("hio", "Hio", "Hio");
         SetDescription("Dueño de una pastelería y protagonista en esta historia.");
+        AddRandomDialogue(new List<string>() { "Hio frase", "frase1Continuacion" });
+        FinishCharacter();
 
         CreateCharacter("nu", "Nu", "Nu Nu");
         SetDescription("Ángel de las Galletas.");
+        AddRandomDialogue(new List<string>() { "Nu frase", "frase1Continuacion" });
+        FinishCharacter();
 
         CreateCharacter("evith", "Evith", "Evith");
         SetDescription("Demonio de las Galletas.");
+        AddRandomDialogue(new List<string>() { "Evith frase", "frase1Continuacion" });
+        FinishCharacter();
 
         CreateCharacter("meri", "Meri la Leches", "Meri");
         SetDescription("Ganadera entusiasta de las vacas.");
+        AddRandomDialogue(new List<string>() { "Leches frase", "frase1Continuacion" });
+        FinishCharacter();
 
         CreateCharacter("mayor", "Alcalde, Antonio", "Alcalde");
         SetDescription("El muy tacaño alcalde del pueblo.");
+        AddRandomDialogue(new List<string>() { "Alcalde frase", "frase1Continuacion" });
+        FinishCharacter();
 
         CreateCharacter("miss_chocolate", "Miss Chocolate", "Ms.Chocolate");
         SetDescription("Excéntrica chocolatera.");
+        AddRandomDialogue(new List<string>() { "Miss frase", "frase1Continuacion" });
+        FinishCharacter();
 
         CreateCharacter("canela", "Canela N Rama", "Cane");
         SetDescription("Coleccionista de artefactos antiguos.");
+        AddRandomDialogue(new List<string>() { "Rama frase", "frase1Continuacion" });
+        FinishCharacter();
 
         CreateCharacter("johny_setas", "Johny, el setas", "Johny");
         SetDescription("Un alquimista muy peculiar.");
+        AddRandomDialogue(new List<string>() { "setas fr", "frase1Continuacion" });
+        FinishCharacter();
 
         CreateCharacter("mantecas", "Juanjo, el mantecas", "Juanjo");
         SetDescription("El agricultor malhumorado");
+        AddRandomDialogue(new List<string>() { "Juanjo frase", "frase1Continuacion" });
+        FinishCharacter();
     }
 
     public void CreateCharacter(string idName, string longName, string shortName)
@@ -87,8 +106,20 @@ public class CharactersBuilder : BaseDataBuilder
     public void SetDescription(string description)
     {
         c.m_Description = description;
+    }
 
-        // Finish
+    public void AddRandomDialogue(List<string> dialogue)
+    {
+        SerializableList<string> serList = new SerializableList<string>();
+        for (int i = 0; i < dialogue.Count; i++)
+        {
+            serList.Add(dialogue[i]);
+        }
+        d.m_IdleRandomDialogue.Add(serList);
+    }
+
+    public void FinishCharacter()
+    {
         m_CharactersList.Add(c);
         m_CharacterDialogueList.Add(d);
         m_CharacterWorldPrefabComponent.Add(p);

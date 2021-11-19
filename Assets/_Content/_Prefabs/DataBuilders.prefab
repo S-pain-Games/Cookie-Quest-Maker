@@ -70,17 +70,83 @@ MonoBehaviour:
   _cookieReferences: {fileID: 11400000, guid: 97d906e0ea62c884ca5184767d3e4ba0, type: 2}
   m_QuestPieceFunctionalComponents:
   - m_ID:
-      m_NameID: plain_cookie
-      m_ID: 1473648501
+      m_NameID: malvavisco_fantasma_tostado
+      m_ID: -662518070
       m_Initialized: 1
     m_Type: 4
     m_Tags: []
   - m_ID:
-      m_NameID: plain_cookie_2
-      m_ID: 390974588
+      m_NameID: merengue_fantasma_tostado
+      m_ID: 1705360255
       m_Initialized: 1
     m_Type: 4
-    m_Tags: []
+    m_Tags:
+    - m_Type: 0
+      m_Value: 1
+    - m_Type: 1
+      m_Value: 1
+    - m_Type: 2
+      m_Value: 1
+  - m_ID:
+      m_NameID: pepito_de_ternura
+      m_ID: 1282509517
+      m_Initialized: 1
+    m_Type: 4
+    m_Tags:
+    - m_Type: 1
+      m_Value: 1
+    - m_Type: 2
+      m_Value: 2
+  - m_ID:
+      m_NameID: bizcotroll
+      m_ID: -1684921852
+      m_Initialized: 1
+    m_Type: 4
+    m_Tags:
+    - m_Type: 0
+      m_Value: 2
+    - m_Type: 2
+      m_Value: 3
+  - m_ID:
+      m_NameID: jauria_bombon
+      m_ID: 398001378
+      m_Initialized: 1
+    m_Type: 4
+    m_Tags:
+    - m_Type: 0
+      m_Value: 2
+    - m_Type: 2
+      m_Value: 1
+  - m_ID:
+      m_NameID: paladin_tortita
+      m_ID: -297091607
+      m_Initialized: 1
+    m_Type: 4
+    m_Tags:
+    - m_Type: 0
+      m_Value: 3
+    - m_Type: 2
+      m_Value: 2
+  - m_ID:
+      m_NameID: bizquiborracho
+      m_ID: -651309878
+      m_Initialized: 1
+    m_Type: 4
+    m_Tags:
+    - m_Type: 0
+      m_Value: 1
+    - m_Type: 1
+      m_Value: 2
+  - m_ID:
+      m_NameID: citrielfo
+      m_ID: 1999289801
+      m_Initialized: 1
+    m_Type: 4
+    m_Tags:
+    - m_Type: 1
+      m_Value: 3
+    - m_Type: 2
+      m_Value: 2
   - m_ID:
       m_NameID: attack
       m_ID: -143907494
@@ -88,7 +154,7 @@ MonoBehaviour:
     m_Type: 0
     m_Tags:
     - m_Type: 0
-      m_Value: 4
+      m_Value: 1
   - m_ID:
       m_NameID: dialogate
       m_ID: -949047606
@@ -96,7 +162,7 @@ MonoBehaviour:
     m_Type: 0
     m_Tags:
     - m_Type: 1
-      m_Value: 4
+      m_Value: 1
   - m_ID:
       m_NameID: assist
       m_ID: 223879643
@@ -104,24 +170,22 @@ MonoBehaviour:
     m_Type: 0
     m_Tags:
     - m_Type: 2
-      m_Value: 4
+      m_Value: 1
   - m_ID:
       m_NameID: look
       m_ID: 963906251
       m_Initialized: 1
     m_Type: 0
     m_Tags:
-    - m_Type: 1
-      m_Value: 4
+    - m_Type: 2
+      m_Value: 2
   - m_ID:
       m_NameID: stare
       m_ID: -1436242079
       m_Initialized: 1
     m_Type: 0
     m_Tags:
-    - m_Type: 2
-      m_Value: 5
-    - m_Type: 0
+    - m_Type: 1
       m_Value: 2
   - m_ID:
       m_NameID: steal
@@ -130,7 +194,7 @@ MonoBehaviour:
     m_Type: 0
     m_Tags:
     - m_Type: 0
-      m_Value: 5
+      m_Value: 2
   - m_ID:
       m_NameID: baseball_bat
       m_ID: -673659770
@@ -139,8 +203,6 @@ MonoBehaviour:
     m_Tags:
     - m_Type: 0
       m_Value: 2
-    - m_Type: 1
-      m_Value: 1
   - m_ID:
       m_NameID: scissors
       m_ID: 224560939
@@ -158,38 +220,34 @@ MonoBehaviour:
     m_Type: 3
     m_Tags:
     - m_Type: 0
-      m_Value: 2
-    - m_Type: 1
       m_Value: 1
+    - m_Type: 1
+      m_Value: 2
   - m_ID:
       m_NameID: cake
       m_ID: -1966748430
       m_Initialized: 1
     m_Type: 3
     m_Tags:
-    - m_Type: 1
-      m_Value: 2
     - m_Type: 2
-      m_Value: 1
+      m_Value: 2
   - m_ID:
       m_NameID: violently
       m_ID: -1715915298
       m_Initialized: 1
     m_Type: 2
     m_Tags:
-    - m_Type: 1
-      m_Value: 2
-    - m_Type: 2
-      m_Value: 1
+    - m_Type: 0
+      m_Value: 3
   - m_ID:
       m_NameID: brutally
       m_ID: 83815085
       m_Initialized: 1
     m_Type: 2
     m_Tags:
+    - m_Type: 0
+      m_Value: 4
     - m_Type: 1
-      m_Value: 2
-    - m_Type: 2
       m_Value: 1
   - m_ID:
       m_NameID: kindly
@@ -197,10 +255,8 @@ MonoBehaviour:
       m_Initialized: 1
     m_Type: 2
     m_Tags:
-    - m_Type: 1
-      m_Value: 2
     - m_Type: 2
-      m_Value: 1
+      m_Value: 3
   - m_ID:
       m_NameID: convincingly
       m_ID: 1186496505
@@ -208,9 +264,7 @@ MonoBehaviour:
     m_Type: 2
     m_Tags:
     - m_Type: 1
-      m_Value: 2
-    - m_Type: 2
-      m_Value: 1
+      m_Value: 3
   - m_ID:
       m_NameID: mayor
       m_ID: 996742298
@@ -272,28 +326,89 @@ MonoBehaviour:
     m_CookiePieceSprite: {fileID: 21300000, guid: adc4d268e55a60c438be560b26614ddb, type: 3}
     m_HDSprite: {fileID: 21300000, guid: 2207a64eb580998469702472070a540b, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 75da8650bae999440805dc073705a1ef, type: 3}
-    m_Name: Galleta normal
-    m_Description: Es una galleta normal.
+    m_Name: Malvavisco Fantasma Tostado
+    m_Description: "No es el m\xE1s h\xE1bil, pero act\xFAa con entusiasmo."
     m_ID:
-      m_NameID: plain_cookie
-      m_ID: 1473648501
+      m_NameID: malvavisco_fantasma_tostado
+      m_ID: -662518070
+      m_Initialized: 1
+  - m_SimpleSprite: {fileID: 21300000, guid: 68794217eaff3c64c9235d761333a439, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: f241a53f9d509cc4bb43cf1cea451a29, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 64cbc25caf84e5542808f332fcbffafb, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 8e5767b0df522ee479942fcd096017e0, type: 3}
+    m_Name: Merengue Fantasma Tostado
+    m_Description: Ayudante todoterreno perfecto para tareas sencillas.
+    m_ID:
+      m_NameID: merengue_fantasma_tostado
+      m_ID: 1705360255
+      m_Initialized: 1
+  - m_SimpleSprite: {fileID: 21300000, guid: a539138fd9267c3448c614ea2901d47a, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 24d1f83b8ea240942a0118e210520d0e, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 1309868c425c1f54489d373a3d50250f, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: ed8a3ef62501af343a6f97641c9c2e98, type: 3}
+    m_Name: Pepito de Ternura
+    m_Description: Siempre dispuesto a ayudar.
+    m_ID:
+      m_NameID: pepito_de_ternura
+      m_ID: 1282509517
+      m_Initialized: 1
+  - m_SimpleSprite: {fileID: 21300000, guid: 4e088888903152242bedc6d2995284e9, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: a2749450cdb9a5345b14bad71a7b11b3, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 1cb97171176636c4a8d130a1ff109147, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 57f3dfd4b651c124fa5782ebd481e529, type: 3}
+    m_Name: Bizcotroll de Naranjas Somnolientas
+    m_Description: "Es muy pac\xEDfico, pero no controla su propia fuerza"
+    m_ID:
+      m_NameID: bizcotroll
+      m_ID: -1684921852
       m_Initialized: 1
   - m_SimpleSprite: {fileID: 21300000, guid: 9765c5238660b4d4ebe852b6572540b7, type: 3}
     m_CookiePieceSprite: {fileID: 21300000, guid: b70affcf69ee9034fa79a8efeca045cb, type: 3}
     m_HDSprite: {fileID: 21300000, guid: f0d61aa930a04bf498b974d74cbad946, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: c434bc00fb4c06446864d5aef58eea6d, type: 3}
-    m_Name: "La jaur\xEDa"
-    m_Description: "Descripci\xF3n de galleta jaur\xEDa."
+    m_Name: "Jaur\xEDa Bomb\xF3n Infernal"
+    m_Description: "Tratan de ayudar de la forma m\xE1s violenta posible. Los favoritos
+      de Evith."
     m_ID:
-      m_NameID: plain_cookie_2
-      m_ID: 390974588
+      m_NameID: jauria_bombon
+      m_ID: 398001378
+      m_Initialized: 1
+  - m_SimpleSprite: {fileID: 21300000, guid: 819777ce0b5cf4e43909920747717e12, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 3884d879c5ff00640931ec4185284ae3, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: b84d0e5f7315d184b874083cab8795c0, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: fada20c1b29122243a919957ecd74cf5, type: 3}
+    m_Name: "Palad\xEDn Tortita"
+    m_Description: "Gran defensor de la justicia con m\xE9todos muy violentos"
+    m_ID:
+      m_NameID: paladin_tortita
+      m_ID: -297091607
+      m_Initialized: 1
+  - m_SimpleSprite: {fileID: 21300000, guid: 63a75a1e83c6d944cb5ae0750faaf4e4, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: fb7cda5845c36bb47a7f9026fa916019, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 965223ba37d9f134aa45e5455fcae763, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: e26720fa7f81dc942a824ddd6ef7a93e, type: 3}
+    m_Name: Bizquiborracho de Mora
+    m_Description: Intenta ser persuasivo, pero se le puede ir la mano.
+    m_ID:
+      m_NameID: bizquiborracho
+      m_ID: -651309878
+      m_Initialized: 1
+  - m_SimpleSprite: {fileID: 21300000, guid: fc453cedcfd9b714297bf846cf7a302d, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: a6cfc1abbc064644e9d39fedbad9a254, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 1c4334c55a459fc47ba5217d528371e8, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: b3cb941b335f6f4488504404637e3793, type: 3}
+    m_Name: Citrielfo en Copa
+    m_Description: Es capaz de persuadir incluso a una mula. Aprobado por Nu.
+    m_ID:
+      m_NameID: citrielfo
+      m_ID: 1999289801
       m_Initialized: 1
   - m_SimpleSprite: {fileID: 21300000, guid: ae62f49ef96b51941a9c2a96e68de2cc, type: 3}
     m_CookiePieceSprite: {fileID: 21300000, guid: b51aca76c7c871941a08578d590aebb9, type: 3}
     m_HDSprite: {fileID: 21300000, guid: ae62f49ef96b51941a9c2a96e68de2cc, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: b51aca76c7c871941a08578d590aebb9, type: 3}
-    m_Name: Attack
-    m_Description: Very Agressive
+    m_Name: Atacar
+    m_Description: "Para cuando la violencia puede ser la soluci\xF3n"
     m_ID:
       m_NameID: attack
       m_ID: -143907494
@@ -302,8 +417,8 @@ MonoBehaviour:
     m_CookiePieceSprite: {fileID: 21300000, guid: 85119a0d9cb3a444d9d8fc0394920391, type: 3}
     m_HDSprite: {fileID: 21300000, guid: 88210d859f042ba4f9a595a71155e01a, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 85119a0d9cb3a444d9d8fc0394920391, type: 3}
-    m_Name: Dialogate
-    m_Description: Very Assistive
+    m_Name: Dialogar
+    m_Description: "La soluci\xF3n m\xE1s diplom\xE1tica ante un problema"
     m_ID:
       m_NameID: dialogate
       m_ID: -949047606
@@ -312,8 +427,8 @@ MonoBehaviour:
     m_CookiePieceSprite: {fileID: 21300000, guid: 508a82d941ad7684fb3a9a7fc82ef9f7, type: 3}
     m_HDSprite: {fileID: 21300000, guid: d7ade6fb00e3d8945bdec751af798476, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 508a82d941ad7684fb3a9a7fc82ef9f7, type: 3}
-    m_Name: Assist
-    m_Description: Very Assistive
+    m_Name: Ayudar
+    m_Description: Para echar una mano a alguien en apuros
     m_ID:
       m_NameID: assist
       m_ID: 223879643
@@ -322,8 +437,8 @@ MonoBehaviour:
     m_CookiePieceSprite: {fileID: 21300000, guid: 23f676d1f4a71db49b4a4b089729a845, type: 3}
     m_HDSprite: {fileID: 21300000, guid: 2684808f70b59be458db89c422593d90, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 23f676d1f4a71db49b4a4b089729a845, type: 3}
-    m_Name: Look
-    m_Description: Very Assistive
+    m_Name: Observar
+    m_Description: "Observa detenidamente la situaci\xF3n antes de actuar"
     m_ID:
       m_NameID: look
       m_ID: 963906251
@@ -332,8 +447,8 @@ MonoBehaviour:
     m_CookiePieceSprite: {fileID: 21300000, guid: 15f10baa2b52b044f80c8d7a883ed103, type: 3}
     m_HDSprite: {fileID: 21300000, guid: df632e2db0369a841b39f4eee8d3ef67, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 15f10baa2b52b044f80c8d7a883ed103, type: 3}
-    m_Name: Stare
-    m_Description: Very Assistive
+    m_Name: Mirar fijamente
+    m_Description: "Observa hasta el punto de llegar a ser inc\xF3modo"
     m_ID:
       m_NameID: stare
       m_ID: -1436242079
@@ -342,8 +457,8 @@ MonoBehaviour:
     m_CookiePieceSprite: {fileID: 21300000, guid: a949079572f22904b844fb14a47f017c, type: 3}
     m_HDSprite: {fileID: 21300000, guid: d21a7f9e36dcbb54181d0aa4c3ecff9b, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: a949079572f22904b844fb14a47f017c, type: 3}
-    m_Name: Steal
-    m_Description: Very Assistive
+    m_Name: Robar
+    m_Description: "Para la redistribuci\xF3n de bienes ajenos"
     m_ID:
       m_NameID: steal
       m_ID: 1742979855
@@ -352,8 +467,8 @@ MonoBehaviour:
     m_CookiePieceSprite: {fileID: 21300000, guid: 28b7d793a8173cc469991ac4c93c963a, type: 3}
     m_HDSprite: {fileID: 21300000, guid: b5b3a07137f48e649a5e9543177286da, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 28b7d793a8173cc469991ac4c93c963a, type: 3}
-    m_Name: Baseball Bat
-    m_Description: Very Bat
+    m_Name: Bate de Beisbol
+    m_Description: Una muestra de tus no tan buenas intenciones
     m_ID:
       m_NameID: baseball_bat
       m_ID: -673659770
@@ -362,8 +477,8 @@ MonoBehaviour:
     m_CookiePieceSprite: {fileID: 21300000, guid: f675673fd14c4bc4f8eae48d78319d8c, type: 3}
     m_HDSprite: {fileID: 21300000, guid: a0cf0df16b02749429693b71b8257071, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: f675673fd14c4bc4f8eae48d78319d8c, type: 3}
-    m_Name: Scissor
-    m_Description: Very Bat
+    m_Name: Tijeras
+    m_Description: Muy puntiagudas. No es recomendable correr con ellas en la mano
     m_ID:
       m_NameID: scissors
       m_ID: 224560939
@@ -372,8 +487,8 @@ MonoBehaviour:
     m_CookiePieceSprite: {fileID: 21300000, guid: 381ea50766ff9e946a372f6f902de103, type: 3}
     m_HDSprite: {fileID: 21300000, guid: 5970629215b8a004d940d4b90708917d, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 381ea50766ff9e946a372f6f902de103, type: 3}
-    m_Name: Flip Flops
-    m_Description: Very Bat
+    m_Name: Chanclas
+    m_Description: El utensilio disuasorio por excelencia
     m_ID:
       m_NameID: flip_flops
       m_ID: 738388376
@@ -382,8 +497,8 @@ MonoBehaviour:
     m_CookiePieceSprite: {fileID: 21300000, guid: a238624f623ea254b9817bdf8c5cf92f, type: 3}
     m_HDSprite: {fileID: 21300000, guid: ccfe033985c79e443a74ac9462574f5f, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: a238624f623ea254b9817bdf8c5cf92f, type: 3}
-    m_Name: Cake
-    m_Description: Very Bat
+    m_Name: Tarta
+    m_Description: Una muestra de tus buenas intenciones
     m_ID:
       m_NameID: cake
       m_ID: -1966748430
@@ -392,8 +507,8 @@ MonoBehaviour:
     m_CookiePieceSprite: {fileID: 21300000, guid: 6cfd658b7d0f18c4ca8c3aae2182d699, type: 3}
     m_HDSprite: {fileID: 21300000, guid: e672bca8424e4a3478264902eac3108a, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 6cfd658b7d0f18c4ca8c3aae2182d699, type: 3}
-    m_Name: Violently
-    m_Description: Very Bat
+    m_Name: Violentamente
+    m_Description: Insiste de manera agresiva
     m_ID:
       m_NameID: violently
       m_ID: -1715915298
@@ -402,8 +517,8 @@ MonoBehaviour:
     m_CookiePieceSprite: {fileID: 21300000, guid: e3393412cb8a53d4fa51facf3396c935, type: 3}
     m_HDSprite: {fileID: 21300000, guid: 3325e3174902ee84ca5567e1cb9ab96f, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: e3393412cb8a53d4fa51facf3396c935, type: 3}
-    m_Name: Brutally
-    m_Description: Very Bat
+    m_Name: Brutalmente
+    m_Description: "La paz nunca fue una opci\xF3n"
     m_ID:
       m_NameID: brutally
       m_ID: 83815085
@@ -412,8 +527,8 @@ MonoBehaviour:
     m_CookiePieceSprite: {fileID: 21300000, guid: 3309febc2aa5e6f4e9efba6cca370606, type: 3}
     m_HDSprite: {fileID: 21300000, guid: 695672ac4af1c334d95857ce713a9865, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 3309febc2aa5e6f4e9efba6cca370606, type: 3}
-    m_Name: Kindly
-    m_Description: Very Bat
+    m_Name: Amablemente
+    m_Description: "Act\xFAa con ternura"
     m_ID:
       m_NameID: kindly
       m_ID: 2072750721
@@ -422,8 +537,8 @@ MonoBehaviour:
     m_CookiePieceSprite: {fileID: 21300000, guid: 2e42295ff8cff0f48a86871af9832f4e, type: 3}
     m_HDSprite: {fileID: 21300000, guid: d508ff50a77a91149a524bcfecd0dbae, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 2e42295ff8cff0f48a86871af9832f4e, type: 3}
-    m_Name: Convincingly
-    m_Description: Very Bat
+    m_Name: Convincentemente
+    m_Description: "Demuestra que est\xE1n equivocados"
     m_ID:
       m_NameID: convincingly
       m_ID: 1186496505
@@ -433,7 +548,7 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 5f6092fe08f678544afddc11f2f3a372, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 4150cc859f149f846a48e1010b860bbb, type: 3}
     m_Name: Mayor
-    m_Description: Very Bat
+    m_Description: El alcalde del pueblo.
     m_ID:
       m_NameID: mayor
       m_ID: 996742298
@@ -442,8 +557,8 @@ MonoBehaviour:
     m_CookiePieceSprite: {fileID: 21300000, guid: fbc0e27999c58df4e97cac0a6de3a9ca, type: 3}
     m_HDSprite: {fileID: 21300000, guid: e174567cb3185b74c93c27244d9b10b3, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: fbc0e27999c58df4e97cac0a6de3a9ca, type: 3}
-    m_Name: Mery
-    m_Description: Very Bat
+    m_Name: Meri
+    m_Description: Cuidadora de vacas.
     m_ID:
       m_NameID: meri
       m_ID: -918260377
@@ -453,7 +568,7 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: fdd8da237cda300459b69e475d759c52, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 77eaa71558755064cbca8511be04e884, type: 3}
     m_Name: Canela
-    m_Description: Very Bat
+    m_Description: Coleccionista de artefactos.
     m_ID:
       m_NameID: canela
       m_ID: -619351516
@@ -463,7 +578,7 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 1565e568885b5b14daf506d27e846fe9, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: eb7fe4a73bd33a940bfcaf4f93f10ae6, type: 3}
     m_Name: Er Johny el setas
-    m_Description: Very Bat
+    m_Description: El peculiar alquimista.
     m_ID:
       m_NameID: johny_setas
       m_ID: -840848411
@@ -473,7 +588,7 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 8a88bfda9c0714d4da7df2f566c1186b, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 194898324a4688d4994fd80f5332beca, type: 3}
     m_Name: Miss Chocolate
-    m_Description: Very Bat
+    m_Description: "La exc\xE9ntrica chocolatera."
     m_ID:
       m_NameID: miss_chocolate
       m_ID: -370492881
@@ -483,7 +598,7 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 45f691e6b848f174d8bdeb543e53c344, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 276ebad8f03140a4095c719e1cdd8a89, type: 3}
     m_Name: El Mantecas
-    m_Description: Very Bat
+    m_Description: El agricultor malhumorado.
     m_ID:
       m_NameID: mantecas
       m_ID: 2085496002
@@ -493,7 +608,7 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: dd1495d1750d7e9459816a04e37834d2, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 403a1ba1c6f85974cbb303ca95a6312e, type: 3}
     m_Name: Lobos
-    m_Description: Very Bat
+    m_Description: Una manada de lobos.
     m_ID:
       m_NameID: wolves
       m_ID: -1938852922
@@ -503,7 +618,7 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 9f691ae598fbf9c4d8eaf18c535bc69c, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 4766e9563f9dbd244a1c536253f95ce8, type: 3}
     m_Name: Ratas
-    m_Description: Very Bat
+    m_Description: Ratas particularmente inteligentes.
     m_ID:
       m_NameID: rats
       m_ID: -1872639626
@@ -513,7 +628,7 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 80b5879500c194c4b9257f212baf50d9, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 95f2385038877f64cb098fb629af4685, type: 3}
     m_Name: Vacas
-    m_Description: Deep Mooooo
+    m_Description: "Las mayores v\xEDctimas en esta historia."
     m_ID:
       m_NameID: vacas
       m_ID: 190186940
@@ -521,13 +636,43 @@ MonoBehaviour:
   m_QuestPiecePrefabComponent:
   - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
     m_ID:
-      m_NameID: plain_cookie
-      m_ID: 1473648501
+      m_NameID: malvavisco_fantasma_tostado
+      m_ID: -662518070
       m_Initialized: 1
   - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
     m_ID:
-      m_NameID: plain_cookie_2
-      m_ID: 390974588
+      m_NameID: merengue_fantasma_tostado
+      m_ID: 1705360255
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: pepito_de_ternura
+      m_ID: 1282509517
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: bizcotroll
+      m_ID: -1684921852
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: jauria_bombon
+      m_ID: 398001378
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: paladin_tortita
+      m_ID: -297091607
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: bizquiborracho
+      m_ID: -651309878
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: citrielfo
+      m_ID: 1999289801
       m_Initialized: 1
   - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
     m_ID:
@@ -646,187 +791,231 @@ MonoBehaviour:
       m_Initialized: 1
   m_CookieData:
   - m_ParentID:
-      m_NameID: plain_cookie
-      m_ID: 1473648501
+      m_NameID: malvavisco_fantasma_tostado
+      m_ID: -662518070
       m_Initialized: 1
-    m_CookieName: Galleta normal
-    m_CookieDescription: Es una galleta normal.
+    m_CookieName: Malvavisco Fantasma Tostado
+    m_CookieDescription: "No es el m\xE1s h\xE1bil, pero act\xFAa con entusiasmo."
     m_Image: {fileID: 0}
   - m_ParentID:
-      m_NameID: plain_cookie_2
-      m_ID: 390974588
+      m_NameID: merengue_fantasma_tostado
+      m_ID: 1705360255
       m_Initialized: 1
-    m_CookieName: "La jaur\xEDa"
-    m_CookieDescription: "Descripci\xF3n de galleta jaur\xEDa."
+    m_CookieName: Merengue Fantasma Tostado
+    m_CookieDescription: Ayudante todoterreno perfecto para tareas sencillas.
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: pepito_de_ternura
+      m_ID: 1282509517
+      m_Initialized: 1
+    m_CookieName: Pepito de Ternura
+    m_CookieDescription: Siempre dispuesto a ayudar.
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: bizcotroll
+      m_ID: -1684921852
+      m_Initialized: 1
+    m_CookieName: Bizcotroll de Naranjas Somnolientas
+    m_CookieDescription: "Es muy pac\xEDfico, pero no controla su propia fuerza"
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: jauria_bombon
+      m_ID: 398001378
+      m_Initialized: 1
+    m_CookieName: "Jaur\xEDa Bomb\xF3n Infernal"
+    m_CookieDescription: "Tratan de ayudar de la forma m\xE1s violenta posible. Los
+      favoritos de Evith."
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: paladin_tortita
+      m_ID: -297091607
+      m_Initialized: 1
+    m_CookieName: "Palad\xEDn Tortita"
+    m_CookieDescription: "Gran defensor de la justicia con m\xE9todos muy violentos"
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: bizquiborracho
+      m_ID: -651309878
+      m_Initialized: 1
+    m_CookieName: Bizquiborracho de Mora
+    m_CookieDescription: Intenta ser persuasivo, pero se le puede ir la mano.
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: citrielfo
+      m_ID: 1999289801
+      m_Initialized: 1
+    m_CookieName: Citrielfo en Copa
+    m_CookieDescription: Es capaz de persuadir incluso a una mula. Aprobado por Nu.
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: attack
       m_ID: -143907494
       m_Initialized: 1
-    m_CookieName: Attack
-    m_CookieDescription: Very Agressive
+    m_CookieName: Atacar
+    m_CookieDescription: "Para cuando la violencia puede ser la soluci\xF3n"
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: dialogate
       m_ID: -949047606
       m_Initialized: 1
-    m_CookieName: Dialogate
-    m_CookieDescription: Very Assistive
+    m_CookieName: Dialogar
+    m_CookieDescription: "La soluci\xF3n m\xE1s diplom\xE1tica ante un problema"
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: assist
       m_ID: 223879643
       m_Initialized: 1
-    m_CookieName: Assist
-    m_CookieDescription: Very Assistive
+    m_CookieName: Ayudar
+    m_CookieDescription: Para echar una mano a alguien en apuros
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: look
       m_ID: 963906251
       m_Initialized: 1
-    m_CookieName: Look
-    m_CookieDescription: Very Assistive
+    m_CookieName: Observar
+    m_CookieDescription: "Observa detenidamente la situaci\xF3n antes de actuar"
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: stare
       m_ID: -1436242079
       m_Initialized: 1
-    m_CookieName: Stare
-    m_CookieDescription: Very Assistive
+    m_CookieName: Mirar fijamente
+    m_CookieDescription: "Observa hasta el punto de llegar a ser inc\xF3modo"
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: steal
       m_ID: 1742979855
       m_Initialized: 1
-    m_CookieName: Steal
-    m_CookieDescription: Very Assistive
+    m_CookieName: Robar
+    m_CookieDescription: "Para la redistribuci\xF3n de bienes ajenos"
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: baseball_bat
       m_ID: -673659770
       m_Initialized: 1
-    m_CookieName: Baseball Bat
-    m_CookieDescription: Very Bat
+    m_CookieName: Bate de Beisbol
+    m_CookieDescription: Una muestra de tus no tan buenas intenciones
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: scissors
       m_ID: 224560939
       m_Initialized: 1
-    m_CookieName: Scissor
-    m_CookieDescription: Very Bat
+    m_CookieName: Tijeras
+    m_CookieDescription: Muy puntiagudas. No es recomendable correr con ellas en
+      la mano
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: flip_flops
       m_ID: 738388376
       m_Initialized: 1
-    m_CookieName: Flip Flops
-    m_CookieDescription: Very Bat
+    m_CookieName: Chanclas
+    m_CookieDescription: El utensilio disuasorio por excelencia
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: cake
       m_ID: -1966748430
       m_Initialized: 1
-    m_CookieName: Cake
-    m_CookieDescription: Very Bat
+    m_CookieName: Tarta
+    m_CookieDescription: Una muestra de tus buenas intenciones
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: violently
       m_ID: -1715915298
       m_Initialized: 1
-    m_CookieName: Violently
-    m_CookieDescription: Very Bat
+    m_CookieName: Violentamente
+    m_CookieDescription: Insiste de manera agresiva
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: brutally
       m_ID: 83815085
       m_Initialized: 1
-    m_CookieName: Brutally
-    m_CookieDescription: Very Bat
+    m_CookieName: Brutalmente
+    m_CookieDescription: "La paz nunca fue una opci\xF3n"
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: kindly
       m_ID: 2072750721
       m_Initialized: 1
-    m_CookieName: Kindly
-    m_CookieDescription: Very Bat
+    m_CookieName: Amablemente
+    m_CookieDescription: "Act\xFAa con ternura"
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: convincingly
       m_ID: 1186496505
       m_Initialized: 1
-    m_CookieName: Convincingly
-    m_CookieDescription: Very Bat
+    m_CookieName: Convincentemente
+    m_CookieDescription: "Demuestra que est\xE1n equivocados"
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: mayor
       m_ID: 996742298
       m_Initialized: 1
     m_CookieName: Mayor
-    m_CookieDescription: Very Bat
+    m_CookieDescription: El alcalde del pueblo.
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: meri
       m_ID: -918260377
       m_Initialized: 1
-    m_CookieName: Mery
-    m_CookieDescription: Very Bat
+    m_CookieName: Meri
+    m_CookieDescription: Cuidadora de vacas.
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: canela
       m_ID: -619351516
       m_Initialized: 1
     m_CookieName: Canela
-    m_CookieDescription: Very Bat
+    m_CookieDescription: Coleccionista de artefactos.
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: johny_setas
       m_ID: -840848411
       m_Initialized: 1
     m_CookieName: Er Johny el setas
-    m_CookieDescription: Very Bat
+    m_CookieDescription: El peculiar alquimista.
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: miss_chocolate
       m_ID: -370492881
       m_Initialized: 1
     m_CookieName: Miss Chocolate
-    m_CookieDescription: Very Bat
+    m_CookieDescription: "La exc\xE9ntrica chocolatera."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: mantecas
       m_ID: 2085496002
       m_Initialized: 1
     m_CookieName: El Mantecas
-    m_CookieDescription: Very Bat
+    m_CookieDescription: El agricultor malhumorado.
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: wolves
       m_ID: -1938852922
       m_Initialized: 1
     m_CookieName: Lobos
-    m_CookieDescription: Very Bat
+    m_CookieDescription: Una manada de lobos.
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: rats
       m_ID: -1872639626
       m_Initialized: 1
     m_CookieName: Ratas
-    m_CookieDescription: Very Bat
+    m_CookieDescription: Ratas particularmente inteligentes.
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: vacas
       m_ID: 190186940
       m_Initialized: 1
     m_CookieName: Vacas
-    m_CookieDescription: Deep Mooooo
+    m_CookieDescription: "Las mayores v\xEDctimas en esta historia."
     m_Image: {fileID: 0}
   m_RecipeData:
   - m_ID:
-      m_NameID: plain_cookie
-      m_ID: 1473648501
+      m_NameID: malvavisco_fantasma_tostado
+      m_ID: -662518070
       m_Initialized: 1
-    m_RecipeName: Grandma's Plain Cookie Recipe
-    m_RecipeDescription: Description Plain Cookie
+    m_RecipeName: Receta para Malvavisco Fantasma Tostado
+    m_RecipeDescription: "No es el m\xE1s h\xE1bil, pero act\xFAa con entusiasmo."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 0
@@ -838,23 +1027,189 @@ MonoBehaviour:
         m_Initialized: 1
       m_Amount: 1
     m_PieceID:
-      m_NameID: plain_cookie
-      m_ID: 1473648501
+      m_NameID: malvavisco_fantasma_tostado
+      m_ID: -662518070
       m_Initialized: 1
   - m_ID:
-      m_NameID: plain_cookie_2
-      m_ID: 390974588
+      m_NameID: merengue_fantasma_tostado
+      m_ID: 1705360255
       m_Initialized: 1
-    m_RecipeName: Grandma's Plain Cookie 2 Recipe
-    m_RecipeDescription: Description Plain Cookie 2
+    m_RecipeName: Receta de Merengue Fantasma Tostado
+    m_RecipeDescription: Ayudante todoterreno perfecto para tareas sencillas.
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price_Good: 75
+    m_Price_Evil: 75
+    m_IngredientsList:
+    - m_ItemID:
+        m_NameID: crema_pastelera_arcana
+        m_ID: -235594117
+        m_Initialized: 1
+      m_Amount: 2
+    - m_ItemID:
+        m_NameID: vainilla_de_la_iluminacion
+        m_ID: 1922958395
+        m_Initialized: 1
+      m_Amount: 1
+    m_PieceID:
+      m_NameID: merengue_fantasma_tostado
+      m_ID: 1705360255
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: pepito_de_ternura
+      m_ID: 1282509517
+      m_Initialized: 1
+    m_RecipeName: Receta de Pepito de Ternura
+    m_RecipeDescription: Siempre dispuesto a ayudar.
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price_Good: 250
+    m_Price_Evil: 0
+    m_IngredientsList:
+    - m_ItemID:
+        m_NameID: chocolate_negro_sempiterno
+        m_ID: 1221400841
+        m_Initialized: 1
+      m_Amount: 2
+    - m_ItemID:
+        m_NameID: crema_pastelera_arcana
+        m_ID: -235594117
+        m_Initialized: 1
+      m_Amount: 1
+    m_PieceID:
+      m_NameID: pepito_de_ternura
+      m_ID: 1282509517
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: bizcotroll
+      m_ID: -1684921852
+      m_Initialized: 1
+    m_RecipeName: Receta de Bizcotroll de Naranjas Somnolientas
+    m_RecipeDescription: "Es muy pac\xEDfico, pero no controla su propia fuerza"
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price_Good: 500
+    m_Price_Evil: 0
+    m_IngredientsList:
+    - m_ItemID:
+        m_NameID: harina_de_fuerza_titanica
+        m_ID: 1850996025
+        m_Initialized: 1
+      m_Amount: 1
+    - m_ItemID:
+        m_NameID: caramelo_fundido_candiscente
+        m_ID: 340510824
+        m_Initialized: 1
+      m_Amount: 2
+    - m_ItemID:
+        m_NameID: levadura_ancestral_de_la_pereza
+        m_ID: -1427575368
+        m_Initialized: 1
+      m_Amount: 1
+    m_PieceID:
+      m_NameID: bizcotroll
+      m_ID: -1684921852
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: jauria_bombon
+      m_ID: 398001378
+      m_Initialized: 1
+    m_RecipeName: "Receta de Jaur\xEDa Bomb\xF3n Infernal"
+    m_RecipeDescription: "Tratan de ayudar de la forma m\xE1s violenta posible. Los
+      favoritos de Evith."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 0
-    m_Price_Evil: 0
+    m_Price_Evil: 250
     m_IngredientsList:
     - m_ItemID:
         m_NameID: compota_de_mora_infernal
         m_ID: -1959704931
+        m_Initialized: 1
+      m_Amount: 2
+    - m_ItemID:
+        m_NameID: chocolate_negro_sempiterno
+        m_ID: 1221400841
+        m_Initialized: 1
+      m_Amount: 1
+    m_PieceID:
+      m_NameID: jauria_bombon
+      m_ID: 398001378
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: paladin_tortita
+      m_ID: -297091607
+      m_Initialized: 1
+    m_RecipeName: "Receta de Palad\xEDn Tortita"
+    m_RecipeDescription: "Gran defensor de la justicia con m\xE9todos muy violentos"
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price_Good: 350
+    m_Price_Evil: 150
+    m_IngredientsList:
+    - m_ItemID:
+        m_NameID: nucleo_de_cereza_animico
+        m_ID: 1174637542
+        m_Initialized: 1
+      m_Amount: 1
+    - m_ItemID:
+        m_NameID: caramelo_fundido_candiscente
+        m_ID: 340510824
+        m_Initialized: 1
+      m_Amount: 2
+    - m_ItemID:
+        m_NameID: harina_de_fuerza_titanica
+        m_ID: 1850996025
+        m_Initialized: 1
+      m_Amount: 2
+    m_PieceID:
+      m_NameID: paladin_tortita
+      m_ID: -297091607
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: bizquiborracho
+      m_ID: -651309878
+      m_Initialized: 1
+    m_RecipeName: Receta de Bizquiborracho de Mora
+    m_RecipeDescription: Intenta ser persuasivo, pero se le puede ir la mano.
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price_Good: 0
+    m_Price_Evil: 250
+    m_IngredientsList:
+    - m_ItemID:
+        m_NameID: crema_pastelera_arcana
+        m_ID: -235594117
+        m_Initialized: 1
+      m_Amount: 2
+    - m_ItemID:
+        m_NameID: compota_de_mora_infernal
+        m_ID: -1959704931
+        m_Initialized: 1
+      m_Amount: 1
+    m_PieceID:
+      m_NameID: bizquiborracho
+      m_ID: -651309878
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: citrielfo
+      m_ID: 1999289801
+      m_Initialized: 1
+    m_RecipeName: Receta de Citrielfo en Copa
+    m_RecipeDescription: Es capaz de persuadir incluso a una mula. Aprobado por Nu.
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price_Good: 150
+    m_Price_Evil: 350
+    m_IngredientsList:
+    - m_ItemID:
+        m_NameID: esencia_de_limon_purificadora
+        m_ID: 334205480
+        m_Initialized: 1
+      m_Amount: 2
+    - m_ItemID:
+        m_NameID: vainilla_de_la_iluminacion
+        m_ID: 1922958395
         m_Initialized: 1
       m_Amount: 1
     - m_ItemID:
@@ -863,18 +1218,18 @@ MonoBehaviour:
         m_Initialized: 1
       m_Amount: 1
     m_PieceID:
-      m_NameID: plain_cookie_2
-      m_ID: 390974588
+      m_NameID: citrielfo
+      m_ID: 1999289801
       m_Initialized: 1
   - m_ID:
       m_NameID: attack
       m_ID: -143907494
       m_Initialized: 1
-    m_RecipeName: Attack Piece Recipe
-    m_RecipeDescription: Very aggresive
+    m_RecipeName: Receta de Atacar
+    m_RecipeDescription: "Para cuando la violencia puede ser la soluci\xF3n."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 1
-    m_Price_Good: 0
+    m_Price_Good: 50
     m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
@@ -890,16 +1245,16 @@ MonoBehaviour:
       m_NameID: dialogate
       m_ID: -949047606
       m_Initialized: 1
-    m_RecipeName: Dialogate Recipe
-    m_RecipeDescription: Very Assistive
+    m_RecipeName: Receta de Dialogar
+    m_RecipeDescription: "La soluci\xF3n m\xE1s diplom\xE1tica ante un problema"
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 0
-    m_Price_Evil: 0
+    m_Price_Evil: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: compota_de_mora_infernal
-        m_ID: -1959704931
+        m_NameID: masa_de_galletas_encantada
+        m_ID: -695902982
         m_Initialized: 1
       m_Amount: 1
     m_PieceID:
@@ -910,16 +1265,16 @@ MonoBehaviour:
       m_NameID: assist
       m_ID: 223879643
       m_Initialized: 1
-    m_RecipeName: Assist Recipe
-    m_RecipeDescription: Very Assistive
+    m_RecipeName: Receta de Ayudar
+    m_RecipeDescription: Para echar una mano a alguien en apuros
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 0
-    m_Price_Evil: 0
+    m_Price_Evil: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: compota_de_mora_infernal
-        m_ID: -1959704931
+        m_NameID: masa_de_galletas_encantada
+        m_ID: -695902982
         m_Initialized: 1
       m_Amount: 1
     m_PieceID:
@@ -930,16 +1285,16 @@ MonoBehaviour:
       m_NameID: look
       m_ID: 963906251
       m_Initialized: 1
-    m_RecipeName: Look Recipe
-    m_RecipeDescription: Very Assistive
+    m_RecipeName: Receta de Observar
+    m_RecipeDescription: "Observa detenidamente la situaci\xF3n antes de actuar"
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price_Good: 0
+    m_Price_Good: 50
     m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: compota_de_mora_infernal
-        m_ID: -1959704931
+        m_NameID: polvo_auxilio
+        m_ID: -1647740518
         m_Initialized: 1
       m_Amount: 1
     m_PieceID:
@@ -950,16 +1305,16 @@ MonoBehaviour:
       m_NameID: stare
       m_ID: -1436242079
       m_Initialized: 1
-    m_RecipeName: Stare Recipe
-    m_RecipeDescription: Very Assistive
+    m_RecipeName: Receta de Mirar fijamente
+    m_RecipeDescription: "Observa hasta el punto de llegar a ser inc\xF3modo"
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price_Good: 0
+    m_Price_Good: 50
     m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: compota_de_mora_infernal
-        m_ID: -1959704931
+        m_NameID: polvo_persuasivo
+        m_ID: -225553538
         m_Initialized: 1
       m_Amount: 1
     m_PieceID:
@@ -970,16 +1325,16 @@ MonoBehaviour:
       m_NameID: steal
       m_ID: 1742979855
       m_Initialized: 1
-    m_RecipeName: Steal Recipe
-    m_RecipeDescription: Very Assistive
+    m_RecipeName: Receta de Robar
+    m_RecipeDescription: "Para la redistribuci\xF3n de bienes ajenos"
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 0
-    m_Price_Evil: 0
+    m_Price_Evil: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: compota_de_mora_infernal
-        m_ID: -1959704931
+        m_NameID: polvo_impetuoso
+        m_ID: -1220311844
         m_Initialized: 1
       m_Amount: 1
     m_PieceID:
@@ -990,16 +1345,16 @@ MonoBehaviour:
       m_NameID: baseball_bat
       m_ID: -673659770
       m_Initialized: 1
-    m_RecipeName: Grandma's Plain Cookie Recipe
-    m_RecipeDescription: Desc
+    m_RecipeName: Receta de bate de beisbol
+    m_RecipeDescription: Una muestra de tus no tan buenas intenciones
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price_Good: 0
+    m_Price_Good: 50
     m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: compota_de_mora_infernal
-        m_ID: -1959704931
+        m_NameID: polvo_impetuoso
+        m_ID: -1220311844
         m_Initialized: 1
       m_Amount: 2
     m_PieceID:
@@ -1010,18 +1365,24 @@ MonoBehaviour:
       m_NameID: scissors
       m_ID: 224560939
       m_Initialized: 1
-    m_RecipeName: Scissor Recipe
-    m_RecipeDescription: Desc
+    m_RecipeName: Receta de Tijeras
+    m_RecipeDescription: Muy puntiagudas. No es recomendable correr con ellas en
+      la mano.
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price_Good: 0
-    m_Price_Evil: 0
+    m_Price_Good: 50
+    m_Price_Evil: 10
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: compota_de_mora_infernal
-        m_ID: -1959704931
+        m_NameID: polvo_impetuoso
+        m_ID: -1220311844
         m_Initialized: 1
-      m_Amount: 2
+      m_Amount: 3
+    - m_ItemID:
+        m_NameID: polvo_persuasivo
+        m_ID: -225553538
+        m_Initialized: 1
+      m_Amount: 1
     m_PieceID:
       m_NameID: scissors
       m_ID: 224560939
@@ -1030,18 +1391,23 @@ MonoBehaviour:
       m_NameID: flip_flops
       m_ID: 738388376
       m_Initialized: 1
-    m_RecipeName: Flip Flops Recipe
-    m_RecipeDescription: Desc
+    m_RecipeName: Receta de Chanclas
+    m_RecipeDescription: El utensilio disuasorio por excelencia
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price_Good: 0
+    m_Price_Good: 50
     m_Price_Evil: 0
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: compota_de_mora_infernal
-        m_ID: -1959704931
+        m_NameID: polvo_persuasivo
+        m_ID: -225553538
         m_Initialized: 1
-      m_Amount: 2
+      m_Amount: 3
+    - m_ItemID:
+        m_NameID: polvo_impetuoso
+        m_ID: -1220311844
+        m_Initialized: 1
+      m_Amount: 1
     m_PieceID:
       m_NameID: flip_flops
       m_ID: 738388376
@@ -1050,21 +1416,16 @@ MonoBehaviour:
       m_NameID: cake
       m_ID: -1966748430
       m_Initialized: 1
-    m_RecipeName: Cake Recipe
-    m_RecipeDescription: Desc
+    m_RecipeName: Receta de Tarta
+    m_RecipeDescription: Una muestra de tus buenas intenciones
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price_Good: 0
-    m_Price_Evil: 0
+    m_Price_Good: 10
+    m_Price_Evil: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: compota_de_mora_infernal
-        m_ID: -1959704931
-        m_Initialized: 1
-      m_Amount: 2
-    - m_ItemID:
-        m_NameID: nucleo_de_cereza_animico
-        m_ID: 1174637542
+        m_NameID: polvo_auxilio
+        m_ID: -1647740518
         m_Initialized: 1
       m_Amount: 2
     m_PieceID:
@@ -1075,23 +1436,18 @@ MonoBehaviour:
       m_NameID: violently
       m_ID: -1715915298
       m_Initialized: 1
-    m_RecipeName: Violently Recipe
-    m_RecipeDescription: Desc
+    m_RecipeName: Receta de Violentamente
+    m_RecipeDescription: Insiste de manera agresiva
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price_Good: 0
-    m_Price_Evil: 0
+    m_Price_Good: 50
+    m_Price_Evil: 10
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: nucleo_de_cereza_animico
-        m_ID: 1174637542
+        m_NameID: polvo_impetuoso
+        m_ID: -1220311844
         m_Initialized: 1
-      m_Amount: 2
-    - m_ItemID:
-        m_NameID: crema_pastelera_arcana
-        m_ID: -235594117
-        m_Initialized: 1
-      m_Amount: 2
+      m_Amount: 3
     m_PieceID:
       m_NameID: violently
       m_ID: -1715915298
@@ -1100,23 +1456,18 @@ MonoBehaviour:
       m_NameID: brutally
       m_ID: 83815085
       m_Initialized: 1
-    m_RecipeName: Brutally Recipe
-    m_RecipeDescription: Desc
+    m_RecipeName: Receta de Brutalmente
+    m_RecipeDescription: "La paz nunca fue una opci\xF3n"
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
-    m_Price_Good: 0
-    m_Price_Evil: 0
+    m_Price_Good: 10
+    m_Price_Evil: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: nucleo_de_cereza_animico
-        m_ID: 1174637542
+        m_NameID: polvo_impetuoso
+        m_ID: -1220311844
         m_Initialized: 1
-      m_Amount: 2
-    - m_ItemID:
-        m_NameID: crema_pastelera_arcana
-        m_ID: -235594117
-        m_Initialized: 1
-      m_Amount: 2
+      m_Amount: 5
     m_PieceID:
       m_NameID: brutally
       m_ID: 83815085
@@ -1125,23 +1476,18 @@ MonoBehaviour:
       m_NameID: kindly
       m_ID: 2072750721
       m_Initialized: 1
-    m_RecipeName: Kindly Recipe
-    m_RecipeDescription: Desc
+    m_RecipeName: Receta de Amablemente
+    m_RecipeDescription: "Act\xFAa con ternura"
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 0
-    m_Price_Evil: 0
+    m_Price_Evil: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: nucleo_de_cereza_animico
-        m_ID: 1174637542
+        m_NameID: polvo_auxilio
+        m_ID: -1647740518
         m_Initialized: 1
-      m_Amount: 2
-    - m_ItemID:
-        m_NameID: crema_pastelera_arcana
-        m_ID: -235594117
-        m_Initialized: 1
-      m_Amount: 2
+      m_Amount: 3
     m_PieceID:
       m_NameID: kindly
       m_ID: 2072750721
@@ -1150,23 +1496,18 @@ MonoBehaviour:
       m_NameID: convincingly
       m_ID: 1186496505
       m_Initialized: 1
-    m_RecipeName: Convincingly Recipe
-    m_RecipeDescription: Desc
+    m_RecipeName: Receta de Convincentemente
+    m_RecipeDescription: "Demuestra que est\xE1n equivocados"
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 0
-    m_Price_Evil: 0
+    m_Price_Evil: 50
     m_IngredientsList:
     - m_ItemID:
-        m_NameID: nucleo_de_cereza_animico
-        m_ID: 1174637542
+        m_NameID: polvo_persuasivo
+        m_ID: -225553538
         m_Initialized: 1
-      m_Amount: 2
-    - m_ItemID:
-        m_NameID: crema_pastelera_arcana
-        m_ID: -235594117
-        m_Initialized: 1
-      m_Amount: 2
+      m_Amount: 3
     m_PieceID:
       m_NameID: convincingly
       m_ID: 1186496505
@@ -3369,15 +3710,7 @@ MonoBehaviour:
           colega."
         - "\xA1Todo es posible cuando se consumen Champi\xF1ones de la Visi\xF3n,
           son alucinantes, colega!"
-        m_DeitiesResultDialogue:
-        - m_DeityID: 1
-          m_Dialogue:
-          - "\xBFEn serio vas a ayudar a que vuelvan a la normalidad? \xA1Yo quer\xEDa
-            hasta donde llegaba la cosa!"
-        - m_DeityID: 0
-          m_Dialogue:
-          - Es mejor que la naturaleza siga su curso. Hay cosas que es mejor dejar
-            inalteradas.
+        m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
             m_NameID: competition_safe
@@ -3430,7 +3763,7 @@ MonoBehaviour:
             m_NameID: johnny
             m_ID: -1650144070
             m_Initialized: 1
-          m_Tag: 1
+          m_Tag: 0
           m_Value: 3
         m_ResultNPCDialogue:
         - "\xA1T\xEDiiiiiio, la cosa se ha puesto fina! Fu\xED a por setas por la
@@ -3473,15 +3806,7 @@ MonoBehaviour:
           as\xED de simple, colega."
         - "He visto cosas m\xE1s extra\xF1as de lo habitual, eso no puede ser buena
           se\xF1al, colega."
-        m_DeitiesResultDialogue:
-        - m_DeityID: 1
-          m_Dialogue:
-          - "\xBFEn serio vas a ayudar a que vuelvan a la normalidad? \xA1Yo quer\xEDa
-            hasta donde llegaba la cosa!"
-        - m_DeityID: 0
-          m_Dialogue:
-          - Es mejor que la naturaleza siga su curso. Hay cosas que es mejor dejar
-            inalteradas.
+        m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
             m_NameID: competition_safe
@@ -3946,7 +4271,7 @@ MonoBehaviour:
             m_NameID: miss_chocolate
             m_ID: -370492881
             m_Initialized: 1
-          m_Tag: 1
+          m_Tag: 0
           m_Value: 3
         m_ResultNPCDialogue:
         - "\xA1\xBFC\xF3mo ha podido salir tan mal?! Las vacas est\xE1n para el arrastre.
@@ -4379,6 +4704,1470 @@ MonoBehaviour:
       m_Name: 
       m_Active: 0
       m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: a_regular_day
+        m_ID: 1582812731
+        m_Initialized: 1
+      m_Title: "Un d\xEDa normal"
+      m_IntroductionDialogue:
+      - "\xDAltimamente no ha ocurrido nada inusual en mi granja. Todo va bien, \xA1demasiado
+        bien!"
+      - "\xA1\xBFPor qu\xE9 estoy enfadado, me preguntas?! \xA1Pues porque claramente
+        se avecinan nuevos problemas!"
+      - "\xA1Lo siento en mis huesos, mis momentos de tranquilidad se van a acabar
+        pronto!"
+      - "En el momento que baje la guardia\u2026 \xA1Pum! El desastre volver\xE1
+        a mis tierras."
+      m_QuestGiver: mantecas
+      m_Description: "El Mantecas est\xE1 muy preocupado despu\xE9s de tener unos
+        d\xEDas de tranquilidad. Est\xE1 esperando a que ocurra el siguiente desastre
+        en su granja."
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: mantecas
+            m_ID: 2085496002
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 5
+        m_ResultNPCDialogue:
+        - "\xA1El caos ha vuelto a mi granja! \xA1Sab\xEDa que algo gordo se avecinaba!"
+        - "\xA1Han aparecido topos y langostas para destrozarme los cultivos! \xA1Adem\xE1s
+          las ratas han vuelto a ocupar mi granero!"
+        - "\xA1Sucias alima\xF1as! \xA1\xBFCreen que pueden conmigo?! \xA1Qu\xE9
+          vengan! \xA1Se van a llevar su merecido!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Lo est\xE1s dando todo para cumplir el deseo de ese tipo, \xBFno? \xA1Espero
+            que no se arrepienta!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Si bien la petici\xF3n de ese granjero es muy extra\xF1a, no creo necesario
+            llegar tan lejos."
+        m_Repercusion:
+          m_ID:
+            m_NameID: mantecas_farm_devastated
+            m_ID: -1421179957
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: a_regular_day
+            m_ID: 1582812731
+            m_Initialized: 1
+          m_Name: Mantecas Farm Devastated
+          m_Active: 0
+          m_Value: -30
+      - m_Condition:
+          m_Target:
+            m_NameID: mantecas
+            m_ID: 2085496002
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "\xA1Se avecinan grandes problemas en mi granja!  \xA1Vuelven a ocurrir
+          cosas extra\xF1as!"
+        - "\xA1Han aparecido formas en mis cultivos con forma de calavera! \xA1Esto
+          solo puede ser una se\xF1al de que algo se aproxima!"
+        - "\xA1Va a ocurrir en cualquier momento, me estoy impacientando!"
+        - "\xA1Ardo en deseos de ver a qu\xE9 me enfrentar\xE9 esta vez! \xA1Sea
+          lo que sea, mi granja no caer\xE1!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Ir\xEDa yo misma a causar el caos en su granja, pero soy una deidad
+            muy ocupada, \xBFsabes?"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "\xBFSer\xE1 mala suerte lo de ese granjero o \xE9l mismo se busca sus
+            problemas?"
+        m_Repercusion:
+          m_ID:
+            m_NameID: mantecas_paranoic
+            m_ID: -2043321078
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: a_regular_day
+            m_ID: 1582812731
+            m_Initialized: 1
+          m_Name: mantecas_paranoic
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: mantecas
+            m_ID: 2085496002
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "No ha vuelto a ocurrir nada en mi granja. \xA1De hecho, est\xE1 mejor
+          que nunca!"
+        - Mis cultivos crecen sanos, la calidad del suelo ha mejorado y no hay ninguna
+          plaga que erradicar.
+        - "\xA1\xBFMe toman por tonto?!\t\xA1\xBFCu\xE1ndo van a volver a fastidiarme?!
+          \xA1Me estoy impacientando!"
+        - "\xA1Es imposible que de repente todo me vaya bien! \xA1Impensable! \xA1Debe
+          de avecinarse el fin del mundo!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Pensaba que ibas a ayudar a ese pobre granjero con su escasez de desastres.
+            \xA1Una pena!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - No siempre lo que queremos tener y lo que necesitamos de verdad coinciden.
+        m_Repercusion:
+          m_ID:
+            m_NameID: mantecas_farm_revitalized
+            m_ID: -1558447323
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: a_regular_day
+            m_ID: 1582812731
+            m_Initialized: 1
+          m_Name: Mantecas Farn Revitalized
+          m_Active: 0
+          m_Value: 30
+      - m_Condition:
+          m_Target:
+            m_NameID: mantecas
+            m_ID: 2085496002
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Una nueva amenaza se cierne sobre mi granja! \xA1Tengo que prepararme
+          para lo peor!"
+        - "\xA1Han aparecido unas marcas extra\xF1as en la pared de mi casa, y tambi\xE9n
+          he escuchado ruidos extra\xF1os por la noche!"
+        - "\xA1Hay algo ah\xED fuera que se est\xE1 preparando para amargarme la
+          vida, pero estoy preparado para cualquier cosa!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Ir\xEDa yo misma a causar el caos en su granja, pero soy una deidad
+            muy ocupada, \xBFsabes?"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "\xBFSer\xE1 mala suerte lo de ese granjero o \xE9l mismo se busca sus
+            problemas?"
+        m_Repercusion:
+          m_ID:
+            m_NameID: mantecas_paranoic
+            m_ID: -2043321078
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: a_regular_day
+            m_ID: 1582812731
+            m_Initialized: 1
+          m_Name: mantecas_paranoic
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: mantecas
+            m_ID: 2085496002
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Todav\xEDa no ha ocurrido nada raro, de hecho, todo lo contrario, \xA1mi
+          granja va bien!"
+        - "\xA1Mis cultivos est\xE1n en mejores condiciones y los pastos son m\xE1s
+          verdes!"
+        - "\xBFPuede ser que despu\xE9s de tantas desgracias, por fin mi trabajo
+          haya dado sus frutos?"
+        - "\xA1Ni de broma! \xA1Algo va a pasar, seguro!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Pensaba que ibas a ayudar a ese pobre granjero con su escasez de desastres.
+            \xA1Una pena!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - No siempre lo que queremos tener y lo que necesitamos de verdad coinciden.
+        m_Repercusion:
+          m_ID:
+            m_NameID: mantecas_farm_revitalized
+            m_ID: -1558447323
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: a_regular_day
+            m_ID: 1582812731
+            m_Initialized: 1
+          m_Name: Mantecas Farn Revitalized
+          m_Active: 0
+          m_Value: 30
+      - m_Condition:
+          m_Target:
+            m_NameID: mantecas
+            m_ID: 2085496002
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Han aparecido topos en mi granja! \xA1Est\xE1n destrozando mis cultivos!"
+        - "\xA1Sab\xEDa que algo estaba por suceder! \xA1Mi intuici\xF3n nunca falla!"
+        - "\xA1Esos malditos estaban esperando su oportunidad para amargarme la existencia!
+          \xA1Tendr\xE1n su merecido!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Veo que te has tomado muy en serio la petici\xF3n de ese tipo. \xA1Conseguir\xE1
+            lo que desea!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Me da un poco de pena ese granjero, parece que s\xF3lo vive para sobrevivir
+            un desastre tras otro."
+        m_Repercusion:
+          m_ID:
+            m_NameID: mantecas_farm_damaged
+            m_ID: 1496986625
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: a_regular_day
+            m_ID: 1582812731
+            m_Initialized: 1
+          m_Name: Mantecas Farm Damaged
+          m_Active: 0
+          m_Value: -15
+      m_AllPossibleTargets:
+      - m_NameID: mantecas
+        m_ID: 2085496002
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: mushroom_profecy
+        m_ID: 432792811
+        m_Initialized: 1
+      m_Title: "La profec\xEDa del hongo"
+      m_IntroductionDialogue:
+      - "Estoy muy rayado estos d\xEDas, en plan, no soy capaz de pensar en cualquier
+        otra cosa, colega."
+      - "De normal cuando medito, veo formas y colores fuera de la comprensi\xF3n
+        humana, colega."
+      - "El caso es que el otro d\xEDa me llam\xF3 la atenci\xF3n una luz m\xE1s
+        resplandeciente que cualquier cosa, colega."
+      - "No sabr\xEDa describirte nada m\xE1s, pero tiene que ser una se\xF1al de
+        algo importante, colega."
+      m_QuestGiver: johnny
+      m_Description: "En su \xFAltima sesi\xF3n de meditaci\xF3n, Johnny ha tenido
+        la visi\xF3n de una luz muy brillante. Est\xE1 convencido de que se trata
+        de un augurio."
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: johnny
+            m_ID: -1650144070
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 5
+        m_ResultNPCDialogue:
+        - "\xA1T\xEDiiiio, ayer encontr\xE9 algo flipante!  \xA1Nada m\xE1s y nada
+          menos que un \xC1mbar Perezoso, colega!"
+        - "\xA1Es s\xFAper resplandeciente, tiene el mismo brillo que v\xED en la
+          profec\xEDa, colega!"
+        - "\xA1Llevaba mucho tiempo busc\xE1ndolo! Pensaba que ya no quedaba ninguno
+          por aqu\xED, colega."
+        - "Hice bien en vagar por el bosque de noche, mi intuici\xF3n me llev\xF3
+          hasta donde se encontraba, colega."
+        - Si trituras uno de esos con cuidado, se pueden utilizar para medicina y
+          alquimia, colega.
+        - "\xA1Y adem\xE1s era uno de los gordos, con esto podr\xE9 hacer cosas flipantes,
+          colega!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Nu es muy fan de la meditaci\xF3n y ese tipo de actividades inactivas.
+            \xA1Pero yo las odio!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "\xBFPodr\xEDa ese joven alcanzar el estado m\xE1s profundo del trance?
+            Muy pocos lo han logrado."
+        m_Repercusion:
+          m_ID:
+            m_NameID: johnny_enhanced
+            m_ID: -1753202715
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: mushroom_profecy
+            m_ID: 432792811
+            m_Initialized: 1
+          m_Name: Johnny Enhanced
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: johnny
+            m_ID: -1650144070
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "\xA1T\xEDiiiiio, se me ha revelado el aunt\xE8ntico significado de la
+          luz que v\xED el otro d\xEDa, colega!"
+        - "Mientras meditaba, el legendario Se\xF1or Galleta me revel\xF3 su significado,
+          colega."
+        - "\xBFEl Se\xF1or Galleta? Pude vislumbrar su figura \xA1Se necesita mucha
+          concentraci\xF3n para eso, colega!"
+        - "Cuanto m\xE1s profundo es el trance, m\xE1s cosas incre\xEDbles puedes
+          llegar a ver, colega."
+        - "\xBFLa luz? Result\xF3 ser la luz del Sol d\xE1ndome en la cara, \xA1una
+          se\xF1al de un ma\xF1ana mejor, colega!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "No entiendo el inter\xE9s de Nu por ese tal Johnny. \xA1Si s\xF3lo se
+            dedica a hacer el vago!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Quiz\xE1s sea adecuado persuadir a ese joven antes de que pueda llegar
+            a perjudicarse m\xE1s."
+        m_Repercusion:
+          m_ID:
+            m_NameID: johnny_neutral
+            m_ID: 1654980862
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: mushroom_profecy
+            m_ID: 432792811
+            m_Initialized: 1
+          m_Name: Johnny Neutral
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: johnny
+            m_ID: -1650144070
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Llevo ya bastante rato meditando sobre la luz que v\xED, colega."
+        - "A\xFAn no lo tengo muy claro, pero ayer escuch\xE9 voces extra\xF1as,
+          diferentes a las habituales, colega."
+        - "\xA1Esto solo puede significar que estoy adentr\xE1ndome en un trance
+          cada vez m\xE1s profundo, colega!"
+        - "\xBFEl trance? Es un estado mental donde se puede apreciar las costuras
+          de la realidad, colega."
+        - "Se necesita mucha concentraci\xF3n para alcanzarlo, y muchas setas, colega."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "No entiendo el inter\xE9s de Nu por ese tal Johnny. \xA1Si s\xF3lo se
+            dedica a hacer el vago!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Quiz\xE1s sea adecuado persuadir a ese joven antes de que pueda llegar
+            a perjudicarse m\xE1s."
+        m_Repercusion:
+          m_ID:
+            m_NameID: johnny_neutral
+            m_ID: 1654980862
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: mushroom_profecy
+            m_ID: 432792811
+            m_Initialized: 1
+          m_Name: Johnny Neutral
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: johnny
+            m_ID: -1650144070
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1La suerte me sonr\xEDe! Vagando por el bosque me he encontrado con
+          un peque\xF1o tesoro, colega."
+        - "\xBFQui\xE9n hubiera pensado que encontrar\xEDa un saco con monedas en
+          mitad del bosque? \xA1Es flipante, colega!"
+        - "Parec\xEDa que algo me guiaba hacia el lugar donde lo encontr\xE9, yo
+          tan solo me dej\xE9 llevar, colega."
+        - "Estoy seguro de que la luz que v\xED fue el brillo del peque\xF1o tesoro.
+          \xA1Es pura l\xF3gica, colega!"
+        - Aunque no sea gran cosa, puedo permitirme comprar algunos materiales raros,
+          colega.
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Nu es muy fan de la meditaci\xF3n y ese tipo de actividades inactivas.
+            \xA1Pero yo las odio!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "\xBFPodr\xEDa ese joven alcanzar el estado m\xE1s profundo del trance?
+            Muy pocos lo han logrado."
+        m_Repercusion:
+          m_ID:
+            m_NameID: johnny_enhanced
+            m_ID: -1753202715
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: mushroom_profecy
+            m_ID: 432792811
+            m_Initialized: 1
+          m_Name: Johnny Enhanced
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: johnny
+            m_ID: -1650144070
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1He descubierto el significado de esa luz, colega!"
+        - "Bueno, menos mal que lo he descubierto pronto, \xA1porque se pod\xEDa
+          liar bastante parda, colega!"
+        - "Estaba yo meditando como todas las noches y ocurri\xF3 de repente, as\xED
+          sin previo aviso, colega."
+        - "\xA1El saco con mis... materiales de meditaci\xF3n empez\xF3 a arder,
+          tal cual te lo digo colega!"
+        - Suerte que no estaba en un trance profundo, porque si no, no me hubiera
+          ni inmutado, colega.
+        - "Un poco m\xE1s y se me quema la casa. \xA1Pero definitivamente la luz
+          que v\xED se trataba de eso, colega!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "La meditaci\xF3n es para la gente que quiere dormir pero no puede dormir.
+            No le veo la gracia."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Entrar en el mundo de la meditaci\xF3n es demasiado peligroso para gente
+            corriente."
+          - "En serio, un novicio podr\xEDa perder facultades mentales si se adentra
+            demasiado."
+        m_Repercusion:
+          m_ID:
+            m_NameID: johnny_sabotaged
+            m_ID: 1261100355
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: mushroom_profecy
+            m_ID: 432792811
+            m_Initialized: 1
+          m_Name: Johnny Sabotaged
+          m_Active: 0
+          m_Value: -15
+      m_AllPossibleTargets:
+      - m_NameID: johnny
+        m_ID: -1650144070
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: mayor_worries
+        m_ID: -1677399016
+        m_Initialized: 1
+      m_Title: Preocupaciones mayores
+      m_IntroductionDialogue:
+      - Desde hace ya un tiempo, no paran de ocurrir problemas en el pueblo, estoy
+        muy preocupado.
+      - "Lo peor es que mucha gente me echa las culpas a m\xED, como si fuera mi
+        culpa."
+      - Siempre he actuado en beneficio del pueblo, aunque eso seguro que ya lo sabes.
+      - "Aunque bueno, lo cierto es que normalmente\u2026hago medidas a muy largo
+        plazo."
+      - "\xA1No quiero que la gente se rebele contra m\xED, entonces s\xED que estar\xEDamos
+        en la ruina!"
+      - "Mi mayor prioridad va a ser arreglar las cosas en el pueblo, pero no s\xE9
+        que puedo hacer."
+      m_QuestGiver: mayor
+      m_Description: "El alcalde est\xE1 preocupado por el disgusto general de la
+        poblaci\xF3n con su gesti\xF3n. Quiere hacer las cosas bien pero teme que
+        el pueblo se rebele en su contra."
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "\xA1Todo ha sido un malentendido! Me hab\xEDa hecho la idea equivocada
+          de la situaci\xF3n."
+        - "Alguien ha hecho m\xFAltiples pintadas en la fachada de mi casa, y no
+          son peque\xF1as precisamente."
+        - "Normalmente condenar\xEDa tal acto vand\xE1lico, pero he captado el mensaje
+          del perpetrador en ellas."
+        - La gente del pueblo no necesita grandes estatuas de mi persona, ni arbustos
+          nuevos en los parques.
+        - "Y lo que m\xE1s me duele, \xA1tampoco necesitan un puerto mercante en
+          la Charca!"
+        - "\xA1Jam\xE1s abandonar\xE9 mi proyecto de construir un bullicioso puerto,
+          aunque sea para muy largo plazo!"
+        - "Pero aun as\xED no me queda m\xE1s remedio que destinar fondos a otros
+          asuntos m\xE1s importantes."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFEl puerto de la charca? \xA1\xBFEl alcalde piensa hacer que los
+            barcos lleguen por tierra o qu\xE9?!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Pienso que ser\xEDa m\xE1s plausible construir m\xE1quinas voladoras
+            antes que un puerto en un lugar como ese."
+        m_Repercusion:
+          m_ID:
+            m_NameID: mayor_relaxed
+            m_ID: -2113343638
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: mayor_worries
+            m_ID: -1677399016
+            m_Initialized: 1
+          m_Name: Mayor Relaxed
+          m_Active: 0
+          m_Value: 30
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "\xA1Esto es un desastre! \xA1No solo me asaltan por la calle si no que
+          adem\xE1s me env\xEDan amenazas por correo!"
+        - "\xA1Menuda falta de respeto a mi persona! \xA1Es inaceptable!"
+        - "Pero ahora no hay tiempo de buscar al responsable. \xA1Muy pronto puede
+          ocurrir una revuelta!"
+        - "\xA1Mi cabeza rodar\xE1 por las escaleras del ayuntamiento! Tengo que
+          hacer algo al respecto yo mismo."
+        - "Voy a convocar una asamblea de emergencia ma\xF1ana mismo."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFCu\xE1ndo estallar\xE1 entonces la revoluci\xF3n? \xA1Quiero estar
+            all\xED en primera fila liderando los saqueos!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Amenazar a un gobernante puede ser una forma efectiva de hacerlo razonar.
+            Si respeta a su pueblo, claro est\xE1."
+        m_Repercusion:
+          m_ID:
+            m_NameID: mayor_alerted
+            m_ID: 484283042
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: mayor_worries
+            m_ID: -1677399016
+            m_Initialized: 1
+          m_Name: Mayor Alerted
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - Parece ser que me estaba preocupando demasiado por el descontento de la
+          gente.
+        - "He recibido una carta an\xF3nima esta ma\xF1ana diciendo maravillas sobre
+          c\xF3mo ha quedado la plaza."
+        - "\xA1Cu\xE1nta raz\xF3n tiene, esa estatua m\xEDa le queda de maravilla!
+          Sab\xEDa que quedar\xEDa bien."
+        - Estamos lejos de estar en nuestro mejor momento, pero la cosa va mejorando
+          poco a poco.
+        - "\xA1El d\xEDa en que lleguen barcos mercantes al puerto, la prosperidad
+          llegar\xE1 a la ciudad, ya lo ver\xE1n!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1Ese alcalde no sabe hacer sufrir a su pueblo en condiciones! \xA1Deber\xEDa
+            de asesorarle para que lo haga mejor!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "No es raro que un gobernante pierda el sentido com\xFAn con el tiempo.
+            Aunque este caso es un tanto exagerado."
+        m_Repercusion:
+          m_ID:
+            m_NameID: mayor_ignore
+            m_ID: -1511038957
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: mayor_worries
+            m_ID: -1677399016
+            m_Initialized: 1
+          m_Name: Mayor_Ignore
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Puede ser que me haya precipitado al pensar que la situaci\xF3n se iba
+          a descontrolar en el pueblo."
+        - Durante la noche, alguien ha hecho pintadas en las paredes del ayuntamiento.
+        - Son pintadas sobre el mal estado de los caminos por el campo y sobre lo
+          intransitables que son.
+        - "Hacer pintadas es un acto vand\xE1lico, s\xED. Pero\u2026 me doy cuenta
+          de que tienen un poco de raz\xF3n."
+        - "Llevo tanto tiempo centrado en la decoraci\xF3n de los parques que hab\xEDa
+          olvidado todo lo dem\xE1s."
+        - "Supongo que tendr\xE9 que posponer mis planes para otro momento."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFEl puerto de la charca? \xA1\xBFEl alcalde piensa hacer que los
+            barcos lleguen por tierra o qu\xE9?!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Pienso que ser\xEDa m\xE1s plausible construir m\xE1quinas voladoras
+            antes que un puerto en un lugar como ese."
+        m_Repercusion:
+          m_ID:
+            m_NameID: mayor_relaxed
+            m_ID: -2113343638
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: mayor_worries
+            m_ID: -1677399016
+            m_Initialized: 1
+          m_Name: Mayor Relaxed
+          m_Active: 0
+          m_Value: 30
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Es mucho peor de lo que pensaba! \xA1La gente me odia y no duda en
+          hacer pintadas en mi casa!"
+        - "Para variar, no s\xE9 qui\xE9n es el responsable de tales actos, pero
+          eso no importa ahora mismo."
+        - "\xA1\xBFNo se dan cuenta de que ya estoy haciendo todo lo que puedo?!
+          \xA1Deber\xEDan ser m\xE1s pacientes!"
+        - "Tendr\xE9 que adelantar la asamblea del mes que viene para ver qu\xE9
+          se puede hacer."
+        - "No nos queda demasiado dinero despu\xE9s de los gastos del mes pasado,
+          pero para emergencias cubre."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFCu\xE1ndo estallar\xE1 entonces la revoluci\xF3n? \xA1Quiero estar
+            all\xED en primera fila liderando los saqueos!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Amenazar a un gobernante puede ser una forma efectiva de hacerlo razonar.
+            Si respeta a su pueblo, claro est\xE1."
+        m_Repercusion:
+          m_ID:
+            m_NameID: mayor_alerted
+            m_ID: 484283042
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: mayor_worries
+            m_ID: -1677399016
+            m_Initialized: 1
+          m_Name: Mayor Alerted
+          m_Active: 0
+          m_Value: 15
+      m_AllPossibleTargets:
+      - m_NameID: mayor
+        m_ID: 996742298
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: old_friends
+        m_ID: 34470229
+        m_Initialized: 1
+      m_Title: Viejos amigos
+      m_IntroductionDialogue:
+      - "\xBFRecuerdas a las ratas inteligentes con las que estuvo lidiando el Mantecas?
+        \xA1Han vuelto otra vez!"
+      - "\xA1Y no han escogido otro lugar que mi granja como su nuevo hogar! \xA1Qu\xE9
+        espanto!"
+      - "\xA1Pero la cosa no termina ah\xED! \xBFRecuerdas a los lobos que nos dieron
+        problemas hace un tiempo?"
+      - "\xA1Pues adivina! \xA1Tambi\xE9n han decidido volver para acosar a mis pobres
+        vacas!"
+      - "Al menos las ratas, siendo tan territoriales, est\xE1n defendiendo la granja
+        de los lobos, no todo es malo."
+      - "Obviamente quiero que dejen mi granja en paz, \xA1\xBFPero qu\xE9 puedo
+        hacer ante este caos?!"
+      m_QuestGiver: meri
+      m_Description: Los lobos y las ratas inteligentes han vuelto para hacer estragos
+        en la granja de Meri. Por suerte, las ratas defienden la granja de los lobos.
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: rats
+            m_ID: -1872639626
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 5
+        m_ResultNPCDialogue:
+        - "La cosa se ha tranquilizado un poco en mi granja. Aunque no doy cr\xE9dito
+          por lo que ha ocurrido."
+        - "\xA1De alguna manera, las ratas han conseguido domesticar a los lobos!
+          \xA1Los utilizan de montura y todo!"
+        - Por lo menos ya han abandonado mi granja, supongo que ahora pueden ir a
+          donde quieran.
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFY si las ratas pudieran cabalgar sobre las vacas? \xA1\xBFNo ser\xEDa
+            genial?!"
+          - "\xA1Tengo que intentarlo un d\xEDa de estos!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "\xBFC\xF3mo resolver\xEDa yo esta situaci\xF3n? Intentar\xEDa que las
+            ratas y los lobos pudieran convivir en paz."
+          - Aunque no creo que vaya a ser posible.
+        m_Repercusion:
+          m_ID:
+            m_NameID: rats_mounting_wolves
+            m_ID: -1323766611
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: old_friends
+            m_ID: 34470229
+            m_Initialized: 1
+          m_Name: Rats Mounting Wolves
+          m_Active: 0
+          m_Value: 30
+      - m_Condition:
+          m_Target:
+            m_NameID: wolves
+            m_ID: -1938852922
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Los lobos han dejado de molestarme, aunque no s\xE9 por qu\xE9 se han
+          ido. Ahora solo quedan las ratas."
+        - Por lo visto han ido a atacar al Johnny mientras deambulaba por el bosque.
+        - "\xA1Espera a que termine! El Johnny se encuentra perfectamente, bueno..
+          a su manera, ya sabes."
+        - "Dicen que consigui\xF3 salvarse gracias a que estaba impregnado con el
+          fuerte olor de sus mejunjes."
+        - Es un tipo bastante raro, y nos suele dar problemas con sus experimentos.
+          Pero no es un mal tipo.
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Alguien deber\xEDa de ense\xF1arle a esas ratas c\xF3mo forjar y portar
+            armas"
+          - "Aunque seguro que aprender\xE1n ellas solas si les damos tiempo."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "No ser\xEDa mala idea a estas alturas entablar relaciones diplom\xE1ticas
+            con las ratas."
+        m_Repercusion:
+          m_ID:
+            m_NameID: rats_victorious
+            m_ID: -572065660
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: old_friends
+            m_ID: 34470229
+            m_Initialized: 1
+          m_Name: Rats Victorious
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: wolves
+            m_ID: -1938852922
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - Mi problema con los lobos y las ratas ha empeorado mucho.
+        - "De alguna forma los lobos se han vuelto mucho m\xE1s inteligentes \xA1No
+          doy cr\xE9dito!"
+        - "\xA1Han excavado un t\xFAnel bajo la verja de mi granja y han campado
+          a sus anchas dentro de mi recinto!"
+        - Suerte que han atacado a las ratas y han ignorado a mis vacas. Pero son
+          un problema muy serio.
+        - 'Ya no quedan muchas ratas, pero los lobos pueden entrar cuando quieran,
+          voy a tener que pedir ayuda. '
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1Me cuesta mucho decidirme por un bando ganador! \xBFNo podr\xEDa
+            haber alguna forma de que ganen ambos lados?"
+        - m_DeityID: 0
+          m_Dialogue:
+          - En este conflicto solo veo un claro perdedor. La pobre ganadera y sus
+            vacas.
+        m_Repercusion:
+          m_ID:
+            m_NameID: wolves_victorious
+            m_ID: 1729199620
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: old_friends
+            m_ID: 34470229
+            m_Initialized: 1
+          m_Name: Wolves victorious
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: wolves
+            m_ID: -1938852922
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Mi problema con los lobos y las ratas se ha solucionado en parte. Aunque
+          ha ocurrido muy r\xE1pido."
+        - "Parece ser que las ratas han logrado repeler a los lobos. Me alivia que
+          ya no sean un problema pero\u2026 "
+        - "He visto algunos cad\xE1veres de lobo en los alrededores y\u2026 "
+        - "Me da miedo pensar en lo que me podr\xEDan llegar a hacer las ratas si
+          las hago enfadar."
+        - "Voy a tener que pedir ayuda al Mantecas. \xC9l ya tiene experiencia lidiando
+          con esas ratas."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Alguien deber\xEDa de ense\xF1arle a esas ratas c\xF3mo forjar y portar
+            armas"
+          - "Aunque seguro que aprender\xE1n ellas solas si les damos tiempo."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "No ser\xEDa mala idea a estas alturas entablar relaciones diplom\xE1ticas
+            con las ratas."
+        m_Repercusion:
+          m_ID:
+            m_NameID: rats_victorious
+            m_ID: -572065660
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: old_friends
+            m_ID: 34470229
+            m_Initialized: 1
+          m_Name: Rats Victorious
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: rats
+            m_ID: -1872639626
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "De la noche a la ma\xF1ana, las ratas han abandonado mi granja. No tengo
+          ni idea del por qu\xE9"
+        - "Parece que han regresado al granero del Mantecas, el hombre no est\xE1
+          muy contento al respecto."
+        - "\xBFC\xF3mo lo s\xE9? \xA1Se pueden o\xEDr sus gritos desde mi granja,
+          y eso que vive en la otra punta del pueblo!"
+        - "A\xFAn tengo que lidiar con los lobos. \xA1No pienso permitir que se coman
+          a mis vacas!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1Me cuesta mucho decidirme por un bando ganador! \xBFNo podr\xEDa
+            haber alguna forma de que ganen ambos lados?"
+        - m_DeityID: 0
+          m_Dialogue:
+          - En este conflicto solo veo un claro perdedor. La pobre ganadera y sus
+            vacas.
+        m_Repercusion:
+          m_ID:
+            m_NameID: wolves_victorious
+            m_ID: 1729199620
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: old_friends
+            m_ID: 34470229
+            m_Initialized: 1
+          m_Name: Wolves victorious
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: rats
+            m_ID: -1872639626
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "La situaci\xF3n ha mejorado en parte, al menos por parte de los lobos,
+          que ya no son mucho problema."
+        - "Hab\xEDa o\xEDdo del Mantecas las haza\xF1as de las ratas inteligentes,
+          pero no pensaba que fueran m\xE1s all\xE1."
+        - Por lo visto han construido una cerca reforzada alrededor de mi granja
+          para repeler a los lobos.
+        - Ahora puedo ocuparme de las ratas sin que los lobos se coman a mis vacas,
+          que ya es algo.
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Alguien deber\xEDa de ense\xF1arle a esas ratas c\xF3mo forjar y portar
+            armas"
+          - "Aunque seguro que aprender\xE1n ellas solas si les damos tiempo."
+        - m_DeityID: 0
+          m_Dialogue:
+          - "No ser\xEDa mala idea a estas alturas entablar relaciones diplom\xE1ticas
+            con las ratas."
+        m_Repercusion:
+          m_ID:
+            m_NameID: rats_victorious
+            m_ID: -572065660
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: old_friends
+            m_ID: 34470229
+            m_Initialized: 1
+          m_Name: Rats Victorious
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: rats
+            m_ID: -1872639626
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "No entiendo c\xF3mo ha podido ocurrir, pero desde anoche no he visto muchas
+          ratas por mi granja."
+        - "Dudo bastante que hayan sido los lobos, pero al menos ser\xE1 m\xE1s f\xE1cil
+          echar a las que quedan."
+        - "Los lobos siguen siendo un problema. Las ratas ya no ser\xE1n de ayuda,
+          \xA1pero defender\xE9 mi granja!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1Me cuesta mucho decidirme por un bando ganador! \xBFNo podr\xEDa
+            haber alguna forma de que ganen ambos lados?"
+        - m_DeityID: 0
+          m_Dialogue:
+          - En este conflicto solo veo un claro perdedor. La pobre ganadera y sus
+            vacas.
+        m_Repercusion:
+          m_ID:
+            m_NameID: wolves_victorious
+            m_ID: 1729199620
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: old_friends
+            m_ID: 34470229
+            m_Initialized: 1
+          m_Name: Wolves victorious
+          m_Active: 0
+          m_Value: -15
+      m_AllPossibleTargets:
+      - m_NameID: rats
+        m_ID: -1872639626
+        m_Initialized: 1
+      - m_NameID: wolves
+        m_ID: -1938852922
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: high_voltage_treatment
+        m_ID: 2011480556
+        m_Initialized: 1
+      m_Title: Tratamiento de alto voltaje
+      m_IntroductionDialogue:
+      - "\xBFLos batidos de chocolate extra\xEDdos directamente de las vacas? No
+        obtuve grandes resultados."
+      - "Despu\xE9s de darle muchas vueltas, he decidido cambiar mi enfoque."
+      - "\xA1Quiero comprobar si puedo transformar el chocolate mediocre que ya tengo
+        en un chocolate puro!"
+      - "Tengo todo planeado, es un proceso complicado pero, resumiendo, necesito
+        la energ\xEDa de un rayo."
+      - "Adem\xE1s estoy de suerte porque se avecina esta noche una tormenta de las
+        grandes."
+      - "Y Canela tiene un artefacto perfecto como pararrayos, pero se niega a prest\xE1rmelo."
+      - "Insiste mucho en que se podr\xEDa romper. \xA1Qu\xE9 tonter\xEDa, si atraer
+        rayos es su funci\xF3n para empezar!"
+      m_QuestGiver: miss_chocolate
+      m_Description: "Miss Chocolate necesita la energ\xEDa de un rayo para sus experimentos.
+        Necesita un artefacto de Canela para que sirva de pararrayos, pero esta se
+        niega a prest\xE1rselo."
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: miss_chocolate
+            m_ID: -370492881
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 5
+        m_ResultNPCDialogue:
+        - "\xA1Puedo declarar orgullosamente que el experimento ha sido todo un \xE9xito!"
+        - "Canela me cedi\xF3 un cachivache diferente, mucho m\xE1s prometedor que
+          el que quer\xEDa utilizar."
+        - "Lo raro es que no me lo haya dado en persona, simplemente lo dej\xF3 delante
+          de mi casa."
+        - "Pero bueno, \xA1dej\xE9 todo listo y logr\xE9 obtener los resultados que
+          esperaba!"
+        - "\xA1Los veinte litros de chocolate mediocre se transformaron en dos gotas
+          de chocolate puro!"
+        - "Claramente es muy poco para considerarse un m\xE9todo viable, \xA1Pero
+          he demostrado que es posible!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1\xBFEn qu\xE9 momento dejar que le caiga un rayo a las cosas se
+            le llama experimento?!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "El af\xE1n por hacer nuevos descubrimientos es una bendici\xF3n y una
+            maldici\xF3n a la vez."
+          - "Por muchos avances que hagas, nunca llegar\xE1s a estar satisfecho."
+        m_Repercusion:
+          m_ID:
+            m_NameID: ms_chocolate_great_success
+            m_ID: -1530310121
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: high_voltage_treatment
+            m_ID: 2011480556
+            m_Initialized: 1
+          m_Name: Ms Chocolate Great Success
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Canela me cedi\xF3 el artefacto inmediatamente despu\xE9s de ped\xEDrselo
+          de nuevo."
+        - De hecho dice que me lo quede, por lo visto el artefacto realmente es una
+          baratija sin valor.
+        - "Me da un poco de pena, \xFAltimamente no est\xE1 teniendo suerte con su
+          colecci\xF3n."
+        - "\xBFEl experimento? Pude llevarlo a cabo, aunque todav\xEDa me falta mucho
+          para considerarlo un \xE9xito."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "A m\xED solo me gustan los experimentos violentos. Deber\xEDas de realizarlos
+            alg\xFAn d\xEDa."
+          - "\xA1Comprobar qu\xE9 cosas pueden destrozar otras cosas es fascinante!
+            \xA1Nunca me canso de ellos!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Nunca sabr\xE1s si algo funciona hasta que no se ponga a prueba. Aunque
+            pueda ser est\xFApido."
+        m_Repercusion:
+          m_ID:
+            m_NameID: ms_chocolate_experiment_success
+            m_ID: -883721373
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: high_voltage_treatment
+            m_ID: 2011480556
+            m_Initialized: 1
+          m_Name: Ms Chocolate Experiment Success
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Despu\xE9s de insistir mucho, Canela por fin me prest\xF3 su artefacto.
+          Pensaba que no cambiar\xEDa de opini\xF3n."
+        - "Estaba muy contenta, por lo visto ha encontrado tirado cerca de su casa
+          un artefacto valios\xEDsimo."
+        - Me dijo que me quede con el artefacto, ya que lo va a sustituir por el
+          nuevo que ha encontrado.
+        - "Yo por mi parte obtuve los resultados que buscaba. No sale nada rentable,
+          \xA1pero he cumplido!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "A m\xED solo me gustan los experimentos violentos. Deber\xEDas de realizarlos
+            alg\xFAn d\xEDa."
+          - "\xA1Comprobar qu\xE9 cosas pueden destrozar otras cosas es fascinante!
+            \xA1Nunca me canso de ellos!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Nunca sabr\xE1s si algo funciona hasta que no se ponga a prueba. Aunque
+            pueda ser est\xFApido."
+        m_Repercusion:
+          m_ID:
+            m_NameID: ms_chocolate_experiment_success
+            m_ID: -883721373
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: high_voltage_treatment
+            m_ID: 2011480556
+            m_Initialized: 1
+          m_Name: Ms Chocolate Experiment Success
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Lo del experimento\u2026 va a tener que posponerse indefinidamente."
+        - "Parece ser que ayer alguien hizo un destrozo en la colecci\xF3n de Canela.
+          \xA1Estaba hecha una furia!"
+        - "Va a ser imposible que me ceda el artefacto. Tendr\xE9 que buscar otra
+          alternativa \xA1Pero no me rendir\xE9!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1Es un experimento est\xFApido que no llevar\xE1 a ninguna parte,
+            y lo sabes!"
+          - "Pero por si acaso, lo impedir\xEDa por todos los medios. No sea que
+            salga bien."
+          - "No quiero arriesgarme a estar equivocada. \xA1\xBFQu\xE9 problema hay
+            con eso?!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Evith es al\xE9rgica a estar equivocada. Nada la hace sufrir m\xE1s
+            que admitir sus errores."
+        m_Repercusion:
+          m_ID:
+            m_NameID: ms_chocolate_experiment_canceled
+            m_ID: -1625747117
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: high_voltage_treatment
+            m_ID: 2011480556
+            m_Initialized: 1
+          m_Name: Ms Chocolate Experiment Canceled
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: miss_chocolate
+            m_ID: -370492881
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "El experimento va a tener que esperar. A pesar de que Canela envi\xF3
+          el artefacto a mi casa."
+        - "Pensaba que me lo dar\xEDa en persona, pero bueno, el caso es que el artefacto
+          resulta ser inservible."
+        - "Result\xF3 ser mucho m\xE1s fr\xE1gil de lo que hab\xEDa estimado, se
+          lo he devuelto antes de venir aqu\xED."
+        - "Es curioso porque ella misma parece no acordarse de hab\xE9rmelo dado.
+          Estar\xE1 liada con sus cosas."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1Es un experimento est\xFApido que no llevar\xE1 a ninguna parte,
+            y lo sabes!"
+          - "Pero por si acaso, lo impedir\xEDa por todos los medios. No sea que
+            salga bien."
+          - "No quiero arriesgarme a estar equivocada. \xA1\xBFQu\xE9 problema hay
+            con eso?!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Evith es al\xE9rgica a estar equivocada. Nada la hace sufrir m\xE1s
+            que admitir sus errores."
+        m_Repercusion:
+          m_ID:
+            m_NameID: ms_chocolate_experiment_canceled
+            m_ID: -1625747117
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: high_voltage_treatment
+            m_ID: 2011480556
+            m_Initialized: 1
+          m_Name: Ms Chocolate Experiment Canceled
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: miss_chocolate
+            m_ID: -370492881
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xBFEl artefacto? No esperaba que Canela fuera a prest\xE1rmelo, estaba
+          a punto de darme por vencida."
+        - "Bueno, el artefacto me lleg\xF3 a mi casa en una caja, as\xED que voy
+          a suponer que cambi\xF3 de opini\xF3n."
+        - "Eso s\xED, despu\xE9s de que le cayese un rayo se hizo a\xF1icos, Canela
+          no va a estar muy contenta."
+        - "Pero al final he obtenido resultados mucho menores de lo esperado. \xA1Pero
+          siguen siendo positivos!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "A m\xED solo me gustan los experimentos violentos. Deber\xEDas de realizarlos
+            alg\xFAn d\xEDa."
+          - "\xA1Comprobar qu\xE9 cosas pueden destrozar otras cosas es fascinante!
+            \xA1Nunca me canso de ellos!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Nunca sabr\xE1s si algo funciona hasta que no se ponga a prueba. Aunque
+            pueda ser est\xFApido."
+        m_Repercusion:
+          m_ID:
+            m_NameID: ms_chocolate_experiment_success
+            m_ID: -883721373
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: high_voltage_treatment
+            m_ID: 2011480556
+            m_Initialized: 1
+          m_Name: Ms Chocolate Experiment Success
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: miss_chocolate
+            m_ID: -370492881
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - Anoche repentinamente empezaron a fallar varios de mis aparatos para el
+          experimento.
+        - "Supongo que no hice un mantenimiento adecuado. Estas cosas pasan, pero
+          aun as\xED me frustra."
+        - "Por mucho que me duela, he tenido que cancelar el experimento. Tendr\xE9
+          que esperar a la siguiente tormenta."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1Es un experimento est\xFApido que no llevar\xE1 a ninguna parte,
+            y lo sabes!"
+          - "Pero por si acaso, lo impedir\xEDa por todos los medios. No sea que
+            salga bien."
+          - "No quiero arriesgarme a estar equivocada. \xA1\xBFQu\xE9 problema hay
+            con eso?!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Evith es al\xE9rgica a estar equivocada. Nada la hace sufrir m\xE1s
+            que admitir sus errores."
+        m_Repercusion:
+          m_ID:
+            m_NameID: ms_chocolate_experiment_canceled
+            m_ID: -1625747117
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: high_voltage_treatment
+            m_ID: 2011480556
+            m_Initialized: 1
+          m_Name: Ms Chocolate Experiment Canceled
+          m_Active: 0
+          m_Value: -15
+      m_AllPossibleTargets:
+      - m_NameID: miss_chocolate
+        m_ID: -370492881
+        m_Initialized: 1
+      - m_NameID: canela
+        m_ID: -619351516
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
   m_Repercusions:
   - m_ID:
       m_NameID: wolves_gone
@@ -4721,6 +6510,182 @@ MonoBehaviour:
     m_Name: Pendant Lost
     m_Active: 0
     m_Value: -15
+  - m_ID:
+      m_NameID: mantecas_farm_damaged
+      m_ID: 1496986625
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: a_regular_day
+      m_ID: 1582812731
+      m_Initialized: 1
+    m_Name: Mantecas Farm Damaged
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: mantecas_farm_devastated
+      m_ID: -1421179957
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: a_regular_day
+      m_ID: 1582812731
+      m_Initialized: 1
+    m_Name: Mantecas Farm Devastated
+    m_Active: 0
+    m_Value: -30
+  - m_ID:
+      m_NameID: mantecas_farm_revitalized
+      m_ID: -1558447323
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: a_regular_day
+      m_ID: 1582812731
+      m_Initialized: 1
+    m_Name: Mantecas Farn Revitalized
+    m_Active: 0
+    m_Value: 30
+  - m_ID:
+      m_NameID: mantecas_paranoic
+      m_ID: -2043321078
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: a_regular_day
+      m_ID: 1582812731
+      m_Initialized: 1
+    m_Name: mantecas_paranoic
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: johnny_sabotaged
+      m_ID: 1261100355
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: mushroom_profecy
+      m_ID: 432792811
+      m_Initialized: 1
+    m_Name: Johnny Sabotaged
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: johnny_enhanced
+      m_ID: -1753202715
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: mushroom_profecy
+      m_ID: 432792811
+      m_Initialized: 1
+    m_Name: Johnny Enhanced
+    m_Active: 0
+    m_Value: 15
+  - m_ID:
+      m_NameID: johnny_neutral
+      m_ID: 1654980862
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: mushroom_profecy
+      m_ID: 432792811
+      m_Initialized: 1
+    m_Name: Johnny Neutral
+    m_Active: 0
+    m_Value: 15
+  - m_ID:
+      m_NameID: mayor_alerted
+      m_ID: 484283042
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: mayor_worries
+      m_ID: -1677399016
+      m_Initialized: 1
+    m_Name: Mayor Alerted
+    m_Active: 0
+    m_Value: 15
+  - m_ID:
+      m_NameID: mayor_relaxed
+      m_ID: -2113343638
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: mayor_worries
+      m_ID: -1677399016
+      m_Initialized: 1
+    m_Name: Mayor Relaxed
+    m_Active: 0
+    m_Value: 30
+  - m_ID:
+      m_NameID: mayor_ignore
+      m_ID: -1511038957
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: mayor_worries
+      m_ID: -1677399016
+      m_Initialized: 1
+    m_Name: Mayor_Ignore
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: wolves_victorious
+      m_ID: 1729199620
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: old_friends
+      m_ID: 34470229
+      m_Initialized: 1
+    m_Name: Wolves victorious
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: rats_victorious
+      m_ID: -572065660
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: old_friends
+      m_ID: 34470229
+      m_Initialized: 1
+    m_Name: Rats Victorious
+    m_Active: 0
+    m_Value: 15
+  - m_ID:
+      m_NameID: rats_mounting_wolves
+      m_ID: -1323766611
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: old_friends
+      m_ID: 34470229
+      m_Initialized: 1
+    m_Name: Rats Mounting Wolves
+    m_Active: 0
+    m_Value: 30
+  - m_ID:
+      m_NameID: ms_chocolate_experiment_canceled
+      m_ID: -1625747117
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: high_voltage_treatment
+      m_ID: 2011480556
+      m_Initialized: 1
+    m_Name: Ms Chocolate Experiment Canceled
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: ms_chocolate_experiment_success
+      m_ID: -883721373
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: high_voltage_treatment
+      m_ID: 2011480556
+      m_Initialized: 1
+    m_Name: Ms Chocolate Experiment Success
+    m_Active: 0
+    m_Value: 15
+  - m_ID:
+      m_NameID: ms_chocolate_great_success
+      m_ID: -1530310121
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: high_voltage_treatment
+      m_ID: 2011480556
+      m_Initialized: 1
+    m_Name: Ms Chocolate Great Success
+    m_Active: 0
+    m_Value: 15
   m_RepercusionNewspaperArticles:
   - m_RepID:
       m_NameID: wolves_gone
@@ -4962,6 +6927,137 @@ MonoBehaviour:
     m_Title: El colgante enjoyado sigue desaparecido.
     m_Body: "La nueva joya de la exposici\xF3n de Canela N Rama sigue en paradero
       desconocido."
+  - m_RepID:
+      m_NameID: mantecas_farm_damaged
+      m_ID: 1496986625
+      m_Initialized: 1
+    m_Title: Una nueva plaga asola nuestros campos.
+    m_Body: "Una plaga de topos ha hecho estragos en los cultivos de una granja local.
+      Sorprendentemente, el due\xF1o no parec\xEDa estar muy disgustado al respecto."
+  - m_RepID:
+      m_NameID: mantecas_farm_devastated
+      m_ID: -1421179957
+      m_Initialized: 1
+    m_Title: "La devastaci\xF3n de nuestros campos."
+    m_Body: "Una terrible plaga de langostas, topos y ratas han arrasado de la noche
+      a la ma\xF1ana el esfuerzo de un agricultor local. Para nuestra sorpresa, el
+      due\xF1o esboz\xF3 una sonrisa."
+  - m_RepID:
+      m_NameID: mantecas_farm_revitalized
+      m_ID: -1558447323
+      m_Initialized: 1
+    m_Title: Buenos tiempos para nuestros campos.
+    m_Body: "La prolongada serie de desgracias que acechaban a los cultivos de un
+      granjero local parece haberse detenido. Aun as\xED, las preocupaciones se mantienen,
+      declar\xF3 el due\xF1o."
+  - m_RepID:
+      m_NameID: mantecas_paranoic
+      m_ID: -2043321078
+      m_Initialized: 1
+    m_Title: "\xBFSe avecinan tiempos terribles?"
+    m_Body: "Un granjero local asegura con total seguridad que un nuevo desastre
+      se avecina sobre sus campos despu\xE9s de percatarse de fen\xF3menos extra\xF1os.
+      \xBFPodr\xEDa tratarse de una broma?"
+  - m_RepID:
+      m_NameID: johnny_sabotaged
+      m_ID: 1261100355
+      m_Initialized: 1
+    m_Title: Incendio en la casa del alquimista.
+    m_Body: "El repentino incendio que por poco asola la casa del alquimista local
+      y que podr\xEDa haber afectado al bosque ha sido detenido con \xE9xito.  Por
+      suerte, el alquimista se encuentra en su estado habitual."
+  - m_RepID:
+      m_NameID: johnny_enhanced
+      m_ID: -1753202715
+      m_Initialized: 1
+    m_Title: La alquimia renovada.
+    m_Body: "La comunidad de vecinos se alegra por el gran hallazgo de un alquimista
+      local. Con dicho hallazgo har\xE1 grandes cosas para el pueblo, declar\xF3
+      el alquimista. \xBFQu\xE9 tendr\xE1 preparado? \xA1Esperemos que nada malo!"
+  - m_RepID:
+      m_NameID: johnny_neutral
+      m_ID: 1654980862
+      m_Initialized: 1
+    m_Title: El alquimista ausente.
+    m_Body: "Parte de la comunidad de vecinos se encuentra preocupada por la salud
+      del alquimista local. Este misteriosamente ya no abre tanto su tienda como
+      lo hac\xEDa antes. \xBFQu\xE9 le ocurre al joven alquimista?"
+  - m_RepID:
+      m_NameID: mayor_alerted
+      m_ID: 484283042
+      m_Initialized: 1
+    m_Title: Convocada asamblea de emergencia.
+    m_Body: "Nuestro excelent\xEDsimo alcalde ha convocado la asamblea mensual mucho
+      antes de la fecha habitual. Seg\xFAn declara, es necesario tomar medidas inmediatamente
+      y escuchar las sugerencias de los vecinos."
+  - m_RepID:
+      m_NameID: mayor_relaxed
+      m_ID: -2113343638
+      m_Initialized: 1
+    m_Title: Un cambio de planes inesperado.
+    m_Body: "El alcalde ha sustitu\xEDdo su plan de reformas por otro nuevo de manera
+      repentina. El alcalde declara que los planes de embellecimiento del pueblo
+      y la ampliaci\xF3n del puerto se dejar\xE1n para otro momento."
+  - m_RepID:
+      m_NameID: mayor_ignore
+      m_ID: -1511038957
+      m_Initialized: 1
+    m_Title: "Las cr\xEDticas contin\xFAan."
+    m_Body: "El alcalde sigue siendo objeto de duras cr\xEDticas tras resumir su
+      plan de ampliaci\xF3n del puerto local. Muchos vecinos creen que es una p\xE9rdida
+      de tiempo, pero el alcalde planea seguir el plan a rajatabla."
+  - m_RepID:
+      m_NameID: wolves_victorious
+      m_ID: 1729199620
+      m_Initialized: 1
+    m_Title: El baluarte de los roedores cae.
+    m_Body: "La colonia de ratas inteligentes ha abandonado la granja de una ganadera
+      local despu\xE9s de capitular ante la manada de lobos. \xBFQu\xE9 ocurrir\xE1
+      con la granja? \xBFSer\xE1 ahora ocupada por los lobos?"
+  - m_RepID:
+      m_NameID: rats_victorious
+      m_ID: -572065660
+      m_Initialized: 1
+    m_Title: El asedio a los roedores termina.
+    m_Body: "La colonia de ratas inteligentes, que ha invadido la granja de una ganadera
+      local, ha logrado de manera audaz repeler a la manada de lobos que amenazaba
+      la granja. La impresionante haza\xF1a ha dejado perplejos a los vecinos. \xBFEstaremos
+      ante el alzamiento de una nueva urbe de ratas? Por el bien de la desafortunada
+      ganadera, esperemos que no."
+  - m_RepID:
+      m_NameID: rats_mounting_wolves
+      m_ID: -1323766611
+      m_Initialized: 1
+    m_Title: El galope de los jinetes roedores.
+    m_Body: "Una inusual imagen quedar\xE1 grabada en la mente de los vecinos. La
+      colonia de ratas, que invad\xEDa la granja de una ganadera local, ha abandonado
+      el pueblo a lomos de la manada de lobos que hasta hace poco se enfrentaba.
+      \xBFPodr\xEDan los lobos cabalgar sobre las ratas? \xA1La ciencia afirma que
+      no!"
+  - m_RepID:
+      m_NameID: ms_chocolate_experiment_canceled
+      m_ID: -1625747117
+      m_Initialized: 1
+    m_Title: "La gran decepci\xF3n."
+    m_Body: El muy esperado experimento de Miss Chocolate la Bomb ha tenido que ser
+      retrasado debido a condiciones imprevistas.
+  - m_RepID:
+      m_NameID: ms_chocolate_experiment_success
+      m_ID: -883721373
+      m_Initialized: 1
+    m_Title: El experimento chocolatero da sus frutos.
+    m_Body: "El \xFAltimo experimento de la c\xE9lebre Miss Chocolate la Bomb ha
+      sido un relativo \xE9xito. Todo gracias a la colaboraci\xF3n con la prestigiosa
+      coleccionista Canela N Rama."
+  - m_RepID:
+      m_NameID: ms_chocolate_great_success
+      m_ID: -1530310121
+      m_Initialized: 1
+    m_Title: "La destilaci\xF3n del chocolate purificado."
+    m_Body: "La c\xE9lebre chocolatera local, Miss Chocolate la Bomb, ha logrado
+      con su \xFAltimo experimento purificar veinte litros de chocolate l\xEDquido
+      en un par de gotas de chocolate purificado. Lamentablemente, la chocolatera
+      ha declarado que no tiene intenciones de seguir investigando el asunto."
   m_StoryUI:
   - m_ParentStoryID:
       m_NameID: mayor_problem
@@ -5029,6 +7125,36 @@ MonoBehaviour:
       m_Initialized: 1
     m_Sprite: {fileID: 21300000, guid: f680bc7e40d2ef442af1dfe3f23f7214, type: 3}
     m_Title: El Colgante Robado
+  - m_ParentStoryID:
+      m_NameID: a_regular_day
+      m_ID: 1582812731
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 2d0682f5d7d0579499388e5f687b44a3, type: 3}
+    m_Title: "Un d\xEDa normal"
+  - m_ParentStoryID:
+      m_NameID: mushroom_profecy
+      m_ID: 432792811
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 4f755541196e36241af97767d0ad959b, type: 3}
+    m_Title: "La profec\xEDa del hongo"
+  - m_ParentStoryID:
+      m_NameID: mayor_worries
+      m_ID: -1677399016
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: d939d6c2b15b03e4394f1b6b5a21f3f1, type: 3}
+    m_Title: Preocupaciones mayores
+  - m_ParentStoryID:
+      m_NameID: old_friends
+      m_ID: 34470229
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 10038789df0db1d4d8e5129e38c9b215, type: 3}
+    m_Title: Viejos amigos
+  - m_ParentStoryID:
+      m_NameID: high_voltage_treatment
+      m_ID: 2011480556
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: cd81f4bf9b0dee744bdaa96831c82f0e, type: 3}
+    m_Title: Tratamiento de alto voltaje
 --- !u!114 &6330534342466683427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5049,7 +7175,7 @@ MonoBehaviour:
       m_Initialized: 1
     m_FullName: Hio
     m_ShortName: Hio
-    m_Description: She is the owner of the town's farm
+    m_Description: "Due\xF1o de una pasteler\xEDa y protagonista en esta historia."
     m_NewspaperSprite: {fileID: 21300000, guid: 34e5756d697846b4bb3a6ffdb0c2cb74, type: 3}
     m_CharacterWorldPrefab: {fileID: 0}
   - m_ID:
@@ -5058,7 +7184,7 @@ MonoBehaviour:
       m_Initialized: 1
     m_FullName: Nu
     m_ShortName: Nu Nu
-    m_Description: She is the owner of the town's farm
+    m_Description: "\xC1ngel de las Galletas."
     m_NewspaperSprite: {fileID: 0}
     m_CharacterWorldPrefab: {fileID: 8440202483473040574, guid: c21f96cdad2833449b44fe9362b9de8e, type: 3}
   - m_ID:
@@ -5067,7 +7193,7 @@ MonoBehaviour:
       m_Initialized: 1
     m_FullName: Evith
     m_ShortName: Evith
-    m_Description: She is the owner of the town's farm
+    m_Description: Demonio de las Galletas.
     m_NewspaperSprite: {fileID: 0}
     m_CharacterWorldPrefab: {fileID: 8019418314948059770, guid: 16f5164e95004444f918fb6691ae1d07, type: 3}
   - m_ID:
@@ -5076,7 +7202,7 @@ MonoBehaviour:
       m_Initialized: 1
     m_FullName: Meri la Leches
     m_ShortName: Meri
-    m_Description: She is the owner of the town's farm
+    m_Description: Ganadera entusiasta de las vacas.
     m_NewspaperSprite: {fileID: 21300000, guid: bedab464ddb364b4aa124ef597b4d78a, type: 3}
     m_CharacterWorldPrefab: {fileID: 6635933445755449783, guid: faece4c0e1989754090487aa9c7c7046, type: 3}
   - m_ID:
@@ -5085,7 +7211,7 @@ MonoBehaviour:
       m_Initialized: 1
     m_FullName: Alcalde, Antonio
     m_ShortName: Alcalde
-    m_Description: She is the owner of the town's farm
+    m_Description: "El muy taca\xF1o alcalde del pueblo."
     m_NewspaperSprite: {fileID: 21300000, guid: 0de9e38e070a379428cde1f51f6085f4, type: 3}
     m_CharacterWorldPrefab: {fileID: 7771397039777580420, guid: a89aae5c2f6d6de46946e4e5b10e2be0, type: 3}
   - m_ID:
@@ -5094,7 +7220,7 @@ MonoBehaviour:
       m_Initialized: 1
     m_FullName: Miss Chocolate
     m_ShortName: Ms.Chocolate
-    m_Description: She is the owner of the town's farm
+    m_Description: "Exc\xE9ntrica chocolatera."
     m_NewspaperSprite: {fileID: 21300000, guid: 6b4b0b9042011be4192a2e28f4d991fd, type: 3}
     m_CharacterWorldPrefab: {fileID: 6185239428428815657, guid: de95e7b0893b948418911ce892c2b082, type: 3}
   - m_ID:
@@ -5103,7 +7229,7 @@ MonoBehaviour:
       m_Initialized: 1
     m_FullName: Canela N Rama
     m_ShortName: Cane
-    m_Description: She is the owner of the town's farm
+    m_Description: Coleccionista de artefactos antiguos.
     m_NewspaperSprite: {fileID: 21300000, guid: 3d2a3106a6ba6d0439e9e8835468edce, type: 3}
     m_CharacterWorldPrefab: {fileID: 6101517129295224818, guid: 825672efd5fa6c04c80c97e7df6548d6, type: 3}
   - m_ID:
@@ -5112,7 +7238,7 @@ MonoBehaviour:
       m_Initialized: 1
     m_FullName: Johny, el setas
     m_ShortName: Johny
-    m_Description: She is the owner of the town's farm
+    m_Description: Un alquimista muy peculiar.
     m_NewspaperSprite: {fileID: 21300000, guid: 6c1a0fdfc124374438e23145d2b84edc, type: 3}
     m_CharacterWorldPrefab: {fileID: 7377969410888980926, guid: 45528f930cc2577429f38aae6d0d7fbb, type: 3}
   - m_ID:
@@ -5121,7 +7247,7 @@ MonoBehaviour:
       m_Initialized: 1
     m_FullName: Juanjo, el mantecas
     m_ShortName: Juanjo
-    m_Description: She is the owner of the town's farm
+    m_Description: El agricultor malhumorado
     m_NewspaperSprite: {fileID: 21300000, guid: 57b59e78428947c4c821038127ff95a3, type: 3}
     m_CharacterWorldPrefab: {fileID: 3193959261219538360, guid: 470a428eacc6c2848809e62753cbaec5, type: 3}
   m_CharacterDialogueList:
@@ -5130,261 +7256,83 @@ MonoBehaviour:
       m_ID: 339799166
       m_Initialized: 1
     m_CharacterImg: {fileID: 21300000, guid: 2e377219cb2ecc84791de061d1bc6c10, type: 3}
-    m_NameColor: {r: 0, g: 0, b: 0, a: 0}
+    m_IdleRandomDialogue:
+    - m_List:
+      - Hio frase
+      - frase1Continuacion
   - m_ID:
       m_NameID: nu
       m_ID: -1991483173
       m_Initialized: 1
     m_CharacterImg: {fileID: 21300000, guid: d749a37a6de74434f9cc2fd3accc37a6, type: 3}
-    m_NameColor: {r: 0, g: 0, b: 0, a: 0}
+    m_IdleRandomDialogue:
+    - m_List:
+      - Nu frase
+      - frase1Continuacion
   - m_ID:
       m_NameID: evith
       m_ID: 573504420
       m_Initialized: 1
     m_CharacterImg: {fileID: 21300000, guid: 7511b8a306a19604b8eea170e4d2d1b5, type: 3}
-    m_NameColor: {r: 0, g: 0, b: 0, a: 0}
+    m_IdleRandomDialogue:
+    - m_List:
+      - Evith frase
+      - frase1Continuacion
   - m_ID:
       m_NameID: meri
       m_ID: -918260377
       m_Initialized: 1
     m_CharacterImg: {fileID: 21300000, guid: 803698d8261da90409dedfe796bae79a, type: 3}
-    m_NameColor: {r: 0, g: 0, b: 0, a: 0}
+    m_IdleRandomDialogue:
+    - m_List:
+      - Leches frase
+      - frase1Continuacion
   - m_ID:
       m_NameID: mayor
       m_ID: 996742298
       m_Initialized: 1
     m_CharacterImg: {fileID: 21300000, guid: 709e4c3eab4ca53429c03291e32391cb, type: 3}
-    m_NameColor: {r: 0, g: 0, b: 0, a: 0}
+    m_IdleRandomDialogue:
+    - m_List:
+      - Alcalde frase
+      - frase1Continuacion
   - m_ID:
       m_NameID: miss_chocolate
       m_ID: -370492881
       m_Initialized: 1
     m_CharacterImg: {fileID: 21300000, guid: 6c55735ad9200d049a649c59319c8a8f, type: 3}
-    m_NameColor: {r: 0, g: 0, b: 0, a: 0}
+    m_IdleRandomDialogue:
+    - m_List:
+      - Miss frase
+      - frase1Continuacion
   - m_ID:
       m_NameID: canela
       m_ID: -619351516
       m_Initialized: 1
     m_CharacterImg: {fileID: 21300000, guid: f4bd6bfaf6cd3ba4c88a18796a5f1913, type: 3}
-    m_NameColor: {r: 0, g: 0, b: 0, a: 0}
+    m_IdleRandomDialogue:
+    - m_List:
+      - Rama frase
+      - frase1Continuacion
   - m_ID:
       m_NameID: johny_setas
       m_ID: -840848411
       m_Initialized: 1
     m_CharacterImg: {fileID: 21300000, guid: 943e21760de78a044942edb2aa18938f, type: 3}
-    m_NameColor: {r: 0, g: 0, b: 0, a: 0}
+    m_IdleRandomDialogue:
+    - m_List:
+      - setas fr
+      - frase1Continuacion
   - m_ID:
       m_NameID: mantecas
       m_ID: 2085496002
       m_Initialized: 1
     m_CharacterImg: {fileID: 21300000, guid: 9bae7dc6843c36f458ccd314e48bce14, type: 3}
-    m_NameColor: {r: 0, g: 0, b: 0, a: 0}
+    m_IdleRandomDialogue:
+    - m_List:
+      - Juanjo frase
+      - frase1Continuacion
   m_CharacterWorldPrefabComponent:
-  - m_ID:
-      m_NameID: mery
-      m_ID: -1630721097
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: evith
-      m_ID: 573504420
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: mamarrachus
-      m_ID: 689543378
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: nu
-      m_ID: -1991483173
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: hio
-      m_ID: 339799166
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: nu
-      m_ID: -1991483173
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: evith
-      m_ID: 573504420
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: meri
-      m_ID: -918260377
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: mayor
-      m_ID: 996742298
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: miss_chocolate
-      m_ID: -370492881
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: canela
-      m_ID: -619351516
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: johny_setas
-      m_ID: -840848411
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: mantecas
-      m_ID: 2085496002
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: mamarrachus
-      m_ID: 689543378
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: hio
-      m_ID: 339799166
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: nu
-      m_ID: -1991483173
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: evith
-      m_ID: 573504420
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: meri
-      m_ID: -918260377
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: mayor
-      m_ID: 996742298
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: miss_chocolate
-      m_ID: -370492881
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: canela
-      m_ID: -619351516
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: johny_setas
-      m_ID: -840848411
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: mantecas
-      m_ID: 2085496002
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: hio
-      m_ID: 339799166
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: nu
-      m_ID: -1991483173
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: evith
-      m_ID: 573504420
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: meri
-      m_ID: -918260377
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: mayor
-      m_ID: 996742298
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: miss_chocolate
-      m_ID: -370492881
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: canela
-      m_ID: -619351516
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: johny_setas
-      m_ID: -840848411
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: mantecas
-      m_ID: 2085496002
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: hio
-      m_ID: 339799166
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: nu
-      m_ID: -1991483173
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: evith
-      m_ID: 573504420
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: meri
-      m_ID: -918260377
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: mayor
-      m_ID: 996742298
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: miss_chocolate
-      m_ID: -370492881
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: canela
-      m_ID: -619351516
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: johny_setas
-      m_ID: -840848411
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
-  - m_ID:
-      m_NameID: mantecas
-      m_ID: 2085496002
-      m_Initialized: 1
-    m_Prefab: {fileID: 0}
   - m_ID:
       m_NameID: hio
       m_ID: 339799166
@@ -5573,7 +7521,7 @@ MonoBehaviour:
     m_Sprite: {fileID: 21300000, guid: f9031271c08413c43bb11496a3b32a00, type: 3}
     m_ReputationTypePrice: 1
     m_Price_Good: 0
-    m_Price_Evil: 0
+    m_Price_Evil: 25
   - m_ID:
       m_NameID: nucleo_de_cereza_animico
       m_ID: 1174637542
@@ -5582,7 +7530,7 @@ MonoBehaviour:
     m_Sprite: {fileID: 21300000, guid: a27089fc51fdcaf4181affbc4cd10ec6, type: 3}
     m_ReputationTypePrice: 0
     m_Price_Good: 0
-    m_Price_Evil: 0
+    m_Price_Evil: 80
   - m_ID:
       m_NameID: crema_pastelera_arcana
       m_ID: -235594117
@@ -5590,8 +7538,8 @@ MonoBehaviour:
     m_Name: Crema pastelera arcana
     m_Sprite: {fileID: 21300000, guid: 39bad943b4b30ad4bbd1af7d8619d31f, type: 3}
     m_ReputationTypePrice: 0
-    m_Price_Good: 0
-    m_Price_Evil: 0
+    m_Price_Good: 10
+    m_Price_Evil: 10
   - m_ID:
       m_NameID: vainilla_de_la_iluminacion
       m_ID: 1922958395
@@ -5599,7 +7547,7 @@ MonoBehaviour:
     m_Name: "Vainilla de la iluminaci\xF3n"
     m_Sprite: {fileID: 21300000, guid: f36a0413a581d4b4dab06b5cff233ce2, type: 3}
     m_ReputationTypePrice: 1
-    m_Price_Good: 0
+    m_Price_Good: 30
     m_Price_Evil: 0
   - m_ID:
       m_NameID: caramelo_fundido_candiscente
@@ -5608,8 +7556,8 @@ MonoBehaviour:
     m_Name: Caramelo fundido candiscente
     m_Sprite: {fileID: 21300000, guid: 82194dd7c988abb4c86e25247aa6e194, type: 3}
     m_ReputationTypePrice: 1
-    m_Price_Good: 0
-    m_Price_Evil: 0
+    m_Price_Good: 25
+    m_Price_Evil: 25
   - m_ID:
       m_NameID: esencia_de_limon_purificadora
       m_ID: 334205480
@@ -5617,7 +7565,7 @@ MonoBehaviour:
     m_Name: "Esencia de lim\xF3n purificadora"
     m_Sprite: {fileID: 21300000, guid: 75ae9afafc8dbea46893f0e60e06bcd2, type: 3}
     m_ReputationTypePrice: 0
-    m_Price_Good: 0
+    m_Price_Good: 80
     m_Price_Evil: 0
   - m_ID:
       m_NameID: levadura_ancestral_de_la_pereza
@@ -5626,8 +7574,8 @@ MonoBehaviour:
     m_Name: Levadura Ancestral de la pereza
     m_Sprite: {fileID: 21300000, guid: dac919421da07f74686382450856e1ee, type: 3}
     m_ReputationTypePrice: 1
-    m_Price_Good: 0
-    m_Price_Evil: 0
+    m_Price_Good: 40
+    m_Price_Evil: 40
   - m_ID:
       m_NameID: chocolate_negro_sempiterno
       m_ID: 1221400841
@@ -5636,7 +7584,7 @@ MonoBehaviour:
     m_Sprite: {fileID: 21300000, guid: 14453757a922dbe4084bc58b44d3a8da, type: 3}
     m_ReputationTypePrice: 1
     m_Price_Good: 0
-    m_Price_Evil: 0
+    m_Price_Evil: 20
   - m_ID:
       m_NameID: harina_de_fuerza_titanica
       m_ID: 1850996025
@@ -5644,7 +7592,34 @@ MonoBehaviour:
     m_Name: "Harina de fuerza tit\xE1nica"
     m_Sprite: {fileID: 21300000, guid: c6c0dbea8b1cd9245a274ab113a9a19f, type: 3}
     m_ReputationTypePrice: 0
+    m_Price_Good: 15
+    m_Price_Evil: 15
+  - m_ID:
+      m_NameID: polvo_impetuoso
+      m_ID: -1220311844
+      m_Initialized: 1
+    m_Name: Polvo para hornear impetuoso
+    m_Sprite: {fileID: 21300000, guid: 6f6ae653e540ae542b348979d07a6699, type: 3}
+    m_ReputationTypePrice: 0
     m_Price_Good: 0
+    m_Price_Evil: 10
+  - m_ID:
+      m_NameID: polvo_persuasivo
+      m_ID: -225553538
+      m_Initialized: 1
+    m_Name: Polvo para hornear persuasivo
+    m_Sprite: {fileID: 21300000, guid: 181f102c2bdb1cc47a7bcc0c0fbd27f4, type: 3}
+    m_ReputationTypePrice: 0
+    m_Price_Good: 5
+    m_Price_Evil: 5
+  - m_ID:
+      m_NameID: polvo_auxilio
+      m_ID: -1647740518
+      m_Initialized: 1
+    m_Name: Polvo para hornear del auxilio
+    m_Sprite: {fileID: 21300000, guid: 0e56d4fada01ec54fbc77b725f098b3b, type: 3}
+    m_ReputationTypePrice: 0
+    m_Price_Good: 10
     m_Price_Evil: 0
 --- !u!114 &1241280839235921238
 MonoBehaviour:
