@@ -44,7 +44,7 @@ namespace CQM.Systems
 
         private void ShowGenericPopup(PopupData_GenericPopup popData)
         {
-            GenericPopupBehaviour popUp = Object.Instantiate(m_PopupData.m_SecondaryMissionPrefab, m_PopupData.m_InstantiationTransform).GetComponent<GenericPopupBehaviour>();
+            GenericPopupBehaviour popUp = Object.Instantiate(m_PopupData.m_GenericPrefab, m_PopupData.m_InstantiationTransform).GetComponent<GenericPopupBehaviour>();
             popUp.Initialize(popData);
         }
     }

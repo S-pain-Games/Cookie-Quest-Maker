@@ -252,6 +252,7 @@ namespace CQM.Systems
                 l.Remove(new ID("hio"));
                 l.Remove(new ID("nu"));
                 l.Remove(new ID("evith"));
+                l.Remove(new ID("narrator"));
                 return l;
             }
 
