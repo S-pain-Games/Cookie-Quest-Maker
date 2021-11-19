@@ -33,6 +33,7 @@ namespace CQM.Systems
             commands.AddEvent(new ID("toggle_quest_making")).OnInvoked += () => ToggleUIBlockingMovement(_references.m_QuestMakingUi);
             commands.AddEvent(new ID("toggle_town")).OnInvoked += () => ToggleUIBlockingMovement(_references.m_TownUi);
             commands.AddEvent(new ID("toggle_settings")).OnInvoked += () => ToggleUIBlockingMovement(_references.m_SettingsGameplayUi);
+            commands.AddEvent(new ID("toggle_gameplay")).OnInvoked += () => ToggleUIBlockingMovement(_references.m_GameplayUi);
         }
 
         private void ToggleUI(GameObject ui)
