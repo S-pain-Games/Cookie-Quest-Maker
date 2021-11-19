@@ -43,6 +43,8 @@ namespace CQM.Systems
                 int percentage = 0;
                 var loc = _locationComponents.GetList().Find(l => l.m_CharacterOwnerID == new ID(s.m_StoryData.m_QuestGiver));
 
+                if (loc == null) return; // The story is secondary and doesn't have a localization
+
                 if (!Admin.Global.Components.m_StoriesStateComponent.m_AllSecondaryStories.Contains(s.m_StoryData.m_ID))
                     amount = 300;
                 else

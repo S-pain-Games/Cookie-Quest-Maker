@@ -2217,6 +2217,236 @@ namespace CQM.Databases
             AddStorySelectionUIData("Story title");
             FinishCreatingStory();
             */
+
+            SecondaryStories();
+
+            void SecondaryStories()
+            {
+                ColectaFloral();
+                void ColectaFloral()
+                {
+                    StartCreatingStory("floral_collect", "Colecta Floral", null,
+               "desc", new List<string>() {
+                "El pueblo se ve un poco soso con esos arbustos feos que hay plantados. ¡Creo que le vendría bien un poco de color!",
+                "Me parece que hay un campo de flores al oeste del pueblo. Ojalá nos pongamos todos de acuerdo en usar esas flores para darle vida al pueblo."
+               });
+
+                    //HARM >=1
+                    StartStoryBranch();
+                    AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Parece que la idea de decorar el pueblo con flores no ha gustado demasiado. ¡El campo de flores está destrozado!",
+                "No lo entiendo, con lo bonitas que son. No sé quién haría algo así. Y para colmo, el pueblo seguirá luciendo aburrido."
+            }, Tag.Harm, 1, "mayor");
+
+                    //HELP >=1
+                    StartStoryBranch();
+                    AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡No me lo puedo creer! ¡El pueblo ha amanecido más bello que nunca! Al parecer, alguien se ha dedicado a plantar las flores durante la noche.",
+                "Se me hace un poco raro, pero quien quiera que sea, se preocupa mucho por el pueblo."
+            }, Tag.Help, 1, "mayor");
+
+                    //CONVINCE >=1
+                    StartStoryBranch();
+                    AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Todos han decidido recoger flores para mejorar la imagen del pueblo! Sin duda, ésto atraerá a más turistas y la economía mejorará."
+            }, Tag.Convince, 1, "mayor");
+
+
+                    AddStorySelectionUIData("Colecta Floral");
+                    FinishCreatingStory();
+                }
+
+                NosQuedamosSinPan();
+                void NosQuedamosSinPan()
+                {
+                    StartCreatingStory("without_bread", "¿Nos quedamos sin pan?", null,
+                "desc", new List<string>() {
+                "¿Te has enterado? El panadero del pueblo ha caído muy enfermo y no abrirá en un tiempo. Es una pena, ojalá se recupere.",
+                "Y como no hay más panaderos por aquí, no tendremos más remedio que comprar el pan fuera del pueblo."
+                });
+
+                    //HARM >=1
+                    StartStoryBranch();
+                    AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Pero quién habrá podido ser! El pobre panadero tiene muy mala suerte. Han destrozado su panadería en la noche.",
+                "Además de enfermo, ¡ahora estará arruinado! Ojalá pillen al responsable de esto."
+            }, Tag.Harm, 1, "mayor");
+
+                    //HELP >=1
+                    StartStoryBranch();
+                    AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡No te lo vas a creer! Han aparecido cajas con bastantes barras de pan en todo el pueblo.",
+                "Parece que alguien de fuera se ha enterado y ha decidido echarnos una mano mandándonos provisiones de pan mientras el panadero se recupera.",
+                "¡Aún hay gente buena en el mundo!"
+            }, Tag.Help, 1, "mayor");
+
+                    //CONVINCE >=1
+                    StartStoryBranch();
+                    AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Al parecer, algunas personas han decidido aprender el oficio del panadero para ayudarle en su negocio. ¡Qué gente más considerada!",
+                "Puede que la panadería abra antes de lo esperado, ¡o incluso puede que se abran más!"
+            }, Tag.Convince, 1, "mayor");
+
+
+                    AddStorySelectionUIData("¿Nos quedamos sin pan?");
+                    FinishCreatingStory();
+                }
+
+                PastelesPorDoquier();
+                void PastelesPorDoquier()
+                {
+                    StartCreatingStory("cupcakes_everywhere", "Pasteles por doquier", null,
+                "desc", new List<string>() {
+                "¿Te gustan los pasteles? Está claro que sí. Por algo tienes una pastelería.",
+                "Como regalo, los pasteles alegran a cualquiera y no está de más darle uno a alguien como muestra de aprecio.",
+                "Además, ¡son deliciosos! Deberías hacer pasteles más a menudo."
+                });
+
+                    //HARM >=1
+                    StartStoryBranch();
+                    AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Creo que han tirado trozos de pastel a la casa de una granja.",
+                "No creo que le haga mucha gracia al dueño, sobre todo sabiendo que luego tendrá que lidiar con las criaturas que vengan por el olor."
+            }, Tag.Harm, 1, "meri");
+
+                    //HELP >=1
+                    StartStoryBranch();
+                    AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¿Lo sabías? Han aparecido tartas envueltas con un moño en las puertas de las casas del pueblo.",
+                "Parece que alguien le tiene mucho aprecio a toda la gente de aquí.",
+                "¡No veas qué alegría me he llevado tras ver una al abrir la puerta!"
+            }, Tag.Help, 1, "meri");
+
+                    //CONVINCE >=1
+                    StartStoryBranch();
+                    AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Me he enterado que pronto van a organizar un concurso de pasteles en la plaza del pueblo.",
+                "¡Vendrán también pasteleros de las ciudades vecinas! Además, tras acabar el concurso, ¡invitarán a todos a tarta! No va a quedar ni uno."
+            }, Tag.Convince, 1, "meri");
+
+
+                    AddStorySelectionUIData("Pasteles por doquier");
+                    FinishCreatingStory();
+                }
+
+                CampanaOlvidada();
+                void CampanaOlvidada()
+                {
+                    StartCreatingStory("forgotten_bell", "Campana Olvidada", null,
+                "desc", new List<string>() {
+                "¿Sabías que tenemos una campana en el ayuntamiento? Ya está un poco vieja y oxidada, no se le da uso desde hace años.",
+                "Tampoco se han molestado en mantenerla en buen estado.",
+                "Estaría bien que volvieran a hacerla sonar, le puede dar un toque acogedor al pueblo."
+                });
+
+                    //HARM >=1
+                    StartStoryBranch();
+                    AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Me he enterado que la vieja campana del ayuntamiento ha amanecido hoy hecha una pena.",
+                "Alguien la ha pintarrajeado y le han abierto más grietas.",
+                "Creo que han decidido sacarla y tirarla a la basura. Creía que al menos iban a guardarla como recuerdo."
+            }, Tag.Harm, 1, "mayor");
+
+                    //HELP >=1
+                    StartStoryBranch();
+                    AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Algún amante de las campanas ha decidido restaurar por completo la vieja campana del ayuntamiento.",
+                "¡Brilla más que cuando la compraron de segunda mano!",
+                "Además, suena mucho mejor cuando la probaron. Creo que van a empezar a usarla de nuevo."
+            }, Tag.Help, 1, "mayor");
+
+                    //CONVINCE >=1
+                    StartStoryBranch();
+                    AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Han anunciado que la vieja campana del ayuntamiento volverá a sonar.",
+                "Lo hará para dar comienzo a las ceremonias o eventos que haya en el pueblo.",
+                "¡Qué alivio! Antes sonaba cada dos por tres y despertaba a todo el mundo de la siesta."
+            }, Tag.Convince, 1, "mayor");
+
+
+                    AddStorySelectionUIData("Campana Olvidada");
+                    FinishCreatingStory();
+                }
+
+                LaBestia();
+                void LaBestia()
+                {
+                    StartCreatingStory("the_beast", "La Bestia", null,
+                "desc", new List<string>() {
+                "Últimamente se oyen unos rugidos en las afueras del pueblo, sobre todo durante la noche.",
+                "Creo que hay algún tipo de monstruo acechando cerca, pero creo que se siente atraído por las granjas, ya que se oye más fuerte desde esos lugares.",
+                "Me preocupa que pueda hacer daño a la gente o a sus animales."
+                });
+
+                    //HARM >=1
+                    StartStoryBranch();
+                    AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡El monstruo que rugía en las noches resultó ser un lobo! Solo que era bastante más grande de lo normal.",
+                "Alguien ha decidido hacerle frente y de alguna manera lo ha aniquilado.",
+                "Es un alivio saber que hay una amenaza menos."
+            }, Tag.Harm, 1, "wolves");
+
+                    //HELP >=1
+                    StartStoryBranch();
+                    AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡Ha ocurrido una tragedia! El monstruo ha empezado a atacar a los animales de las granjas.",
+                "No sabemos cómo ha podido sortear las robustas verjas de las granjas, alguien ha tenido que sabotearlas.",
+                "No se me ocurre otra explicación."
+            }, Tag.Help, 1, "wolves");
+
+                    //CONVINCE >=1
+                    StartStoryBranch();
+                    AddBranchCompletion_NPCDialogue(new List<string>() {
+                "¡No te lo vas a creer! El monstruo era en realidad un lobo muy grande.",
+                "Lo sé porque esta mañana apareció en medio de la plaza, pero estaba muy tranquilo y, al parecer, sin ninguna intención de atacar a nadie.",
+                "La gente, tras debatirlo mucho, ha decidido adoptarlo y ahora es la mascota del pueblo. ¡Quién lo iba a decir!"
+            }, Tag.Convince, 1, "wolves");
+
+
+                    AddStorySelectionUIData("La Bestia");
+                    FinishCreatingStory();
+                }
+
+                HayQueSalvarElTrigo();
+                void HayQueSalvarElTrigo()
+                {
+                    StartCreatingStory("saving_the_wheat", "Hay Que Salvar El Trigo", null,
+            "desc", new List<string>() {
+                "¡La cosecha de cereales está en peligro! Las plagas este año están más problemáticas que de costumbre.",
+                "Si no hacemos algo pronto, ¡no habrá cereales y las pérdidas serán cuantiosas!"
+            });
+
+                    //HARM >=1
+                    StartStoryBranch();
+                    AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Lo que me temía. Las plagas han destrozado los cultivos de los cereales de la noche a la mañana.",
+                "Este año habrá que comprarlas de otro sitio, pero no serán baratas."
+            }, Tag.Harm, 1, "wolves");
+
+                    //HELP >=1
+                    StartStoryBranch();
+                    AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Por alguna razón, están dejando de aparecer los plagas que se estaban comiendo los cereales.",
+                "¡Es un gran golpe de suerte! Ojalá que ésto siga así."
+            }, Tag.Help, 1, "wolves");
+
+                    //CONVINCE >=1
+                    StartStoryBranch();
+                    AddBranchCompletion_NPCDialogue(new List<string>() {
+                "Se ha decidido empezar a cosechar hoy mismo los cereales, aunque no todos estén del todo maduros.",
+                "¡Mejor prevenir que quedarse sin cereales!"
+            }, Tag.Convince, 1, "wolves");
+
+
+                    AddStorySelectionUIData("Hay Que Salvar El Trigo");
+                    FinishCreatingStory();
+                }
+            }
+
+
+
+
+
         }
 
         public void StartCreatingStory(string idName, string title, string questGiver, string description, List<string> introductionDialogue)

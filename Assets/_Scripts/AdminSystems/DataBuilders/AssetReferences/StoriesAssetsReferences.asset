@@ -49,3 +49,17 @@ MonoBehaviour:
     m_Sprite: {fileID: 21300000, guid: 5e35d512ac9364f40b9e2ba6fe9980b1, type: 3}
   - m_IDName: fungal_metamorphosis
     m_Sprite: {fileID: 21300000, guid: f837aaa230588b74bb206ecd32961602, type: 3}
+  - m_IDName: SEPARATION FOR SECONDARY
+    m_Sprite: {fileID: 21300000, guid: f837aaa230588b74bb206ecd32961602, type: 3}
+  - m_IDName: floral_collect
+    m_Sprite: {fileID: 21300000, guid: d25200bc21557694eac611573c437ced, type: 3}
+  - m_IDName: without_bread
+    m_Sprite: {fileID: 21300000, guid: 81cd882bbc7983b4dbe74b082b9932b8, type: 3}
+  - m_IDName: cupcakes_everywhere
+    m_Sprite: {fileID: 21300000, guid: cefe836507776224c8869a159a0a21f5, type: 3}
+  - m_IDName: forgotten_bell
+    m_Sprite: {fileID: 21300000, guid: f2d54dcf924b6c849b47be55b891ad96, type: 3}
+  - m_IDName: the_beast
+    m_Sprite: {fileID: 21300000, guid: 7f934de4e39faa740bffdb7fd57ce33a, type: 3}
+  - m_IDName: saving_the_wheat
+    m_Sprite: {fileID: 21300000, guid: b88c1aa4e4e0aa248a696a38fc52a1b9, type: 3}

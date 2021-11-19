@@ -6273,7 +6273,7 @@ MonoBehaviour:
             m_NameID: canela
             m_ID: -619351516
             m_Initialized: 1
-          m_Tag: 2
+          m_Tag: 0
           m_Value: 5
         m_ResultNPCDialogue:
         - "\xA1Mi colecci\xF3n se ha ido al traste! \xA1No s\xE9 si podr\xE9 recuperarme
@@ -6390,7 +6390,7 @@ MonoBehaviour:
             m_NameID: canela
             m_ID: -619351516
             m_Initialized: 1
-          m_Tag: 2
+          m_Tag: 0
           m_Value: 1
         m_ResultNPCDialogue:
         - "Los artefactos vivientes ya no son un problema, \xA1pero aun as\xED me
@@ -6572,7 +6572,7 @@ MonoBehaviour:
             m_NameID: johnny
             m_ID: -1650144070
             m_Initialized: 1
-          m_Tag: 2
+          m_Tag: 0
           m_Value: 5
         m_ResultNPCDialogue:
         - "\xA1T\xEDiio, he estado a nada de entrar en el trance m\xE1s profundo!
@@ -6681,7 +6681,7 @@ MonoBehaviour:
             m_NameID: johnny
             m_ID: -1650144070
             m_Initialized: 1
-          m_Tag: 2
+          m_Tag: 0
           m_Value: 1
         m_ResultNPCDialogue:
         - "\xA1T\xEDiio, voy a dejar esto de la meditaci\xF3n de lado de momento!
@@ -6713,6 +6713,793 @@ MonoBehaviour:
       m_AllPossibleTargets:
       - m_NameID: johnny
         m_ID: -1650144070
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: floral_collect
+        m_ID: -378513025
+        m_Initialized: 1
+      m_Title: Colecta Floral
+      m_IntroductionDialogue:
+      - "El pueblo se ve un poco soso con esos arbustos feos que hay plantados. \xA1Creo
+        que le vendr\xEDa bien un poco de color!"
+      - "Me parece que hay un campo de flores al oeste del pueblo. Ojal\xE1 nos pongamos
+        todos de acuerdo en usar esas flores para darle vida al pueblo."
+      m_QuestGiver: 
+      m_Description: desc
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Parece que la idea de decorar el pueblo con flores no ha gustado demasiado.
+          \xA1El campo de flores est\xE1 destrozado!"
+        - "No lo entiendo, con lo bonitas que son. No s\xE9 qui\xE9n har\xEDa algo
+          as\xED. Y para colmo, el pueblo seguir\xE1 luciendo aburrido."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_ParentStoryID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_Name: 
+          m_Active: 0
+          m_Value: 0
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1No me lo puedo creer! \xA1El pueblo ha amanecido m\xE1s bello que
+          nunca! Al parecer, alguien se ha dedicado a plantar las flores durante
+          la noche."
+        - Se me hace un poco raro, pero quien quiera que sea, se preocupa mucho por
+          el pueblo.
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_ParentStoryID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_Name: 
+          m_Active: 0
+          m_Value: 0
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Todos han decidido recoger flores para mejorar la imagen del pueblo!
+          Sin duda, \xE9sto atraer\xE1 a m\xE1s turistas y la econom\xEDa mejorar\xE1."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_ParentStoryID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_Name: 
+          m_Active: 0
+          m_Value: 0
+      m_AllPossibleTargets:
+      - m_NameID: mayor
+        m_ID: 996742298
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: without_bread
+        m_ID: -1285332401
+        m_Initialized: 1
+      m_Title: "\xBFNos quedamos sin pan?"
+      m_IntroductionDialogue:
+      - "\xBFTe has enterado? El panadero del pueblo ha ca\xEDdo muy enfermo y no
+        abrir\xE1 en un tiempo. Es una pena, ojal\xE1 se recupere."
+      - "Y como no hay m\xE1s panaderos por aqu\xED, no tendremos m\xE1s remedio
+        que comprar el pan fuera del pueblo."
+      m_QuestGiver: 
+      m_Description: desc
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Pero qui\xE9n habr\xE1 podido ser! El pobre panadero tiene muy mala
+          suerte. Han destrozado su panader\xEDa en la noche."
+        - "Adem\xE1s de enfermo, \xA1ahora estar\xE1 arruinado! Ojal\xE1 pillen al
+          responsable de esto."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_ParentStoryID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_Name: 
+          m_Active: 0
+          m_Value: 0
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1No te lo vas a creer! Han aparecido cajas con bastantes barras de
+          pan en todo el pueblo."
+        - "Parece que alguien de fuera se ha enterado y ha decidido echarnos una
+          mano mand\xE1ndonos provisiones de pan mientras el panadero se recupera."
+        - "\xA1A\xFAn hay gente buena en el mundo!"
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_ParentStoryID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_Name: 
+          m_Active: 0
+          m_Value: 0
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Al parecer, algunas personas han decidido aprender el oficio del panadero
+          para ayudarle en su negocio. \xA1Qu\xE9 gente m\xE1s considerada!"
+        - "Puede que la panader\xEDa abra antes de lo esperado, \xA1o incluso puede
+          que se abran m\xE1s!"
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_ParentStoryID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_Name: 
+          m_Active: 0
+          m_Value: 0
+      m_AllPossibleTargets:
+      - m_NameID: mayor
+        m_ID: 996742298
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: cupcakes_everywhere
+        m_ID: -1378443194
+        m_Initialized: 1
+      m_Title: Pasteles por doquier
+      m_IntroductionDialogue:
+      - "\xBFTe gustan los pasteles? Est\xE1 claro que s\xED. Por algo tienes una
+        pasteler\xEDa."
+      - "Como regalo, los pasteles alegran a cualquiera y no est\xE1 de m\xE1s darle
+        uno a alguien como muestra de aprecio."
+      - "Adem\xE1s, \xA1son deliciosos! Deber\xEDas hacer pasteles m\xE1s a menudo."
+      m_QuestGiver: 
+      m_Description: desc
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: meri
+            m_ID: -918260377
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - Creo que han tirado trozos de pastel a la casa de una granja.
+        - "No creo que le haga mucha gracia al due\xF1o, sobre todo sabiendo que
+          luego tendr\xE1 que lidiar con las criaturas que vengan por el olor."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_ParentStoryID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_Name: 
+          m_Active: 0
+          m_Value: 0
+      - m_Condition:
+          m_Target:
+            m_NameID: meri
+            m_ID: -918260377
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xBFLo sab\xEDas? Han aparecido tartas envueltas con un mo\xF1o en las
+          puertas de las casas del pueblo."
+        - "Parece que alguien le tiene mucho aprecio a toda la gente de aqu\xED."
+        - "\xA1No veas qu\xE9 alegr\xEDa me he llevado tras ver una al abrir la puerta!"
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_ParentStoryID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_Name: 
+          m_Active: 0
+          m_Value: 0
+      - m_Condition:
+          m_Target:
+            m_NameID: meri
+            m_ID: -918260377
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - Me he enterado que pronto van a organizar un concurso de pasteles en la
+          plaza del pueblo.
+        - "\xA1Vendr\xE1n tambi\xE9n pasteleros de las ciudades vecinas! Adem\xE1s,
+          tras acabar el concurso, \xA1invitar\xE1n a todos a tarta! No va a quedar
+          ni uno."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_ParentStoryID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_Name: 
+          m_Active: 0
+          m_Value: 0
+      m_AllPossibleTargets:
+      - m_NameID: meri
+        m_ID: -918260377
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: forgotten_bell
+        m_ID: -1482732292
+        m_Initialized: 1
+      m_Title: Campana Olvidada
+      m_IntroductionDialogue:
+      - "\xBFSab\xEDas que tenemos una campana en el ayuntamiento? Ya est\xE1 un
+        poco vieja y oxidada, no se le da uso desde hace a\xF1os."
+      - Tampoco se han molestado en mantenerla en buen estado.
+      - "Estar\xEDa bien que volvieran a hacerla sonar, le puede dar un toque acogedor
+        al pueblo."
+      m_QuestGiver: 
+      m_Description: desc
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - Me he enterado que la vieja campana del ayuntamiento ha amanecido hoy hecha
+          una pena.
+        - "Alguien la ha pintarrajeado y le han abierto m\xE1s grietas."
+        - "Creo que han decidido sacarla y tirarla a la basura. Cre\xEDa que al menos
+          iban a guardarla como recuerdo."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_ParentStoryID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_Name: 
+          m_Active: 0
+          m_Value: 0
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Alg\xFAn amante de las campanas ha decidido restaurar por completo la
+          vieja campana del ayuntamiento."
+        - "\xA1Brilla m\xE1s que cuando la compraron de segunda mano!"
+        - "Adem\xE1s, suena mucho mejor cuando la probaron. Creo que van a empezar
+          a usarla de nuevo."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_ParentStoryID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_Name: 
+          m_Active: 0
+          m_Value: 0
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Han anunciado que la vieja campana del ayuntamiento volver\xE1 a sonar."
+        - "Lo har\xE1 para dar comienzo a las ceremonias o eventos que haya en el
+          pueblo."
+        - "\xA1Qu\xE9 alivio! Antes sonaba cada dos por tres y despertaba a todo
+          el mundo de la siesta."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_ParentStoryID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_Name: 
+          m_Active: 0
+          m_Value: 0
+      m_AllPossibleTargets:
+      - m_NameID: mayor
+        m_ID: 996742298
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: the_beast
+        m_ID: 245706583
+        m_Initialized: 1
+      m_Title: La Bestia
+      m_IntroductionDialogue:
+      - "\xDAltimamente se oyen unos rugidos en las afueras del pueblo, sobre todo
+        durante la noche."
+      - "Creo que hay alg\xFAn tipo de monstruo acechando cerca, pero creo que se
+        siente atra\xEDdo por las granjas, ya que se oye m\xE1s fuerte desde esos
+        lugares."
+      - "Me preocupa que pueda hacer da\xF1o a la gente o a sus animales."
+      m_QuestGiver: 
+      m_Description: desc
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: wolves
+            m_ID: -1938852922
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1El monstruo que rug\xEDa en las noches result\xF3 ser un lobo! Solo
+          que era bastante m\xE1s grande de lo normal."
+        - Alguien ha decidido hacerle frente y de alguna manera lo ha aniquilado.
+        - Es un alivio saber que hay una amenaza menos.
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_ParentStoryID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_Name: 
+          m_Active: 0
+          m_Value: 0
+      - m_Condition:
+          m_Target:
+            m_NameID: wolves
+            m_ID: -1938852922
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Ha ocurrido una tragedia! El monstruo ha empezado a atacar a los animales
+          de las granjas."
+        - "No sabemos c\xF3mo ha podido sortear las robustas verjas de las granjas,
+          alguien ha tenido que sabotearlas."
+        - "No se me ocurre otra explicaci\xF3n."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_ParentStoryID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_Name: 
+          m_Active: 0
+          m_Value: 0
+      - m_Condition:
+          m_Target:
+            m_NameID: wolves
+            m_ID: -1938852922
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1No te lo vas a creer! El monstruo era en realidad un lobo muy grande."
+        - "Lo s\xE9 porque esta ma\xF1ana apareci\xF3 en medio de la plaza, pero
+          estaba muy tranquilo y, al parecer, sin ninguna intenci\xF3n de atacar
+          a nadie."
+        - "La gente, tras debatirlo mucho, ha decidido adoptarlo y ahora es la mascota
+          del pueblo. \xA1Qui\xE9n lo iba a decir!"
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_ParentStoryID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_Name: 
+          m_Active: 0
+          m_Value: 0
+      m_AllPossibleTargets:
+      - m_NameID: wolves
+        m_ID: -1938852922
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: saving_the_wheat
+        m_ID: -610529568
+        m_Initialized: 1
+      m_Title: Hay Que Salvar El Trigo
+      m_IntroductionDialogue:
+      - "\xA1La cosecha de cereales est\xE1 en peligro! Las plagas este a\xF1o est\xE1n
+        m\xE1s problem\xE1ticas que de costumbre."
+      - "Si no hacemos algo pronto, \xA1no habr\xE1 cereales y las p\xE9rdidas ser\xE1n
+        cuantiosas!"
+      m_QuestGiver: 
+      m_Description: desc
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: wolves
+            m_ID: -1938852922
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Lo que me tem\xEDa. Las plagas han destrozado los cultivos de los cereales
+          de la noche a la ma\xF1ana."
+        - "Este a\xF1o habr\xE1 que comprarlas de otro sitio, pero no ser\xE1n baratas."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_ParentStoryID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_Name: 
+          m_Active: 0
+          m_Value: 0
+      - m_Condition:
+          m_Target:
+            m_NameID: wolves
+            m_ID: -1938852922
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Por alguna raz\xF3n, est\xE1n dejando de aparecer los plagas que se estaban
+          comiendo los cereales."
+        - "\xA1Es un gran golpe de suerte! Ojal\xE1 que \xE9sto siga as\xED."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_ParentStoryID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_Name: 
+          m_Active: 0
+          m_Value: 0
+      - m_Condition:
+          m_Target:
+            m_NameID: wolves
+            m_ID: -1938852922
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Se ha decidido empezar a cosechar hoy mismo los cereales, aunque no todos
+          est\xE9n del todo maduros."
+        - "\xA1Mejor prevenir que quedarse sin cereales!"
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_ParentStoryID:
+            m_NameID: 
+            m_ID: 0
+            m_Initialized: 0
+          m_Name: 
+          m_Active: 0
+          m_Value: 0
+      m_AllPossibleTargets:
+      - m_NameID: wolves
+        m_ID: -1938852922
         m_Initialized: 1
     m_State: 0
     m_QuestData:
@@ -7884,6 +8671,42 @@ MonoBehaviour:
       m_Initialized: 1
     m_Sprite: {fileID: 21300000, guid: f837aaa230588b74bb206ecd32961602, type: 3}
     m_Title: "Metamorfosis F\xFAngica"
+  - m_ParentStoryID:
+      m_NameID: floral_collect
+      m_ID: -378513025
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: d25200bc21557694eac611573c437ced, type: 3}
+    m_Title: Colecta Floral
+  - m_ParentStoryID:
+      m_NameID: without_bread
+      m_ID: -1285332401
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 81cd882bbc7983b4dbe74b082b9932b8, type: 3}
+    m_Title: "\xBFNos quedamos sin pan?"
+  - m_ParentStoryID:
+      m_NameID: cupcakes_everywhere
+      m_ID: -1378443194
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: cefe836507776224c8869a159a0a21f5, type: 3}
+    m_Title: Pasteles por doquier
+  - m_ParentStoryID:
+      m_NameID: forgotten_bell
+      m_ID: -1482732292
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: f2d54dcf924b6c849b47be55b891ad96, type: 3}
+    m_Title: Campana Olvidada
+  - m_ParentStoryID:
+      m_NameID: the_beast
+      m_ID: 245706583
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 7f934de4e39faa740bffdb7fd57ce33a, type: 3}
+    m_Title: La Bestia
+  - m_ParentStoryID:
+      m_NameID: saving_the_wheat
+      m_ID: -610529568
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: b88c1aa4e4e0aa248a696a38fc52a1b9, type: 3}
+    m_Title: Hay Que Salvar El Trigo
 --- !u!114 &6330534342466683427
 MonoBehaviour:
   m_ObjectHideFlags: 0
