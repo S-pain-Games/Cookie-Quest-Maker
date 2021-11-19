@@ -192,7 +192,7 @@ namespace CQM.Databases
                 AddFunctionalTag(Tag.Help, 2);
                 SetUIData("Observar", "Observa detenidamente la situación antes de actuar");
                 SetRecipeData("Receta de Observar", "Observa detenidamente la situación antes de actuar", Reputation.GoodCookieReputation, 50, 0);
-                AddIngredientToRecipe("polvo_del_auxilio", 1);
+                AddIngredientToRecipe("polvo_auxilio", 1);
 
                 CreateNew();
                 SetIDName("stare");
@@ -246,7 +246,7 @@ namespace CQM.Databases
                 AddFunctionalTag(Tag.Help, 2);
                 SetUIData("Tarta", "Una muestra de tus buenas intenciones");
                 SetRecipeData("Receta de Tarta", "Una muestra de tus buenas intenciones", Reputation.GoodCookieReputation, 10, 50);
-                AddIngredientToRecipe("polvo_del_auxilio", 2);
+                AddIngredientToRecipe("polvo_auxilio", 2);
             }
             void CreateModifiers()
             {
@@ -273,7 +273,7 @@ namespace CQM.Databases
                 AddFunctionalTag(Tag.Help, 3);
                 SetUIData("Amablemente", "Actúa con ternura");
                 SetRecipeData("Receta de Amablemente", "Actúa con ternura", Reputation.GoodCookieReputation, 0, 50);
-                AddIngredientToRecipe("polvo_del_auxilio", 3);
+                AddIngredientToRecipe("polvo_auxilio", 3);
 
                 CreateNew();
                 SetIDName("convincingly");
