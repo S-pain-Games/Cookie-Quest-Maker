@@ -2226,7 +2226,7 @@ namespace CQM.Databases
                 void ColectaFloral()
                 {
                     StartCreatingStory("floral_collect", "Colecta Floral", null,
-               "desc", new List<string>() {
+                    "Hay quienes afirman que el pueblo debería de estar mejor decorado con flores. Quizás se pueda hacer algo al respecto", new List<string>() {
                 "El pueblo se ve un poco soso con esos arbustos feos que hay plantados. ¡Creo que le vendría bien un poco de color!",
                 "Me parece que hay un campo de flores al oeste del pueblo. Ojalá nos pongamos todos de acuerdo en usar esas flores para darle vida al pueblo."
                });
@@ -2250,8 +2250,6 @@ namespace CQM.Databases
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "¡Todos han decidido recoger flores para mejorar la imagen del pueblo! Sin duda, ésto atraerá a más turistas y la economía mejorará."
             }, Tag.Convince, 1, "mayor");
-
-
                     AddStorySelectionUIData("Colecta Floral");
                     FinishCreatingStory();
                 }
@@ -2260,8 +2258,8 @@ namespace CQM.Databases
                 void NosQuedamosSinPan()
                 {
                     StartCreatingStory("without_bread", "¿Nos quedamos sin pan?", null,
-                "desc", new List<string>() {
-                "¿Te has enterado? El panadero del pueblo ha caído muy enfermo y no abrirá en un tiempo. Es una pena, ojalá se recupere.",
+                "El único panadero del pueblo ha vuelto a enfermar una vez más. Quizás alguien debería de ocupar su puesto temporalmente.", new List<string>() {
+                "¿Te has enterado? El panadero del pueblo ha caído muy enfermo otra vez y no abrirá en un tiempo. Es una pena, ojalá se recupere.",
                 "Y como no hay más panaderos por aquí, no tendremos más remedio que comprar el pan fuera del pueblo."
                 });
 
@@ -2296,7 +2294,7 @@ namespace CQM.Databases
                 void PastelesPorDoquier()
                 {
                     StartCreatingStory("cupcakes_everywhere", "Pasteles por doquier", null,
-                "desc", new List<string>() {
+                "Es una buena costumbre regalar pasteles a los vecinos de vez en cuando. Aunque quizás puedas contribuir de forma diferente.", new List<string>() {
                 "¿Te gustan los pasteles? Está claro que sí. Por algo tienes una pastelería.",
                 "Como regalo, los pasteles alegran a cualquiera y no está de más darle uno a alguien como muestra de aprecio.",
                 "Además, ¡son deliciosos! Deberías hacer pasteles más a menudo."
@@ -2305,7 +2303,7 @@ namespace CQM.Databases
                     //HARM >=1
                     StartStoryBranch();
                     AddBranchCompletion_NPCDialogue(new List<string>() {
-                "Creo que han tirado trozos de pastel a la casa de una granja.",
+                "Creo que han tirado trozos de pastel a la fachada de una granja.",
                 "No creo que le haga mucha gracia al dueño, sobre todo sabiendo que luego tendrá que lidiar con las criaturas que vengan por el olor."
             }, Tag.Harm, 1, "meri");
 
@@ -2333,7 +2331,7 @@ namespace CQM.Databases
                 void CampanaOlvidada()
                 {
                     StartCreatingStory("forgotten_bell", "Campana Olvidada", null,
-                "desc", new List<string>() {
+                "La campana del ayuntamiento está en malas condiciones. Los vecinos echan de menos su sonido. Se podría hacer algo al respecto.", new List<string>() {
                 "¿Sabías que tenemos una campana en el ayuntamiento? Ya está un poco vieja y oxidada, no se le da uso desde hace años.",
                 "Tampoco se han molestado en mantenerla en buen estado.",
                 "Estaría bien que volvieran a hacerla sonar, le puede dar un toque acogedor al pueblo."
@@ -2372,7 +2370,7 @@ namespace CQM.Databases
                 void LaBestia()
                 {
                     StartCreatingStory("the_beast", "La Bestia", null,
-                "desc", new List<string>() {
+                "Se rumorea que un monstruo potencialmente peligroso merodea en las afueras del pueblo. Nadie parece capacitado para lidiar con él. ¿O sí?", new List<string>() {
                 "Últimamente se oyen unos rugidos en las afueras del pueblo, sobre todo durante la noche.",
                 "Creo que hay algún tipo de monstruo acechando cerca, pero creo que se siente atraído por las granjas, ya que se oye más fuerte desde esos lugares.",
                 "Me preocupa que pueda hacer daño a la gente o a sus animales."
@@ -2411,7 +2409,7 @@ namespace CQM.Databases
                 void HayQueSalvarElTrigo()
                 {
                     StartCreatingStory("saving_the_wheat", "Hay Que Salvar El Trigo", null,
-            "desc", new List<string>() {
+            "Las plagas asolan los campos de cereal nuevamente. Alguien debería de hacer algo al respecto.", new List<string>() {
                 "¡La cosecha de cereales está en peligro! Las plagas este año están más problemáticas que de costumbre.",
                 "Si no hacemos algo pronto, ¡no habrá cereales y las pérdidas serán cuantiosas!"
             });
