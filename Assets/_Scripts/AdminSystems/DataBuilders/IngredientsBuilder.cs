@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using CQM.AssetReferences;
 
-public class IngredientsBuilder : MonoBehaviour
+public class IngredientsBuilder : BaseDataBuilder
 {
 
     [SerializeField] private IngredientsReferencesDatabase _ingredientsReferences;
@@ -14,7 +14,7 @@ public class IngredientsBuilder : MonoBehaviour
 
     private IngredientComponent i;
 
-    public void LoadDataFromCode()
+    public override void LoadDataFromCode()
     {
         m_IngredientsList.Clear();
 

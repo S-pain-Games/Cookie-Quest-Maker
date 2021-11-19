@@ -5,7 +5,7 @@ using UnityEngine;
 using CQM.AssetReferences;
 using CQM.Components;
 
-public class CharactersBuilder : MonoBehaviour
+public class CharactersBuilder : BaseDataBuilder
 {
     [SerializeField] private CharacterReferencesDatabase _characterReferences;
 
@@ -33,7 +33,7 @@ public class CharactersBuilder : MonoBehaviour
         }
     }
 
-    public void LoadDataFromCode()
+    public override void LoadDataFromCode()
     {
         m_CharactersList.Clear();
         m_CharacterDialogueList.Clear();

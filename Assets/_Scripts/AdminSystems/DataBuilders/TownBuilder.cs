@@ -5,13 +5,13 @@ using CQM.Components;
 using CQM.Databases;
 using System;
 
-public class TownBuilder : MonoBehaviour
+public class TownBuilder : BaseDataBuilder
 {
     [SerializeField] private List<LocationComponent> m_Locations = new List<LocationComponent>();
 
     private LocationComponent l;
 
-    public void LoadDataFromCode()
+    public override void LoadDataFromCode()
     {
         m_Locations.Clear();
 
