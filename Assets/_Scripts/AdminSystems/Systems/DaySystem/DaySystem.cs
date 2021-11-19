@@ -8,6 +8,7 @@ public class DaySystem : ISystemEvents
 
     // Own Callbacks
     private EventVoid _dayStartedCallbacks;
+    private EventVoid _tutorialDayStartedCallbacks;
     private EventVoid _dayEndedCallbacks;
     private EventVoid _nightBeginCallback;
     private EventVoid _dailyStoriesCompleted;
@@ -40,6 +41,8 @@ public class DaySystem : ISystemEvents
         _dayEndedCallbacks = callbacks.AddEvent(new ID("day_ended"));
         _nightBeginCallback = callbacks.AddEvent(new ID("night_begin"));
         _dailyStoriesCompleted = callbacks.AddEvent(new ID("all_daily_stories_completed"));
+
+        _tutorialDayStartedCallbacks = callbacks.AddEvent(new ID("tutorial_day_started"));
 
         commands.AddEvent(new ID("start_new_day")).OnInvoked += StartNormalDay;
         commands.AddEvent(new ID("start_tutorial_day")).OnInvoked += StartTutorialDay;
@@ -79,6 +82,7 @@ public class DaySystem : ISystemEvents
         _dayData.m_StoriesToCompleteInADay = 1;
         _setGameStateCommand.Invoke(GameStateSystem.State.Bakery);
         _dayStartedCallbacks.Invoke();
+        _tutorialDayStartedCallbacks.Invoke();
     }
 }
 
