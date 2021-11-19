@@ -547,7 +547,7 @@ MonoBehaviour:
     m_CookiePieceSprite: {fileID: 21300000, guid: 4150cc859f149f846a48e1010b860bbb, type: 3}
     m_HDSprite: {fileID: 21300000, guid: 5f6092fe08f678544afddc11f2f3a372, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 4150cc859f149f846a48e1010b860bbb, type: 3}
-    m_Name: Mayor
+    m_Name: Alcalde
     m_Description: El alcalde del pueblo.
     m_ID:
       m_NameID: mayor
@@ -950,7 +950,7 @@ MonoBehaviour:
       m_NameID: mayor
       m_ID: 996742298
       m_Initialized: 1
-    m_CookieName: Mayor
+    m_CookieName: Alcalde
     m_CookieDescription: El alcalde del pueblo.
     m_Image: {fileID: 0}
   - m_ParentID:
@@ -6763,7 +6763,8 @@ MonoBehaviour:
       - "Me parece que hay un campo de flores al oeste del pueblo. Ojal\xE1 nos pongamos
         todos de acuerdo en usar esas flores para darle vida al pueblo."
       m_QuestGiver: 
-      m_Description: desc
+      m_Description: "Hay quienes afirman que el pueblo deber\xEDa de estar mejor
+        decorado con flores. Quiz\xE1s se pueda hacer algo al respecto"
       m_BranchOptions:
       - m_Condition:
           m_Target:
@@ -6887,12 +6888,13 @@ MonoBehaviour:
         m_Initialized: 1
       m_Title: "\xBFNos quedamos sin pan?"
       m_IntroductionDialogue:
-      - "\xBFTe has enterado? El panadero del pueblo ha ca\xEDdo muy enfermo y no
-        abrir\xE1 en un tiempo. Es una pena, ojal\xE1 se recupere."
+      - "\xBFTe has enterado? El panadero del pueblo ha ca\xEDdo muy enfermo otra
+        vez y no abrir\xE1 en un tiempo. Es una pena, ojal\xE1 se recupere."
       - "Y como no hay m\xE1s panaderos por aqu\xED, no tendremos m\xE1s remedio
         que comprar el pan fuera del pueblo."
       m_QuestGiver: 
-      m_Description: desc
+      m_Description: "El \xFAnico panadero del pueblo ha vuelto a enfermar una vez
+        m\xE1s. Quiz\xE1s alguien deber\xEDa de ocupar su puesto temporalmente."
       m_BranchOptions:
       - m_Condition:
           m_Target:
@@ -7024,7 +7026,8 @@ MonoBehaviour:
         uno a alguien como muestra de aprecio."
       - "Adem\xE1s, \xA1son deliciosos! Deber\xEDas hacer pasteles m\xE1s a menudo."
       m_QuestGiver: 
-      m_Description: desc
+      m_Description: "Es una buena costumbre regalar pasteles a los vecinos de vez
+        en cuando. Aunque quiz\xE1s puedas contribuir de forma diferente."
       m_BranchOptions:
       - m_Condition:
           m_Target:
@@ -7034,7 +7037,7 @@ MonoBehaviour:
           m_Tag: 0
           m_Value: 1
         m_ResultNPCDialogue:
-        - Creo que han tirado trozos de pastel a la casa de una granja.
+        - Creo que han tirado trozos de pastel a la fachada de una granja.
         - "No creo que le haga mucha gracia al due\xF1o, sobre todo sabiendo que
           luego tendr\xE1 que lidiar con las criaturas que vengan por el olor."
         m_DeitiesResultDialogue: []
@@ -7155,7 +7158,8 @@ MonoBehaviour:
       - "Estar\xEDa bien que volvieran a hacerla sonar, le puede dar un toque acogedor
         al pueblo."
       m_QuestGiver: 
-      m_Description: desc
+      m_Description: "La campana del ayuntamiento est\xE1 en malas condiciones. Los
+        vecinos echan de menos su sonido. Se podr\xEDa hacer algo al respecto."
       m_BranchOptions:
       - m_Condition:
           m_Target:
@@ -7290,7 +7294,9 @@ MonoBehaviour:
         lugares."
       - "Me preocupa que pueda hacer da\xF1o a la gente o a sus animales."
       m_QuestGiver: 
-      m_Description: desc
+      m_Description: "Se rumorea que un monstruo potencialmente peligroso merodea
+        en las afueras del pueblo. Nadie parece capacitado para lidiar con \xE9l.
+        \xBFO s\xED?"
       m_BranchOptions:
       - m_Condition:
           m_Target:
@@ -7423,7 +7429,8 @@ MonoBehaviour:
       - "Si no hacemos algo pronto, \xA1no habr\xE1 cereales y las p\xE9rdidas ser\xE1n
         cuantiosas!"
       m_QuestGiver: 
-      m_Description: desc
+      m_Description: "Las plagas asolan los campos de cereal nuevamente. Alguien
+        deber\xEDa de hacer algo al respecto."
       m_BranchOptions:
       - m_Condition:
           m_Target:
