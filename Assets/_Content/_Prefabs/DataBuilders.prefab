@@ -6168,6 +6168,589 @@ MonoBehaviour:
       m_Name: 
       m_Active: 0
       m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: full_artifact_panic
+        m_ID: -876801430
+        m_Initialized: 1
+      m_Title: "P\xE1nico de antiguallas"
+      m_IntroductionDialogue:
+      - "\xA1Es la \xFAltima vez que pido ayuda a Johnny! \xA1\xBFC\xF3mo se las
+        apa\xF1a ese hombre para hacer todo mal?!"
+      - "El otro d\xEDa le compr\xE9 un producto para limpiar mis artefactos y dejarlos
+        relucientes, algo normal."
+      - "Pero en el momento que roci\xE9 el producto sobre uno de mis artefactos,
+        \xA1empez\xF3 a moverse!"
+      - "\xA1No estoy de broma cuando digo que parte de mis artefactos tienen vida
+        propia! \xA1Y son agresivos!"
+      - Por suerte, los artefactos solo cobran vida durante la noche, me he encargado
+        de encerrarlos en mi despensa.
+      - "Si no encuentro pronto una soluci\xF3n, voy a tener que deshacerme de ellos."
+      m_QuestGiver: canela
+      m_Description: "Varios artefactos de Canela cobran vida tras haberlos rociado
+        con un abrillantador especial. Los artefactos vivientes son muy agresivos
+        y est\xE1n aislados."
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 5
+        m_ResultNPCDialogue:
+        - "\xBFLos artefactos vivientes? A\xFAn cobran vida durante la noche, aunque
+          ya no son un problema"
+        - "\xA1De repente se han vuelto s\xFAper amistosos conmigo y se han puesto
+          a limpiar toda mi casa!"
+        - "Adem\xE1s limpian y abrillantan a los dem\xE1s artefactos de mi colecci\xF3n.
+          \xA1Est\xE1n mejor que nunca!"
+        - "Definitivamente los voy a convertir en sirvientes. Despu\xE9s de este
+          calvario no pienso dejar que acabe en nada."
+        - "Quiz\xE1s me pueda convertir en coleccionista de artefactos vivientes.
+          \xA1Ser\xEDa a\xFAn m\xE1s famosa por ello!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Los artefactos ser\xEDan unos sirvientes muy aburridos. \xA1Nada supera
+            a las Galletas m\xE1gicas!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Por el bien de mantener el orden en el mundo. Ese abrillantador deber\xEDa
+            de ser destruido."
+        m_Repercusion:
+          m_ID:
+            m_NameID: living_artifacts_servants
+            m_ID: 1237735130
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: full_artifact_panic
+            m_ID: -876801430
+            m_Initialized: 1
+          m_Name: Living Artifacts Servants
+          m_Active: 0
+          m_Value: 30
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 5
+        m_ResultNPCDialogue:
+        - "\xA1Mi colecci\xF3n por fin est\xE1 fuera de peligro! Los artefactos vivientes
+          ahora son s\xF3lo artefactos."
+        - Por lo visto los artefactos dejaron de moverse tras entrar en contacto
+          con chocolate.
+        - "\xA1No me preguntes por qu\xE9, yo tampoco tengo ni idea! Habr\xE1 sido
+          una completa casualidad."
+        - "\xA1Por lo menos mis artefactos ahora tienen un brillo espectacular!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFArtefactos inanimados s\xFAper agresivos? \xA1\xBFPor qu\xE9 no
+            se me hab\xEDa ocurrido antes?!"
+          - "\xA1Es una idea genial para sembrar el caos y el desconcierto, mis dos
+            cosas favoritas!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - El orden natural de las cosas ha de ser restaurado. Lo que permanece
+            inanimado debe quedar inanimado.
+        m_Repercusion:
+          m_ID:
+            m_NameID: living_artifacts_stopped
+            m_ID: -1800228245
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: full_artifact_panic
+            m_ID: -876801430
+            m_Initialized: 1
+          m_Name: Living Artifacts Stopped
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 5
+        m_ResultNPCDialogue:
+        - "\xA1Mi colecci\xF3n se ha ido al traste! \xA1No s\xE9 si podr\xE9 recuperarme
+          de esta tragedia!"
+        - "\xA1De alguna manera los artefactos aislados han derribado la puerta y
+          han sembrado el caos!"
+        - "Es culpa m\xEDa haberlos subestimado. No he tenido m\xE1s remedio que
+          destruirlos all\xED mismo."
+        - "\xA1Cualquier d\xEDa de estos voy a momificar vivo al besugo Johnny para
+          exponerlo!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFSi en vez de artefactos fueran platos y cubiertos, ser\xEDan amables
+            o mucho m\xE1s agresivos?"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Aunque vivas una eternidad, siempre habr\xE1 m\xE1s cosas y situaciones
+            sorprendentes."
+        m_Repercusion:
+          m_ID:
+            m_NameID: living_artifacts_destroyed
+            m_ID: 784405313
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: full_artifact_panic
+            m_ID: -876801430
+            m_Initialized: 1
+          m_Name: Living Artifacts Destroyed
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Anoche ocurri\xF3 algo m\xE1s inusual si cabe! \xA1Los artefactos
+          vivientes se han vuelto inofensivos!"
+        - En mitad de la noche dejaron de aporrear la puerta y empezaron a limpiar
+          el destrozo de mi despensa.
+        - "\xA1Todav\xEDa no doy cr\xE9dito! No entiendo el cambio tan repentino,
+          pero estoy pensando en convertirlos en  sirvientes."
+        - "\xA1Es lo m\xEDnimo por haberme causado tanto estr\xE9s, pienso yo! \xA1Pero
+          me alegro de que haya terminado!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "Los artefactos ser\xEDan unos sirvientes muy aburridos. \xA1Nada supera
+            a las Galletas m\xE1gicas!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Por el bien de mantener el orden en el mundo. Ese abrillantador deber\xEDa
+            de ser destruido."
+        m_Repercusion:
+          m_ID:
+            m_NameID: living_artifacts_servants
+            m_ID: 1237735130
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: full_artifact_panic
+            m_ID: -876801430
+            m_Initialized: 1
+          m_Name: Living Artifacts Servants
+          m_Active: 0
+          m_Value: 30
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Mi colecci\xF3n se encuentra a salvo, aunque todav\xEDa sigo tomando precauciones
+          por si las moscas."
+        - "Ayer durante la noche not\xE9 c\xF3mo los artefactos vivientes dejaron
+          de hacer ruido de repente."
+        - "Cuando entr\xE9 en la habitaci\xF3n a ver qu\xE9 hab\xEDa ocurrido me
+          di cuenta de a qu\xE9 se deb\xEDa."
+        - "Por lo visto, los artefactos han sido rociados con lej\xEDa mientras se
+          mov\xEDan por la habitaci\xF3n."
+        - "No esperaba que la lej\xEDa fuera a ser su punto d\xE9bil, aunque a estas
+          alturas ya poco me sorprende."
+        - Lo malo es que los artefactos han perdido su brillo en el proceso, pero
+          al menos se ha terminado.
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFArtefactos inanimados s\xFAper agresivos? \xA1\xBFPor qu\xE9 no
+            se me hab\xEDa ocurrido antes?!"
+          - "\xA1Es una idea genial para sembrar el caos y el desconcierto, mis dos
+            cosas favoritas!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - El orden natural de las cosas ha de ser restaurado. Lo que permanece
+            inanimado debe quedar inanimado.
+        m_Repercusion:
+          m_ID:
+            m_NameID: living_artifacts_stopped
+            m_ID: -1800228245
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: full_artifact_panic
+            m_ID: -876801430
+            m_Initialized: 1
+          m_Name: Living Artifacts Stopped
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Los artefactos vivientes ya no son un problema, \xA1pero aun as\xED me
+          duelen mucho las p\xE9rdidas!"
+        - "Esta ma\xF1ana cuando he ido a revisarlos los he encontrado completamente
+          destruidos."
+        - "Espero que sea un efecto del mejunje, \xA1porque no quiero tener ahora
+          v\xE1ndalos entrando y saliendo de mi casa!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFSi en vez de artefactos fueran platos y cubiertos, ser\xEDan amables
+            o mucho m\xE1s agresivos?"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Aunque vivas una eternidad, siempre habr\xE1 m\xE1s cosas y situaciones
+            sorprendentes."
+        m_Repercusion:
+          m_ID:
+            m_NameID: living_artifacts_destroyed
+            m_ID: 784405313
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: full_artifact_panic
+            m_ID: -876801430
+            m_Initialized: 1
+          m_Name: Living Artifacts Destroyed
+          m_Active: 0
+          m_Value: -15
+      m_AllPossibleTargets:
+      - m_NameID: canela
+        m_ID: -619351516
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: fungal_metamorphosis
+        m_ID: -803286025
+        m_Initialized: 1
+      m_Title: "Metaforfosis F\xFAngica"
+      m_IntroductionDialogue:
+      - "\xDAltimamente me est\xE1n pasando cosas muy raras en plan, cosas mazo chungas,
+        colega."
+      - "Despu\xE9s de meditar, me doy cuenta de que me salen ra\xEDces y me crecen
+        bultos en la piel, colega."
+      - "Pienso que debe de tratarse de que me estoy acercando al trance m\xE1s profundo,
+        el Hipnos, colega."
+      - "\xBFTe hab\xEDa hablado antes del trance? \xA1Es un estado superior de la
+        consciencia, colega!"
+      - "Tan solo tienes que meditar como yo y ser uno con los hongos. \xA1Cuanto
+        m\xE1s tiempo mejor, colega!"
+      - "Lo malo es que poco a poco tu cuerpo se transforma irreversiblemente, \xA1pero
+        vale la pena, colega!"
+      - "\xA1Llevaba mucho esperando este momento! \xA1Esta noche va a ser flipante,
+        colega!"
+      m_QuestGiver: johnny
+      m_Description: "El cuerpo de Johnny est\xE1 sufriendo una preocupante transformaci\xF3n
+        tras sus cada vez m\xE1s intensas sesiones de meditaci\xF3n. Quiz\xE1 haya
+        que hacer algo al respecto."
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: johnny
+            m_ID: -1650144070
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 5
+        m_ResultNPCDialogue:
+        - "Anoche, mientras entraba en trance, tuve una visi\xF3n que no me esperaba,
+          colega."
+        - "El legendario Se\xF1or Galleta vino a visitarme. Ya percib\xEDa su presencia,
+          \xA1pero ayer lo v\xED claramente, colega!"
+        - "No recuerdo los detalles, pero s\xE9 que ahora tengo otra meta en este
+          plano terrenal, colega."
+        - "\xA1Lo tengo clarinete! \xA1Quiero dedicarme a hacer galletas! Y no de
+          cualquier tipo, colega"
+        - "Quiero que contengan todo mi conocimiento sobre los hongos. \xA1Ser\xE1
+          una pasada, colega!"
+        - "Quiz\xE1 as\xED alg\xFAn d\xEDa me vuelva a visitar el Se\xF1or Galleta,
+          \xA1o quiz\xE1s el Dios Galleta, colega!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFNo tendr\xE1 algo mejor que hacer ese hombre que dedicarse a dormir
+            profundamente?"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Muy pocos seres han alcanzado el Hipnos. Quiz\xE1s ese joven pueda alcanzarlo
+            con el apoyo suficiente"
+        m_Repercusion:
+          m_ID:
+            m_NameID: johnny_trance_convinced
+            m_ID: -309647702
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Johnny Trance Convinced
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: johnny
+            m_ID: -1650144070
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 5
+        m_ResultNPCDialogue:
+        - "\xA1T\xEDiiiiio, lo he alcanzado! \xA1He alcanzado el Hipnos! \xA1Fu\xE9
+          una sensaci\xF3n indescriptible, colega!"
+        - "\xA1Lo he visto todo, colega, toooooodo! \xA1Tengo acceso a conocimientos
+          que nadie comprende, colega!"
+        - "\xBFLos bultos y las ra\xEDces? Pues, dir\xEDa que han desaparecido, as\xED
+          por completo, colega."
+        - "Ayer encontr\xE9 en casa un Champi\xF1\xF3n Solar, normalmente no me molesto
+          en recolectarlos, colega."
+        - "Para cambiar un poco, lo utilic\xE9 para mi polvo especial. No sab\xEDa
+          que serv\xEDa para contrarrestar la transformaci\xF3n, colega."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "No entiendo nada de todo esto. \xA1Que alguien me explique por qu\xE9
+            es tan importante!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Las consecuencias de entrar en lo m\xE1s profundo del trance var\xEDa
+            de persona en persona."
+        m_Repercusion:
+          m_ID:
+            m_NameID: johnny_trance_achieved
+            m_ID: -1596210974
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Johnny Trance Achieved
+          m_Active: 0
+          m_Value: 30
+      - m_Condition:
+          m_Target:
+            m_NameID: johnny
+            m_ID: -1650144070
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 5
+        m_ResultNPCDialogue:
+        - "\xA1T\xEDiio, he estado a nada de entrar en el trance m\xE1s profundo!
+          \xA1Me he quedado a las puertas, colega!"
+        - "Justo cuando iba a dejar todo preparado, \xA1Pum! Se cae parte del techo
+          de mi casa encima, colega!"
+        - "He salido ileso, pero casi todo mi material se ha echado a perder. \xA1Qu\xE9
+          mala suerte tengo, colega!"
+        - "No podr\xE9 reponer mi material hasta el pr\xF3ximo invierno. As\xED que
+          hasta el a\xF1o que viene nada, colega."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - Ese tal Johnny parece un tipo aburrido. Pero tengo curiosidad de ver
+            hasta donde llega.
+        - m_DeityID: 0
+          m_Dialogue:
+          - Es una necedad poner en peligro tu salud para lograr un objetivo.
+        m_Repercusion:
+          m_ID:
+            m_NameID: johnny_trance_interruptded
+            m_ID: 1803522837
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Johnny Trance Interrupted
+          m_Active: 0
+          m_Value: -15
+      - m_Condition:
+          m_Target:
+            m_NameID: johnny
+            m_ID: -1650144070
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "T\xEDo, creo que voy a abandonar la b\xFAsqueda del Hipnos. No creo que
+          sea lo m\xEDo, colega."
+        - "Me lo dijo el Se\xF1or Galleta en una visi\xF3n. Dijo que deber\xEDa de
+          preocuparme por los bultos y las ra\xEDces, colega."
+        - "\xBFEl Se\xF1or Galleta? A veces he notado su presencia, \xA1pero esta
+          vez me habl\xF3 directamente, colega!"
+        - "Seguramente no entiendas nada de nada, pero se dice que el Se\xF1or Galleta
+          rige el destino del mundo, colega."
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xBFNo tendr\xE1 algo mejor que hacer ese hombre que dedicarse a dormir
+            profundamente?"
+        - m_DeityID: 0
+          m_Dialogue:
+          - "Muy pocos seres han alcanzado el Hipnos. Quiz\xE1s ese joven pueda alcanzarlo
+            con el apoyo suficiente"
+        m_Repercusion:
+          m_ID:
+            m_NameID: johnny_trance_convinced
+            m_ID: -309647702
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Johnny Trance Convinced
+          m_Active: 0
+          m_Value: 15
+      - m_Condition:
+          m_Target:
+            m_NameID: johnny
+            m_ID: -1650144070
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1T\xEDo, no veas que rayada! \xA1Ayer logr\xE9 alcanzar el Hipnos!
+          \xA1Pero fu\xE9 solo por un momento, colega!"
+        - "Lo m\xE1s raro fu\xE9 que cuando sal\xED del trance no pod\xEDa moverme,
+          \xA1estaba enraizado en el sitio, colega!"
+        - "Adem\xE1s, de mis bultos en la espalda han brotado setas. Me pregunto
+          de qu\xE9 tipo ser\xE1n, colega."
+        - "Por alg\xFAn motivo las ra\xEDces se marchitaron poco antes de amanecer,
+          Si no, \xA1todav\xEDa estar\xEDa all\xED plantado, colega!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - "\xA1Si un ser cubierto de hongos se me acerca, le prender\xE9 fuego!
+            \xA1Me dan asco las setas!"
+        - m_DeityID: 0
+          m_Dialogue:
+          - Espero que el joven alquimista pueda recapacitar a tiempo.
+        m_Repercusion:
+          m_ID:
+            m_NameID: johnny_transformed
+            m_ID: 1665577868
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Johnny Transformed
+          m_Active: 0
+          m_Value: -30
+      - m_Condition:
+          m_Target:
+            m_NameID: johnny
+            m_ID: -1650144070
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1T\xEDiio, voy a dejar esto de la meditaci\xF3n de lado de momento!
+          \xA1No veas como me duele todo, colega!"
+        - "Ayer, en medio de mi meditaci\xF3n profunda, empec\xE9 a sentir dolores
+          punzantes en el cuerpo, colega."
+        - "Supongo que ser\xE1 cosa de los bultos y las ra\xEDces que brotan de mi
+          piel, \xA1pero de normal no duele tanto, colega!"
+        m_DeitiesResultDialogue:
+        - m_DeityID: 1
+          m_Dialogue:
+          - Ese tal Johnny parece un tipo aburrido. Pero tengo curiosidad de ver
+            hasta donde llega.
+        - m_DeityID: 0
+          m_Dialogue:
+          - Es una necedad poner en peligro tu salud para lograr un objetivo.
+        m_Repercusion:
+          m_ID:
+            m_NameID: johnny_trance_interruptded
+            m_ID: 1803522837
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Johnny Trance Interrupted
+          m_Active: 0
+          m_Value: -15
+      m_AllPossibleTargets:
+      - m_NameID: johnny
+        m_ID: -1650144070
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
   m_Repercusions:
   - m_ID:
       m_NameID: wolves_gone
@@ -6686,6 +7269,83 @@ MonoBehaviour:
     m_Name: Ms Chocolate Great Success
     m_Active: 0
     m_Value: 15
+  - m_ID:
+      m_NameID: living_artifacts_destroyed
+      m_ID: 784405313
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: full_artifact_panic
+      m_ID: -876801430
+      m_Initialized: 1
+    m_Name: Living Artifacts Destroyed
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: living_artifacts_stopped
+      m_ID: -1800228245
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: full_artifact_panic
+      m_ID: -876801430
+      m_Initialized: 1
+    m_Name: Living Artifacts Stopped
+    m_Active: 0
+    m_Value: 15
+  - m_ID:
+      m_NameID: living_artifacts_servants
+      m_ID: 1237735130
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: full_artifact_panic
+      m_ID: -876801430
+      m_Initialized: 1
+    m_Name: Living Artifacts Servants
+    m_Active: 0
+    m_Value: 30
+  - m_ID:
+      m_NameID: johnny_trance_interruptded
+      m_ID: 1803522837
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: fungal_metamorphosis
+      m_ID: -803286025
+      m_Initialized: 1
+    m_Name: Johnny Trance Interrupted
+    m_Active: 0
+    m_Value: -15
+  - m_ID:
+      m_NameID: johnny_transformed
+      m_ID: 1665577868
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: fungal_metamorphosis
+      m_ID: -803286025
+      m_Initialized: 1
+    m_Name: Johnny Transformed
+    m_Active: 0
+    m_Value: -30
+  - m_ID:
+      m_NameID: johnny_trance_achieved
+      m_ID: -1596210974
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: fungal_metamorphosis
+      m_ID: -803286025
+      m_Initialized: 1
+    m_Name: Johnny Trance Achieved
+    m_Active: 0
+    m_Value: 30
+  - m_ID:
+      m_NameID: johnny_trance_convinced
+      m_ID: -309647702
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: fungal_metamorphosis
+      m_ID: -803286025
+      m_Initialized: 1
+    m_Name: Johnny Trance Convinced
+    m_Active: 0
+    m_Value: 15
   m_RepercusionNewspaperArticles:
   - m_RepID:
       m_NameID: wolves_gone
@@ -7058,6 +7718,63 @@ MonoBehaviour:
       con su \xFAltimo experimento purificar veinte litros de chocolate l\xEDquido
       en un par de gotas de chocolate purificado. Lamentablemente, la chocolatera
       ha declarado que no tiene intenciones de seguir investigando el asunto."
+  - m_RepID:
+      m_NameID: living_artifacts_destroyed
+      m_ID: 784405313
+      m_Initialized: 1
+    m_Title: La noche de los artefactos vivientes.
+    m_Body: "La colecci\xF3n de artefactos de la prestigiosa Canela N Rama ha sido
+      da\xF1ada en muy extra\xF1as circunstancias. La coleccionista ha declarado
+      que sus propios artefactos cobraron vida durante la noche. \xBFQui\xE9n hubiera
+      pensado que los artefactos tendr\xEDan tan mal genio?"
+  - m_RepID:
+      m_NameID: living_artifacts_stopped
+      m_ID: -1800228245
+      m_Initialized: 1
+    m_Title: La epidemia de los artefactos vivientes termina.
+    m_Body: "La prestigiosa coleccionista Canela N Rama declara haber resuelto la
+      inusual situaci\xF3n de los artefactos vivientes. Durante la entrevista, nos
+      di\xF3 \xFAtiles consejos de qu\xE9 hacer en este tipo de casos. \xA1Se lo
+      contaremos a continuaci\xF3n!"
+  - m_RepID:
+      m_NameID: living_artifacts_servants
+      m_ID: 1237735130
+      m_Initialized: 1
+    m_Title: Los nuevos ayudantes de Canela N Rama.
+    m_Body: "La prestigiosa coleccionista Canela N Rama nos ha sorprendido a todos
+      con su nueva mano de obra. Se trata nada m\xE1s y nada menos que de artefactos
+      vivientes. Estos se encargan de mantener y de proteger al resto de la colecci\xF3n,
+      declar\xF3 la coleccionista."
+  - m_RepID:
+      m_NameID: johnny_trance_interruptded
+      m_ID: 1803522837
+      m_Initialized: 1
+    m_Title: "La extra\xF1a enfermedad del alquimista"
+    m_Body: "Los vecinos se encuentran preocupados por la salud de un alquimista
+      local. El joven presenta extra\xF1os bultos en partes de su cuerpo. Afortunadamente
+      busca atenci\xF3n m\xE9dica."
+  - m_RepID:
+      m_NameID: johnny_transformed
+      m_ID: 1665577868
+      m_Initialized: 1
+    m_Title: El abominable hombre seta.
+    m_Body: Los vecinos se encuentran consternados ante la preocupante apariencia
+      de un alquimista local. El joven se encuentra cubierto de hongos y enredaderas
+      que salen de su cuerpo.
+  - m_RepID:
+      m_NameID: johnny_trance_achieved
+      m_ID: -1596210974
+      m_Initialized: 1
+    m_Title: El retorno del alquimista.
+    m_Body: "El joven alquimista cuyo aspecto preocupaba a los vecinos ha regresado
+      con un aspecto mucho m\xE1s saludable. \xBFCu\xE1l ser\xE1 su secreto?"
+  - m_RepID:
+      m_NameID: johnny_trance_convinced
+      m_ID: -309647702
+      m_Initialized: 1
+    m_Title: "La nueva afici\xF3n del alquimista."
+    m_Body: El joven alquimista, cuyo aspecto preocupaba a los vecinos, ha afirmado
+      que va a dedicarse a la venta de galletas de manera paralela a su negocio habitual.
   m_StoryUI:
   - m_ParentStoryID:
       m_NameID: mayor_problem
@@ -7155,6 +7872,18 @@ MonoBehaviour:
       m_Initialized: 1
     m_Sprite: {fileID: 21300000, guid: cd81f4bf9b0dee744bdaa96831c82f0e, type: 3}
     m_Title: Tratamiento de alto voltaje
+  - m_ParentStoryID:
+      m_NameID: full_artifact_panic
+      m_ID: -876801430
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 5e35d512ac9364f40b9e2ba6fe9980b1, type: 3}
+    m_Title: "P\xE1nico de antiguallas"
+  - m_ParentStoryID:
+      m_NameID: fungal_metamorphosis
+      m_ID: -803286025
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: f837aaa230588b74bb206ecd32961602, type: 3}
+    m_Title: "Metamorfosis F\xFAngica"
 --- !u!114 &6330534342466683427
 MonoBehaviour:
   m_ObjectHideFlags: 0

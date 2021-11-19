@@ -10,6 +10,7 @@ public class PopupOnMissionAccepted : MonoBehaviour
 
     private Event<PopupData_MissionStarted> _showPrimaryStoryPopup;
     private Event<PopupData_MissionStarted> _showSecondaryStoryPopup;
+    private Event<PopupData_GenericPopup> _showGenericStoryPopup;
 
     private void Awake()
     {
@@ -18,6 +19,7 @@ public class PopupOnMissionAccepted : MonoBehaviour
         _allStoriesCompletedTodayCallback = evtSys.GetCallbackByName<EventVoid>("day_sys", "all_daily_stories_completed");
         _showPrimaryStoryPopup = evtSys.GetCommandByName<Event<PopupData_MissionStarted>>("popup_sys", "primary_mission_started");
         _showSecondaryStoryPopup = evtSys.GetCommandByName<Event<PopupData_MissionStarted>>("popup_sys", "secondary_mission_started");
+        _showGenericStoryPopup = evtSys.GetCommandByName<Event<PopupData_GenericPopup>>("popup_sys", "generic_popup");
     }
 
     private void OnEnable()
@@ -50,9 +52,9 @@ public class PopupOnMissionAccepted : MonoBehaviour
 
     private void ShowAllStoriesCompletedPopup()
     {
-        PopupData_MissionStarted pData = new PopupData_MissionStarted();
-        pData.m_MissionTitle = "All Stories Completed Today";
+        PopupData_GenericPopup pData = new PopupData_GenericPopup();
+        pData.m_Text = "Has completado todas las historias por hoy";
         pData.m_TimeAlive = 5.0f;
-        _showPrimaryStoryPopup.Invoke(pData);
+        _showGenericStoryPopup.Invoke(pData);
     }
 }

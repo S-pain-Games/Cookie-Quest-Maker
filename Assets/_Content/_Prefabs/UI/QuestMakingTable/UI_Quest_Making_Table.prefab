@@ -52,6 +52,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_State:
+    m_PreviousStoryID:
+      m_NameID: 
+      m_ID: 0
+      m_Initialized: 0
     m_SelectedStoryID:
       m_NameID: 
       m_ID: 0
@@ -302,9 +306,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4700067272767958652}
     m_Modifications:
+    - target: {fileID: 263987041505519596, guid: d13e34bd66e9a2043b64b3200c666188, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426314671071579667, guid: d13e34bd66e9a2043b64b3200c666188, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3568548814018389881, guid: d13e34bd66e9a2043b64b3200c666188, type: 3}
       propertyPath: m_Name
       value: UI_Story_Selection
+      objectReference: {fileID: 0}
+    - target: {fileID: 7152976378049993540, guid: d13e34bd66e9a2043b64b3200c666188, type: 3}
+      propertyPath: m_fontSize
+      value: 62.2
       objectReference: {fileID: 0}
     - target: {fileID: 8475575117720819178, guid: d13e34bd66e9a2043b64b3200c666188, type: 3}
       propertyPath: m_Pivot.x
