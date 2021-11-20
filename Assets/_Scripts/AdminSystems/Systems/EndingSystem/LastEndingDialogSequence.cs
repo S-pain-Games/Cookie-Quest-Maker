@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EndingSequence : MonoBehaviour
+public class LastEndingDialogSequence : MonoBehaviour
 {
     [SerializeField] private Transform evithSpawnPos;
     [SerializeField] private Transform nuSpawnPos;
