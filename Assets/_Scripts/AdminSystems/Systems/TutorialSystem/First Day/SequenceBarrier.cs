@@ -15,9 +15,12 @@ public class SequenceBarrier : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        bool hasTalkedWithMayor = Admin.Global.Components.m_StoriesStateComponent.m_OngoingStories.Count > 0;
-        if (hasTalkedWithMayor)
+        if (!IsPlayer(collision))
+            return;
+
+        if (HasTalkedWithMayor())
         {
+            collision.GetComponent<CharacterNavMeshAgentHandler>().InterruptAgentMovement();
             _sequence.ExecuteSequence();
             gameObject.SetActive(false);
         }
@@ -25,5 +28,15 @@ public class SequenceBarrier : MonoBehaviour
         {
             _popupCmd.Invoke(new PopupData_GenericPopup { m_Text = "Aun no has hablado con todos tus clientes", m_TimeAlive = 3.0f });
         }
+    }
+
+    private bool HasTalkedWithMayor()
+    {
+        return Admin.Global.Components.m_StoriesStateComponent.m_OngoingStories.Count > 0;
+    }
+
+    private bool IsPlayer(Collider2D collision)
+    {
+        return collision.GetComponent<CharacterNavMeshAgentHandler>() != null;
     }
 }

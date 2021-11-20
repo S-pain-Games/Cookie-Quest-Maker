@@ -8,10 +8,23 @@ public class FirstNightSequenceBarrier : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Admin.Global.Components.m_GameState.m_BakeryNight.activeSelf)
+
+        if (IsPlayer(collision) && IsNightState())
         {
+            collision.GetComponent<CharacterNavMeshAgentHandler>().InterruptAgentMovement();
+
             _sequence.ExecuteSequence();
             gameObject.SetActive(false);
         }
+    }
+
+    private bool IsPlayer(Collider2D collision)
+    {
+        return collision.GetComponent<CharacterNavMeshAgentHandler>() != null;
+    }
+
+    private bool IsNightState()
+    {
+        return Admin.Global.Components.m_GameState.m_BakeryNight.activeSelf;
     }
 }

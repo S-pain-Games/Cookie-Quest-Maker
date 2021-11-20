@@ -27,8 +27,8 @@ public class AgentMouseListener : MonoBehaviour
     public void SetInputActivated(bool activated)
     {
         _enabledListener = activated;
-        if(_agent != null)
-            _agent.SetTarget(transform.position);
+        /*if(_agent != null)
+            _agent.SetTarget(new Vector3(transform.position.x, transform.position.y, 0));*/
     }
 
     private void OnClick()

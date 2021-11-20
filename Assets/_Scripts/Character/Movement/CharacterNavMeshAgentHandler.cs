@@ -78,8 +78,7 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
 
     private void OnTargetReached()
     {
-        _agent.isStopped = true;
-        _agent.velocity = Vector3.zero;
+        StopAgentMovement();
 
         //Si el target era interactuable, llamar a su método
         if(_interactableEntity != null)
@@ -87,9 +86,25 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
             _interactableEntity.GetComponent<IInteractableEntity>().OnInteract();
         }
 
+        ResetAgentTarget();
+    }
+
+    public void InterruptAgentMovement()
+    {
+        StopAgentMovement();
+        ResetAgentTarget();
+    }
+
+    private void StopAgentMovement()
+    {
+        _agent.isStopped = true;
+        _agent.velocity = Vector3.zero;
+    }
+
+    private void ResetAgentTarget()
+    {
         _interactableEntity = null;
         _movingTowardsTarget = false;
         _interactingWithNpc = false;
     }
-
 }
