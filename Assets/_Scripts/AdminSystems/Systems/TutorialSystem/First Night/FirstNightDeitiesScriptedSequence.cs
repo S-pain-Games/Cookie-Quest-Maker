@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class FirstNightDeitiesScriptedSequence : MonoBehaviour
 {
-    [SerializeField] private Transform evithSpawnPos;
-    [SerializeField] private Transform nuSpawnPos;
-
-    [SerializeField] private GameObject evithPrefab;
-    [SerializeField] private GameObject nuPrefab;
-
-    private GameObject evithRef;
-    private GameObject nuRef;
-
     private EventVoid _enableMovementCmd;
     private EventVoid _disableMovementCmd;
     private EventVoid _toggleGameplayUiCmd;
@@ -31,12 +22,9 @@ public class FirstNightDeitiesScriptedSequence : MonoBehaviour
     [MethodButton]
     public void ExecuteSequence()
     {
-        evithRef = Instantiate(evithPrefab, evithSpawnPos);
-        nuRef = Instantiate(nuPrefab, nuSpawnPos);
-        evithRef.GetComponent<SpriteRenderer>().flipX = true;
-        nuRef.GetComponent<SpriteRenderer>().flipX = true;
         _disableMovementCmd.Invoke();
         _toggleGameplayUiCmd.Invoke();
+
         StartNuEvithFirstNightSequence();
     }
 
@@ -171,10 +159,6 @@ public class FirstNightDeitiesScriptedSequence : MonoBehaviour
 
     private void FinishSequence()
     {
-        Destroy(evithRef);
-        Destroy(nuRef);
-        evithRef = null;
-        nuRef = null;
         _enableMovementCmd.Invoke();
         _toggleGameplayUiCmd.Invoke();
     }
