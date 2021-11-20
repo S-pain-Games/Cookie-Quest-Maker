@@ -696,7 +696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[0].m_CookieName
-      value: Malvavisco Fantasma Tostado
+      value: Malvavisco Crudo
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[1].m_CookieName
@@ -740,7 +740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[0].m_RecipeName
-      value: Receta para Malvavisco Fantasma Tostado
+      value: Receta para Malvavisco Crudo
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[1].m_Price_Evil
@@ -1456,7 +1456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[0].m_Name
-      value: Malvavisco Fantasma Tostado
+      value: Malvavisco Crudo
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[1].m_Name
@@ -1620,7 +1620,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[0].m_CookieDescription
-      value: "No es el m\xE1s h\xE1bil, pero act\xFAa con entusiasmo."
+      value: "El Malvavisco Crudo es un postre b\xE1sico dispuesto a echar una mano
+        con lo que haga falta, aunque no sirva para mucho. Bueno para cuando no hay
+        mucho que comer y pocas ganas de cocinar."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[0].m_ParentID.m_NameID
@@ -1628,7 +1630,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[1].m_CookieDescription
-      value: Ayudante todoterreno perfecto para tareas sencillas.
+      value: "El Merengue Fantasma Tostado es un postre b\xE1sico, dulce, blandito\u2026
+        pero a veces se cuela en las  habitaciones de la gente mientras duermen y
+        se queda mir\xE1ndolos haciendo ruidos de ultratumba. *WUO-WUO-WUO-WUO-WUO-WUO-WUO*
+        Que alguien llame a la polic\xEDa."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[1].m_ParentID.m_NameID
@@ -1636,7 +1641,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[2].m_CookieDescription
-      value: Siempre dispuesto a ayudar.
+      value: "Cualquiera que sea el problema que tengas el Pepito de Ternura va intentar
+        resolverlo, aunque a lo mejor no es buena idea mandarlo atacar a un a un
+        grupo de lobos. Con su centro de crema dulce y su coraz\xF3n brillante de
+        chocolate eterno est\xE1 listo para salir a abrazar al mundo."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[2].m_ParentID.m_NameID
@@ -1644,7 +1652,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[3].m_CookieDescription
-      value: "Es muy pac\xEDfico, pero no controla su propia fuerza"
+      value: "Se dice que el Bizcotroll forma parte del tr\xEDo de postres h\xE9roes
+        colosales, y que aunque se pasa gran parte del tiempo dormido, en cuanto
+        se despierta no duda en ayudar."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[3].m_ParentID.m_NameID
@@ -1652,8 +1662,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[4].m_CookieDescription
-      value: "Tratan de ayudar de la forma m\xE1s violenta posible. Los favoritos
-        de Evith."
+      value: "Reci\xE9n salida del horno, la Jaur\xEDa Bomb\xF3n Infernal son un
+        grupo de bombones escupe compota candente, especializados en el ataque. Con
+        un n\xFAcleo de compota de mora infernal y una habanero ardiente en la cola
+        hace arder todo a su paso."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[4].m_ParentID.m_NameID
@@ -1661,7 +1673,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[5].m_CookieDescription
-      value: "Gran defensor de la justicia con m\xE9todos muy violentos"
+      value: "El Palad\xEDn Tortita es el segundo postre colosal, tan solo con levantar
+        su espada de caramelo solidificado imparte da\xF1o en \xE1rea en un segundo.
+        Aunque sus capas de tortitas son tan suaves que se deshacen en la boca, el
+        caramelo que lo cubre lo protege de cualquier ataque."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[5].m_ParentID.m_NameID
@@ -1669,7 +1684,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[6].m_CookieDescription
-      value: Intenta ser persuasivo, pero se le puede ir la mano.
+      value: "El bizcoborracho es un postre achispado que se zarandea de un lado
+        a otro con un un ritmo hipn\xF3tico. Entre su golosa capa de compota y su
+        bizcocho\u2026 HIP... borracho te convence de lo que sea \u2026 HIP-HIP\u2026
+        creo que no me mantengo en pie."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[6].m_ParentID.m_NameID
@@ -1677,7 +1695,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[7].m_CookieDescription
-      value: Es capaz de persuadir incluso a una mula. Aprobado por Nu.
+      value: "Los citrielfos son el tercer postre colosal. Siempre tienen la raz\xF3n,
+        o eso creen ellos, y da igual que est\xE9n equivocados, no tienen problemas
+        en mirarte por encima del hombre desde lo alto de su copa. Tan pronto como
+        la cara de su enemigo ponga expresi\xF3n de haber chupado un lim\xF3n sabr\xE1
+        que su hechizo ha hecho efecto."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[7].m_ParentID.m_NameID
@@ -1685,7 +1707,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[8].m_CookieDescription
-      value: "Para cuando la violencia puede ser la soluci\xF3n"
+      value: "Con esta galleta puedes acariciar fuertemente al objetivo hasta que
+        por un resval\xF3n tonto caiga al suelo. Si no quer\xEDa llegar a este nivel,
+        no s\xE9, que se hubiese portado bien."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[8].m_ParentID.m_NameID
@@ -1693,7 +1717,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[9].m_CookieDescription
-      value: "La soluci\xF3n m\xE1s diplom\xE1tica ante un problema"
+      value: "Hablar las cosas a veces est\xE1 bien, eso dicen\u2026 Mira primero
+        se intenta convencer, luego ya se saca a Di\xE1logo."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[9].m_ParentID.m_NameID
@@ -1701,7 +1726,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[0].m_RecipeDescription
-      value: "No es el m\xE1s h\xE1bil, pero act\xFAa con entusiasmo."
+      value: "El Malvavisco Crudo es un postre b\xE1sico dispuesto a echar una mano
+        con lo que haga falta, aunque no sirva para mucho.Bueno para cuando no hay
+        mucho que comer y pocas ganas de cocinar."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[10].m_PieceID.m_NameID
@@ -1745,7 +1772,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[1].m_RecipeDescription
-      value: Ayudante todoterreno perfecto para tareas sencillas.
+      value: "El Merengue Fantasma Tostado es un postre b\xE1sico, dulce, blandito\u2026
+        pero a veces se cuela en las  habitaciones de la gente mientras duermen y
+        se queda mir\xE1ndolos haciendo ruidos de ultratumba. * WUO - WUO - WUO -
+        WUO - WUO - WUO - WUO * Que alguien llame a la polic\xEDa."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[20].m_PieceID.m_NameID
@@ -1809,7 +1839,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[2].m_RecipeDescription
-      value: Siempre dispuesto a ayudar.
+      value: "Cualquiera que sea el problema que tengas el Pepito de Ternura va intentar
+        resolverlo, aunque a lo mejor no es buena idea mandarlo atacar a un a un
+        grupo de lobos. Con su centro de crema dulce y su coraz\xF3n brillante de
+        chocolate eterno est\xE1 listo para salir a abrazar al mundo."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[30].m_ID.m_Initialized
@@ -1821,36 +1854,54 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[3].m_RecipeDescription
-      value: "Es muy pac\xEDfico, pero no controla su propia fuerza"
+      value: "Se dice que el Bizcotroll forma parte del tr\xEDo de postres h\xE9roes
+        colosales, y que aunque se pasa gran parte del tiempo dormido, en cuanto
+        se despierta no duda en ayudar."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[4].m_RecipeDescription
-      value: "Tratan de ayudar de la forma m\xE1s violenta posible. Los favoritos
-        de Evith."
+      value: "Reci\xE9n salida del horno, la Jaur\xEDa Bomb\xF3n Infernal son un
+        grupo de bombones escupe compota candente, especializados en el ataque. Con
+        un n\xFAcleo de compota de mora infernal y una habanero ardiente en la cola
+        hace arder todo a su paso."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[5].m_RecipeDescription
-      value: "Gran defensor de la justicia con m\xE9todos muy violentos"
+      value: "El Palad\xEDn Tortita es el segundo postre colosal, tan solo con levantar
+        su espada de caramelo solidificado imparte da\xF1o en \xE1rea en un segundo.
+        Aunque sus capas de tortitas son tan suaves que se deshacen en la boca, el
+        caramelo que lo cubre lo protege de cualquier ataque."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[6].m_RecipeDescription
-      value: Intenta ser persuasivo, pero se le puede ir la mano.
+      value: "El bizcoborracho es un postre achispado que se zarandea de un lado
+        a otro con un un ritmo hipn\xF3tico. Entre su golosa capa de compota y su
+        bizcocho\u2026 HIP... borracho te convence de lo que sea \u2026 HIP-HIP\u2026
+        creo que no me mantengo en pie."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[7].m_RecipeDescription
-      value: Es capaz de persuadir incluso a una mula. Aprobado por Nu.
+      value: "Los citrielfos son el tercer postre colosal. Siempre tienen la raz\xF3n,
+        o eso creen ellos, y da igual que est\xE9n equivocados, no tienen problemas
+        en mirarte por encima del hombre desde lo alto de su copa. Tan pronto como
+        la cara de su enemigo ponga expresi\xF3n de haber chupado un lim\xF3n sabr\xE1
+        que su hechizo ha hecho efecto."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[8].m_RecipeDescription
-      value: "Para cuando la violencia puede ser la soluci\xF3n."
+      value: "Con esta galleta puedes acariciar fuertemente al objetivo hasta que
+        por un resval\xF3n tonto caiga al suelo. Si no quer\xEDa llegar a este nivel,
+        no s\xE9, que se hubiese portado bien."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[9].m_RecipeDescription
-      value: "La soluci\xF3n m\xE1s diplom\xE1tica ante un problema"
+      value: "Hablar las cosas a veces est\xE1 bien, eso dicen\u2026 Mira primero
+        se intenta convencer, luego ya se saca a Di\xE1logo."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[10].m_CookieDescription
-      value: Para echar una mano a alguien en apuros
+      value: "Cuando alguien est\xE9 en problemas usa esta galleta para ayudarlos,
+        no hay nada que un abrazo no pueda hacer."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[10].m_ParentID.m_NameID
@@ -1858,7 +1909,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[11].m_CookieDescription
-      value: "Observa detenidamente la situaci\xF3n antes de actuar"
+      value: "Mira. En realidad solo mira lo que pasa, observar esta bien para entender
+        a tus enemigos, conocerlos y aprender sus habitos y debilidades para despu\xE9s\u2026
+        ATACAR Y VENGARSE POR EL DA\xD1O AL HONOR DE TU FAMILIA\u2026 o solo dialogar,
+        con Di\xE1logo."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[11].m_ParentID.m_NameID
@@ -1866,7 +1920,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[12].m_CookieDescription
-      value: "Observa hasta el punto de llegar a ser inc\xF3modo"
+      value: "Mira, pero no mira para observar, te persigue con la mirada, aunque
+        no quieras, aunque cruces la calle, entres en tu casa, y te metas escondas
+        debajo de la mesa. TE ESTAMOS VIENDO\u2026 NO PUEDES ESCONDERTE."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[12].m_ParentID.m_NameID
@@ -1874,47 +1930,109 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[13].m_CookieDescription
-      value: "Para la redistribuci\xF3n de bienes ajenos"
+      value: "Con esta galleta puedes coger prestado cosas de la v\xEDctima\u2026
+        quiero decir, objetivo. Un poco de despiste y lo que quieras puedes cogerlo
+        prestado, indefinidamente."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[13].m_ParentID.m_NameID
       value: steal
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_CookieData.Array.data[14].m_CookieDescription
+      value: "Un bate, tambi\xE9n llamado Di\xE1logo, es una galleta muy socorrida
+        cuando se te ponen un poco tontos, un suave golpecito y puedes convencer
+        a quien sea de cualquier cosa."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[14].m_ParentID.m_NameID
       value: baseball_bat
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_CookieData.Array.data[15].m_CookieDescription
+      value: Porque es por todos conocido que ayudar con unas tijeras en la mano
+        no asusta a nadie.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[15].m_ParentID.m_NameID
       value: scissors
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_CookieData.Array.data[16].m_CookieDescription
+      value: "Da igual d\xF3nde est\xE9 el objetivo, cuando una chancla se lanza
+        lo encuentra y golpea el cogote de todo aqu\xE9l que haya a cinco kil\xF3metros
+        a la redonda.  *FLIP-FLOP-FLIP-FLOP-FLIP-FLOP-FLIP-FLOP* \xA1CORRE!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[16].m_ParentID.m_NameID
       value: flip_flops
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_CookieData.Array.data[17].m_CookieDescription
+      value: "En serio, \xBFa qu\xE9 clase de persona perturbada se le ocurri\xF3
+        meter un pastel como objeto? \xBFAtacar con un pastel? Mirar fijamente con
+        un pastel\u2026 perturbador."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[17].m_ParentID.m_NameID
       value: cake
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_CookieData.Array.data[18].m_CookieDescription
+      value: "La violencia nunca es la soluci\xF3n, bueno si alguien se pone un poco
+        tonto se le puede acaricial violentamente la cara hasta que entre en raz\xF3n,
+        pero s\xF3lo cuando Di\xE1logo no ha funcionado."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[18].m_ParentID.m_NameID
       value: violently
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_CookieData.Array.data[19].m_CookieDescription
+      value: "Todo ataque se magnifica con esta galleta, pero  no nos pasemos, los
+        trajes para funerales est\xE1n caros en esta \xE9poca del a\xF1o."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[19].m_ParentID.m_NameID
       value: brutally
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_CookieData.Array.data[20].m_CookieDescription
+      value: "Con esta galleta toda acci\xF3n que hagas se suavizar\xE1, porque es
+        por todos conocidos que atacar amablemente es m\xE1s gentil que hacerlo violentamente."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[20].m_ParentID.m_NameID
       value: kindly
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_CookieData.Array.data[21].m_CookieDescription
+      value: "Como dice mi abuela \u201CM\xE1s vale ma\xF1a que mil p\xE1jaros volando\u201D,
+        bueno, esa se\xF1ora nunca estuvo en sus cabales, pero lo que viene a significar
+        es que nunca olvides el poder de la persuasi\xF3n."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[21].m_ParentID.m_NameID
       value: convincingly
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_CookieData.Array.data[22].m_CookieDescription
+      value: "Es el alcalde del pueblo, y no tienen ning\xFAn problema en dejarte
+        claro dos cosas, que es el ALCALDE, y que le gustan los dineros. Posee gran
+        parte de los cultivos de trigo del pueblo, all\xE1 donde te alcance la vista
+        es propiedad suya, y tiene un sospechoso gran parentesco a Hio\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[22].m_ParentID.m_NameID
       value: mayor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_CookieData.Array.data[23].m_CookieDescription
+      value: "En realidad se llama Meri, la lechera, pero Hio le llam\xF3 Meri, la
+        Leches una vez y as\xED se qued\xF3. Posee la \xFAnica granja de vacas del
+        pueblo, y se le da muy bien cuidarlas, pero en ocasiones\u2026 pasan cosas
+        y no puede controlarlas, y cuando eso pasa\u2026 la cosa se le va de las
+        manos."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[23].m_ParentID.m_NameID
@@ -1922,7 +2040,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[24].m_CookieDescription
-      value: Coleccionista de artefactos.
+      value: "Empresaria, exitosa, chica de portada, todo lo que Canela N Rama quiera
+        lo tiene. Salt\xF3 a la fama despu\xE9s de presentar la patente de su primer
+        extracto super concentrado de canela, a partir de ah\xED el \xE9xito vino
+        solo."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[24].m_ParentID.m_NameID
@@ -1930,7 +2051,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[25].m_CookieDescription
-      value: El peculiar alquimista.
+      value: "Er Johnny vive en su mundo psicod\xE9lico todo el d\xEDa, lo que le
+        lleva a ser el mejor creador de levaduras del archipi\xE9lago. Si hay alguien
+        capaz de desvelar el secreto sobre la magia de Hio es Johnny, cuanto m\xE1s
+        se mete en su mundo, m\xE1s puede interactuar con la magia del pastelero\u2026
+        aunque crea que son deidades galleta."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[25].m_ParentID.m_NameID
@@ -1938,7 +2063,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[26].m_CookieDescription
-      value: "La exc\xE9ntrica chocolatera."
+      value: "Dulce y estilosa, esta drag queen est\xE1 lista para seducirte con
+        su dulce sabor hasta hacerte saltar por los aires con su chocolate explosivo.
+        Es una cient\xEDfica chocolatera imponente, pero cari, no te atrevas a ponerte
+        en su camino, porque cielo, esta reina est\xE1 lista para servir su lado
+        m\xE1s amargo."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[26].m_ParentID.m_NameID
@@ -1946,7 +2075,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[27].m_CookieDescription
-      value: El agricultor malhumorado.
+      value: "Gafe s\xED es, a este mantequero le ocurren mil desgracias, un poco
+        merecidas, aunque puede ser porque el olor dulce de la mantequilla las atraiga,
+        y a las ratas tambi\xE9n."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[27].m_ParentID.m_NameID
@@ -1954,7 +2085,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[28].m_CookieDescription
-      value: Una manada de lobos.
+      value: "Son una manada de lobos, \xBFun poco violenta? Pues s\xED chica, pero
+        no haber construido el pueblo donde antes viv\xEDa la manada."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[28].m_ParentID.m_NameID
@@ -1962,7 +2094,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[29].m_CookieDescription
-      value: Ratas particularmente inteligentes.
+      value: "Estas ratas han formado una sociedad de roedores super inteligentes,
+        a la m\xEDnima que puedan se van a aprovechar de la situaci\xF3n. M\xE1s
+        te vale tenerlas de tu lado."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[29].m_ParentID.m_NameID
@@ -1970,7 +2104,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[30].m_CookieDescription
-      value: "Las mayores v\xEDctimas en esta historia."
+      value: Las vacas de Meri, la Leches, son unos animales tiernos que no paran
+        de hacer leche, aunque a veces tienen rachas y necesitan un poco de ayuda
+        para seguir con sus labores.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[30].m_ParentID.m_NameID
@@ -2018,43 +2154,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[10].m_RecipeDescription
-      value: Para echar una mano a alguien en apuros
+      value: "Cuando alguien est\xE9 en problemas usa esta galleta para ayudarlos,
+        no hay nada que un abrazo no pueda hacer."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[11].m_RecipeDescription
-      value: "Observa detenidamente la situaci\xF3n antes de actuar"
+      value: "Mira. En realidad solo mira lo que pasa, observar esta bien para entender
+        a tus enemigos, conocerlos y aprender sus habitos y debilidades para despu\xE9s\u2026
+        ATACAR Y VENGARSE POR EL DA\xD1O AL HONOR DE TU FAMILIA\u2026 o solo dialogar,
+        con Di\xE1logo."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[12].m_RecipeDescription
-      value: "Observa hasta el punto de llegar a ser inc\xF3modo"
+      value: "Mira, pero no mira para observar, te persigue con la mirada, aunque
+        no quieras, aunque cruces la calle, entres en tu casa, y te metas escondas
+        debajo de la mesa. TE ESTAMOS VIENDO\u2026 NO PUEDES ESCONDERTE."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[13].m_RecipeDescription
-      value: "Para la redistribuci\xF3n de bienes ajenos"
+      value: "Con esta galleta puedes coger prestado cosas de la v\xEDctima\u2026
+        quiero decir, objetivo. Un poco de despiste y lo que quieras puedes cogerlo
+        prestado, indefinidamente."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_RecipeData.Array.data[14].m_RecipeDescription
+      value: "Un bate, tambi\xE9n llamado Di\xE1logo, es una galleta muy socorrida
+        cuando se te ponen un poco tontos, un suave golpecito y puedes convencer
+        a quien sea de cualquier cosa."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_RecipeData.Array.data[15].m_RecipeDescription
+      value: Porque es por todos conocido que ayudar con unas tijeras en la mano
+        no asusta a nadie.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[16].m_RecipeDescription
-      value: El utensilio disuasorio por excelencia
+      value: "Da igual d\xF3nde est\xE9 el objetivo, cuando una chancla se lanza
+        lo encuentra y golpea el cogote de todo aqu\xE9l que haya a cinco kil\xF3metros
+        a la redonda.  *FLIP-FLOP-FLIP-FLOP-FLIP-FLOP-FLIP-FLOP* \xA1CORRE!"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[17].m_RecipeDescription
-      value: Una muestra de tus buenas intenciones
+      value: "En serio, \xBFa qu\xE9 clase de persona perturbada se le ocurri\xF3
+        meter un pastel como objeto? \xBFAtacar con un pastel? Mirar fijamente con
+        un pastel\u2026 perturbador."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[18].m_RecipeDescription
-      value: Insiste de manera agresiva
+      value: "La violencia nunca es la soluci\xF3n, bueno si alguien se pone un poco
+        tonto se le puede acaricial violentamente la cara hasta que entre en raz\xF3n,
+        pero s\xF3lo cuando Di\xE1logo no ha funcionado."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[19].m_RecipeDescription
-      value: "La paz nunca fue una opci\xF3n"
+      value: "Todo ataque se magnifica con esta galleta, pero  no nos pasemos, los
+        trajes para funerales est\xE1n caros en esta \xE9poca del a\xF1o."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[20].m_RecipeDescription
-      value: "Act\xFAa con ternura"
+      value: "Con esta galleta toda acci\xF3n que hagas se suavizar\xE1, porque es
+        por todos conocidos que atacar amablemente es m\xE1s gentil que hacerlo violentamente."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[21].m_RecipeDescription
-      value: "Demuestra que est\xE1n equivocados"
+      value: "Como dice mi abuela \u201CM\xE1s vale ma\xF1a que mil p\xE1jaros volando\u201D,
+        bueno, esa se\xF1ora nunca estuvo en sus cabales, pero lo que viene a significar
+        es que nunca olvides el poder de la persuasi\xF3n."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[25].m_RecipeDescription
@@ -2334,7 +2499,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[0].m_Description
-      value: "No es el m\xE1s h\xE1bil, pero act\xFAa con entusiasmo."
+      value: "El Malvavisco Crudo es un postre b\xE1sico dispuesto a echar una mano
+        con lo que haga falta, aunque no sirva para mucho. Bueno para cuando no hay
+        mucho que comer y pocas ganas de cocinar."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[0].m_ID.m_NameID
@@ -2342,7 +2509,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[1].m_Description
-      value: Ayudante todoterreno perfecto para tareas sencillas.
+      value: "El Merengue Fantasma Tostado es un postre b\xE1sico, dulce, blandito\u2026
+        pero a veces se cuela en las  habitaciones de la gente mientras duermen y
+        se queda mir\xE1ndolos haciendo ruidos de ultratumba. *WUO-WUO-WUO-WUO-WUO-WUO-WUO*
+        Que alguien llame a la polic\xEDa."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[1].m_ID.m_NameID
@@ -2350,7 +2520,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[2].m_Description
-      value: Siempre dispuesto a ayudar.
+      value: "Cualquiera que sea el problema que tengas el Pepito de Ternura va intentar
+        resolverlo, aunque a lo mejor no es buena idea mandarlo atacar a un a un
+        grupo de lobos. Con su centro de crema dulce y su coraz\xF3n brillante de
+        chocolate eterno est\xE1 listo para salir a abrazar al mundo."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[2].m_ID.m_NameID
@@ -2358,7 +2531,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[3].m_Description
-      value: "Es muy pac\xEDfico, pero no controla su propia fuerza"
+      value: "Se dice que el Bizcotroll forma parte del tr\xEDo de postres h\xE9roes
+        colosales, y que aunque se pasa gran parte del tiempo dormido, en cuanto
+        se despierta no duda en ayudar."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[3].m_ID.m_NameID
@@ -2366,8 +2541,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[4].m_Description
-      value: "Tratan de ayudar de la forma m\xE1s violenta posible. Los favoritos
-        de Evith."
+      value: "Reci\xE9n salida del horno, la Jaur\xEDa Bomb\xF3n Infernal son un
+        grupo de bombones escupe compota candente, especializados en el ataque. Con
+        un n\xFAcleo de compota de mora infernal y una habanero ardiente en la cola
+        hace arder todo a su paso."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[4].m_ID.m_NameID
@@ -2375,7 +2552,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[5].m_Description
-      value: "Gran defensor de la justicia con m\xE9todos muy violentos"
+      value: "El Palad\xEDn Tortita es el segundo postre colosal, tan solo con levantar
+        su espada de caramelo solidificado imparte da\xF1o en \xE1rea en un segundo.
+        Aunque sus capas de tortitas son tan suaves que se deshacen en la boca, el
+        caramelo que lo cubre lo protege de cualquier ataque."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[5].m_ID.m_NameID
@@ -2383,7 +2563,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[6].m_Description
-      value: Intenta ser persuasivo, pero se le puede ir la mano.
+      value: "El bizcoborracho es un postre achispado que se zarandea de un lado
+        a otro con un un ritmo hipn\xF3tico. Entre su golosa capa de compota y su
+        bizcocho\u2026 HIP... borracho te convence de lo que sea \u2026 HIP-HIP\u2026
+        creo que no me mantengo en pie."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[6].m_ID.m_NameID
@@ -2391,7 +2574,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[7].m_Description
-      value: Es capaz de persuadir incluso a una mula. Aprobado por Nu.
+      value: "Los citrielfos son el tercer postre colosal. Siempre tienen la raz\xF3n,
+        o eso creen ellos, y da igual que est\xE9n equivocados, no tienen problemas
+        en mirarte por encima del hombre desde lo alto de su copa. Tan pronto como
+        la cara de su enemigo ponga expresi\xF3n de haber chupado un lim\xF3n sabr\xE1
+        que su hechizo ha hecho efecto."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[7].m_ID.m_NameID
@@ -2399,7 +2586,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[8].m_Description
-      value: "Para cuando la violencia puede ser la soluci\xF3n"
+      value: "Con esta galleta puedes acariciar fuertemente al objetivo hasta que
+        por un resval\xF3n tonto caiga al suelo. Si no quer\xEDa llegar a este nivel,
+        no s\xE9, que se hubiese portado bien."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[8].m_ID.m_NameID
@@ -2407,7 +2596,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[9].m_Description
-      value: "La soluci\xF3n m\xE1s diplom\xE1tica ante un problema"
+      value: "Hablar las cosas a veces est\xE1 bien, eso dicen\u2026 Mira primero
+        se intenta convencer, luego ya se saca a Di\xE1logo."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[9].m_ID.m_NameID
@@ -2547,7 +2737,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[10].m_Description
-      value: Para echar una mano a alguien en apuros
+      value: "Cuando alguien est\xE9 en problemas usa esta galleta para ayudarlos,
+        no hay nada que un abrazo no pueda hacer."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[10].m_ID.m_NameID
@@ -2555,7 +2746,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[11].m_Description
-      value: "Observa detenidamente la situaci\xF3n antes de actuar"
+      value: "Mira. En realidad solo mira lo que pasa, observar esta bien para entender
+        a tus enemigos, conocerlos y aprender sus habitos y debilidades para despu\xE9s\u2026
+        ATACAR Y VENGARSE POR EL DA\xD1O AL HONOR DE TU FAMILIA\u2026 o solo dialogar,
+        con Di\xE1logo."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[11].m_ID.m_NameID
@@ -2563,7 +2757,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[12].m_Description
-      value: "Observa hasta el punto de llegar a ser inc\xF3modo"
+      value: "Mira, pero no mira para observar, te persigue con la mirada, aunque
+        no quieras, aunque cruces la calle, entres en tu casa, y te metas escondas
+        debajo de la mesa. TE ESTAMOS VIENDO\u2026 NO PUEDES ESCONDERTE."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[12].m_ID.m_NameID
@@ -2571,31 +2767,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[13].m_Description
-      value: "Para la redistribuci\xF3n de bienes ajenos"
+      value: "Con esta galleta puedes coger prestado cosas de la v\xEDctima\u2026
+        quiero decir, objetivo. Un poco de despiste y lo que quieras puedes cogerlo
+        prestado, indefinidamente."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[13].m_ID.m_NameID
       value: steal
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_QuestPieceUIComponent.Array.data[14].m_Description
+      value: "Un bate, tambi\xE9n llamado Di\xE1logo, es una galleta muy socorrida
+        cuando se te ponen un poco tontos, un suave golpecito y puedes convencer
+        a quien sea de cualquier cosa."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[14].m_ID.m_NameID
       value: baseball_bat
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_QuestPieceUIComponent.Array.data[15].m_Description
+      value: Porque es por todos conocido que ayudar con unas tijeras en la mano
+        no asusta a nadie.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[15].m_ID.m_NameID
       value: scissors
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_QuestPieceUIComponent.Array.data[16].m_Description
+      value: "Da igual d\xF3nde est\xE9 el objetivo, cuando una chancla se lanza
+        lo encuentra y golpea el cogote de todo aqu\xE9l que haya a cinco kil\xF3metros
+        a la redonda.  *FLIP-FLOP-FLIP-FLOP-FLIP-FLOP-FLIP-FLOP* \xA1CORRE!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[16].m_ID.m_NameID
       value: flip_flops
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_QuestPieceUIComponent.Array.data[17].m_Description
+      value: "En serio, \xBFa qu\xE9 clase de persona perturbada se le ocurri\xF3
+        meter un pastel como objeto? \xBFAtacar con un pastel? Mirar fijamente con
+        un pastel\u2026 perturbador."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[17].m_ID.m_NameID
       value: cake
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_QuestPieceUIComponent.Array.data[18].m_Description
+      value: "La violencia nunca es la soluci\xF3n, bueno si alguien se pone un poco
+        tonto se le puede acaricial violentamente la cara hasta que entre en raz\xF3n,
+        pero s\xF3lo cuando Di\xE1logo no ha funcionado."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[18].m_ID.m_NameID
       value: violently
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_QuestPieceUIComponent.Array.data[19].m_Description
+      value: "Todo ataque se magnifica con esta galleta, pero  no nos pasemos, los
+        trajes para funerales est\xE1n caros en esta \xE9poca del a\xF1o."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[19].m_ID.m_NameID
@@ -2606,16 +2838,42 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 68794217eaff3c64c9235d761333a439, type: 3}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_QuestPieceUIComponent.Array.data[20].m_Description
+      value: "Con esta galleta toda acci\xF3n que hagas se suavizar\xE1, porque es
+        por todos conocidos que atacar amablemente es m\xE1s gentil que hacerlo violentamente."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[20].m_ID.m_NameID
       value: kindly
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_QuestPieceUIComponent.Array.data[21].m_Description
+      value: "Como dice mi abuela \u201CM\xE1s vale ma\xF1a que mil p\xE1jaros volando\u201D,
+        bueno, esa se\xF1ora nunca estuvo en sus cabales, pero lo que viene a significar
+        es que nunca olvides el poder de la persuasi\xF3n."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[21].m_ID.m_NameID
       value: convincingly
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_QuestPieceUIComponent.Array.data[22].m_Description
+      value: "Es el alcalde del pueblo, y no tienen ning\xFAn problema en dejarte
+        claro dos cosas, que es el ALCALDE, y que le gustan los dineros. Posee gran
+        parte de los cultivos de trigo del pueblo, all\xE1 donde te alcance la vista
+        es propiedad suya, y tiene un sospechoso gran parentesco a Hio\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[22].m_ID.m_NameID
       value: mayor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_QuestPieceUIComponent.Array.data[23].m_Description
+      value: "En realidad se llama Meri, la lechera, pero Hio le llam\xF3 Meri, la
+        Leches una vez y as\xED se qued\xF3. Posee la \xFAnica granja de vacas del
+        pueblo, y se le da muy bien cuidarlas, pero en ocasiones\u2026 pasan cosas
+        y no puede controlarlas, y cuando eso pasa\u2026 la cosa se le va de las
+        manos."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[23].m_ID.m_NameID
@@ -2623,7 +2881,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[24].m_Description
-      value: Coleccionista de artefactos.
+      value: "Empresaria, exitosa, chica de portada, todo lo que Canela N Rama quiera
+        lo tiene. Salt\xF3 a la fama despu\xE9s de presentar la patente de su primer
+        extracto super concentrado de canela, a partir de ah\xED el \xE9xito vino
+        solo."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[24].m_ID.m_NameID
@@ -2631,7 +2892,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[25].m_Description
-      value: El peculiar alquimista.
+      value: "Er Johnny vive en su mundo psicod\xE9lico todo el d\xEDa, lo que le
+        lleva a ser el mejor creador de levaduras del archipi\xE9lago. Si hay alguien
+        capaz de desvelar el secreto sobre la magia de Hio es Johnny, cuanto m\xE1s
+        se mete en su mundo, m\xE1s puede interactuar con la magia del pastelero\u2026
+        aunque crea que son deidades galleta."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[25].m_ID.m_NameID
@@ -2639,7 +2904,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[26].m_Description
-      value: "La exc\xE9ntrica chocolatera."
+      value: "Dulce y estilosa, esta drag queen est\xE1 lista para seducirte con
+        su dulce sabor hasta hacerte saltar por los aires con su chocolate explosivo.
+        Es una cient\xEDfica chocolatera imponente, pero cari, no te atrevas a ponerte
+        en su camino, porque cielo, esta reina est\xE1 lista para servir su lado
+        m\xE1s amargo."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[26].m_ID.m_NameID
@@ -2647,7 +2916,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[27].m_Description
-      value: El agricultor malhumorado.
+      value: "Gafe s\xED es, a este mantequero le ocurren mil desgracias, un poco
+        merecidas, aunque puede ser porque el olor dulce de la mantequilla las atraiga,
+        y a las ratas tambi\xE9n."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[27].m_ID.m_NameID
@@ -2655,7 +2926,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[28].m_Description
-      value: Una manada de lobos.
+      value: "Son una manada de lobos, \xBFun poco violenta? Pues s\xED chica, pero
+        no haber construido el pueblo donde antes viv\xEDa la manada."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[28].m_ID.m_NameID
@@ -2663,7 +2935,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[29].m_Description
-      value: Ratas particularmente inteligentes.
+      value: "Estas ratas han formado una sociedad de roedores super inteligentes,
+        a la m\xEDnima que puedan se van a aprovechar de la situaci\xF3n. M\xE1s
+        te vale tenerlas de tu lado."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[29].m_ID.m_NameID
@@ -2675,7 +2949,9 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: a539138fd9267c3448c614ea2901d47a, type: 3}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[30].m_Description
-      value: "Las mayores v\xEDctimas en esta historia."
+      value: Las vacas de Meri, la Leches, son unos animales tiernos que no paran
+        de hacer leche, aunque a veces tienen rachas y necesitan un poco de ayuda
+        para seguir con sus labores.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[30].m_ID.m_NameID
