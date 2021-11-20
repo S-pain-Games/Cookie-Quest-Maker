@@ -78,11 +78,11 @@ namespace CQM.Databases
                 "Si esto sigue así, tendremos que contratar a un cazador profesional, pero nos va a costar una fortuna.",
                 "¡No sé qué hacer!"});
 
-            CreateRepercusion("wolves_gone", "Wolves Gone", 15);
+            CreateRepercusion("wolves_gone", "Wolves Gone", 10);
             AddStoryRepercusionNewspaperArticle("Los lobos desaparecen de nuestros campos.",
                 "Después de varios días de gran tensión, los lobos por fin han dejado de ser un problema para nuestros ganaderos y otros viajeros.");
 
-            CreateRepercusion("wolves_stay", "Wolves Stay", -15);
+            CreateRepercusion("wolves_stay", "Wolves Stay", -10);
             AddStoryRepercusionNewspaperArticle("El terror de los lobos continúa.",
                "Después de varios días de calvario, los lobos siguen campando a sus anchas por nuestros campos. El Alcalde declara que va a tomar cartas en el asunto.");
 
@@ -99,7 +99,7 @@ namespace CQM.Databases
                 "¿Por qué todo el mundo piensa que los lobos son malvados?",
                 "¡Tienen las mismas cualidades que cualquier perro pero con muchas ansias de sangre, son perfectos!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
-                "Una decisión interesante la que has tomado. Sin duda traerá buenos resultados." });
+                "No subestimes a las Galletas mágicas. Incluso unos temibles lobos no deberían de ser problema para ellas." });
 
             //HARM >= 3
             StartStoryBranch();
@@ -113,7 +113,7 @@ namespace CQM.Databases
                 "¿Por qué todo el mundo piensa que los lobos son malvados?",
                 "¡Tienen las mismas cualidades que cualquier perro pero con muchas ansias de sangre, son perfectos!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
-                "Una decisión interesante la que has tomado. Sin duda traerá buenos resultados." });
+                 "No subestimes a las Galletas mágicas. Incluso unos temibles lobos no deberían de ser problema para ellas." });
 
             //CONVINCE >= 1
             StartStoryBranch();
@@ -128,7 +128,7 @@ namespace CQM.Databases
                 "¿Por qué todo el mundo piensa que los lobos son malvados?",
                 "¡Tienen las mismas cualidades que cualquier perro pero con muchas ansias de sangre, son perfectos!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
-                "Una decisión interesante la que has tomado. Sin duda traerá buenos resultados." });
+                 "No subestimes a las Galletas mágicas. Unos simples lobos no deberían de ser problema para ellas." });
 
             //HELP >= 1
             StartStoryBranch();
@@ -140,7 +140,7 @@ namespace CQM.Databases
                 "Ya he contratado a un profesional para que se haga cargo, pero estaremos endeudados una buena temporada."
             }, Tag.Help, 1, "wolves");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
-                "¡Ooooohh! ¡Eso sí que no me lo esperaba! Parece que no me voy a aburrir contigo." });
+                "Tengo la sensación de que no me voy a aburrir contigo.", "Espero que no me decepciones." });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
                 "Si bien me preocupo por el bienestar de todas las criaturas del mundo. ",
                 "He de decir que los lobos son de las bestias más cercanas a los engendros infernales." });
@@ -156,7 +156,7 @@ namespace CQM.Databases
                 "Y un par de guardaespaldas, por si fuera poco."
             }, Tag.Harm, 1, "mayor");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
-                 "¡Ooooohh! ¡Eso sí que no me lo esperaba! Parece que no me voy a aburrir contigo." });
+                 "Tengo la sensación de que no me voy a aburrir contigo.", "Espero que no me decepciones." });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
                 "Si bien me preocupo por el bienestar de todas las criaturas del mundo. ",
                 "He de decir que los lobos son de las bestias más cercanas a los engendros infernales." });
@@ -174,7 +174,7 @@ namespace CQM.Databases
                  "¿Por qué todo el mundo piensa que los lobos son malvados?",
                 "¡Tienen las mismas cualidades que cualquier perro pero con muchas ansias de sangre, son perfectos!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
-                "Una decisión interesante la que has tomado. Sin duda traerá buenos resultados." });
+                "No subestimes a las Galletas mágicas. Unos simples lobos no deberían de ser problema para ellas." });
 
             //CONVINCE >= 1
             StartStoryBranch();
@@ -189,7 +189,7 @@ namespace CQM.Databases
                  "¿Por qué todo el mundo piensa que los lobos son malvados?",
                 "¡Tienen las mismas cualidades que cualquier perro pero con muchas ansias de sangre, son perfectos!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
-                "Una decisión interesante la que has tomado. Sin duda traerá buenos resultados." });
+                "No subestimes a las Galletas mágicas. Unos simples lobos no deberían de ser problema para ellas." });
 
             //HELP >= 3
             StartStoryBranch();
@@ -203,7 +203,7 @@ namespace CQM.Databases
                  "¿Por qué todo el mundo piensa que los lobos son malvados?",
                 "¡Tienen las mismas cualidades que cualquier perro pero con muchas ansias de sangre, son perfectos!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
-                "Una decisión interesante la que has tomado. Sin duda traerá buenos resultados." });
+                "No subestimes a las Galletas mágicas. Unos simples lobos no deberían de ser problema para ellas." });
 
             //CONVINCE >= 3
             StartStoryBranch();
@@ -217,7 +217,7 @@ namespace CQM.Databases
                  "¿Por qué todo el mundo piensa que los lobos son malvados?",
                 "¡Tienen las mismas cualidades que cualquier perro pero con muchas ansias de sangre, son perfectos!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
-                "Una decisión interesante la que has tomado. Sin duda traerá buenos resultados." });
+                "No subestimes a las Galletas mágicas. Unos simples lobos no deberían de ser problema para ellas." });
 
             AddStorySelectionUIData("El Problema del Alcalde");
 
@@ -235,11 +235,11 @@ namespace CQM.Databases
                 "Tampoco puedo comprar leche a los demás ganaderos, ya que la venden demasiado cara estos días.",
                 "Quiero hacer algo al respecto, pero no puedo hacer nada."});
 
-            CreateRepercusion("cows_harmed", "Cows Harmed", -15);
+            CreateRepercusion("cows_harmed", "Cows Harmed", -10);
             AddStoryRepercusionNewspaperArticle("La tragedia de las vacas.",
                 "La misteriosa muerte de numerosas vacas de una ganadera local ha conmocionado a los habitantes del pueblo.");
 
-            CreateRepercusion("cows_saved", "Cows Saved", 15);
+            CreateRepercusion("cows_saved", "Cows Saved", 10);
             AddStoryRepercusionNewspaperArticle("El milagro de las vacas",
                "A pesar de la dura sequía que azota a nuestros campos, una ganadera local ha logrado mantener una buena alimentación para sus vacas. ¿Cuál será su secreto?");
 
@@ -254,7 +254,8 @@ namespace CQM.Databases
                 "No podré vender todos los lácteos que me gustaría, pero al menos podré vender algunas carnes."
             }, Tag.Harm, 1, "meri");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
-                "Ya veo por donde vas. Me gusta tu forma de pensar, ¡yo también hubiera hecho lo mismo!" });
+                "Veo que ya le vas pillando el tranquillo a esto de hornear Galletas mágicas.",
+                "Y viendo las decisiones que tomas... ¡Me gusta tu estilo!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
                 "Muchas decisiones de las que debemos de tomar día a día no son fáciles.",
                 "Aunque pienso que a veces hay que buscar alternativas a la violencia."});
@@ -266,10 +267,11 @@ namespace CQM.Databases
                 "¡Ha ocurrido una tragedia! ¡La mayoría de mis vacas han muerto durante la noche!",
                 "Nadie del pueblo sabe nada al respecto, ¡¿Por qué me pasan estas cosas solamente a mí?!",
                 "La Feria va a ser un fracaso, pero al menos podré vender bastante carne.",
-                "Eso sí, no me haré responsable de mis actos si descubro al responsable."
+                "Eso sí, no me haré responsable de mis actos si descubro a ese malnacido."
             }, Tag.Harm, 3, "meri");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
-                "Ya veo por donde vas. Me gusta tu forma de pensar, ¡yo también hubiera hecho lo mismo!" });
+                 "Veo que ya le vas pillando el tranquillo a esto de hornear Galletas mágicas.",
+                "Y viendo las decisiones que tomas... ¡Me gusta tu estilo!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
                 "Muchas decisiones de las que debemos de tomar día a día no son fáciles.",
                 "Aunque pienso que a veces hay que buscar alternativas a la violencia."});
@@ -334,15 +336,15 @@ namespace CQM.Databases
                 "Por supuesto que me negué a dárselo. Pero estoy preocupada de que entren a robar o algo peor.",
                 "¡Ese huevo me ha costado una fortuna, y no pienso deshacerme de él!"});
 
-            CreateRepercusion("golden_egg_destroyed", "Golden Egg Destroyed", -15);
+            CreateRepercusion("golden_egg_destroyed", "Golden Egg Destroyed", -10);
             AddStoryRepercusionNewspaperArticle("Demasiado bueno para ser cierto.",
                 "La prestigiosa coleccionista Canela N Rama se ve envuelta en una polémica tras la realidad de su nueva adquisición, un huevo dorado, que resultó ser un huevo normal y corriente.");
 
-            CreateRepercusion("golden_egg_safe", "Golden Egg Safe", 15);
+            CreateRepercusion("golden_egg_safe", "Golden Egg Safe", 10);
             AddStoryRepercusionNewspaperArticle("El nuevo artefacto de Canela N Rama",
                "Un nuevo artefacto forma parte de la colección de la prestigiosa coleccionista local Canela N Rama, se trata de un misterioso huevo dorado de un valor incalculable, asegura la coleccionista.");
 
-            CreateRepercusion("golden_egg_gone", "Golden Egg Gone", -15);
+            CreateRepercusion("golden_egg_gone", "Golden Egg Gone", -10);
             AddStoryRepercusionNewspaperArticle("El huevo maldito.",
                "El Huevo Dorado, el artefacto que iba a ser la joya de la colección de la prestigiosa Canela N Rama, ha sido retirado de la exposición. La coleccionista insinuó que el artefacto podría estar maldito");
 
@@ -438,15 +440,15 @@ namespace CQM.Databases
                 "A no ser que encuentre otro ingrediente alternativo, tendré que seguir trasteando con lo que tengo."
                });
 
-            CreateRepercusion("ms_chocolate_sabotaged", "MS Chocolate Sabotaged", -15);
+            CreateRepercusion("ms_chocolate_sabotaged", "MS Chocolate Sabotaged", -10);
             AddStoryRepercusionNewspaperArticle("Accidente explosivo.",
                 "La explosión que despertó a todos los vecinos del pueblo fué causa de un accidente por parte de Miss Chocolate la Bomb, una chocolatera local. La chocolatera se encuentra ilesa y se ha disculpado públicamente.");
 
-            CreateRepercusion("ms_chocolate_gunpowder", "MS Chocolate Gunpowder", 15);
+            CreateRepercusion("ms_chocolate_gunpowder", "MS Chocolate Gunpowder", 10);
             AddStoryRepercusionNewspaperArticle("Experimentos explosivos.",
                "Los experimentos de Miss Chocolate la Bomb tienen preocupados a toda la comunidad de vecinos tras adquirir grandes cantidades de pólvora. ¿Qué es lo que pretende la chocolatera?");
 
-            CreateRepercusion("ms_chocolate_pepper", "MS Chocolate Pepper", 15);
+            CreateRepercusion("ms_chocolate_pepper", "MS Chocolate Pepper", 10);
             AddStoryRepercusionNewspaperArticle("El nuevo ingrediente secreto que revolucionará la chocolatería.",
                "La comunidad de chocolateros de la región se encuentra intrigada ante el nuevo ingrediente que utilizará Miss Chocolate la Bomb en sus productos, la pimienta.");
 
@@ -544,15 +546,15 @@ namespace CQM.Databases
                 "Es como lo oyes, ¡se rifan mis vegetales en su propio mercadillo! ¡Se están riendo de mí!"
                });
 
-            CreateRepercusion("smart_rats_stay", "Smart rats stay", -15);
+            CreateRepercusion("smart_rats_stay", "Smart rats stay", -10);
             AddStoryRepercusionNewspaperArticle("Los nuevos vecinos roedores.",
                 "Una colonia de ratas aparentemente inteligentes se ha establecido en el granero de un granjero local. El dueño de la granja expresa su disgusto con la situación.");
 
-            CreateRepercusion("smart_rats_gone", "Smart rats gone", 15);
+            CreateRepercusion("smart_rats_gone", "Smart rats gone", 10);
             AddStoryRepercusionNewspaperArticle("La caída de la sociedad de las ratas.",
                "La colonia de ratas aparentemente inteligentes que atormentaba los cultivos de los granjeros locales parece haberse disuelto, para el contento de todos.");
 
-            CreateRepercusion("smart_rats_tribute", "Smart rats tribute", 15);
+            CreateRepercusion("smart_rats_tribute", "Smart rats tribute", 20);
             AddStoryRepercusionNewspaperArticle("¿Relación simbiótica entre humanos y ratas?",
                "La ancestral relación de odio entre humanos y ratas podría llegar a su fin. Una colonia de ratas inteligentes coopera con un granjero local a cambio de cobijo en su granero. El dueño de la granja niega tales afirmaciones.");
 
@@ -683,15 +685,15 @@ namespace CQM.Databases
                 "Son unos desagradecidos."
                });
 
-            CreateRepercusion("mayor_assaulted", "Mayor assaulted", -15);
+            CreateRepercusion("mayor_assaulted", "Mayor assaulted", -10);
             AddStoryRepercusionNewspaperArticle("El misterioso agresor nocturno.",
                 "Nuestro alcalde ha sido asaltado mientras paseaba por un misterioso atacante. Se cree que es un ciudadano descontento con la reciente recaudación de impuestos.");
 
-            CreateRepercusion("mayor_waste", "Mayor waste", -15);
+            CreateRepercusion("mayor_waste", "Mayor waste", 10);
             AddStoryRepercusionNewspaperArticle("Las nuevas reformas.",
                "Gracias a la exitosa recaudación de impuestos, el alcalde continúa con su proyecto de embellecer el pueblo a pesar de las voces críticas de muchos vecinos.");
 
-            CreateRepercusion("mayor_robbed", "Mayor robbed", 15);
+            CreateRepercusion("mayor_robbed", "Mayor robbed", -10);
             AddStoryRepercusionNewspaperArticle("El ladrón misterioso.",
                "Un misterioso desconocido ha robado los fondos recaudados recientemente y los ha devuelto a los vecinos del pueblo. Algunos lo aclaman como un héroe sin corcel.");
 
@@ -804,15 +806,15 @@ namespace CQM.Databases
                 "No puedo trabajar con ellas así, ¡No sé que voy a hacer!"
                });
 
-            CreateRepercusion("cows_transformed", "Cows transformed", -15);
+            CreateRepercusion("cows_transformed", "Cows transformed", -10);
             AddStoryRepercusionNewspaperArticle("¿La epidemia de las vacas locas?",
                 "Las vacas de una ganadera local han sufrido una extraña transformación que las ha convertido en cabras. Los vecinos tienen miedo de que sea contagioso.");
 
-            CreateRepercusion("cows_back_to_normal", "Cows back to normal", 15);
+            CreateRepercusion("cows_back_to_normal", "Cows back to normal", 10);
             AddStoryRepercusionNewspaperArticle("Las vacas todoterreno.",
                "Las vacas de una ganadera local se han convertido en el centro de atención de la comunidad ganadera tras ver las impactantes imágenes de vacas escalando riscos.");
 
-            CreateRepercusion("cows_and_goats_reversed", "Cows and goats reversed", -15);
+            CreateRepercusion("cows_and_goats_reversed", "Cows and goats reversed", 0);
             AddStoryRepercusionNewspaperArticle("Confusión ganadera.",
                "Un extraño incidente ha provocado que las vacas se transformen en cabras y las cabras en vacas. ¿Cuán confuso puede llegar a ser el mundo en el que vivimos?");
 
@@ -907,11 +909,11 @@ namespace CQM.Databases
                 "Iré esta misma noche a buscar algunas, espero tener suerte, porque son muy raras, colega."
                });
 
-            CreateRepercusion("competition_judges_stoned", "Competition Judges Stoned", -15);
+            CreateRepercusion("competition_judges_stoned", "Competition Judges Stoned", 10);
             AddStoryRepercusionNewspaperArticle("La Tarta del Caos",
                 "El pasado concurso de repostería se ha cancelado debido a los efectos que ha provocado una tarta en los jueces. Los jueces sufren alucinaciones hasta el día de hoy. Se sospecha de un alquimista local.");
 
-            CreateRepercusion("competition_safe", "Competition Safe", 15);
+            CreateRepercusion("competition_safe", "Competition Safe", 10);
             AddStoryRepercusionNewspaperArticle("Un concurso sin incidentes",
                 "El concurso anual de repostería ha finalizado sin incidentes.");
 
@@ -1009,15 +1011,15 @@ namespace CQM.Databases
                 "Voy a tener que tomar medidas al respecto. ¡No se saldrán con la suya!"
              });
 
-            CreateRepercusion("ducks_stay", "Ducks Stay", -15);
+            CreateRepercusion("ducks_stay", "Ducks Stay", -10);
             AddStoryRepercusionNewspaperArticle("Invasión aviar",
                 "Una bandada de patos muy agresivos han ocupado el granero de un granjero local. El dueño de la granja expresa su descontento con un rastrillo en mano.");
 
-            CreateRepercusion("ducks_gone", "Ducks Gone", 15);
+            CreateRepercusion("ducks_gone", "Ducks Gone", 10);
             AddStoryRepercusionNewspaperArticle("La Paz de los Patos.",
                 "La guerra entre la bandada de patos agresivos y un granjero local ha finalizado. Los patos aceptaron su derrota y partieron fuera del pueblo. ¿Buscarán otras tierras que conquistar?");
 
-            CreateRepercusion("ducks_help", "Ducks Help", 30);
+            CreateRepercusion("ducks_help", "Ducks Help", 20);
             AddStoryRepercusionNewspaperArticle("Lo nuevo en pesticidas.",
                 "La comunidad agrícola se encuentra asombrada ante el nuevo método de control de plagas que un granjero local está utilizando. Se trata nada más y nada menos que de patos. Con el cuidado adecuado, estos se encargan de cualquier alimaña sin que afecte a los cultivos.");
 
@@ -1108,15 +1110,15 @@ namespace CQM.Databases
                 "¡Qué emoción! ¡No puedo esperar a ponerme manos a la obra!"
              });
 
-            CreateRepercusion("cows_poisoned", "Cows Poisoned", -15);
+            CreateRepercusion("cows_poisoned", "Cows Poisoned", -10);
             AddStoryRepercusionNewspaperArticle("Experimentos extremos.",
                 "La célebre chocolatera local, Miss Chocolate la Bomb ha sido el foco de una nueva polémica tras el fracaso rotundo en su nuevo experimento. El experimento ha resultado en el envenenamiento leve de las vacas de una ganadera local.");
 
-            CreateRepercusion("cows_experiment_success", "Cows Experiment Success", 15);
+            CreateRepercusion("cows_experiment_success", "Cows Experiment Success", 10);
             AddStoryRepercusionNewspaperArticle("Los batidos de chocolate 100% naturales.",
                 "La conocida chocolatera local, Miss Chocolate la Bomb, ha obtenido resultados impresionantes en su nueva investigación. De alguna manera ha logrado obtener muestras de batido de chocolate al ordeñar vacas marrones. ¿Ha llegado la ciencia demasiado lejos?");
 
-            CreateRepercusion("cows_experiment_delayed", "Cows Experiment Delayed", -15);
+            CreateRepercusion("cows_experiment_delayed", "Cows Experiment Delayed", -10);
             AddStoryRepercusionNewspaperArticle("Rechazo vacuno.",
                 "La famosa chocolatera local, Miss Chocolate la Bomb, ha sufrido heridas leves tras ser atacada por las vacas con las que experimentaba.");
 
@@ -1227,19 +1229,19 @@ namespace CQM.Databases
                 "Quiero recuperar el colgante, ¡yo lo he comprado así que tengo más derecho que ella!"
              });
 
-            CreateRepercusion("artifacts_stolen", "Artifacts Stolen", -30);
+            CreateRepercusion("artifacts_stolen", "Artifacts Stolen", -20);
             AddStoryRepercusionNewspaperArticle("Robo en la exposición",
                 "Muchos de los artefactos de la coleccionista, Canela N Rama, han desaparecido sin dejar rastro. No se han encontrado pruebas en la escena del crimen.");
 
-            CreateRepercusion("pendant_damaged", "Pendant Damaged", -15);
+            CreateRepercusion("pendant_damaged", "Pendant Damaged", -10);
             AddStoryRepercusionNewspaperArticle("La nueva joya de la exposición regresa a su vitrina",
                 "El colgante enjoyado que se creía desaparecido ha vuelto a las manos de Canela N Rama. Por desgracia, se encuentra en un estado lamentable.");
 
-            CreateRepercusion("pendant_recovered", "Pendant Recovered", 30);
+            CreateRepercusion("pendant_recovered", "Pendant Recovered", 20);
             AddStoryRepercusionNewspaperArticle("La  joya de la exposición regresa intacta.",
                 "El colgante enjoyado desaparecido de la colección ha regresado intacto a la exposición.");
 
-            CreateRepercusion("pendant_lost", "Pendant Lost", -15);
+            CreateRepercusion("pendant_lost", "Pendant Lost", -10);
             AddStoryRepercusionNewspaperArticle("El colgante enjoyado sigue desaparecido.",
                 "La nueva joya de la exposición de Canela N Rama sigue en paradero desconocido.");
 
@@ -1329,19 +1331,19 @@ namespace CQM.Databases
                 "En el momento que baje la guardia… ¡Pum! El desastre volverá a mis tierras."
             });
 
-            CreateRepercusion("mantecas_farm_damaged", "Mantecas Farm Damaged", -15);
+            CreateRepercusion("mantecas_farm_damaged", "Mantecas Farm Damaged", -10);
             AddStoryRepercusionNewspaperArticle("Una nueva plaga asola nuestros campos.",
                 "Una plaga de topos ha hecho estragos en los cultivos de una granja local. Sorprendentemente, el dueño no parecía estar muy disgustado al respecto.");
 
-            CreateRepercusion("mantecas_farm_devastated", "Mantecas Farm Devastated", -30);
+            CreateRepercusion("mantecas_farm_devastated", "Mantecas Farm Devastated", -20);
             AddStoryRepercusionNewspaperArticle("La devastación de nuestros campos.",
                 "Una terrible plaga de langostas, topos y ratas han arrasado de la noche a la mañana el esfuerzo de un agricultor local. Para nuestra sorpresa, el dueño esbozó una sonrisa.");
 
-            CreateRepercusion("mantecas_farm_revitalized", "Mantecas Farn Revitalized", 30);
+            CreateRepercusion("mantecas_farm_revitalized", "Mantecas Farn Revitalized", 10);
             AddStoryRepercusionNewspaperArticle("Buenos tiempos para nuestros campos.",
                 "La prolongada serie de desgracias que acechaban a los cultivos de un granjero local parece haberse detenido. Aun así, las preocupaciones se mantienen, declaró el dueño.");
 
-            CreateRepercusion("mantecas_paranoic", "mantecas_paranoic", -15);
+            CreateRepercusion("mantecas_paranoic", "mantecas_paranoic", -10);
             AddStoryRepercusionNewspaperArticle("¿Se avecinan tiempos terribles?",
                 "Un granjero local asegura con total seguridad que un nuevo desastre se avecina sobre sus campos después de percatarse de fenómenos extraños. ¿Podría tratarse de una broma?");
 
@@ -1385,7 +1387,7 @@ namespace CQM.Databases
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
                 "No siempre lo que queremos tener y lo que necesitamos de verdad coinciden." });
 
-            //HELP >=3
+            //HELP >=5
             StartStoryBranch();
             SetRepercusionToBranch("mantecas_farm_revitalized");
             AddBranchCompletion_NPCDialogue(new List<string>() {
@@ -1393,7 +1395,7 @@ namespace CQM.Databases
                 "Mis cultivos crecen sanos, la calidad del suelo ha mejorado y no hay ninguna plaga que erradicar.",
                 "¡¿Me toman por tonto?!	¡¿Cuándo van a volver a fastidiarme?! ¡Me estoy impacientando!",
                 "¡Es imposible que de repente todo me vaya bien! ¡Impensable! ¡Debe de avecinarse el fin del mundo!"
-            }, Tag.Help, 3, "mantecas");
+            }, Tag.Help, 5, "mantecas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Pensaba que ibas a ayudar a ese pobre granjero con su escasez de desastres. ¡Una pena!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1442,15 +1444,15 @@ namespace CQM.Databases
                 "No sabría describirte nada más, pero tiene que ser una señal de algo importante, colega."
           });
 
-            CreateRepercusion("johnny_sabotaged", "Johnny Sabotaged", -15);
+            CreateRepercusion("johnny_sabotaged", "Johnny Sabotaged", -10);
             AddStoryRepercusionNewspaperArticle("Incendio en la casa del alquimista.",
                 "El repentino incendio que por poco asola la casa del alquimista local y que podría haber afectado al bosque ha sido detenido con éxito.  Por suerte, el alquimista se encuentra en su estado habitual.");
 
-            CreateRepercusion("johnny_enhanced", "Johnny Enhanced", 15);
+            CreateRepercusion("johnny_enhanced", "Johnny Enhanced", 10);
             AddStoryRepercusionNewspaperArticle("La alquimia renovada.",
                 "La comunidad de vecinos se alegra por el gran hallazgo de un alquimista local. Con dicho hallazgo hará grandes cosas para el pueblo, declaró el alquimista. ¿Qué tendrá preparado? ¡Esperemos que nada malo!");
 
-            CreateRepercusion("johnny_neutral", "Johnny Neutral", 15);
+            CreateRepercusion("johnny_neutral", "Johnny Neutral", 10);
             AddStoryRepercusionNewspaperArticle("El alquimista ausente.",
                 "Parte de la comunidad de vecinos se encuentra preocupada por la salud del alquimista local. Este misteriosamente ya no abre tanto su tienda como lo hacía antes. ¿Qué le ocurre al joven alquimista?");
 
@@ -1549,15 +1551,15 @@ namespace CQM.Databases
                 "Mi mayor prioridad va a ser arreglar las cosas en el pueblo, pero no sé que puedo hacer."
             });
 
-            CreateRepercusion("mayor_alerted", "Mayor Alerted", 15);
+            CreateRepercusion("mayor_alerted", "Mayor Alerted", -10);
             AddStoryRepercusionNewspaperArticle("Convocada asamblea de emergencia.",
                 "Nuestro excelentísimo alcalde ha convocado la asamblea mensual mucho antes de la fecha habitual. Según declara, es necesario tomar medidas inmediatamente y escuchar las sugerencias de los vecinos.");
 
-            CreateRepercusion("mayor_relaxed", "Mayor Relaxed", 30);
+            CreateRepercusion("mayor_relaxed", "Mayor Relaxed", 10);
             AddStoryRepercusionNewspaperArticle("Un cambio de planes inesperado.",
                 "El alcalde ha sustituído su plan de reformas por otro nuevo de manera repentina. El alcalde declara que los planes de embellecimiento del pueblo y la ampliación del puerto se dejarán para otro momento.");
 
-            CreateRepercusion("mayor_ignore", "Mayor_Ignore", -15);
+            CreateRepercusion("mayor_ignore", "Mayor_Ignore", 10);
             AddStoryRepercusionNewspaperArticle("Las críticas continúan.",
                 "El alcalde sigue siendo objeto de duras críticas tras resumir su plan de ampliación del puerto local. Muchos vecinos creen que es una pérdida de tiempo, pero el alcalde planea seguir el plan a rajatabla.");
 
@@ -1657,15 +1659,15 @@ namespace CQM.Databases
                 "Obviamente quiero que dejen mi granja en paz, ¡¿Pero qué puedo hacer ante este caos?!"
             });
 
-            CreateRepercusion("wolves_victorious", "Wolves victorious", -15);
+            CreateRepercusion("wolves_victorious", "Wolves victorious", -10);
             AddStoryRepercusionNewspaperArticle("El baluarte de los roedores cae.",
                 "La colonia de ratas inteligentes ha abandonado la granja de una ganadera local después de capitular ante la manada de lobos. ¿Qué ocurrirá con la granja? ¿Será ahora ocupada por los lobos?");
 
-            CreateRepercusion("rats_victorious", "Rats Victorious", 15);
+            CreateRepercusion("rats_victorious", "Rats Victorious", 10);
             AddStoryRepercusionNewspaperArticle("El asedio a los roedores termina.",
                 "La colonia de ratas inteligentes, que ha invadido la granja de una ganadera local, ha logrado de manera audaz repeler a la manada de lobos que amenazaba la granja. La impresionante hazaña ha dejado perplejos a los vecinos. ¿Estaremos ante el alzamiento de una nueva urbe de ratas? Por el bien de la desafortunada ganadera, esperemos que no.");
 
-            CreateRepercusion("rats_mounting_wolves", "Rats Mounting Wolves", 30);
+            CreateRepercusion("rats_mounting_wolves", "Rats Mounting Wolves", 20);
             AddStoryRepercusionNewspaperArticle("El galope de los jinetes roedores.",
                 "Una inusual imagen quedará grabada en la mente de los vecinos. La colonia de ratas, que invadía la granja de una ganadera local, ha abandonado el pueblo a lomos de la manada de lobos que hasta hace poco se enfrentaba. ¿Podrían los lobos cabalgar sobre las ratas? ¡La ciencia afirma que no!");
 
@@ -1699,14 +1701,14 @@ namespace CQM.Databases
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
                 "No sería mala idea a estas alturas entablar relaciones diplomáticas con las ratas." });
 
-            //HELP >=5
+            //HELP >=7
             StartStoryBranch();
             SetRepercusionToBranch("rats_mounting_wolves");
             AddBranchCompletion_NPCDialogue(new List<string>() {
                 "La cosa se ha tranquilizado un poco en mi granja. Aunque no doy crédito por lo que ha ocurrido.",
                 "¡De alguna manera, las ratas han conseguido domesticar a los lobos! ¡Los utilizan de montura y todo!",
                 "Por lo menos ya han abandonado mi granja, supongo que ahora pueden ir a donde quieran."
-            }, Tag.Help, 5, "rats");
+            }, Tag.Help, 7, "rats");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Y si las ratas pudieran cabalgar sobre las vacas? ¡¿No sería genial?!",
                 "¡Tengo que intentarlo un día de estos!"});
@@ -1794,15 +1796,15 @@ namespace CQM.Databases
                 "Insiste mucho en que se podría romper. ¡Qué tontería, si atraer rayos es su función para empezar!"
             });
 
-            CreateRepercusion("ms_chocolate_experiment_canceled", "Ms Chocolate Experiment Canceled", -15);
+            CreateRepercusion("ms_chocolate_experiment_canceled", "Ms Chocolate Experiment Canceled", -10);
             AddStoryRepercusionNewspaperArticle("La gran decepción.",
                 "El muy esperado experimento de Miss Chocolate la Bomb ha tenido que ser retrasado debido a condiciones imprevistas.");
 
-            CreateRepercusion("ms_chocolate_experiment_success", "Ms Chocolate Experiment Success", 15);
+            CreateRepercusion("ms_chocolate_experiment_success", "Ms Chocolate Experiment Success", 10);
             AddStoryRepercusionNewspaperArticle("El experimento chocolatero da sus frutos.",
                 "El último experimento de la célebre Miss Chocolate la Bomb ha sido un relativo éxito. Todo gracias a la colaboración con la prestigiosa coleccionista Canela N Rama.");
 
-            CreateRepercusion("ms_chocolate_great_success", "Ms Chocolate Great Success", 15);
+            CreateRepercusion("ms_chocolate_great_success", "Ms Chocolate Great Success", 20);
             AddStoryRepercusionNewspaperArticle("La destilación del chocolate purificado.",
                 "La célebre chocolatera local, Miss Chocolate la Bomb, ha logrado con su último experimento purificar veinte litros de chocolate líquido en un par de gotas de chocolate purificado. Lamentablemente, la chocolatera ha declarado que no tiene intenciones de seguir investigando el asunto.");
 
@@ -1837,7 +1839,7 @@ namespace CQM.Databases
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
                 "Nunca sabrás si algo funciona hasta que no se ponga a prueba. Aunque pueda ser estúpido." });
 
-            //HELP >=5
+            //HELP >=7
             StartStoryBranch();
             SetRepercusionToBranch("ms_chocolate_great_success");
             AddBranchCompletion_NPCDialogue(new List<string>() {
@@ -1847,7 +1849,7 @@ namespace CQM.Databases
                 "Pero bueno, ¡dejé todo listo y logré obtener los resultados que esperaba!",
                 "¡Los veinte litros de chocolate mediocre se transformaron en dos gotas de chocolate puro!",
                 "Claramente es muy poco para considerarse un método viable, ¡Pero he demostrado que es posible!"
-            }, Tag.Help, 5, "miss_chocolate");
+            }, Tag.Help, 7, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡¿En qué momento dejar que le caiga un rayo a las cosas se le llama experimento?!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1934,15 +1936,15 @@ namespace CQM.Databases
                 "Si no encuentro pronto una solución, voy a tener que deshacerme de ellos."
             });
 
-            CreateRepercusion("living_artifacts_destroyed", "Living Artifacts Destroyed", -15);
+            CreateRepercusion("living_artifacts_destroyed", "Living Artifacts Destroyed", -10);
             AddStoryRepercusionNewspaperArticle("La noche de los artefactos vivientes.",
                 "La colección de artefactos de la prestigiosa Canela N Rama ha sido dañada en muy extrañas circunstancias. La coleccionista ha declarado que sus propios artefactos cobraron vida durante la noche. ¿Quién hubiera pensado que los artefactos tendrían tan mal genio?");
 
-            CreateRepercusion("living_artifacts_stopped", "Living Artifacts Stopped", 15);
+            CreateRepercusion("living_artifacts_stopped", "Living Artifacts Stopped", 10);
             AddStoryRepercusionNewspaperArticle("La epidemia de los artefactos vivientes termina.",
                 "La prestigiosa coleccionista Canela N Rama declara haber resuelto la inusual situación de los artefactos vivientes. Durante la entrevista, nos dió útiles consejos de qué hacer en este tipo de casos. ¡Se lo contaremos a continuación!");
 
-            CreateRepercusion("living_artifacts_servants", "Living Artifacts Servants", 30);
+            CreateRepercusion("living_artifacts_servants", "Living Artifacts Servants", 20);
             AddStoryRepercusionNewspaperArticle("Los nuevos ayudantes de Canela N Rama.",
                 "La prestigiosa coleccionista Canela N Rama nos ha sorprendido a todos con su nueva mano de obra. Se trata nada más y nada menos que de artefactos vivientes. Estos se encargan de mantener y de proteger al resto de la colección, declaró la coleccionista.");
 
@@ -1959,7 +1961,7 @@ namespace CQM.Databases
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
                 "Aunque vivas una eternidad, siempre habrá más cosas y situaciones sorprendentes." });
 
-            //HARM >=5
+            //HARM >=7
             StartStoryBranch();
             SetRepercusionToBranch("living_artifacts_destroyed");
             AddBranchCompletion_NPCDialogue(new List<string>() {
@@ -1967,7 +1969,7 @@ namespace CQM.Databases
                 "¡De alguna manera los artefactos aislados han derribado la puerta y han sembrado el caos!",
                 "Es culpa mía haberlos subestimado. No he tenido más remedio que destruirlos allí mismo.",
                 "¡Cualquier día de estos voy a momificar vivo al besugo Johnny para exponerlo!"
-            }, Tag.Harm, 5, "canela");
+            }, Tag.Harm, 7, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Si en vez de artefactos fueran platos y cubiertos, serían amables o mucho más agresivos?"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -2019,7 +2021,7 @@ namespace CQM.Databases
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
                 "Por el bien de mantener el orden en el mundo. Ese abrillantador debería de ser destruido." });
 
-            //CONVINCE >=1
+            //CONVINCE >=7
             StartStoryBranch();
             SetRepercusionToBranch("living_artifacts_servants");
             AddBranchCompletion_NPCDialogue(new List<string>() {
@@ -2028,7 +2030,7 @@ namespace CQM.Databases
                 "Además limpian y abrillantan a los demás artefactos de mi colección. ¡Están mejor que nunca!",
                 "Definitivamente los voy a convertir en sirvientes. Después de este calvario no pienso dejar que acabe en nada.",
                 "Quizás me pueda convertir en coleccionista de artefactos vivientes. ¡Sería aún más famosa por ello!"
-            }, Tag.Convince, 5, "canela");
+            }, Tag.Convince, 7, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Los artefactos serían unos sirvientes muy aburridos. ¡Nada supera a las Galletas mágicas!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -2053,19 +2055,19 @@ namespace CQM.Databases
                 "¡Llevaba mucho esperando este momento! ¡Esta noche va a ser flipante, colega!"
             });
 
-            CreateRepercusion("johnny_trance_interruptded", "Johnny Trance Interrupted", -15);
+            CreateRepercusion("johnny_trance_interruptded", "Johnny Trance Interrupted", -10);
             AddStoryRepercusionNewspaperArticle("La extraña enfermedad del alquimista",
                 "Los vecinos se encuentran preocupados por la salud de un alquimista local. El joven presenta extraños bultos en partes de su cuerpo. Afortunadamente busca atención médica.");
 
-            CreateRepercusion("johnny_transformed", "Johnny Transformed", -30);
+            CreateRepercusion("johnny_transformed", "Johnny Transformed", -20);
             AddStoryRepercusionNewspaperArticle("El abominable hombre seta.",
                 "Los vecinos se encuentran consternados ante la preocupante apariencia de un alquimista local. El joven se encuentra cubierto de hongos y enredaderas que salen de su cuerpo.");
 
-            CreateRepercusion("johnny_trance_achieved", "Johnny Trance Achieved", 30);
+            CreateRepercusion("johnny_trance_achieved", "Johnny Trance Achieved", 20);
             AddStoryRepercusionNewspaperArticle("El retorno del alquimista.",
                 "El joven alquimista cuyo aspecto preocupaba a los vecinos ha regresado con un aspecto mucho más saludable. ¿Cuál será su secreto?");
 
-            CreateRepercusion("johnny_trance_convinced", "Johnny Trance Convinced", 15);
+            CreateRepercusion("johnny_trance_convinced", "Johnny Trance Convinced", 10);
             AddStoryRepercusionNewspaperArticle("La nueva afición del alquimista.",
                 "El joven alquimista, cuyo aspecto preocupaba a los vecinos, ha afirmado que va a dedicarse a la venta de galletas de manera paralela a su negocio habitual.");
 
@@ -2110,7 +2112,7 @@ namespace CQM.Databases
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
                 "Espero que el joven alquimista pueda recapacitar a tiempo." });
 
-            //HELP >=5
+            //HELP >=7
             StartStoryBranch();
             SetRepercusionToBranch("johnny_trance_achieved");
             AddBranchCompletion_NPCDialogue(new List<string>() {
@@ -2119,7 +2121,7 @@ namespace CQM.Databases
                 "¿Los bultos y las raíces? Pues, diría que han desaparecido, así por completo, colega.",
                 "Ayer encontré en casa un Champiñón Solar, normalmente no me molesto en recolectarlos, colega.",
                 "Para cambiar un poco, lo utilicé para mi polvo especial. No sabía que servía para contrarrestar la transformación, colega."
-            }, Tag.Help, 5, "johnny");
+            }, Tag.Help, 7, "johnny");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "No entiendo nada de todo esto. ¡Que alguien me explique por qué es tan importante!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -2139,7 +2141,7 @@ namespace CQM.Databases
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
                 "Muy pocos seres han alcanzado el Hipnos. Quizás ese joven pueda alcanzarlo con el apoyo suficiente" });
 
-            //CONVINCE >=5
+            //CONVINCE >=7
             StartStoryBranch();
             SetRepercusionToBranch("johnny_trance_convinced");
             AddBranchCompletion_NPCDialogue(new List<string>() {
@@ -2149,7 +2151,7 @@ namespace CQM.Databases
                 "¡Lo tengo clarinete! ¡Quiero dedicarme a hacer galletas! Y no de cualquier tipo, colega",
                 "Quiero que contengan todo mi conocimiento sobre los hongos. ¡Será una pasada, colega!",
                 "Quizá así algún día me vuelva a visitar el Señor Galleta, ¡o quizás el Dios Galleta, colega!"
-            }, Tag.Convince, 5, "johnny");
+            }, Tag.Convince, 7, "johnny");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿No tendrá algo mejor que hacer ese hombre que dedicarse a dormir profundamente?"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -2434,17 +2436,10 @@ namespace CQM.Databases
                 "Se ha decidido empezar a cosechar hoy mismo los cereales, aunque no todos estén del todo maduros.",
                 "¡Mejor prevenir que quedarse sin cereales!"
             }, Tag.Convince, 1, "wolves");
-
-
                     AddStorySelectionUIData("Hay Que Salvar El Trigo");
                     FinishCreatingStory();
                 }
             }
-
-
-
-
-
         }
 
         public void StartCreatingStory(string idName, string title, string questGiver, string description, List<string> introductionDialogue)

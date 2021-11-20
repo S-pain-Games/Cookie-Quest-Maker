@@ -323,6 +323,222 @@ PrefabInstance:
       value: DataBuilders
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[0].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[1].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[2].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[3].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[4].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[5].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[6].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[7].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[8].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[9].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[10].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[11].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[12].m_Value
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[13].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[14].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[15].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[16].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[17].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[18].m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[19].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[20].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[21].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[22].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[23].m_Value
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[24].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[25].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[26].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[27].m_Value
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[28].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[29].m_Value
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[30].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[31].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[32].m_Value
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[33].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[34].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[35].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[36].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[37].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[38].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[39].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[40].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[41].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[42].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[43].m_Value
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[44].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[45].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[46].m_Value
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[47].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[48].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[49].m_Value
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[50].m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[51].m_Value
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[52].m_Value
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_Repercusions.Array.data[53].m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_StoriesList.Array.data[18].m_StoryData.m_QuestGiver
       value: 
       objectReference: {fileID: 0}
@@ -331,12 +547,116 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[0].m_Condition.m_Tag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[1].m_Condition.m_Tag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[2].m_Condition.m_Tag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[1].m_Condition.m_Tag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[2].m_Condition.m_Tag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_StoriesList.Array.data[18].m_StoryData.m_BranchOptions.Array.data[0].m_Condition.m_Tag
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_StoriesList.Array.data[19].m_StoryData.m_BranchOptions.Array.data[0].m_Condition.m_Tag
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[1].m_Condition.m_Value
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[14].m_StoryData.m_BranchOptions.Array.data[0].m_Condition.m_Value
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[15].m_StoryData.m_BranchOptions.Array.data[0].m_Condition.m_Value
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[0].m_Condition.m_Value
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[1].m_Condition.m_Value
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[17].m_StoryData.m_BranchOptions.Array.data[0].m_Condition.m_Value
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[17].m_StoryData.m_BranchOptions.Array.data[1].m_Condition.m_Value
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[3].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[4].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[5].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[6].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[7].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[8].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Name
+      value: Mantecas Farn Revitalized
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Name
+      value: Mantecas Farm Devastated
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Name
+      value: mantecas_paranoic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Name
+      value: Living Artifacts Destroyed
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Name
+      value: Living Artifacts Stopped
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_StoriesList.Array.data[18].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Name
@@ -363,6 +683,398 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[1].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[1].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[1].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[1].m_StoryData.m_BranchOptions.Array.data[3].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[1].m_StoryData.m_BranchOptions.Array.data[4].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[2].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[2].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[2].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[2].m_StoryData.m_BranchOptions.Array.data[3].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[2].m_StoryData.m_BranchOptions.Array.data[4].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[3].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[3].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[3].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[3].m_StoryData.m_BranchOptions.Array.data[3].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[3].m_StoryData.m_BranchOptions.Array.data[4].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[4].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[4].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[4].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[4].m_StoryData.m_BranchOptions.Array.data[3].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[4].m_StoryData.m_BranchOptions.Array.data[4].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[4].m_StoryData.m_BranchOptions.Array.data[5].m_Repercusion.m_Value
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[4].m_StoryData.m_BranchOptions.Array.data[6].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[4].m_StoryData.m_BranchOptions.Array.data[7].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[5].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[5].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[5].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[5].m_StoryData.m_BranchOptions.Array.data[3].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[5].m_StoryData.m_BranchOptions.Array.data[4].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[5].m_StoryData.m_BranchOptions.Array.data[5].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[6].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[6].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[6].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[6].m_StoryData.m_BranchOptions.Array.data[3].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[6].m_StoryData.m_BranchOptions.Array.data[4].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[7].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[7].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[7].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[7].m_StoryData.m_BranchOptions.Array.data[3].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[7].m_StoryData.m_BranchOptions.Array.data[4].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[7].m_StoryData.m_BranchOptions.Array.data[5].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[8].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[8].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[8].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[8].m_StoryData.m_BranchOptions.Array.data[3].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[8].m_StoryData.m_BranchOptions.Array.data[4].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[9].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[9].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[9].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[9].m_StoryData.m_BranchOptions.Array.data[3].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[9].m_StoryData.m_BranchOptions.Array.data[4].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[9].m_StoryData.m_BranchOptions.Array.data[5].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[10].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[10].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Value
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[10].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[10].m_StoryData.m_BranchOptions.Array.data[3].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[10].m_StoryData.m_BranchOptions.Array.data[4].m_Repercusion.m_Value
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Value
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[3].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[4].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[5].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[12].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[12].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[12].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[12].m_StoryData.m_BranchOptions.Array.data[3].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[12].m_StoryData.m_BranchOptions.Array.data[4].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[13].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[13].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[13].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[13].m_StoryData.m_BranchOptions.Array.data[3].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[13].m_StoryData.m_BranchOptions.Array.data[4].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[14].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[14].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[14].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[14].m_StoryData.m_BranchOptions.Array.data[3].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[14].m_StoryData.m_BranchOptions.Array.data[4].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[14].m_StoryData.m_BranchOptions.Array.data[5].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[14].m_StoryData.m_BranchOptions.Array.data[6].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[15].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[15].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[15].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[15].m_StoryData.m_BranchOptions.Array.data[3].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[15].m_StoryData.m_BranchOptions.Array.data[4].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[15].m_StoryData.m_BranchOptions.Array.data[5].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[15].m_StoryData.m_BranchOptions.Array.data[6].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[3].m_Repercusion.m_Value
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[4].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[5].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[17].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[17].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_Value
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[17].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[17].m_StoryData.m_BranchOptions.Array.data[3].m_Repercusion.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[17].m_StoryData.m_BranchOptions.Array.data[4].m_Repercusion.m_Value
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[17].m_StoryData.m_BranchOptions.Array.data[5].m_Repercusion.m_Value
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_StoriesList.Array.data[18].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_Value
       value: 0
       objectReference: {fileID: 0}
@@ -385,6 +1097,26 @@ PrefabInstance:
     - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_StoriesList.Array.data[19].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_Value
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_ID.m_ID
+      value: -1558447323
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_ID.m_ID
+      value: -1421179957
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_ID.m_ID
+      value: -2043321078
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_ID.m_ID
+      value: 784405313
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_ID.m_ID
+      value: -1800228245
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_StoriesList.Array.data[18].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_ID.m_ID
@@ -411,6 +1143,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_ID.m_NameID
+      value: mantecas_farm_revitalized
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_ID.m_NameID
+      value: mantecas_farm_devastated
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_ID.m_NameID
+      value: mantecas_paranoic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[1].m_Repercusion.m_ID.m_NameID
+      value: living_artifacts_destroyed
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_ID.m_NameID
+      value: living_artifacts_stopped
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_StoriesList.Array.data[18].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_ID.m_NameID
       value: 
       objectReference: {fileID: 0}
@@ -435,6 +1187,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[0].m_ResultNPCDialogue.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[1].m_ResultNPCDialogue.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_StoriesList.Array.data[18].m_StoryData.m_BranchOptions.Array.data[0].m_Repercusion.m_ID.m_Initialized
       value: 0
       objectReference: {fileID: 0}
@@ -457,6 +1217,103 @@ PrefabInstance:
     - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_StoriesList.Array.data[19].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_ID.m_Initialized
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[1].m_StoryData.m_BranchOptions.Array.data[1].m_ResultNPCDialogue.Array.data[3]
+      value: "Eso s\xED, no me har\xE9 responsable de mis actos si descubro a ese
+        malnacido."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[0].m_ResultNPCDialogue.Array.data[0]
+      value: "No ha vuelto a ocurrir nada en mi granja. \xA1De hecho, est\xE1 mejor
+        que nunca!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[0].m_ResultNPCDialogue.Array.data[1]
+      value: Mis cultivos crecen sanos, la calidad del suelo ha mejorado y no hay
+        ninguna plaga que erradicar.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[0].m_ResultNPCDialogue.Array.data[2]
+      value: "\xA1\xBFMe toman por tonto?!\t\xA1\xBFCu\xE1ndo van a volver a fastidiarme?!
+        \xA1Me estoy impacientando!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[0].m_ResultNPCDialogue.Array.data[3]
+      value: "\xA1Es imposible que de repente todo me vaya bien! \xA1Impensable!
+        \xA1Debe de avecinarse el fin del mundo!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[1].m_ResultNPCDialogue.Array.data[0]
+      value: "\xA1El caos ha vuelto a mi granja! \xA1Sab\xEDa que algo gordo se avecinaba!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[1].m_ResultNPCDialogue.Array.data[1]
+      value: "\xA1Han aparecido topos y langostas para destrozarme los cultivos!
+        \xA1Adem\xE1s las ratas han vuelto a ocupar mi granero!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[1].m_ResultNPCDialogue.Array.data[2]
+      value: "\xA1Sucias alima\xF1as! \xA1\xBFCreen que pueden conmigo?! \xA1Qu\xE9
+        vengan! \xA1Se van a llevar su merecido!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[2].m_ResultNPCDialogue.Array.data[0]
+      value: "\xA1Se avecinan grandes problemas en mi granja!  \xA1Vuelven a ocurrir
+        cosas extra\xF1as!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[2].m_ResultNPCDialogue.Array.data[1]
+      value: "\xA1Han aparecido formas en mis cultivos con forma de calavera! \xA1Esto
+        solo puede ser una se\xF1al de que algo se aproxima!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[2].m_ResultNPCDialogue.Array.data[2]
+      value: "\xA1Va a ocurrir en cualquier momento, me estoy impacientando!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[2].m_ResultNPCDialogue.Array.data[3]
+      value: "\xA1Ardo en deseos de ver a qu\xE9 me enfrentar\xE9 esta vez! \xA1Sea
+        lo que sea, mi granja no caer\xE1!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[1].m_ResultNPCDialogue.Array.data[0]
+      value: "\xA1Mi colecci\xF3n se ha ido al traste! \xA1No s\xE9 si podr\xE9 recuperarme
+        de esta tragedia!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[1].m_ResultNPCDialogue.Array.data[1]
+      value: "\xA1De alguna manera los artefactos aislados han derribado la puerta
+        y han sembrado el caos!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[1].m_ResultNPCDialogue.Array.data[2]
+      value: "Es culpa m\xEDa haberlos subestimado. No he tenido m\xE1s remedio que
+        destruirlos all\xED mismo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[1].m_ResultNPCDialogue.Array.data[3]
+      value: "\xA1Cualquier d\xEDa de estos voy a momificar vivo al besugo Johnny
+        para exponerlo!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[2].m_ResultNPCDialogue.Array.data[0]
+      value: "\xA1Mi colecci\xF3n por fin est\xE1 fuera de peligro! Los artefactos
+        vivientes ahora son s\xF3lo artefactos."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[2].m_ResultNPCDialogue.Array.data[1]
+      value: Por lo visto los artefactos dejaron de moverse tras entrar en contacto
+        con chocolate.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[2].m_ResultNPCDialogue.Array.data[2]
+      value: "\xA1No me preguntes por qu\xE9, yo tampoco tengo ni idea! Habr\xE1
+        sido una completa casualidad."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[2].m_ResultNPCDialogue.Array.data[3]
+      value: "\xA1Por lo menos mis artefactos ahora tienen un brillo espectacular!"
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_StoriesList.Array.data[18].m_StoryData.m_BranchOptions.Array.data[0].m_DeitiesResultDialogue.Array.size
@@ -553,6 +1410,153 @@ PrefabInstance:
     - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_StoriesList.Array.data[19].m_StoryData.m_BranchOptions.Array.data[2].m_Repercusion.m_ParentStoryID.m_Initialized
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[5].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[6].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[1].m_StoryData.m_BranchOptions.Array.data[1].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[1].m_StoryData.m_BranchOptions.Array.data[4].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[1].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[2].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[0].m_DeitiesResultDialogue.Array.data[1].m_Dialogue.Array.data[0]
+      value: "No subestimes a las Galletas m\xE1gicas. Unos simples lobos no deber\xEDan
+        de ser problema para ellas."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[1].m_DeitiesResultDialogue.Array.data[1].m_Dialogue.Array.data[0]
+      value: "No subestimes a las Galletas m\xE1gicas. Unos simples lobos no deber\xEDan
+        de ser problema para ellas."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[2].m_DeitiesResultDialogue.Array.data[1].m_Dialogue.Array.data[0]
+      value: "No subestimes a las Galletas m\xE1gicas. Incluso unos temibles lobos
+        no deber\xEDan de ser problema para ellas."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[3].m_DeitiesResultDialogue.Array.data[1].m_Dialogue.Array.data[0]
+      value: "No subestimes a las Galletas m\xE1gicas. Unos simples lobos no deber\xEDan
+        de ser problema para ellas."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[4].m_DeitiesResultDialogue.Array.data[1].m_Dialogue.Array.data[0]
+      value: "No subestimes a las Galletas m\xE1gicas. Unos simples lobos no deber\xEDan
+        de ser problema para ellas."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[5].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.data[0]
+      value: "Tengo la sensaci\xF3n de que no me voy a aburrir contigo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[5].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.data[1]
+      value: Espero que no me decepciones.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[6].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.data[0]
+      value: "Tengo la sensaci\xF3n de que no me voy a aburrir contigo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[6].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.data[1]
+      value: Espero que no me decepciones.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[7].m_DeitiesResultDialogue.Array.data[1].m_Dialogue.Array.data[0]
+      value: "No subestimes a las Galletas m\xE1gicas. Unos simples lobos no deber\xEDan
+        de ser problema para ellas."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[0].m_StoryData.m_BranchOptions.Array.data[8].m_DeitiesResultDialogue.Array.data[1].m_Dialogue.Array.data[0]
+      value: "No subestimes a las Galletas m\xE1gicas. Incluso unos temibles lobos
+        no deber\xEDan de ser problema para ellas."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[1].m_StoryData.m_BranchOptions.Array.data[1].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.data[0]
+      value: "Veo que ya le vas pillando el tranquillo a esto de hornear Galletas
+        m\xE1gicas."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[1].m_StoryData.m_BranchOptions.Array.data[1].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.data[1]
+      value: "Y viendo las decisiones que tomas... \xA1Me gusta tu estilo!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[1].m_StoryData.m_BranchOptions.Array.data[4].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.data[0]
+      value: "Veo que ya le vas pillando el tranquillo a esto de hornear Galletas
+        m\xE1gicas."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[1].m_StoryData.m_BranchOptions.Array.data[4].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.data[1]
+      value: "Y viendo las decisiones que tomas... \xA1Me gusta tu estilo!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[0].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.data[0]
+      value: "Pensaba que ibas a ayudar a ese pobre granjero con su escasez de desastres.
+        \xA1Una pena!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[0].m_DeitiesResultDialogue.Array.data[1].m_Dialogue.Array.data[0]
+      value: No siempre lo que queremos tener y lo que necesitamos de verdad coinciden.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[1].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.data[0]
+      value: "Lo est\xE1s dando todo para cumplir el deseo de ese tipo, \xBFno? \xA1Espero
+        que no se arrepienta!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[1].m_DeitiesResultDialogue.Array.data[1].m_Dialogue.Array.data[0]
+      value: "Si bien la petici\xF3n de ese granjero es muy extra\xF1a, no creo necesario
+        llegar tan lejos."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[2].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.data[0]
+      value: "Ir\xEDa yo misma a causar el caos en su granja, pero soy una deidad
+        muy ocupada, \xBFsabes?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[11].m_StoryData.m_BranchOptions.Array.data[2].m_DeitiesResultDialogue.Array.data[1].m_Dialogue.Array.data[0]
+      value: "\xBFSer\xE1 mala suerte lo de ese granjero o \xE9l mismo se busca sus
+        problemas?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[1].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.data[0]
+      value: "\xBFSi en vez de artefactos fueran platos y cubiertos, ser\xEDan amables
+        o mucho m\xE1s agresivos?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[1].m_DeitiesResultDialogue.Array.data[1].m_Dialogue.Array.data[0]
+      value: "Aunque vivas una eternidad, siempre habr\xE1 m\xE1s cosas y situaciones
+        sorprendentes."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[2].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.data[0]
+      value: "\xBFArtefactos inanimados s\xFAper agresivos? \xA1\xBFPor qu\xE9 no
+        se me hab\xEDa ocurrido antes?!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[2].m_DeitiesResultDialogue.Array.data[0].m_Dialogue.Array.data[1]
+      value: "\xA1Es una idea genial para sembrar el caos y el desconcierto, mis
+        dos cosas favoritas!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683452, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_StoriesList.Array.data[16].m_StoryData.m_BranchOptions.Array.data[2].m_DeitiesResultDialogue.Array.data[1].m_Dialogue.Array.data[0]
+      value: El orden natural de las cosas ha de ser restaurado. Lo que permanece
+        inanimado debe quedar inanimado.
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.size
