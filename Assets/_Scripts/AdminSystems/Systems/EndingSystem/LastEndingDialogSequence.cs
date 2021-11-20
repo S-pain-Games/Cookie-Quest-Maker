@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class LastEndingDialogSequence : MonoBehaviour
 {
-    [SerializeField] private Transform evithSpawnPos;
-    [SerializeField] private Transform nuSpawnPos;
-
     [SerializeField] private GameObject evithPrefab;
     [SerializeField] private GameObject nuPrefab;
-
-    private GameObject evithRef;
-    private GameObject nuRef;
 
     private EventVoid _enableMovementCmd;
     private EventVoid _disableMovementCmd;
@@ -31,10 +25,6 @@ public class LastEndingDialogSequence : MonoBehaviour
     [MethodButton]
     public void ExecuteSequence()
     {
-        evithRef = Instantiate(evithPrefab, evithSpawnPos);
-        nuRef = Instantiate(nuPrefab, nuSpawnPos);
-        evithRef.GetComponent<SpriteRenderer>().flipX = true;
-        nuRef.GetComponent<SpriteRenderer>().flipX = true;
         _disableMovementCmd.Invoke();
         _toggleGameplayUiCmd.Invoke();
 
@@ -468,10 +458,8 @@ public class LastEndingDialogSequence : MonoBehaviour
 
     private void HideNuAndEvith()
     {
-        Destroy(evithRef);
-        Destroy(nuRef);
-        evithRef = null;
-        nuRef = null;
+        evithPrefab.SetActive(false);
+        nuPrefab.SetActive(false);
     }
 
     private void FinishEndingSequence()
