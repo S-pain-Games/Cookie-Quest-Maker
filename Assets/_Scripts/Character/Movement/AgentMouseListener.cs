@@ -14,7 +14,6 @@ public class AgentMouseListener : MonoBehaviour
     private void Awake()
     {
         _agent = GetComponent<CharacterNavMeshAgentHandler>();
-
     }
 
     private void Update()
@@ -28,6 +27,8 @@ public class AgentMouseListener : MonoBehaviour
     public void SetInputActivated(bool activated)
     {
         _enabledListener = activated;
+        if(_agent != null)
+            _agent.SetTarget(transform.position);
     }
 
     private void OnClick()
