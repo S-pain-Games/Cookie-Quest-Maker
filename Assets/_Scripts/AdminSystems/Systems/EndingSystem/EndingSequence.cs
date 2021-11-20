@@ -84,13 +84,21 @@ public class EndingSequence : MonoBehaviour
 
     private void CalculateHapinessScore()
     {
-        //Dependiendo del valor total de la felicidad de los NPCs, proseguir con una de las tres cadenas
+        int globalHapiness = Admin.Global.Components.m_TownComponent.m_GlobalHappiness;
+        Debug.Log("Ending hapiness: "+globalHapiness);
 
-        //StartGoodEndingSequence
+        //Dependiendo del valor total de la felicidad de los NPCs, proseguir con una de las tres cadenas
+        if (globalHapiness > 150)
+            StartGoodEndingSequence();
+        else if(globalHapiness < 50)
+            StartBadEndingSequence();
+        else
+            StartNeutralEndingSequence();
     }
 
     #region Good Ending Dialog Sequence
-   
+
+    [MethodButton]
     private void StartGoodEndingSequence()
     {
         _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
@@ -191,7 +199,137 @@ public class EndingSequence : MonoBehaviour
         _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
             "Gracias a sus buenos actos, el pueblo volvió a prosperar.",
             "Los problemas inusuales seguían ocurriendo día a día, pero el joven pastelero siguió actuando como defensor del pueblo desde las sombras.",
-            "Y seguirá velando por el bien del pueblo y su gente gracias a las Galletas mágicas." +
+            "Y seguirá velando por el bien del pueblo y su gente gracias a las Galletas mágicas.",
+            "FIN"},
+          new ID("narrator"),
+             () => { FinishEndingSequence(); }));
+    }
+    #endregion
+
+    #region Bad Ending Dialog Sequence
+
+    [MethodButton]
+    private void StartBadEndingSequence()
+    {
+        _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
+            "Teníamos ciertas expectativas sobre qué harías con nuestros poderes.",
+            "Sobre todo partiendo del hecho de que deseabas poder hacer algo por el pueblo." },
+        new ID("nu"),
+           () => { this.BadEndingSequenceOne(); }));
+    }
+
+    private void BadEndingSequenceOne()
+    {
+        _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
+            "¡Pues nos llevamos una sorpresa bastante grata! ¡Bueno, al menos en mi caso!",
+            "Supongo que ya te imaginas a qué me refiero." },
+        new ID("evith"),
+           () => { this.BadEndingSequenceTwo(); }));
+    }
+
+    private void BadEndingSequenceTwo()
+    {
+        _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
+            "Visto lo visto, has utilizado a las Galletas mágicas para empeorar más aún la situación del pueblo."},
+       new ID("nu"),
+          () => { BadEndingSequenceThree(); }));
+    }
+
+    private void BadEndingSequenceThree()
+    {
+        _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
+            "¡Sabía en el fondo que serías de los míos! ¡Disfrutas del caos y te regocijas en las desgracias ajenas!"},
+       new ID("evith"),
+          () => { BadEndingSequenceFour(); }));
+    }
+    private void BadEndingSequenceFour()
+    {
+        _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
+            "El pueblo se encuentra en un estado aún más lamentable que cuando llegamos.",
+            "No pensábamos que sería posible llegar hasta este punto." },
+      new ID("nu"),
+         () => { BadEndingSequenceFive(); }));
+    }
+    private void BadEndingSequenceFive()
+    {
+        _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
+            "No me cabe duda de que has actuado así a propósito.",
+            "Te ha podido la idea de poder hacer lo que quisieras sin consecuencia alguna. ¿O será que ya eras malvado de antemano?"},
+      new ID("evith"),
+         () => { BadEndingSequenceSix(); }));
+    }
+    private void BadEndingSequenceSix()
+    {
+        _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
+            "Tanto si se trata de mezquindad o de pura negligencia. No podemos permitirte continuar con tus viles actos."},
+      new ID("nu"),
+         () => { BadEndingSequenceSeven(); }));
+    }
+    private void BadEndingSequenceSeven()
+    {
+        _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
+            "¡Qué pena! ¡No sabes cuánto me gustaría seguir observando tus actos!",
+            "¡Hay muy pocas personas capaces de llegar tan lejos!" },
+     new ID("evith"),
+        () => { BadEndingSequenceEight(); }));
+    }
+    private void BadEndingSequenceEight()
+    {
+        _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
+            "Debemos seguir con nuestro reglamento. A partir de este momento, ya no volverás a poder hornear Galletas mágicas."},
+     new ID("nu"),
+        () => { BadEndingSequenceNine(); }));
+    }
+
+    private void BadEndingSequenceNine()
+    {
+        _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
+            "No nos lo tengas en cuenta, así son las cosas. ¡Si fuera por mí, le daría poderes a todo el mundo para observar qué sucedería!"},
+     new ID("evith"),
+        () => { BadEndingSequenceTen(); }));
+    }
+
+    private void BadEndingSequenceTen()
+    {
+        _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
+            "Nuestro trabajo aquí ha terminado. Nos marchamos. Esperemos poder obtener resultados más prometedores con el próximo candidato."},
+     new ID("nu"),
+        () => { BadEndingSequenceEleven(); }));
+    }
+
+    private void BadEndingSequenceEleven()
+    {
+        _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
+            "Dudo bastante que haya alguien más interesante que este joven pastelero. ¡Pero nunca se sabe!" },
+     new ID("evith"),
+        () => { BadEndingSequenceTwelve(); }));
+    }
+
+    private void BadEndingSequenceTwelve()
+    {
+        _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
+            "No lo sabremos hasta que nos presentemos ante él",
+            "Bueno, si queda algo de justicia en este mundo, espero que te haga pagar por tus actos algún día. Nos marchamos." },
+     new ID("nu"),
+        () => { BadEndingSequenceThirteen(); }));
+    }
+
+    private void BadEndingSequenceThirteen()
+    {
+        _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
+            "¡Pase lo que pase yo seguiré siendo tu fan número uno! ¡Espero poder volver a visitarte algún día! ¡Hasta otra!" },
+     new ID("evith"),
+        () => { BadEndingSequenceEnd(); }));
+    }
+
+    private void BadEndingSequenceEnd()
+    {
+        HideNuAndEvith();
+
+        _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
+            "Los vecinos del pueblo maldicen su suerte sin saber que el responsable de empeorar la situación era el dueño de la pastelería a la que acuden diariamente.",
+            "Aun así, los vecinos siguen viviendo con la esperanza de que la situación mejorará algún día.",
+            "El joven pastelero seguirá observando las desgracias ajenas sin mover un dedo por mejorar la situación.",
             "FIN"},
           new ID("narrator"),
              () => { FinishEndingSequence(); }));
@@ -200,6 +338,7 @@ public class EndingSequence : MonoBehaviour
 
     #region Neutral Ending Dialog Sequence
 
+    [MethodButton]
     private void StartNeutralEndingSequence()
     {
         _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
@@ -326,7 +465,6 @@ public class EndingSequence : MonoBehaviour
              () => { FinishEndingSequence(); }));
     }
     #endregion
-
 
     private void HideNuAndEvith()
     {
