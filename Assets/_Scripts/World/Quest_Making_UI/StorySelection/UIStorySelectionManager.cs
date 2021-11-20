@@ -33,7 +33,10 @@ namespace CQM.UI.QuestMakingTable
         [SerializeField] private Sprite _secondaryStoryIconSprite;
 
         //Story Description
+        [SerializeField] private GameObject _showDescriptionButton;
         [SerializeField] private TextMeshProUGUI _selectedStoryDescription;
+
+        
 
         // Game Data
         private List<ID> _ongoingStories;
@@ -77,6 +80,8 @@ namespace CQM.UI.QuestMakingTable
                 _selectedStoryTitle.text = "Ninguna Historia Disponible";
 
                 _storyIconImage.gameObject.SetActive(false);
+                _showDescriptionButton.SetActive(false);
+
             }
             else
             {
@@ -90,8 +95,8 @@ namespace CQM.UI.QuestMakingTable
 
                 UpdateQuestIconImage(storyId);
 
+                _showDescriptionButton.SetActive(true);
                 _selectedStoryDescription.SetText(Admin.Global.Components.GetComponentContainer<StoryInfoComponent>().GetComponentByID(storyId).m_StoryData.m_Description);
-                //string desc = Admin.Global.Components.GetComponentContainer<StoryInfoComponent>().GetComponentByID(storyId).m_StoryData.m_Description;
             }
         }
 
