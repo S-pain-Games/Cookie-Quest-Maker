@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using CQM.Components;
+using DG.Tweening;
 
 public class Shop_UI : MonoBehaviour
 {
@@ -70,7 +71,8 @@ public class Shop_UI : MonoBehaviour
         _recipesToBuy = new List<RecipeDataComponent>();
         _ingredientsToBuy = new List<IngredientComponent>();
 
-        EventVoid evt = admin.EventSystem.GetCallback<EventVoid>(new ID("shop_sys"), new ID("update_shop_ui"));
+        //EventVoid evt = admin.EventSystem.GetCallback<EventVoid>(new ID("shop_sys"), new ID("update_shop_ui"));
+        Event<bool> evt = admin.EventSystem.GetCallback<Event<bool>>(new ID("shop_sys"), new ID("update_shop_ui"));
         evt.OnInvoked += UpdateUI;
     }
 
@@ -109,10 +111,10 @@ public class Shop_UI : MonoBehaviour
             }
         }
 
-        UpdateUI();
+        UpdateUI(false);
     }
 
-    private void UpdateUI()
+    private void UpdateUI(bool anim)
     {
         
         if(currentRecipeType == RecipeTypes.PieceRecipes)
@@ -144,6 +146,8 @@ public class Shop_UI : MonoBehaviour
         image_evith.SetActive(false);
         text_good_price.text = "";
         text_evil_price.text = "";
+        text_evil_price.color = Color.white;
+        text_good_price.color = Color.white;
 
         if (currentRecipeType == RecipeTypes.PieceRecipes)
         {
@@ -168,12 +172,26 @@ public class Shop_UI : MonoBehaviour
                 image_good_money.SetActive(true);
                 image_nu.SetActive(true);
                 text_good_price.text = recipe.m_Price_Good.ToString();
+
+                if(_inventoryData.m_GoodCookieReputation < recipe.m_Price_Good)
+                {
+                    text_good_price.color = Color.red;
+                }
+                else
+                    text_good_price.color = Color.white;
             }
             if(recipe.m_Price_Evil > 0)
             {
                 image_evil_money.SetActive(true);
                 image_evith.SetActive(true);
                 text_evil_price.text = recipe.m_Price_Evil.ToString();
+
+                if (_inventoryData.m_EvilCookieReputation < recipe.m_Price_Evil)
+                {
+                    text_evil_price.color = Color.red;
+                }
+                else
+                    text_evil_price.color = Color.white;
             }
 
             if (!_inventoryData.m_UnlockedRecipes.Contains(_selectedPieceID))
@@ -193,18 +211,42 @@ public class Shop_UI : MonoBehaviour
                 image_good_money.SetActive(true);
                 image_nu.SetActive(true);
                 text_good_price.text = ingredient.m_Price_Good.ToString();
+
+                if (_inventoryData.m_GoodCookieReputation < ingredient.m_Price_Good)
+                {
+                    text_good_price.color = Color.red;
+                }
+                else
+                    text_good_price.color = Color.white;
             }
             if (ingredient.m_Price_Evil > 0)
             {
                 image_evil_money.SetActive(true);
                 image_evith.SetActive(true);
                 text_evil_price.text = ingredient.m_Price_Evil.ToString();
+
+                if (_inventoryData.m_EvilCookieReputation < ingredient.m_Price_Evil)
+                {
+                    text_evil_price.color = Color.red;
+                }
+                else
+                    text_evil_price.color = Color.white;
             }
 
             image_recipe.sprite = ingredient.m_Sprite;
         }
         image_recipe.preserveAspect = true;
+
+        if(anim)
+        {
+            text_evil_price.transform.DOScale(2.0f, 0.15f).OnComplete(() => text_evil_price.transform.DOScale(1.0f, 0.15f));
+            text_good_price.transform.DOScale(2.0f, 0.15f).OnComplete(() => text_good_price.transform.DOScale(1.0f, 0.15f));
+            text_good_rep.transform.DOScale(2.0f, 0.15f).OnComplete(() => text_good_rep.transform.DOScale(1.0f, 0.15f));
+            text_evil_rep.transform.DOScale(2.0f, 0.15f).OnComplete(() => text_evil_rep.transform.DOScale(1.0f, 0.15f));
+        }
     }
+
+
 
     public void BuyRecipe()
     {
@@ -235,7 +277,7 @@ public class Shop_UI : MonoBehaviour
             idx_ingredient = Mathf.Clamp(idx_ingredient, 0, _ingredientsToBuy.Count-1);
         }
 
-        UpdateUI();
+        UpdateUI(false);
     }
 
     public void SetPieceRecipeTypes()
@@ -243,7 +285,7 @@ public class Shop_UI : MonoBehaviour
         if(currentRecipeType != RecipeTypes.PieceRecipes)
         {
             currentRecipeType = RecipeTypes.PieceRecipes;
-            UpdateUI();
+            UpdateUI(false);
         }
     }
 
@@ -253,7 +295,7 @@ public class Shop_UI : MonoBehaviour
         {
             currentRecipeType = RecipeTypes.IngredientRecipes;
             text_buy.text = "¡Comprar!";
-            UpdateUI();
+            UpdateUI(false);
         }
     }
 }

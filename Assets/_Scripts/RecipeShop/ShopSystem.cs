@@ -9,7 +9,8 @@ public class ShopSystem : ISystemEvents
     private Singleton_InventoryComponent _inventoryData;
     private ComponentsContainer<IngredientComponent> _ingredientsDataComponents;
 
-    private EventVoid _updateShopCallback;
+    //private EventVoid _updateShopCallback;
+    private Event<bool> _updateShopCallback;
 
     //private EventVoid _enableCharMovCmd;
     //private EventVoid _disableCharMovCmd;
@@ -27,7 +28,7 @@ public class ShopSystem : ISystemEvents
 
         commands.AddEvent<ID>(new ID("buy_recipe")).OnInvoked += BuyRecipe;
         commands.AddEvent<ID>(new ID("buy_ingredient")).OnInvoked += BuyIngredient;
-        callbacks.AddEvent(new ID("update_shop_ui"));
+        callbacks.AddEvent<bool>(new ID("update_shop_ui"));
     }
 
     public void Initialize(ComponentsContainer<RecipeDataComponent> recipeDataComponents,
@@ -43,7 +44,7 @@ public class ShopSystem : ISystemEvents
         _changeRepCmd = evtSys.GetCommandByName<Event<InventorySys_ChangeReputationEvtArgs>>("inventory_sys", "change_reputation");
         _unlockRecipeCmd = evtSys.GetCommandByName<Event<ID>>("inventory_sys", "unlock_recipe");
         _addIngredient = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_ingredient");
-        _updateShopCallback = Admin.Global.EventSystem.GetCallbackByName<EventVoid>("shop_sys", "update_shop_ui");
+        _updateShopCallback = Admin.Global.EventSystem.GetCallbackByName<Event<bool>>("shop_sys", "update_shop_ui");
     }
 
     public void BuyRecipe(ID selectedRecipeId)
@@ -67,10 +68,16 @@ public class ShopSystem : ISystemEvents
             if (recipe.m_Price_Evil > 0)
                 _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(Reputation.EvilCookieReputation, -recipe.m_Price_Evil));
             _unlockRecipeCmd.Invoke(recipe.m_PieceID);
-            _updateShopCallback.Invoke();
+            _updateShopCallback.Invoke(true);
             //_buyRecipeCmdREFACTOR.Invoke();
             //UpdateTexts();
         }
+        else
+        {
+            _updateShopCallback.Invoke(true);
+        }
+
+
     }
 
     public void BuyIngredient(ID selectedIngredientId)
@@ -94,10 +101,15 @@ public class ShopSystem : ISystemEvents
                 //_unlockRecipeCmd.Invoke(recipe.m_PieceID);
                 ItemData newIngredient = new ItemData(selectedIngredientId, 1);
                 _addIngredient.Invoke(newIngredient);
-                _updateShopCallback.Invoke();
+                _updateShopCallback.Invoke(true);
                 //_buyRecipeCmdREFACTOR.Invoke();
                 //UpdateTexts();
             }
+            else
+            {
+                _updateShopCallback.Invoke(true);
+            }
         }
+        
     }
 }

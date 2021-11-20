@@ -12,8 +12,9 @@ public class PieceCraftingSystem : ISystemEvents
     private Event<ItemData> _addPieceToInventoryCmd;
     private Event<ItemData> _removeIngredientToInventoryCmd;
 
-    private Event<ID> _updateIngredientsCallback;
-
+    //private Event<ID> _updateIngredientsCallback;
+    private Event<bool> _updateIngredientsCallback;
+    private Event<bool> _updateBakeAnimCallback;
 
     public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
     {
@@ -22,7 +23,9 @@ public class PieceCraftingSystem : ISystemEvents
         sysID = new ID("piece_crafting_sys");
 
         commands.AddEvent<ID>(new ID("craft_recipe")).OnInvoked += CraftRecipe;
-        callbacks.AddEvent<ID>(new ID("update_ingredients_ui"));
+        //callbacks.AddEvent<ID>(new ID("update_ingredients_ui"));
+        callbacks.AddEvent<bool>(new ID("update_ingredients_ui"));
+        callbacks.AddEvent<bool>(new ID("update_bake_anim"));
     }
 
     public void Initialize(ComponentsContainer<RecipeDataComponent> recipeDataComponents,
@@ -34,8 +37,8 @@ public class PieceCraftingSystem : ISystemEvents
         var evtSys = Admin.Global.EventSystem;
         _addPieceToInventoryCmd = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_piece");
         _removeIngredientToInventoryCmd = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "remove_ingredient");
-        _updateIngredientsCallback = Admin.Global.EventSystem.GetCallbackByName<Event<ID>>("piece_crafting_sys", "update_ingredients_ui");
-
+        _updateIngredientsCallback = Admin.Global.EventSystem.GetCallbackByName<Event<bool>>("piece_crafting_sys", "update_ingredients_ui");
+        _updateBakeAnimCallback = Admin.Global.EventSystem.GetCallbackByName<Event<bool>>("piece_crafting_sys", "update_bake_anim");
     }
 
     public void CraftRecipe(ID _selectedCookieID)
@@ -48,7 +51,9 @@ public class PieceCraftingSystem : ISystemEvents
             if (recipe.m_IngredientsList.Count > 0 && recipe.m_IngredientsList[0].m_ItemID == new ID("masa_de_galletas_encantada"))
             {
                 _addPieceToInventoryCmd.Invoke(new ItemData(_selectedCookieID, 1));
-                _updateIngredientsCallback.Invoke(_selectedCookieID);
+                //_updateIngredientsCallback.Invoke(_selectedCookieID);
+                _updateIngredientsCallback.Invoke(true);
+                _updateBakeAnimCallback.Invoke(true);
                 Debug.Log("Piece added");
                 return;
             }
@@ -95,14 +100,24 @@ public class PieceCraftingSystem : ISystemEvents
                     _removeIngredientToInventoryCmd.Invoke(new ItemData(recipIngr.m_ItemID, recipIngr.m_Amount));
                 }
                 _addPieceToInventoryCmd.Invoke(new ItemData(_selectedCookieID, 1));
-                _updateIngredientsCallback.Invoke(_selectedCookieID);
+                //_updateIngredientsCallback.Invoke(_selectedCookieID);
+                _updateIngredientsCallback.Invoke(true);
+                _updateBakeAnimCallback.Invoke(true);
                 Debug.Log("Piece added");
             }
             else
+            {
+                _updateBakeAnimCallback.Invoke(false);
                 Debug.Log("Not enough ingredients");
+            }
+                
         }
         else
+        {
+            _updateBakeAnimCallback.Invoke(false);
             Debug.LogError("NO RECIPE FOUND");
+        }
+            
     }
 
 }
