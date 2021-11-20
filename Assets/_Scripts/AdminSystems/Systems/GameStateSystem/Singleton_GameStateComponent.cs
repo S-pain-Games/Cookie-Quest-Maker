@@ -14,4 +14,5 @@ public class Singleton_GameStateComponent : MonoBehaviour
     public GameObject m_MainMenu;
     public GameObject m_CookieMaking;
     public GameObject m_BakeryNight;
+    public GameObject m_EndGame;
 }

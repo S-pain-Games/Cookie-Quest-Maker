@@ -43,6 +43,11 @@ public class GameStateSystem : ISystemEvents
             d.m_BakeryNight);
         d.m_States.Add(State.BakeryNight, gs);
 
+        gs = new GameState(callbacks.AddEvent(new ID("endgame_enter")),
+            callbacks.AddEvent(new ID("endgame_exit")),
+            d.m_EndGame);
+        d.m_States.Add(State.EndGame, gs);
+
         var evt = commands.AddEvent<State>(new ID("set_game_state"));
         evt.OnInvoked += SetState;
     }
@@ -104,7 +109,8 @@ public class GameStateSystem : ISystemEvents
         MainMenu,
         Bakery,
         CookieMaking,
-        BakeryNight
+        BakeryNight,
+        EndGame
     }
 }
 
