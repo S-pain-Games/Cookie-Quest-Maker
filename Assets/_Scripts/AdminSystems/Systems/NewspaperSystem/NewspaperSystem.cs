@@ -27,7 +27,11 @@ namespace CQM.Systems
 
             var evtSys = Admin.Global.EventSystem;
             evtSys.GetCallbackByName<Event<ID>>("story_sys", "story_finalized").OnInvoked +=
-                (id) => _NewsDataComponent.m_StoriesToShowInNewspaper.Add(id);
+                (id) =>
+                {
+                    if (!Admin.Global.Components.m_StoriesStateComponent.m_AllSecondaryStories.Contains(id))
+                        _NewsDataComponent.m_StoriesToShowInNewspaper.Add(id);
+                };
             evtSys.GetCallbackByName<EventVoid>("day_sys", "day_ended").OnInvoked +=
                 () => UpdateNewspaper();
 
@@ -48,15 +52,13 @@ namespace CQM.Systems
             var n = _NewsDataComponent;
             if (n.m_StoriesToShowInNewspaper.Count > 0)
             {
-                for (int i = 0; i < _NewsDataComponent.m_StoriesToShowInNewspaper.Count; i++)
-                {
-                    StoryInfoComponent s = m_StoryInfoComponents[_NewsDataComponent.m_StoriesToShowInNewspaper[i]];
-                    ID repId = s.m_QuestBranchResult.m_Repercusion.m_ID;
-                    var storyNews = _NewsDataComponent.m_NewspaperStories[repId];
+                StoryInfoComponent s = m_StoryInfoComponents[_NewsDataComponent.m_StoriesToShowInNewspaper[0]];
+                ID repId = s.m_QuestBranchResult.m_Repercusion.m_ID;
+                var storyNews = _NewsDataComponent.m_NewspaperStories[repId];
 
-                    _NewspaperReferencesComponent.mainTitle.text = storyNews.m_Title;
-                    _NewspaperReferencesComponent.mainBody.text = storyNews.m_Body;
-                }
+                _NewspaperReferencesComponent.mainTitle.text = storyNews.m_Title;
+                _NewspaperReferencesComponent.mainBody.text = storyNews.m_Body;
+                n.m_StoriesToShowInNewspaper.RemoveAt(0);
             }
             else
             {

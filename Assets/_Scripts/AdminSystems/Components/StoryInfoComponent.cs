@@ -23,7 +23,8 @@ namespace CQM.Components
         {
             NotStarted,
             InProgress,
-            Completed
+            Completed,
+            Finalized
         }
     }
 

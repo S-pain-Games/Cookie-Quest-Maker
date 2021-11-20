@@ -119,11 +119,12 @@ public class StorySystem : ISystemEvents
     private void FinalizeStory(ID storyId)
     {
         _completedStories.Remove(storyId);
-        
+
         var s = _storiesStateComponent;
         if (!s.m_AllSecondaryStories.Contains(storyId))
         {
             _finalizedStories.Add(storyId);
+            m_StoriesInfo[storyId].m_State = StoryInfoComponent.State.Finalized;
 
             if (_primaryStoriesToStart.Count == 0
                 && _ongoingStories.Count == 0
@@ -136,6 +137,7 @@ public class StorySystem : ISystemEvents
         else
         {
             s.m_AvailableSecondaryStoriesToStart.Add(storyId);
+            m_StoriesInfo[storyId].m_State = StoryInfoComponent.State.NotStarted;
         }
 
         OnStoryFinalized.Invoke(storyId);
