@@ -111,7 +111,7 @@ public class StorySystem : ISystemEvents
         {
             OnAllPrimaryStoriesCompleted.OnInvoked += () => {
                 Debug.Log("All Stories Completed");
-                Admin.Global.EventSystem.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state").Invoke(GameStateSystem.State.EndGame);
+                //Admin.Global.EventSystem.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state").Invoke(GameStateSystem.State.EndGame);
             };
             OnAllPrimaryStoriesCompleted.Invoke();
         }
@@ -129,13 +129,18 @@ public class StorySystem : ISystemEvents
             _finalizedStories.Add(storyId);
             m_StoriesInfo[storyId].m_State = StoryInfoComponent.State.Finalized;
 
+            if(_primaryStoriesToStart[0].NameID == "")
+            {
+                Debug.Log("MISIÓN VACÍAAAAA");
+                Admin.Global.EventSystem.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state").Invoke(GameStateSystem.State.EndGame);
+            }
+
             if (_primaryStoriesToStart.Count == 0
                 && _ongoingStories.Count == 0
                 && _completedStories.Count == 0)
             {
                 OnAllPrimaryStoriesFinalized.OnInvoked += () => { Debug.Log("All Primary Stories Finalized");
-                    Admin.Global.EventSystem.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state").Invoke(GameStateSystem.State.EndGame);
-
+                    //Admin.Global.EventSystem.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state").Invoke(GameStateSystem.State.EndGame);
                 };
                 OnAllPrimaryStoriesFinalized.Invoke();
             }

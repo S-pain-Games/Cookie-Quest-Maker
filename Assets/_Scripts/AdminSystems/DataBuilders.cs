@@ -42,7 +42,7 @@ namespace CQM.Databases
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("high_voltage_treatment"));
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("full_artifact_panic"));
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("fungal_metamorphosis"));*/
-            //c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID(""));
+            c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID(""));
 
             // Seconday Stories
             c.m_StoriesStateComponent.m_AvailableSecondaryStoriesToStart.Add(new ID("floral_collect"));

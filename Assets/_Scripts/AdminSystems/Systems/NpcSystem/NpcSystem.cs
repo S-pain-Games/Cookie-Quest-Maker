@@ -96,6 +96,16 @@ namespace CQM.Systems
                     haveToFinalizeAPrimaryStory = false;
                     haveToStartAPrimaryStory = false;
 
+                    //Si la siguiente misión principal es vacía. No iniciar la secundaria.
+
+                    if (Admin.Global.Components.m_StoriesStateComponent.m_MainStoriesToStartOrder[0].NameID == "")
+                    {
+                        Debug.Log("NANAI");
+                        return;
+                    }
+                    
+
+
                     npcData.m_Dialogue.Add("Menuda Historia...");
 
                     StartSecondaryStory(secondaryStoriesToStart, npcData);
