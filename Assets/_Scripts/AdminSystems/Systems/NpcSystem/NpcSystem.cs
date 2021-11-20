@@ -324,7 +324,7 @@ namespace CQM.Components
 {
     public class NPCBehaviourData
     {
-        public ID m_CharacterID;
+        public ID m_CharacterID = new ID("meri");
         // Dialogue lines that the npc has to say
         public List<string> m_Dialogue = new List<string>();
         // The ID of the story that will start when the player interacts with the NPC

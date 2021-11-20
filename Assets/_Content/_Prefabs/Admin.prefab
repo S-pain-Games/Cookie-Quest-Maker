@@ -145,6 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2144f8f0843d354496a3cf61a6757fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_GameplayStarted: 0
+  m_GameplayState: 0
   m_Bakery: {fileID: 0}
   m_MainMenu: {fileID: 0}
   m_CookieMaking: {fileID: 0}
@@ -177,6 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3ef52cbe94f5048bc5ff94de95696b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_MusicSoundVolume: 1
+  m_SoundEffectsVolume: 1
   m_SoundEmitterPrefab: {fileID: 591865896501629337, guid: 272e5457d48245d4aa6a3e70aceaeb07, type: 3}
   m_MusicEmitter: {fileID: 0}
 --- !u!1001 &6330534342015407443

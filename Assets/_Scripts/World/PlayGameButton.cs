@@ -25,6 +25,11 @@ public class PlayGameButton : MonoBehaviour
 
     private void StartGame()
     {
-        Admin.Global.EventSystem.GetCommandByName<EventVoid>("day_sys", "start_tutorial_day").Invoke();
+        var d = Admin.Global.Components.m_GameState;
+        var evtSys = Admin.Global.EventSystem;
+        if (d.m_GameplayStarted)
+            evtSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state").Invoke(d.m_GameplayState);
+        else
+            evtSys.GetCommandByName<EventVoid>("day_sys", "start_tutorial_day").Invoke();
     }
 }

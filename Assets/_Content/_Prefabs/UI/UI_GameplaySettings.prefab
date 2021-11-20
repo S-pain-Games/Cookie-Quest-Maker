@@ -330,6 +330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2139179054510286898}
   - component: {fileID: 2139179054510286901}
+  - component: {fileID: 6212552708985070780}
   m_Layer: 5
   m_Name: SliderEffects
   m_TagString: Untagged
@@ -404,12 +405,25 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2139179055006408700}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6212552708985070780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139179054510286899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e79523c16d251b4c85ba275ceb66f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slider: {fileID: 2139179054510286901}
 --- !u!1 &2139179054556573995
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,19 +694,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2139179054889075317}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuManagement, Assembly-CSharp
-        m_MethodName: CloseOptionsMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &6476013268962259718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1088,6 +1090,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2139179055624079806}
   - component: {fileID: 2139179055624079777}
+  - component: {fileID: 6538406263747065298}
   m_Layer: 5
   m_Name: SliderMusic
   m_TagString: Untagged
@@ -1162,12 +1165,25 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2139179054122979595}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6538406263747065298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139179055624079807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191e6d2835ba89142844cad81cf2d8e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slider: {fileID: 2139179055624079777}
 --- !u!1 &2139179055755572047
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,6 +1196,8 @@ GameObject:
   - component: {fileID: 2139179055755572083}
   - component: {fileID: 2139179055755572080}
   - component: {fileID: 2139179055755572081}
+  - component: {fileID: 7311014914488477508}
+  - component: {fileID: 1656169189157958575}
   m_Layer: 5
   m_Name: BtnExit
   m_TagString: Untagged
@@ -1287,7 +1305,45 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2139179055755572080}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7311014914488477508}
+        m_TargetAssemblyTypeName: ExitGameButton, CQM.Scripts.Runtime
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7311014914488477508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139179055755572047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8420a81abcaca6347b3025e53549bda6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1656169189157958575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139179055755572047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9263f5d77af56f84380490b16265cfd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ToggleEventNameID: toggle_settings
+  button: {fileID: 2139179055755572081}
 --- !u!1 &2139179055880051096
 GameObject:
   m_ObjectHideFlags: 0

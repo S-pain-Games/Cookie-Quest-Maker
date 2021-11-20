@@ -21,7 +21,7 @@ public class Admin : MonoBehaviour
         Global.Initialize();
     }
 
-    private void Initialize()
+    public void Initialize()
     {
         // INITIALIZATION ORDER MATTERS
         Components.Initialize();

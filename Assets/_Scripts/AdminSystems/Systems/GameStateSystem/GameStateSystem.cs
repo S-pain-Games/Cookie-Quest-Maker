@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameStateSystem : ISystemEvents
 {
-    private Singleton_GameStateComponent m_GameState;
+    private Singleton_GameStateComponent d;
 
     private TransitionsSubSystem m_TransitionsSubSys;
 
@@ -12,7 +12,7 @@ public class GameStateSystem : ISystemEvents
     public void Initialize(Singleton_GameStateComponent gameState,
                            Singleton_TransitionsComponent transitions)
     {
-        m_GameState = gameState;
+        d = gameState;
         m_TransitionsSubSys = new TransitionsSubSystem();
         m_TransitionsSubSys.Initialize(transitions);
     }
@@ -25,23 +25,23 @@ public class GameStateSystem : ISystemEvents
 
         var gs = new GameState(callbacks.AddEvent(new ID("bakery_enter")),
             callbacks.AddEvent(new ID("bakery_exit")),
-            m_GameState.m_Bakery);
-        m_GameState.m_States.Add(State.Bakery, gs);
+            d.m_Bakery);
+        d.m_States.Add(State.Bakery, gs);
 
         gs = new GameState(callbacks.AddEvent(new ID("main_menu_enter")),
             callbacks.AddEvent(new ID("main_menu_exit")),
-            m_GameState.m_MainMenu);
-        m_GameState.m_States.Add(State.MainMenu, gs);
+            d.m_MainMenu);
+        d.m_States.Add(State.MainMenu, gs);
 
         gs = new GameState(callbacks.AddEvent(new ID("cookie_making_enter")),
             callbacks.AddEvent(new ID("cookie_making_exit")),
-            m_GameState.m_CookieMaking);
-        m_GameState.m_States.Add(State.CookieMaking, gs);
+            d.m_CookieMaking);
+        d.m_States.Add(State.CookieMaking, gs);
 
         gs = new GameState(callbacks.AddEvent(new ID("bakery_night_enter")),
             callbacks.AddEvent(new ID("bakery_night_exit")),
-            m_GameState.m_BakeryNight);
-        m_GameState.m_States.Add(State.BakeryNight, gs);
+            d.m_BakeryNight);
+        d.m_States.Add(State.BakeryNight, gs);
 
         var evt = commands.AddEvent<State>(new ID("set_game_state"));
         evt.OnInvoked += SetState;
@@ -50,21 +50,24 @@ public class GameStateSystem : ISystemEvents
     public void StartGame()
     {
         // Disable All States Except for the starting one (Maybe Bug prone?)
-        foreach (GameState state in m_GameState.m_States.Values)
+        foreach (GameState state in d.m_States.Values)
         {
             state.DisableAllGameobjects();
         }
-        m_GameState.m_State = m_GameState.m_States[State.MainMenu];
-        m_GameState.m_State.OnStateEnter();
+        d.m_State = d.m_States[State.MainMenu];
+        d.m_State.OnStateEnter();
     }
 
     public void SetState(State state)
     {
+        d.m_GameplayStarted = true;
         m_TransitionsSubSys.TransitionTo(() =>
         {
-            m_GameState.m_State.OnStateExit();
-            m_GameState.m_State = m_GameState.m_States[state];
-            m_GameState.m_State.OnStateEnter();
+            d.m_State.OnStateExit();
+            d.m_State = d.m_States[state];
+            if (state != State.MainMenu)
+                d.m_GameplayState = state;
+            d.m_State.OnStateEnter();
         });
     }
 
