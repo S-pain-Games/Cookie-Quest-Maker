@@ -14,8 +14,9 @@ public class SoundEmitterBehaviour : MonoBehaviour
         _source = GetComponent<AudioSource>();
     }
 
-    public void PlaySound(AudioClip clip)
+    public void PlaySound(AudioClip clip, float volume)
     {
+        _source.volume = volume;
         _source.PlayOneShot(clip);
         StartCoroutine(StopOnFinish(clip));
     }
