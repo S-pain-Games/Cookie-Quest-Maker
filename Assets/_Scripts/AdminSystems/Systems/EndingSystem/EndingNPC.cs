@@ -9,10 +9,13 @@ public class EndingNPC : MonoBehaviour, IInteractableEntity
 
     private ID _charId;
 
+    [SerializeField] private AgentMouseListener character;
+
     private void Start()
     {
         var evtSys = Admin.Global.EventSystem;
         _showDialogueCmd = evtSys.GetCommandByName<Event<ShowDialogueEvtArgs>>("dialogue_sys", "show_dialogue");
+
 
         _charId = new ID(_characterName);
     }
@@ -20,6 +23,8 @@ public class EndingNPC : MonoBehaviour, IInteractableEntity
 
     public void OnInteract()
     {
+        character.SetInputActivated(false);
+
         //A futuro, los diálogos dependerán de la felicidad del propio NPC
         int happiness = Admin.Global.Components.m_TownComponent.m_GlobalHappiness;
 
@@ -127,7 +132,7 @@ public class EndingNPC : MonoBehaviour, IInteractableEntity
 
     private void EndNPCDialog()
     {
-
+        character.SetInputActivated(true);
     }
 
 }

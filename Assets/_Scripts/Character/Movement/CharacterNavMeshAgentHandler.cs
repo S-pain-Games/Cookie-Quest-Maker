@@ -40,7 +40,7 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
     {
         SetupAgent(target);
         _interactableEntity = interactableEntity;
-        _interactingWithNpc = _interactableEntity.GetComponent<NPCBehaviour>() != null;
+        _interactingWithNpc = _interactableEntity.GetComponent<NPCBehaviour>() != null || _interactableEntity.GetComponent<EndingNPC>() != null;
         _movingTowardsTarget = true;
         _movingTowardsObject = true;
     }

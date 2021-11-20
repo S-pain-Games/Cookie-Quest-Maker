@@ -9,8 +9,6 @@ public class FirstDayIntroductionSequenceScript : MonoBehaviour
     private void Awake()
     {
         Admin.Global.EventSystem.GetCallbackByName<EventVoid>("day_sys", "tutorial_day_started").OnInvoked += StartIntroductionSequence;
-
-        Admin.Global.EventSystem.GetCallbackByName<EventVoid>("story_sys", "all_primary_stories_finalized");
     }
 
     public void OnEnable()

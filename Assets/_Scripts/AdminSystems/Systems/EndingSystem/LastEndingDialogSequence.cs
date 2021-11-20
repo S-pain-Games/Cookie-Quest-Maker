@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class LastEndingDialogSequence : MonoBehaviour
 {
+    [SerializeField] private AgentMouseListener character;
     [SerializeField] private GameObject evithPrefab;
     [SerializeField] private GameObject nuPrefab;
 
-    private EventVoid _enableMovementCmd;
-    private EventVoid _disableMovementCmd;
+    [SerializeField] private GameObject thanksForPlayingPrefab;
+
     private EventVoid _toggleGameplayUiCmd;
     private Event<ShowDialogueEvtArgs> _showDialogueCmd;
 
@@ -16,8 +17,6 @@ public class LastEndingDialogSequence : MonoBehaviour
     {
         GameEventSystem evtSys = Admin.Global.EventSystem;
 
-        _enableMovementCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "enable_movement");
-        _disableMovementCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "disable_movement");
         _toggleGameplayUiCmd = evtSys.GetCommandByName<EventVoid>("ui_sys", "toggle_gameplay");
         _showDialogueCmd = evtSys.GetCommandByName<Event<ShowDialogueEvtArgs>>("dialogue_sys", "show_dialogue");
     }
@@ -25,7 +24,7 @@ public class LastEndingDialogSequence : MonoBehaviour
     [MethodButton]
     public void ExecuteSequence()
     {
-        _disableMovementCmd.Invoke();
+        character.SetInputActivated(false);
         _toggleGameplayUiCmd.Invoke();
 
         StartPreEndingDialogSequence();
@@ -464,10 +463,11 @@ public class LastEndingDialogSequence : MonoBehaviour
 
     private void FinishEndingSequence()
     {
-        _enableMovementCmd.Invoke();
+        character.SetInputActivated(true);
         _toggleGameplayUiCmd.Invoke();
 
         //Mostrar créditos, volver al menú o algo
+        thanksForPlayingPrefab.SetActive(true);
     }
 
 

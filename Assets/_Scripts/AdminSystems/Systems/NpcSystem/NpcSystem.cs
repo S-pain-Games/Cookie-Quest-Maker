@@ -64,6 +64,7 @@ namespace CQM.Systems
 
             bool haveToStartAPrimaryStory = CheckIfShouldStartAPrimaryStory(allStoriesToFinalize);
             bool haveToFinalizeAPrimaryStory = SelectMainStoriesToFinalize(allStoriesToFinalize, out ID finalizeMainStoryID);
+
             ID primaryStoryToStart = SelectMainStoryToStart();
 
             for (int i = 0; i < _npcReferencesComponent.m_NpcBehaviour.Count; i++)
@@ -267,6 +268,12 @@ namespace CQM.Systems
                 //}
 
                 //return sStory;
+
+                if(storiesToStartIds[0] == null)
+                {
+                    return new ID("");
+                }
+
                 return storiesToStartIds[0];
             }
 

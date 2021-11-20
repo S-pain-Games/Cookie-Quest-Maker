@@ -109,7 +109,10 @@ public class StorySystem : ISystemEvents
         if (_primaryStoriesToStart.Count == 0
             && _ongoingStories.Count == 0)
         {
-            OnAllPrimaryStoriesCompleted.OnInvoked += () => { Debug.Log("All Stories Completed"); };
+            OnAllPrimaryStoriesCompleted.OnInvoked += () => {
+                Debug.Log("All Stories Completed");
+                Admin.Global.EventSystem.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state").Invoke(GameStateSystem.State.EndGame);
+            };
             OnAllPrimaryStoriesCompleted.Invoke();
         }
     }
@@ -130,7 +133,10 @@ public class StorySystem : ISystemEvents
                 && _ongoingStories.Count == 0
                 && _completedStories.Count == 0)
             {
-                OnAllPrimaryStoriesFinalized.OnInvoked += () => { Debug.Log("All Primary Stories Finalized"); };
+                OnAllPrimaryStoriesFinalized.OnInvoked += () => { Debug.Log("All Primary Stories Finalized");
+                    Admin.Global.EventSystem.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state").Invoke(GameStateSystem.State.EndGame);
+
+                };
                 OnAllPrimaryStoriesFinalized.Invoke();
             }
         }
