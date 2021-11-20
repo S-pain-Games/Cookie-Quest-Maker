@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _clipIDName: bell_sound_1
+  _musicIDName: theme_2

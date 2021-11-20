@@ -15,3 +15,10 @@ MonoBehaviour:
   m_AudioClips:
   - m_IDName: bell_sound_1
     m_Clip: {fileID: 8300000, guid: 61d622f6576b8d6448c6df83d0e4eae1, type: 3}
+  m_MusicClips:
+  - m_IDName: main_theme
+    m_Clip: {fileID: 8300000, guid: 049342f2e7ec0074f91055db14e517c0, type: 3}
+  - m_IDName: theme_2
+    m_Clip: {fileID: 8300000, guid: 285c2ea0f09cca547b16e5d591ed7e23, type: 3}
+  - m_IDName: theme_3
+    m_Clip: {fileID: 8300000, guid: 92f3446b841b8ba40a925ca4a6a5c2ce, type: 3}

@@ -14,11 +14,14 @@ namespace CQM.Systems
         {
             m_AudioData = audioData;
             m_AudioClips = clipsData;
+
+            m_AudioData.m_MusicEmitter.Init();
+            PlayMusic(new ID("main_theme"));
         }
 
         public void PlayMusic(ID musicID)
         {
-
+            m_AudioData.m_MusicEmitter.PlayMusic(m_AudioClips.m_Music[musicID]);
         }
 
         public void PlaySound(ID soundID)
