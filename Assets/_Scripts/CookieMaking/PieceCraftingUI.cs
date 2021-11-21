@@ -111,11 +111,24 @@ public class PieceCraftingUI : MonoBehaviour
     {
         CheckChanges();
         canCraft = true;
+
+        bake_animator.SetBool("startBake", false);
+        bake_animator_2.SetBool("startBake", false);
     }
+
+    bool coroutineActive = false;
 
     private void OnDisable()
     {
-        
+        if (coroutineActive)
+        {
+            coroutineActive = false;
+
+            canCraft = true;
+            bake_animator.SetBool("startBake", false);
+            bake_animator_2.SetBool("startBake", false);
+            StopCoroutine(CanBakeCoroutine());
+        }
     }
 
     private void CheckChanges()
@@ -510,10 +523,14 @@ public class PieceCraftingUI : MonoBehaviour
 
     private IEnumerator CanBakeCoroutine()
     {
+        coroutineActive = true;
+
         yield return new WaitForSeconds(1f);
         canCraft = true;
         bake_animator.SetBool("startBake", false);
         bake_animator_2.SetBool("startBake", false);
+
+        coroutineActive = false;
     }
 
 }
