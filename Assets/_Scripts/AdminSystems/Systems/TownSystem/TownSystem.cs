@@ -56,7 +56,7 @@ namespace CQM.Systems
                     if (loc != null)
                         percentage = loc.m_Happiness + 100;
                     else
-                        percentage = 1;
+                        percentage = 100;
                     amount *= percentage;
                     amount /= 100;
                 }
@@ -66,7 +66,7 @@ namespace CQM.Systems
                     if (loc != null)
                         percentage = -loc.m_Happiness + 100;
                     else
-                        percentage = 1;
+                        percentage = 100;
                     amount *= percentage;
                     amount /= 100;
                 }
