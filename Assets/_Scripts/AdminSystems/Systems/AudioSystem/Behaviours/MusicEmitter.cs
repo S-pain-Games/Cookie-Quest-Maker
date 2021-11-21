@@ -27,6 +27,9 @@ public class MusicEmitter : MonoBehaviour
         m_Sources[1].DOFade(m_Volume, m_Volume * 1.0f);
         m_Sources[1].clip = clip;
 
+        // Set new clip start position to previous clip end position
+        m_Sources[1].time = Mathf.Min(m_Sources[0].time, m_Sources[1].clip.length);
+
         var t = m_Sources[1];
         m_Sources.Remove(t);
         m_Sources.Insert(0, t);
