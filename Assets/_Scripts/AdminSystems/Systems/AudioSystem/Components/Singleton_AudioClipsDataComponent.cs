@@ -15,6 +15,9 @@ namespace CQM.Components
 
         private void OnEnable()
         {
+            m_SoundEffects.Clear();
+            m_Music.Clear();
+
             for (int i = 0; i < m_AudioClips.Count; i++)
             {
                 var c = m_AudioClips[i];
