@@ -75,6 +75,9 @@ public class PieceCraftingUI : MonoBehaviour
     [SerializeField] private Animator bake_animator;
     [SerializeField] private Animator bake_animator_2;
 
+    private Color colorWhite = new Color(0.6705883f, 0.5764706f, 0.5294118f);
+    private Color colorRed = new Color(0.7924528f, 0.242969f, 0.3250078f);
+
     private void Awake()
     {
         var admin = Admin.Global;
@@ -268,7 +271,7 @@ public class PieceCraftingUI : MonoBehaviour
         obj_ingredient_2.SetActive(false);
         obj_ingredient_3.SetActive(false);
 
-        text_button_craft.text = "¡Hornear!";
+        text_button_craft.text = "?Hornear!";
 
         //RecipeDataComponent recipe = _recipeDataComponents.GetComponentByID(recipeId);
         RecipeDataComponent recipe = _recipeDataComponents.GetComponentByID(_selectedPieceID);
@@ -297,11 +300,11 @@ public class PieceCraftingUI : MonoBehaviour
 
                 if (m_amount < recipe.m_IngredientsList[i].m_Amount)
                 {
-                    text_ingredient_amount_1.color = Color.red;
-                    text_button_craft.text = "¡Insuficientes ingredientes!";
+                    text_ingredient_amount_1.color = colorRed;
+                    text_button_craft.text = "?Insuficientes ingredientes!";
                 }
                 else
-                    text_ingredient_amount_1.color = Color.white;
+                    text_ingredient_amount_1.color = colorWhite;
 
             }
             else if (i == 1)
@@ -313,11 +316,11 @@ public class PieceCraftingUI : MonoBehaviour
 
                 if(m_amount < recipe.m_IngredientsList[i].m_Amount)
                 {
-                    text_ingredient_amount_2.color = Color.red;
-                    text_button_craft.text = "¡Insuficientes ingredientes!";
+                    text_ingredient_amount_2.color = colorRed;
+                    text_button_craft.text = "?Insuficientes ingredientes!";
                 }
                 else
-                    text_ingredient_amount_2.color = Color.white;
+                    text_ingredient_amount_2.color = colorWhite;
             }
             else if (i == 2)
             {
@@ -328,11 +331,11 @@ public class PieceCraftingUI : MonoBehaviour
 
                 if (m_amount < recipe.m_IngredientsList[i].m_Amount)
                 {
-                    text_ingredient_amount_3.color = Color.red;
-                    text_button_craft.text = "¡Insuficientes ingredientes!";
+                    text_ingredient_amount_3.color = colorRed;
+                    text_button_craft.text = "?Insuficientes ingredientes!";
                 }
                 else
-                    text_ingredient_amount_3.color = Color.white;
+                    text_ingredient_amount_3.color = colorWhite;
 
             }
         }

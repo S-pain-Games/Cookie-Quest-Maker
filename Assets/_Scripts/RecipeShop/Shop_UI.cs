@@ -56,6 +56,10 @@ public class Shop_UI : MonoBehaviour
     [SerializeField] private GameObject image_evith;
     [SerializeField] private GameObject image_nu;
 
+    private Color colorWhite = new Color(0.5254902f, 0.3098039f, 0.1607f);
+    private Color colorRed = new Color(0.6320754f, 0.06857423f, 0.1578471f);
+
+
     private void Awake()
     {
         var admin = Admin.Global;
@@ -146,8 +150,8 @@ public class Shop_UI : MonoBehaviour
         image_evith.SetActive(false);
         text_good_price.text = "";
         text_evil_price.text = "";
-        text_evil_price.color = Color.white;
-        text_good_price.color = Color.white;
+        text_evil_price.color = colorWhite;
+        text_good_price.color = colorWhite;
 
         if (currentRecipeType == RecipeTypes.PieceRecipes)
         {
@@ -175,10 +179,10 @@ public class Shop_UI : MonoBehaviour
 
                 if(_inventoryData.m_GoodCookieReputation < recipe.m_Price_Good)
                 {
-                    text_good_price.color = Color.red;
+                    text_good_price.color = colorRed;
                 }
                 else
-                    text_good_price.color = Color.white;
+                    text_good_price.color = colorWhite;
             }
             if(recipe.m_Price_Evil > 0)
             {
@@ -188,16 +192,16 @@ public class Shop_UI : MonoBehaviour
 
                 if (_inventoryData.m_EvilCookieReputation < recipe.m_Price_Evil)
                 {
-                    text_evil_price.color = Color.red;
+                    text_evil_price.color = colorRed;
                 }
                 else
-                    text_evil_price.color = Color.white;
+                    text_evil_price.color = colorWhite;
             }
 
             if (!_inventoryData.m_UnlockedRecipes.Contains(_selectedPieceID))
-                text_buy.text = "¡Comprar!";
+                text_buy.text = "?Comprar!";
             else
-                text_buy.text = "¡Comprado!";
+                text_buy.text = "?Comprado!";
 
             image_recipe.sprite = pieceUI.m_ShopRecipeSprite;
         }
@@ -214,10 +218,10 @@ public class Shop_UI : MonoBehaviour
 
                 if (_inventoryData.m_GoodCookieReputation < ingredient.m_Price_Good)
                 {
-                    text_good_price.color = Color.red;
+                    text_good_price.color = colorRed;
                 }
                 else
-                    text_good_price.color = Color.white;
+                    text_good_price.color = colorWhite;
             }
             if (ingredient.m_Price_Evil > 0)
             {
@@ -227,10 +231,10 @@ public class Shop_UI : MonoBehaviour
 
                 if (_inventoryData.m_EvilCookieReputation < ingredient.m_Price_Evil)
                 {
-                    text_evil_price.color = Color.red;
+                    text_evil_price.color = colorRed;
                 }
                 else
-                    text_evil_price.color = Color.white;
+                    text_evil_price.color = colorWhite;
             }
 
             image_recipe.sprite = ingredient.m_Sprite;
@@ -294,7 +298,7 @@ public class Shop_UI : MonoBehaviour
         if(currentRecipeType != RecipeTypes.IngredientRecipes)
         {
             currentRecipeType = RecipeTypes.IngredientRecipes;
-            text_buy.text = "¡Comprar!";
+            text_buy.text = "?Comprar!";
             UpdateUI(false);
         }
     }
