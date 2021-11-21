@@ -110,6 +110,7 @@ public class PieceCraftingUI : MonoBehaviour
     private void OnEnable()
     {
         CheckChanges();
+        canCraft = true;
     }
 
     private void OnDisable()

@@ -42,8 +42,7 @@ namespace CQM.Systems
                 Reputation repType;
                 int percentage = 0;
                 var loc = _locationComponents.GetList().Find(l => l.m_CharacterOwnerID == new ID(s.m_StoryData.m_QuestGiver));
-
-                if (loc == null) return; // The story is secondary and doesn't have a localization
+                int globalHappiness = Admin.Global.Components.m_TownComponent.m_GlobalHappiness;
 
                 if (!Admin.Global.Components.m_StoriesStateComponent.m_AllSecondaryStories.Contains(s.m_StoryData.m_ID))
                     amount = 300;
@@ -53,14 +52,21 @@ namespace CQM.Systems
                 if (s.m_QuestRepercusion.m_Value > 0)
                 {
                     repType = Reputation.GoodCookieReputation;
-                    percentage = loc.m_Happiness + 100;
+                    // The story is secondary and doesn't have a localization
+                    if (loc != null)
+                        percentage = loc.m_Happiness + 100;
+                    else
+                        percentage = 1;
                     amount *= percentage;
                     amount /= 100;
                 }
                 else
                 {
                     repType = Reputation.EvilCookieReputation;
-                    percentage = -loc.m_Happiness + 100;
+                    if (loc != null)
+                        percentage = -loc.m_Happiness + 100;
+                    else
+                        percentage = 1;
                     amount *= percentage;
                     amount /= 100;
                 }
