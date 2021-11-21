@@ -77,9 +77,9 @@ public class LastEndingDialogSequence : MonoBehaviour
         Debug.Log("Ending hapiness: "+globalHapiness);
 
         //Dependiendo del valor total de la felicidad de los NPCs, proseguir con una de las tres cadenas
-        if (globalHapiness > 150)
+        if (globalHapiness > 0)
             StartGoodEndingSequence();
-        else if(globalHapiness < 50)
+        else if(globalHapiness < 0)
             StartBadEndingSequence();
         else
             StartNeutralEndingSequence();
