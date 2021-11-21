@@ -25,7 +25,7 @@ namespace CQM.Databases
             m_TownBuilder.BuildTown(c);
 
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("mayor_problem"));
-            /*c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("out_of_lactose"));
+            c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("out_of_lactose"));
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("sacred_egg"));
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("explosive_chocolate"));
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("not_so_dirty_rats"));
@@ -41,7 +41,7 @@ namespace CQM.Databases
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("old_friends"));
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("high_voltage_treatment"));
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("full_artifact_panic"));
-            c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("fungal_metamorphosis"));*/
+            c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID("fungal_metamorphosis"));
             c.m_StoriesStateComponent.m_MainStoriesToStartOrder.Add(new ID(""));
 
             // Seconday Stories
