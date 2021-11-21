@@ -8,6 +8,7 @@ public class CloseBakeryButton : MonoBehaviour
 {
     private EventVoid _onDailyStoriesCompletedCallback;
     private EventVoid _setGameStateCommand;
+    public Event<ID> _playBakeryNightMusic;
 
     [SerializeField]
     private GameObject _buttonGameObject;
@@ -19,6 +20,7 @@ public class CloseBakeryButton : MonoBehaviour
         var evtSys = Admin.Global.EventSystem;
         _onDailyStoriesCompletedCallback = evtSys.GetCallbackByName<EventVoid>("day_sys", "all_daily_stories_completed");
         _setGameStateCommand = evtSys.GetCommandByName<EventVoid>("day_sys", "begin_night");
+        _playBakeryNightMusic = evtSys.GetCommandByName<Event<ID>>("audio_sys", "play_music");
 
         _button = _buttonGameObject.GetComponent<Button>();
     }
@@ -29,6 +31,7 @@ public class CloseBakeryButton : MonoBehaviour
         _button.onClick.AddListener(() =>
         {
             _setGameStateCommand.Invoke();
+            _playBakeryNightMusic.Invoke(new ID("bakery_night"));
             _buttonGameObject.SetActive(false);
         });
     }

@@ -16,6 +16,9 @@ namespace CQM.UI.QuestMakingTable
         public event Action<ID> OnStorySelected;
         public event Action OnExit;
 
+        // Music Events
+        public Event<ID> _playBakeryDayMusic;
+
         // UI Controls
         [Header("Buttons")]
         [SerializeField] private Button _nextStoryButton;
@@ -50,6 +53,7 @@ namespace CQM.UI.QuestMakingTable
         {
             _ongoingStories = Admin.Global.Components.m_StoriesStateComponent.m_OngoingStories;
             _storyUIComponents = Admin.Global.Components.GetComponentContainer<StoryUIDataComponent>();
+            _playBakeryDayMusic = Admin.Global.EventSystem.GetCommandByName<Event<ID>>("audio_sys", "play_music");
         }
 
         private void OnEnable()
@@ -146,6 +150,7 @@ namespace CQM.UI.QuestMakingTable
 
         private void Exit()
         {
+            _playBakeryDayMusic.Invoke(new ID("bakery_day"));
             OnExit.Invoke();
         }
     }

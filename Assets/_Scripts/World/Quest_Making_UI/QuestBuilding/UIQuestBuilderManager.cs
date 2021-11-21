@@ -18,6 +18,8 @@ namespace CQM.UI.QuestMakingTable
         public event Action<QuestPieceFunctionalComponent> OnRemoveQuestPiece;
         public event Action OnFinishQuest;
 
+
+
         QuestMakerTableState _state;
 
         public Transform pieceSpawnPosition;

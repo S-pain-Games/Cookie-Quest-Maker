@@ -27,6 +27,9 @@ public class PlayGameButton : MonoBehaviour
     {
         var d = Admin.Global.Components.m_GameState;
         var evtSys = Admin.Global.EventSystem;
+
+        evtSys.GetCommandByName<Event<ID>>("audio_sys", "play_music").Invoke(new ID("bakery_day"));
+
         if (d.m_GameplayStarted)
             evtSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state").Invoke(d.m_GameplayState);
         else

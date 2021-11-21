@@ -22,11 +22,15 @@ namespace CQM.UI.QuestMakingTable
         private QuestMakingSystem _questMakingSys; // Should use events
         private EventVoid _toggleQuestMakingUI;
 
+        public Event<ID> _playBakeryDayMusic;
+
         private void Awake()
         {
             _questMakingSys = Admin.Global.Systems.m_QuestMakerSystem;
             var evtSys = Admin.Global.EventSystem;
             _toggleQuestMakingUI = evtSys.GetCommandByName<EventVoid>("ui_sys", "toggle_quest_making");
+
+            _playBakeryDayMusic = evtSys.GetCommandByName<Event<ID>>("audio_sys", "play_music");
 
             _pieceStorage.Initialize(m_State);
             _questBuilding.Initialize(m_State, _canvas);
@@ -108,6 +112,8 @@ namespace CQM.UI.QuestMakingTable
                 }
 
                 _questBuilding.ConsumeAllPieces();
+
+                _playBakeryDayMusic.Invoke(new ID("bakery_day"));
                 _toggleQuestMakingUI.Invoke();
             }
             else

@@ -9,6 +9,7 @@ public class NextDayButton : MonoBehaviour
 {
     private Button _button;
     private EventVoid _startNewDayCommand;
+    public Event<ID> _playBakeryDayMusic;
 
     private void Awake()
     {
@@ -16,6 +17,7 @@ public class NextDayButton : MonoBehaviour
 
         var evtSys = Admin.Global.EventSystem;
         _startNewDayCommand = evtSys.GetCommandByName<EventVoid>("day_sys", "start_new_day");
+        _playBakeryDayMusic = evtSys.GetCommandByName<Event<ID>>("audio_sys", "play_music");
     }
 
     private void OnEnable()
@@ -32,5 +34,6 @@ public class NextDayButton : MonoBehaviour
     private void ButtonClicked()
     {
         _startNewDayCommand.Invoke();
+        _playBakeryDayMusic.Invoke(new ID("bakery_day"));
     }
 }

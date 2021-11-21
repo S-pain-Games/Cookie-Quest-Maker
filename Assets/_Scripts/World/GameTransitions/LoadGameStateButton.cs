@@ -11,12 +11,14 @@ public class LoadGameStateButton : MonoBehaviour
     private Button button;
 
     private Event<GameStateSystem.State> _setGameStateCommand;
+    public Event<ID> _playBakeryDayMusic;
 
     private void Awake()
     {
         button = GetComponent<Button>();
         var _eventSys = Admin.Global.EventSystem;
         _setGameStateCommand = _eventSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
+        _playBakeryDayMusic = _eventSys.GetCommandByName<Event<ID>>("audio_sys", "play_music");
     }
 
     private void OnEnable()
@@ -32,5 +34,6 @@ public class LoadGameStateButton : MonoBehaviour
     private void LoadGameState()
     {
         _setGameStateCommand.Invoke(m_TargetState);
+        _playBakeryDayMusic.Invoke(new ID("bakery_day"));
     }
 }
