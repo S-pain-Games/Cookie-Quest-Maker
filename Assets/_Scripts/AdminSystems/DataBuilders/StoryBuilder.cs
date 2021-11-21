@@ -2493,6 +2493,7 @@ namespace CQM.Databases
         public void AddStoryRepercusionNewspaperArticle(string title, string body)
         {
             var newsArticle = new StoryRepNewspaperComponent();
+            newsArticle.m_CharacterID = new ID(m_StoryData.m_QuestGiver);
             newsArticle.m_RepID = m_Repercusion.m_ID;
             newsArticle.m_Title = title;
             newsArticle.m_Body = body;

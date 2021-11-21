@@ -9,6 +9,6 @@ namespace CQM.Components
     {
         public TextMeshProUGUI mainTitle;
         public TextMeshProUGUI mainBody;
-        public Image _mainImg;
+        public Image mainImg;
     }
 }

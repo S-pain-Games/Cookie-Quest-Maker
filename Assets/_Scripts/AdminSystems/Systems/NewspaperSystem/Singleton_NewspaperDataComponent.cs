@@ -24,6 +24,7 @@ namespace CQM.Components
     public class StoryRepNewspaperComponent
     {
         public ID m_RepID;
+        public ID m_CharacterID;
         public string m_Title;
         public string m_Body;
     }

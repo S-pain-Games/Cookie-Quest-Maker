@@ -56,6 +56,7 @@ namespace CQM.Systems
                 ID repId = s.m_QuestBranchResult.m_Repercusion.m_ID;
                 var storyNews = _NewsDataComponent.m_NewspaperStories[repId];
 
+                _NewspaperReferencesComponent.mainImg.sprite = Admin.Global.Components.GetComponentContainer<CharacterComponent>().GetComponentByID(storyNews.m_CharacterID).m_NewspaperSprite;
                 _NewspaperReferencesComponent.mainTitle.text = storyNews.m_Title;
                 _NewspaperReferencesComponent.mainBody.text = storyNews.m_Body;
                 n.m_StoriesToShowInNewspaper.RemoveAt(0);

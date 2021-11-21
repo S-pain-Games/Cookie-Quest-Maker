@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainTitle: {fileID: 106261192581199888}
   mainBody: {fileID: 7513542255551533982}
-  _mainImg: {fileID: 7686065097646524739}
+  mainImg: {fileID: 7686065097646524739}
 --- !u!1 &2718297228268530266
 GameObject:
   m_ObjectHideFlags: 0
