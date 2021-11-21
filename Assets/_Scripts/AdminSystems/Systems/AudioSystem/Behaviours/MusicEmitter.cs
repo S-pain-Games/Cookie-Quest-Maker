@@ -22,9 +22,9 @@ public class MusicEmitter : MonoBehaviour
 
     public void PlayMusic(AudioClip clip)
     {
-        m_Sources[0].DOFade(0.0f, m_Volume * 10.0f);
+        m_Sources[0].DOFade(0.0f, m_Volume * 1.0f);
         m_Sources[1].volume = 0.0f;
-        m_Sources[1].DOFade(m_Volume, m_Volume * 10.0f);
+        m_Sources[1].DOFade(m_Volume, m_Volume * 1.0f);
         m_Sources[1].clip = clip;
 
         var t = m_Sources[1];
