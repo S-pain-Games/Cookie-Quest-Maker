@@ -199,9 +199,9 @@ public class Shop_UI : MonoBehaviour
             }
 
             if (!_inventoryData.m_UnlockedRecipes.Contains(_selectedPieceID))
-                text_buy.text = "?Comprar!";
+                text_buy.text = "¡Comprar!";
             else
-                text_buy.text = "?Comprado!";
+                text_buy.text = "¡Comprado!";
 
             image_recipe.sprite = pieceUI.m_ShopRecipeSprite;
         }
@@ -298,7 +298,7 @@ public class Shop_UI : MonoBehaviour
         if(currentRecipeType != RecipeTypes.IngredientRecipes)
         {
             currentRecipeType = RecipeTypes.IngredientRecipes;
-            text_buy.text = "?Comprar!";
+            text_buy.text = "¡Comprar!";
             UpdateUI(false);
         }
     }
