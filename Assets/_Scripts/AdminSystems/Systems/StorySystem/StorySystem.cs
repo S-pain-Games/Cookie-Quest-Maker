@@ -111,7 +111,6 @@ public class StorySystem : ISystemEvents
         {
             OnAllPrimaryStoriesCompleted.OnInvoked += () => {
                 Debug.Log("All Stories Completed");
-                //Admin.Global.EventSystem.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state").Invoke(GameStateSystem.State.EndGame);
             };
             OnAllPrimaryStoriesCompleted.Invoke();
         }
@@ -131,7 +130,7 @@ public class StorySystem : ISystemEvents
 
             if(_primaryStoriesToStart[0].NameID == "")
             {
-                Debug.Log("MISIÓN VACÍAAAAA");
+                Debug.Log("All Primary Stories Finalized");
                 Admin.Global.EventSystem.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state").Invoke(GameStateSystem.State.EndGame);
             }
 

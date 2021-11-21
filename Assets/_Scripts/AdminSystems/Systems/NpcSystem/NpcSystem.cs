@@ -100,7 +100,7 @@ namespace CQM.Systems
 
                     if (Admin.Global.Components.m_StoriesStateComponent.m_MainStoriesToStartOrder[0].NameID == "")
                     {
-                        Debug.Log("NANAI");
+                        Debug.Log("Load of secondary story canceled");
                         continue;
                     }
                     

@@ -484,7 +484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5163406559001156417
 Transform:
   m_ObjectHideFlags: 0
@@ -523,8 +523,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c012616b8001bff4d863a1606fd1a7cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 0}
   evithPrefab: {fileID: 8441271077372909199}
   nuPrefab: {fileID: 5395975008891610859}
+  thanksForPlayingPrefab: {fileID: 0}
 --- !u!1 &5163406559039532645
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,6 +612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _characterName: 
+  character: {fileID: 0}
 --- !u!1 &5163406559320061224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,14 +1560,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16f5164e95004444f918fb6691ae1d07, type: 3}
---- !u!1 &8441271077372909199 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8019418314948059770, guid: 16f5164e95004444f918fb6691ae1d07, type: 3}
-  m_PrefabInstance: {fileID: 1904979923763393781}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2484097445383782240 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4041576401091218325, guid: 16f5164e95004444f918fb6691ae1d07, type: 3}
+  m_PrefabInstance: {fileID: 1904979923763393781}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8441271077372909199 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8019418314948059770, guid: 16f5164e95004444f918fb6691ae1d07, type: 3}
   m_PrefabInstance: {fileID: 1904979923763393781}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2437127607689525109
@@ -1574,6 +1577,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5163406559001156417}
     m_Modifications:
+    - target: {fileID: 2377321947495351774, guid: 0703a352a57f69548982cd867f9a7168, type: 3}
+      propertyPath: _affectedObjects.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377321947495351774, guid: 0703a352a57f69548982cd867f9a7168, type: 3}
+      propertyPath: _affectedObjects.Array.data[6]
+      value: 
+      objectReference: {fileID: 4630670259996470455}
+    - target: {fileID: 2377321947495351774, guid: 0703a352a57f69548982cd867f9a7168, type: 3}
+      propertyPath: _affectedObjects.Array.data[7]
+      value: 
+      objectReference: {fileID: 52611725504992562}
     - target: {fileID: 7384338015679558544, guid: 0703a352a57f69548982cd867f9a7168, type: 3}
       propertyPath: m_Name
       value: Bakery_Sprites
@@ -1827,6 +1842,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a78c92d301b4772478ba277499edfe5a, type: 3}
+--- !u!212 &4630670259996470455 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2993072644529778763, guid: a78c92d301b4772478ba277499edfe5a, type: 3}
+  m_PrefabInstance: {fileID: 7623175418952867068}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3341131731468170460 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5157994025489197088, guid: a78c92d301b4772478ba277499edfe5a, type: 3}
@@ -2016,5 +2036,10 @@ PrefabInstance:
 --- !u!4 &6413212107282587499 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2877517661299283546, guid: 0ad351c032bc18649997b5d7c97f2a74, type: 3}
+  m_PrefabInstance: {fileID: 9146443056138422577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &52611725504992562 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9103001257895189507, guid: 0ad351c032bc18649997b5d7c97f2a74, type: 3}
   m_PrefabInstance: {fileID: 9146443056138422577}
   m_PrefabAsset: {fileID: 0}
