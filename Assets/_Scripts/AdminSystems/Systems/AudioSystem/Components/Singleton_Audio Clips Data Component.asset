@@ -16,9 +16,13 @@ MonoBehaviour:
   - m_IDName: bell_sound_1
     m_Clip: {fileID: 8300000, guid: 61d622f6576b8d6448c6df83d0e4eae1, type: 3}
   m_MusicClips:
-  - m_IDName: main_theme
-    m_Clip: {fileID: 8300000, guid: 049342f2e7ec0074f91055db14e517c0, type: 3}
-  - m_IDName: theme_2
-    m_Clip: {fileID: 8300000, guid: 285c2ea0f09cca547b16e5d591ed7e23, type: 3}
-  - m_IDName: theme_3
-    m_Clip: {fileID: 8300000, guid: 92f3446b841b8ba40a925ca4a6a5c2ce, type: 3}
+  - m_IDName: main_menu_theme
+    m_Clip: {fileID: 8300000, guid: 3d007a2938dd47248bc2f1ddb554a7dc, type: 3}
+  - m_IDName: bakery_day
+    m_Clip: {fileID: 8300000, guid: d58d2717dedbe7c478f131a0d090a8a6, type: 3}
+  - m_IDName: bakery_day_cookies
+    m_Clip: {fileID: 8300000, guid: 162c5fa8be0cf404e80eb08f020c9364, type: 3}
+  - m_IDName: bakery_day_missions
+    m_Clip: {fileID: 8300000, guid: 554042577dc7015489bf8b768f9c58d9, type: 3}
+  - m_IDName: bakery_night
+    m_Clip: {fileID: 8300000, guid: 439654c7637d9ef45beec6bd2ca7ad3e, type: 3}

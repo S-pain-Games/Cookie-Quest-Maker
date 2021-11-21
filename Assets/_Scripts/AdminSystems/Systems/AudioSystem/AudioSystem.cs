@@ -16,7 +16,7 @@ namespace CQM.Systems
             m_AudioClips = clipsData;
 
             m_AudioData.m_MusicEmitter.Init();
-            PlayMusic(new ID("main_theme"));
+            PlayMusic(new ID("main_menu_theme"));
         }
 
         public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
