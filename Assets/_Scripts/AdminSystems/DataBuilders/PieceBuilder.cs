@@ -88,7 +88,7 @@ namespace CQM.DataBuilders
                     "El Malvavisco Crudo es un postre básico dispuesto a echar una mano con lo que haga falta, aunque no sirva para mucho. Bueno para cuando no hay mucho que comer y pocas ganas de cocinar.");
                 SetRecipeData("Receta para Malvavisco Crudo",
                     "El Malvavisco Crudo es un postre básico dispuesto a echar una mano con lo que haga falta, aunque no sirva para mucho.Bueno para cuando no hay mucho que comer y pocas ganas de cocinar.",
-                     Reputation.GoodCookieReputation, 0, 0);
+                     Karma.GoodKarma, 0, 0);
                 AddIngredientToRecipe("masa_de_galletas_encantada", 1);
 
                 CreateNew();
@@ -101,7 +101,7 @@ namespace CQM.DataBuilders
                     "El Merengue Fantasma Tostado es un postre básico, dulce, blandito… pero a veces se cuela en las  habitaciones de la gente mientras duermen y se queda mirándolos haciendo ruidos de ultratumba. *WUO-WUO-WUO-WUO-WUO-WUO-WUO* Que alguien llame a la policía.");
                 SetRecipeData("Receta de Merengue Fantasma Tostado",
                     "El Merengue Fantasma Tostado es un postre básico, dulce, blandito… pero a veces se cuela en las  habitaciones de la gente mientras duermen y se queda mirándolos haciendo ruidos de ultratumba. * WUO - WUO - WUO - WUO - WUO - WUO - WUO * Que alguien llame a la policía.",
-                    Reputation.GoodCookieReputation, 75, 75);
+                    Karma.GoodKarma, 75, 75);
                 AddIngredientToRecipe("crema_pastelera_arcana", 2);
                 AddIngredientToRecipe("vainilla_de_la_iluminacion", 1);
 
@@ -114,7 +114,7 @@ namespace CQM.DataBuilders
                     "Cualquiera que sea el problema que tengas el Pepito de Ternura va intentar resolverlo, aunque a lo mejor no es buena idea mandarlo atacar a un a un grupo de lobos. Con su centro de crema dulce y su corazón brillante de chocolate eterno está listo para salir a abrazar al mundo.");
                 SetRecipeData("Receta de Pepito de Ternura",
                     "Cualquiera que sea el problema que tengas el Pepito de Ternura va intentar resolverlo, aunque a lo mejor no es buena idea mandarlo atacar a un a un grupo de lobos. Con su centro de crema dulce y su corazón brillante de chocolate eterno está listo para salir a abrazar al mundo.",
-                    Reputation.GoodCookieReputation, 250, 0);
+                    Karma.GoodKarma, 250, 0);
                 AddIngredientToRecipe("chocolate_negro_sempiterno", 2);
                 AddIngredientToRecipe("crema_pastelera_arcana", 1);
 
@@ -127,7 +127,7 @@ namespace CQM.DataBuilders
                     "Se dice que el Bizcotroll forma parte del trío de postres héroes colosales, y que aunque se pasa gran parte del tiempo dormido, en cuanto se despierta no duda en ayudar.");
                 SetRecipeData("Receta de Bizcotroll de Naranjas Somnolientas",
                     "Se dice que el Bizcotroll forma parte del trío de postres héroes colosales, y que aunque se pasa gran parte del tiempo dormido, en cuanto se despierta no duda en ayudar.",
-                    Reputation.GoodCookieReputation, 500, 0);
+                    Karma.GoodKarma, 500, 0);
                 AddIngredientToRecipe("harina_de_fuerza_titanica", 1);
                 AddIngredientToRecipe("caramelo_fundido_candiscente", 2);
                 AddIngredientToRecipe("levadura_ancestral_de_la_pereza", 1);
@@ -141,7 +141,7 @@ namespace CQM.DataBuilders
                     "Recién salida del horno, la Jauría Bombón Infernal son un grupo de bombones escupe compota candente, especializados en el ataque. Con un núcleo de compota de mora infernal y una habanero ardiente en la cola hace arder todo a su paso.");
                 SetRecipeData("Receta de Jauría Bombón Infernal",
                     "Recién salida del horno, la Jauría Bombón Infernal son un grupo de bombones escupe compota candente, especializados en el ataque. Con un núcleo de compota de mora infernal y una habanero ardiente en la cola hace arder todo a su paso.",
-                    Reputation.GoodCookieReputation, 0, 250);
+                    Karma.GoodKarma, 0, 250);
                 AddIngredientToRecipe("compota_de_mora_infernal", 2);
                 AddIngredientToRecipe("chocolate_negro_sempiterno", 1);
 
@@ -154,7 +154,7 @@ namespace CQM.DataBuilders
                     "El Paladín Tortita es el segundo postre colosal, tan solo con levantar su espada de caramelo solidificado imparte daño en área en un segundo. Aunque sus capas de tortitas son tan suaves que se deshacen en la boca, el caramelo que lo cubre lo protege de cualquier ataque.");
                 SetRecipeData("Receta de Paladín Tortita",
                     "El Paladín Tortita es el segundo postre colosal, tan solo con levantar su espada de caramelo solidificado imparte daño en área en un segundo. Aunque sus capas de tortitas son tan suaves que se deshacen en la boca, el caramelo que lo cubre lo protege de cualquier ataque.",
-                    Reputation.GoodCookieReputation, 350, 150);
+                    Karma.GoodKarma, 350, 150);
                 AddIngredientToRecipe("nucleo_de_cereza_animico", 1);
                 AddIngredientToRecipe("caramelo_fundido_candiscente", 2);
                 AddIngredientToRecipe("harina_de_fuerza_titanica", 2);
@@ -168,7 +168,7 @@ namespace CQM.DataBuilders
                     "El bizcoborracho es un postre achispado que se zarandea de un lado a otro con un un ritmo hipnótico. Entre su golosa capa de compota y su bizcocho… HIP... borracho te convence de lo que sea … HIP-HIP… creo que no me mantengo en pie.");
                 SetRecipeData("Receta de Bizquiborracho de Mora",
                     "El bizcoborracho es un postre achispado que se zarandea de un lado a otro con un un ritmo hipnótico. Entre su golosa capa de compota y su bizcocho… HIP... borracho te convence de lo que sea … HIP-HIP… creo que no me mantengo en pie.",
-                    Reputation.GoodCookieReputation, 0, 250);
+                    Karma.GoodKarma, 0, 250);
                 AddIngredientToRecipe("crema_pastelera_arcana", 2);
                 AddIngredientToRecipe("compota_de_mora_infernal", 1);
 
@@ -181,7 +181,7 @@ namespace CQM.DataBuilders
                     "Los citrielfos son el tercer postre colosal. Siempre tienen la razón, o eso creen ellos, y da igual que estén equivocados, no tienen problemas en mirarte por encima del hombre desde lo alto de su copa. Tan pronto como la cara de su enemigo ponga expresión de haber chupado un limón sabrá que su hechizo ha hecho efecto.");
                 SetRecipeData("Receta de Citrielfo en Copa",
                     "Los citrielfos son el tercer postre colosal. Siempre tienen la razón, o eso creen ellos, y da igual que estén equivocados, no tienen problemas en mirarte por encima del hombre desde lo alto de su copa. Tan pronto como la cara de su enemigo ponga expresión de haber chupado un limón sabrá que su hechizo ha hecho efecto.",
-                    Reputation.GoodCookieReputation, 150, 350);
+                    Karma.GoodKarma, 150, 350);
                 AddIngredientToRecipe("esencia_de_limon_purificadora", 2);
                 AddIngredientToRecipe("vainilla_de_la_iluminacion", 1);
                 AddIngredientToRecipe("chocolate_negro_sempiterno", 1);
@@ -193,7 +193,7 @@ namespace CQM.DataBuilders
                 SetPieceType(PieceType.Action);
                 AddFunctionalTag(Tag.Harm, 1);
                 SetUIData("Atacar", "Con esta galleta puedes acariciar fuertemente al objetivo hasta que por un resvalón tonto caiga al suelo. Si no quería llegar a este nivel, no sé, que se hubiese portado bien.");
-                SetRecipeData("Receta de Atacar", "Con esta galleta puedes acariciar fuertemente al objetivo hasta que por un resvalón tonto caiga al suelo. Si no quería llegar a este nivel, no sé, que se hubiese portado bien.", Reputation.EvilCookieReputation, 50, 0);
+                SetRecipeData("Receta de Atacar", "Con esta galleta puedes acariciar fuertemente al objetivo hasta que por un resvalón tonto caiga al suelo. Si no quería llegar a este nivel, no sé, que se hubiese portado bien.", Karma.EvilKarma, 50, 0);
                 AddIngredientToRecipe("masa_de_galletas_encantada", 1);
 
                 CreateNew();
@@ -201,7 +201,7 @@ namespace CQM.DataBuilders
                 SetPieceType(PieceType.Action);
                 AddFunctionalTag(Tag.Convince, 1);
                 SetUIData("Dialogar", "Hablar las cosas a veces está bien, eso dicen… Mira primero se intenta convencer, luego ya se saca a Diálogo.");
-                SetRecipeData("Receta de Dialogar", "Hablar las cosas a veces está bien, eso dicen… Mira primero se intenta convencer, luego ya se saca a Diálogo.", Reputation.GoodCookieReputation, 0, 50);
+                SetRecipeData("Receta de Dialogar", "Hablar las cosas a veces está bien, eso dicen… Mira primero se intenta convencer, luego ya se saca a Diálogo.", Karma.GoodKarma, 0, 50);
                 AddIngredientToRecipe("masa_de_galletas_encantada", 1);
 
                 CreateNew();
@@ -209,7 +209,7 @@ namespace CQM.DataBuilders
                 SetPieceType(PieceType.Action);
                 AddFunctionalTag(Tag.Help, 1);
                 SetUIData("Ayudar", "Cuando alguien esté en problemas usa esta galleta para ayudarlos, no hay nada que un abrazo no pueda hacer.");
-                SetRecipeData("Receta de Ayudar", "Cuando alguien esté en problemas usa esta galleta para ayudarlos, no hay nada que un abrazo no pueda hacer.", Reputation.GoodCookieReputation, 0, 50);
+                SetRecipeData("Receta de Ayudar", "Cuando alguien esté en problemas usa esta galleta para ayudarlos, no hay nada que un abrazo no pueda hacer.", Karma.GoodKarma, 0, 50);
                 AddIngredientToRecipe("masa_de_galletas_encantada", 1);
 
                 CreateNew();
@@ -217,7 +217,7 @@ namespace CQM.DataBuilders
                 SetPieceType(PieceType.Action);
                 AddFunctionalTag(Tag.Help, 2);
                 SetUIData("Observar", "Mira. En realidad solo mira lo que pasa, observar esta bien para entender a tus enemigos, conocerlos y aprender sus habitos y debilidades para después… ATACAR Y VENGARSE POR EL DAÑO AL HONOR DE TU FAMILIA… o solo dialogar, con Diálogo.");
-                SetRecipeData("Receta de Observar", "Mira. En realidad solo mira lo que pasa, observar esta bien para entender a tus enemigos, conocerlos y aprender sus habitos y debilidades para después… ATACAR Y VENGARSE POR EL DAÑO AL HONOR DE TU FAMILIA… o solo dialogar, con Diálogo.", Reputation.GoodCookieReputation, 50, 0);
+                SetRecipeData("Receta de Observar", "Mira. En realidad solo mira lo que pasa, observar esta bien para entender a tus enemigos, conocerlos y aprender sus habitos y debilidades para después… ATACAR Y VENGARSE POR EL DAÑO AL HONOR DE TU FAMILIA… o solo dialogar, con Diálogo.", Karma.GoodKarma, 50, 0);
                 AddIngredientToRecipe("polvo_auxilio", 1);
 
                 CreateNew();
@@ -225,7 +225,7 @@ namespace CQM.DataBuilders
                 SetPieceType(PieceType.Action);
                 AddFunctionalTag(Tag.Convince, 2);
                 SetUIData("Mirar fijamente", "Mira, pero no mira para observar, te persigue con la mirada, aunque no quieras, aunque cruces la calle, entres en tu casa, y te metas escondas debajo de la mesa. TE ESTAMOS VIENDO… NO PUEDES ESCONDERTE.");
-                SetRecipeData("Receta de Mirar fijamente", "Mira, pero no mira para observar, te persigue con la mirada, aunque no quieras, aunque cruces la calle, entres en tu casa, y te metas escondas debajo de la mesa. TE ESTAMOS VIENDO… NO PUEDES ESCONDERTE.", Reputation.GoodCookieReputation, 50, 0);
+                SetRecipeData("Receta de Mirar fijamente", "Mira, pero no mira para observar, te persigue con la mirada, aunque no quieras, aunque cruces la calle, entres en tu casa, y te metas escondas debajo de la mesa. TE ESTAMOS VIENDO… NO PUEDES ESCONDERTE.", Karma.GoodKarma, 50, 0);
                 AddIngredientToRecipe("polvo_persuasivo", 1);
 
                 CreateNew();
@@ -233,7 +233,7 @@ namespace CQM.DataBuilders
                 SetPieceType(PieceType.Action);
                 AddFunctionalTag(Tag.Harm, 2);
                 SetUIData("Robar", "Con esta galleta puedes coger prestado cosas de la víctima… quiero decir, objetivo. Un poco de despiste y lo que quieras puedes cogerlo prestado, indefinidamente.");
-                SetRecipeData("Receta de Robar", "Con esta galleta puedes coger prestado cosas de la víctima… quiero decir, objetivo. Un poco de despiste y lo que quieras puedes cogerlo prestado, indefinidamente.", Reputation.GoodCookieReputation, 0, 50);
+                SetRecipeData("Receta de Robar", "Con esta galleta puedes coger prestado cosas de la víctima… quiero decir, objetivo. Un poco de despiste y lo que quieras puedes cogerlo prestado, indefinidamente.", Karma.GoodKarma, 0, 50);
                 AddIngredientToRecipe("polvo_impetuoso", 1);
             }
             void CreateObjects()
@@ -243,7 +243,7 @@ namespace CQM.DataBuilders
                 SetPieceType(PieceType.Object);
                 AddFunctionalTag(Tag.Harm, 2);
                 SetUIData("Bate de Beisbol", "Un bate, también llamado Diálogo, es una galleta muy socorrida cuando se te ponen un poco tontos, un suave golpecito y puedes convencer a quien sea de cualquier cosa.");
-                SetRecipeData("Receta de bate de beisbol", "Un bate, también llamado Diálogo, es una galleta muy socorrida cuando se te ponen un poco tontos, un suave golpecito y puedes convencer a quien sea de cualquier cosa.", Reputation.GoodCookieReputation, 50, 0);
+                SetRecipeData("Receta de bate de beisbol", "Un bate, también llamado Diálogo, es una galleta muy socorrida cuando se te ponen un poco tontos, un suave golpecito y puedes convencer a quien sea de cualquier cosa.", Karma.GoodKarma, 50, 0);
                 AddIngredientToRecipe("polvo_impetuoso", 2);
 
                 CreateNew();
@@ -252,7 +252,7 @@ namespace CQM.DataBuilders
                 AddFunctionalTag(Tag.Harm, 2);
                 AddFunctionalTag(Tag.Convince, 1);
                 SetUIData("Tijeras", "Porque es por todos conocido que ayudar con unas tijeras en la mano no asusta a nadie.");
-                SetRecipeData("Receta de Tijeras", "Porque es por todos conocido que ayudar con unas tijeras en la mano no asusta a nadie.", Reputation.GoodCookieReputation, 50, 10);
+                SetRecipeData("Receta de Tijeras", "Porque es por todos conocido que ayudar con unas tijeras en la mano no asusta a nadie.", Karma.GoodKarma, 50, 10);
                 AddIngredientToRecipe("polvo_impetuoso", 3);
                 AddIngredientToRecipe("polvo_persuasivo", 1);
 
@@ -262,7 +262,7 @@ namespace CQM.DataBuilders
                 AddFunctionalTag(Tag.Harm, 1);
                 AddFunctionalTag(Tag.Convince, 2);
                 SetUIData("Chanclas", "Da igual dónde esté el objetivo, cuando una chancla se lanza lo encuentra y golpea el cogote de todo aquél que haya a cinco kilómetros a la redonda.  *FLIP-FLOP-FLIP-FLOP-FLIP-FLOP-FLIP-FLOP* ¡CORRE!");
-                SetRecipeData("Receta de Chanclas", "Da igual dónde esté el objetivo, cuando una chancla se lanza lo encuentra y golpea el cogote de todo aquél que haya a cinco kilómetros a la redonda.  *FLIP-FLOP-FLIP-FLOP-FLIP-FLOP-FLIP-FLOP* ¡CORRE!", Reputation.GoodCookieReputation, 50, 0);
+                SetRecipeData("Receta de Chanclas", "Da igual dónde esté el objetivo, cuando una chancla se lanza lo encuentra y golpea el cogote de todo aquél que haya a cinco kilómetros a la redonda.  *FLIP-FLOP-FLIP-FLOP-FLIP-FLOP-FLIP-FLOP* ¡CORRE!", Karma.GoodKarma, 50, 0);
                 AddIngredientToRecipe("polvo_persuasivo", 3);
                 AddIngredientToRecipe("polvo_impetuoso", 1);
 
@@ -271,7 +271,7 @@ namespace CQM.DataBuilders
                 SetPieceType(PieceType.Object);
                 AddFunctionalTag(Tag.Help, 2);
                 SetUIData("Tarta", "En serio, ¿a qué clase de persona perturbada se le ocurrió meter un pastel como objeto? ¿Atacar con un pastel? Mirar fijamente con un pastel… perturbador.");
-                SetRecipeData("Receta de Tarta", "En serio, ¿a qué clase de persona perturbada se le ocurrió meter un pastel como objeto? ¿Atacar con un pastel? Mirar fijamente con un pastel… perturbador.", Reputation.GoodCookieReputation, 10, 50);
+                SetRecipeData("Receta de Tarta", "En serio, ¿a qué clase de persona perturbada se le ocurrió meter un pastel como objeto? ¿Atacar con un pastel? Mirar fijamente con un pastel… perturbador.", Karma.GoodKarma, 10, 50);
                 AddIngredientToRecipe("polvo_auxilio", 2);
             }
             void CreateModifiers()
@@ -281,7 +281,7 @@ namespace CQM.DataBuilders
                 SetPieceType(PieceType.Modifier);
                 AddFunctionalTag(Tag.Harm, 3);
                 SetUIData("Violentamente", "La violencia nunca es la solución, bueno si alguien se pone un poco tonto se le puede acaricial violentamente la cara hasta que entre en razón, pero sólo cuando Diálogo no ha funcionado.");
-                SetRecipeData("Receta de Violentamente", "La violencia nunca es la solución, bueno si alguien se pone un poco tonto se le puede acaricial violentamente la cara hasta que entre en razón, pero sólo cuando Diálogo no ha funcionado.", Reputation.GoodCookieReputation, 50, 10);
+                SetRecipeData("Receta de Violentamente", "La violencia nunca es la solución, bueno si alguien se pone un poco tonto se le puede acaricial violentamente la cara hasta que entre en razón, pero sólo cuando Diálogo no ha funcionado.", Karma.GoodKarma, 50, 10);
                 AddIngredientToRecipe("polvo_impetuoso", 3);
 
                 CreateNew();
@@ -290,7 +290,7 @@ namespace CQM.DataBuilders
                 AddFunctionalTag(Tag.Harm, 4);
                 AddFunctionalTag(Tag.Convince, 1);
                 SetUIData("Brutalmente", "Todo ataque se magnifica con esta galleta, pero  no nos pasemos, los trajes para funerales están caros en esta época del año.");
-                SetRecipeData("Receta de Brutalmente", "Todo ataque se magnifica con esta galleta, pero  no nos pasemos, los trajes para funerales están caros en esta época del año.", Reputation.GoodCookieReputation, 10, 50);
+                SetRecipeData("Receta de Brutalmente", "Todo ataque se magnifica con esta galleta, pero  no nos pasemos, los trajes para funerales están caros en esta época del año.", Karma.GoodKarma, 10, 50);
                 AddIngredientToRecipe("polvo_impetuoso", 5);
 
                 CreateNew();
@@ -298,7 +298,7 @@ namespace CQM.DataBuilders
                 SetPieceType(PieceType.Modifier);
                 AddFunctionalTag(Tag.Help, 3);
                 SetUIData("Amablemente", "Con esta galleta toda acción que hagas se suavizará, porque es por todos conocidos que atacar amablemente es más gentil que hacerlo violentamente.");
-                SetRecipeData("Receta de Amablemente", "Con esta galleta toda acción que hagas se suavizará, porque es por todos conocidos que atacar amablemente es más gentil que hacerlo violentamente.", Reputation.GoodCookieReputation, 0, 50);
+                SetRecipeData("Receta de Amablemente", "Con esta galleta toda acción que hagas se suavizará, porque es por todos conocidos que atacar amablemente es más gentil que hacerlo violentamente.", Karma.GoodKarma, 0, 50);
                 AddIngredientToRecipe("polvo_auxilio", 3);
 
                 CreateNew();
@@ -306,7 +306,7 @@ namespace CQM.DataBuilders
                 SetPieceType(PieceType.Modifier);
                 AddFunctionalTag(Tag.Convince, 3);
                 SetUIData("Convincentemente", "Como dice mi abuela “Más vale maña que mil pájaros volando”, bueno, esa señora nunca estuvo en sus cabales, pero lo que viene a significar es que nunca olvides el poder de la persuasión.");
-                SetRecipeData("Receta de Convincentemente", "Como dice mi abuela “Más vale maña que mil pájaros volando”, bueno, esa señora nunca estuvo en sus cabales, pero lo que viene a significar es que nunca olvides el poder de la persuasión.", Reputation.GoodCookieReputation, 0, 50);
+                SetRecipeData("Receta de Convincentemente", "Como dice mi abuela “Más vale maña que mil pájaros volando”, bueno, esa señora nunca estuvo en sus cabales, pero lo que viene a significar es que nunca olvides el poder de la persuasión.", Karma.GoodKarma, 0, 50);
                 AddIngredientToRecipe("polvo_persuasivo", 3);
             }
             void CreateTargets()
@@ -425,7 +425,7 @@ namespace CQM.DataBuilders
                 _uiQP.m_ShopRecipeSprite = _uiQP.m_CookiePieceSprite;
         }
 
-        private void SetRecipeData(string name, string description, Reputation repType, int good_price, int evil_price)
+        private void SetRecipeData(string name, string description, Karma repType, int good_price, int evil_price)
         {
             _recipeData.m_RecipeName = name;
             _recipeData.m_RecipeDescription = description;

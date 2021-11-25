@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using static GameStateSystem;
+using static CQM.Systems.GameStateSystem;
 
 namespace CQM.Databases
 {

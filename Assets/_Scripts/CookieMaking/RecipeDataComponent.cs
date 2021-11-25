@@ -2,10 +2,10 @@ using CQM.Components;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-public enum Reputation
+public enum Karma
 {
-    GoodCookieReputation,
-    EvilCookieReputation
+    GoodKarma,
+    EvilKarma
 }
 
 [System.Serializable]
@@ -17,7 +17,7 @@ public class RecipeDataComponent
     public string m_RecipeDescription = "No description";
     public Image m_Image;
 
-    public Reputation m_ReputationTypePrice = Reputation.GoodCookieReputation;
+    public Karma m_ReputationTypePrice = Karma.GoodKarma;
     public int m_Price_Good;
     public int m_Price_Evil;
 

@@ -35,10 +35,10 @@ public class InventorySystem : ISystemEvents
             {
                 switch (args.m_RepType)
                 {
-                    case Reputation.GoodCookieReputation:
+                    case Karma.GoodKarma:
                         ChangeGoodCookieRep(args.m_Amount);
                         break;
-                    case Reputation.EvilCookieReputation:
+                    case Karma.EvilKarma:
                         ChangeEvilCookieRep(args.m_Amount);
                         break;
                     default:
@@ -124,10 +124,10 @@ public class InventorySystem : ISystemEvents
 
 public struct InventorySys_ChangeReputationEvtArgs
 {
-    public Reputation m_RepType;
+    public Karma m_RepType;
     public int m_Amount;
 
-    public InventorySys_ChangeReputationEvtArgs(Reputation repType, int amount)
+    public InventorySys_ChangeReputationEvtArgs(Karma repType, int amount)
     {
         m_RepType = repType;
         m_Amount = amount;

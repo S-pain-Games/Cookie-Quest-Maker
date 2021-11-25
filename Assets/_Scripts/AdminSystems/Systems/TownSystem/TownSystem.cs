@@ -30,49 +30,6 @@ namespace CQM.Systems
                 if (!Admin.Global.Components.m_GameStoriesStateComponent.m_AllSecondaryStories.Contains(storyID))
                     SetRepercusionState(s.m_QuestRepercusion.m_ID, true);
             };
-
-            // This should be in a reward system
-            Admin.Global.EventSystem.GetCallbackByName<Event<ID>>("story_sys", "story_finalized").OnInvoked += CalculateAndAddReward;
-            void CalculateAndAddReward(ID storyID)
-            {
-                StoryInfoComponent s = Admin.Global.Components.GetComponentContainer<StoryInfoComponent>().GetComponentByID(storyID);
-                var invCommands = Admin.Global.EventSystem.GetCommandByName<Event<InventorySys_ChangeReputationEvtArgs>>("inventory_sys", "change_reputation");
-
-                int amount = 0;
-                Reputation repType;
-                int percentage = 0;
-                var loc = _locationComponents.GetList().Find(l => l.m_CharacterOwnerID == new ID(s.m_StoryData.m_QuestGiver));
-                int globalHappiness = Admin.Global.Components.m_TownComponent.m_GlobalHappiness;
-
-                if (!Admin.Global.Components.m_GameStoriesStateComponent.m_AllSecondaryStories.Contains(s.m_StoryData.m_ID))
-                    amount = 300;
-                else
-                    amount = 150;
-
-                if (s.m_QuestRepercusion.m_Value > 0)
-                {
-                    repType = Reputation.GoodCookieReputation;
-                    // The story is secondary and doesn't have a localization
-                    if (loc != null)
-                        percentage = loc.m_Happiness + 100;
-                    else
-                        percentage = 100;
-                    amount *= percentage;
-                    amount /= 100;
-                }
-                else
-                {
-                    repType = Reputation.EvilCookieReputation;
-                    if (loc != null)
-                        percentage = -loc.m_Happiness + 100;
-                    else
-                        percentage = 100;
-                    amount *= percentage;
-                    amount /= 100;
-                }
-
-                invCommands.Invoke(new InventorySys_ChangeReputationEvtArgs(repType, amount));
-            }
         }
 
         private void SetRepercusionState(ID repercusionID, bool activated)

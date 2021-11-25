@@ -29,7 +29,7 @@ public class Admin : MonoBehaviour
         m_DataBuilders.BuildData(Components);
 
         Systems.InitializeGameState(Components.m_GameState, Components.m_TransitionsComponent); // Game State Sys registers events on init
-        EventSystem.RegisterSystems(Systems.GetSystemsEvents());
+        EventSystem.RegisterSystems(Systems.GetAllSystemsWithEvents());
         EventSystem.Initialize();
 
         Systems.InitializeSystems(EventSystem, Components);

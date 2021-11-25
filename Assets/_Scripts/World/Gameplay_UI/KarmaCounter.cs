@@ -6,7 +6,7 @@ using DG.Tweening;
 
 public class KarmaCounter : MonoBehaviour
 {
-    [SerializeField] private Reputation m_KarmaType;
+    [SerializeField] private Karma m_KarmaType;
     [SerializeField] private TextMeshProUGUI _text;
 
     private void Awake()
@@ -21,7 +21,7 @@ public class KarmaCounter : MonoBehaviour
 
     private void UpdateUI()
     {
-        if (m_KarmaType == Reputation.GoodCookieReputation)
+        if (m_KarmaType == Karma.GoodKarma)
         {
             _text.text = Admin.Global.Components.m_InventoryComponent.m_GoodKarma.ToString();
             PopAnimation();

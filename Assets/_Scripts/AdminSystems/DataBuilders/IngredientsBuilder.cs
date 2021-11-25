@@ -21,20 +21,20 @@ namespace CQM.DataBuilders
         {
             m_IngredientsList.Clear();
 
-            CreateIngredient("masa_de_galletas_encantada", "Masa de galletas encantada", 0, 0, Reputation.GoodCookieReputation);
-            CreateIngredient("compota_de_mora_infernal", "Compota de mora infernal", 0, 25, Reputation.EvilCookieReputation);
-            CreateIngredient("nucleo_de_cereza_animico", "Núcleo de cereza anímico", 0, 80, Reputation.GoodCookieReputation);
-            CreateIngredient("crema_pastelera_arcana", "Crema pastelera arcana", 10, 10, Reputation.GoodCookieReputation);
-            CreateIngredient("vainilla_de_la_iluminacion", "Vainilla de la iluminación", 30, 0, Reputation.EvilCookieReputation);
-            CreateIngredient("caramelo_fundido_candiscente", "Caramelo fundido candiscente", 25, 25, Reputation.EvilCookieReputation);
-            CreateIngredient("esencia_de_limon_purificadora", "Esencia de limón purificadora", 80, 0, Reputation.GoodCookieReputation);
-            CreateIngredient("levadura_ancestral_de_la_pereza", "Levadura Ancestral de la pereza", 40, 40, Reputation.EvilCookieReputation);
-            CreateIngredient("chocolate_negro_sempiterno", "Chocolate negro Sempiterno", 0, 20, Reputation.EvilCookieReputation);
-            CreateIngredient("harina_de_fuerza_titanica", "Harina de fuerza titánica", 15, 15, Reputation.GoodCookieReputation);
+            CreateIngredient("masa_de_galletas_encantada", "Masa de galletas encantada", 0, 0, Karma.GoodKarma);
+            CreateIngredient("compota_de_mora_infernal", "Compota de mora infernal", 0, 25, Karma.EvilKarma);
+            CreateIngredient("nucleo_de_cereza_animico", "Núcleo de cereza anímico", 0, 80, Karma.GoodKarma);
+            CreateIngredient("crema_pastelera_arcana", "Crema pastelera arcana", 10, 10, Karma.GoodKarma);
+            CreateIngredient("vainilla_de_la_iluminacion", "Vainilla de la iluminación", 30, 0, Karma.EvilKarma);
+            CreateIngredient("caramelo_fundido_candiscente", "Caramelo fundido candiscente", 25, 25, Karma.EvilKarma);
+            CreateIngredient("esencia_de_limon_purificadora", "Esencia de limón purificadora", 80, 0, Karma.GoodKarma);
+            CreateIngredient("levadura_ancestral_de_la_pereza", "Levadura Ancestral de la pereza", 40, 40, Karma.EvilKarma);
+            CreateIngredient("chocolate_negro_sempiterno", "Chocolate negro Sempiterno", 0, 20, Karma.EvilKarma);
+            CreateIngredient("harina_de_fuerza_titanica", "Harina de fuerza titánica", 15, 15, Karma.GoodKarma);
 
-            CreateIngredient("polvo_impetuoso", "Polvo para hornear impetuoso", 0, 10, Reputation.GoodCookieReputation);
-            CreateIngredient("polvo_persuasivo", "Polvo para hornear persuasivo", 5, 5, Reputation.GoodCookieReputation);
-            CreateIngredient("polvo_auxilio", "Polvo para hornear del auxilio", 10, 0, Reputation.GoodCookieReputation);
+            CreateIngredient("polvo_impetuoso", "Polvo para hornear impetuoso", 0, 10, Karma.GoodKarma);
+            CreateIngredient("polvo_persuasivo", "Polvo para hornear persuasivo", 5, 5, Karma.GoodKarma);
+            CreateIngredient("polvo_auxilio", "Polvo para hornear del auxilio", 10, 0, Karma.GoodKarma);
         }
 
         public override void BuildData(ComponentsDatabase c)
@@ -46,7 +46,7 @@ namespace CQM.DataBuilders
             }
         }
 
-        private void CreateIngredient(string idName, string name, int good_price, int evil_price, Reputation repType)
+        private void CreateIngredient(string idName, string name, int good_price, int evil_price, Karma repType)
         {
             i = new IngredientComponent();
             i.m_ID = new ID(idName);

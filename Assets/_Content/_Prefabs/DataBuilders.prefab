@@ -326,8 +326,10 @@ MonoBehaviour:
     m_CookiePieceSprite: {fileID: 21300000, guid: adc4d268e55a60c438be560b26614ddb, type: 3}
     m_HDSprite: {fileID: 21300000, guid: 2207a64eb580998469702472070a540b, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 75da8650bae999440805dc073705a1ef, type: 3}
-    m_Name: Malvavisco Fantasma Tostado
-    m_Description: "No es el m\xE1s h\xE1bil, pero act\xFAa con entusiasmo."
+    m_Name: Malvavisco Crudo
+    m_Description: "El Malvavisco Crudo es un postre b\xE1sico dispuesto a echar
+      una mano con lo que haga falta, aunque no sirva para mucho. Bueno para cuando
+      no hay mucho que comer y pocas ganas de cocinar."
     m_ID:
       m_NameID: malvavisco_fantasma_tostado
       m_ID: -662518070
@@ -337,7 +339,10 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 64cbc25caf84e5542808f332fcbffafb, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 8e5767b0df522ee479942fcd096017e0, type: 3}
     m_Name: Merengue Fantasma Tostado
-    m_Description: Ayudante todoterreno perfecto para tareas sencillas.
+    m_Description: "El Merengue Fantasma Tostado es un postre b\xE1sico, dulce, blandito\u2026
+      pero a veces se cuela en las  habitaciones de la gente mientras duermen y se
+      queda mir\xE1ndolos haciendo ruidos de ultratumba. *WUO-WUO-WUO-WUO-WUO-WUO-WUO*
+      Que alguien llame a la polic\xEDa."
     m_ID:
       m_NameID: merengue_fantasma_tostado
       m_ID: 1705360255
@@ -347,7 +352,10 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 1309868c425c1f54489d373a3d50250f, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: ed8a3ef62501af343a6f97641c9c2e98, type: 3}
     m_Name: Pepito de Ternura
-    m_Description: Siempre dispuesto a ayudar.
+    m_Description: "Cualquiera que sea el problema que tengas el Pepito de Ternura
+      va intentar resolverlo, aunque a lo mejor no es buena idea mandarlo atacar
+      a un a un grupo de lobos. Con su centro de crema dulce y su coraz\xF3n brillante
+      de chocolate eterno est\xE1 listo para salir a abrazar al mundo."
     m_ID:
       m_NameID: pepito_de_ternura
       m_ID: 1282509517
@@ -357,7 +365,9 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 1cb97171176636c4a8d130a1ff109147, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 57f3dfd4b651c124fa5782ebd481e529, type: 3}
     m_Name: Bizcotroll de Naranjas Somnolientas
-    m_Description: "Es muy pac\xEDfico, pero no controla su propia fuerza"
+    m_Description: "Se dice que el Bizcotroll forma parte del tr\xEDo de postres
+      h\xE9roes colosales, y que aunque se pasa gran parte del tiempo dormido, en
+      cuanto se despierta no duda en ayudar."
     m_ID:
       m_NameID: bizcotroll
       m_ID: -1684921852
@@ -367,8 +377,10 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: f0d61aa930a04bf498b974d74cbad946, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: c434bc00fb4c06446864d5aef58eea6d, type: 3}
     m_Name: "Jaur\xEDa Bomb\xF3n Infernal"
-    m_Description: "Tratan de ayudar de la forma m\xE1s violenta posible. Los favoritos
-      de Evith."
+    m_Description: "Reci\xE9n salida del horno, la Jaur\xEDa Bomb\xF3n Infernal son
+      un grupo de bombones escupe compota candente, especializados en el ataque.
+      Con un n\xFAcleo de compota de mora infernal y una habanero ardiente en la
+      cola hace arder todo a su paso."
     m_ID:
       m_NameID: jauria_bombon
       m_ID: 398001378
@@ -378,7 +390,10 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: b84d0e5f7315d184b874083cab8795c0, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: fada20c1b29122243a919957ecd74cf5, type: 3}
     m_Name: "Palad\xEDn Tortita"
-    m_Description: "Gran defensor de la justicia con m\xE9todos muy violentos"
+    m_Description: "El Palad\xEDn Tortita es el segundo postre colosal, tan solo
+      con levantar su espada de caramelo solidificado imparte da\xF1o en \xE1rea
+      en un segundo. Aunque sus capas de tortitas son tan suaves que se deshacen
+      en la boca, el caramelo que lo cubre lo protege de cualquier ataque."
     m_ID:
       m_NameID: paladin_tortita
       m_ID: -297091607
@@ -388,7 +403,10 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 965223ba37d9f134aa45e5455fcae763, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: e26720fa7f81dc942a824ddd6ef7a93e, type: 3}
     m_Name: Bizquiborracho de Mora
-    m_Description: Intenta ser persuasivo, pero se le puede ir la mano.
+    m_Description: "El bizcoborracho es un postre achispado que se zarandea de un
+      lado a otro con un un ritmo hipn\xF3tico. Entre su golosa capa de compota y
+      su bizcocho\u2026 HIP... borracho te convence de lo que sea \u2026 HIP-HIP\u2026
+      creo que no me mantengo en pie."
     m_ID:
       m_NameID: bizquiborracho
       m_ID: -651309878
@@ -398,7 +416,11 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 1c4334c55a459fc47ba5217d528371e8, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: b3cb941b335f6f4488504404637e3793, type: 3}
     m_Name: Citrielfo en Copa
-    m_Description: Es capaz de persuadir incluso a una mula. Aprobado por Nu.
+    m_Description: "Los citrielfos son el tercer postre colosal. Siempre tienen la
+      raz\xF3n, o eso creen ellos, y da igual que est\xE9n equivocados, no tienen
+      problemas en mirarte por encima del hombre desde lo alto de su copa. Tan pronto
+      como la cara de su enemigo ponga expresi\xF3n de haber chupado un lim\xF3n
+      sabr\xE1 que su hechizo ha hecho efecto."
     m_ID:
       m_NameID: citrielfo
       m_ID: 1999289801
@@ -408,7 +430,9 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: ae62f49ef96b51941a9c2a96e68de2cc, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: b51aca76c7c871941a08578d590aebb9, type: 3}
     m_Name: Atacar
-    m_Description: "Para cuando la violencia puede ser la soluci\xF3n"
+    m_Description: "Con esta galleta puedes acariciar fuertemente al objetivo hasta
+      que por un resval\xF3n tonto caiga al suelo. Si no quer\xEDa llegar a este
+      nivel, no s\xE9, que se hubiese portado bien."
     m_ID:
       m_NameID: attack
       m_ID: -143907494
@@ -418,7 +442,8 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 88210d859f042ba4f9a595a71155e01a, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 85119a0d9cb3a444d9d8fc0394920391, type: 3}
     m_Name: Dialogar
-    m_Description: "La soluci\xF3n m\xE1s diplom\xE1tica ante un problema"
+    m_Description: "Hablar las cosas a veces est\xE1 bien, eso dicen\u2026 Mira primero
+      se intenta convencer, luego ya se saca a Di\xE1logo."
     m_ID:
       m_NameID: dialogate
       m_ID: -949047606
@@ -428,7 +453,8 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: d7ade6fb00e3d8945bdec751af798476, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 508a82d941ad7684fb3a9a7fc82ef9f7, type: 3}
     m_Name: Ayudar
-    m_Description: Para echar una mano a alguien en apuros
+    m_Description: "Cuando alguien est\xE9 en problemas usa esta galleta para ayudarlos,
+      no hay nada que un abrazo no pueda hacer."
     m_ID:
       m_NameID: assist
       m_ID: 223879643
@@ -438,7 +464,10 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 2684808f70b59be458db89c422593d90, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 23f676d1f4a71db49b4a4b089729a845, type: 3}
     m_Name: Observar
-    m_Description: "Observa detenidamente la situaci\xF3n antes de actuar"
+    m_Description: "Mira. En realidad solo mira lo que pasa, observar esta bien para
+      entender a tus enemigos, conocerlos y aprender sus habitos y debilidades para
+      despu\xE9s\u2026 ATACAR Y VENGARSE POR EL DA\xD1O AL HONOR DE TU FAMILIA\u2026
+      o solo dialogar, con Di\xE1logo."
     m_ID:
       m_NameID: look
       m_ID: 963906251
@@ -448,7 +477,9 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: df632e2db0369a841b39f4eee8d3ef67, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 15f10baa2b52b044f80c8d7a883ed103, type: 3}
     m_Name: Mirar fijamente
-    m_Description: "Observa hasta el punto de llegar a ser inc\xF3modo"
+    m_Description: "Mira, pero no mira para observar, te persigue con la mirada,
+      aunque no quieras, aunque cruces la calle, entres en tu casa, y te metas escondas
+      debajo de la mesa. TE ESTAMOS VIENDO\u2026 NO PUEDES ESCONDERTE."
     m_ID:
       m_NameID: stare
       m_ID: -1436242079
@@ -458,7 +489,9 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: d21a7f9e36dcbb54181d0aa4c3ecff9b, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: a949079572f22904b844fb14a47f017c, type: 3}
     m_Name: Robar
-    m_Description: "Para la redistribuci\xF3n de bienes ajenos"
+    m_Description: "Con esta galleta puedes coger prestado cosas de la v\xEDctima\u2026
+      quiero decir, objetivo. Un poco de despiste y lo que quieras puedes cogerlo
+      prestado, indefinidamente."
     m_ID:
       m_NameID: steal
       m_ID: 1742979855
@@ -468,7 +501,9 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: b5b3a07137f48e649a5e9543177286da, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 28b7d793a8173cc469991ac4c93c963a, type: 3}
     m_Name: Bate de Beisbol
-    m_Description: Una muestra de tus no tan buenas intenciones
+    m_Description: "Un bate, tambi\xE9n llamado Di\xE1logo, es una galleta muy socorrida
+      cuando se te ponen un poco tontos, un suave golpecito y puedes convencer a
+      quien sea de cualquier cosa."
     m_ID:
       m_NameID: baseball_bat
       m_ID: -673659770
@@ -478,7 +513,8 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: a0cf0df16b02749429693b71b8257071, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: f675673fd14c4bc4f8eae48d78319d8c, type: 3}
     m_Name: Tijeras
-    m_Description: Muy puntiagudas. No es recomendable correr con ellas en la mano
+    m_Description: Porque es por todos conocido que ayudar con unas tijeras en la
+      mano no asusta a nadie.
     m_ID:
       m_NameID: scissors
       m_ID: 224560939
@@ -488,7 +524,9 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 5970629215b8a004d940d4b90708917d, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 381ea50766ff9e946a372f6f902de103, type: 3}
     m_Name: Chanclas
-    m_Description: El utensilio disuasorio por excelencia
+    m_Description: "Da igual d\xF3nde est\xE9 el objetivo, cuando una chancla se
+      lanza lo encuentra y golpea el cogote de todo aqu\xE9l que haya a cinco kil\xF3metros
+      a la redonda.  *FLIP-FLOP-FLIP-FLOP-FLIP-FLOP-FLIP-FLOP* \xA1CORRE!"
     m_ID:
       m_NameID: flip_flops
       m_ID: 738388376
@@ -498,7 +536,9 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: ccfe033985c79e443a74ac9462574f5f, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: a238624f623ea254b9817bdf8c5cf92f, type: 3}
     m_Name: Tarta
-    m_Description: Una muestra de tus buenas intenciones
+    m_Description: "En serio, \xBFa qu\xE9 clase de persona perturbada se le ocurri\xF3
+      meter un pastel como objeto? \xBFAtacar con un pastel? Mirar fijamente con
+      un pastel\u2026 perturbador."
     m_ID:
       m_NameID: cake
       m_ID: -1966748430
@@ -508,7 +548,9 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: e672bca8424e4a3478264902eac3108a, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 6cfd658b7d0f18c4ca8c3aae2182d699, type: 3}
     m_Name: Violentamente
-    m_Description: Insiste de manera agresiva
+    m_Description: "La violencia nunca es la soluci\xF3n, bueno si alguien se pone
+      un poco tonto se le puede acaricial violentamente la cara hasta que entre en
+      raz\xF3n, pero s\xF3lo cuando Di\xE1logo no ha funcionado."
     m_ID:
       m_NameID: violently
       m_ID: -1715915298
@@ -518,7 +560,8 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 3325e3174902ee84ca5567e1cb9ab96f, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: e3393412cb8a53d4fa51facf3396c935, type: 3}
     m_Name: Brutalmente
-    m_Description: "La paz nunca fue una opci\xF3n"
+    m_Description: "Todo ataque se magnifica con esta galleta, pero  no nos pasemos,
+      los trajes para funerales est\xE1n caros en esta \xE9poca del a\xF1o."
     m_ID:
       m_NameID: brutally
       m_ID: 83815085
@@ -528,7 +571,9 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 695672ac4af1c334d95857ce713a9865, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 3309febc2aa5e6f4e9efba6cca370606, type: 3}
     m_Name: Amablemente
-    m_Description: "Act\xFAa con ternura"
+    m_Description: "Con esta galleta toda acci\xF3n que hagas se suavizar\xE1, porque
+      es por todos conocidos que atacar amablemente es m\xE1s gentil que hacerlo
+      violentamente."
     m_ID:
       m_NameID: kindly
       m_ID: 2072750721
@@ -538,7 +583,9 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: d508ff50a77a91149a524bcfecd0dbae, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 2e42295ff8cff0f48a86871af9832f4e, type: 3}
     m_Name: Convincentemente
-    m_Description: "Demuestra que est\xE1n equivocados"
+    m_Description: "Como dice mi abuela \u201CM\xE1s vale ma\xF1a que mil p\xE1jaros
+      volando\u201D, bueno, esa se\xF1ora nunca estuvo en sus cabales, pero lo que
+      viene a significar es que nunca olvides el poder de la persuasi\xF3n."
     m_ID:
       m_NameID: convincingly
       m_ID: 1186496505
@@ -548,7 +595,10 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 5f6092fe08f678544afddc11f2f3a372, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 4150cc859f149f846a48e1010b860bbb, type: 3}
     m_Name: Alcalde
-    m_Description: El alcalde del pueblo.
+    m_Description: "Es el alcalde del pueblo, y no tienen ning\xFAn problema en dejarte
+      claro dos cosas, que es el ALCALDE, y que le gustan los dineros. Posee gran
+      parte de los cultivos de trigo del pueblo, all\xE1 donde te alcance la vista
+      es propiedad suya, y tiene un sospechoso gran parentesco a Hio\u2026"
     m_ID:
       m_NameID: mayor
       m_ID: 996742298
@@ -558,7 +608,10 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: e174567cb3185b74c93c27244d9b10b3, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: fbc0e27999c58df4e97cac0a6de3a9ca, type: 3}
     m_Name: Meri
-    m_Description: Cuidadora de vacas.
+    m_Description: "En realidad se llama Meri, la lechera, pero Hio le llam\xF3 Meri,
+      la Leches una vez y as\xED se qued\xF3. Posee la \xFAnica granja de vacas del
+      pueblo, y se le da muy bien cuidarlas, pero en ocasiones\u2026 pasan cosas
+      y no puede controlarlas, y cuando eso pasa\u2026 la cosa se le va de las manos."
     m_ID:
       m_NameID: meri
       m_ID: -918260377
@@ -568,7 +621,10 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: fdd8da237cda300459b69e475d759c52, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 77eaa71558755064cbca8511be04e884, type: 3}
     m_Name: Canela
-    m_Description: Coleccionista de artefactos.
+    m_Description: "Empresaria, exitosa, chica de portada, todo lo que Canela N Rama
+      quiera lo tiene. Salt\xF3 a la fama despu\xE9s de presentar la patente de su
+      primer extracto super concentrado de canela, a partir de ah\xED el \xE9xito
+      vino solo."
     m_ID:
       m_NameID: canela
       m_ID: -619351516
@@ -578,7 +634,11 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 1565e568885b5b14daf506d27e846fe9, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: eb7fe4a73bd33a940bfcaf4f93f10ae6, type: 3}
     m_Name: Er Johny el setas
-    m_Description: El peculiar alquimista.
+    m_Description: "Er Johnny vive en su mundo psicod\xE9lico todo el d\xEDa, lo
+      que le lleva a ser el mejor creador de levaduras del archipi\xE9lago. Si hay
+      alguien capaz de desvelar el secreto sobre la magia de Hio es Johnny, cuanto
+      m\xE1s se mete en su mundo, m\xE1s puede interactuar con la magia del pastelero\u2026
+      aunque crea que son deidades galleta."
     m_ID:
       m_NameID: johny_setas
       m_ID: -840848411
@@ -588,7 +648,11 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 8a88bfda9c0714d4da7df2f566c1186b, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 194898324a4688d4994fd80f5332beca, type: 3}
     m_Name: Miss Chocolate
-    m_Description: "La exc\xE9ntrica chocolatera."
+    m_Description: "Dulce y estilosa, esta drag queen est\xE1 lista para seducirte
+      con su dulce sabor hasta hacerte saltar por los aires con su chocolate explosivo.
+      Es una cient\xEDfica chocolatera imponente, pero cari, no te atrevas a ponerte
+      en su camino, porque cielo, esta reina est\xE1 lista para servir su lado m\xE1s
+      amargo."
     m_ID:
       m_NameID: miss_chocolate
       m_ID: -370492881
@@ -598,7 +662,9 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 45f691e6b848f174d8bdeb543e53c344, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 276ebad8f03140a4095c719e1cdd8a89, type: 3}
     m_Name: El Mantecas
-    m_Description: El agricultor malhumorado.
+    m_Description: "Gafe s\xED es, a este mantequero le ocurren mil desgracias, un
+      poco merecidas, aunque puede ser porque el olor dulce de la mantequilla las
+      atraiga, y a las ratas tambi\xE9n."
     m_ID:
       m_NameID: mantecas
       m_ID: 2085496002
@@ -608,7 +674,8 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: dd1495d1750d7e9459816a04e37834d2, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 403a1ba1c6f85974cbb303ca95a6312e, type: 3}
     m_Name: Lobos
-    m_Description: Una manada de lobos.
+    m_Description: "Son una manada de lobos, \xBFun poco violenta? Pues s\xED chica,
+      pero no haber construido el pueblo donde antes viv\xEDa la manada."
     m_ID:
       m_NameID: wolves
       m_ID: -1938852922
@@ -618,7 +685,9 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 9f691ae598fbf9c4d8eaf18c535bc69c, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 4766e9563f9dbd244a1c536253f95ce8, type: 3}
     m_Name: Ratas
-    m_Description: Ratas particularmente inteligentes.
+    m_Description: "Estas ratas han formado una sociedad de roedores super inteligentes,
+      a la m\xEDnima que puedan se van a aprovechar de la situaci\xF3n. M\xE1s te
+      vale tenerlas de tu lado."
     m_ID:
       m_NameID: rats
       m_ID: -1872639626
@@ -628,7 +697,9 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 80b5879500c194c4b9257f212baf50d9, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 95f2385038877f64cb098fb629af4685, type: 3}
     m_Name: Vacas
-    m_Description: "Las mayores v\xEDctimas en esta historia."
+    m_Description: Las vacas de Meri, la Leches, son unos animales tiernos que no
+      paran de hacer leche, aunque a veces tienen rachas y necesitan un poco de ayuda
+      para seguir con sus labores.
     m_ID:
       m_NameID: vacas
       m_ID: 190186940
@@ -794,228 +865,300 @@ MonoBehaviour:
       m_NameID: malvavisco_fantasma_tostado
       m_ID: -662518070
       m_Initialized: 1
-    m_CookieName: Malvavisco Fantasma Tostado
-    m_CookieDescription: "No es el m\xE1s h\xE1bil, pero act\xFAa con entusiasmo."
+    m_CookieName: Malvavisco Crudo
+    m_CookieDescription: "El Malvavisco Crudo es un postre b\xE1sico dispuesto a
+      echar una mano con lo que haga falta, aunque no sirva para mucho. Bueno para
+      cuando no hay mucho que comer y pocas ganas de cocinar."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: merengue_fantasma_tostado
       m_ID: 1705360255
       m_Initialized: 1
     m_CookieName: Merengue Fantasma Tostado
-    m_CookieDescription: Ayudante todoterreno perfecto para tareas sencillas.
+    m_CookieDescription: "El Merengue Fantasma Tostado es un postre b\xE1sico, dulce,
+      blandito\u2026 pero a veces se cuela en las  habitaciones de la gente mientras
+      duermen y se queda mir\xE1ndolos haciendo ruidos de ultratumba. *WUO-WUO-WUO-WUO-WUO-WUO-WUO*
+      Que alguien llame a la polic\xEDa."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: pepito_de_ternura
       m_ID: 1282509517
       m_Initialized: 1
     m_CookieName: Pepito de Ternura
-    m_CookieDescription: Siempre dispuesto a ayudar.
+    m_CookieDescription: "Cualquiera que sea el problema que tengas el Pepito de
+      Ternura va intentar resolverlo, aunque a lo mejor no es buena idea mandarlo
+      atacar a un a un grupo de lobos. Con su centro de crema dulce y su coraz\xF3n
+      brillante de chocolate eterno est\xE1 listo para salir a abrazar al mundo."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: bizcotroll
       m_ID: -1684921852
       m_Initialized: 1
     m_CookieName: Bizcotroll de Naranjas Somnolientas
-    m_CookieDescription: "Es muy pac\xEDfico, pero no controla su propia fuerza"
+    m_CookieDescription: "Se dice que el Bizcotroll forma parte del tr\xEDo de postres
+      h\xE9roes colosales, y que aunque se pasa gran parte del tiempo dormido, en
+      cuanto se despierta no duda en ayudar."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: jauria_bombon
       m_ID: 398001378
       m_Initialized: 1
     m_CookieName: "Jaur\xEDa Bomb\xF3n Infernal"
-    m_CookieDescription: "Tratan de ayudar de la forma m\xE1s violenta posible. Los
-      favoritos de Evith."
+    m_CookieDescription: "Reci\xE9n salida del horno, la Jaur\xEDa Bomb\xF3n Infernal
+      son un grupo de bombones escupe compota candente, especializados en el ataque.
+      Con un n\xFAcleo de compota de mora infernal y una habanero ardiente en la
+      cola hace arder todo a su paso."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: paladin_tortita
       m_ID: -297091607
       m_Initialized: 1
     m_CookieName: "Palad\xEDn Tortita"
-    m_CookieDescription: "Gran defensor de la justicia con m\xE9todos muy violentos"
+    m_CookieDescription: "El Palad\xEDn Tortita es el segundo postre colosal, tan
+      solo con levantar su espada de caramelo solidificado imparte da\xF1o en \xE1rea
+      en un segundo. Aunque sus capas de tortitas son tan suaves que se deshacen
+      en la boca, el caramelo que lo cubre lo protege de cualquier ataque."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: bizquiborracho
       m_ID: -651309878
       m_Initialized: 1
     m_CookieName: Bizquiborracho de Mora
-    m_CookieDescription: Intenta ser persuasivo, pero se le puede ir la mano.
+    m_CookieDescription: "El bizcoborracho es un postre achispado que se zarandea
+      de un lado a otro con un un ritmo hipn\xF3tico. Entre su golosa capa de compota
+      y su bizcocho\u2026 HIP... borracho te convence de lo que sea \u2026 HIP-HIP\u2026
+      creo que no me mantengo en pie."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: citrielfo
       m_ID: 1999289801
       m_Initialized: 1
     m_CookieName: Citrielfo en Copa
-    m_CookieDescription: Es capaz de persuadir incluso a una mula. Aprobado por Nu.
+    m_CookieDescription: "Los citrielfos son el tercer postre colosal. Siempre tienen
+      la raz\xF3n, o eso creen ellos, y da igual que est\xE9n equivocados, no tienen
+      problemas en mirarte por encima del hombre desde lo alto de su copa. Tan pronto
+      como la cara de su enemigo ponga expresi\xF3n de haber chupado un lim\xF3n
+      sabr\xE1 que su hechizo ha hecho efecto."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: attack
       m_ID: -143907494
       m_Initialized: 1
     m_CookieName: Atacar
-    m_CookieDescription: "Para cuando la violencia puede ser la soluci\xF3n"
+    m_CookieDescription: "Con esta galleta puedes acariciar fuertemente al objetivo
+      hasta que por un resval\xF3n tonto caiga al suelo. Si no quer\xEDa llegar a
+      este nivel, no s\xE9, que se hubiese portado bien."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: dialogate
       m_ID: -949047606
       m_Initialized: 1
     m_CookieName: Dialogar
-    m_CookieDescription: "La soluci\xF3n m\xE1s diplom\xE1tica ante un problema"
+    m_CookieDescription: "Hablar las cosas a veces est\xE1 bien, eso dicen\u2026
+      Mira primero se intenta convencer, luego ya se saca a Di\xE1logo."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: assist
       m_ID: 223879643
       m_Initialized: 1
     m_CookieName: Ayudar
-    m_CookieDescription: Para echar una mano a alguien en apuros
+    m_CookieDescription: "Cuando alguien est\xE9 en problemas usa esta galleta para
+      ayudarlos, no hay nada que un abrazo no pueda hacer."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: look
       m_ID: 963906251
       m_Initialized: 1
     m_CookieName: Observar
-    m_CookieDescription: "Observa detenidamente la situaci\xF3n antes de actuar"
+    m_CookieDescription: "Mira. En realidad solo mira lo que pasa, observar esta
+      bien para entender a tus enemigos, conocerlos y aprender sus habitos y debilidades
+      para despu\xE9s\u2026 ATACAR Y VENGARSE POR EL DA\xD1O AL HONOR DE TU FAMILIA\u2026
+      o solo dialogar, con Di\xE1logo."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: stare
       m_ID: -1436242079
       m_Initialized: 1
     m_CookieName: Mirar fijamente
-    m_CookieDescription: "Observa hasta el punto de llegar a ser inc\xF3modo"
+    m_CookieDescription: "Mira, pero no mira para observar, te persigue con la mirada,
+      aunque no quieras, aunque cruces la calle, entres en tu casa, y te metas escondas
+      debajo de la mesa. TE ESTAMOS VIENDO\u2026 NO PUEDES ESCONDERTE."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: steal
       m_ID: 1742979855
       m_Initialized: 1
     m_CookieName: Robar
-    m_CookieDescription: "Para la redistribuci\xF3n de bienes ajenos"
+    m_CookieDescription: "Con esta galleta puedes coger prestado cosas de la v\xEDctima\u2026
+      quiero decir, objetivo. Un poco de despiste y lo que quieras puedes cogerlo
+      prestado, indefinidamente."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: baseball_bat
       m_ID: -673659770
       m_Initialized: 1
     m_CookieName: Bate de Beisbol
-    m_CookieDescription: Una muestra de tus no tan buenas intenciones
+    m_CookieDescription: "Un bate, tambi\xE9n llamado Di\xE1logo, es una galleta
+      muy socorrida cuando se te ponen un poco tontos, un suave golpecito y puedes
+      convencer a quien sea de cualquier cosa."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: scissors
       m_ID: 224560939
       m_Initialized: 1
     m_CookieName: Tijeras
-    m_CookieDescription: Muy puntiagudas. No es recomendable correr con ellas en
-      la mano
+    m_CookieDescription: Porque es por todos conocido que ayudar con unas tijeras
+      en la mano no asusta a nadie.
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: flip_flops
       m_ID: 738388376
       m_Initialized: 1
     m_CookieName: Chanclas
-    m_CookieDescription: El utensilio disuasorio por excelencia
+    m_CookieDescription: "Da igual d\xF3nde est\xE9 el objetivo, cuando una chancla
+      se lanza lo encuentra y golpea el cogote de todo aqu\xE9l que haya a cinco
+      kil\xF3metros a la redonda.  *FLIP-FLOP-FLIP-FLOP-FLIP-FLOP-FLIP-FLOP* \xA1CORRE!"
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: cake
       m_ID: -1966748430
       m_Initialized: 1
     m_CookieName: Tarta
-    m_CookieDescription: Una muestra de tus buenas intenciones
+    m_CookieDescription: "En serio, \xBFa qu\xE9 clase de persona perturbada se le
+      ocurri\xF3 meter un pastel como objeto? \xBFAtacar con un pastel? Mirar fijamente
+      con un pastel\u2026 perturbador."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: violently
       m_ID: -1715915298
       m_Initialized: 1
     m_CookieName: Violentamente
-    m_CookieDescription: Insiste de manera agresiva
+    m_CookieDescription: "La violencia nunca es la soluci\xF3n, bueno si alguien
+      se pone un poco tonto se le puede acaricial violentamente la cara hasta que
+      entre en raz\xF3n, pero s\xF3lo cuando Di\xE1logo no ha funcionado."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: brutally
       m_ID: 83815085
       m_Initialized: 1
     m_CookieName: Brutalmente
-    m_CookieDescription: "La paz nunca fue una opci\xF3n"
+    m_CookieDescription: "Todo ataque se magnifica con esta galleta, pero  no nos
+      pasemos, los trajes para funerales est\xE1n caros en esta \xE9poca del a\xF1o."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: kindly
       m_ID: 2072750721
       m_Initialized: 1
     m_CookieName: Amablemente
-    m_CookieDescription: "Act\xFAa con ternura"
+    m_CookieDescription: "Con esta galleta toda acci\xF3n que hagas se suavizar\xE1,
+      porque es por todos conocidos que atacar amablemente es m\xE1s gentil que hacerlo
+      violentamente."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: convincingly
       m_ID: 1186496505
       m_Initialized: 1
     m_CookieName: Convincentemente
-    m_CookieDescription: "Demuestra que est\xE1n equivocados"
+    m_CookieDescription: "Como dice mi abuela \u201CM\xE1s vale ma\xF1a que mil p\xE1jaros
+      volando\u201D, bueno, esa se\xF1ora nunca estuvo en sus cabales, pero lo que
+      viene a significar es que nunca olvides el poder de la persuasi\xF3n."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: mayor
       m_ID: 996742298
       m_Initialized: 1
     m_CookieName: Alcalde
-    m_CookieDescription: El alcalde del pueblo.
+    m_CookieDescription: "Es el alcalde del pueblo, y no tienen ning\xFAn problema
+      en dejarte claro dos cosas, que es el ALCALDE, y que le gustan los dineros.
+      Posee gran parte de los cultivos de trigo del pueblo, all\xE1 donde te alcance
+      la vista es propiedad suya, y tiene un sospechoso gran parentesco a Hio\u2026"
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: meri
       m_ID: -918260377
       m_Initialized: 1
     m_CookieName: Meri
-    m_CookieDescription: Cuidadora de vacas.
+    m_CookieDescription: "En realidad se llama Meri, la lechera, pero Hio le llam\xF3
+      Meri, la Leches una vez y as\xED se qued\xF3. Posee la \xFAnica granja de vacas
+      del pueblo, y se le da muy bien cuidarlas, pero en ocasiones\u2026 pasan cosas
+      y no puede controlarlas, y cuando eso pasa\u2026 la cosa se le va de las manos."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: canela
       m_ID: -619351516
       m_Initialized: 1
     m_CookieName: Canela
-    m_CookieDescription: Coleccionista de artefactos.
+    m_CookieDescription: "Empresaria, exitosa, chica de portada, todo lo que Canela
+      N Rama quiera lo tiene. Salt\xF3 a la fama despu\xE9s de presentar la patente
+      de su primer extracto super concentrado de canela, a partir de ah\xED el \xE9xito
+      vino solo."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: johny_setas
       m_ID: -840848411
       m_Initialized: 1
     m_CookieName: Er Johny el setas
-    m_CookieDescription: El peculiar alquimista.
+    m_CookieDescription: "Er Johnny vive en su mundo psicod\xE9lico todo el d\xEDa,
+      lo que le lleva a ser el mejor creador de levaduras del archipi\xE9lago. Si
+      hay alguien capaz de desvelar el secreto sobre la magia de Hio es Johnny, cuanto
+      m\xE1s se mete en su mundo, m\xE1s puede interactuar con la magia del pastelero\u2026
+      aunque crea que son deidades galleta."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: miss_chocolate
       m_ID: -370492881
       m_Initialized: 1
     m_CookieName: Miss Chocolate
-    m_CookieDescription: "La exc\xE9ntrica chocolatera."
+    m_CookieDescription: "Dulce y estilosa, esta drag queen est\xE1 lista para seducirte
+      con su dulce sabor hasta hacerte saltar por los aires con su chocolate explosivo.
+      Es una cient\xEDfica chocolatera imponente, pero cari, no te atrevas a ponerte
+      en su camino, porque cielo, esta reina est\xE1 lista para servir su lado m\xE1s
+      amargo."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: mantecas
       m_ID: 2085496002
       m_Initialized: 1
     m_CookieName: El Mantecas
-    m_CookieDescription: El agricultor malhumorado.
+    m_CookieDescription: "Gafe s\xED es, a este mantequero le ocurren mil desgracias,
+      un poco merecidas, aunque puede ser porque el olor dulce de la mantequilla
+      las atraiga, y a las ratas tambi\xE9n."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: wolves
       m_ID: -1938852922
       m_Initialized: 1
     m_CookieName: Lobos
-    m_CookieDescription: Una manada de lobos.
+    m_CookieDescription: "Son una manada de lobos, \xBFun poco violenta? Pues s\xED
+      chica, pero no haber construido el pueblo donde antes viv\xEDa la manada."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: rats
       m_ID: -1872639626
       m_Initialized: 1
     m_CookieName: Ratas
-    m_CookieDescription: Ratas particularmente inteligentes.
+    m_CookieDescription: "Estas ratas han formado una sociedad de roedores super
+      inteligentes, a la m\xEDnima que puedan se van a aprovechar de la situaci\xF3n.
+      M\xE1s te vale tenerlas de tu lado."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: vacas
       m_ID: 190186940
       m_Initialized: 1
     m_CookieName: Vacas
-    m_CookieDescription: "Las mayores v\xEDctimas en esta historia."
+    m_CookieDescription: Las vacas de Meri, la Leches, son unos animales tiernos
+      que no paran de hacer leche, aunque a veces tienen rachas y necesitan un poco
+      de ayuda para seguir con sus labores.
     m_Image: {fileID: 0}
   m_RecipeData:
   - m_ID:
       m_NameID: malvavisco_fantasma_tostado
       m_ID: -662518070
       m_Initialized: 1
-    m_RecipeName: Receta para Malvavisco Fantasma Tostado
-    m_RecipeDescription: "No es el m\xE1s h\xE1bil, pero act\xFAa con entusiasmo."
+    m_RecipeName: Receta para Malvavisco Crudo
+    m_RecipeDescription: "El Malvavisco Crudo es un postre b\xE1sico dispuesto a
+      echar una mano con lo que haga falta, aunque no sirva para mucho.Bueno para
+      cuando no hay mucho que comer y pocas ganas de cocinar."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 0
@@ -1035,7 +1178,10 @@ MonoBehaviour:
       m_ID: 1705360255
       m_Initialized: 1
     m_RecipeName: Receta de Merengue Fantasma Tostado
-    m_RecipeDescription: Ayudante todoterreno perfecto para tareas sencillas.
+    m_RecipeDescription: "El Merengue Fantasma Tostado es un postre b\xE1sico, dulce,
+      blandito\u2026 pero a veces se cuela en las  habitaciones de la gente mientras
+      duermen y se queda mir\xE1ndolos haciendo ruidos de ultratumba. * WUO - WUO
+      - WUO - WUO - WUO - WUO - WUO * Que alguien llame a la polic\xEDa."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 75
@@ -1060,7 +1206,10 @@ MonoBehaviour:
       m_ID: 1282509517
       m_Initialized: 1
     m_RecipeName: Receta de Pepito de Ternura
-    m_RecipeDescription: Siempre dispuesto a ayudar.
+    m_RecipeDescription: "Cualquiera que sea el problema que tengas el Pepito de
+      Ternura va intentar resolverlo, aunque a lo mejor no es buena idea mandarlo
+      atacar a un a un grupo de lobos. Con su centro de crema dulce y su coraz\xF3n
+      brillante de chocolate eterno est\xE1 listo para salir a abrazar al mundo."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 250
@@ -1085,7 +1234,9 @@ MonoBehaviour:
       m_ID: -1684921852
       m_Initialized: 1
     m_RecipeName: Receta de Bizcotroll de Naranjas Somnolientas
-    m_RecipeDescription: "Es muy pac\xEDfico, pero no controla su propia fuerza"
+    m_RecipeDescription: "Se dice que el Bizcotroll forma parte del tr\xEDo de postres
+      h\xE9roes colosales, y que aunque se pasa gran parte del tiempo dormido, en
+      cuanto se despierta no duda en ayudar."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 500
@@ -1115,8 +1266,10 @@ MonoBehaviour:
       m_ID: 398001378
       m_Initialized: 1
     m_RecipeName: "Receta de Jaur\xEDa Bomb\xF3n Infernal"
-    m_RecipeDescription: "Tratan de ayudar de la forma m\xE1s violenta posible. Los
-      favoritos de Evith."
+    m_RecipeDescription: "Reci\xE9n salida del horno, la Jaur\xEDa Bomb\xF3n Infernal
+      son un grupo de bombones escupe compota candente, especializados en el ataque.
+      Con un n\xFAcleo de compota de mora infernal y una habanero ardiente en la
+      cola hace arder todo a su paso."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 0
@@ -1141,7 +1294,10 @@ MonoBehaviour:
       m_ID: -297091607
       m_Initialized: 1
     m_RecipeName: "Receta de Palad\xEDn Tortita"
-    m_RecipeDescription: "Gran defensor de la justicia con m\xE9todos muy violentos"
+    m_RecipeDescription: "El Palad\xEDn Tortita es el segundo postre colosal, tan
+      solo con levantar su espada de caramelo solidificado imparte da\xF1o en \xE1rea
+      en un segundo. Aunque sus capas de tortitas son tan suaves que se deshacen
+      en la boca, el caramelo que lo cubre lo protege de cualquier ataque."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 350
@@ -1171,7 +1327,10 @@ MonoBehaviour:
       m_ID: -651309878
       m_Initialized: 1
     m_RecipeName: Receta de Bizquiborracho de Mora
-    m_RecipeDescription: Intenta ser persuasivo, pero se le puede ir la mano.
+    m_RecipeDescription: "El bizcoborracho es un postre achispado que se zarandea
+      de un lado a otro con un un ritmo hipn\xF3tico. Entre su golosa capa de compota
+      y su bizcocho\u2026 HIP... borracho te convence de lo que sea \u2026 HIP-HIP\u2026
+      creo que no me mantengo en pie."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 0
@@ -1196,7 +1355,11 @@ MonoBehaviour:
       m_ID: 1999289801
       m_Initialized: 1
     m_RecipeName: Receta de Citrielfo en Copa
-    m_RecipeDescription: Es capaz de persuadir incluso a una mula. Aprobado por Nu.
+    m_RecipeDescription: "Los citrielfos son el tercer postre colosal. Siempre tienen
+      la raz\xF3n, o eso creen ellos, y da igual que est\xE9n equivocados, no tienen
+      problemas en mirarte por encima del hombre desde lo alto de su copa. Tan pronto
+      como la cara de su enemigo ponga expresi\xF3n de haber chupado un lim\xF3n
+      sabr\xE1 que su hechizo ha hecho efecto."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 150
@@ -1226,7 +1389,9 @@ MonoBehaviour:
       m_ID: -143907494
       m_Initialized: 1
     m_RecipeName: Receta de Atacar
-    m_RecipeDescription: "Para cuando la violencia puede ser la soluci\xF3n."
+    m_RecipeDescription: "Con esta galleta puedes acariciar fuertemente al objetivo
+      hasta que por un resval\xF3n tonto caiga al suelo. Si no quer\xEDa llegar a
+      este nivel, no s\xE9, que se hubiese portado bien."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 1
     m_Price_Good: 50
@@ -1246,7 +1411,8 @@ MonoBehaviour:
       m_ID: -949047606
       m_Initialized: 1
     m_RecipeName: Receta de Dialogar
-    m_RecipeDescription: "La soluci\xF3n m\xE1s diplom\xE1tica ante un problema"
+    m_RecipeDescription: "Hablar las cosas a veces est\xE1 bien, eso dicen\u2026
+      Mira primero se intenta convencer, luego ya se saca a Di\xE1logo."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 0
@@ -1266,7 +1432,8 @@ MonoBehaviour:
       m_ID: 223879643
       m_Initialized: 1
     m_RecipeName: Receta de Ayudar
-    m_RecipeDescription: Para echar una mano a alguien en apuros
+    m_RecipeDescription: "Cuando alguien est\xE9 en problemas usa esta galleta para
+      ayudarlos, no hay nada que un abrazo no pueda hacer."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 0
@@ -1286,7 +1453,10 @@ MonoBehaviour:
       m_ID: 963906251
       m_Initialized: 1
     m_RecipeName: Receta de Observar
-    m_RecipeDescription: "Observa detenidamente la situaci\xF3n antes de actuar"
+    m_RecipeDescription: "Mira. En realidad solo mira lo que pasa, observar esta
+      bien para entender a tus enemigos, conocerlos y aprender sus habitos y debilidades
+      para despu\xE9s\u2026 ATACAR Y VENGARSE POR EL DA\xD1O AL HONOR DE TU FAMILIA\u2026
+      o solo dialogar, con Di\xE1logo."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 50
@@ -1306,7 +1476,9 @@ MonoBehaviour:
       m_ID: -1436242079
       m_Initialized: 1
     m_RecipeName: Receta de Mirar fijamente
-    m_RecipeDescription: "Observa hasta el punto de llegar a ser inc\xF3modo"
+    m_RecipeDescription: "Mira, pero no mira para observar, te persigue con la mirada,
+      aunque no quieras, aunque cruces la calle, entres en tu casa, y te metas escondas
+      debajo de la mesa. TE ESTAMOS VIENDO\u2026 NO PUEDES ESCONDERTE."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 50
@@ -1326,7 +1498,9 @@ MonoBehaviour:
       m_ID: 1742979855
       m_Initialized: 1
     m_RecipeName: Receta de Robar
-    m_RecipeDescription: "Para la redistribuci\xF3n de bienes ajenos"
+    m_RecipeDescription: "Con esta galleta puedes coger prestado cosas de la v\xEDctima\u2026
+      quiero decir, objetivo. Un poco de despiste y lo que quieras puedes cogerlo
+      prestado, indefinidamente."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 0
@@ -1346,7 +1520,9 @@ MonoBehaviour:
       m_ID: -673659770
       m_Initialized: 1
     m_RecipeName: Receta de bate de beisbol
-    m_RecipeDescription: Una muestra de tus no tan buenas intenciones
+    m_RecipeDescription: "Un bate, tambi\xE9n llamado Di\xE1logo, es una galleta
+      muy socorrida cuando se te ponen un poco tontos, un suave golpecito y puedes
+      convencer a quien sea de cualquier cosa."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 50
@@ -1366,8 +1542,8 @@ MonoBehaviour:
       m_ID: 224560939
       m_Initialized: 1
     m_RecipeName: Receta de Tijeras
-    m_RecipeDescription: Muy puntiagudas. No es recomendable correr con ellas en
-      la mano.
+    m_RecipeDescription: Porque es por todos conocido que ayudar con unas tijeras
+      en la mano no asusta a nadie.
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 50
@@ -1392,7 +1568,9 @@ MonoBehaviour:
       m_ID: 738388376
       m_Initialized: 1
     m_RecipeName: Receta de Chanclas
-    m_RecipeDescription: El utensilio disuasorio por excelencia
+    m_RecipeDescription: "Da igual d\xF3nde est\xE9 el objetivo, cuando una chancla
+      se lanza lo encuentra y golpea el cogote de todo aqu\xE9l que haya a cinco
+      kil\xF3metros a la redonda.  *FLIP-FLOP-FLIP-FLOP-FLIP-FLOP-FLIP-FLOP* \xA1CORRE!"
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 50
@@ -1417,7 +1595,9 @@ MonoBehaviour:
       m_ID: -1966748430
       m_Initialized: 1
     m_RecipeName: Receta de Tarta
-    m_RecipeDescription: Una muestra de tus buenas intenciones
+    m_RecipeDescription: "En serio, \xBFa qu\xE9 clase de persona perturbada se le
+      ocurri\xF3 meter un pastel como objeto? \xBFAtacar con un pastel? Mirar fijamente
+      con un pastel\u2026 perturbador."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 10
@@ -1437,7 +1617,9 @@ MonoBehaviour:
       m_ID: -1715915298
       m_Initialized: 1
     m_RecipeName: Receta de Violentamente
-    m_RecipeDescription: Insiste de manera agresiva
+    m_RecipeDescription: "La violencia nunca es la soluci\xF3n, bueno si alguien
+      se pone un poco tonto se le puede acaricial violentamente la cara hasta que
+      entre en raz\xF3n, pero s\xF3lo cuando Di\xE1logo no ha funcionado."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 50
@@ -1457,7 +1639,8 @@ MonoBehaviour:
       m_ID: 83815085
       m_Initialized: 1
     m_RecipeName: Receta de Brutalmente
-    m_RecipeDescription: "La paz nunca fue una opci\xF3n"
+    m_RecipeDescription: "Todo ataque se magnifica con esta galleta, pero  no nos
+      pasemos, los trajes para funerales est\xE1n caros en esta \xE9poca del a\xF1o."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 10
@@ -1477,7 +1660,9 @@ MonoBehaviour:
       m_ID: 2072750721
       m_Initialized: 1
     m_RecipeName: Receta de Amablemente
-    m_RecipeDescription: "Act\xFAa con ternura"
+    m_RecipeDescription: "Con esta galleta toda acci\xF3n que hagas se suavizar\xE1,
+      porque es por todos conocidos que atacar amablemente es m\xE1s gentil que hacerlo
+      violentamente."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 0
@@ -1497,7 +1682,9 @@ MonoBehaviour:
       m_ID: 1186496505
       m_Initialized: 1
     m_RecipeName: Receta de Convincentemente
-    m_RecipeDescription: "Demuestra que est\xE1n equivocados"
+    m_RecipeDescription: "Como dice mi abuela \u201CM\xE1s vale ma\xF1a que mil p\xE1jaros
+      volando\u201D, bueno, esa se\xF1ora nunca estuvo en sus cabales, pero lo que
+      viene a significar es que nunca olvides el poder de la persuasi\xF3n."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 0
@@ -6783,16 +6970,16 @@ MonoBehaviour:
         m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
-          m_Name: 
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
           m_Active: 0
-          m_Value: 0
+          m_Value: -100
       - m_Condition:
           m_Target:
             m_NameID: mayor
@@ -6809,16 +6996,16 @@ MonoBehaviour:
         m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
-          m_Name: 
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
           m_Active: 0
-          m_Value: 0
+          m_Value: 100
       - m_Condition:
           m_Target:
             m_NameID: mayor
@@ -6832,16 +7019,16 @@ MonoBehaviour:
         m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
-          m_Name: 
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
           m_Active: 0
-          m_Value: 0
+          m_Value: 100
       m_AllPossibleTargets:
       - m_NameID: mayor
         m_ID: 996742298
@@ -6913,16 +7100,16 @@ MonoBehaviour:
         m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
-          m_Name: 
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
           m_Active: 0
-          m_Value: 0
+          m_Value: -100
       - m_Condition:
           m_Target:
             m_NameID: mayor
@@ -6939,16 +7126,16 @@ MonoBehaviour:
         m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
-          m_Name: 
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
           m_Active: 0
-          m_Value: 0
+          m_Value: 100
       - m_Condition:
           m_Target:
             m_NameID: mayor
@@ -6964,16 +7151,16 @@ MonoBehaviour:
         m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
-          m_Name: 
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
           m_Active: 0
-          m_Value: 0
+          m_Value: 100
       m_AllPossibleTargets:
       - m_NameID: mayor
         m_ID: 996742298
@@ -7045,16 +7232,16 @@ MonoBehaviour:
         m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
-          m_Name: 
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
           m_Active: 0
-          m_Value: 0
+          m_Value: -100
       - m_Condition:
           m_Target:
             m_NameID: meri
@@ -7070,16 +7257,16 @@ MonoBehaviour:
         m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
-          m_Name: 
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
           m_Active: 0
-          m_Value: 0
+          m_Value: 100
       - m_Condition:
           m_Target:
             m_NameID: meri
@@ -7096,16 +7283,16 @@ MonoBehaviour:
         m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
-          m_Name: 
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
           m_Active: 0
-          m_Value: 0
+          m_Value: 100
       m_AllPossibleTargets:
       - m_NameID: meri
         m_ID: -918260377
@@ -7179,16 +7366,16 @@ MonoBehaviour:
         m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
-          m_Name: 
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
           m_Active: 0
-          m_Value: 0
+          m_Value: -100
       - m_Condition:
           m_Target:
             m_NameID: mayor
@@ -7205,16 +7392,16 @@ MonoBehaviour:
         m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
-          m_Name: 
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
           m_Active: 0
-          m_Value: 0
+          m_Value: 100
       - m_Condition:
           m_Target:
             m_NameID: mayor
@@ -7231,16 +7418,16 @@ MonoBehaviour:
         m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
-          m_Name: 
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
           m_Active: 0
-          m_Value: 0
+          m_Value: 100
       m_AllPossibleTargets:
       - m_NameID: mayor
         m_ID: 996742298
@@ -7315,16 +7502,16 @@ MonoBehaviour:
         m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
-          m_Name: 
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
           m_Active: 0
-          m_Value: 0
+          m_Value: -100
       - m_Condition:
           m_Target:
             m_NameID: wolves
@@ -7341,16 +7528,16 @@ MonoBehaviour:
         m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
-          m_Name: 
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
           m_Active: 0
-          m_Value: 0
+          m_Value: 100
       - m_Condition:
           m_Target:
             m_NameID: wolves
@@ -7368,16 +7555,16 @@ MonoBehaviour:
         m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
-          m_Name: 
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
           m_Active: 0
-          m_Value: 0
+          m_Value: 100
       m_AllPossibleTargets:
       - m_NameID: wolves
         m_ID: -1938852922
@@ -7448,16 +7635,16 @@ MonoBehaviour:
         m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
-          m_Name: 
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
           m_Active: 0
-          m_Value: 0
+          m_Value: -100
       - m_Condition:
           m_Target:
             m_NameID: wolves
@@ -7472,16 +7659,16 @@ MonoBehaviour:
         m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
-          m_Name: 
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
           m_Active: 0
-          m_Value: 0
+          m_Value: 100
       - m_Condition:
           m_Target:
             m_NameID: wolves
@@ -7496,16 +7683,16 @@ MonoBehaviour:
         m_DeitiesResultDialogue: []
         m_Repercusion:
           m_ID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
           m_ParentStoryID:
-            m_NameID: 
-            m_ID: 0
-            m_Initialized: 0
-          m_Name: 
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
           m_Active: 0
-          m_Value: 0
+          m_Value: 100
       m_AllPossibleTargets:
       - m_NameID: wolves
         m_ID: -1938852922
@@ -7547,6 +7734,151 @@ MonoBehaviour:
       m_Name: 
       m_Active: 0
       m_Value: 0
+  m_StoryUI:
+  - m_ParentStoryID:
+      m_NameID: mayor_problem
+      m_ID: -600069758
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 955648f86f7437c4d83f982a26431630, type: 3}
+    m_Title: El Problema del Alcalde
+  - m_ParentStoryID:
+      m_NameID: out_of_lactose
+      m_ID: 1134344292
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 6f5f7f2fb0ff53544ade6dca2233f3f3, type: 3}
+    m_Title: Falta de Lactosa
+  - m_ParentStoryID:
+      m_NameID: sacred_egg
+      m_ID: 2133386136
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
+    m_Title: El Huevo Sagrado
+  - m_ParentStoryID:
+      m_NameID: explosive_chocolate
+      m_ID: -819324724
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 0b01fc78af86a0a4fb521de9914dcb07, type: 3}
+    m_Title: Chocolate explosivo
+  - m_ParentStoryID:
+      m_NameID: not_so_dirty_rats
+      m_ID: 1589037026
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: aa803b24573e9ed40bb9e977d2e0551b, type: 3}
+    m_Title: Ratas no tan sucias
+  - m_ParentStoryID:
+      m_NameID: stingy_taxes
+      m_ID: 1184286464
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: e212c421c506dff46bdeec1804b46400, type: 3}
+    m_Title: "Impuestos para el taca\xF1o"
+  - m_ParentStoryID:
+      m_NameID: crazy_cows
+      m_ID: -112750320
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 59e16419a5901d745b465b8fc2eba137, type: 3}
+    m_Title: Las vacas locas
+  - m_ParentStoryID:
+      m_NameID: the_cake_was_not_a_lie
+      m_ID: 2026914235
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: e0229d153771a4b439a803d2b546a4df, type: 3}
+    m_Title: La tarta no era de mentira
+  - m_ParentStoryID:
+      m_NameID: the_lord_of_the_ducks
+      m_ID: -1752020074
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: e8d442410434b174d92c1b1972ca01eb, type: 3}
+    m_Title: "El Se\xF1or de los Patos"
+  - m_ParentStoryID:
+      m_NameID: natural_chocolate_milkshake
+      m_ID: 1761273306
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: edb495e164252af4ab49399e5214ed20, type: 3}
+    m_Title: Batido de chocolate 100% natural
+  - m_ParentStoryID:
+      m_NameID: the_stolen_pendant
+      m_ID: -277480216
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: f680bc7e40d2ef442af1dfe3f23f7214, type: 3}
+    m_Title: El Colgante Robado
+  - m_ParentStoryID:
+      m_NameID: a_regular_day
+      m_ID: 1582812731
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 2d0682f5d7d0579499388e5f687b44a3, type: 3}
+    m_Title: "Un d\xEDa normal"
+  - m_ParentStoryID:
+      m_NameID: mushroom_profecy
+      m_ID: 432792811
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 4f755541196e36241af97767d0ad959b, type: 3}
+    m_Title: "La profec\xEDa del hongo"
+  - m_ParentStoryID:
+      m_NameID: mayor_worries
+      m_ID: -1677399016
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: d939d6c2b15b03e4394f1b6b5a21f3f1, type: 3}
+    m_Title: Preocupaciones mayores
+  - m_ParentStoryID:
+      m_NameID: old_friends
+      m_ID: 34470229
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 10038789df0db1d4d8e5129e38c9b215, type: 3}
+    m_Title: Viejos amigos
+  - m_ParentStoryID:
+      m_NameID: high_voltage_treatment
+      m_ID: 2011480556
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: cd81f4bf9b0dee744bdaa96831c82f0e, type: 3}
+    m_Title: Tratamiento de alto voltaje
+  - m_ParentStoryID:
+      m_NameID: full_artifact_panic
+      m_ID: -876801430
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 5e35d512ac9364f40b9e2ba6fe9980b1, type: 3}
+    m_Title: "P\xE1nico de antiguallas"
+  - m_ParentStoryID:
+      m_NameID: fungal_metamorphosis
+      m_ID: -803286025
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: f837aaa230588b74bb206ecd32961602, type: 3}
+    m_Title: "Metamorfosis F\xFAngica"
+  - m_ParentStoryID:
+      m_NameID: floral_collect
+      m_ID: -378513025
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: d25200bc21557694eac611573c437ced, type: 3}
+    m_Title: Colecta Floral
+  - m_ParentStoryID:
+      m_NameID: without_bread
+      m_ID: -1285332401
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 81cd882bbc7983b4dbe74b082b9932b8, type: 3}
+    m_Title: "\xBFNos quedamos sin pan?"
+  - m_ParentStoryID:
+      m_NameID: cupcakes_everywhere
+      m_ID: -1378443194
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: cefe836507776224c8869a159a0a21f5, type: 3}
+    m_Title: Pasteles por doquier
+  - m_ParentStoryID:
+      m_NameID: forgotten_bell
+      m_ID: -1482732292
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: f2d54dcf924b6c849b47be55b891ad96, type: 3}
+    m_Title: Campana Olvidada
+  - m_ParentStoryID:
+      m_NameID: the_beast
+      m_ID: 245706583
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 7f934de4e39faa740bffdb7fd57ce33a, type: 3}
+    m_Title: La Bestia
+  - m_ParentStoryID:
+      m_NameID: saving_the_wheat
+      m_ID: -610529568
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: b88c1aa4e4e0aa248a696a38fc52a1b9, type: 3}
+    m_Title: Hay Que Salvar El Trigo
   m_Repercusions:
   - m_ID:
       m_NameID: wolves_gone
@@ -8142,6 +8474,28 @@ MonoBehaviour:
     m_Name: Johnny Trance Convinced
     m_Active: 0
     m_Value: 10
+  - m_ID:
+      m_NameID: default_negative
+      m_ID: 1425642479
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: fungal_metamorphosis
+      m_ID: -803286025
+      m_Initialized: 1
+    m_Name: Default Negative
+    m_Active: 0
+    m_Value: -100
+  - m_ID:
+      m_NameID: default_positive
+      m_ID: -408600673
+      m_Initialized: 1
+    m_ParentStoryID:
+      m_NameID: fungal_metamorphosis
+      m_ID: -803286025
+      m_Initialized: 1
+    m_Name: Default Positive
+    m_Active: 0
+    m_Value: 100
   m_RepercusionNewspaperArticles:
   - m_RepID:
       m_NameID: wolves_gone
@@ -8787,151 +9141,6 @@ MonoBehaviour:
     m_Title: "La nueva afici\xF3n del alquimista."
     m_Body: El joven alquimista, cuyo aspecto preocupaba a los vecinos, ha afirmado
       que va a dedicarse a la venta de galletas de manera paralela a su negocio habitual.
-  m_StoryUI:
-  - m_ParentStoryID:
-      m_NameID: mayor_problem
-      m_ID: -600069758
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: 955648f86f7437c4d83f982a26431630, type: 3}
-    m_Title: El Problema del Alcalde
-  - m_ParentStoryID:
-      m_NameID: out_of_lactose
-      m_ID: 1134344292
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: 6f5f7f2fb0ff53544ade6dca2233f3f3, type: 3}
-    m_Title: Falta de Lactosa
-  - m_ParentStoryID:
-      m_NameID: sacred_egg
-      m_ID: 2133386136
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
-    m_Title: El Huevo Sagrado
-  - m_ParentStoryID:
-      m_NameID: explosive_chocolate
-      m_ID: -819324724
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: 0b01fc78af86a0a4fb521de9914dcb07, type: 3}
-    m_Title: Chocolate explosivo
-  - m_ParentStoryID:
-      m_NameID: not_so_dirty_rats
-      m_ID: 1589037026
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: aa803b24573e9ed40bb9e977d2e0551b, type: 3}
-    m_Title: Ratas no tan sucias
-  - m_ParentStoryID:
-      m_NameID: stingy_taxes
-      m_ID: 1184286464
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: e212c421c506dff46bdeec1804b46400, type: 3}
-    m_Title: "Impuestos para el taca\xF1o"
-  - m_ParentStoryID:
-      m_NameID: crazy_cows
-      m_ID: -112750320
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: 59e16419a5901d745b465b8fc2eba137, type: 3}
-    m_Title: Las vacas locas
-  - m_ParentStoryID:
-      m_NameID: the_cake_was_not_a_lie
-      m_ID: 2026914235
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: e0229d153771a4b439a803d2b546a4df, type: 3}
-    m_Title: La tarta no era de mentira
-  - m_ParentStoryID:
-      m_NameID: the_lord_of_the_ducks
-      m_ID: -1752020074
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: e8d442410434b174d92c1b1972ca01eb, type: 3}
-    m_Title: "El Se\xF1or de los Patos"
-  - m_ParentStoryID:
-      m_NameID: natural_chocolate_milkshake
-      m_ID: 1761273306
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: edb495e164252af4ab49399e5214ed20, type: 3}
-    m_Title: Batido de chocolate 100% natural
-  - m_ParentStoryID:
-      m_NameID: the_stolen_pendant
-      m_ID: -277480216
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: f680bc7e40d2ef442af1dfe3f23f7214, type: 3}
-    m_Title: El Colgante Robado
-  - m_ParentStoryID:
-      m_NameID: a_regular_day
-      m_ID: 1582812731
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: 2d0682f5d7d0579499388e5f687b44a3, type: 3}
-    m_Title: "Un d\xEDa normal"
-  - m_ParentStoryID:
-      m_NameID: mushroom_profecy
-      m_ID: 432792811
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: 4f755541196e36241af97767d0ad959b, type: 3}
-    m_Title: "La profec\xEDa del hongo"
-  - m_ParentStoryID:
-      m_NameID: mayor_worries
-      m_ID: -1677399016
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: d939d6c2b15b03e4394f1b6b5a21f3f1, type: 3}
-    m_Title: Preocupaciones mayores
-  - m_ParentStoryID:
-      m_NameID: old_friends
-      m_ID: 34470229
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: 10038789df0db1d4d8e5129e38c9b215, type: 3}
-    m_Title: Viejos amigos
-  - m_ParentStoryID:
-      m_NameID: high_voltage_treatment
-      m_ID: 2011480556
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: cd81f4bf9b0dee744bdaa96831c82f0e, type: 3}
-    m_Title: Tratamiento de alto voltaje
-  - m_ParentStoryID:
-      m_NameID: full_artifact_panic
-      m_ID: -876801430
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: 5e35d512ac9364f40b9e2ba6fe9980b1, type: 3}
-    m_Title: "P\xE1nico de antiguallas"
-  - m_ParentStoryID:
-      m_NameID: fungal_metamorphosis
-      m_ID: -803286025
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: f837aaa230588b74bb206ecd32961602, type: 3}
-    m_Title: "Metamorfosis F\xFAngica"
-  - m_ParentStoryID:
-      m_NameID: floral_collect
-      m_ID: -378513025
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: d25200bc21557694eac611573c437ced, type: 3}
-    m_Title: Colecta Floral
-  - m_ParentStoryID:
-      m_NameID: without_bread
-      m_ID: -1285332401
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: 81cd882bbc7983b4dbe74b082b9932b8, type: 3}
-    m_Title: "\xBFNos quedamos sin pan?"
-  - m_ParentStoryID:
-      m_NameID: cupcakes_everywhere
-      m_ID: -1378443194
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: cefe836507776224c8869a159a0a21f5, type: 3}
-    m_Title: Pasteles por doquier
-  - m_ParentStoryID:
-      m_NameID: forgotten_bell
-      m_ID: -1482732292
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: f2d54dcf924b6c849b47be55b891ad96, type: 3}
-    m_Title: Campana Olvidada
-  - m_ParentStoryID:
-      m_NameID: the_beast
-      m_ID: 245706583
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: 7f934de4e39faa740bffdb7fd57ce33a, type: 3}
-    m_Title: La Bestia
-  - m_ParentStoryID:
-      m_NameID: saving_the_wheat
-      m_ID: -610529568
-      m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: b88c1aa4e4e0aa248a696a38fc52a1b9, type: 3}
-    m_Title: Hay Que Salvar El Trigo
 --- !u!114 &6330534342466683427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9475,6 +9684,15 @@ MonoBehaviour:
     - m_NameID: mayor_robbed
       m_ID: -2038562937
       m_Initialized: 1
+    - m_NameID: mayor_alerted
+      m_ID: 484283042
+      m_Initialized: 1
+    - m_NameID: mayor_relaxed
+      m_ID: -2113343638
+      m_Initialized: 1
+    - m_NameID: mayor_ignore
+      m_ID: -1511038957
+      m_Initialized: 1
   - m_ID:
       m_NameID: meri_rancho
       m_ID: -1291356903
@@ -9501,6 +9719,15 @@ MonoBehaviour:
       m_Initialized: 1
     - m_NameID: cows_and_goats_reversed
       m_ID: 739513102
+      m_Initialized: 1
+    - m_NameID: wolves_victorious
+      m_ID: 1729199620
+      m_Initialized: 1
+    - m_NameID: rats_victorious
+      m_ID: -572065660
+      m_Initialized: 1
+    - m_NameID: rats_mounting_wolves
+      m_ID: -1323766611
       m_Initialized: 1
   - m_ID:
       m_NameID: canela_home
@@ -9535,6 +9762,15 @@ MonoBehaviour:
     - m_NameID: pendant_lost
       m_ID: -421804841
       m_Initialized: 1
+    - m_NameID: living_artifacts_destroyed
+      m_ID: 784405313
+      m_Initialized: 1
+    - m_NameID: living_artifacts_stopped
+      m_ID: -1800228245
+      m_Initialized: 1
+    - m_NameID: living_artifacts_servants
+      m_ID: 1237735130
+      m_Initialized: 1
   - m_ID:
       m_NameID: chocolate_home
       m_ID: 1959417174
@@ -9564,6 +9800,15 @@ MonoBehaviour:
       m_Initialized: 1
     - m_NameID: cows_experiment_delayed
       m_ID: 29767469
+      m_Initialized: 1
+    - m_NameID: ms_chocolate_experiment_canceled
+      m_ID: -1625747117
+      m_Initialized: 1
+    - m_NameID: ms_chocolate_experiment_success
+      m_ID: -883721373
+      m_Initialized: 1
+    - m_NameID: ms_chocolate_great_success
+      m_ID: -1530310121
       m_Initialized: 1
   - m_ID:
       m_NameID: mantecas_home
@@ -9595,6 +9840,18 @@ MonoBehaviour:
     - m_NameID: ducks_help
       m_ID: 11475594
       m_Initialized: 1
+    - m_NameID: mantecas_farm_damaged
+      m_ID: 1496986625
+      m_Initialized: 1
+    - m_NameID: mantecas_farm_devastated
+      m_ID: -1421179957
+      m_Initialized: 1
+    - m_NameID: mantecas_farm_revitalized
+      m_ID: -1558447323
+      m_Initialized: 1
+    - m_NameID: mantecas_paranoic
+      m_ID: -2043321078
+      m_Initialized: 1
   - m_ID:
       m_NameID: johnny_home
       m_ID: -614040492
@@ -9612,4 +9869,25 @@ MonoBehaviour:
       m_Initialized: 1
     - m_NameID: competition_safe
       m_ID: -1165341605
+      m_Initialized: 1
+    - m_NameID: johnny_sabotaged
+      m_ID: 1261100355
+      m_Initialized: 1
+    - m_NameID: johnny_enhanced
+      m_ID: -1753202715
+      m_Initialized: 1
+    - m_NameID: johnny_neutral
+      m_ID: 1654980862
+      m_Initialized: 1
+    - m_NameID: johnny_trance_interruptded
+      m_ID: 1803522837
+      m_Initialized: 1
+    - m_NameID: johnny_transformed
+      m_ID: 1665577868
+      m_Initialized: 1
+    - m_NameID: johnny_trance_achieved
+      m_ID: -1596210974
+      m_Initialized: 1
+    - m_NameID: johnny_trance_convinced
+      m_ID: -309647702
       m_Initialized: 1

@@ -65,9 +65,9 @@ public class ShopSystem : ISystemEvents
         if (enoughMoneyToBuy)
         {
             if (recipe.m_Price_Good > 0)
-                _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(Reputation.GoodCookieReputation, -recipe.m_Price_Good));
+                _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(Karma.GoodKarma, -recipe.m_Price_Good));
             if (recipe.m_Price_Evil > 0)
-                _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(Reputation.EvilCookieReputation, -recipe.m_Price_Evil));
+                _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(Karma.EvilKarma, -recipe.m_Price_Evil));
             _unlockRecipeCmd.Invoke(recipe.m_PieceID);
             _updateShopCallback.Invoke(true);
             //_buyRecipeCmdREFACTOR.Invoke();
@@ -96,9 +96,9 @@ public class ShopSystem : ISystemEvents
             if (enoughMoneyToBuy)
             {
                 if (ingredient.m_Price_Good > 0)
-                    _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(Reputation.GoodCookieReputation, -ingredient.m_Price_Good));
+                    _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(Karma.GoodKarma, -ingredient.m_Price_Good));
                 if (ingredient.m_Price_Evil > 0)
-                    _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(Reputation.EvilCookieReputation, -ingredient.m_Price_Evil));
+                    _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(Karma.EvilKarma, -ingredient.m_Price_Evil));
                 //_unlockRecipeCmd.Invoke(recipe.m_PieceID);
                 ItemData newIngredient = new ItemData(selectedIngredientId, 1);
                 _addIngredient.Invoke(newIngredient);

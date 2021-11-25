@@ -9,7 +9,7 @@ namespace CQM.Components
         public string m_Name;
         public Sprite m_Sprite;
 
-        public Reputation m_ReputationTypePrice = Reputation.GoodCookieReputation;
+        public Karma m_ReputationTypePrice = Karma.GoodKarma;
         public int m_Price_Good;
         public int m_Price_Evil;
     }

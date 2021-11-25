@@ -2213,6 +2213,9 @@ namespace CQM.DataBuilders
 
             void SecondaryStories()
             {
+                CreateRepercusion("default_negative", "Default Negative", -100);
+                CreateRepercusion("default_positive", "Default Positive", 100);
+
                 ColectaFloral();
                 void ColectaFloral()
                 {
@@ -2224,6 +2227,7 @@ namespace CQM.DataBuilders
 
                     //HARM >=1
                     StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "Parece que la idea de decorar el pueblo con flores no ha gustado demasiado. ¡El campo de flores está destrozado!",
                 "No lo entiendo, con lo bonitas que son. No sé quién haría algo así. Y para colmo, el pueblo seguirá luciendo aburrido."
@@ -2231,6 +2235,7 @@ namespace CQM.DataBuilders
 
                     //HELP >=1
                     StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "¡No me lo puedo creer! ¡El pueblo ha amanecido más bello que nunca! Al parecer, alguien se ha dedicado a plantar las flores durante la noche.",
                 "Se me hace un poco raro, pero quien quiera que sea, se preocupa mucho por el pueblo."
@@ -2238,6 +2243,7 @@ namespace CQM.DataBuilders
 
                     //CONVINCE >=1
                     StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "¡Todos han decidido recoger flores para mejorar la imagen del pueblo! Sin duda, ésto atraerá a más turistas y la economía mejorará."
             }, Tag.Convince, 1, "mayor");
@@ -2256,6 +2262,7 @@ namespace CQM.DataBuilders
 
                     //HARM >=1
                     StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "¡Pero quién habrá podido ser! El pobre panadero tiene muy mala suerte. Han destrozado su panadería en la noche.",
                 "Además de enfermo, ¡ahora estará arruinado! Ojalá pillen al responsable de esto."
@@ -2263,6 +2270,7 @@ namespace CQM.DataBuilders
 
                     //HELP >=1
                     StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "¡No te lo vas a creer! Han aparecido cajas con bastantes barras de pan en todo el pueblo.",
                 "Parece que alguien de fuera se ha enterado y ha decidido echarnos una mano mandándonos provisiones de pan mientras el panadero se recupera.",
@@ -2271,6 +2279,7 @@ namespace CQM.DataBuilders
 
                     //CONVINCE >=1
                     StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "Al parecer, algunas personas han decidido aprender el oficio del panadero para ayudarle en su negocio. ¡Qué gente más considerada!",
                 "Puede que la panadería abra antes de lo esperado, ¡o incluso puede que se abran más!"
@@ -2293,6 +2302,7 @@ namespace CQM.DataBuilders
 
                     //HARM >=1
                     StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "Creo que han tirado trozos de pastel a la fachada de una granja.",
                 "No creo que le haga mucha gracia al dueño, sobre todo sabiendo que luego tendrá que lidiar con las criaturas que vengan por el olor."
@@ -2300,6 +2310,7 @@ namespace CQM.DataBuilders
 
                     //HELP >=1
                     StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "¿Lo sabías? Han aparecido tartas envueltas con un moño en las puertas de las casas del pueblo.",
                 "Parece que alguien le tiene mucho aprecio a toda la gente de aquí.",
@@ -2308,6 +2319,7 @@ namespace CQM.DataBuilders
 
                     //CONVINCE >=1
                     StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "Me he enterado que pronto van a organizar un concurso de pasteles en la plaza del pueblo.",
                 "¡Vendrán también pasteleros de las ciudades vecinas! Además, tras acabar el concurso, ¡invitarán a todos a tarta! No va a quedar ni uno."
@@ -2330,6 +2342,7 @@ namespace CQM.DataBuilders
 
                     //HARM >=1
                     StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "Me he enterado que la vieja campana del ayuntamiento ha amanecido hoy hecha una pena.",
                 "Alguien la ha pintarrajeado y le han abierto más grietas.",
@@ -2338,6 +2351,7 @@ namespace CQM.DataBuilders
 
                     //HELP >=1
                     StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "Algún amante de las campanas ha decidido restaurar por completo la vieja campana del ayuntamiento.",
                 "¡Brilla más que cuando la compraron de segunda mano!",
@@ -2346,6 +2360,7 @@ namespace CQM.DataBuilders
 
                     //CONVINCE >=1
                     StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "Han anunciado que la vieja campana del ayuntamiento volverá a sonar.",
                 "Lo hará para dar comienzo a las ceremonias o eventos que haya en el pueblo.",
@@ -2369,6 +2384,7 @@ namespace CQM.DataBuilders
 
                     //HARM >=1
                     StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "¡El monstruo que rugía en las noches resultó ser un lobo! Solo que era bastante más grande de lo normal.",
                 "Alguien ha decidido hacerle frente y de alguna manera lo ha aniquilado.",
@@ -2377,6 +2393,7 @@ namespace CQM.DataBuilders
 
                     //HELP >=1
                     StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "¡Ha ocurrido una tragedia! El monstruo ha empezado a atacar a los animales de las granjas.",
                 "No sabemos cómo ha podido sortear las robustas verjas de las granjas, alguien ha tenido que sabotearlas.",
@@ -2385,6 +2402,7 @@ namespace CQM.DataBuilders
 
                     //CONVINCE >=1
                     StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "¡No te lo vas a creer! El monstruo era en realidad un lobo muy grande.",
                 "Lo sé porque esta mañana apareció en medio de la plaza, pero estaba muy tranquilo y, al parecer, sin ninguna intención de atacar a nadie.",
@@ -2407,6 +2425,7 @@ namespace CQM.DataBuilders
 
                     //HARM >=1
                     StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "Lo que me temía. Las plagas han destrozado los cultivos de los cereales de la noche a la mañana.",
                 "Este año habrá que comprarlas de otro sitio, pero no serán baratas."
@@ -2414,6 +2433,7 @@ namespace CQM.DataBuilders
 
                     //HELP >=1
                     StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "Por alguna razón, están dejando de aparecer los plagas que se estaban comiendo los cereales.",
                 "¡Es un gran golpe de suerte! Ojalá que ésto siga así."
@@ -2421,6 +2441,7 @@ namespace CQM.DataBuilders
 
                     //CONVINCE >=1
                     StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "Se ha decidido empezar a cosechar hoy mismo los cereales, aunque no todos estén del todo maduros.",
                 "¡Mejor prevenir que quedarse sin cereales!"
