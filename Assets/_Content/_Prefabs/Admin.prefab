@@ -120,14 +120,14 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
   m_InventoryComponent:
-    m_GoodCookieReputation: 0
-    m_EvilCookieReputation: 0
+    m_GoodKarma: 0
+    m_EvilKarma: 0
     m_UnlockedRecipes: []
     m_Pieces: []
     m_Ingredients: []
   m_AudioDataComponent: {fileID: 6237327885706763189}
   m_AudioClipsComponent: {fileID: 11400000, guid: 6cc4b39f34e60f94b8a39ec0b52f6263, type: 2}
-  m_StoriesStateComponent:
+  m_GameStoriesStateComponent:
     m_MainStoriesToStartOrder: []
     m_AvailableSecondaryStoriesToStart: []
     m_AllSecondaryStories: []

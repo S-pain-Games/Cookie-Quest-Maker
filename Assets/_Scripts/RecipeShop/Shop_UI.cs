@@ -135,8 +135,8 @@ public class Shop_UI : MonoBehaviour
                 return;
         }
        
-        text_good_rep.text = _inventoryData.m_GoodCookieReputation.ToString();
-        text_evil_rep.text = _inventoryData.m_EvilCookieReputation.ToString();
+        text_good_rep.text = _inventoryData.m_GoodKarma.ToString();
+        text_evil_rep.text = _inventoryData.m_EvilKarma.ToString();
 
         //0: Convice, 1: Help, 2: Harm 
         text_stat_1.text = "0";
@@ -176,7 +176,7 @@ public class Shop_UI : MonoBehaviour
                 image_nu.SetActive(true);
                 text_good_price.text = recipe.m_Price_Good.ToString();
 
-                if(_inventoryData.m_GoodCookieReputation < recipe.m_Price_Good)
+                if(_inventoryData.m_GoodKarma < recipe.m_Price_Good)
                 {
                     text_good_price.color = colorRed;
                 }
@@ -189,7 +189,7 @@ public class Shop_UI : MonoBehaviour
                 image_evith.SetActive(true);
                 text_evil_price.text = recipe.m_Price_Evil.ToString();
 
-                if (_inventoryData.m_EvilCookieReputation < recipe.m_Price_Evil)
+                if (_inventoryData.m_EvilKarma < recipe.m_Price_Evil)
                 {
                     text_evil_price.color = colorRed;
                 }
@@ -215,7 +215,7 @@ public class Shop_UI : MonoBehaviour
                 image_nu.SetActive(true);
                 text_good_price.text = ingredient.m_Price_Good.ToString();
 
-                if (_inventoryData.m_GoodCookieReputation < ingredient.m_Price_Good)
+                if (_inventoryData.m_GoodKarma < ingredient.m_Price_Good)
                 {
                     text_good_price.color = colorRed;
                 }
@@ -228,7 +228,7 @@ public class Shop_UI : MonoBehaviour
                 image_evith.SetActive(true);
                 text_evil_price.text = ingredient.m_Price_Evil.ToString();
 
-                if (_inventoryData.m_EvilCookieReputation < ingredient.m_Price_Evil)
+                if (_inventoryData.m_EvilKarma < ingredient.m_Price_Evil)
                 {
                     text_evil_price.color = colorRed;
                 }

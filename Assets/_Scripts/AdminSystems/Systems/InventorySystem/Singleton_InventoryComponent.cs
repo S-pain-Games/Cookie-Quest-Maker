@@ -8,8 +8,8 @@ namespace CQM.Components
     public class Singleton_InventoryComponent
     {
         // Reputation
-        public int m_GoodCookieReputation;
-        public int m_EvilCookieReputation;
+        public int m_GoodKarma;
+        public int m_EvilKarma;
 
         // List of unlocked word pieces (Actions, Modifiers, Objects)
         public List<ID> m_UnlockedRecipes = new List<ID>();

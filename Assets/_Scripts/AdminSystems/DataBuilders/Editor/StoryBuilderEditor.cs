@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using CQM.Databases;
+using CQM.DataBuilders;
 
 [CustomEditor(typeof(StoryBuilder))]
 public class StoryBuilderEditor : Editor

@@ -1,28 +1,30 @@
 ﻿using CQM.AssetReferences;
 using CQM.Components;
+using CQM.Databases;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 using PieceType = CQM.Components.QuestPieceFunctionalComponent.PieceType;
 using Tag = CQM.Components.QPTag.TagType;
 
-namespace CQM.Databases
+
+namespace CQM.DataBuilders
 {
     [Serializable]
-    public class PieceBuilder : MonoBehaviour
+    public class PieceBuilder : BaseDataBuilder
     {
         [SerializeField] private CookieReferencesDatabase _cookieReferences;
 
         // Output Components
-        public List<QuestPieceFunctionalComponent> m_QuestPieceFunctionalComponents = new List<QuestPieceFunctionalComponent>();
-        public List<QuestPieceUIComponent> m_QuestPieceUIComponent = new List<QuestPieceUIComponent>();
-        public List<QuestPiecePrefabComponent> m_QuestPiecePrefabComponent = new List<QuestPiecePrefabComponent>();
-        public List<CookieDataComponent> m_CookieData = new List<CookieDataComponent>();
-        public List<RecipeDataComponent> m_RecipeData = new List<RecipeDataComponent>();
+        [SerializeField] private List<QuestPieceFunctionalComponent> m_QuestPieceFunctionalComponents = new List<QuestPieceFunctionalComponent>();
+        [SerializeField] private List<QuestPieceUIComponent> m_QuestPieceUIComponent = new List<QuestPieceUIComponent>();
+        [SerializeField] private List<QuestPiecePrefabComponent> m_QuestPiecePrefabComponent = new List<QuestPiecePrefabComponent>();
+        [SerializeField] private List<CookieDataComponent> m_CookieData = new List<CookieDataComponent>();
+        [SerializeField] private List<RecipeDataComponent> m_RecipeData = new List<RecipeDataComponent>();
 
         public GameObject m_DefaultPiecePrefab;
 
-        // Data of the piece that is currently being built
+        // Current Components Being Built
         private QuestPieceFunctionalComponent _functionalQP;
         private QuestPieceUIComponent _uiQP;
         private QuestPiecePrefabComponent _prefabQP;
@@ -30,7 +32,7 @@ namespace CQM.Databases
         private RecipeDataComponent _recipeData;
 
 
-        public void BuildPieces(ComponentsDatabase c)
+        public override void BuildData(ComponentsDatabase c)
         {
             var piecesList = m_QuestPieceUIComponent;
             for (int i = 0; i < piecesList.Count; i++)
@@ -63,7 +65,7 @@ namespace CQM.Databases
             }
         }
 
-        public void LoadDataFromCode()
+        public override void LoadDataFromCode()
         {
             m_QuestPieceFunctionalComponents.Clear();
             m_QuestPieceUIComponent.Clear();
@@ -82,7 +84,7 @@ namespace CQM.Databases
                 CreateNew();
                 SetIDName("malvavisco_fantasma_tostado");
                 SetPieceType(PieceType.Cookie);
-                SetUIData("Malvavisco Crudo", 
+                SetUIData("Malvavisco Crudo",
                     "El Malvavisco Crudo es un postre básico dispuesto a echar una mano con lo que haga falta, aunque no sirva para mucho. Bueno para cuando no hay mucho que comer y pocas ganas de cocinar.");
                 SetRecipeData("Receta para Malvavisco Crudo",
                     "El Malvavisco Crudo es un postre básico dispuesto a echar una mano con lo que haga falta, aunque no sirva para mucho.Bueno para cuando no hay mucho que comer y pocas ganas de cocinar.",
@@ -98,7 +100,7 @@ namespace CQM.Databases
                 SetUIData("Merengue Fantasma Tostado",
                     "El Merengue Fantasma Tostado es un postre básico, dulce, blandito… pero a veces se cuela en las  habitaciones de la gente mientras duermen y se queda mirándolos haciendo ruidos de ultratumba. *WUO-WUO-WUO-WUO-WUO-WUO-WUO* Que alguien llame a la policía.");
                 SetRecipeData("Receta de Merengue Fantasma Tostado",
-                    "El Merengue Fantasma Tostado es un postre básico, dulce, blandito… pero a veces se cuela en las  habitaciones de la gente mientras duermen y se queda mirándolos haciendo ruidos de ultratumba. * WUO - WUO - WUO - WUO - WUO - WUO - WUO * Que alguien llame a la policía.", 
+                    "El Merengue Fantasma Tostado es un postre básico, dulce, blandito… pero a veces se cuela en las  habitaciones de la gente mientras duermen y se queda mirándolos haciendo ruidos de ultratumba. * WUO - WUO - WUO - WUO - WUO - WUO - WUO * Que alguien llame a la policía.",
                     Reputation.GoodCookieReputation, 75, 75);
                 AddIngredientToRecipe("crema_pastelera_arcana", 2);
                 AddIngredientToRecipe("vainilla_de_la_iluminacion", 1);
@@ -124,7 +126,7 @@ namespace CQM.Databases
                 SetUIData("Bizcotroll de Naranjas Somnolientas",
                     "Se dice que el Bizcotroll forma parte del trío de postres héroes colosales, y que aunque se pasa gran parte del tiempo dormido, en cuanto se despierta no duda en ayudar.");
                 SetRecipeData("Receta de Bizcotroll de Naranjas Somnolientas",
-                    "Se dice que el Bizcotroll forma parte del trío de postres héroes colosales, y que aunque se pasa gran parte del tiempo dormido, en cuanto se despierta no duda en ayudar.", 
+                    "Se dice que el Bizcotroll forma parte del trío de postres héroes colosales, y que aunque se pasa gran parte del tiempo dormido, en cuanto se despierta no duda en ayudar.",
                     Reputation.GoodCookieReputation, 500, 0);
                 AddIngredientToRecipe("harina_de_fuerza_titanica", 1);
                 AddIngredientToRecipe("caramelo_fundido_candiscente", 2);
@@ -138,7 +140,7 @@ namespace CQM.Databases
                 SetUIData("Jauría Bombón Infernal",
                     "Recién salida del horno, la Jauría Bombón Infernal son un grupo de bombones escupe compota candente, especializados en el ataque. Con un núcleo de compota de mora infernal y una habanero ardiente en la cola hace arder todo a su paso.");
                 SetRecipeData("Receta de Jauría Bombón Infernal",
-                    "Recién salida del horno, la Jauría Bombón Infernal son un grupo de bombones escupe compota candente, especializados en el ataque. Con un núcleo de compota de mora infernal y una habanero ardiente en la cola hace arder todo a su paso.", 
+                    "Recién salida del horno, la Jauría Bombón Infernal son un grupo de bombones escupe compota candente, especializados en el ataque. Con un núcleo de compota de mora infernal y una habanero ardiente en la cola hace arder todo a su paso.",
                     Reputation.GoodCookieReputation, 0, 250);
                 AddIngredientToRecipe("compota_de_mora_infernal", 2);
                 AddIngredientToRecipe("chocolate_negro_sempiterno", 1);
@@ -151,7 +153,7 @@ namespace CQM.Databases
                 SetUIData("Paladín Tortita",
                     "El Paladín Tortita es el segundo postre colosal, tan solo con levantar su espada de caramelo solidificado imparte daño en área en un segundo. Aunque sus capas de tortitas son tan suaves que se deshacen en la boca, el caramelo que lo cubre lo protege de cualquier ataque.");
                 SetRecipeData("Receta de Paladín Tortita",
-                    "El Paladín Tortita es el segundo postre colosal, tan solo con levantar su espada de caramelo solidificado imparte daño en área en un segundo. Aunque sus capas de tortitas son tan suaves que se deshacen en la boca, el caramelo que lo cubre lo protege de cualquier ataque.", 
+                    "El Paladín Tortita es el segundo postre colosal, tan solo con levantar su espada de caramelo solidificado imparte daño en área en un segundo. Aunque sus capas de tortitas son tan suaves que se deshacen en la boca, el caramelo que lo cubre lo protege de cualquier ataque.",
                     Reputation.GoodCookieReputation, 350, 150);
                 AddIngredientToRecipe("nucleo_de_cereza_animico", 1);
                 AddIngredientToRecipe("caramelo_fundido_candiscente", 2);
@@ -165,7 +167,7 @@ namespace CQM.Databases
                 SetUIData("Bizquiborracho de Mora",
                     "El bizcoborracho es un postre achispado que se zarandea de un lado a otro con un un ritmo hipnótico. Entre su golosa capa de compota y su bizcocho… HIP... borracho te convence de lo que sea … HIP-HIP… creo que no me mantengo en pie.");
                 SetRecipeData("Receta de Bizquiborracho de Mora",
-                    "El bizcoborracho es un postre achispado que se zarandea de un lado a otro con un un ritmo hipnótico. Entre su golosa capa de compota y su bizcocho… HIP... borracho te convence de lo que sea … HIP-HIP… creo que no me mantengo en pie.", 
+                    "El bizcoborracho es un postre achispado que se zarandea de un lado a otro con un un ritmo hipnótico. Entre su golosa capa de compota y su bizcocho… HIP... borracho te convence de lo que sea … HIP-HIP… creo que no me mantengo en pie.",
                     Reputation.GoodCookieReputation, 0, 250);
                 AddIngredientToRecipe("crema_pastelera_arcana", 2);
                 AddIngredientToRecipe("compota_de_mora_infernal", 1);
@@ -178,7 +180,7 @@ namespace CQM.Databases
                 SetUIData("Citrielfo en Copa",
                     "Los citrielfos son el tercer postre colosal. Siempre tienen la razón, o eso creen ellos, y da igual que estén equivocados, no tienen problemas en mirarte por encima del hombre desde lo alto de su copa. Tan pronto como la cara de su enemigo ponga expresión de haber chupado un limón sabrá que su hechizo ha hecho efecto.");
                 SetRecipeData("Receta de Citrielfo en Copa",
-                    "Los citrielfos son el tercer postre colosal. Siempre tienen la razón, o eso creen ellos, y da igual que estén equivocados, no tienen problemas en mirarte por encima del hombre desde lo alto de su copa. Tan pronto como la cara de su enemigo ponga expresión de haber chupado un limón sabrá que su hechizo ha hecho efecto.", 
+                    "Los citrielfos son el tercer postre colosal. Siempre tienen la razón, o eso creen ellos, y da igual que estén equivocados, no tienen problemas en mirarte por encima del hombre desde lo alto de su copa. Tan pronto como la cara de su enemigo ponga expresión de haber chupado un limón sabrá que su hechizo ha hecho efecto.",
                     Reputation.GoodCookieReputation, 150, 350);
                 AddIngredientToRecipe("esencia_de_limon_purificadora", 2);
                 AddIngredientToRecipe("vainilla_de_la_iluminacion", 1);

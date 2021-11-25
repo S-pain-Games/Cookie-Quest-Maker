@@ -58,9 +58,9 @@ public class ShopSystem : ISystemEvents
 
         bool enoughMoneyToBuy = false;
         if (recipe.m_Price_Good > 0)
-            enoughMoneyToBuy = _inventoryData.m_GoodCookieReputation >= recipe.m_Price_Good;
+            enoughMoneyToBuy = _inventoryData.m_GoodKarma >= recipe.m_Price_Good;
         if (recipe.m_Price_Evil > 0)
-            enoughMoneyToBuy = _inventoryData.m_EvilCookieReputation >= recipe.m_Price_Evil;
+            enoughMoneyToBuy = _inventoryData.m_EvilKarma >= recipe.m_Price_Evil;
 
         if (enoughMoneyToBuy)
         {
@@ -89,9 +89,9 @@ public class ShopSystem : ISystemEvents
         {
             bool enoughMoneyToBuy = false;
             if (ingredient.m_Price_Good > 0)
-                enoughMoneyToBuy = _inventoryData.m_GoodCookieReputation >= ingredient.m_Price_Good;
+                enoughMoneyToBuy = _inventoryData.m_GoodKarma >= ingredient.m_Price_Good;
             if (ingredient.m_Price_Evil > 0)
-                enoughMoneyToBuy = _inventoryData.m_EvilCookieReputation >= ingredient.m_Price_Evil;
+                enoughMoneyToBuy = _inventoryData.m_EvilKarma >= ingredient.m_Price_Evil;
 
             if (enoughMoneyToBuy)
             {

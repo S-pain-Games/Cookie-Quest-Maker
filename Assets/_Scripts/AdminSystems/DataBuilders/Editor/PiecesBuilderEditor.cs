@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using CQM.Databases;
+using CQM.DataBuilders;
 
 [CustomEditor(typeof(PieceBuilder))]
 public class PiecesBuilderEditor : Editor

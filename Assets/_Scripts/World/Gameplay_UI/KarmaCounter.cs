@@ -23,12 +23,12 @@ public class KarmaCounter : MonoBehaviour
     {
         if (m_KarmaType == Reputation.GoodCookieReputation)
         {
-            _text.text = Admin.Global.Components.m_InventoryComponent.m_GoodCookieReputation.ToString();
+            _text.text = Admin.Global.Components.m_InventoryComponent.m_GoodKarma.ToString();
             PopAnimation();
         }
         else
         {
-            _text.text = Admin.Global.Components.m_InventoryComponent.m_EvilCookieReputation.ToString();
+            _text.text = Admin.Global.Components.m_InventoryComponent.m_EvilKarma.ToString();
             PopAnimation();
         }
 

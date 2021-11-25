@@ -1,71 +1,60 @@
 ﻿using CQM.AssetReferences;
 using CQM.Components;
+using CQM.Databases;
 using System.Collections.Generic;
 using UnityEngine;
 using PieceType = CQM.Components.QuestPieceFunctionalComponent.PieceType;
 using Tag = CQM.Components.QPTag.TagType;
 
 
-namespace CQM.Databases
+namespace CQM.DataBuilders
 {
-    public class StoryBuilder : MonoBehaviour
+    public class StoryBuilder : BaseDataBuilder
     {
         [SerializeField] private StoriesReferencesDatabase _assetRefs;
 
-        public List<StoryInfoComponent> Stories => m_StoriesList;
-        public List<StoryRepercusionComponent> Repercusions => m_Repercusions;
-        public List<StoryUIDataComponent> StoryUI => m_StoryUI;
-        public List<StoryRepNewspaperComponent> RepercusionNewspaperArticles => m_RepercusionNewspaperArticles;
+        [SerializeField] private List<StoryInfoComponent> m_StoriesList = new List<StoryInfoComponent>();
+        [SerializeField] private List<StoryUIDataComponent> m_StoryUI = new List<StoryUIDataComponent>();
+        [SerializeField] private List<StoryRepercusionComponent> m_Repercusions = new List<StoryRepercusionComponent>();
+        [SerializeField] private List<StoryRepNewspaperComponent> m_RepercusionNewspaperArticles = new List<StoryRepNewspaperComponent>();
 
-        [SerializeField]
-        private List<StoryInfoComponent> m_StoriesList = new List<StoryInfoComponent>();
-        [SerializeField]
-        private List<StoryRepercusionComponent> m_Repercusions = new List<StoryRepercusionComponent>();
-        [SerializeField]
-        private List<StoryRepNewspaperComponent> m_RepercusionNewspaperArticles = new List<StoryRepNewspaperComponent>();
-        [SerializeField]
-        private List<StoryUIDataComponent> m_StoryUI = new List<StoryUIDataComponent>();
-
+        // Current Components Being Built
         private StoryInfoComponent m_Story;
         private StoryData m_StoryData;
         private BranchOption m_Branch;
         private StoryRepercusionComponent m_Repercusion;
 
-        public void LoadDataFromCode()
+
+        public override void BuildData(ComponentsDatabase c)
+        {
+            for (int i = 0; i < m_StoriesList.Count; i++)
+            {
+                var story = m_StoriesList[i];
+                c.GetComponentContainer<StoryInfoComponent>().Add(story.m_StoryData.m_ID, story);
+            }
+            for (int i = 0; i < m_Repercusions.Count; i++)
+            {
+                var rep = m_Repercusions[i];
+                c.GetComponentContainer<StoryRepercusionComponent>().Add(rep.m_ID, rep);
+            }
+            for (int i = 0; i < m_StoryUI.Count; i++)
+            {
+                var ui = m_StoryUI[i];
+                c.GetComponentContainer<StoryUIDataComponent>().Add(ui.m_ParentStoryID, ui);
+            }
+            for (int i = 0; i < m_RepercusionNewspaperArticles.Count; i++)
+            {
+                var news = m_RepercusionNewspaperArticles[i];
+                c.m_Newspaper.m_NewspaperStories.Add(news.m_RepID, news);
+            }
+        }
+
+        public override void LoadDataFromCode()
         {
             m_StoriesList.Clear();
             m_Repercusions.Clear();
             m_StoryUI.Clear();
             m_RepercusionNewspaperArticles.Clear();
-
-            /*
-            StartCreatingStory("mayors_wolves", "Mayor's Wolves", new List<string>() { "Intro 1 wolves" });
-
-            CreateRepercusion("wolves_alive", "Wolves Alive", 15);
-            AddStoryRepercusionNewspaperArticle("Wolves Trouble", "In other news, there are still wolves in the town's center");
-
-            StartStoryBranch();
-            SetRepercusionToBranch("wolves_alive");
-            AddBranchCompletion_NPCDialogue(new List<string>() { "NPC_Dialogue Harm 1" }, Tag.Harm, 1, "mayor");
-            AddBranchCompletion_EvithDeityDialogue(new List<string>() { "Evith mayors wolves Harm dialogue" });
-            AddBranchCompletion_NuDeityDialogue(new List<string>() { "Nu mayors wolves Harm dialogue" });
-
-            StartStoryBranch();
-            SetRepercusionToBranch("wolves_alive");
-            AddBranchCompletion_NPCDialogue(new List<string>() { "NPC_Dialogue Convince 1" }, Tag.Convince, 1, "mayor");
-            AddBranchCompletion_EvithDeityDialogue(new List<string>() { "Evith mayors wolves Convince dialogue" });
-            AddBranchCompletion_NuDeityDialogue(new List<string>() { "Nu mayors wolves Convince dialogue" });
-
-            StartStoryBranch();
-            SetRepercusionToBranch("wolves_alive");
-            AddBranchCompletion_NPCDialogue(new List<string>() { "NPC_Dialogue Help 1" }, Tag.Help, 1, "mayor");
-            AddBranchCompletion_EvithDeityDialogue(new List<string>() { "Evith mayors wolves Help dialogue" });
-            AddBranchCompletion_NuDeityDialogue(new List<string>() { "Nu mayors wolves Help dialogue" });
-
-            AddStorySelectionUIData("Wolves Party");
-
-            FinishCreatingStory();
-            */
 
             // =============================================================================================
             //  STORY 1
@@ -2442,7 +2431,9 @@ namespace CQM.Databases
             }
         }
 
-        public void StartCreatingStory(string idName, string title, string questGiver, string description, List<string> introductionDialogue)
+        #region Builder Methods
+
+        private void StartCreatingStory(string idName, string title, string questGiver, string description, List<string> introductionDialogue)
         {
             m_StoryData = new StoryData();
             m_StoryData.m_ID = new ID(idName);
@@ -2454,12 +2445,12 @@ namespace CQM.Databases
             m_StoryData.m_Description = description;
         }
 
-        public void StartStoryBranch()
+        private void StartStoryBranch()
         {
             m_Branch = new BranchOption();
         }
 
-        public void CreateRepercusion(string idName, string repName, int happinessValue)
+        private void CreateRepercusion(string idName, string repName, int happinessValue)
         {
             var rep = new StoryRepercusionComponent();
             rep.m_ID = new ID(idName);
@@ -2471,7 +2462,7 @@ namespace CQM.Databases
             m_Repercusion = rep;
         }
 
-        public void SetRepercusionToBranch(string idName)
+        private void SetRepercusionToBranch(string idName)
         {
             StoryRepercusionComponent rep = null;
             for (int i = 0; i < m_Repercusions.Count; i++)
@@ -2490,7 +2481,7 @@ namespace CQM.Databases
             m_Branch.m_Repercusion = rep;
         }
 
-        public void AddStoryRepercusionNewspaperArticle(string title, string body)
+        private void AddStoryRepercusionNewspaperArticle(string title, string body)
         {
             var newsArticle = new StoryRepNewspaperComponent();
             newsArticle.m_CharacterID = new ID(m_StoryData.m_QuestGiver);
@@ -2500,7 +2491,7 @@ namespace CQM.Databases
             m_RepercusionNewspaperArticles.Add(newsArticle);
         }
 
-        public void AddBranchCompletion_NPCDialogue(List<string> npcResultDialogue, Tag tag, int tagValue, string target)
+        private void AddBranchCompletion_NPCDialogue(List<string> npcResultDialogue, Tag tag, int tagValue, string target)
         {
             m_Branch.m_ResultNPCDialogue = npcResultDialogue;
 
@@ -2514,7 +2505,7 @@ namespace CQM.Databases
             m_StoryData.m_BranchOptions.Add(m_Branch);
         }
 
-        public void AddBranchCompletion_EvithDeityDialogue(List<string> dialogue)
+        private void AddBranchCompletion_EvithDeityDialogue(List<string> dialogue)
         {
             var evithDialogue = new BranchOption.DeitiesStoryDialogue();
             evithDialogue.m_DeityID = 1;
@@ -2522,7 +2513,7 @@ namespace CQM.Databases
             m_Branch.m_DeitiesResultDialogue.Add(evithDialogue);
         }
 
-        public void AddBranchCompletion_NuDeityDialogue(List<string> dialogue)
+        private void AddBranchCompletion_NuDeityDialogue(List<string> dialogue)
         {
             var evithDialogue = new BranchOption.DeitiesStoryDialogue();
             evithDialogue.m_DeityID = 0;
@@ -2530,7 +2521,7 @@ namespace CQM.Databases
             m_Branch.m_DeitiesResultDialogue.Add(evithDialogue);
         }
 
-        public void AddStorySelectionUIData(string title)
+        private void AddStorySelectionUIData(string title)
         {
             var s = new StoryUIDataComponent();
             s.m_Title = title;
@@ -2539,8 +2530,7 @@ namespace CQM.Databases
             m_StoryUI.Add(s);
         }
 
-
-        public void FinishCreatingStory()
+        private void FinishCreatingStory()
         {
             m_StoryData.Build();
 
@@ -2549,5 +2539,7 @@ namespace CQM.Databases
 
             m_StoriesList.Add(m_Story);
         }
+
+        #endregion
     }
 }

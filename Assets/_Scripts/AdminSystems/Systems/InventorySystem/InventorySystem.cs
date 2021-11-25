@@ -104,8 +104,8 @@ public class InventorySystem : ISystemEvents
 
     public void ChangeGoodCookieRep(int amount)
     {
-        if (m_InvData.m_GoodCookieReputation + amount >= 0)
-            m_InvData.m_GoodCookieReputation += amount;
+        if (m_InvData.m_GoodKarma + amount >= 0)
+            m_InvData.m_GoodKarma += amount;
         else
             Debug.LogError("Tried to remove more currency than available");
 
@@ -113,8 +113,8 @@ public class InventorySystem : ISystemEvents
     }
     public void ChangeEvilCookieRep(int amount)
     {
-        if (m_InvData.m_EvilCookieReputation + amount >= 0)
-            m_InvData.m_EvilCookieReputation += amount;
+        if (m_InvData.m_EvilKarma + amount >= 0)
+            m_InvData.m_EvilKarma += amount;
         else
             Debug.LogError("Tried to remove more currency than available");
 
