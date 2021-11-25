@@ -8,7 +8,7 @@ public class DialogueSystem : ISystemEvents
 {
     private Singleton_DialogueReferencesComponent _dialogueData;
     private ComponentsContainer<CharacterComponent> _characters;
-    private ComponentsContainer<DialogueCharacterComponent> _dialogue;
+    private ComponentsContainer<CharacterDialogueComponent> _dialogue;
 
     private EventVoid _enableCharMovementCmd;
     private EventVoid _disableCharMovementCmd;
@@ -16,7 +16,7 @@ public class DialogueSystem : ISystemEvents
 
     public void Initialize(Singleton_DialogueReferencesComponent dialogueRefs,
                            ComponentsContainer<CharacterComponent> characters,
-                           ComponentsContainer<DialogueCharacterComponent> dialogue,
+                           ComponentsContainer<CharacterDialogueComponent> dialogue,
                            GameEventSystem evtSys)
     {
         _dialogueData = dialogueRefs;

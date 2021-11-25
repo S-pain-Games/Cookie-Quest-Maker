@@ -38,7 +38,7 @@ public class PopupOnMissionAccepted : MonoBehaviour
     {
         PopupData_MissionStarted pData = new PopupData_MissionStarted();
         var compDatabase = Admin.Global.Components;
-        List<ID> secondaryStories = compDatabase.m_StoriesStateComponent.m_AllSecondaryStories;
+        List<ID> secondaryStories = compDatabase.m_GameStoriesStateComponent.m_AllSecondaryStories;
 
         pData.m_MissionTitle = compDatabase.GetComponentContainer<StoryInfoComponent>()[storyId].m_StoryData.m_Title;
         pData.m_TimeAlive = 2.0f;

@@ -35,7 +35,7 @@ namespace CQM.UI.QuestMakingTable
         private GraphicRaycaster _raycaster;
         private List<RaycastResult> m_Results = new List<RaycastResult>();
 
-        public void Initialize(Canvas canvas, UIQuestPieceComponent uiData, QuestPieceFunctionalComponent piece)
+        public void Initialize(Canvas canvas, QuestPieceUIComponent uiData, QuestPieceFunctionalComponent piece)
         {
             _canvas = canvas;
             _raycaster = canvas.GetComponent<GraphicRaycaster>();

@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CQM.AssetReferences;
+using CQM.Components;
 
 public class IngredientsBuilder : BaseDataBuilder
 {

@@ -38,7 +38,7 @@ namespace CQM.UI.QuestMakingTable
         private Canvas _canvas;
 
         private ComponentsContainer<QuestPieceFunctionalComponent> _questPieceFunctionalComponents;
-        private ComponentsContainer<UIQuestPieceComponent> _questPieceUIComponents;
+        private ComponentsContainer<QuestPieceUIComponent> _questPieceUIComponents;
         private ComponentsContainer<QuestPiecePrefabComponent> _questPrefabComponents;
 
 

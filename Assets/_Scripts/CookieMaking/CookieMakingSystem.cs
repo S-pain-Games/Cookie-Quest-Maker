@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System;
 using CQM.Databases;
+using CQM.Components;
 
 public class CookieMakingSystem : ISystemEvents
 {

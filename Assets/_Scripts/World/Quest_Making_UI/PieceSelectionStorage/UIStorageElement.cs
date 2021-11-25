@@ -22,7 +22,7 @@ public class UIStorageElement : MonoBehaviour, IPointerDownHandler, IPointerEnte
         _image = GetComponent<Image>();
     }
 
-    public void Build(UIQuestPieceComponent piece)
+    public void Build(QuestPieceUIComponent piece)
     {
         _textComp.text = piece.m_Name;
     }

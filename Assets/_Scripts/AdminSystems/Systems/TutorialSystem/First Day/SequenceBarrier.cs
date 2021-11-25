@@ -32,7 +32,7 @@ public class SequenceBarrier : MonoBehaviour
 
     private bool HasTalkedWithMayor()
     {
-        return Admin.Global.Components.m_StoriesStateComponent.m_OngoingStories.Count > 0;
+        return Admin.Global.Components.m_GameStoriesStateComponent.m_OngoingStories.Count > 0;
     }
 
     private bool IsPlayer(Collider2D collision)

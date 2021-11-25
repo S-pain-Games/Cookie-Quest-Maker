@@ -6,7 +6,7 @@ using static GameStateSystem;
 
 namespace CQM.Databases
 {
-    [System.Serializable]
+    [Serializable]
     public class ComponentsDatabase : MonoBehaviour
     {
         [Header("Batch Components")]
@@ -24,11 +24,11 @@ namespace CQM.Databases
 
         // Contains all the quest piece data
         [SerializeField] public ComponentsContainer<QuestPieceFunctionalComponent> m_QuestPieceFunctionalComponents = new ComponentsContainer<QuestPieceFunctionalComponent>();
-        [SerializeField] public ComponentsContainer<UIQuestPieceComponent> m_QuestPieceUIComponent = new ComponentsContainer<UIQuestPieceComponent>();
+        [SerializeField] public ComponentsContainer<QuestPieceUIComponent> m_QuestPieceUIComponent = new ComponentsContainer<QuestPieceUIComponent>();
         [SerializeField] public ComponentsContainer<QuestPiecePrefabComponent> m_QuestPiecePrefabComponent = new ComponentsContainer<QuestPiecePrefabComponent>();
 
         [SerializeField] public ComponentsContainer<CharacterComponent> m_CharacterComponents = new ComponentsContainer<CharacterComponent>();
-        [SerializeField] public ComponentsContainer<DialogueCharacterComponent> m_CharacterDialogueComponents = new ComponentsContainer<DialogueCharacterComponent>();
+        [SerializeField] public ComponentsContainer<CharacterDialogueComponent> m_CharacterDialogueComponents = new ComponentsContainer<CharacterDialogueComponent>();
 
         [SerializeField] public ComponentsContainer<LocationComponent> m_LocationsComponents = new ComponentsContainer<LocationComponent>();
 
@@ -56,7 +56,7 @@ namespace CQM.Databases
         public Singleton_LocalizationComponent m_LocalizationComponent = new Singleton_LocalizationComponent();
         public Singleton_AudioDataComponent m_AudioDataComponent;
         public Singleton_AudioClipsDataComponent m_AudioClipsComponent;
-        public Singleton_StoriesStateComponent m_StoriesStateComponent = new Singleton_StoriesStateComponent();
+        public Singleton_GameStoriesStateComponent m_GameStoriesStateComponent = new Singleton_GameStoriesStateComponent();
 
 
         private Dictionary<Type, object> m_ComponentContainers = new Dictionary<Type, object>();
@@ -73,11 +73,11 @@ namespace CQM.Databases
             m_ComponentContainers.Add(typeof(CookieDataComponent), m_CookieData);
 
             m_ComponentContainers.Add(typeof(QuestPieceFunctionalComponent), m_QuestPieceFunctionalComponents);
-            m_ComponentContainers.Add(typeof(UIQuestPieceComponent), m_QuestPieceUIComponent);
+            m_ComponentContainers.Add(typeof(QuestPieceUIComponent), m_QuestPieceUIComponent);
             m_ComponentContainers.Add(typeof(QuestPiecePrefabComponent), m_QuestPiecePrefabComponent);
 
             m_ComponentContainers.Add(typeof(CharacterComponent), m_CharacterComponents);
-            m_ComponentContainers.Add(typeof(DialogueCharacterComponent), m_CharacterDialogueComponents);
+            m_ComponentContainers.Add(typeof(CharacterDialogueComponent), m_CharacterDialogueComponents);
 
             m_ComponentContainers.Add(typeof(LocationComponent), m_LocationsComponents);
             m_ComponentContainers.Add(typeof(IngredientComponent), m_IngredientsComponents);

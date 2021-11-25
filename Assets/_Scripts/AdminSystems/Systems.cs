@@ -40,12 +40,12 @@ public class Systems
     {
         m_CharacterSystem.Initialize(d.m_InputComponent);
         m_DaySystem.Initialize(eventSystem, d.m_DayComponent);
-        m_StorySystem.Initialize(d.GetComponentContainer<StoryInfoComponent>(), d.m_StoriesStateComponent);
+        m_StorySystem.Initialize(d.GetComponentContainer<StoryInfoComponent>(), d.m_GameStoriesStateComponent);
         m_QuestMakerSystem.Initialize();
         m_CookieMakingSystem.Initialize(d.GetComponentContainer<RecipeDataComponent>(), d.m_InventoryComponent);
         pieceCraftingSystem.Initialize(d.GetComponentContainer<RecipeDataComponent>(), d.m_InventoryComponent); // NEW
         m_ShopSystem.Initialize(d.GetComponentContainer<RecipeDataComponent>(), d.m_InventoryComponent, d.GetComponentContainer<IngredientComponent>()); // NEW
-        m_NpcSystem.Initialize(d.m_NpcReferencesComponent, d.m_StoriesStateComponent, d.GetComponentContainer<StoryInfoComponent>(), d.GetComponentContainer<CharacterComponent>(), d.GetComponentContainer<DialogueCharacterComponent>(), eventSystem);
+        m_NpcSystem.Initialize(d.m_NpcReferencesComponent, d.m_GameStoriesStateComponent, d.GetComponentContainer<StoryInfoComponent>(), d.GetComponentContainer<CharacterComponent>(), d.GetComponentContainer<CharacterDialogueComponent>(), eventSystem);
         m_DialogueSystem.Initialize(d.m_DialogueUIData, d.m_CharacterComponents, d.m_CharacterDialogueComponents, eventSystem);
         m_TownSystem.Initialize(d.m_TownComponent, d.m_LocationsComponents, d.GetComponentContainer<StoryRepercusionComponent>());
         m_CalendarSystem.Initialize(d.m_CalendarComponent);

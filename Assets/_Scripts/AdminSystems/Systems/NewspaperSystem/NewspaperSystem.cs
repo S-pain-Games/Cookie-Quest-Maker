@@ -29,7 +29,7 @@ namespace CQM.Systems
             evtSys.GetCallbackByName<Event<ID>>("story_sys", "story_finalized").OnInvoked +=
                 (id) =>
                 {
-                    if (!Admin.Global.Components.m_StoriesStateComponent.m_AllSecondaryStories.Contains(id))
+                    if (!Admin.Global.Components.m_GameStoriesStateComponent.m_AllSecondaryStories.Contains(id))
                         _NewsDataComponent.m_StoriesToShowInNewspaper.Add(id);
                 };
             evtSys.GetCallbackByName<EventVoid>("day_sys", "day_ended").OnInvoked +=

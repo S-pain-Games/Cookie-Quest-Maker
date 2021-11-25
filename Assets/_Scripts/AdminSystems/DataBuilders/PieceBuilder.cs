@@ -15,7 +15,7 @@ namespace CQM.Databases
 
         // Output Components
         public List<QuestPieceFunctionalComponent> m_QuestPieceFunctionalComponents = new List<QuestPieceFunctionalComponent>();
-        public List<UIQuestPieceComponent> m_QuestPieceUIComponent = new List<UIQuestPieceComponent>();
+        public List<QuestPieceUIComponent> m_QuestPieceUIComponent = new List<QuestPieceUIComponent>();
         public List<QuestPiecePrefabComponent> m_QuestPiecePrefabComponent = new List<QuestPiecePrefabComponent>();
         public List<CookieDataComponent> m_CookieData = new List<CookieDataComponent>();
         public List<RecipeDataComponent> m_RecipeData = new List<RecipeDataComponent>();
@@ -24,7 +24,7 @@ namespace CQM.Databases
 
         // Data of the piece that is currently being built
         private QuestPieceFunctionalComponent _functionalQP;
-        private UIQuestPieceComponent _uiQP;
+        private QuestPieceUIComponent _uiQP;
         private QuestPiecePrefabComponent _prefabQP;
         private CookieDataComponent _cookieData;
         private RecipeDataComponent _recipeData;
@@ -361,7 +361,7 @@ namespace CQM.Databases
         private void CreateNew()
         {
             _functionalQP = new QuestPieceFunctionalComponent();
-            _uiQP = new UIQuestPieceComponent();
+            _uiQP = new QuestPieceUIComponent();
             _prefabQP = new QuestPiecePrefabComponent();
             _cookieData = new CookieDataComponent(); // LEGACY
             _recipeData = new RecipeDataComponent();

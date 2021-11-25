@@ -3,7 +3,7 @@
 namespace CQM.Components
 {
     [System.Serializable]
-    public class Singleton_StoriesStateComponent
+    public class Singleton_GameStoriesStateComponent
     {
         // IDs of the stories in the order in which they will be started
         public List<ID> m_MainStoriesToStartOrder = new List<ID>();

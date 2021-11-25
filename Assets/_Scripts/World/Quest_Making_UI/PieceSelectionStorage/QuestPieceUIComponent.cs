@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [Serializable]
-public class UIQuestPieceComponent
+public class QuestPieceUIComponent
 {
     public Sprite m_SimpleSprite;
     public Sprite m_CookiePieceSprite;

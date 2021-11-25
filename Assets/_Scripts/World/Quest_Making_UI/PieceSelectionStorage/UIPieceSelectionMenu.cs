@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using CQM.Databases;
 using CQM.Components;
 
 namespace CQM.UI.QuestMakingTable
@@ -93,7 +92,7 @@ namespace CQM.UI.QuestMakingTable
                 UIstorageElem.pieceID = questPiece.m_ID;
                 UIstorageElem.OnSelected += SelectPieceWithId;
 
-                UIQuestPieceComponent uiData = Admin.Global.Components.m_QuestPieceUIComponent[questPiece.m_ID];
+                QuestPieceUIComponent uiData = Admin.Global.Components.m_QuestPieceUIComponent[questPiece.m_ID];
                 // Initialize UI element with piece data
                 UIstorageElem.Build(uiData);
                 m_SelectablePiecesOfType.Add(UIstorageElem);
@@ -112,7 +111,7 @@ namespace CQM.UI.QuestMakingTable
             m_SelectedPieceID = questPieceID;
             m_IsAPieceSelected = true;
             // Update UI
-            UIQuestPieceComponent UIPieceData = Admin.Global.Components.m_QuestPieceUIComponent[m_SelectedPieceID];
+            QuestPieceUIComponent UIPieceData = Admin.Global.Components.m_QuestPieceUIComponent[m_SelectedPieceID];
             QuestPieceFunctionalComponent funcPiece = Admin.Global.Components.GetComponentContainer<QuestPieceFunctionalComponent>().GetComponentByID(m_SelectedPieceID);
 
             int convince = 0;

@@ -6,7 +6,7 @@ using System.Collections;
 namespace CQM.Components
 {
     [Serializable]
-    public class DialogueCharacterComponent
+    public class CharacterDialogueComponent
     {
         public ID m_ID;
         public Sprite m_CharacterImg;

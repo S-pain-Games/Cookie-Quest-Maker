@@ -10,12 +10,12 @@ public class CharactersBuilder : BaseDataBuilder
     [SerializeField] private CharacterReferencesDatabase _characterReferences;
 
     public List<CharacterComponent> m_CharactersList = new List<CharacterComponent>();
-    public List<DialogueCharacterComponent> m_CharacterDialogueList = new List<DialogueCharacterComponent>();
+    public List<CharacterDialogueComponent> m_CharacterDialogueList = new List<CharacterDialogueComponent>();
     public List<CharacterWorldPrefabComponent> m_CharacterWorldPrefabComponent = new List<CharacterWorldPrefabComponent>();
 
 
     private CharacterComponent c;
-    private DialogueCharacterComponent d;
+    private CharacterDialogueComponent d;
     private CharacterWorldPrefabComponent p;
 
 
@@ -100,7 +100,7 @@ public class CharactersBuilder : BaseDataBuilder
     public void CreateCharacter(string idName, string longName, string shortName)
     {
         c = new CharacterComponent();
-        d = new DialogueCharacterComponent();
+        d = new CharacterDialogueComponent();
         p = new CharacterWorldPrefabComponent();
 
         c.m_ID = new ID(idName);

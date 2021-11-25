@@ -15,16 +15,16 @@ namespace CQM.Systems
     {
         private ComponentsContainer<StoryInfoComponent> _storyInfoComponents;
         private ComponentsContainer<CharacterComponent> _characterComponents;
-        private ComponentsContainer<DialogueCharacterComponent> _characterDialogueComponent;
-        private Singleton_StoriesStateComponent _storiesStateComponent;
+        private ComponentsContainer<CharacterDialogueComponent> _characterDialogueComponent;
+        private Singleton_GameStoriesStateComponent _storiesStateComponent;
         private Singleton_NpcReferencesComponent _npcReferencesComponent;
 
 
         public void Initialize(Singleton_NpcReferencesComponent npcReferencesComponent,
-                               Singleton_StoriesStateComponent storiesStateComponent,
+                               Singleton_GameStoriesStateComponent storiesStateComponent,
                                ComponentsContainer<StoryInfoComponent> storyInfoComponents,
                                ComponentsContainer<CharacterComponent> characterComponents,
-                               ComponentsContainer<DialogueCharacterComponent> characterDialogueComponent,
+                               ComponentsContainer<CharacterDialogueComponent> characterDialogueComponent,
                                GameEventSystem evtSys)
         {
             _npcReferencesComponent = npcReferencesComponent;
@@ -98,7 +98,7 @@ namespace CQM.Systems
 
                     //Si la siguiente misión principal es vacía. No iniciar la secundaria.
 
-                    if (Admin.Global.Components.m_StoriesStateComponent.m_MainStoriesToStartOrder[0].NameID == "")
+                    if (Admin.Global.Components.m_GameStoriesStateComponent.m_MainStoriesToStartOrder[0].NameID == "")
                     {
                         Debug.Log("Load of secondary story canceled");
                         continue;

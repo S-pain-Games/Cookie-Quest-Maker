@@ -4,14 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using CQM.Databases;
 using DG.Tweening;
 
 public class PieceCraftingUI : MonoBehaviour
 {
     private ComponentsContainer<RecipeDataComponent> _recipeDataComponents;
     private ComponentsContainer<QuestPieceFunctionalComponent> _pieceDataComponents;
-    private ComponentsContainer<UIQuestPieceComponent> _recipeUiDataComponents;
+    private ComponentsContainer<QuestPieceUIComponent> _recipeUiDataComponents;
     private ComponentsContainer<IngredientComponent> _ingredientDataComponents;
     private ComponentsContainer<CookieDataComponent> _cookieDataComponents;
     private Singleton_InventoryComponent _inventory;
@@ -171,7 +170,7 @@ public class PieceCraftingUI : MonoBehaviour
     {
         QuestPieceFunctionalComponent piece = null;
         RecipeDataComponent recipe = null;
-        UIQuestPieceComponent recipeUi = null;
+        QuestPieceUIComponent recipeUi = null;
 
         bool selected = false;
 
@@ -238,7 +237,7 @@ public class PieceCraftingUI : MonoBehaviour
         obj_ingredient_3.SetActive(state);
     }
 
-    private void UpdatePieceUi(QuestPieceFunctionalComponent piece, RecipeDataComponent recipe, UIQuestPieceComponent recipeUi)
+    private void UpdatePieceUi(QuestPieceFunctionalComponent piece, RecipeDataComponent recipe, QuestPieceUIComponent recipeUi)
     {
         if (recipe != null && piece != null)
         {

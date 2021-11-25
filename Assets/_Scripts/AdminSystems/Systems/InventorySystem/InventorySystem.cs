@@ -1,16 +1,17 @@
-﻿using CQM.Databases;
+﻿using CQM.Components;
+using CQM.Databases;
 using System.Collections;
 using UnityEngine;
 
 public class InventorySystem : ISystemEvents
 {
-    private Singleton_InventoryComponent _inventoryData;
+    private Singleton_InventoryComponent m_InvData;
 
     private EventVoid OnReputationChanged;
 
     public void Initialize(Singleton_InventoryComponent data)
     {
-        _inventoryData = data;
+        m_InvData = data;
     }
 
     public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
@@ -54,57 +55,57 @@ public class InventorySystem : ISystemEvents
 
     private void AddPieceToInventory(ID pieceID, int amount)
     {
-        InventoryItem item = _inventoryData.m_Pieces.Find(i => i.m_ItemID == pieceID);
+        InventoryItem item = m_InvData.m_Pieces.Find(i => i.m_ItemID == pieceID);
         if (item != null)
             item.m_Amount += amount;
         else
-            _inventoryData.m_Pieces.Add(new InventoryItem(pieceID, amount));
+            m_InvData.m_Pieces.Add(new InventoryItem(pieceID, amount));
     }
     private void RemovePieceFromInventory(ID pieceID, int amount)
     {
-        InventoryItem item = _inventoryData.m_Pieces.Find(i => i.m_ItemID == pieceID);
+        InventoryItem item = m_InvData.m_Pieces.Find(i => i.m_ItemID == pieceID);
         if (item != null)
         {
             item.m_Amount -= amount;
 
             if (item.m_Amount <= 0)
-                _inventoryData.m_Pieces.Remove(item);
+                m_InvData.m_Pieces.Remove(item);
         }
     }
 
     private void AddIngredientToInventory(ID pieceID, int amount)
     {
-        InventoryItem item = _inventoryData.m_Ingredients.Find(i => i.m_ItemID == pieceID);
+        InventoryItem item = m_InvData.m_Ingredients.Find(i => i.m_ItemID == pieceID);
         if (item != null)
             item.m_Amount += amount;
         else
-            _inventoryData.m_Ingredients.Add(new InventoryItem(pieceID, amount));
+            m_InvData.m_Ingredients.Add(new InventoryItem(pieceID, amount));
     }
     private void RemoveIngredientFromInventory(ID pieceID, int amount)
     {
-        InventoryItem item = _inventoryData.m_Ingredients.Find(i => i.m_ItemID == pieceID);
+        InventoryItem item = m_InvData.m_Ingredients.Find(i => i.m_ItemID == pieceID);
         if (item != null)
         {
             item.m_Amount -= amount;
 
             if (item.m_Amount <= 0)
-                _inventoryData.m_Ingredients.Remove(item);
+                m_InvData.m_Ingredients.Remove(item);
         }
     }
 
 
     private void UnlockRecipe(ID recipeID)
     {
-        if (_inventoryData.m_UnlockedRecipes.Contains(recipeID))
+        if (m_InvData.m_UnlockedRecipes.Contains(recipeID))
             Debug.LogError("Oh no");
 
-        _inventoryData.m_UnlockedRecipes.Add(recipeID);
+        m_InvData.m_UnlockedRecipes.Add(recipeID);
     }
 
     public void ChangeGoodCookieRep(int amount)
     {
-        if (_inventoryData.m_GoodCookieReputation + amount >= 0)
-            _inventoryData.m_GoodCookieReputation += amount;
+        if (m_InvData.m_GoodCookieReputation + amount >= 0)
+            m_InvData.m_GoodCookieReputation += amount;
         else
             Debug.LogError("Tried to remove more currency than available");
 
@@ -112,8 +113,8 @@ public class InventorySystem : ISystemEvents
     }
     public void ChangeEvilCookieRep(int amount)
     {
-        if (_inventoryData.m_EvilCookieReputation + amount >= 0)
-            _inventoryData.m_EvilCookieReputation += amount;
+        if (m_InvData.m_EvilCookieReputation + amount >= 0)
+            m_InvData.m_EvilCookieReputation += amount;
         else
             Debug.LogError("Tried to remove more currency than available");
 

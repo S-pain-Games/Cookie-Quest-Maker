@@ -1,4 +1,3 @@
-using CQM.Databases;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +10,7 @@ public class Shop_UI : MonoBehaviour
 {
     private ComponentsContainer<RecipeDataComponent> _recipeDataComponents;
     private ComponentsContainer<QuestPieceFunctionalComponent> _pieceDataComponents;
-    private ComponentsContainer<UIQuestPieceComponent> _recipeUiDataComponents;
+    private ComponentsContainer<QuestPieceUIComponent> _recipeUiDataComponents;
     private ComponentsContainer<IngredientComponent> _ingredientsDataComponents;
     private Singleton_InventoryComponent _inventoryData;
 
@@ -157,7 +156,7 @@ public class Shop_UI : MonoBehaviour
         {
             QuestPieceFunctionalComponent piece = _pieceDataComponents.GetComponentByID(_selectedPieceID);
             RecipeDataComponent recipe = _recipeDataComponents.GetComponentByID(_selectedPieceID);
-            UIQuestPieceComponent pieceUI = _recipeUiDataComponents.GetComponentByID(_selectedPieceID);
+            QuestPieceUIComponent pieceUI = _recipeUiDataComponents.GetComponentByID(_selectedPieceID);
 
             for (int i = 0; i < piece.m_Tags.Count; i++)
             {

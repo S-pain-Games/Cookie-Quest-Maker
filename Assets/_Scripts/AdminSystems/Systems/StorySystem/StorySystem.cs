@@ -11,7 +11,7 @@ using CQM.Databases;
 public class StorySystem : ISystemEvents
 {
     private ComponentsContainer<StoryInfoComponent> m_StoriesInfo;
-    private Singleton_StoriesStateComponent _storiesStateComponent;
+    private Singleton_GameStoriesStateComponent _storiesStateComponent;
     private List<ID> _ongoingStories;
     private List<ID> _primaryStoriesToStart;
     private List<ID> _completedStories;
@@ -27,7 +27,7 @@ public class StorySystem : ISystemEvents
 
 
     public void Initialize(ComponentsContainer<StoryInfoComponent> storiesInfo,
-                           Singleton_StoriesStateComponent storiesState)
+                           Singleton_GameStoriesStateComponent storiesState)
     {
         m_StoriesInfo = storiesInfo;
         _storiesStateComponent = storiesState;

@@ -27,7 +27,7 @@ namespace CQM.Systems
             {
                 // This could be in the story system but for now we can leave it here
                 StoryInfoComponent s = Admin.Global.Components.GetComponentContainer<StoryInfoComponent>().GetComponentByID(storyID);
-                if (!Admin.Global.Components.m_StoriesStateComponent.m_AllSecondaryStories.Contains(storyID))
+                if (!Admin.Global.Components.m_GameStoriesStateComponent.m_AllSecondaryStories.Contains(storyID))
                     SetRepercusionState(s.m_QuestRepercusion.m_ID, true);
             };
 
@@ -44,7 +44,7 @@ namespace CQM.Systems
                 var loc = _locationComponents.GetList().Find(l => l.m_CharacterOwnerID == new ID(s.m_StoryData.m_QuestGiver));
                 int globalHappiness = Admin.Global.Components.m_TownComponent.m_GlobalHappiness;
 
-                if (!Admin.Global.Components.m_StoriesStateComponent.m_AllSecondaryStories.Contains(s.m_StoryData.m_ID))
+                if (!Admin.Global.Components.m_GameStoriesStateComponent.m_AllSecondaryStories.Contains(s.m_StoryData.m_ID))
                     amount = 300;
                 else
                     amount = 150;

@@ -1,8 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
-namespace CQM.Databases
+namespace CQM.Components
 {
     [System.Serializable]
     // Storage of all the unlocked pieces and cookies that the player has
@@ -20,47 +19,5 @@ namespace CQM.Databases
 
         // Ingredients Inventory
         public List<InventoryItem> m_Ingredients = new List<InventoryItem>();
-    }
-
-
-    [System.Serializable]
-    public class InventoryItem
-    {
-        public ID m_ItemID;
-        public int m_Amount = 0;
-
-        public InventoryItem() { }
-
-        public InventoryItem(ID itemID, int amount)
-        {
-            m_ItemID = itemID;
-            m_Amount = amount;
-        }
-    }
-
-
-    public struct ItemData
-    {
-        public ID m_ItemID;
-        public int m_Amount;
-
-        public ItemData(ID itemID, int amount)
-        {
-            m_ItemID = itemID;
-            m_Amount = amount;
-        }
-    }
-
-
-    [System.Serializable]
-    public class IngredientComponent
-    {
-        public ID m_ID;
-        public string m_Name;
-        public Sprite m_Sprite;
-
-        public Reputation m_ReputationTypePrice = Reputation.GoodCookieReputation;
-        public int m_Price_Good;
-        public int m_Price_Evil;
     }
 }

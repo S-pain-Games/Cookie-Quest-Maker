@@ -21,7 +21,7 @@ public class EvithBehaviour : MonoBehaviour, IInteractableEntity
         var evtSys = Admin.Global.EventSystem;
         _showDialogueCmd = evtSys.GetCommandByName<Event<ShowDialogueEvtArgs>>("dialogue_sys", "show_dialogue");
 
-        var dialogueComponent = Admin.Global.Components.GetComponentContainer<DialogueCharacterComponent>().GetComponentByID(new ID("evith"));
+        var dialogueComponent = Admin.Global.Components.GetComponentContainer<CharacterDialogueComponent>().GetComponentByID(new ID("evith"));
 
         // This should be a static function
         m_RandomIdleDialogue.Clear();

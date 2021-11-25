@@ -20,7 +20,7 @@ public class NuBehaviour : MonoBehaviour, IInteractableEntity
         var evtSys = Admin.Global.EventSystem;
         _showDialogueCmd = evtSys.GetCommandByName<Event<ShowDialogueEvtArgs>>("dialogue_sys", "show_dialogue");
 
-        var dialogueComponent = Admin.Global.Components.GetComponentContainer<DialogueCharacterComponent>().GetComponentByID(new ID("nu"));
+        var dialogueComponent = Admin.Global.Components.GetComponentContainer<CharacterDialogueComponent>().GetComponentByID(new ID("nu"));
 
         // This should be a static function
         m_RandomIdleDialogue.Clear();

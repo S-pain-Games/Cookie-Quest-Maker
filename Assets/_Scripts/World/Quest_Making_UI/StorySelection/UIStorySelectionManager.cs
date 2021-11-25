@@ -51,7 +51,7 @@ namespace CQM.UI.QuestMakingTable
 
         private void Awake()
         {
-            _ongoingStories = Admin.Global.Components.m_StoriesStateComponent.m_OngoingStories;
+            _ongoingStories = Admin.Global.Components.m_GameStoriesStateComponent.m_OngoingStories;
             _storyUIComponents = Admin.Global.Components.GetComponentContainer<StoryUIDataComponent>();
             _playBakeryDayMusic = Admin.Global.EventSystem.GetCommandByName<Event<ID>>("audio_sys", "play_music");
         }
@@ -116,7 +116,7 @@ namespace CQM.UI.QuestMakingTable
 
         private bool IsSecondaryStory(ID storyId)
         {
-            return Admin.Global.Components.m_StoriesStateComponent.m_AllSecondaryStories.Contains(storyId);
+            return Admin.Global.Components.m_GameStoriesStateComponent.m_AllSecondaryStories.Contains(storyId);
         }
 
         private void NextStory()
