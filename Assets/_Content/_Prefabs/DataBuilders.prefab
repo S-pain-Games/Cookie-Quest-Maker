@@ -3879,14 +3879,14 @@ MonoBehaviour:
         del sabor, colega."
       - "Ir\xE9 esta misma noche a buscar algunas, espero tener suerte, porque son
         muy raras, colega."
-      m_QuestGiver: johnny
+      m_QuestGiver: johny_setas
       m_Description: "Johnny quiere participar en el pr\xF3ximo concurso de reposter\xEDa.
         Piensa utilizar hongos que podr\xEDan poner en peligro el concurso."
       m_BranchOptions:
       - m_Condition:
           m_Target:
-            m_NameID: johnny
-            m_ID: -1650144070
+            m_NameID: johny_setas
+            m_ID: -840848411
             m_Initialized: 1
           m_Tag: 1
           m_Value: 3
@@ -3914,8 +3914,8 @@ MonoBehaviour:
           m_Value: 10
       - m_Condition:
           m_Target:
-            m_NameID: johnny
-            m_ID: -1650144070
+            m_NameID: johny_setas
+            m_ID: -840848411
             m_Initialized: 1
           m_Tag: 2
           m_Value: 3
@@ -3949,8 +3949,8 @@ MonoBehaviour:
           m_Value: 10
       - m_Condition:
           m_Target:
-            m_NameID: johnny
-            m_ID: -1650144070
+            m_NameID: johny_setas
+            m_ID: -840848411
             m_Initialized: 1
           m_Tag: 0
           m_Value: 3
@@ -3983,8 +3983,8 @@ MonoBehaviour:
           m_Value: 10
       - m_Condition:
           m_Target:
-            m_NameID: johnny
-            m_ID: -1650144070
+            m_NameID: johny_setas
+            m_ID: -840848411
             m_Initialized: 1
           m_Tag: 1
           m_Value: 1
@@ -4010,8 +4010,8 @@ MonoBehaviour:
           m_Value: 10
       - m_Condition:
           m_Target:
-            m_NameID: johnny
-            m_ID: -1650144070
+            m_NameID: johny_setas
+            m_ID: -840848411
             m_Initialized: 1
           m_Tag: 2
           m_Value: 1
@@ -4044,8 +4044,8 @@ MonoBehaviour:
           m_Value: 10
       - m_Condition:
           m_Target:
-            m_NameID: johnny
-            m_ID: -1650144070
+            m_NameID: johny_setas
+            m_ID: -840848411
             m_Initialized: 1
           m_Tag: 0
           m_Value: 1
@@ -4079,8 +4079,8 @@ MonoBehaviour:
           m_Active: 0
           m_Value: 10
       m_AllPossibleTargets:
-      - m_NameID: johnny
-        m_ID: -1650144070
+      - m_NameID: johny_setas
+        m_ID: -840848411
         m_Initialized: 1
     m_State: 0
     m_QuestData:
@@ -5178,15 +5178,15 @@ MonoBehaviour:
         resplandeciente que cualquier cosa, colega."
       - "No sabr\xEDa describirte nada m\xE1s, pero tiene que ser una se\xF1al de
         algo importante, colega."
-      m_QuestGiver: johnny
+      m_QuestGiver: johny_setas
       m_Description: "En su \xFAltima sesi\xF3n de meditaci\xF3n, Johnny ha tenido
         la visi\xF3n de una luz muy brillante. Est\xE1 convencido de que se trata
         de un augurio."
       m_BranchOptions:
       - m_Condition:
           m_Target:
-            m_NameID: johnny
-            m_ID: -1650144070
+            m_NameID: johny_setas
+            m_ID: -840848411
             m_Initialized: 1
           m_Tag: 2
           m_Value: 5
@@ -5226,8 +5226,8 @@ MonoBehaviour:
           m_Value: 10
       - m_Condition:
           m_Target:
-            m_NameID: johnny
-            m_ID: -1650144070
+            m_NameID: johny_setas
+            m_ID: -840848411
             m_Initialized: 1
           m_Tag: 1
           m_Value: 3
@@ -5265,8 +5265,8 @@ MonoBehaviour:
           m_Value: 10
       - m_Condition:
           m_Target:
-            m_NameID: johnny
-            m_ID: -1650144070
+            m_NameID: johny_setas
+            m_ID: -840848411
             m_Initialized: 1
           m_Tag: 1
           m_Value: 1
@@ -5302,8 +5302,8 @@ MonoBehaviour:
           m_Value: 10
       - m_Condition:
           m_Target:
-            m_NameID: johnny
-            m_ID: -1650144070
+            m_NameID: johny_setas
+            m_ID: -840848411
             m_Initialized: 1
           m_Tag: 2
           m_Value: 1
@@ -5341,8 +5341,8 @@ MonoBehaviour:
           m_Value: 10
       - m_Condition:
           m_Target:
-            m_NameID: johnny
-            m_ID: -1650144070
+            m_NameID: johny_setas
+            m_ID: -840848411
             m_Initialized: 1
           m_Tag: 0
           m_Value: 1
@@ -5382,8 +5382,8 @@ MonoBehaviour:
           m_Active: 0
           m_Value: -10
       m_AllPossibleTargets:
-      - m_NameID: johnny
-        m_ID: -1650144070
+      - m_NameID: johny_setas
+        m_ID: -840848411
         m_Initialized: 1
     m_State: 0
     m_QuestData:
@@ -6671,15 +6671,15 @@ MonoBehaviour:
         vale la pena, colega!"
       - "\xA1Llevaba mucho esperando este momento! \xA1Esta noche va a ser flipante,
         colega!"
-      m_QuestGiver: johnny
+      m_QuestGiver: johny_setas
       m_Description: "El cuerpo de Johnny est\xE1 sufriendo una preocupante transformaci\xF3n
         tras sus cada vez m\xE1s intensas sesiones de meditaci\xF3n. Quiz\xE1 haya
         que hacer algo al respecto."
       m_BranchOptions:
       - m_Condition:
           m_Target:
-            m_NameID: johnny
-            m_ID: -1650144070
+            m_NameID: johny_setas
+            m_ID: -840848411
             m_Initialized: 1
           m_Tag: 1
           m_Value: 7
@@ -6719,8 +6719,8 @@ MonoBehaviour:
           m_Value: 10
       - m_Condition:
           m_Target:
-            m_NameID: johnny
-            m_ID: -1650144070
+            m_NameID: johny_setas
+            m_ID: -840848411
             m_Initialized: 1
           m_Tag: 2
           m_Value: 7
@@ -6758,8 +6758,8 @@ MonoBehaviour:
           m_Value: 20
       - m_Condition:
           m_Target:
-            m_NameID: johnny
-            m_ID: -1650144070
+            m_NameID: johny_setas
+            m_ID: -840848411
             m_Initialized: 1
           m_Tag: 0
           m_Value: 5
@@ -6794,8 +6794,8 @@ MonoBehaviour:
           m_Value: -10
       - m_Condition:
           m_Target:
-            m_NameID: johnny
-            m_ID: -1650144070
+            m_NameID: johny_setas
+            m_ID: -840848411
             m_Initialized: 1
           m_Tag: 1
           m_Value: 1
@@ -6831,8 +6831,8 @@ MonoBehaviour:
           m_Value: 10
       - m_Condition:
           m_Target:
-            m_NameID: johnny
-            m_ID: -1650144070
+            m_NameID: johny_setas
+            m_ID: -840848411
             m_Initialized: 1
           m_Tag: 2
           m_Value: 1
@@ -6867,8 +6867,8 @@ MonoBehaviour:
           m_Value: -20
       - m_Condition:
           m_Target:
-            m_NameID: johnny
-            m_ID: -1650144070
+            m_NameID: johny_setas
+            m_ID: -840848411
             m_Initialized: 1
           m_Tag: 0
           m_Value: 1
@@ -6900,8 +6900,8 @@ MonoBehaviour:
           m_Active: 0
           m_Value: -10
       m_AllPossibleTargets:
-      - m_NameID: johnny
-        m_ID: -1650144070
+      - m_NameID: johny_setas
+        m_ID: -840848411
         m_Initialized: 1
     m_State: 0
     m_QuestData:
@@ -8726,8 +8726,8 @@ MonoBehaviour:
       m_ID: -1778757852
       m_Initialized: 1
     m_CharacterID:
-      m_NameID: johnny
-      m_ID: -1650144070
+      m_NameID: johny_setas
+      m_ID: -840848411
       m_Initialized: 1
     m_Title: La Tarta del Caos
     m_Body: "El pasado concurso de reposter\xEDa se ha cancelado debido a los efectos
@@ -8738,8 +8738,8 @@ MonoBehaviour:
       m_ID: -1165341605
       m_Initialized: 1
     m_CharacterID:
-      m_NameID: johnny
-      m_ID: -1650144070
+      m_NameID: johny_setas
+      m_ID: -840848411
       m_Initialized: 1
     m_Title: Un concurso sin incidentes
     m_Body: "El concurso anual de reposter\xEDa ha finalizado sin incidentes."
@@ -8913,8 +8913,8 @@ MonoBehaviour:
       m_ID: 1261100355
       m_Initialized: 1
     m_CharacterID:
-      m_NameID: johnny
-      m_ID: -1650144070
+      m_NameID: johny_setas
+      m_ID: -840848411
       m_Initialized: 1
     m_Title: Incendio en la casa del alquimista.
     m_Body: "El repentino incendio que por poco asola la casa del alquimista local
@@ -8925,8 +8925,8 @@ MonoBehaviour:
       m_ID: -1753202715
       m_Initialized: 1
     m_CharacterID:
-      m_NameID: johnny
-      m_ID: -1650144070
+      m_NameID: johny_setas
+      m_ID: -840848411
       m_Initialized: 1
     m_Title: La alquimia renovada.
     m_Body: "La comunidad de vecinos se alegra por el gran hallazgo de un alquimista
@@ -8937,8 +8937,8 @@ MonoBehaviour:
       m_ID: 1654980862
       m_Initialized: 1
     m_CharacterID:
-      m_NameID: johnny
-      m_ID: -1650144070
+      m_NameID: johny_setas
+      m_ID: -840848411
       m_Initialized: 1
     m_Title: El alquimista ausente.
     m_Body: "Parte de la comunidad de vecinos se encuentra preocupada por la salud
@@ -9100,8 +9100,8 @@ MonoBehaviour:
       m_ID: 1803522837
       m_Initialized: 1
     m_CharacterID:
-      m_NameID: johnny
-      m_ID: -1650144070
+      m_NameID: johny_setas
+      m_ID: -840848411
       m_Initialized: 1
     m_Title: "La extra\xF1a enfermedad del alquimista"
     m_Body: "Los vecinos se encuentran preocupados por la salud de un alquimista
@@ -9112,8 +9112,8 @@ MonoBehaviour:
       m_ID: 1665577868
       m_Initialized: 1
     m_CharacterID:
-      m_NameID: johnny
-      m_ID: -1650144070
+      m_NameID: johny_setas
+      m_ID: -840848411
       m_Initialized: 1
     m_Title: El abominable hombre seta.
     m_Body: Los vecinos se encuentran consternados ante la preocupante apariencia
@@ -9124,8 +9124,8 @@ MonoBehaviour:
       m_ID: -1596210974
       m_Initialized: 1
     m_CharacterID:
-      m_NameID: johnny
-      m_ID: -1650144070
+      m_NameID: johny_setas
+      m_ID: -840848411
       m_Initialized: 1
     m_Title: El retorno del alquimista.
     m_Body: "El joven alquimista cuyo aspecto preocupaba a los vecinos ha regresado
@@ -9135,8 +9135,8 @@ MonoBehaviour:
       m_ID: -309647702
       m_Initialized: 1
     m_CharacterID:
-      m_NameID: johnny
-      m_ID: -1650144070
+      m_NameID: johny_setas
+      m_ID: -840848411
       m_Initialized: 1
     m_Title: "La nueva afici\xF3n del alquimista."
     m_Body: El joven alquimista, cuyo aspecto preocupaba a los vecinos, ha afirmado

@@ -889,7 +889,7 @@ namespace CQM.DataBuilders
             //STORY 8
             // =============================================================================================
 
-            StartCreatingStory("the_cake_was_not_a_lie", "La tarta no era mentira", "johnny",
+            StartCreatingStory("the_cake_was_not_a_lie", "La tarta no era mentira", "johny_setas",
                "Johnny quiere participar en el próximo concurso de repostería. Piensa utilizar hongos que podrían poner en peligro el concurso.", new List<string>() {
                 "La Feria va a ser pronto, de normal no me suelen interesar esos eventos, son muy aburridos, colega.",
                 "Pero por lo visto este año va a hacer un concurso de repostería, eso de hacer tartas y tal, colega.",
@@ -915,7 +915,7 @@ namespace CQM.DataBuilders
                 "Los animalejos del bosque están cada año más agresivos. No me han dejado en paz, colega.",
                 "Pero no todo está perdido. Tengo algunas Setas de la Pirueta guardadas del año pasado, colega.",
                 "No estarán en las mejores condiciones, ¡pero seguro que algún premio me llevo, colega!"
-            }, Tag.Harm, 1, "johnny");
+            }, Tag.Harm, 1, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡La cosa va a ponerse muy interesante en el concurso! ¡Tengo un presentimiento de que así será!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -928,7 +928,7 @@ namespace CQM.DataBuilders
                 "¡Tíiiiiiio, la cosa se ha puesto fina! Fuí a por setas por la noche y cuando volví mi laboratorio estaba ardiendo, colega!",
                 "Se han echado a perder muchas pócimas e ingredientes que tenía guardados, colega.",
                 "¿El concurso?, ya no va a poder ser. Estas cosas pasan, colega."
-            }, Tag.Harm, 3, "johnny");
+            }, Tag.Harm, 3, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡¿Por qué interferir en el concurso?! ¡Deja que el mundo siga su curso, que se iba a poner interesante!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -942,7 +942,7 @@ namespace CQM.DataBuilders
                 "Suerte que alguien ha puesto señales por el bosque para encontrarlas, colega.",
                 "¿Qué si es raro que haya señales? No sé, mucha gente se perderá por el bosque, colega.",
                 "En fin, ¡mi tarta va a ser tremenda, colega!"
-            }, Tag.Help, 1, "johnny");
+            }, Tag.Help, 1, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡La cosa va a ponerse muy interesante en el concurso! ¡Tengo un presentimiento de que así será!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -957,7 +957,7 @@ namespace CQM.DataBuilders
                 "Nada más y nada menos que el Champiñón de la Visión, ¡mi favorito, colega!",
                 "Ese champiñón te permite ver todo, colega, ¡toooodo!",
                 "¡Los jueces van a flipar, colega!"
-            }, Tag.Help, 3, "johnny");
+            }, Tag.Help, 3, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡La cosa va a ponerse muy interesante en el concurso! ¡Tengo un presentimiento de que así será!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -971,7 +971,7 @@ namespace CQM.DataBuilders
                 "Pero, lo he estado meditando y ya no me apetece participar, colega.",
                 "¿Mi meditación? Dejo que las setas me indiquen el camino a seguir, así de simple, colega.",
                 "He visto cosas más extrañas de lo habitual, eso no puede ser buena señal, colega."
-            }, Tag.Convince, 1, "johnny");
+            }, Tag.Convince, 1, "johny_setas");
 
             //CONVINCE >=3
             StartStoryBranch();
@@ -982,7 +982,7 @@ namespace CQM.DataBuilders
                 "El Señor Galleta tiene razón, los jueces no sabrían apreciar mi obra, colega.",
                 "¿El Señor Galleta? Lo he visto durante mi meditación nocturna, colega.",
                 "¡Todo es posible cuando se consumen Champiñones de la Visión, son alucinantes, colega!"
-            }, Tag.Convince, 3, "johnny");
+            }, Tag.Convince, 3, "johny_setas");
 
             AddStorySelectionUIData("La tarta no era de mentira");
             FinishCreatingStory();
@@ -1425,7 +1425,7 @@ namespace CQM.DataBuilders
             //STORY 13
             // =============================================================================================
 
-            StartCreatingStory("mushroom_profecy", "La profecía del hongo", "johnny",
+            StartCreatingStory("mushroom_profecy", "La profecía del hongo", "johny_setas",
           "En su última sesión de meditación, Johnny ha tenido la visión de una luz muy brillante. Está convencido de que se trata de un augurio.", new List<string>() {
                 "Estoy muy rayado estos días, en plan, no soy capaz de pensar en cualquier otra cosa, colega.",
                 "De normal cuando medito, veo formas y colores fuera de la comprensión humana, colega.",
@@ -1455,7 +1455,7 @@ namespace CQM.DataBuilders
                 "¡El saco con mis... materiales de meditación empezó a arder, tal cual te lo digo colega!",
                 "Suerte que no estaba en un trance profundo, porque si no, no me hubiera ni inmutado, colega.",
                 "Un poco más y se me quema la casa. ¡Pero definitivamente la luz que ví se trataba de eso, colega!"
-            }, Tag.Harm, 1, "johnny");
+            }, Tag.Harm, 1, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                "La meditación es para la gente que quiere dormir pero no puede dormir. No le veo la gracia."});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1471,7 +1471,7 @@ namespace CQM.DataBuilders
                 "Parecía que algo me guiaba hacia el lugar donde lo encontré, yo tan solo me dejé llevar, colega.",
                 "Estoy seguro de que la luz que ví fue el brillo del pequeño tesoro. ¡Es pura lógica, colega!",
                 "Aunque no sea gran cosa, puedo permitirme comprar algunos materiales raros, colega."
-            }, Tag.Help, 1, "johnny");
+            }, Tag.Help, 1, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Nu es muy fan de la meditación y ese tipo de actividades inactivas. ¡Pero yo las odio!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1487,7 +1487,7 @@ namespace CQM.DataBuilders
                 "Hice bien en vagar por el bosque de noche, mi intuición me llevó hasta donde se encontraba, colega.",
                 "Si trituras uno de esos con cuidado, se pueden utilizar para medicina y alquimia, colega.",
                 "¡Y además era uno de los gordos, con esto podré hacer cosas flipantes, colega!"
-            }, Tag.Help, 5, "johnny");
+            }, Tag.Help, 5, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Nu es muy fan de la meditación y ese tipo de actividades inactivas. ¡Pero yo las odio!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1502,7 +1502,7 @@ namespace CQM.DataBuilders
                 "¡Esto solo puede significar que estoy adentrándome en un trance cada vez más profundo, colega!",
                 "¿El trance? Es un estado mental donde se puede apreciar las costuras de la realidad, colega.",
                 "Se necesita mucha concentración para alcanzarlo, y muchas setas, colega."
-            }, Tag.Convince, 1, "johnny");
+            }, Tag.Convince, 1, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "No entiendo el interés de Nu por ese tal Johnny. ¡Si sólo se dedica a hacer el vago!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1517,7 +1517,7 @@ namespace CQM.DataBuilders
                 "¿El Señor Galleta? Pude vislumbrar su figura ¡Se necesita mucha concentración para eso, colega!",
                 "Cuanto más profundo es el trance, más cosas increíbles puedes llegar a ver, colega.",
                 "¿La luz? Resultó ser la luz del Sol dándome en la cara, ¡una señal de un mañana mejor, colega!"
-            }, Tag.Convince, 3, "johnny");
+            }, Tag.Convince, 3, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "No entiendo el interés de Nu por ese tal Johnny. ¡Si sólo se dedica a hacer el vago!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -2033,7 +2033,7 @@ namespace CQM.DataBuilders
             //STORY 18
             // =============================================================================================
 
-            StartCreatingStory("fungal_metamorphosis", "Metaforfosis Fúngica", "johnny",
+            StartCreatingStory("fungal_metamorphosis", "Metaforfosis Fúngica", "johny_setas",
             "El cuerpo de Johnny está sufriendo una preocupante transformación tras sus cada vez más intensas sesiones de meditación. Quizá haya que hacer algo al respecto.", new List<string>() {
                 "Últimamente me están pasando cosas muy raras en plan, cosas mazo chungas, colega.",
                 "Después de meditar, me doy cuenta de que me salen raíces y me crecen bultos en la piel, colega.",
@@ -2067,7 +2067,7 @@ namespace CQM.DataBuilders
                 "¡Tíiio, voy a dejar esto de la meditación de lado de momento! ¡No veas como me duele todo, colega!",
                 "Ayer, en medio de mi meditación profunda, empecé a sentir dolores punzantes en el cuerpo, colega.",
                 "Supongo que será cosa de los bultos y las raíces que brotan de mi piel, ¡pero de normal no duele tanto, colega!"
-            }, Tag.Harm, 1, "johnny");
+            }, Tag.Harm, 1, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Ese tal Johnny parece un tipo aburrido. Pero tengo curiosidad de ver hasta donde llega."});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -2081,7 +2081,7 @@ namespace CQM.DataBuilders
                 "Justo cuando iba a dejar todo preparado, ¡Pum! Se cae parte del techo de mi casa encima, colega!",
                 "He salido ileso, pero casi todo mi material se ha echado a perder. ¡Qué mala suerte tengo, colega!",
                 "No podré reponer mi material hasta el próximo invierno. Así que hasta el año que viene nada, colega."
-            }, Tag.Harm, 5, "johnny");
+            }, Tag.Harm, 5, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Ese tal Johnny parece un tipo aburrido. Pero tengo curiosidad de ver hasta donde llega."});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -2095,7 +2095,7 @@ namespace CQM.DataBuilders
                 "Lo más raro fué que cuando salí del trance no podía moverme, ¡estaba enraizado en el sitio, colega!",
                 "Además, de mis bultos en la espalda han brotado setas. Me pregunto de qué tipo serán, colega.",
                 "Por algún motivo las raíces se marchitaron poco antes de amanecer, Si no, ¡todavía estaría allí plantado, colega!"
-            }, Tag.Help, 1, "johnny");
+            }, Tag.Help, 1, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡Si un ser cubierto de hongos se me acerca, le prenderé fuego! ¡Me dan asco las setas!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -2110,7 +2110,7 @@ namespace CQM.DataBuilders
                 "¿Los bultos y las raíces? Pues, diría que han desaparecido, así por completo, colega.",
                 "Ayer encontré en casa un Champiñón Solar, normalmente no me molesto en recolectarlos, colega.",
                 "Para cambiar un poco, lo utilicé para mi polvo especial. No sabía que servía para contrarrestar la transformación, colega."
-            }, Tag.Help, 7, "johnny");
+            }, Tag.Help, 7, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "No entiendo nada de todo esto. ¡Que alguien me explique por qué es tan importante!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -2124,7 +2124,7 @@ namespace CQM.DataBuilders
                 "Me lo dijo el Señor Galleta en una visión. Dijo que debería de preocuparme por los bultos y las raíces, colega.",
                 "¿El Señor Galleta? A veces he notado su presencia, ¡pero esta vez me habló directamente, colega!",
                 "Seguramente no entiendas nada de nada, pero se dice que el Señor Galleta rige el destino del mundo, colega."
-            }, Tag.Convince, 1, "johnny");
+            }, Tag.Convince, 1, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿No tendrá algo mejor que hacer ese hombre que dedicarse a dormir profundamente?"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -2140,7 +2140,7 @@ namespace CQM.DataBuilders
                 "¡Lo tengo clarinete! ¡Quiero dedicarme a hacer galletas! Y no de cualquier tipo, colega",
                 "Quiero que contengan todo mi conocimiento sobre los hongos. ¡Será una pasada, colega!",
                 "Quizá así algún día me vuelva a visitar el Señor Galleta, ¡o quizás el Dios Galleta, colega!"
-            }, Tag.Convince, 7, "johnny");
+            }, Tag.Convince, 7, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿No tendrá algo mejor que hacer ese hombre que dedicarse a dormir profundamente?"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
