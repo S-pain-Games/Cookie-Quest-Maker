@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -125}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 700, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9206393119066855514
@@ -65,9 +65,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Carlos del \xC1guila Mateu\n\nCarlos Rodr\xEDguez S\xE1nchez-Rold\xE1n\nYer\xF3n
-    Mart\xEDn S\xE1nchez\nPascual G\xE1zquez Comp\xE1n\n\nAntonio Arian Silaghi\nJes\xFAs
-    David Rojo Mart\xEDn\nNorman Peter Stankewitz\nJos\xE9 Fernando Medina Talavera"
+  m_text: "DISE\xD1O DEL JUEGO\nCarlos del \xC1guila Mateu\n\nARTE\nCarlos Rodr\xEDguez
+    S\xE1nchez-Rold\xE1n\nYer\xF3n Mart\xEDn S\xE1nchez\n\nM\xDASICA\nPascual G\xE1zquez
+    Comp\xE1n\n\nPROGRAMACI\xD3N\nAntonio Arian Silaghi\nJes\xFAs David Rojo Mart\xEDn\nNorman
+    Peter Stankewitz\nJos\xE9 Fernando Medina Talavera"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ef1be124fc8bc58499726ec02251e954, type: 2}
   m_sharedMaterial: {fileID: -5819891758687267668, guid: ef1be124fc8bc58499726ec02251e954, type: 2}
@@ -94,8 +95,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -130,7 +131,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 205.00787, z: -42.108704, w: -121.56818}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
