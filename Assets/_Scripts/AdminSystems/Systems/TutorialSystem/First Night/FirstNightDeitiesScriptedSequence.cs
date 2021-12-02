@@ -9,6 +9,8 @@ public class FirstNightDeitiesScriptedSequence : MonoBehaviour
     private EventVoid _toggleGameplayUiCmd;
     private Event<ShowDialogueEvtArgs> _showDialogueCmd;
 
+    [SerializeField] private GameObject button_next_day;
+
     private void Awake()
     {
         GameEventSystem evtSys = Admin.Global.EventSystem;
@@ -17,6 +19,9 @@ public class FirstNightDeitiesScriptedSequence : MonoBehaviour
         _disableMovementCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "disable_movement");
         _toggleGameplayUiCmd = evtSys.GetCommandByName<EventVoid>("ui_sys", "toggle_gameplay");
         _showDialogueCmd = evtSys.GetCommandByName<Event<ShowDialogueEvtArgs>>("dialogue_sys", "show_dialogue");
+
+        if (button_next_day != null)
+            button_next_day.SetActive(false);
     }
 
     [MethodButton]
@@ -159,6 +164,8 @@ public class FirstNightDeitiesScriptedSequence : MonoBehaviour
 
     private void FinishSequence()
     {
+        if (button_next_day != null)
+            button_next_day.SetActive(true);
         _enableMovementCmd.Invoke();
         _toggleGameplayUiCmd.Invoke();
     }

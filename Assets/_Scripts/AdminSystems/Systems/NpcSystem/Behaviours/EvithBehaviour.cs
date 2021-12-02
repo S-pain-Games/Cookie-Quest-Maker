@@ -15,6 +15,8 @@ public class EvithBehaviour : MonoBehaviour, IInteractableEntity
     [SerializeField]
     private UnityEvent onFinishInteract;
 
+    [SerializeField] private GameObject button_next_day;
+
 
     private void Awake()
     {
@@ -41,6 +43,9 @@ public class EvithBehaviour : MonoBehaviour, IInteractableEntity
     public void OnInteract()
     {
         if (m_Interacting) return;
+
+        //Deactivate next day button
+        button_next_day.SetActive(false);
 
         m_Interacting = true;
         if (m_MainDialogue.Count > 0)

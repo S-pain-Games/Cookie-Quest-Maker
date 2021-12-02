@@ -55,6 +55,8 @@ public class Shop_UI : MonoBehaviour
     [SerializeField] private GameObject image_evith;
     [SerializeField] private GameObject image_nu;
 
+    [SerializeField] private GameObject button_next_day;
+
     private Color colorWhite = new Color(0.5254902f, 0.3098039f, 0.1607f);
     private Color colorRed = new Color(0.6320754f, 0.06857423f, 0.1578471f);
 
@@ -77,6 +79,8 @@ public class Shop_UI : MonoBehaviour
         //EventVoid evt = admin.EventSystem.GetCallback<EventVoid>(new ID("shop_sys"), new ID("update_shop_ui"));
         Event<bool> evt = admin.EventSystem.GetCallback<Event<bool>>(new ID("shop_sys"), new ID("update_shop_ui"));
         evt.OnInvoked += UpdateUI;
+
+        
     }
 
     private void OnEnable()
@@ -300,5 +304,11 @@ public class Shop_UI : MonoBehaviour
             text_buy.text = "¡Comprar!";
             UpdateUI(false);
         }
+    }
+
+    public void CloseShop()
+    {
+        if(button_next_day != null)
+            button_next_day.SetActive(true);
     }
 }
