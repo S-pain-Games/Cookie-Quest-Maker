@@ -60,6 +60,7 @@ public class SpriteAnimatorHio : MonoBehaviour
 
 
         m_AnimSys.Update();
+        m_AnimSys.RegulateFrameRate(_agent.velocity.magnitude);
     }
 
     private bool AngleInRange(float angle, float a, float b)
@@ -78,15 +79,18 @@ public class SpriteAnimatorHio : MonoBehaviour
         [SerializeField] private CharacterAnimations m_Anim;
         private AnimationFrames m_CurrentAnimation;
 
-        [SerializeField]
-        private float m_FrameRate = 5.0f;
+
+        [SerializeField] private float m_IdleFrameRate = 5.0f;
+        [SerializeField] private float m_WalkingFrameRate = 9.0f;
+        private float m_FrameRate;
+
         private float m_SecPerFrame = 0.0f;
         private float m_SecSinceLastUpdate = 0.0f;
-
 
         public void Init()
         {
             m_CurrentAnimation = m_Anim.m_IdleE;
+            m_FrameRate = m_IdleFrameRate;
         }
 
         public void Update()
@@ -98,6 +102,14 @@ public class SpriteAnimatorHio : MonoBehaviour
                 _renderer.sprite = m_CurrentAnimation.GetNextSprite();
                 m_SecSinceLastUpdate = 0.0f;
             }
+        }
+
+        public void RegulateFrameRate(float agentSpeed)
+        {
+            if (agentSpeed > 0.001f)
+                m_FrameRate = m_WalkingFrameRate;
+            else
+                m_FrameRate = m_IdleFrameRate;
         }
 
         // We should definitely use a dictionary for this but oh well
