@@ -58,9 +58,20 @@ public class NuBehaviour : MonoBehaviour, IInteractableEntity
         }
     }
 
+    public void ShowDialog()
+    {
+        if (m_MainDialogue.Count > 0)
+            _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(m_MainDialogue, new ID("nu"), DialogueFinished));
+        else
+            _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(m_RandomIdleDialogue[UnityEngine.Random.Range(0, m_RandomIdleDialogue.Count)], new ID("nu"), DialogueFinished));
+    }
+
+
     private void DialogueFinished()
     {
-        m_Interacting = false;
+        //m_Interacting = false;
         m_MainDialogue.Clear();
+
+        transform.parent.GetComponent<EvithAndNuBehaviour>().OnNuDialogEnded();
     }
 }

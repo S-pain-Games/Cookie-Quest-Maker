@@ -64,10 +64,24 @@ public class EvithBehaviour : MonoBehaviour, IInteractableEntity
         }
     }
 
-    private void DialogueFinished()
+    public void ShowDialog()
+    {
+        if (m_MainDialogue.Count > 0)
+            _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(m_MainDialogue, new ID("evith"), DialogueFinished));
+        else
+            _showDialogueCmd.Invoke(new ShowDialogueEvtArgs( m_RandomIdleDialogue[UnityEngine.Random.Range(0, m_RandomIdleDialogue.Count)],new ID("evith"), DialogueFinished));
+    }
+
+    /*private void DialogueFinished()
     {
         m_Interacting = false;
         onFinishInteract?.Invoke();
         m_MainDialogue.Clear();
+    }*/
+
+    private void DialogueFinished()
+    {
+        m_MainDialogue.Clear();
+        transform.parent.GetComponent<EvithAndNuBehaviour>().OnEvithDialogEnded();
     }
 }
