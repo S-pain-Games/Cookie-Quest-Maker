@@ -192,16 +192,16 @@ namespace CQM.DataBuilders
                 SetIDName("attack");
                 SetPieceType(PieceType.Action);
                 AddFunctionalTag(Tag.Harm, 1);
-                SetUIData("Atacar", "Con esta galleta puedes acariciar fuertemente al objetivo hasta que por un resvalón tonto caiga al suelo. Si no quería llegar a este nivel, no sé, que se hubiese portado bien.");
-                SetRecipeData("Receta de Atacar", "Con esta galleta puedes acariciar fuertemente al objetivo hasta que por un resvalón tonto caiga al suelo. Si no quería llegar a este nivel, no sé, que se hubiese portado bien.", Karma.EvilKarma, 50, 0);
+                SetUIData("Atacar", "Con esta galleta puedes acariciar fuertemente al objetivo hasta que por un resbalón tonto caiga al suelo. Si no quería llegar a este nivel, no sé, que se hubiese portado bien.");
+                SetRecipeData("Receta de Atacar", "Con esta galleta puedes acariciar fuertemente al objetivo hasta que por un resbalón tonto caiga al suelo. Si no quería llegar a este nivel, no sé, que se hubiese portado bien.", Karma.EvilKarma, 50, 0);
                 AddIngredientToRecipe("masa_de_galletas_encantada", 1);
 
                 CreateNew();
                 SetIDName("dialogate");
                 SetPieceType(PieceType.Action);
                 AddFunctionalTag(Tag.Convince, 1);
-                SetUIData("Dialogar", "Hablar las cosas a veces está bien, eso dicen… Mira primero se intenta convencer, luego ya se saca a Diálogo.");
-                SetRecipeData("Receta de Dialogar", "Hablar las cosas a veces está bien, eso dicen… Mira primero se intenta convencer, luego ya se saca a Diálogo.", Karma.GoodKarma, 0, 50);
+                SetUIData("Dialogar", "Hablar las cosas a veces está bien, eso dicen… Mira, primero se intenta convencer, luego ya se saca a Diálogo.");
+                SetRecipeData("Receta de Dialogar", "Hablar las cosas a veces está bien, eso dicen… Mira, primero se intenta convencer, luego ya se saca a Diálogo.", Karma.GoodKarma, 0, 50);
                 AddIngredientToRecipe("masa_de_galletas_encantada", 1);
 
                 CreateNew();
@@ -280,8 +280,8 @@ namespace CQM.DataBuilders
                 SetIDName("violently");
                 SetPieceType(PieceType.Modifier);
                 AddFunctionalTag(Tag.Harm, 3);
-                SetUIData("Violentamente", "La violencia nunca es la solución, bueno si alguien se pone un poco tonto se le puede acaricial violentamente la cara hasta que entre en razón, pero sólo cuando Diálogo no ha funcionado.");
-                SetRecipeData("Receta de Violentamente", "La violencia nunca es la solución, bueno si alguien se pone un poco tonto se le puede acaricial violentamente la cara hasta que entre en razón, pero sólo cuando Diálogo no ha funcionado.", Karma.GoodKarma, 50, 10);
+                SetUIData("Violentamente", "La violencia nunca es la solución, bueno si alguien se pone un poco tonto se le puede acariciar violentamente la cara hasta que entre en razón, pero sólo cuando Diálogo no ha funcionado.");
+                SetRecipeData("Receta de Violentamente", "La violencia nunca es la solución, bueno si alguien se pone un poco tonto se le puede acariciar violentamente la cara hasta que entre en razón, pero sólo cuando Diálogo no ha funcionado.", Karma.GoodKarma, 50, 10);
                 AddIngredientToRecipe("polvo_impetuoso", 3);
 
                 CreateNew();
@@ -289,8 +289,8 @@ namespace CQM.DataBuilders
                 SetPieceType(PieceType.Modifier);
                 AddFunctionalTag(Tag.Harm, 4);
                 AddFunctionalTag(Tag.Convince, 1);
-                SetUIData("Brutalmente", "Todo ataque se magnifica con esta galleta, pero  no nos pasemos, los trajes para funerales están caros en esta época del año.");
-                SetRecipeData("Receta de Brutalmente", "Todo ataque se magnifica con esta galleta, pero  no nos pasemos, los trajes para funerales están caros en esta época del año.", Karma.GoodKarma, 10, 50);
+                SetUIData("Brutalmente", "Todo ataque se magnifica con esta galleta, pero no nos pasemos, los trajes para funerales están caros en esta época del año.");
+                SetRecipeData("Receta de Brutalmente", "Todo ataque se magnifica con esta galleta, pero no nos pasemos, los trajes para funerales están caros en esta época del año.", Karma.GoodKarma, 10, 50);
                 AddIngredientToRecipe("polvo_impetuoso", 5);
 
                 CreateNew();
@@ -314,7 +314,7 @@ namespace CQM.DataBuilders
                 CreateNew();
                 SetIDName("mayor");
                 SetPieceType(PieceType.Target);
-                SetUIData("Alcalde", "Es el alcalde del pueblo, y no tienen ningún problema en dejarte claro dos cosas, que es el ALCALDE, y que le gustan los dineros. Posee gran parte de los cultivos de trigo del pueblo, allá donde te alcance la vista es propiedad suya, y tiene un sospechoso gran parentesco a Hio…");
+                SetUIData("Alcalde", "Es el alcalde del pueblo, y no tiene ningún problema en dejarte claro dos cosas, que es el ALCALDE, y que le gusta los dineros. Posee gran parte de los cultivos de trigo del pueblo, allá donde te alcance la vista es propiedad suya, y tiene un sospechoso gran parentesco a Hio…");
 
                 CreateNew();
                 SetIDName("meri");

@@ -106,7 +106,7 @@ namespace CQM.Systems
                     
 
 
-                    npcData.m_Dialogue.Add("Menuda Historia...");
+                    npcData.m_Dialogue.Add("Menuda historia...");
 
                     StartSecondaryStory(secondaryStoriesToStart, npcData);
                 }
@@ -185,7 +185,7 @@ namespace CQM.Systems
 
                     secondaryStoriesToFinalize.RemoveAt(0);
 
-                    npcData.m_Dialogue.Add("Menuda Historia...");
+                    npcData.m_Dialogue.Add("Menuda historia...");
                 }
             }
 
