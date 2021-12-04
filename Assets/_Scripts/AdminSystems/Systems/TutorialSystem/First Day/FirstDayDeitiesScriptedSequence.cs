@@ -167,5 +167,6 @@ public class FirstDayDeitiesScriptedSequence : MonoBehaviour
         nuRef = null;
         _enableMovementCmd.Invoke();
         _toggleGameplayUiCmd.Invoke();
+        GetComponent<FirstDayFurnaceSequence>().SetTutorialActive(true);
     }
 }

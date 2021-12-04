@@ -106,6 +106,8 @@ public class PieceCraftingUI : MonoBehaviour
         AnimateSelectedPiece();
     }
 
+    [SerializeField] private FirstDayFurnaceSequence furnaceTutorial;
+
     private void OnEnable()
     {
         CheckChanges();
@@ -113,6 +115,8 @@ public class PieceCraftingUI : MonoBehaviour
 
         bake_animator.SetBool("startBake", false);
         bake_animator_2.SetBool("startBake", false);
+
+        furnaceTutorial.ShowFirstTimeFurnaceOpenedSequence();
     }
 
     bool coroutineActive = false;
@@ -505,6 +509,16 @@ public class PieceCraftingUI : MonoBehaviour
             canCraft = false;
             _craftRecipe.Invoke(_selectedPieceID);
             UpdateRecipeIngredients(true);
+
+            Debug.Log("Cookie: " + _selectedPieceID.NameID);
+            if (_selectedPieceID.NameID == "malvavisco_fantasma_tostado")
+            {
+                furnaceTutorial.ShowFirstCookieBakedSequence();
+            }
+            else if (_selectedPieceID.NameID == "attack" || _selectedPieceID.NameID == "dialogate" || _selectedPieceID.NameID == "assist")
+            {
+                furnaceTutorial.ShowFirstActionCookieBakedSequence();
+            }
         }
     }
 
