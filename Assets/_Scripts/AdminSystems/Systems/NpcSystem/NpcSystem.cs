@@ -99,26 +99,16 @@ namespace CQM.Systems
                     {
                         Debug.Log("Load of secondary story canceled");
                     }
-<<<<<<< Updated upstream
-                    
-
-
-                    npcData.m_Dialogue.Add("Menuda Historia...");
-
-                    StartSecondaryStory(secondaryStoriesToStart, npcData);
-=======
                     else
                     {
                         npcData.m_Dialogue.Add("Menuda historia...");
                         StartSecondaryStory(secondaryStoriesToStart, npcData);
                     }
->>>>>>> Stashed changes
                 }
                 else if (haveToStartAPrimaryStory)
                 {
                     FinalizeSecondaryStory(secondaryStoriesToFinalize, npcData);
                   
-                    Debug.Log("Misión por empezar: " + primaryStoryToStart.NameID);
                     if (Admin.Global.Components.m_GameStoriesStateComponent.m_MainStoriesToStartOrder[0].NameID == "")
                     {
                         Debug.Log("Load of primary story canceled");
@@ -126,8 +116,6 @@ namespace CQM.Systems
                         int charIndex = UnityEngine.Random.Range(0, availableNPCs.Count);
                         npcData.m_CharacterID = availableNPCs[charIndex];
                         availableNPCs.RemoveAt(charIndex);
-
-                        //FinalizeSecondaryStory(secondaryStoriesToFinalize, npcData);
 
                         if (npcData.m_Dialogue.Count == 0) npcData.m_DontHaveImportantDialogue = true;
                     }
