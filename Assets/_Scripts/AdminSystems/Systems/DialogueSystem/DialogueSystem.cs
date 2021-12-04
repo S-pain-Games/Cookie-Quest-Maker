@@ -77,7 +77,11 @@ public class DialogueSystem : ISystemEvents
 
         data.m_Container.StopAllCoroutines();
 
-        if (data.m_CurrentLineIndex < data.m_CurrentDialogueLines.Count - 1)
+        if (data.m_Line.text != data.m_CurrentDialogueLines[data.m_CurrentLineIndex])
+        {
+            data.m_Line.text = data.m_CurrentDialogueLines[data.m_CurrentLineIndex];
+        }
+        else if (data.m_CurrentLineIndex < data.m_CurrentDialogueLines.Count - 1)
         {
             data.m_CurrentLineIndex++;
             data.m_Container.StartCoroutine(ShowText(data.m_CurrentDialogueLines[data.m_CurrentLineIndex]));
