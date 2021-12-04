@@ -47,7 +47,6 @@ namespace CQM.Systems
             commands.AddEvent(new ID("populate_deities")).OnInvoked += PopulateDeitiesData;
         }
 
-
         // Called just before the start of the day to set the
         // dialogue that each NPC has to say that day
         public void PopulateNpcsData(int maxSecondaryStories)
@@ -79,7 +78,6 @@ namespace CQM.Systems
                 npcData.m_HasToStartAStory = false;
                 npcData.m_IsAPrimaryStory = false;
 
-
                 if (haveToFinalizeAPrimaryStory)
                 {
                     StoryInfoComponent s = _storyInfoComponents[finalizeMainStoryID];
@@ -94,38 +92,60 @@ namespace CQM.Systems
                     npcData.m_StoryIDToFinalizeOnInteract = finalizeMainStoryID;
 
                     haveToFinalizeAPrimaryStory = false;
-                    haveToStartAPrimaryStory = false;
+                    haveToStartAPrimaryStory = true;
 
                     //Si la siguiente misión principal es vacía. No iniciar la secundaria.
-
                     if (Admin.Global.Components.m_GameStoriesStateComponent.m_MainStoriesToStartOrder[0].NameID == "")
                     {
                         Debug.Log("Load of secondary story canceled");
-                        continue;
                     }
+<<<<<<< Updated upstream
                     
 
 
                     npcData.m_Dialogue.Add("Menuda Historia...");
 
                     StartSecondaryStory(secondaryStoriesToStart, npcData);
+=======
+                    else
+                    {
+                        npcData.m_Dialogue.Add("Menuda historia...");
+                        StartSecondaryStory(secondaryStoriesToStart, npcData);
+                    }
+>>>>>>> Stashed changes
                 }
                 else if (haveToStartAPrimaryStory)
                 {
                     FinalizeSecondaryStory(secondaryStoriesToFinalize, npcData);
+                  
+                    Debug.Log("Misión por empezar: " + primaryStoryToStart.NameID);
+                    if (Admin.Global.Components.m_GameStoriesStateComponent.m_MainStoriesToStartOrder[0].NameID == "")
+                    {
+                        Debug.Log("Load of primary story canceled");
 
-                    StoryInfoComponent s = _storyInfoComponents[primaryStoryToStart];
-                    npcData.m_CharacterID = new ID(s.m_StoryData.m_QuestGiver);
-                    availableNPCs.Remove(npcData.m_CharacterID);
+                        int charIndex = UnityEngine.Random.Range(0, availableNPCs.Count);
+                        npcData.m_CharacterID = availableNPCs[charIndex];
+                        availableNPCs.RemoveAt(charIndex);
 
-                    var introductionDialogue = s.m_StoryData.m_IntroductionDialogue;
-                    for (int j = 0; j < introductionDialogue.Count; j++)
-                        npcData.m_Dialogue.Add(introductionDialogue[j]);
+                        //FinalizeSecondaryStory(secondaryStoriesToFinalize, npcData);
 
-                    haveToStartAPrimaryStory = false;
-                    npcData.m_HasToStartAStory = true;
-                    npcData.m_IsAPrimaryStory = true;
-                    npcData.m_StoryIDToStartOnInteract = primaryStoryToStart;
+                        if (npcData.m_Dialogue.Count == 0) npcData.m_DontHaveImportantDialogue = true;
+                    }
+                    else
+                    {
+                        StoryInfoComponent s = _storyInfoComponents[primaryStoryToStart];
+                        npcData.m_CharacterID = new ID(s.m_StoryData.m_QuestGiver);
+                        availableNPCs.Remove(npcData.m_CharacterID);
+
+                        var introductionDialogue = s.m_StoryData.m_IntroductionDialogue;
+                        for (int j = 0; j < introductionDialogue.Count; j++)
+                            npcData.m_Dialogue.Add(introductionDialogue[j]);
+
+                        haveToStartAPrimaryStory = false;
+                        npcData.m_HasToStartAStory = true;
+                        npcData.m_IsAPrimaryStory = true;
+                        npcData.m_StoryIDToStartOnInteract = primaryStoryToStart;
+                    }
                 }
                 else
                 {

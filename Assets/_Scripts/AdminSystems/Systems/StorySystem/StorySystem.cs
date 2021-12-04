@@ -129,9 +129,13 @@ public class StorySystem : ISystemEvents
             _finalizedStories.Add(storyId);
             m_StoriesInfo[storyId].m_State = StoryInfoComponent.State.Finalized;
 
-            if(_primaryStoriesToStart[0].NameID == "")
+            //La siguiente misión que cargar ha de ser Vacía, no tiene que haber misiones empezadas ni pendientes de completar.
+
+            Debug.Log("Ongoing: " + _ongoingStories.Count);
+            Debug.Log("Completed: " + _completedStories.Count);
+            if (_primaryStoriesToStart[0].NameID == "" && _ongoingStories.Count == 0)
             {
-                Debug.Log("All Primary Stories Finalized");
+                Debug.Log("EL ACABOSE");
                 Admin.Global.EventSystem.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state").Invoke(GameStateSystem.State.EndGame);
             }
 
