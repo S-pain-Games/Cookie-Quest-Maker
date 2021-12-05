@@ -61,6 +61,9 @@ public class Shop_UI : MonoBehaviour
     private Color colorRed = new Color(0.6320754f, 0.06857423f, 0.1578471f);
 
 
+    private EventVoid _enableCharMovementCmd;
+    private EventVoid _disableCharMovementCmd;
+
     private void Awake()
     {
         var admin = Admin.Global;
@@ -73,6 +76,9 @@ public class Shop_UI : MonoBehaviour
         _buyRecipe = admin.EventSystem.GetCommandByName<Event<ID>>("shop_sys", "buy_recipe");
         _buyIngredient = admin.EventSystem.GetCommandByName<Event<ID>>("shop_sys", "buy_ingredient");
 
+        _enableCharMovementCmd = admin.EventSystem.GetCommandByName<EventVoid>("character_sys", "enable_movement");
+        _disableCharMovementCmd =  admin.EventSystem.GetCommandByName<EventVoid>("character_sys", "disable_movement");
+
         _recipesToBuy = new List<RecipeDataComponent>();
         _ingredientsToBuy = new List<IngredientComponent>();
 
@@ -83,9 +89,15 @@ public class Shop_UI : MonoBehaviour
         
     }
 
+    [SerializeField] private FirstNightShopSecuence tutorial;
+
     private void OnEnable()
     {
         LoadRecipeLists();
+
+        tutorial.ShowFFirstTimeOpenShopSequence();
+        _disableCharMovementCmd.Invoke();
+
     }
 
     private void LoadRecipeLists()
@@ -310,5 +322,7 @@ public class Shop_UI : MonoBehaviour
     {
         if(button_next_day != null)
             button_next_day.SetActive(true);
+
+        _enableCharMovementCmd.Invoke();
     }
 }
