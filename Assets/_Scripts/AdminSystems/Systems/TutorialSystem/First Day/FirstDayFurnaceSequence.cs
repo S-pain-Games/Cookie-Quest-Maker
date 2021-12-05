@@ -220,6 +220,9 @@ public class FirstDayFurnaceSequence : MonoBehaviour
     private void FinishFirstActionCookieBakedSequence()
     {
         firstActionCookieBaked = false;
+
+        //Activar tutorial de la mesa
+        GetComponent<FirstDayTableSecuence>().SetTutorialActive(true);
     }
 
 }

@@ -138,12 +138,15 @@ namespace CQM.UI.QuestMakingTable
         }
 
 
-        // Enable / Disable UI's
+        [SerializeField] private FirstDayTableSecuence _tableTutorial;
 
+        // Enable / Disable UI's
         public void EnableStorySelection()
         {
             _questBuilding.gameObject.SetActive(false);
             _storySelection.gameObject.SetActive(true);
+
+            _tableTutorial.ShowFirstTimeTableOpenedSequence();
         }
 
         public void EnableQuestBuilding()
@@ -151,12 +154,16 @@ namespace CQM.UI.QuestMakingTable
             _storySelection.gameObject.SetActive(false);
             _pieceStorage.gameObject.SetActive(false);
             _questBuilding.gameObject.SetActive(true);
+
+            _tableTutorial.ShowFirstTimeQuestTableSequence();
         }
 
         public void EnablePieceStorage()
         {
             _questBuilding.gameObject.SetActive(false);
             _pieceStorage.gameObject.SetActive(true);
+
+            _tableTutorial.ShowFirstTimeStorageOpenedSequence();
         }
     }
 
