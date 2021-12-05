@@ -6,10 +6,16 @@ public class FirstDayFurnaceSequence : MonoBehaviour
 {
     private Event<ShowDialogueEvtArgs> _showDialogueCmd;
 
+    //private EventVoid _enableCharMovementCmd;
+    //private EventVoid _disableCharMovementCmd;
+
     private void Awake()
     {
         GameEventSystem evtSys = Admin.Global.EventSystem;
         _showDialogueCmd = evtSys.GetCommandByName<Event<ShowDialogueEvtArgs>>("dialogue_sys", "show_dialogue");
+
+        //_enableCharMovementCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "enable_movement");
+        //_disableCharMovementCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "disable_movement");
     }
 
     //Tutorial activo. Se activa en cuanto se termina de hablar con Evith y Nu antes de abrir el horno
@@ -70,6 +76,7 @@ public class FirstDayFurnaceSequence : MonoBehaviour
     private void FinishFirstSequence()
     {
         firstSequenceEnabled = false;
+        //_disableCharMovementCmd.Invoke();
     }
 
     // ==============================================================================================
@@ -172,6 +179,7 @@ public class FirstDayFurnaceSequence : MonoBehaviour
     private void FinishFirstCookieBakedSequence()
     {
         firstCookieBakedSequenceEnabled = false;
+        //_disableCharMovementCmd.Invoke();
     }
 
     // ==============================================================================================
@@ -223,6 +231,7 @@ public class FirstDayFurnaceSequence : MonoBehaviour
 
         //Activar tutorial de la mesa
         GetComponent<FirstDayTableSecuence>().SetTutorialActive(true);
+        //_disableCharMovementCmd.Invoke();
     }
 
 }

@@ -24,6 +24,8 @@ namespace CQM.UI.QuestMakingTable
 
         public Event<ID> _playBakeryDayMusic;
 
+        [SerializeField] private FirstDayTableSecuence _tableTutorial;
+
         private void Awake()
         {
             _questMakingSys = Admin.Global.Systems.m_QuestMakerSystem;
@@ -113,6 +115,8 @@ namespace CQM.UI.QuestMakingTable
 
                 _questBuilding.ConsumeAllPieces();
 
+                _tableTutorial.ShowFirstQuestCompletedSequence();
+
                 _playBakeryDayMusic.Invoke(new ID("bakery_day"));
                 _toggleQuestMakingUI.Invoke();
             }
@@ -136,9 +140,6 @@ namespace CQM.UI.QuestMakingTable
             EnableQuestBuilding();
             _questBuilding.SpawnPiece(pieceID);
         }
-
-
-        [SerializeField] private FirstDayTableSecuence _tableTutorial;
 
         // Enable / Disable UI's
         public void EnableStorySelection()
