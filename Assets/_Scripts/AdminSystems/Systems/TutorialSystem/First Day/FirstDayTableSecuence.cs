@@ -268,6 +268,8 @@ public class FirstDayTableSecuence : MonoBehaviour
         if (!tutorialActive || !firstQuestCompleted)
             return;
 
+        _disableCharMovementCmd.Invoke();
+
         StartFirstQuestCompletedSequence();
     }
 

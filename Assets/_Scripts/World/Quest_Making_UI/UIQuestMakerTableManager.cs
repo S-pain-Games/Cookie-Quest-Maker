@@ -115,10 +115,10 @@ namespace CQM.UI.QuestMakingTable
 
                 _questBuilding.ConsumeAllPieces();
 
-                _tableTutorial.ShowFirstQuestCompletedSequence();
-
                 _playBakeryDayMusic.Invoke(new ID("bakery_day"));
                 _toggleQuestMakingUI.Invoke();
+
+                _tableTutorial.ShowFirstQuestCompletedSequence();
             }
             else
             {
