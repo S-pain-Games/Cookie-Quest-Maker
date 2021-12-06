@@ -15,6 +15,7 @@ public class StorySystem : ISystemEvents
     private Singleton_GameStoriesStateComponent _storiesStateComponent;
     private List<ID> _ongoingStories;
     private List<ID> _primaryStoriesToStart;
+    private List<ID> _failedStories;
     private List<ID> _completedStories;
     private List<ID> _finalizedStories;
 
@@ -22,6 +23,7 @@ public class StorySystem : ISystemEvents
 
     private Event<ID> OnStoryStarted;
     private Event<ID> OnStoryCompleted;
+    private Event<ID> OnStoryFailed;
     private Event<ID> OnStoryFinalized;
     private EventVoid OnAllPrimaryStoriesCompleted;
     private EventVoid OnAllPrimaryStoriesFinalized;
@@ -34,6 +36,7 @@ public class StorySystem : ISystemEvents
         _storiesStateComponent = storiesState;
         _ongoingStories = storiesState.m_OngoingStories;
         _primaryStoriesToStart = storiesState.m_MainStoriesToStartOrder;
+        _failedStories = storiesState.m_FailedStories;
         _completedStories = storiesState.m_CompletedStories;
         _finalizedStories = storiesState.m_FinalizedPrimaryStories;
     }
@@ -46,6 +49,7 @@ public class StorySystem : ISystemEvents
 
         OnStoryStarted = callbacks.AddEvent<ID>(new ID("story_started"));
         OnStoryCompleted = callbacks.AddEvent<ID>(new ID("story_completed"));
+        OnStoryFailed = callbacks.AddEvent<ID>(new ID("story_failed"));
         OnStoryFinalized = callbacks.AddEvent<ID>(new ID("story_finalized"));
         OnAllPrimaryStoriesCompleted = callbacks.AddEvent(new ID("all_primary_stories_completed"));
         OnAllPrimaryStoriesFinalized = callbacks.AddEvent(new ID("all_primary_stories_finalized"));
@@ -53,6 +57,7 @@ public class StorySystem : ISystemEvents
         commands.AddEvent<ID>(new ID("start_story")).OnInvoked += StartStory;
         commands.AddEvent<StorySys_CompleteStoyEvtArgs>(new ID("complete_story")).OnInvoked +=
             (args) => CompleteStory(args.m_StoryId, args.m_QuestData);
+        commands.AddEvent<ID>(new ID("fail_story")).OnInvoked += FailStory;
         commands.AddEvent<ID>(new ID("finalize_story")).OnInvoked += FinalizeStory;
     }
 
@@ -88,14 +93,12 @@ public class StorySystem : ISystemEvents
 #endif
 
         StoryInfoComponent story = m_StoriesInfo[storyId];
-        _ongoingStories.Remove(storyId);
-        _completedStories.Add(storyId);
 
         _questSystem.GetOverallTag(questData.m_PiecesList, out QPTag.TagType tagType, out int value);
 
         ID targetId = questData.m_PiecesList.Find(a => a.m_Type == QuestPieceFunctionalComponent.PieceType.Target).m_ID;
-
-        ProcessStoryData(story.m_StoryData, tagType, value, targetId, out BranchOption result, out StoryRepercusionComponent rep);
+        
+        ProcessStoryData(story.m_StoryData, tagType, value, targetId, out BranchOption result, out StoryRepercusionComponent rep, out int powerValue);
         story.m_State = StoryInfoComponent.State.Completed;
         story.m_QuestData = questData;
         story.m_QuestBranchResult = result;
@@ -104,6 +107,19 @@ public class StorySystem : ISystemEvents
         Debug.Assert(questData != null);
         Debug.Assert(result != null);
         Debug.Assert(rep != null);
+
+        _ongoingStories.Remove(storyId);
+        //if (value < powerValue && !_storiesStateComponent.m_AllSecondaryStories.Contains(storyId))
+        if (value <= 1)
+        {
+            _failedStories.Add(storyId);
+        }
+        else
+        {
+            _completedStories.Add(storyId);
+        }
+        
+        
 
         OnStoryCompleted.Invoke(storyId);
 
@@ -117,10 +133,52 @@ public class StorySystem : ISystemEvents
         }
     }
 
+    private void FailStory(ID storyId)
+    {
+        Debug.Log("FAILSTORY EXECUTED");
+        _failedStories.Remove(storyId);
+
+        var s = _storiesStateComponent;
+        if (!s.m_AllSecondaryStories.Contains(storyId) && !_primaryStoriesToStart.Contains(storyId))
+        {
+            //_primaryStoriesToStart.Add(storyId);
+            _primaryStoriesToStart.Insert(_primaryStoriesToStart.Count-1, storyId);
+            m_StoriesInfo[storyId].m_State = StoryInfoComponent.State.Finalized;
+
+            //La siguiente misión que cargar ha de ser Vacía, no tiene que haber misiones empezadas ni pendientes de completar.
+            Debug.Log("Ongoing: " + _ongoingStories.Count);
+            Debug.Log("Completed: " + _completedStories.Count);
+            if (_primaryStoriesToStart[0].NameID == "" && _ongoingStories.Count == 0)
+            {
+                Debug.Log("EL ACABOSE");
+                Admin.Global.EventSystem.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state").Invoke(GameStateSystem.State.EndGame);
+            }
+
+            if (_primaryStoriesToStart.Count == 0
+                && _ongoingStories.Count == 0
+                && _completedStories.Count == 0)
+            {
+                OnAllPrimaryStoriesFinalized.OnInvoked += () => {
+                    Debug.Log("All Primary Stories Finalized");
+                    //Admin.Global.EventSystem.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state").Invoke(GameStateSystem.State.EndGame);
+                };
+                OnAllPrimaryStoriesFinalized.Invoke();
+            }
+        }
+        else
+        {
+            s.m_AvailableSecondaryStoriesToStart.Add(storyId);
+            m_StoriesInfo[storyId].m_State = StoryInfoComponent.State.NotStarted;
+        }
+
+        OnStoryFailed.Invoke(storyId);
+    }
+
     // This is called when the Dialogue System
     // the player the "Ending"(text) of the story
     private void FinalizeStory(ID storyId)
     {
+        Debug.Log("FINALIZESTORY EXECUTED");
         _completedStories.Remove(storyId);
 
         var s = _storiesStateComponent;
@@ -130,7 +188,6 @@ public class StorySystem : ISystemEvents
             m_StoriesInfo[storyId].m_State = StoryInfoComponent.State.Finalized;
 
             //La siguiente misión que cargar ha de ser Vacía, no tiene que haber misiones empezadas ni pendientes de completar.
-
             Debug.Log("Ongoing: " + _ongoingStories.Count);
             Debug.Log("Completed: " + _completedStories.Count);
             if (_primaryStoriesToStart[0].NameID == "" && _ongoingStories.Count == 0)
@@ -159,14 +216,15 @@ public class StorySystem : ISystemEvents
     }
 
     // Process a story with the given tag and value and get the result
-    private void ProcessStoryData(StoryData data, QPTag.TagType tag, int value, ID targetId, out BranchOption result, out StoryRepercusionComponent rep)
+    private void ProcessStoryData(StoryData data, QPTag.TagType tag, int value, ID targetId, out BranchOption result, out StoryRepercusionComponent rep, out int powerValue)
     {
         result = null;
         rep = null;
+        powerValue = 0;
         bool match = false;
         for (int i = 0; i < data.m_BranchOptions.Count; i++)
         {
-            if (ProcessBranchOption(data.m_BranchOptions[i], tag, value, targetId, out result, out rep))
+            if (ProcessBranchOption(data.m_BranchOptions[i], tag, value, targetId, out result, out rep, out powerValue))
             {
                 match = true;
                 break;
@@ -184,9 +242,11 @@ public class StorySystem : ISystemEvents
     }
 
     // Process a Branch Option
-    private bool ProcessBranchOption(BranchOption branchOpt, QPTag.TagType tag, int value, ID targetId, out BranchOption result, out StoryRepercusionComponent rep)
+    private bool ProcessBranchOption(BranchOption branchOpt, QPTag.TagType tag, int value, ID targetId, out BranchOption result, out StoryRepercusionComponent rep, out int powerValue)
     {
-        bool match = CheckCondition(branchOpt.m_Condition, tag, value, targetId);
+        bool match = CheckCondition(branchOpt.m_Condition, tag, value, targetId, out powerValue);
+        //powerValue = branchOpt.m_Condition.m_Power;
+        
         if (match)
         {
             result = branchOpt;
@@ -201,12 +261,18 @@ public class StorySystem : ISystemEvents
     }
 
     // Check if a Branch Condition Is Met
-    private bool CheckCondition(BranchCondition bCondition, QPTag.TagType tag, int value, ID targetId)
+    private bool CheckCondition(BranchCondition bCondition, QPTag.TagType tag, int value, ID targetId, out int powerValue)
     {
+        powerValue = 0;
         if (tag == bCondition.m_Tag
             && value >= bCondition.m_Value
             && bCondition.m_Target == targetId)
+        {
+            powerValue = bCondition.m_Power;
+            Debug.LogWarning("TARGET " + targetId);
+            Debug.LogWarning("POWER VALUE " + powerValue);
             return true;
+        }
         else
             return false;
     }

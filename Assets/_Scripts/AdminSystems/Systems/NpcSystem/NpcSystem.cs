@@ -59,10 +59,12 @@ namespace CQM.Systems
             List<ID> availableNPCs = SelectAvailableNPCs();
 
             List<ID> allStoriesToFinalize = SelectStoriesThatHaveToBeFinalized(_storiesStateComponent.m_CompletedStories, 3);
+            List<ID> allStoriesToFail = SelectStoriesThatHaveToBeFailed(_storiesStateComponent.m_FailedStories, 1);
             List<ID> secondaryStoriesToFinalize = SelectSecondaryStoriesThatHaveToBeFinalized(allStoriesToFinalize);
 
             bool haveToStartAPrimaryStory = CheckIfShouldStartAPrimaryStory(allStoriesToFinalize);
             bool haveToFinalizeAPrimaryStory = SelectMainStoriesToFinalize(allStoriesToFinalize, out ID finalizeMainStoryID);
+            bool haveToFailAPrimaryStory = SelectMainStoriesToFail(allStoriesToFail, out ID failMainStoryID);
 
             ID primaryStoryToStart = SelectMainStoryToStart();
 
@@ -78,7 +80,34 @@ namespace CQM.Systems
                 npcData.m_HasToStartAStory = false;
                 npcData.m_IsAPrimaryStory = false;
 
-                if (haveToFinalizeAPrimaryStory)
+                if (haveToFailAPrimaryStory)
+                {
+                    StoryInfoComponent s = _storyInfoComponents[failMainStoryID];
+
+                    npcData.m_CharacterID = new ID(s.m_StoryData.m_QuestGiver);
+                    availableNPCs.Remove(npcData.m_CharacterID);
+
+                    for (int c = 0; c < s.m_QuestBranchResult.m_ResultNPCDialogue.Count; c++)
+                        npcData.m_Dialogue.Add(s.m_QuestBranchResult.m_ResultNPCDialogue[c]);
+
+                    npcData.m_HasToFailAStory = true;
+                    npcData.m_StoryIDToFailOnInteract = failMainStoryID;
+
+                    haveToFailAPrimaryStory = false;
+                    haveToStartAPrimaryStory = true;
+
+                    //Si la siguiente misión principal es vacía. No iniciar la secundaria.
+                    if (Admin.Global.Components.m_GameStoriesStateComponent.m_MainStoriesToStartOrder[0].NameID == "")
+                    {
+                        Debug.Log("Load of secondary story canceled");
+                    }
+                    else
+                    {
+                        npcData.m_Dialogue.Add("Menuda historia...");
+                        StartSecondaryStory(secondaryStoriesToStart, npcData);
+                    }
+                }
+                else if (haveToFinalizeAPrimaryStory)
                 {
                     StoryInfoComponent s = _storyInfoComponents[finalizeMainStoryID];
 
@@ -237,6 +266,20 @@ namespace CQM.Systems
                 return false;
             }
 
+            bool SelectMainStoriesToFail(List<ID> allStoriesToFail, out ID id)
+            {
+                id = new ID();
+                for (int i = 0; i < allStoriesToFail.Count; i++)
+                {
+                    if (IsMainStory(allStoriesToFail[i]))
+                    {
+                        id = allStoriesToFail[i];
+                        return true;
+                    }
+                }
+                return false;
+            }
+
             bool CheckIfShouldStartAPrimaryStory(List<ID> storiesToFinalize)
             {
                 bool should = true;
@@ -306,6 +349,18 @@ namespace CQM.Systems
 
                 return cStoriesIds;
             }
+
+            List<ID> SelectStoriesThatHaveToBeFailed(List<ID> failedStoriesIDList, int maxStoriesToComplete)
+            {
+                int avaliableCompletedStories = Mathf.Min(failedStoriesIDList.Count, maxStoriesToComplete);
+                List<ID> cStoriesIds = new List<ID>(); // Completed Stories Ids
+                for (int i = 0; i < avaliableCompletedStories; i++)
+                {
+                    cStoriesIds.Add(failedStoriesIDList[i]);
+                }
+
+                return cStoriesIds;
+            }
         }
 
         public void PopulateDeitiesData()
@@ -358,7 +413,9 @@ namespace CQM.Components
         public ID m_StoryIDToStartOnInteract;
         // ID of the story to finalize on dialogue
         public bool m_HasToFinalizeAStory;
+        public bool m_HasToFailAStory;
         public ID m_StoryIDToFinalizeOnInteract;
+        public ID m_StoryIDToFailOnInteract;
 
         public bool m_DontHaveImportantDialogue;
         public List<List<string>> m_RandomIdleDialogue = new List<List<string>>();

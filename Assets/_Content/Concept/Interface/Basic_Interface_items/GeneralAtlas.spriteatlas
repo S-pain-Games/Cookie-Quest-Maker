@@ -44,6 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 425e6126f3da18f4e8f13f006105e02f, type: 3}
+    totalSpriteSurfaceArea: 1955451
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -81,6 +82,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 249ba82a2d2688f49a753ba995be2d39, type: 3}
   - {fileID: 21300000, guid: cf79fd2a46fb7c046aa11ce9600e0433, type: 3}
   - {fileID: 21300000, guid: 75e90a6a1b3850c4c8b9592e57d3680e, type: 3}
+  - {fileID: 21300000, guid: 7f9bb67a179c0fc46bb85a5e0b9f9119, type: 3}
   - {fileID: 21300000, guid: d6de1dcacfae1874bb8170377f9e205f, type: 3}
   - {fileID: 21300000, guid: def472ea5ff4ba441a3bb4e9cbeb16d0, type: 3}
   - {fileID: 21300000, guid: c6c0dbea8b1cd9245a274ab113a9a19f, type: 3}
@@ -127,6 +129,7 @@ SpriteAtlas:
   - Evnets_alert
   - settings_button
   - SelectAction
+  - next_button_2
   - SelectModifier
   - Arrow_icon
   - CookieIngredient_10

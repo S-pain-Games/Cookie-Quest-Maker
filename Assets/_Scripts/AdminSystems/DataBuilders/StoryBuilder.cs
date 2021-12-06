@@ -83,7 +83,7 @@ namespace CQM.DataBuilders
                 "¿Te acuerdas del problema aquél de los lobos del que te hablé? ¡No te lo vas a creer!",
                 "Se comenta que alguien o algo los ha espantado. ¡Así tal cual, de la noche a la mañana!",
                 "Al final no ha sido necesario contratar a nadie para lidiar con ellos. ¡Así que estamos a salvo!"
-            }, Tag.Harm, 1, "wolves");
+            }, Tag.Harm, 1, 1, "wolves");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Por qué todo el mundo piensa que los lobos son malvados?",
                 "¡Tienen las mismas cualidades que cualquier perro pero con muchas ansias de sangre, son perfectos!" });
@@ -97,7 +97,7 @@ namespace CQM.DataBuilders
                 "¿Recuerdas el asunto de los lobos del otro día? Todavía me cuesta creerlo.",
                 "¡La manada entera fue aniquilada de la noche a la mañana, no ha quedado ni uno!",
                 "Me alegra que el problema se haya solucionado, pero me preocupa pensar que haya una criatura más peligrosa que esos lobos merodeando en los alrededores."
-            }, Tag.Harm, 3, "wolves");
+            }, Tag.Harm, 3, 1, "wolves");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Por qué todo el mundo piensa que los lobos son malvados?",
                 "¡Tienen las mismas cualidades que cualquier perro pero con muchas ansias de sangre, son perfectos!" });
@@ -112,7 +112,7 @@ namespace CQM.DataBuilders
                 "¡Algunos de los lobos han sido domesticados, así de la noche a la mañana! ¡Nadie sabe cómo!",
                 "Los lobos domesticados ayudan a proteger el ganado, y el resto de los lobos ya no son un problema.",
                 "Tenía pensado contratar a alguien para lidiar con ellos, pero parece que ya no hará falta."
-            }, Tag.Convince, 1, "wolves");
+            }, Tag.Convince, 1, 1, "wolves");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Por qué todo el mundo piensa que los lobos son malvados?",
                 "¡Tienen las mismas cualidades que cualquier perro pero con muchas ansias de sangre, son perfectos!" });
@@ -127,7 +127,7 @@ namespace CQM.DataBuilders
                 "Han conseguido entrar en algunas granjas durante la noche, de alguna forma.",
                 "Nadie me hacía caso, pero tenía razón en que estas criaturas son cada vez más inteligentes.",
                 "Ya he contratado a un profesional para que se haga cargo, pero estaremos endeudados una buena temporada."
-            }, Tag.Help, 1, "wolves");
+            }, Tag.Help, 1, 1, "wolves");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Tengo la sensación de que no me voy a aburrir contigo.", "Espero que no me decepciones." });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -143,7 +143,7 @@ namespace CQM.DataBuilders
                 "Por si el problema de los lobos no fuera suficiente estrés, ahora tengo que lidiar con más presión.",
                 "Los lobos siguen campando a sus anchas, voy a tener que contratar a un cazador cuanto antes.",
                 "Y un par de guardaespaldas, por si fuera poco."
-            }, Tag.Harm, 1, "mayor");
+            }, Tag.Harm, 1, 1, "mayor");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                  "Tengo la sensación de que no me voy a aburrir contigo.", "Espero que no me decepciones." });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -158,7 +158,7 @@ namespace CQM.DataBuilders
                 "Para mi sorpresa, aceptó el contrato por mucho menos de lo que pide normalmente",
                 "No sé qué lo habrá llevado a rebajar tanto su precio, pero se lo agradezco.",
                 "Pronto el problema estará resuelto."
-            }, Tag.Help, 1, "mayor");
+            }, Tag.Help, 1, 1, "mayor");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                  "¿Por qué todo el mundo piensa que los lobos son malvados?",
                 "¡Tienen las mismas cualidades que cualquier perro pero con muchas ansias de sangre, son perfectos!" });
@@ -173,7 +173,7 @@ namespace CQM.DataBuilders
                 "Para mi sorpresa, aceptó el contrato por mucho menos de lo que pide normalmente",
                 "No sé qué lo habrá llevado a rebajar tanto su precio, pero se lo agradezco.",
                 "Pronto el problema estará resuelto."
-            }, Tag.Convince, 1, "mayor");
+            }, Tag.Convince, 1, 1, "mayor");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                  "¿Por qué todo el mundo piensa que los lobos son malvados?",
                 "¡Tienen las mismas cualidades que cualquier perro pero con muchas ansias de sangre, son perfectos!" });
@@ -187,7 +187,7 @@ namespace CQM.DataBuilders
                 "¡No te lo vas a creer!. Esta misma mañana ha venido un cazador a ofrecer sus servicios ¡Gratis!",
                 "Normalmente suelen pedir bastante dinero para este tipo de problemas con bestias salvajes.",
                 "Pero ha insistido mucho en trabajar de forma gratuita. ¡Estamos salvados!",
-            }, Tag.Help, 3, "mayor");
+            }, Tag.Help, 3, 1, "mayor");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                  "¿Por qué todo el mundo piensa que los lobos son malvados?",
                 "¡Tienen las mismas cualidades que cualquier perro pero con muchas ansias de sangre, son perfectos!" });
@@ -201,7 +201,7 @@ namespace CQM.DataBuilders
                 "¡No te lo vas a creer!. Esta misma mañana ha venido un cazador a ofrecer sus servicios ¡Gratis!",
                 "Normalmente suelen pedir bastante dinero para este tipo de problemas con bestias salvajes.",
                 "Pero ha insistido mucho en trabajar de forma gratuita. ¡Estamos salvados!",
-            }, Tag.Convince, 3, "mayor");
+            }, Tag.Convince, 3, 1, "mayor");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                  "¿Por qué todo el mundo piensa que los lobos son malvados?",
                 "¡Tienen las mismas cualidades que cualquier perro pero con muchas ansias de sangre, son perfectos!" });
@@ -241,7 +241,7 @@ namespace CQM.DataBuilders
                 "Alguien ha matado a cuatro de mis vacas durante la noche. Ninguno de mis vecinos sabe nada al respecto.",
                 "Es una tragedia, pero viendo el lado positivo… las demás vacas podrán comer más que antes.",
                 "No podré vender todos los lácteos que me gustaría, pero al menos podré vender algunas carnes."
-            }, Tag.Harm, 1, "meri");
+            }, Tag.Harm, 1, 1, "meri");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Veo que ya le vas pillando el tranquillo a esto de hornear Galletas mágicas.",
                 "Y viendo las decisiones que tomas... ¡Me gusta tu estilo!"});
@@ -257,7 +257,7 @@ namespace CQM.DataBuilders
                 "Nadie del pueblo sabe nada al respecto, ¡¿Por qué me pasan estas cosas solamente a mí?!",
                 "La Feria va a ser un fracaso, pero al menos podré vender bastante carne.",
                 "Eso sí, no me haré responsable de mis actos si descubro a ese malnacido."
-            }, Tag.Harm, 3, "meri");
+            }, Tag.Harm, 3, 1, "meri");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                  "Veo que ya le vas pillando el tranquillo a esto de hornear Galletas mágicas.",
                 "Y viendo las decisiones que tomas... ¡Me gusta tu estilo!"});
@@ -272,7 +272,7 @@ namespace CQM.DataBuilders
                 "De alguna forma mis vacas se escaparon de mi granja en mitad de la noche. ¡Una locura!",
                 "Seguí sus huellas a través de una arboleda y las encontré a todas pastando en un prado verde que no conocía.",
                 "Con las vacas mejor alimentadas,  llegaré a tener suficiente leche para la Feria. ¡Qué alivio!"
-            }, Tag.Help, 1, "meri");
+            }, Tag.Help, 1, 1, "meri");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "No tengo ninguna necesidad alimenticia, ¡pero cómo me comería unos buenos filetes!",
                 "Aunque no tiene pinta de que vaya a ocurrir. Una pena."});
@@ -286,7 +286,7 @@ namespace CQM.DataBuilders
                 "He hablado con otros ganaderos, y algunos han accedido a venderme algo de leche por un precio algo más razonable.",
                 "Es raro que bajen los precios en estas fechas, pero no me puedo quejar.",
                 "Aun así debería de tener suficiente leche para vender todo lo que me gustaría en la Feria. ¡Qué alegría!"
-            }, Tag.Convince, 1, "meri");
+            }, Tag.Convince, 1, 1, "meri");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "No tengo ninguna necesidad alimenticia, ¡pero cómo me comería unos buenos filetes!",
                 "Aunque no tiene pinta de que vaya a ocurrir. Una pena."});
@@ -301,7 +301,7 @@ namespace CQM.DataBuilders
                 "Muchos de mis vecinos ganaderos han decidido ayudarme con los preparativos para la Feria.",
                 "También me han dado consejos para fabricar pienso y rutas de pastoreo en tiempos de sequía.",
                 "Con esto tendré incluso más productos de los habituales para la Feria. ¡No sabes cuánto me alegro!"
-            }, Tag.Convince, 3, "meri");
+            }, Tag.Convince, 3, 1, "meri");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "No tengo ninguna necesidad alimenticia, ¡pero cómo me comería unos buenos filetes!",
                 "Aunque no tiene pinta de que vaya a ocurrir. Una pena."});
@@ -346,7 +346,7 @@ namespace CQM.DataBuilders
                 "Debió de ser uno de los sectarios, aunque no me esperaba que quisieran hacerlo añicos siendo tan importante para ellos.",
                 "Y sobre el huevo… resultó ser uno normal y corriente pintado de amarillo. Tan simple como eso.",
                 "Me siento avergonzada por caer en una estafa tan clara, pero al menos sé que no he sido la única."
-            }, Tag.Harm, 1, "canela");
+            }, Tag.Harm, 1, 1, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡La violencia es siempre la solución! Y si no funciona es porque no se aplica lo suficiente." });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -361,7 +361,7 @@ namespace CQM.DataBuilders
                 "Se hubiera salido con la suya si no fuera por el ruido que hizo al entrar por la ventana.",
                 "He tenido suerte de que hubiera cazuelas apoyadas sobre la ventana, aunque no recuerdo haberlas dejado ahí.",
                 "No esperaba que realmente fueran a entrar en mi casa, tendré que contratar algunos guardias."
-            }, Tag.Help, 1, "canela");
+            }, Tag.Help, 1, 1, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Me pregunto a qué deidad venerarán aquellos cultistas. ¡Como sean seguidores de Nu, se las van a tener que ver conmigo!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -375,7 +375,7 @@ namespace CQM.DataBuilders
                 "Sé que cuesta mucho creerlo, ¡pero ayer sorprendí a un sectario que se había colado en mi finca!",
                 "Estaba huyendo despavorido como si hubiera visto algo aterrador. Se disculpó conmigo y me prometió que nunca jamás volverían a molestarme.",
                 "Me alegra que este asunto se haya terminado, pero me pregunto qué será lo que le aterró tanto."
-            }, Tag.Help, 3, "canela");
+            }, Tag.Help, 3, 1, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Me pregunto a qué deidad venerarán aquellos cultistas. ¡Como sean seguidores de Nu, se las van a tener que ver conmigo!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -390,7 +390,7 @@ namespace CQM.DataBuilders
                 "He revisado de arriba a abajo toda la casa y no soy capaz de entender qué los provoca.",
                 "Empiezo a pensar si el huevo está maldecido o si de verdad es una reliquia de esa secta.",
                 "Creo que mi mejor opción será vender el huevo a algún interesado y olvidarme del asunto."
-            }, Tag.Convince, 1, "canela");
+            }, Tag.Convince, 1, 1, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Quizás yo también debería de empezar a coleccionar cachivaches." });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -404,7 +404,7 @@ namespace CQM.DataBuilders
                 "¡Ese huevo está maldito! No he parado de escuchar ruidos extraños en toda la noche.",
                 "Y por si fuera poco, toda mi colección estaba patas arriba, ¡como si fuera obra de un espíritu!",
                 "Ese huevo me ha costado un dineral, ¡pero no pienso poner en peligro mi colección por una baratija como esa!"
-            }, Tag.Convince, 3, "canela");
+            }, Tag.Convince, 3, 1, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Quizás yo también debería de empezar a coleccionar cachivaches." });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -452,7 +452,7 @@ namespace CQM.DataBuilders
                 "El problema es que han caído ligeramente cerca de la chimenea... estando encendida.",
                 "Nadie ha resultado herido, tan solo han saltado por los aires algunos de mis aparatos.",
                 "Supongo que yo soy la culpable, tenía que haber tenido más cuidado. ¡Pero no me rendiré!"
-            }, Tag.Harm, 1, "miss_chocolate");
+            }, Tag.Harm, 1, 1, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡Esta noche presiento que va a ocurrir algo genial! Buena decisión, por cierto." });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -468,7 +468,7 @@ namespace CQM.DataBuilders
                 "Yo estaba fuera tomando el aire fresco en el momento de la explosión, por suerte.",
                 "Toda mi investigación se ha echado a perder. Tan solo han quedado intactos algunos inventos.",
                 "Tendré que comenzar desde cero, ¡Pero no me daré por vencida!"
-            }, Tag.Harm, 3, "miss_chocolate");
+            }, Tag.Harm, 3, 1, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡Esta noche presiento que va a ocurrir algo genial! Buena decisión, por cierto." });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -482,7 +482,7 @@ namespace CQM.DataBuilders
                 "Me di cuenta en el momento en que me cayó un bote de pimienta en la cabeza. ¡Qué cosas!",
                 "¡El verdadero sabor explosivo que buscaba en realidad proviene del picante!",
                 "Por eso utilizo ahora pimienta en lugar de pólvora, ¡En mayores cantidades!"
-            }, Tag.Help, 1, "miss_chocolate");
+            }, Tag.Help, 1, 1, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Sea lo que sea que salga de ese experimento, ¡me gustaría probarlo!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -496,7 +496,7 @@ namespace CQM.DataBuilders
                 "Algunos mercaderes finalmente han accedido a ofrecerme toda la pólvora que necesito.",
                 "Por supuesto siguen insistiendo en que es muy peligroso, por eso he accedido a experimentar con pequeñas dosis muy controladas.",
                 "Mi investigación no progresará tanto como me gustaría, pero, ¡poco a poco lograré mi objetivo!"
-            }, Tag.Convince, 1, "miss_chocolate");
+            }, Tag.Convince, 1, 1, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡El fin justifica los medios! Y si medio pueblo sale por los aires, ¡todavía mejor!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -512,7 +512,7 @@ namespace CQM.DataBuilders
                 "Tienen propiedades casi idénticas que la pólvora, pero sin los riesgos de salir por los aires.",
                 "Ese tipo de ingredientes son tan raros por aquí que es impensable comprarlos ¡Pero la suerte me sonríe!",
                 "¡Estoy cada vez más cerca de lograr la fórmula del chocolate definitivo! ¡Tengo que seguir trabajando!"
-            }, Tag.Convince, 3, "miss_chocolate");
+            }, Tag.Convince, 3, 1, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡El fin justifica los medios! Y si medio pueblo sale por los aires, ¡todavía mejor!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -555,7 +555,7 @@ namespace CQM.DataBuilders
                 "¡Malditas ratas inmundas! ¡No solo me roban mis vegetales si no que encima me atacan!",
                 "¡Han colocado trampas en mi casa, como si fuera yo el intruso!",
                 "¡¿Quién se creen que son?! ¡Esto es una declaración de guerra! ¡No saben contra quien se enfrentan!"
-            }, Tag.Harm, 1, "mantecas");
+            }, Tag.Harm, 1, 1, "mantecas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Tengo ganas de ver qué tan lejos llegarán esas ratas. Puede que algún día exista una rata experta en repostería." });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -568,7 +568,7 @@ namespace CQM.DataBuilders
                 "¡Esto es inconcebible! ¡Otra colonia de ratas ha atacado a las ratas de mi granero!",
                 "Ahora por lo menos las ratas que quedan son normales¡ ¡Pero siguen siendo ratas!",
                 "Si esto es obra del Johnny, ¡te juro que va a preparar sus pociones desde el fondo del mar!"
-            }, Tag.Help, 1, "mantecas");
+            }, Tag.Help, 1, 1, "mantecas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Es universal que todo el mundo odie a las ratas. ¡Pero a mí me encantan!",
                 "Son como hamsters pero con cola. Y pueden ser más inteligentes que muchos humanos."});
@@ -582,7 +582,7 @@ namespace CQM.DataBuilders
                 "¡¿Pero qué locura es esta?! ¡Las ratas están recolectando dinero del suelo!",
                 "¡Sí, ahora las ratas recogen el dinero que la gente pierde por ahí y lo dejan delante de mi puerta!",
                 "¡¿Piensan que por que me den tributo las voy a perdonar?! ¡Habrase visto!"
-            }, Tag.Convince, 1, "mantecas");
+            }, Tag.Convince, 1, 1, "mantecas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡Eres toda una caja de sorpresas! Ya empezaba a pensar que serías otro humano aburrido." });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -596,7 +596,7 @@ namespace CQM.DataBuilders
                 "Aunque esas dichosas ratas sean inteligentes, ¡no pueden evitar sus propias plagas!",
                 "Parece ser que parte de mi cosecha robada estaba en mal estado, muchas de ellas han enfermado.",
                 "¡Seguro que las han envenenado con sus sucias garras! ¡Se lo tienen merecido!"
-            }, Tag.Harm, 1, "rats");
+            }, Tag.Harm, 1, 1, "rats");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Es universal que todo el mundo odie a las ratas. ¡Pero a mí me encantan!",
                 "Son como hamsters pero con cola. Y pueden ser más inteligentes que muchos humanos."});
@@ -610,7 +610,7 @@ namespace CQM.DataBuilders
                 "Ahora las ratas se pelean entre ellas por mi comida, recurren al robo y al vandalismo.",
                 "Su sociedad ha caído y vuelven a ser como antes ¡Que regresen al agujero del que salieron!",
                 "Aunque la rata se vista de seda, ¡Rata se queda!"
-            }, Tag.Harm, 3, "rats");
+            }, Tag.Harm, 3, 1, "rats");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Es universal que todo el mundo odie a las ratas. ¡Pero a mí me encantan!",
                 "Son como hamsters pero con cola. Y pueden ser más inteligentes que muchos humanos."});
@@ -623,7 +623,7 @@ namespace CQM.DataBuilders
             AddBranchCompletion_NPCDialogue(new List<string>() {
                 "¡Estúpidas ratas! No contentas con robarme mis vegetales, ¡ahora me roban dinero para comprar en su mercadillo!",
                 "¡Pagarán por esta ofensa! ¡No saben contra quién se están enfrentando!"
-            }, Tag.Help, 1, "rats");
+            }, Tag.Help, 1, 1, "rats");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Tengo ganas de ver qué tan lejos llegarán esas ratas. Puede que algún día exista una rata experta en repostería." });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -636,7 +636,7 @@ namespace CQM.DataBuilders
                 "¡Pero esto qué es! Ya era un insulto que las ratas tuvieran su propio mercadillo a mi costa.",
                 "¡Ahora resulta que han construido una fortaleza! ¡En mi propio granero! ¡Con sus torres vigía y todo!",
                 "¡¿Me quieren tomar el pelo?! ¡Pienso sacarlas de ahí aunque tenga que prender fuego a toda mi granja!"
-            }, Tag.Help, 3, "rats");
+            }, Tag.Help, 3, 1, "rats");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Tengo ganas de ver qué tan lejos llegarán esas ratas. Puede que algún día exista una rata experta en repostería." });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -649,7 +649,7 @@ namespace CQM.DataBuilders
                 "Esas estúpidas ratas han abandonado mi granero. ¡Ya no se atreven a enfrentarme!",
                 "Parece ser que ahora se han instalado en la despensa del Johnny. ¡Se lo tiene merecido!",
                 "Eso sí, ¡Como las ratas vuelvan a dar por saco, pienso hacer que se trague todas sus pócimas!"
-            }, Tag.Convince, 1, "rats");
+            }, Tag.Convince, 1, 1, "rats");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Es universal que todo el mundo odie a las ratas. ¡Pero a mí me encantan!",
                 "Son como hamsters pero con cola. Y pueden ser más inteligentes que muchos humanos."});
@@ -695,7 +695,7 @@ namespace CQM.DataBuilders
                 "Al responsable de esta afrenta se le va a caer el pelo, en cuanto sepa quien ha sido.",
                 "¡Soy el que más se preocupa por el bienestar de este pueblo! ¡¿Cómo se atreven a hacerme esto?!",
                 "Siempre sigo mi buen juicio, aunque a veces me pregunto si estaré haciendo algo mal."
-            }, Tag.Harm, 1, "mayor");
+            }, Tag.Harm, 1, 2, "mayor");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡¿Cómo se atreve ese alcalde a construir una estatua de su persona?! ¡Tendrá su merecido!",
                 "¡Toda estatua debería de representar la grandeza de la gran Evith!"});
@@ -709,7 +709,7 @@ namespace CQM.DataBuilders
                 "¡Esto es un escándalo! ¡¿Cómo es posible que yo, el alcalde, haya sido agredido múltiples veces en una misma noche?!",
                 "¡La gente ya no me respeta! ¡¿Qué es lo que estoy haciendo mal?!",
                 "¡Con todo lo que he hecho por el pueblo! ¿Será que mis reformas no gustan a la gente?"
-            }, Tag.Harm, 3, "mayor");
+            }, Tag.Harm, 3, 2, "mayor");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡¿Cómo se atreve ese alcalde a construir una estatua de su persona?! ¡Tendrá su merecido!",
                 "¡Toda estatua debería de representar la grandeza de la gran Evith!"});
@@ -724,7 +724,7 @@ namespace CQM.DataBuilders
                 "Doy por hecho que es parte del dinero faltante, aunque preferiría que me hubiera llegado por medios oficiales.",
                 "¡El caso es que ahora tendremos dinero suficiente para arreglar las aceras de mi casa y pintar mi fachada!",
                 "El resto del dinero quedará en reserva en caso de emergencias, ¡nunca se sabe lo que puede ocurrir en estos tiempos!"
-            }, Tag.Help, 1, "mayor");
+            }, Tag.Help, 1, 2, "mayor");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Incluso el santurrón presuntuoso de Nu y yo podemos estar de acuerdo en que a ese alcalde le faltan un par de veranos."});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -739,7 +739,7 @@ namespace CQM.DataBuilders
                 "El caso es que se ha recaudado más dinero de lo que se recauda normalmente. ¡Es maravilloso!",
                 "¡Ahora podré embadurnar de plata mi estatua y ampliar el puerto de la charca!",
                 "¡Ya solo falta que puedan llegar barcos mercantes! ¡La gente me adorará!"
-            }, Tag.Help, 3, "mayor");
+            }, Tag.Help, 3, 2, "mayor");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Incluso el santurrón presuntuoso de Nu y yo podemos estar de acuerdo en que a ese alcalde le faltan un par de veranos."});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -753,7 +753,7 @@ namespace CQM.DataBuilders
                 "No se ha encontrado rastro alguno del ladrón. Estoy buscando al culpable por todos los medios posibles, pero no hay rastro de él.",
                 "Pero más importante, ¡ya no hay dinero para ampliar el puerto de la charca!",
                 "Menos mal que para estos casos tengo bastante dinero almacenado. ¡Siempre es bueno ser previsor!"
-            }, Tag.Convince, 1, "mayor");
+            }, Tag.Convince, 1, 2, "mayor");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Qué harías tú si fueras el alcalde? ¡Espero que muchas tropelías!",
                  "Sinceramente no te veo siendo un santurrón como Nu." });
@@ -770,7 +770,7 @@ namespace CQM.DataBuilders
                 "Parece ser que el dinero se ha repartido por todos los habitantes del pueblo.",
                 "Todo el mundo está muy feliz al respecto, como es de esperar. ¡Pero no puedo dejar que ocurran cosas así!",
                 "No me queda más remedio que gastar mis ahorros para cubrir el presupuesto del resto del año."
-            }, Tag.Convince, 3, "mayor");
+            }, Tag.Convince, 3, 2, "mayor");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Qué harías tú si fueras el alcalde? ¡Espero que muchas tropelías!",
                  "Sinceramente no te veo siendo un santurrón como Nu." });
@@ -816,7 +816,7 @@ namespace CQM.DataBuilders
                 "¡Esto es una locura! Mis vacas han comido más pienso especial antes de que pudiera deshacerme de él.",
                 "¡Ahora las vacas balan y se dan de cabezazos entre ellas!",
                 "A este paso voy a tener que dedicarme al pastoreo de cabras. ¡¿Por qué me pasa esto a mí?!"
-            }, Tag.Harm, 1, "meri");
+            }, Tag.Harm, 1, 2, "meri");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Entonces cualquier cosa que se coma el pienso especial será transformado en cabra? ¿Qué ocurriría entonces si se lo echan a las cabras?" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -830,7 +830,7 @@ namespace CQM.DataBuilders
                 "De alguna manera han conseguido comerse todo el pienso especial que tenía que quemar.",
                 "¡Ahora, además de balar, son más pequeñas y les han salido cuernos! Lo que tengo ya no son vacas.",
                 "Será mejor que Johnny no haya vertido sus pócimas al río, no quiero que se conviertan en morsas o algo similar."
-            }, Tag.Harm, 3, "meri");
+            }, Tag.Harm, 3, 2, "meri");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Entonces cualquier cosa que se coma el pienso especial será transformado en cabra? ¿Qué ocurriría entonces si se lo echan a las cabras?" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -845,7 +845,7 @@ namespace CQM.DataBuilders
                 "Parece ser que alguien vino por la noche a vaciar el contenido del frasco sobre el pienso.",
                 "Por suerte parece que el efecto del líquido ha sido revertir en parte la transformación de las vacas.",
                 "Ahora al menos se han tranquilizado y siguen dando leche de vaca."
-            }, Tag.Help, 1, "meri");
+            }, Tag.Help, 1, 2, "meri");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿En serio vas a ayudar a que vuelvan a la normalidad? ¡Yo quería hasta donde llegaba la cosa!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -861,7 +861,7 @@ namespace CQM.DataBuilders
                 "Parece ser que alguien se las robó ayer de su laboratorio.",
                 "El caso es que mis vacas ahora se comportan como vacas... generalmente.",
                 "Todavía siguen subiéndose a sitios extraños, pero por lo menos puedo tratar con ellas."
-            }, Tag.Help, 3, "meri");
+            }, Tag.Help, 3, 2, "meri");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿En serio vas a ayudar a que vuelvan a la normalidad? ¡Yo quería hasta donde llegaba la cosa!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -875,7 +875,7 @@ namespace CQM.DataBuilders
                 "Alguien le ha dado de comer el pienso especial a las cabras. ¡¿Quién en su sano juicio haría algo así?!",
                 "Ahora las cabras del vecino mugen y son más amigables. ¡Y hasta dan leche de vaca!",
                 "Todo esto es una locura, ¿pero el problema se ha solucionado, supongo?"
-            }, Tag.Convince, 1, "meri");
+            }, Tag.Convince, 1, 2, "meri");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Con esa decisión, parece que vas a ayudarme a resolver una duda que tenía." });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -915,7 +915,7 @@ namespace CQM.DataBuilders
                 "Los animalejos del bosque están cada año más agresivos. No me han dejado en paz, colega.",
                 "Pero no todo está perdido. Tengo algunas Setas de la Pirueta guardadas del año pasado, colega.",
                 "No estarán en las mejores condiciones, ¡pero seguro que algún premio me llevo, colega!"
-            }, Tag.Harm, 1, "johny_setas");
+            }, Tag.Harm, 1, 1, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡La cosa va a ponerse muy interesante en el concurso! ¡Tengo un presentimiento de que así será!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -928,7 +928,7 @@ namespace CQM.DataBuilders
                 "¡Tíiiiiiio, la cosa se ha puesto fina! Fuí a por setas por la noche y cuando volví mi laboratorio estaba ardiendo, colega!",
                 "Se han echado a perder muchas pócimas e ingredientes que tenía guardados, colega.",
                 "¿El concurso?, ya no va a poder ser. Estas cosas pasan, colega."
-            }, Tag.Harm, 3, "johny_setas");
+            }, Tag.Harm, 3, 1, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡¿Por qué interferir en el concurso?! ¡Deja que el mundo siga su curso, que se iba a poner interesante!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -942,7 +942,7 @@ namespace CQM.DataBuilders
                 "Suerte que alguien ha puesto señales por el bosque para encontrarlas, colega.",
                 "¿Qué si es raro que haya señales? No sé, mucha gente se perderá por el bosque, colega.",
                 "En fin, ¡mi tarta va a ser tremenda, colega!"
-            }, Tag.Help, 1, "johny_setas");
+            }, Tag.Help, 1, 1, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡La cosa va a ponerse muy interesante en el concurso! ¡Tengo un presentimiento de que así será!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -957,7 +957,7 @@ namespace CQM.DataBuilders
                 "Nada más y nada menos que el Champiñón de la Visión, ¡mi favorito, colega!",
                 "Ese champiñón te permite ver todo, colega, ¡toooodo!",
                 "¡Los jueces van a flipar, colega!"
-            }, Tag.Help, 3, "johny_setas");
+            }, Tag.Help, 3, 1, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡La cosa va a ponerse muy interesante en el concurso! ¡Tengo un presentimiento de que así será!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -971,7 +971,7 @@ namespace CQM.DataBuilders
                 "Pero, lo he estado meditando y ya no me apetece participar, colega.",
                 "¿Mi meditación? Dejo que las setas me indiquen el camino a seguir, así de simple, colega.",
                 "He visto cosas más extrañas de lo habitual, eso no puede ser buena señal, colega."
-            }, Tag.Convince, 1, "johny_setas");
+            }, Tag.Convince, 1, 1, "johny_setas");
 
             //CONVINCE >=3
             StartStoryBranch();
@@ -982,7 +982,7 @@ namespace CQM.DataBuilders
                 "El Señor Galleta tiene razón, los jueces no sabrían apreciar mi obra, colega.",
                 "¿El Señor Galleta? Lo he visto durante mi meditación nocturna, colega.",
                 "¡Todo es posible cuando se consumen Champiñones de la Visión, son alucinantes, colega!"
-            }, Tag.Convince, 3, "johny_setas");
+            }, Tag.Convince, 3, 1, "johny_setas");
 
             AddStorySelectionUIData("La tarta no era de mentira");
             FinishCreatingStory();
@@ -1019,7 +1019,7 @@ namespace CQM.DataBuilders
                 "¡Sucias ratas del aire! ¡Los patos han ocupado mi granero! ¡¿Cómo diantres han logrado entrar?!",
                 "Este va a ser un problema mucho mayor que las ratas, no voy a poder echarlas de allí tan fácilmente.",
                 "¡¿Con quién creen que están tratando?! ¡Han venido a conquistar la granja equivocada!"
-            }, Tag.Harm, 1, "mantecas");
+            }, Tag.Harm, 1, 2, "mantecas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡Imagínate qué guay sería que los patos pudieran llevar armas!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1033,7 +1033,7 @@ namespace CQM.DataBuilders
                 "¡Los patos se han apoderado de mi casa! ¡¿Cómo es esto posible?! ¡¿Cómo han entrado para empezar?!",
                 "¡Esto tiene que ser una broma! ¡Unos estúpidos patos me han vencido, a mí!",
                 "No me queda más remedio que darles parte de mi cosecha para que me dejen tranquilo."
-            }, Tag.Harm, 3, "mantecas");
+            }, Tag.Harm, 3, 2, "mantecas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡Imagínate qué guay sería que los patos pudieran llevar armas!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1046,7 +1046,7 @@ namespace CQM.DataBuilders
                 "¡Ayer llegó otra bandada de patos a destrozar mi granja! ¡Por si una sola bandada no fuera suficiente!",
                 "¡Encima se están peleando entre ellas, haciendo aún más destrozos!",
                 "¡Esto es un circo! ¡Es inaudito! Al menos será más fácil echarlas de mi granja."
-            }, Tag.Help, 1, "mantecas");
+            }, Tag.Help, 1, 2, "mantecas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡Ojalá pudiera tener una bandada de patos a mi disposición! ¡Me lo pasaría en grande!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1060,7 +1060,7 @@ namespace CQM.DataBuilders
                 "¡Las ratas han regresado de su escondrijo y han echado a los patos! ¡Me están tomando el pelo!",
                 "No sé que las habrá hecho volver, pero prefiero lidiar con ratas inteligentes antes que con esos patos.",
                 "¡Si esto es obra del Johnny, me encargaré de trasladar su laboratorio al fondo del mar!"
-            }, Tag.Help, 3, "mantecas");
+            }, Tag.Help, 3, 2, "mantecas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡Ojalá pudiera tener una bandada de patos a mi disposición! ¡Me lo pasaría en grande!" });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1075,7 +1075,7 @@ namespace CQM.DataBuilders
                 "En esta época del año hay bichos a punta pala, y tengo que andar fumigando los cultivos todo el día.",
                 "Por suerte los patos se comen los bichos que pululan por mis cultivos.",
                 "¡Pero esto no significa que vayan a quedarse! ¡En cuanto llegue el momento, me encargaré de echarlos!"
-            }, Tag.Convince, 1, "mantecas");
+            }, Tag.Convince, 1, 2, "mantecas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Se puede realmente negociar con un pato? Espero que al menos entiendan el lenguaje universal de la violencia." });
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1120,7 +1120,7 @@ namespace CQM.DataBuilders
                 "Pero parece que he cometido un error garrafal, ¡añadir bellotas a la mezcla!",
                 "No me he dado cuenta hasta que lo he revisado, ¡¿Cómo he sido tan descuidada?!",
                 "Si la cosa no mejora, voy a tener que abandonar el experimento. Meri ya me está mirando mal."
-            }, Tag.Harm, 1, "miss_chocolate");
+            }, Tag.Harm, 1, 2, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Me pregunto hasta qué punto será posible obtener batidos de chocolate de las vacas.",
                 "Bueno, me da a mí que va a ser tarde para averiguarlo."});
@@ -1135,7 +1135,7 @@ namespace CQM.DataBuilders
                 "¡¿Dónde me he equivocado?! Juraría haber utilizado los ingredientes correctos para el pienso especial.",
                 "Empiezo a sospechar que alguien ha manipulado el pienso antes de dárselo a las vacas.",
                 "En fin, tendré que pedir a otro vecino que me ceda sus vacas, aunque será difícil después de esto."
-            }, Tag.Harm, 3, "miss_chocolate");
+            }, Tag.Harm, 3, 2, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Me pregunto hasta qué punto será posible obtener batidos de chocolate de las vacas.",
                 "Bueno, me da a mí que va a ser tarde para averiguarlo."});
@@ -1152,7 +1152,7 @@ namespace CQM.DataBuilders
                 "Poco después de ingerir el pienso las vacas empezaron a ladrar, ¡Te lo juro!",
                 "Meri casi se desmaya al verlo, parece ser que ya ha pasado por algo parecido.",
                 "Al menos las muestras de leche ordeñadas contienen muestras de chocolate, que ya es algo."
-            }, Tag.Help, 1, "miss_chocolate");
+            }, Tag.Help, 1, 2, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Hasta dónde llegará esa tal Miss Chocolate con tal de lograr sus experimentos? Quizás sea de las mías."});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1168,7 +1168,7 @@ namespace CQM.DataBuilders
                 "No lo he sabido hasta mucho después de que se lo hayan comido. ¡Puede que esa sea la clave!",
                 "La leche ordeñada de las vacas se asemeja a un batido de chocolate, o a algo parecido al menos.",
                 "¡Qué alegría! Estoy cerca de cumplir mi objetivo. ¡Tengo que seguir trabajando!"
-            }, Tag.Help, 5, "miss_chocolate");
+            }, Tag.Help, 5, 2, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Hasta dónde llegará esa tal Miss Chocolate con tal de lograr sus experimentos? Quizás sea de las mías."});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1181,7 +1181,7 @@ namespace CQM.DataBuilders
                 "No estoy avanzando apenas en mi investigación con las vacas. Son más agresivas de lo que esperaba.",
                 "Meri me dijo que eran muy apacibles con todo el mundo, ¿Les caeré mal?",
                 "¡Qué fastidio! Parece que tengo que buscar otras opciones. ¡Pero no me rendiré!"
-            }, Tag.Convince, 1, "miss_chocolate");
+            }, Tag.Convince, 1, 2, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Incluso yo, que me regocijo en el caos, adoro a las vacas ¡Nadie debería hacerles daño!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1194,7 +1194,7 @@ namespace CQM.DataBuilders
                 "¡¿Cómo hace Meri para tratar con sus vacas día a día?! Son muy agresivas conmigo.",
                 "Pensaba hacerlas ingerir un pienso especial, pero parece que va a ser imposible.",
                 "¡No creas que he abandonado mi búsqueda, es sólo que tengo que cambiar mi enfoque!"
-            }, Tag.Convince, 3, "miss_chocolate");
+            }, Tag.Convince, 3, 2, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Incluso yo, que me regocijo en el caos, adoro a las vacas ¡Nadie debería hacerles daño!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1242,7 +1242,7 @@ namespace CQM.DataBuilders
                 "Alguien entró en mi casa por la noche y me ha robado mis preciados artefactos.",
                 "¡¿Por qué tengo guardias tan incompetentes?! ¡Reforcé la seguridad desde el problema con la secta!",
                 "No han encontrado rastro del culpable, ¡pero ha tenido que ser cosa de mi rival, seguro!"
-            }, Tag.Harm, 1, "canela");
+            }, Tag.Harm, 1, 2, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "El robo me parece bien. Al fin y al cabo, es mejor que te roben a que te destrocen las cosas."});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1256,7 +1256,7 @@ namespace CQM.DataBuilders
                 "Alguien ha debido de recuperarlo por mí, pero casi desearía que no lo hubiera hecho.",
                 "Quien quiera que haya sido, parece que no era consciente de lo frágil que era.",
                 "Al menos lo he recuperado, así que no me puedo quejar, supongo."
-            }, Tag.Help, 1, "canela");
+            }, Tag.Help, 1, 2, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Un ladrón que roba a otro ladrón? Soy más partidaria de eliminar a la competencia."});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1271,7 +1271,7 @@ namespace CQM.DataBuilders
                 "El rumor se ha debido de extender por el pueblo, ¡y algún justiciero se ha hecho cargo!",
                 "Ha debido de ser todo un profesional, porque el colgante se encuentra en perfectas condiciones.",
                 "¡Ahora podré exponerlo junto al resto de mi colección!"
-            }, Tag.Help, 5, "canela");
+            }, Tag.Help, 5, 2, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "No entiendo el afán de acaparar tantos cachivaches. ¿No era un síndrome o algo así?"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1285,7 +1285,7 @@ namespace CQM.DataBuilders
                 "Pero resultó ser una burda falsificación ¡¿Qué clase de broma es esta?! ¡Esa necia se está burlando de mí!",
                 "¡No dejaré que esa ladrona se ría de mí! ¡Pienso recuperar mi colgante!",
                 "¡Y si no puedo recuperarlo, lo haré añicos con tal de que no lo tenga ella!"
-            }, Tag.Convince, 1, "canela");
+            }, Tag.Convince, 1, 2, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Siempre me he preguntado cuánto tiempo tiene que pasar para que el saqueo de tumbas pase a considerarse arqueología."});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1299,7 +1299,7 @@ namespace CQM.DataBuilders
                 "Ha debido de ser mi rival, aunque no pensaba que fuera capaz de regalarme otro colgante en compensación.",
                 "Lo he estudiado y tiene un valor muy similar al que tenía originalmente. Pero sigo sin estar conforme.",
                 "No me malinterpretes, sigo disgustada por lo que ha hecho, aunque quizás ella no sea tan ruin como pensaba."
-            }, Tag.Convince, 3, "canela");
+            }, Tag.Convince, 3, 2, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "No entiendo el afán de acaparar tantos cachivaches. ¿No era un síndrome o algo así?"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1343,7 +1343,7 @@ namespace CQM.DataBuilders
                 "¡Han aparecido topos en mi granja! ¡Están destrozando mis cultivos!",
                 "¡Sabía que algo estaba por suceder! ¡Mi intuición nunca falla!",
                 "¡Esos malditos estaban esperando su oportunidad para amargarme la existencia! ¡Tendrán su merecido!"
-            }, Tag.Harm, 1, "mantecas");
+            }, Tag.Harm, 1, 2, "mantecas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Veo que te has tomado muy en serio la petición de ese tipo. ¡Conseguirá lo que desea!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1356,7 +1356,7 @@ namespace CQM.DataBuilders
                 "¡El caos ha vuelto a mi granja! ¡Sabía que algo gordo se avecinaba!",
                 "¡Han aparecido topos y langostas para destrozarme los cultivos! ¡Además las ratas han vuelto a ocupar mi granero!",
                 "¡Sucias alimañas! ¡¿Creen que pueden conmigo?! ¡Qué vengan! ¡Se van a llevar su merecido!"
-            }, Tag.Harm, 5, "mantecas");
+            }, Tag.Harm, 5, 2, "mantecas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Lo estás dando todo para cumplir el deseo de ese tipo, ¿no? ¡Espero que no se arrepienta!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1370,7 +1370,7 @@ namespace CQM.DataBuilders
                 "¡Mis cultivos están en mejores condiciones y los pastos son más verdes!",
                 "¿Puede ser que después de tantas desgracias, por fin mi trabajo haya dado sus frutos?",
                 "¡Ni de broma! ¡Algo va a pasar, seguro!"
-            }, Tag.Help, 1, "mantecas");
+            }, Tag.Help, 1, 2, "mantecas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Pensaba que ibas a ayudar a ese pobre granjero con su escasez de desastres. ¡Una pena!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1384,7 +1384,7 @@ namespace CQM.DataBuilders
                 "Mis cultivos crecen sanos, la calidad del suelo ha mejorado y no hay ninguna plaga que erradicar.",
                 "¡¿Me toman por tonto?!	¡¿Cuándo van a volver a fastidiarme?! ¡Me estoy impacientando!",
                 "¡Es imposible que de repente todo me vaya bien! ¡Impensable! ¡Debe de avecinarse el fin del mundo!"
-            }, Tag.Help, 5, "mantecas");
+            }, Tag.Help, 5, 2, "mantecas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Pensaba que ibas a ayudar a ese pobre granjero con su escasez de desastres. ¡Una pena!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1397,7 +1397,7 @@ namespace CQM.DataBuilders
                 "¡Una nueva amenaza se cierne sobre mi granja! ¡Tengo que prepararme para lo peor!",
                 "¡Han aparecido unas marcas extrañas en la pared de mi casa, y también he escuchado ruidos extraños por la noche!",
                 "¡Hay algo ahí fuera que se está preparando para amargarme la vida, pero estoy preparado para cualquier cosa!"
-            }, Tag.Convince, 1, "mantecas");
+            }, Tag.Convince, 1, 2, "mantecas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Iría yo misma a causar el caos en su granja, pero soy una deidad muy ocupada, ¿sabes?"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1411,7 +1411,7 @@ namespace CQM.DataBuilders
                 "¡Han aparecido formas en mis cultivos con forma de calavera! ¡Esto solo puede ser una señal de que algo se aproxima!",
                 "¡Va a ocurrir en cualquier momento, me estoy impacientando!",
                 "¡Ardo en deseos de ver a qué me enfrentaré esta vez! ¡Sea lo que sea, mi granja no caerá!"
-            }, Tag.Convince, 3, "mantecas");
+            }, Tag.Convince, 3, 2, "mantecas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Iría yo misma a causar el caos en su granja, pero soy una deidad muy ocupada, ¿sabes?"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1455,7 +1455,7 @@ namespace CQM.DataBuilders
                 "¡El saco con mis... materiales de meditación empezó a arder, tal cual te lo digo colega!",
                 "Suerte que no estaba en un trance profundo, porque si no, no me hubiera ni inmutado, colega.",
                 "Un poco más y se me quema la casa. ¡Pero definitivamente la luz que ví se trataba de eso, colega!"
-            }, Tag.Harm, 1, "johny_setas");
+            }, Tag.Harm, 1, 2, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                "La meditación es para la gente que quiere dormir pero no puede dormir. No le veo la gracia."});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1471,7 +1471,7 @@ namespace CQM.DataBuilders
                 "Parecía que algo me guiaba hacia el lugar donde lo encontré, yo tan solo me dejé llevar, colega.",
                 "Estoy seguro de que la luz que ví fue el brillo del pequeño tesoro. ¡Es pura lógica, colega!",
                 "Aunque no sea gran cosa, puedo permitirme comprar algunos materiales raros, colega."
-            }, Tag.Help, 1, "johny_setas");
+            }, Tag.Help, 1, 2, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Nu es muy fan de la meditación y ese tipo de actividades inactivas. ¡Pero yo las odio!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1487,7 +1487,7 @@ namespace CQM.DataBuilders
                 "Hice bien en vagar por el bosque de noche, mi intuición me llevó hasta donde se encontraba, colega.",
                 "Si trituras uno de esos con cuidado, se pueden utilizar para medicina y alquimia, colega.",
                 "¡Y además era uno de los gordos, con esto podré hacer cosas flipantes, colega!"
-            }, Tag.Help, 5, "johny_setas");
+            }, Tag.Help, 5, 2, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Nu es muy fan de la meditación y ese tipo de actividades inactivas. ¡Pero yo las odio!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1502,7 +1502,7 @@ namespace CQM.DataBuilders
                 "¡Esto solo puede significar que estoy adentrándome en un trance cada vez más profundo, colega!",
                 "¿El trance? Es un estado mental donde se puede apreciar las costuras de la realidad, colega.",
                 "Se necesita mucha concentración para alcanzarlo, y muchas setas, colega."
-            }, Tag.Convince, 1, "johny_setas");
+            }, Tag.Convince, 1, 2, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "No entiendo el interés de Nu por ese tal Johnny. ¡Si sólo se dedica a hacer el vago!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1517,7 +1517,7 @@ namespace CQM.DataBuilders
                 "¿El Señor Galleta? Pude vislumbrar su figura ¡Se necesita mucha concentración para eso, colega!",
                 "Cuanto más profundo es el trance, más cosas increíbles puedes llegar a ver, colega.",
                 "¿La luz? Resultó ser la luz del Sol dándome en la cara, ¡una señal de un mañana mejor, colega!"
-            }, Tag.Convince, 3, "johny_setas");
+            }, Tag.Convince, 3, 2, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "No entiendo el interés de Nu por ese tal Johnny. ¡Si sólo se dedica a hacer el vago!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1561,7 +1561,7 @@ namespace CQM.DataBuilders
                 "¡¿No se dan cuenta de que ya estoy haciendo todo lo que puedo?! ¡Deberían ser más pacientes!",
                 "Tendré que adelantar la asamblea del mes que viene para ver qué se puede hacer.",
                 "No nos queda demasiado dinero después de los gastos del mes pasado, pero para emergencias cubre."
-            }, Tag.Harm, 1, "mayor");
+            }, Tag.Harm, 1, 3, "mayor");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Cuándo estallará entonces la revolución? ¡Quiero estar allí en primera fila liderando los saqueos!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1576,7 +1576,7 @@ namespace CQM.DataBuilders
                 "Pero ahora no hay tiempo de buscar al responsable. ¡Muy pronto puede ocurrir una revuelta!",
                 "¡Mi cabeza rodará por las escaleras del ayuntamiento! Tengo que hacer algo al respecto yo mismo.",
                 "Voy a convocar una asamblea de emergencia mañana mismo."
-            }, Tag.Harm, 3, "mayor");
+            }, Tag.Harm, 3, 3, "mayor");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Cuándo estallará entonces la revolución? ¡Quiero estar allí en primera fila liderando los saqueos!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1592,7 +1592,7 @@ namespace CQM.DataBuilders
                 "Hacer pintadas es un acto vandálico, sí. Pero… me doy cuenta de que tienen un poco de razón.",
                 "Llevo tanto tiempo centrado en la decoración de los parques que había olvidado todo lo demás.",
                 "Supongo que tendré que posponer mis planes para otro momento."
-            }, Tag.Help, 1, "mayor");
+            }, Tag.Help, 1, 3, "mayor");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿El puerto de la charca? ¡¿El alcalde piensa hacer que los barcos lleguen por tierra o qué?!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1609,7 +1609,7 @@ namespace CQM.DataBuilders
                 "Y lo que más me duele, ¡tampoco necesitan un puerto mercante en la Charca!",
                 "¡Jamás abandonaré mi proyecto de construir un bullicioso puerto, aunque sea para muy largo plazo!",
                 "Pero aun así no me queda más remedio que destinar fondos a otros asuntos más importantes."
-            }, Tag.Help, 3, "mayor");
+            }, Tag.Help, 3, 3, "mayor");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿El puerto de la charca? ¡¿El alcalde piensa hacer que los barcos lleguen por tierra o qué?!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1624,7 +1624,7 @@ namespace CQM.DataBuilders
                 "¡Cuánta razón tiene, esa estatua mía le queda de maravilla! Sabía que quedaría bien.",
                 "Estamos lejos de estar en nuestro mejor momento, pero la cosa va mejorando poco a poco.",
                 "¡El día en que lleguen barcos mercantes al puerto, la prosperidad llegará a la ciudad, ya lo verán!"
-            }, Tag.Convince, 1, "mayor");
+            }, Tag.Convince, 1, 3, "mayor");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡Ese alcalde no sabe hacer sufrir a su pueblo en condiciones! ¡Debería de asesorarle para que lo haga mejor!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1669,7 +1669,7 @@ namespace CQM.DataBuilders
                 "No entiendo cómo ha podido ocurrir, pero desde anoche no he visto muchas ratas por mi granja.",
                 "Dudo bastante que hayan sido los lobos, pero al menos será más fácil echar a las que quedan.",
                 "Los lobos siguen siendo un problema. Las ratas ya no serán de ayuda, ¡pero defenderé mi granja!"
-            }, Tag.Harm, 1, "rats");
+            }, Tag.Harm, 1, 3, "rats");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡Me cuesta mucho decidirme por un bando ganador! ¿No podría haber alguna forma de que ganen ambos lados?"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1683,7 +1683,7 @@ namespace CQM.DataBuilders
                 "Había oído del Mantecas las hazañas de las ratas inteligentes, pero no pensaba que fueran más allá.",
                 "Por lo visto han construido una cerca reforzada alrededor de mi granja para repeler a los lobos.",
                 "Ahora puedo ocuparme de las ratas sin que los lobos se coman a mis vacas, que ya es algo."
-            }, Tag.Help, 1, "rats");
+            }, Tag.Help, 1, 3, "rats");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Alguien debería de enseñarle a esas ratas cómo forjar y portar armas",
                 "Aunque seguro que aprenderán ellas solas si les damos tiempo."});
@@ -1697,7 +1697,7 @@ namespace CQM.DataBuilders
                 "La cosa se ha tranquilizado un poco en mi granja. Aunque no doy crédito por lo que ha ocurrido.",
                 "¡De alguna manera, las ratas han conseguido domesticar a los lobos! ¡Los utilizan de montura y todo!",
                 "Por lo menos ya han abandonado mi granja, supongo que ahora pueden ir a donde quieran."
-            }, Tag.Help, 7, "rats");
+            }, Tag.Help, 7, 3, "rats");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Y si las ratas pudieran cabalgar sobre las vacas? ¡¿No sería genial?!",
                 "¡Tengo que intentarlo un día de estos!"});
@@ -1713,7 +1713,7 @@ namespace CQM.DataBuilders
                 "Parece que han regresado al granero del Mantecas, el hombre no está muy contento al respecto.",
                 "¿Cómo lo sé? ¡Se pueden oír sus gritos desde mi granja, y eso que vive en la otra punta del pueblo!",
                 "Aún tengo que lidiar con los lobos. ¡No pienso permitir que se coman a mis vacas!"
-            }, Tag.Convince, 1, "rats");
+            }, Tag.Convince, 1, 3, "rats");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡Me cuesta mucho decidirme por un bando ganador! ¿No podría haber alguna forma de que ganen ambos lados?"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1729,7 +1729,7 @@ namespace CQM.DataBuilders
                 "He visto algunos cadáveres de lobo en los alrededores y… ",
                 "Me da miedo pensar en lo que me podrían llegar a hacer las ratas si las hago enfadar.",
                 "Voy a tener que pedir ayuda al Mantecas. Él ya tiene experiencia lidiando con esas ratas."
-            }, Tag.Harm, 1, "wolves");
+            }, Tag.Harm, 1, 3, "wolves");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Alguien debería de enseñarle a esas ratas cómo forjar y portar armas",
                 "Aunque seguro que aprenderán ellas solas si les damos tiempo."});
@@ -1745,7 +1745,7 @@ namespace CQM.DataBuilders
                 "¡Han excavado un túnel bajo la verja de mi granja y han campado a sus anchas dentro de mi recinto!",
                 "Suerte que han atacado a las ratas y han ignorado a mis vacas. Pero son un problema muy serio.",
                 "Ya no quedan muchas ratas, pero los lobos pueden entrar cuando quieran, voy a tener que pedir ayuda. "
-            }, Tag.Help, 1, "wolves");
+            }, Tag.Help, 1, 3, "wolves");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡Me cuesta mucho decidirme por un bando ganador! ¿No podría haber alguna forma de que ganen ambos lados?"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1760,7 +1760,7 @@ namespace CQM.DataBuilders
                 "¡Espera a que termine! El Johnny se encuentra perfectamente, bueno.. a su manera, ya sabes.",
                 "Dicen que consiguió salvarse gracias a que estaba impregnado con el fuerte olor de sus mejunjes.",
                 "Es un tipo bastante raro, y nos suele dar problemas con sus experimentos. Pero no es un mal tipo."
-            }, Tag.Convince, 1, "wolves");
+            }, Tag.Convince, 1, 3, "wolves");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Alguien debería de enseñarle a esas ratas cómo forjar y portar armas",
                 "Aunque seguro que aprenderán ellas solas si les damos tiempo."});
@@ -1805,7 +1805,7 @@ namespace CQM.DataBuilders
                 "Anoche repentinamente empezaron a fallar varios de mis aparatos para el experimento.",
                 "Supongo que no hice un mantenimiento adecuado. Estas cosas pasan, pero aun así me frustra.",
                 "Por mucho que me duela, he tenido que cancelar el experimento. Tendré que esperar a la siguiente tormenta."
-            }, Tag.Harm, 1, "miss_chocolate");
+            }, Tag.Harm, 1, 3, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡Es un experimento estúpido que no llevará a ninguna parte, y lo sabes!",
                 "Pero por si acaso, lo impediría por todos los medios. No sea que salga bien.",
@@ -1821,7 +1821,7 @@ namespace CQM.DataBuilders
                 "Bueno, el artefacto me llegó a mi casa en una caja, así que voy a suponer que cambió de opinión.",
                 "Eso sí, después de que le cayese un rayo se hizo añicos, Canela no va a estar muy contenta.",
                 "Pero al final he obtenido resultados mucho menores de lo esperado. ¡Pero siguen siendo positivos!"
-            }, Tag.Help, 1, "miss_chocolate");
+            }, Tag.Help, 1, 3, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "A mí solo me gustan los experimentos violentos. Deberías de realizarlos algún día.",
                 "¡Comprobar qué cosas pueden destrozar otras cosas es fascinante! ¡Nunca me canso de ellos!"});
@@ -1838,7 +1838,7 @@ namespace CQM.DataBuilders
                 "Pero bueno, ¡dejé todo listo y logré obtener los resultados que esperaba!",
                 "¡Los veinte litros de chocolate mediocre se transformaron en dos gotas de chocolate puro!",
                 "Claramente es muy poco para considerarse un método viable, ¡Pero he demostrado que es posible!"
-            }, Tag.Help, 7, "miss_chocolate");
+            }, Tag.Help, 7, 3, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡¿En qué momento dejar que le caiga un rayo a las cosas se le llama experimento?!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1853,7 +1853,7 @@ namespace CQM.DataBuilders
                 "Pensaba que me lo daría en persona, pero bueno, el caso es que el artefacto resulta ser inservible.",
                 "Resultó ser mucho más frágil de lo que había estimado, se lo he devuelto antes de venir aquí.",
                 "Es curioso porque ella misma parece no acordarse de habérmelo dado. Estará liada con sus cosas."
-            }, Tag.Convince, 1, "miss_chocolate");
+            }, Tag.Convince, 1, 3, "miss_chocolate");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡Es un experimento estúpido que no llevará a ninguna parte, y lo sabes!",
                 "Pero por si acaso, lo impediría por todos los medios. No sea que salga bien.",
@@ -1869,7 +1869,7 @@ namespace CQM.DataBuilders
                 "Lo del experimento… va a tener que posponerse indefinidamente.",
                 "Parece ser que ayer alguien hizo un destrozo en la colección de Canela. ¡Estaba hecha una furia!",
                 "Va a ser imposible que me ceda el artefacto. Tendré que buscar otra alternativa ¡Pero no me rendiré!"
-            }, Tag.Harm, 1, "canela");
+            }, Tag.Harm, 1, 3, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡Es un experimento estúpido que no llevará a ninguna parte, y lo sabes!",
                 "Pero por si acaso, lo impediría por todos los medios. No sea que salga bien.",
@@ -1885,7 +1885,7 @@ namespace CQM.DataBuilders
                 "Estaba muy contenta, por lo visto ha encontrado tirado cerca de su casa un artefacto valiosísimo.",
                 "Me dijo que me quede con el artefacto, ya que lo va a sustituir por el nuevo que ha encontrado.",
                 "Yo por mi parte obtuve los resultados que buscaba. No sale nada rentable, ¡pero he cumplido!"
-            }, Tag.Help, 1, "canela");
+            }, Tag.Help, 1, 3, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "A mí solo me gustan los experimentos violentos. Deberías de realizarlos algún día.",
                 "¡Comprobar qué cosas pueden destrozar otras cosas es fascinante! ¡Nunca me canso de ellos!"});
@@ -1900,7 +1900,7 @@ namespace CQM.DataBuilders
                 "De hecho dice que me lo quede, por lo visto el artefacto realmente es una baratija sin valor.",
                 "Me da un poco de pena, últimamente no está teniendo suerte con su colección.",
                 "¿El experimento? Pude llevarlo a cabo, aunque todavía me falta mucho para considerarlo un éxito."
-            }, Tag.Convince, 1, "canela");
+            }, Tag.Convince, 1, 3, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "A mí solo me gustan los experimentos violentos. Deberías de realizarlos algún día.",
                 "¡Comprobar qué cosas pueden destrozar otras cosas es fascinante! ¡Nunca me canso de ellos!"});
@@ -1944,7 +1944,7 @@ namespace CQM.DataBuilders
                 "Los artefactos vivientes ya no son un problema, ¡pero aun así me duelen mucho las pérdidas!",
                 "Esta mañana cuando he ido a revisarlos los he encontrado completamente destruidos.",
                 "Espero que sea un efecto del mejunje, ¡porque no quiero tener ahora vándalos entrando y saliendo de mi casa!"
-            }, Tag.Harm, 1, "canela");
+            }, Tag.Harm, 1, 3, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Si en vez de artefactos fueran platos y cubiertos, serían amables o mucho más agresivos?"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1958,7 +1958,7 @@ namespace CQM.DataBuilders
                 "¡De alguna manera los artefactos aislados han derribado la puerta y han sembrado el caos!",
                 "Es culpa mía haberlos subestimado. No he tenido más remedio que destruirlos allí mismo.",
                 "¡Cualquier día de estos voy a momificar vivo al besugo Johnny para exponerlo!"
-            }, Tag.Harm, 7, "canela");
+            }, Tag.Harm, 7, 3, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Si en vez de artefactos fueran platos y cubiertos, serían amables o mucho más agresivos?"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -1974,7 +1974,7 @@ namespace CQM.DataBuilders
                 "Por lo visto, los artefactos han sido rociados con lejía mientras se movían por la habitación.",
                 "No esperaba que la lejía fuera a ser su punto débil, aunque a estas alturas ya poco me sorprende.",
                 "Lo malo es que los artefactos han perdido su brillo en el proceso, pero al menos se ha terminado."
-            }, Tag.Help, 1, "canela");
+            }, Tag.Help, 1, 3, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Artefactos inanimados súper agresivos? ¡¿Por qué no se me había ocurrido antes?!",
                 "¡Es una idea genial para sembrar el caos y el desconcierto, mis dos cosas favoritas!" });
@@ -1989,7 +1989,7 @@ namespace CQM.DataBuilders
                 "Por lo visto los artefactos dejaron de moverse tras entrar en contacto con chocolate.",
                 "¡No me preguntes por qué, yo tampoco tengo ni idea! Habrá sido una completa casualidad.",
                 "¡Por lo menos mis artefactos ahora tienen un brillo espectacular!"
-            }, Tag.Help, 5, "canela");
+            }, Tag.Help, 5, 3, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿Artefactos inanimados súper agresivos? ¡¿Por qué no se me había ocurrido antes?!",
                 "¡Es una idea genial para sembrar el caos y el desconcierto, mis dos cosas favoritas!" });
@@ -2004,7 +2004,7 @@ namespace CQM.DataBuilders
                 "En mitad de la noche dejaron de aporrear la puerta y empezaron a limpiar el destrozo de mi despensa.",
                 "¡Todavía no doy crédito! No entiendo el cambio tan repentino, pero estoy pensando en convertirlos en  sirvientes.",
                 "¡Es lo mínimo por haberme causado tanto estrés, pienso yo! ¡Pero me alegro de que haya terminado!"
-            }, Tag.Convince, 1, "canela");
+            }, Tag.Convince, 1, 3, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Los artefactos serían unos sirvientes muy aburridos. ¡Nada supera a las Galletas mágicas!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -2019,7 +2019,7 @@ namespace CQM.DataBuilders
                 "Además limpian y abrillantan a los demás artefactos de mi colección. ¡Están mejor que nunca!",
                 "Definitivamente los voy a convertir en sirvientes. Después de este calvario no pienso dejar que acabe en nada.",
                 "Quizás me pueda convertir en coleccionista de artefactos vivientes. ¡Sería aún más famosa por ello!"
-            }, Tag.Convince, 7, "canela");
+            }, Tag.Convince, 7, 3, "canela");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Los artefactos serían unos sirvientes muy aburridos. ¡Nada supera a las Galletas mágicas!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -2067,7 +2067,7 @@ namespace CQM.DataBuilders
                 "¡Tíiio, voy a dejar esto de la meditación de lado de momento! ¡No veas como me duele todo, colega!",
                 "Ayer, en medio de mi meditación profunda, empecé a sentir dolores punzantes en el cuerpo, colega.",
                 "Supongo que será cosa de los bultos y las raíces que brotan de mi piel, ¡pero de normal no duele tanto, colega!"
-            }, Tag.Harm, 1, "johny_setas");
+            }, Tag.Harm, 1, 3, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Ese tal Johnny parece un tipo aburrido. Pero tengo curiosidad de ver hasta donde llega."});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -2081,7 +2081,7 @@ namespace CQM.DataBuilders
                 "Justo cuando iba a dejar todo preparado, ¡Pum! Se cae parte del techo de mi casa encima, colega!",
                 "He salido ileso, pero casi todo mi material se ha echado a perder. ¡Qué mala suerte tengo, colega!",
                 "No podré reponer mi material hasta el próximo invierno. Así que hasta el año que viene nada, colega."
-            }, Tag.Harm, 5, "johny_setas");
+            }, Tag.Harm, 5, 3, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "Ese tal Johnny parece un tipo aburrido. Pero tengo curiosidad de ver hasta donde llega."});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -2095,7 +2095,7 @@ namespace CQM.DataBuilders
                 "Lo más raro fué que cuando salí del trance no podía moverme, ¡estaba enraizado en el sitio, colega!",
                 "Además, de mis bultos en la espalda han brotado setas. Me pregunto de qué tipo serán, colega.",
                 "Por algún motivo las raíces se marchitaron poco antes de amanecer, Si no, ¡todavía estaría allí plantado, colega!"
-            }, Tag.Help, 1, "johny_setas");
+            }, Tag.Help, 1, 3, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¡Si un ser cubierto de hongos se me acerca, le prenderé fuego! ¡Me dan asco las setas!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -2110,7 +2110,7 @@ namespace CQM.DataBuilders
                 "¿Los bultos y las raíces? Pues, diría que han desaparecido, así por completo, colega.",
                 "Ayer encontré en casa un Champiñón Solar, normalmente no me molesto en recolectarlos, colega.",
                 "Para cambiar un poco, lo utilicé para mi polvo especial. No sabía que servía para contrarrestar la transformación, colega."
-            }, Tag.Help, 7, "johny_setas");
+            }, Tag.Help, 7, 3, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "No entiendo nada de todo esto. ¡Que alguien me explique por qué es tan importante!"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -2124,7 +2124,7 @@ namespace CQM.DataBuilders
                 "Me lo dijo el Señor Galleta en una visión. Dijo que debería de preocuparme por los bultos y las raíces, colega.",
                 "¿El Señor Galleta? A veces he notado su presencia, ¡pero esta vez me habló directamente, colega!",
                 "Seguramente no entiendas nada de nada, pero se dice que el Señor Galleta rige el destino del mundo, colega."
-            }, Tag.Convince, 1, "johny_setas");
+            }, Tag.Convince, 1, 3, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿No tendrá algo mejor que hacer ese hombre que dedicarse a dormir profundamente?"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -2140,7 +2140,7 @@ namespace CQM.DataBuilders
                 "¡Lo tengo clarinete! ¡Quiero dedicarme a hacer galletas! Y no de cualquier tipo, colega",
                 "Quiero que contengan todo mi conocimiento sobre los hongos. ¡Será una pasada, colega!",
                 "Quizá así algún día me vuelva a visitar el Señor Galleta, ¡o quizás el Dios Galleta, colega!"
-            }, Tag.Convince, 7, "johny_setas");
+            }, Tag.Convince, 7, 3, "johny_setas");
             AddBranchCompletion_EvithDeityDialogue(new List<string>() {
                 "¿No tendrá algo mejor que hacer ese hombre que dedicarse a dormir profundamente?"});
             AddBranchCompletion_NuDeityDialogue(new List<string>() {
@@ -2231,7 +2231,7 @@ namespace CQM.DataBuilders
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "Parece que la idea de decorar el pueblo con flores no ha gustado demasiado. ¡El campo de flores está destrozado!",
                 "No lo entiendo, con lo bonitas que son. No sé quién haría algo así. Y para colmo, el pueblo seguirá luciendo aburrido."
-            }, Tag.Harm, 1, "mayor");
+            }, Tag.Harm, 1, 1, "mayor");
 
                     //HELP >=1
                     StartStoryBranch();
@@ -2239,14 +2239,14 @@ namespace CQM.DataBuilders
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "¡No me lo puedo creer! ¡El pueblo ha amanecido más bello que nunca! Al parecer, alguien se ha dedicado a plantar las flores durante la noche.",
                 "Se me hace un poco raro, pero quien quiera que sea, se preocupa mucho por el pueblo."
-            }, Tag.Help, 1, "mayor");
+            }, Tag.Help, 1, 1, "mayor");
 
                     //CONVINCE >=1
                     StartStoryBranch();
                     SetRepercusionToBranch("default_positive");
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "¡Todos han decidido recoger flores para mejorar la imagen del pueblo! Sin duda, ésto atraerá a más turistas y la economía mejorará."
-            }, Tag.Convince, 1, "mayor");
+            }, Tag.Convince, 1, 1, "mayor");
                     AddStorySelectionUIData("Colecta Floral");
                     FinishCreatingStory();
                 }
@@ -2266,7 +2266,7 @@ namespace CQM.DataBuilders
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "¡Pero quién habrá podido ser! El pobre panadero tiene muy mala suerte. Han destrozado su panadería en la noche.",
                 "Además de enfermo, ¡ahora estará arruinado! Ojalá pillen al responsable de esto."
-            }, Tag.Harm, 1, "mayor");
+            }, Tag.Harm, 1, 1, "mayor");
 
                     //HELP >=1
                     StartStoryBranch();
@@ -2275,7 +2275,7 @@ namespace CQM.DataBuilders
                 "¡No te lo vas a creer! Han aparecido cajas con bastantes barras de pan en todo el pueblo.",
                 "Parece que alguien de fuera se ha enterado y ha decidido echarnos una mano mandándonos provisiones de pan mientras el panadero se recupera.",
                 "¡Aún hay gente buena en el mundo!"
-            }, Tag.Help, 1, "mayor");
+            }, Tag.Help, 1, 1, "mayor");
 
                     //CONVINCE >=1
                     StartStoryBranch();
@@ -2283,7 +2283,7 @@ namespace CQM.DataBuilders
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "Al parecer, algunas personas han decidido aprender el oficio del panadero para ayudarle en su negocio. ¡Qué gente más considerada!",
                 "Puede que la panadería abra antes de lo esperado, ¡o incluso puede que se abran más!"
-            }, Tag.Convince, 1, "mayor");
+            }, Tag.Convince, 1, 1, "mayor");
 
 
                     AddStorySelectionUIData("¿Nos quedamos sin pan?");
@@ -2306,7 +2306,7 @@ namespace CQM.DataBuilders
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "Creo que han tirado trozos de pastel a la fachada de una granja.",
                 "No creo que le haga mucha gracia al dueño, sobre todo sabiendo que luego tendrá que lidiar con las criaturas que vengan por el olor."
-            }, Tag.Harm, 1, "meri");
+            }, Tag.Harm, 1, 1, "meri");
 
                     //HELP >=1
                     StartStoryBranch();
@@ -2315,7 +2315,7 @@ namespace CQM.DataBuilders
                 "¿Lo sabías? Han aparecido tartas envueltas con un moño en las puertas de las casas del pueblo.",
                 "Parece que alguien le tiene mucho aprecio a toda la gente de aquí.",
                 "¡No veas qué alegría me he llevado tras ver una al abrir la puerta!"
-            }, Tag.Help, 1, "meri");
+            }, Tag.Help, 1, 1, "meri");
 
                     //CONVINCE >=1
                     StartStoryBranch();
@@ -2323,7 +2323,7 @@ namespace CQM.DataBuilders
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "Me he enterado que pronto van a organizar un concurso de pasteles en la plaza del pueblo.",
                 "¡Vendrán también pasteleros de las ciudades vecinas! Además, tras acabar el concurso, ¡invitarán a todos a tarta! No va a quedar ni uno."
-            }, Tag.Convince, 1, "meri");
+            }, Tag.Convince, 1, 1, "meri");
 
 
                     AddStorySelectionUIData("Pasteles por doquier");
@@ -2347,7 +2347,7 @@ namespace CQM.DataBuilders
                 "Me he enterado que la vieja campana del ayuntamiento ha amanecido hoy hecha una pena.",
                 "Alguien la ha pintarrajeado y le han abierto más grietas.",
                 "Creo que han decidido sacarla y tirarla a la basura. Creía que al menos iban a guardarla como recuerdo."
-            }, Tag.Harm, 1, "mayor");
+            }, Tag.Harm, 1, 1, "mayor");
 
                     //HELP >=1
                     StartStoryBranch();
@@ -2356,7 +2356,7 @@ namespace CQM.DataBuilders
                 "Algún amante de las campanas ha decidido restaurar por completo la vieja campana del ayuntamiento.",
                 "¡Brilla más que cuando la compraron de segunda mano!",
                 "Además, suena mucho mejor cuando la probaron. Creo que van a empezar a usarla de nuevo."
-            }, Tag.Help, 1, "mayor");
+            }, Tag.Help, 1, 1, "mayor");
 
                     //CONVINCE >=1
                     StartStoryBranch();
@@ -2365,7 +2365,7 @@ namespace CQM.DataBuilders
                 "Han anunciado que la vieja campana del ayuntamiento volverá a sonar.",
                 "Lo hará para dar comienzo a las ceremonias o eventos que haya en el pueblo.",
                 "¡Qué alivio! Antes sonaba cada dos por tres y despertaba a todo el mundo de la siesta."
-            }, Tag.Convince, 1, "mayor");
+            }, Tag.Convince, 1, 1, "mayor");
 
 
                     AddStorySelectionUIData("Campana Olvidada");
@@ -2389,7 +2389,7 @@ namespace CQM.DataBuilders
                 "¡El monstruo que rugía en las noches resultó ser un lobo! Solo que era bastante más grande de lo normal.",
                 "Alguien ha decidido hacerle frente y de alguna manera lo ha aniquilado.",
                 "Es un alivio saber que hay una amenaza menos."
-            }, Tag.Harm, 1, "wolves");
+            }, Tag.Harm, 1, 1, "wolves");
 
                     //HELP >=1
                     StartStoryBranch();
@@ -2398,7 +2398,7 @@ namespace CQM.DataBuilders
                 "¡Ha ocurrido una tragedia! El monstruo ha empezado a atacar a los animales de las granjas.",
                 "No sabemos cómo ha podido sortear las robustas verjas de las granjas, alguien ha tenido que sabotearlas.",
                 "No se me ocurre otra explicación."
-            }, Tag.Help, 1, "wolves");
+            }, Tag.Help, 1, 1, "wolves");
 
                     //CONVINCE >=1
                     StartStoryBranch();
@@ -2407,7 +2407,7 @@ namespace CQM.DataBuilders
                 "¡No te lo vas a creer! El monstruo era en realidad un lobo muy grande.",
                 "Lo sé porque esta mañana apareció en medio de la plaza, pero estaba muy tranquilo y, al parecer, sin ninguna intención de atacar a nadie.",
                 "La gente, tras debatirlo mucho, ha decidido adoptarlo y ahora es la mascota del pueblo. ¡Quién lo iba a decir!"
-            }, Tag.Convince, 1, "wolves");
+            }, Tag.Convince, 1, 1, "wolves");
 
 
                     AddStorySelectionUIData("La Bestia");
@@ -2429,7 +2429,7 @@ namespace CQM.DataBuilders
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "Lo que me temía. Las plagas han destrozado los cultivos de los cereales de la noche a la mañana.",
                 "Este año habrá que comprarlas de otro sitio, pero no serán baratas."
-            }, Tag.Harm, 1, "wolves");
+            }, Tag.Harm, 1, 1, "wolves");
 
                     //HELP >=1
                     StartStoryBranch();
@@ -2437,7 +2437,7 @@ namespace CQM.DataBuilders
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "Por alguna razón, están dejando de aparecer los plagas que se estaban comiendo los cereales.",
                 "¡Es un gran golpe de suerte! Ojalá que ésto siga así."
-            }, Tag.Help, 1, "wolves");
+            }, Tag.Help, 1, 1, "wolves");
 
                     //CONVINCE >=1
                     StartStoryBranch();
@@ -2445,7 +2445,7 @@ namespace CQM.DataBuilders
                     AddBranchCompletion_NPCDialogue(new List<string>() {
                 "Se ha decidido empezar a cosechar hoy mismo los cereales, aunque no todos estén del todo maduros.",
                 "¡Mejor prevenir que quedarse sin cereales!"
-            }, Tag.Convince, 1, "wolves");
+            }, Tag.Convince, 1, 1, "wolves");
                     AddStorySelectionUIData("Hay Que Salvar El Trigo");
                     FinishCreatingStory();
                 }
@@ -2512,7 +2512,7 @@ namespace CQM.DataBuilders
             m_RepercusionNewspaperArticles.Add(newsArticle);
         }
 
-        private void AddBranchCompletion_NPCDialogue(List<string> npcResultDialogue, Tag tag, int tagValue, string target)
+        private void AddBranchCompletion_NPCDialogue(List<string> npcResultDialogue, Tag tag, int tagValue, int power, string target)
         {
             m_Branch.m_ResultNPCDialogue = npcResultDialogue;
 
@@ -2520,6 +2520,8 @@ namespace CQM.DataBuilders
             {
                 m_Tag = tag,
                 m_Value = tagValue,
+                m_Power = power,
+
                 m_Target = new ID(target)
             };
             m_Branch.m_Condition = bCon;

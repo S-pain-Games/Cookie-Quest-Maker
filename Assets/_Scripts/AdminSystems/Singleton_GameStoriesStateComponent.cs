@@ -15,6 +15,7 @@ namespace CQM.Components
         // Stories which were completed with a quest but the player hasnt seen the result yet
         // At the start of the day the system that handles the spawning of the NPCs must assign them 
         public List<ID> m_CompletedStories = new List<ID>();
+        public List<ID> m_FailedStories = new List<ID>();
         // Stories that have been completely finished
         public List<ID> m_FinalizedPrimaryStories = new List<ID>();
     }

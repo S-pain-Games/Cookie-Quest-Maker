@@ -8,6 +8,7 @@ public class QuestSystem
     public void GetOverallTag(List<QuestPieceFunctionalComponent> pieces, out QPTag.TagType highestTagType, out int highestValue)
     {
         Dictionary<QPTag.TagType, int> values = CountAllTags(pieces);
+        Dictionary<QPTag.TagType, int> powerValues = CountAllTags(pieces);
 
         // Search for the highest valued tag
         highestValue = 0;

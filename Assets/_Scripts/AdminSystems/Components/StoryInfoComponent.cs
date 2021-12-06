@@ -109,5 +109,6 @@ namespace CQM.Components
         public ID m_Target;
         public QPTag.TagType m_Tag;
         public int m_Value = 1;
+        public int m_Power = 0;
     }
 }

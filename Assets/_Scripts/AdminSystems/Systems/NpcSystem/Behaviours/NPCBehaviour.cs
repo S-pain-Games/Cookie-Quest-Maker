@@ -12,6 +12,7 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
 
     private Event<ShowDialogueEvtArgs> _showDialogueCmd;
     private Event<ID> _startStoryCmd;
+    private Event<ID> _failStoryCmd;
     private Event<ID> _finalizeStoryCmd;
 
     private void Awake()
@@ -19,6 +20,7 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
         var evtSys = Admin.Global.EventSystem;
         _showDialogueCmd = evtSys.GetCommandByName<Event<ShowDialogueEvtArgs>>("dialogue_sys", "show_dialogue");
         _startStoryCmd = evtSys.GetCommandByName<Event<ID>>("story_sys", "start_story");
+        _failStoryCmd = evtSys.GetCommandByName<Event<ID>>("story_sys", "fail_story");
         _finalizeStoryCmd = evtSys.GetCommandByName<Event<ID>>("story_sys", "finalize_story");
     }
 
@@ -57,8 +59,17 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
 
     private void DialogueWithNpcFinishedCallback()
     {
+        
         if (m_NpcData.m_HasToFinalizeAStory)
+        {
             _finalizeStoryCmd.Invoke(m_NpcData.m_StoryIDToFinalizeOnInteract);
+        }
+
+        if (m_NpcData.m_HasToFailAStory)
+        {
+            _failStoryCmd.Invoke(m_NpcData.m_StoryIDToFailOnInteract);
+        }
+
         if (m_NpcData.m_HasToStartAStory)
         {
             // Please do not write lines this horrible in production code, this is only for debugging
