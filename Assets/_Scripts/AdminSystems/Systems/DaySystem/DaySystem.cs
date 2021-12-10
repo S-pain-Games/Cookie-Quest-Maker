@@ -18,6 +18,7 @@ public class DaySystem : ISystemEvents
     private Event<GameStateSystem.State> _setGameStateCommand;
     private Event<int> _populateNpcsCommand;
 
+    private Event<PopupData_GenericPopup> _dayPopup;
 
     public void Initialize(GameEventSystem evtSys, Singleton_DayComponent dayData)
     {
@@ -28,6 +29,7 @@ public class DaySystem : ISystemEvents
         // Initialize external Commands
         _setGameStateCommand = evtSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
         _populateNpcsCommand = evtSys.GetCommandByName<Event<int>>("npc_sys", "cmd_populate_npcs");
+        _dayPopup = evtSys.GetCommandByName<Event<PopupData_GenericPopup>>("popup_sys", "generic_popup");
 
         _dayData = dayData;
     }
@@ -74,6 +76,8 @@ public class DaySystem : ISystemEvents
         _dayData.m_StoriesToCompleteInADay = 3;
         _setGameStateCommand.Invoke(GameStateSystem.State.Bakery);
         _dayStartedCallbacks.Invoke();
+        _dayData.m_DayCounter += 1;
+        ShowDayPopup();
     }
 
     private void StartTutorialDay()
@@ -85,10 +89,19 @@ public class DaySystem : ISystemEvents
         _dayStartedCallbacks.Invoke();
         _tutorialDayStartedCallbacks.Invoke();
     }
+
+    private void ShowDayPopup()
+    {
+        PopupData_GenericPopup dData = new PopupData_GenericPopup();
+        dData.m_Text = "Día " + _dayData.m_DayCounter;
+        dData.m_TimeAlive = 3.0f;
+        _dayPopup.Invoke(dData);
+    }
 }
 
 public class Singleton_DayComponent
 {
     public int m_StoriesCompletedToday = 0;
     public int m_StoriesToCompleteInADay = 3;
+    public int m_DayCounter = 0;
 }

@@ -26,7 +26,7 @@ public class SequenceBarrier : MonoBehaviour
         }
         else
         {
-            _popupCmd.Invoke(new PopupData_GenericPopup { m_Text = "Aun no has hablado con todos tus clientes", m_TimeAlive = 3.0f });
+            _popupCmd.Invoke(new PopupData_GenericPopup { m_Text = "Aún no has hablado con todos tus clientes", m_TimeAlive = 3.0f });
         }
     }
 
