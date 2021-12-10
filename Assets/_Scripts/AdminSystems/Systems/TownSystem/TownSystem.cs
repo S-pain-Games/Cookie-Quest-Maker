@@ -42,13 +42,14 @@ namespace CQM.Systems
         {
             List<LocationComponent> locList = _locationComponents.GetList();
 
-            int globalHappiness = 0;
-            for (int i = 0; i < locList.Count; i++)
+            int globalBaseHapiness = 100;
+
+            foreach(LocationComponent lc in locList)
             {
-                CalculateLocationHappiness(locList[i]);
-                globalHappiness += locList[i].m_Happiness;
+                CalculateLocationHappiness(lc);
+                globalBaseHapiness += lc.m_Happiness;
             }
-            _townComponent.m_GlobalHappiness = globalHappiness;
+            _townComponent.m_GlobalHappiness = globalBaseHapiness * 50 / 100;
         }
 
         private void CalculateLocationHappiness(LocationComponent location)
@@ -71,7 +72,7 @@ namespace CQM.Components
     [System.Serializable]
     public class Singleton_TownComponent
     {
-        public int m_GlobalHappiness;
+        public int m_GlobalHappiness = 50;
     }
 
 

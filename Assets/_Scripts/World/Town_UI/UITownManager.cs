@@ -11,8 +11,8 @@ namespace CQM.UI.Town
     {
         [SerializeField] private List<TownBuildingBehaviour> m_Buildings = new List<TownBuildingBehaviour>();
         [SerializeField] private HappinessMeterAnimations m_currentMeter;
-
         [SerializeField] private TextMeshProUGUI globalHapinessText;
+
         private int baseHapinessValue = 100;    //50%
         //Mínimo 0, Máximo 200
  
@@ -23,7 +23,8 @@ namespace CQM.UI.Town
                 m_Buildings[i].Initialize(this);
             }
 
-            CalculateGlobalHapiness();
+            //CalculateGlobalHapiness();
+            globalHapinessText.text = "FELICIDAD " + Admin.Global.Components.m_TownComponent.m_GlobalHappiness + "%";
         }
 
         private void CalculateGlobalHapiness()
