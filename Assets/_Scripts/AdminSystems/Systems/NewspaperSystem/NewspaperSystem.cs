@@ -12,6 +12,7 @@ namespace CQM.Systems
         private Singleton_NewspaperDataComponent _NewsDataComponent;
         private ComponentsContainer<StoryInfoComponent> m_StoryInfoComponents;
 
+        private bool _firstTime = true;
 
         public void Initialize(Singleton_NewspaperReferencesComponent newspaperReferencesComponent,
                                Singleton_NewspaperDataComponent newspaperDataComponent,
@@ -63,8 +64,15 @@ namespace CQM.Systems
             }
             else
             {
+                if (!_firstTime)
+                    return;
+
+                //Solo mostrar el primer artículo de periódico el primer día de juego
+                //A posteriori, no será necesario volver a mostrar el genérico
+                _NewspaperReferencesComponent.mainImg.sprite = Admin.Global.Components.GetComponentContainer<CharacterComponent>().GetComponentByID(new ID("hio")).m_NewspaperSprite;
                 _NewspaperReferencesComponent.mainTitle.text = "Nuevo pastelero en el pueblo";
                 _NewspaperReferencesComponent.mainBody.text = "Todos los ciudadanos que tengan ganas de dulces podran comprarlos en la nueva pasteleria de Hio";
+                _firstTime = false;
             }
         }
     }
