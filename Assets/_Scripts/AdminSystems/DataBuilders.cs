@@ -96,7 +96,7 @@ namespace CQM.DataBuilders
         {
             var l = c.m_GameStoriesStateComponent.m_MainStoriesToStartOrder;
 
-            /*l.Add(new ID("mayor_problem"));
+            l.Add(new ID("mayor_problem"));
             l.Add(new ID("out_of_lactose"));
             l.Add(new ID("sacred_egg"));
             l.Add(new ID("explosive_chocolate"));
@@ -111,7 +111,7 @@ namespace CQM.DataBuilders
             l.Add(new ID("mushroom_profecy"));
             l.Add(new ID("mayor_worries"));
             l.Add(new ID("old_friends"));
-            l.Add(new ID("high_voltage_treatment"));*/
+            l.Add(new ID("high_voltage_treatment"));
             l.Add(new ID("full_artifact_panic"));
             l.Add(new ID("fungal_metamorphosis"));
             l.Add(new ID(""));
