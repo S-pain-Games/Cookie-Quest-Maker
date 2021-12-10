@@ -14,6 +14,9 @@ public class LoadGameStateButton : MonoBehaviour
     private Event<GameStateSystem.State> _setGameStateCommand;
     public Event<ID> _playBakeryDayMusic;
 
+
+    [SerializeField] private FirstDayFurnaceSequence tutorial;
+
     private void Awake()
     {
         button = GetComponent<Button>();
@@ -34,6 +37,9 @@ public class LoadGameStateButton : MonoBehaviour
 
     private void LoadGameState()
     {
+        if (!tutorial.RequirementsMet())
+            return;
+
         _setGameStateCommand.Invoke(m_TargetState);
         _playBakeryDayMusic.Invoke(new ID("bakery_day"));
     }
