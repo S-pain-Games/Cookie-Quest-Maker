@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2127c04212a2fb499a1e7e9e4dea9f9, type: 3}
+  m_Name: Cookie_anim
+  m_EditorClassIdentifier: 
+  m_Sprites:
+  - {fileID: 8927859604602524387, guid: 789ce3f6a64478a48be2c7b115fc8ac9, type: 3}
+  - {fileID: -8841732583727675138, guid: 789ce3f6a64478a48be2c7b115fc8ac9, type: 3}
+  - {fileID: 3171185690449360055, guid: 789ce3f6a64478a48be2c7b115fc8ac9, type: 3}
+  - {fileID: 2773762017266995807, guid: 789ce3f6a64478a48be2c7b115fc8ac9, type: 3}
+  - {fileID: 6896840973019971042, guid: 789ce3f6a64478a48be2c7b115fc8ac9, type: 3}
+  - {fileID: 4345882352599942726, guid: 789ce3f6a64478a48be2c7b115fc8ac9, type: 3}
+  - {fileID: -5513920513126733202, guid: 789ce3f6a64478a48be2c7b115fc8ac9, type: 3}
+  - {fileID: 4225983851748114152, guid: 789ce3f6a64478a48be2c7b115fc8ac9, type: 3}
+  - {fileID: -908260758386762780, guid: 789ce3f6a64478a48be2c7b115fc8ac9, type: 3}
+  - {fileID: 6857982085187071988, guid: 789ce3f6a64478a48be2c7b115fc8ac9, type: 3}
+  - {fileID: 6707109249893993268, guid: 789ce3f6a64478a48be2c7b115fc8ac9, type: 3}
