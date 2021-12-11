@@ -11,10 +11,9 @@ public class FirstDayTableSecuence : MonoBehaviour
 
     public event Action<QuestPieceFunctionalComponent> OnPieceSocketed;
 
-
     private EventVoid _enableCharMovementCmd;
     private EventVoid _disableCharMovementCmd;
-
+    
     private void Awake()
     {
         GameEventSystem evtSys = Admin.Global.EventSystem;
@@ -304,8 +303,11 @@ public class FirstDayTableSecuence : MonoBehaviour
     {
         firstQuestCompleted = false;
         tutorialActive = false;
-        Debug.Log("TUTORIAL COMPLETED");
+        //Debug.Log("TUTORIAL COMPLETED");
         _enableCharMovementCmd.Invoke();
+
+
+        GetComponent<FirstNightDeitiesScriptedSequence>().SetTutorialActive(true);
     }
 
 }

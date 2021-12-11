@@ -11,6 +11,12 @@ public class FirstNightDeitiesScriptedSequence : MonoBehaviour
 
     [SerializeField] private GameObject button_next_day;
 
+    private bool tutorialActive = false;
+    public void SetTutorialActive(bool state)
+    {
+        this.tutorialActive = state;
+    }
+
     private void Awake()
     {
         GameEventSystem evtSys = Admin.Global.EventSystem;
@@ -27,6 +33,9 @@ public class FirstNightDeitiesScriptedSequence : MonoBehaviour
     [MethodButton]
     public void ExecuteSequence()
     {
+        if (!tutorialActive)
+            return;
+
         _disableMovementCmd.Invoke();
         _toggleGameplayUiCmd.Invoke();
 
@@ -168,5 +177,7 @@ public class FirstNightDeitiesScriptedSequence : MonoBehaviour
             button_next_day.SetActive(true);
         _enableMovementCmd.Invoke();
         _toggleGameplayUiCmd.Invoke();
+
+        GetComponent<FirstNightShopSecuence>().SetTutorialActive(true);
     }
 }

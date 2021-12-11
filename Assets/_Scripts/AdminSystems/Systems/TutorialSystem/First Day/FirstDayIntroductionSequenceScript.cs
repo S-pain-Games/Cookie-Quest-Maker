@@ -6,10 +6,7 @@ public class FirstDayIntroductionSequenceScript : MonoBehaviour
 {
     private Event<ShowDialogueEvtArgs> _showDialogueCmd;
 
-    private void Awake()
-    {
-        Admin.Global.EventSystem.GetCallbackByName<EventVoid>("day_sys", "tutorial_day_started").OnInvoked += StartIntroductionSequence;
-    }
+    [SerializeField] private bool enabledTutorial = true;
 
     public void OnEnable()
     {
@@ -17,11 +14,17 @@ public class FirstDayIntroductionSequenceScript : MonoBehaviour
         _showDialogueCmd = evtSys.GetCommandByName<Event<ShowDialogueEvtArgs>>("dialogue_sys", "show_dialogue");
     }
 
+    private void Awake()
+    {
+        Admin.Global.EventSystem.GetCallbackByName<EventVoid>("day_sys", "tutorial_day_started").OnInvoked += StartIntroductionSequence;
+    }
+
     public void StartIntroductionSequence()
     {
-        //Dentro pantalla en negro
 
-        _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
+        if (enabledTutorial)
+        {
+            _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
             "En un pequeño pueblo, un joven ha abierto una pastelería.",
             "El pueblo ha visto días mejores. Los problemas surgen por doquier.",
             "El joven escucha impotente, día tras día, los infortunios de sus clientes.",
@@ -30,11 +33,23 @@ public class FirstDayIntroductionSequenceScript : MonoBehaviour
             "Lo que no sabía en ese momento era que su deseo iba a ser concedido ese mismo día."},
             new ID("narrator"),
                () => { NarratorDialogFinishedCallback(); }));
+        }
+        else
+        {
+            _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
+            ""},
+              new ID("narrator"),
+                 () => { NarratorDialogFinishedCallback(); }));
+        }
+        
     }
 
     private void NarratorDialogFinishedCallback()
     {
-        //Fuera pantalla en negro
+        if(enabledTutorial)
+            GetComponent<FirstDayDeitiesScriptedSequence>().setEnabledTutorial(true);
+
         Admin.Global.EventSystem.GetCallbackByName<EventVoid>("day_sys", "tutorial_day_started").OnInvoked -= StartIntroductionSequence;
+        enabledTutorial = false;
     }
 }

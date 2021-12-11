@@ -9,6 +9,8 @@ public class GameTutorialManager : MonoBehaviour
     private EventVoid _enableCharMovementCmd;
     private EventVoid _disableCharMovementCmd;
 
+    [SerializeField] private bool enabledTutorial = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,9 @@ public class GameTutorialManager : MonoBehaviour
 
     public void StartIntroductionSequence()
     {
+        if (!enabledTutorial)
+            return;
+
         //Dentro pantalla en negro
 
         _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
@@ -55,6 +60,9 @@ public class GameTutorialManager : MonoBehaviour
 
     public void StartNuEvithIntroSequence()
     {
+        if (!enabledTutorial)
+            return;
+
         _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
             "¡Vaya, vaya, bonita pastelería tienes aquí montada, jovenzuelo!"},
          new ID("evith"),
@@ -181,6 +189,8 @@ public class GameTutorialManager : MonoBehaviour
     private void EvithNuPreFurnaceSequenceEnd()
     {
         Debug.Log("Se acabó la chapa");
+        enabledTutorial = false;
+        GetComponent<FirstDayDeitiesScriptedSequence>().setEnabledTutorial(true);
     }
 
 }

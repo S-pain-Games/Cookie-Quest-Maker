@@ -6,7 +6,12 @@ public class FirstNightShopSecuence : MonoBehaviour
 {
     private Event<ShowDialogueEvtArgs> _showDialogueCmd;
     private EventVoid _disableCharMovementCmd;
-    private bool tutorialEnabled = true;
+
+    private bool tutorialActive = false;
+    public void SetTutorialActive(bool state)
+    {
+        this.tutorialActive = state;
+    }
 
     private void Awake()
     {
@@ -18,7 +23,7 @@ public class FirstNightShopSecuence : MonoBehaviour
     [MethodButton]
     public void ShowFFirstTimeOpenShopSequence()
     {
-        if (!tutorialEnabled)
+        if (!tutorialActive)
             return;
 
         StartFirstTimeOpenShopSequence();
@@ -124,7 +129,7 @@ public class FirstNightShopSecuence : MonoBehaviour
 
     private void FinishFirstTimeOpenShopSequence()
     {
-        tutorialEnabled = false;
+        tutorialActive = false;
         _disableCharMovementCmd.Invoke();
     }
 }

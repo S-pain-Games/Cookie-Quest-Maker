@@ -19,6 +19,12 @@ public class FirstDayDeitiesScriptedSequence : MonoBehaviour
     private EventVoid _toggleGameplayUiCmd;
     private Event<ShowDialogueEvtArgs> _showDialogueCmd;
 
+    private bool enabledTutorial = false;
+    public void setEnabledTutorial(bool state)
+    {
+        enabledTutorial = state;
+    }
+
     private void Awake()
     {
         GameEventSystem evtSys = Admin.Global.EventSystem;
@@ -32,6 +38,9 @@ public class FirstDayDeitiesScriptedSequence : MonoBehaviour
     [MethodButton]
     public void ExecuteSequence()
     {
+        if (!enabledTutorial)
+            return;
+
         evithRef = Instantiate(evithPrefab, evithSpawnPos);
         nuRef = Instantiate(nuPrefab, nuSpawnPos);
         evithRef.GetComponent<SpriteRenderer>().flipX = true;
