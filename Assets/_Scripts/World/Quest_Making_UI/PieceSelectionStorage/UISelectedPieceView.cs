@@ -18,8 +18,10 @@ namespace CQM.UI.QuestMakingTable
         [SerializeField] private TextMeshProUGUI _help;
         [SerializeField] private TextMeshProUGUI _harm;
 
+        [SerializeField] private TextMeshProUGUI _amount;
 
-        public void UpdateUI(Sprite sprite, string name, string description, int convince, int help, int harm)
+
+        public void UpdateUI(Sprite sprite, string name, string description, int convince, int help, int harm, int amount)
         {
             if (!_gameObject.activeInHierarchy)
                 _gameObject.SetActive(true);
@@ -36,6 +38,7 @@ namespace CQM.UI.QuestMakingTable
 
             _nameTextComp.text = name;
             _descTextComp.text = description;
+            _amount.text = amount.ToString();
 
             if (_convince.text != convince.ToString())
             {

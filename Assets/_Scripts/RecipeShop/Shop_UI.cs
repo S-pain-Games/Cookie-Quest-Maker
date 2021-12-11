@@ -57,6 +57,9 @@ public class Shop_UI : MonoBehaviour
 
     [SerializeField] private GameObject button_next_day;
 
+    [SerializeField] private Image button_Recipe;
+    [SerializeField] private Image button_Ingredient;
+
     private Color colorWhite = new Color(0.5254902f, 0.3098039f, 0.1607f);
     private Color colorRed = new Color(0.6320754f, 0.06857423f, 0.1578471f);
 
@@ -303,6 +306,8 @@ public class Shop_UI : MonoBehaviour
     {
         if(currentRecipeType != RecipeTypes.PieceRecipes)
         {
+            button_Recipe.color = Color.yellow;
+            button_Ingredient.color = Color.white;
             currentRecipeType = RecipeTypes.PieceRecipes;
             UpdateUI(false);
         }
@@ -312,6 +317,8 @@ public class Shop_UI : MonoBehaviour
     {
         if(currentRecipeType != RecipeTypes.IngredientRecipes)
         {
+            button_Recipe.color = Color.white;
+            button_Ingredient.color = Color.yellow;
             currentRecipeType = RecipeTypes.IngredientRecipes;
             text_buy.text = "¡Comprar!";
             UpdateUI(false);

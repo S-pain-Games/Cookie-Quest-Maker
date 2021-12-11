@@ -685,14 +685,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7254902, g: 0.47843137, b: 0.3137255, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.65882355}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 7482667652216324306, guid: 0f7eac5b4f284a341b60aaf3330946b2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1164,6 +1164,9 @@ MonoBehaviour:
   image_evith: {fileID: 3275360052298653623}
   image_nu: {fileID: 6211867047011312988}
   button_next_day: {fileID: 0}
+  button_Recipe: {fileID: 8136328022371938656}
+  button_Ingredient: {fileID: 1375835238673410637}
+  tutorial: {fileID: 0}
 --- !u!1 &2715996082444244972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2229,7 +2232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

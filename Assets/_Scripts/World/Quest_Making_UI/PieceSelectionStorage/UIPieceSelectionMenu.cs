@@ -127,7 +127,25 @@ namespace CQM.UI.QuestMakingTable
             if (l != null)
                 harm = l.m_Value;
 
-            m_SelectedPieceStatsView.UpdateUI(UIPieceData.m_SimpleSprite, UIPieceData.m_Name, UIPieceData.m_Description, convince, help, harm);
+            int amount = 0;
+
+            if(funcPiece.m_Type == QuestPieceFunctionalComponent.PieceType.Target)
+            {
+                amount = 1;
+            }
+            else
+            {
+                var inventoryPieces = Admin.Global.Components.m_InventoryComponent.m_Pieces;
+                for (int i = 0; i < inventoryPieces.Count; i++)
+                {
+                    if (inventoryPieces[i].m_ItemID == questPieceID)
+                    {
+                        amount = inventoryPieces[i].m_Amount;
+                    }
+                }
+            }
+
+            m_SelectedPieceStatsView.UpdateUI(UIPieceData.m_SimpleSprite, UIPieceData.m_Name, UIPieceData.m_Description, convince, help, harm, amount);
         }
 
         public void SelectFirstPieceOfType()
