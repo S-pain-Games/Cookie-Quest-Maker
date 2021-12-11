@@ -7,6 +7,7 @@ using System.Collections.Generic;
 public class Systems
 {
     // Core Engine Systems (Layer 0)
+    private SaveSystem m_SaveSystem = new SaveSystem();
     private GameStateSystem m_GameStateSystem = new GameStateSystem();
     public LocalizationSystem m_LocalizationSystem = new LocalizationSystem();
     private CameraSystem m_CameraSystem = new CameraSystem();
@@ -80,9 +81,16 @@ public class Systems
         systems.Add(m_NewspaperSystem);
         systems.Add(m_UISystem);
         systems.Add(m_AudioSystem);
+        systems.Add(m_SaveSystem);
 
         // All systems returned here will be initialized by the Event System
         return systems;
+    }
+
+    public void LoadSaveGame(ComponentsDatabase d)
+    {
+        m_SaveSystem.Initialize(d);
+        m_SaveSystem.Load();
     }
 
     public void StartGame()

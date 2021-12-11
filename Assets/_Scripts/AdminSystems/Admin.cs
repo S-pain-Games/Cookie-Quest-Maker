@@ -32,6 +32,8 @@ public class Admin : MonoBehaviour
         EventSystem.RegisterSystems(Systems.GetAllSystemsWithEvents());
         EventSystem.Initialize();
 
+        Systems.LoadSaveGame(Components);
+        Components.Initialize(); // Hack to rebind GetCompontentContainer References
         Systems.InitializeSystems(EventSystem, Components);
 
         Systems.StartGame();

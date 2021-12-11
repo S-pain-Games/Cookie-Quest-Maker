@@ -347,6 +347,7 @@ namespace CQM.Systems
 
 namespace CQM.Components
 {
+    [Serializable]
     public class NPCBehaviourData
     {
         public ID m_CharacterID = new ID("meri");

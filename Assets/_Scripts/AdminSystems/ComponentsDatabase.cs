@@ -11,11 +11,11 @@ namespace CQM.Databases
     {
         [Header("Batch Components")]
         // All the Stories Data in the game (Persistent & Runtime)
-        [SerializeField] private ComponentsContainer<StoryInfoComponent> m_StoriesInfo = new ComponentsContainer<StoryInfoComponent>();
+        [SerializeField] public ComponentsContainer<StoryInfoComponent> m_StoriesInfo = new ComponentsContainer<StoryInfoComponent>();
         // Story UI Data used in the story selection UI (Persistent)
         [SerializeField] private ComponentsContainer<StoryUIDataComponent> m_StoriesUI = new ComponentsContainer<StoryUIDataComponent>();
         // All the repercusions in the game (Persistent)
-        [SerializeField] private ComponentsContainer<StoryRepercusionComponent> m_Repercusions = new ComponentsContainer<StoryRepercusionComponent>();
+        [SerializeField] public ComponentsContainer<StoryRepercusionComponent> m_Repercusions = new ComponentsContainer<StoryRepercusionComponent>();
 
         // Contains all the cookie recipes
         [SerializeField] private ComponentsContainer<RecipeDataComponent> m_RecipeData = new ComponentsContainer<RecipeDataComponent>();
@@ -65,6 +65,7 @@ namespace CQM.Databases
 
         public void Initialize()
         {
+            m_ComponentContainers.Clear();
             m_ComponentContainers.Add(typeof(StoryInfoComponent), m_StoriesInfo);
             m_ComponentContainers.Add(typeof(StoryUIDataComponent), m_StoriesUI);
             m_ComponentContainers.Add(typeof(StoryRepercusionComponent), m_Repercusions);
