@@ -1,3 +1,5 @@
+using CQM.Components;
+using CQM.UI.Town;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +12,7 @@ public class EndingNPC : MonoBehaviour, IInteractableEntity
     private ID _charId;
 
     [SerializeField] private AgentMouseListener character;
+    [SerializeField] private TownBuildingBehaviour townRef;
 
     private void Start()
     {
@@ -24,9 +27,17 @@ public class EndingNPC : MonoBehaviour, IInteractableEntity
     public void OnInteract()
     {
         character.SetInputActivated(false);
+        //townRef.BuildingID;
 
-        //A futuro, los diálogos dependerán de la felicidad del propio NPC
-        int happiness = Admin.Global.Components.m_TownComponent.m_GlobalHappiness;
+        //Valor global
+        //int happiness = Admin.Global.Components.m_TownComponent.m_GlobalHappiness;
+
+        var locationComponent = Admin.Global.Components.GetComponentContainer<LocationComponent>().GetComponentByID(townRef.BuildingID);
+        Debug.Log(locationComponent.m_LocName + " hapiness: " + locationComponent.m_Happiness);
+
+        //Valor específico del npc
+        int happiness = locationComponent.m_Happiness;
+
 
         switch (_characterName)
         {
@@ -43,9 +54,9 @@ public class EndingNPC : MonoBehaviour, IInteractableEntity
     {
         List<string> dialog = new List<string>();
 
-        if (happinessValue >= 0)
+        if (happinessValue >= 20)
             dialog.Add("¡Después de esta mala racha por fín parece que veremos la luz! ¡Esto hay que celebrarlo con un banquete!");
-        else if (happinessValue <= 0)
+        else if (happinessValue <= -20)
             dialog.Add("Mi gente me odia después de todo lo que he hecho por ellos. Estoy planteandome dimitir.");
         else
             dialog.Add("No estaremos en nuestro mejor momento, ¡Pero saldremos adelante!");

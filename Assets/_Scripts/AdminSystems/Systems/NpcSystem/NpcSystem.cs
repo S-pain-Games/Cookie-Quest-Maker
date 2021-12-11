@@ -102,6 +102,8 @@ namespace CQM.Systems
                     else
                     {
                         npcData.m_Dialogue.Add("Menuda historia...");
+
+                        //O no empezar la secundaria diréctamente
                         StartSecondaryStory(secondaryStoriesToStart, npcData);
                     }
                 }
