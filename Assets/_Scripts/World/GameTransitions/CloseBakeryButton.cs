@@ -30,6 +30,7 @@ public class CloseBakeryButton : MonoBehaviour
         _onDailyStoriesCompletedCallback.OnInvoked += TryToEnableButton;
         _button.onClick.AddListener(() =>
         {
+            Admin.Global.EventSystem.GetCommandByName<EventVoid>("save_sys", "save").Invoke();
             _setGameStateCommand.Invoke();
             _playBakeryNightMusic.Invoke(new ID("bakery_night"));
             _buttonGameObject.SetActive(false);
