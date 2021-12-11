@@ -42,7 +42,7 @@ public class SpriteAnimatorHio : MonoBehaviour
         }
         else
         {
-            if (m_FacingAngle <= 20)
+            if (m_FacingAngle >= 0 && m_FacingAngle <= 20)
                 m_AnimSys.SetAnimation(IdleE);
             else if (m_FacingAngle <= 160)
                 m_AnimSys.SetAnimation(IdleN);
@@ -51,7 +51,7 @@ public class SpriteAnimatorHio : MonoBehaviour
             else if (m_FacingAngle <= 260)
                 m_AnimSys.SetAnimation(IdleSW);
             else if (m_FacingAngle <= 280)
-                m_AnimSys.SetAnimation(IdleE);
+                m_AnimSys.SetAnimation(IdleS);
             else if (m_FacingAngle <= 340)
                 m_AnimSys.SetAnimation(IdleSE);
             else if (m_FacingAngle <= 360)
