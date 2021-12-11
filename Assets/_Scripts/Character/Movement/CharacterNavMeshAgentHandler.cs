@@ -100,6 +100,7 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
     private void StopAgentMovement()
     {
         _agent.isStopped = true;
+        _agent.SetDestination(transform.position);
         _agent.velocity = Vector3.zero;
     }
 

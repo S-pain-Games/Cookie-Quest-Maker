@@ -27,8 +27,6 @@ public class AgentMouseListener : MonoBehaviour
     public void SetInputActivated(bool activated)
     {
         _enabledListener = activated;
-        /*if(_agent != null)
-            _agent.SetTarget(new Vector3(transform.position.x, transform.position.y, 0));*/
     }
 
     private void OnClick()
@@ -46,7 +44,6 @@ public class AgentMouseListener : MonoBehaviour
         {
             if (hit.transform.GetComponent<IInteractableEntity>() != null)
             {
-                //Debug.Log("He clickado en " + hit.transform.gameObject.name);
                 interactableObject = hit.transform.gameObject;
             }
             else if (hit.transform.name == "Walkable")

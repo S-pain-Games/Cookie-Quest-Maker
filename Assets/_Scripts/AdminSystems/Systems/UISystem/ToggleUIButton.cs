@@ -9,10 +9,16 @@ public class ToggleUIButton : MonoBehaviour
     [SerializeField] private Button button;
     private EventVoid _toggleUI;
 
+    private EventVoid _enableCharMovementCmd;
+    private EventVoid _disableCharMovementCmd;
+
     private void Awake()
     {
         var _eventSys = Admin.Global.EventSystem;
         _toggleUI = _eventSys.GetCommandByName<EventVoid>("ui_sys", m_ToggleEventNameID);
+
+        _disableCharMovementCmd = _eventSys.GetCommandByName<EventVoid>("character_sys", "disable_movement");
+        _enableCharMovementCmd = _eventSys.GetCommandByName<EventVoid>("character_sys", "enable_movement");
     }
 
     private void OnEnable()
@@ -25,8 +31,22 @@ public class ToggleUIButton : MonoBehaviour
         button.onClick.RemoveListener(ToggleUI);
     }
 
+    //Es muy horrible, pero no me queda otra
+    [SerializeField] private CharacterNavMeshAgentHandler character;
+
     private void ToggleUI()
     {
         _toggleUI.Invoke();
+
+        if(gameObject.name == "Settings_Button")
+        {
+            _disableCharMovementCmd.Invoke();
+            character.InterruptAgentMovement();
+        }
+        else if(gameObject.name == "BtnBack")
+        {
+            _enableCharMovementCmd.Invoke();
+            
+        }
     }
 }
