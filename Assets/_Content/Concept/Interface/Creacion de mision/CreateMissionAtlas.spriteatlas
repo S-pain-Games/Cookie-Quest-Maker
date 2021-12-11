@@ -55,6 +55,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 54ceb1d13a2ec654ab5b9f4be4635fb4, type: 3}
   - {fileID: 21300000, guid: 23f676d1f4a71db49b4a4b089729a845, type: 3}
   - {fileID: 21300000, guid: e3393412cb8a53d4fa51facf3396c935, type: 3}
+  - {fileID: 21300000, guid: 51906f223a78c0b42884a43b376d5977, type: 3}
   - {fileID: 21300000, guid: 194898324a4688d4994fd80f5332beca, type: 3}
   - {fileID: 21300000, guid: 7cce4f72391653842a38511dd7871dc2, type: 3}
   - {fileID: 21300000, guid: 28b7d793a8173cc469991ac4c93c963a, type: 3}
@@ -66,6 +67,8 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 4766e9563f9dbd244a1c536253f95ce8, type: 3}
   - {fileID: 21300000, guid: b51aca76c7c871941a08578d590aebb9, type: 3}
   - {fileID: 21300000, guid: 381ea50766ff9e946a372f6f902de103, type: 3}
+  - {fileID: 21300000, guid: 4c3de01733cab12479222c486f4c4796, type: 3}
+  - {fileID: 21300000, guid: 8d7f428729c2abc439856f11e86ffda8, type: 3}
   - {fileID: 21300000, guid: eb7fe4a73bd33a940bfcaf4f93f10ae6, type: 3}
   - {fileID: 21300000, guid: 9cd2f33803c99034289d8e3d1bec3635, type: 3}
   - {fileID: 21300000, guid: fb7cda5845c36bb47a7f9026fa916019, type: 3}
@@ -74,14 +77,19 @@ SpriteAtlas:
   - {fileID: 21300000, guid: fbc0e27999c58df4e97cac0a6de3a9ca, type: 3}
   - {fileID: 21300000, guid: 3884d879c5ff00640931ec4185284ae3, type: 3}
   - {fileID: 21300000, guid: 508a82d941ad7684fb3a9a7fc82ef9f7, type: 3}
+  - {fileID: 21300000, guid: 5b72aa8abb4acbd4bb29312e0ac3c5e3, type: 3}
   - {fileID: 21300000, guid: 15f10baa2b52b044f80c8d7a883ed103, type: 3}
+  - {fileID: 21300000, guid: ca1455fa765c1c344936307b141877e3, type: 3}
   - {fileID: 21300000, guid: 24d1f83b8ea240942a0118e210520d0e, type: 3}
+  - {fileID: 21300000, guid: 1e22b95bfbcd70443acdaf05e90c679e, type: 3}
   - {fileID: 21300000, guid: 6cfd658b7d0f18c4ca8c3aae2182d699, type: 3}
   - {fileID: 21300000, guid: a6cfc1abbc064644e9d39fedbad9a254, type: 3}
+  - {fileID: 21300000, guid: c6efe40c46a011d4bb556bd4486802cf, type: 3}
   - {fileID: 21300000, guid: 3309febc2aa5e6f4e9efba6cca370606, type: 3}
   - {fileID: 21300000, guid: 85119a0d9cb3a444d9d8fc0394920391, type: 3}
   - {fileID: 21300000, guid: b973048d6e900844ba6081e0b6ae7990, type: 3}
   - {fileID: 21300000, guid: 7e7f567e9bfa9894ab38dd2d40c4f780, type: 3}
+  - {fileID: 21300000, guid: 97d1b91f5800d004ba6551366e76c442, type: 3}
   - {fileID: 21300000, guid: f241a53f9d509cc4bb43cf1cea451a29, type: 3}
   - {fileID: 21300000, guid: f675673fd14c4bc4f8eae48d78319d8c, type: 3}
   - {fileID: 21300000, guid: a238624f623ea254b9817bdf8c5cf92f, type: 3}
@@ -94,6 +102,7 @@ SpriteAtlas:
   - ModifierPiece_placeholder
   - ActionPiece_look
   - ModifierPiece_Brutally
+  - TargetPiece_spider
   - TargetPiece_MissChocolate
   - CreateMission_background
   - ObjectPiece_bat
@@ -105,6 +114,8 @@ SpriteAtlas:
   - TargetPiece_Rats
   - ActionPiece_Attack
   - ObjectPiece_flipflop
+  - TargetPiece_golem
+  - TargetPiece_dragon
   - TargetPiece_ErJohnny
   - OpenStorage_button
   - HeroPiece_7
@@ -113,14 +124,19 @@ SpriteAtlas:
   - TargetPiece_Mary
   - HeroPiece_6
   - ActionPiece_assist
+  - TargetPiece_monster
   - ActionPiece_stare
+  - TargetPiece_catt
   - HeroPiece_3
+  - TargetPiece_thief
   - ModifierPiece_Violently
   - HeroPiece_8
+  - TargetPiece_strangeMan
   - ModifierPiece_Kindly
   - ActionPiece_dialogue
   - HeroPiece_placeholder
   - TargetPiece_placeholder
+  - TargetPiece_ghost
   - HeroPiece_2
   - ObjectPiece_scissor
   - ObjectPiece_cake

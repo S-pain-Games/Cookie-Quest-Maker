@@ -71,6 +71,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 764bfb65addd1c0458d9ec45c632ca43, type: 3}
   - {fileID: 21300000, guid: 2d0682f5d7d0579499388e5f687b44a3, type: 3}
   - {fileID: 21300000, guid: 8f3e0a27338949e4e83fbecee87ad629, type: 3}
+  - {fileID: 21300000, guid: 0a3e00582e8561c4ebb3b71492730755, type: 3}
   - {fileID: 21300000, guid: 0b01fc78af86a0a4fb521de9914dcb07, type: 3}
   - {fileID: 21300000, guid: 955648f86f7437c4d83f982a26431630, type: 3}
   - {fileID: 21300000, guid: 59e16419a5901d745b465b8fc2eba137, type: 3}
@@ -108,6 +109,7 @@ SpriteAtlas:
   - Settings_slider_button_music
   - MissionCookie_12
   - SelectMisson_background_ES
+  - MissionCookieS_7
   - MissionCookie_5
   - MissionCookie_1
   - MissionCookie_8
