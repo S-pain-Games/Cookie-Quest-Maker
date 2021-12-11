@@ -473,14 +473,14 @@ GameObject:
   - component: {fileID: 7041092992332635980}
   - component: {fileID: 1962078309177173800}
   - component: {fileID: 144972112636755068}
-  - component: {fileID: 5635296908271004066}
+  - component: {fileID: 2452653511055467974}
   m_Layer: 0
   m_Name: Btn_Next_Day
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2622100193220699267
 RectTransform:
   m_ObjectHideFlags: 0
@@ -496,10 +496,10 @@ RectTransform:
   m_Father: {fileID: 7189726274733332730}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 212, y: 99}
-  m_SizeDelta: {x: 350, y: 150}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -352.78125}
+  m_SizeDelta: {x: 500, y: 199}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5518937336537960331
 CanvasRenderer:
@@ -595,7 +595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b67c8be1d6b71c489cf514e66a40159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5635296908271004066
+--- !u!114 &2452653511055467974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -604,7 +604,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1094010252775953601}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2412afbae5458464fbb4ff23fd46bd6f, type: 3}
+  m_Script: {fileID: 11500000, guid: e158ab14b6b31d94badefb25011a933b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1956563739
@@ -1799,8 +1799,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4281160069
+  m_fontColor: {r: 0.52156866, g: 0.31764707, b: 0.1764706, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1817,8 +1817,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
