@@ -9162,6 +9162,11 @@ MonoBehaviour:
     m_FullName: Hio
     m_ShortName: Hio
     m_Description: "Due\xF1o de una pasteler\xEDa y protagonista en esta historia."
+    hasAudio: 0
+    m_AudioID:
+      m_NameID: voice_mayor
+      m_ID: 1664147761
+      m_Initialized: 1
     m_NewspaperSprite: {fileID: 21300000, guid: 34e5756d697846b4bb3a6ffdb0c2cb74, type: 3}
     m_CharacterWorldPrefab: {fileID: 0}
   - m_ID:
@@ -9171,6 +9176,11 @@ MonoBehaviour:
     m_FullName: Nu
     m_ShortName: Nu Nu
     m_Description: "\xC1ngel de las Galletas."
+    hasAudio: 1
+    m_AudioID:
+      m_NameID: voice_nu
+      m_ID: -1351415488
+      m_Initialized: 1
     m_NewspaperSprite: {fileID: 0}
     m_CharacterWorldPrefab: {fileID: 8440202483473040574, guid: c21f96cdad2833449b44fe9362b9de8e, type: 3}
   - m_ID:
@@ -9180,6 +9190,11 @@ MonoBehaviour:
     m_FullName: Evith
     m_ShortName: Evith
     m_Description: Demonio de las Galletas.
+    hasAudio: 1
+    m_AudioID:
+      m_NameID: voice_evith
+      m_ID: 958085631
+      m_Initialized: 1
     m_NewspaperSprite: {fileID: 0}
     m_CharacterWorldPrefab: {fileID: 8019418314948059770, guid: 16f5164e95004444f918fb6691ae1d07, type: 3}
   - m_ID:
@@ -9189,6 +9204,11 @@ MonoBehaviour:
     m_FullName: Meri la Leches
     m_ShortName: Meri
     m_Description: Ganadera entusiasta de las vacas.
+    hasAudio: 1
+    m_AudioID:
+      m_NameID: voice_meri
+      m_ID: 114168930
+      m_Initialized: 1
     m_NewspaperSprite: {fileID: 21300000, guid: bedab464ddb364b4aa124ef597b4d78a, type: 3}
     m_CharacterWorldPrefab: {fileID: 6635933445755449783, guid: faece4c0e1989754090487aa9c7c7046, type: 3}
   - m_ID:
@@ -9198,6 +9218,11 @@ MonoBehaviour:
     m_FullName: Alcalde, Antonio
     m_ShortName: Alcalde
     m_Description: "El muy taca\xF1o alcalde del pueblo."
+    hasAudio: 1
+    m_AudioID:
+      m_NameID: voice_mayor
+      m_ID: 1664147761
+      m_Initialized: 1
     m_NewspaperSprite: {fileID: 21300000, guid: 0de9e38e070a379428cde1f51f6085f4, type: 3}
     m_CharacterWorldPrefab: {fileID: 7771397039777580420, guid: a89aae5c2f6d6de46946e4e5b10e2be0, type: 3}
   - m_ID:
@@ -9207,6 +9232,11 @@ MonoBehaviour:
     m_FullName: Miss Chocolate
     m_ShortName: Ms.Chocolate
     m_Description: "Exc\xE9ntrica chocolatera."
+    hasAudio: 1
+    m_AudioID:
+      m_NameID: voice_miss
+      m_ID: -255357859
+      m_Initialized: 1
     m_NewspaperSprite: {fileID: 21300000, guid: 6b4b0b9042011be4192a2e28f4d991fd, type: 3}
     m_CharacterWorldPrefab: {fileID: 6185239428428815657, guid: de95e7b0893b948418911ce892c2b082, type: 3}
   - m_ID:
@@ -9216,6 +9246,11 @@ MonoBehaviour:
     m_FullName: Canela N Rama
     m_ShortName: Cane
     m_Description: Coleccionista de artefactos antiguos.
+    hasAudio: 1
+    m_AudioID:
+      m_NameID: voice_canela
+      m_ID: 778134781
+      m_Initialized: 1
     m_NewspaperSprite: {fileID: 21300000, guid: 3d2a3106a6ba6d0439e9e8835468edce, type: 3}
     m_CharacterWorldPrefab: {fileID: 6101517129295224818, guid: 825672efd5fa6c04c80c97e7df6548d6, type: 3}
   - m_ID:
@@ -9225,6 +9260,11 @@ MonoBehaviour:
     m_FullName: Johny, el setas
     m_ShortName: Johny
     m_Description: Un alquimista muy peculiar.
+    hasAudio: 1
+    m_AudioID:
+      m_NameID: voice_johnny
+      m_ID: 1486521305
+      m_Initialized: 1
     m_NewspaperSprite: {fileID: 21300000, guid: 6c1a0fdfc124374438e23145d2b84edc, type: 3}
     m_CharacterWorldPrefab: {fileID: 7377969410888980926, guid: 45528f930cc2577429f38aae6d0d7fbb, type: 3}
   - m_ID:
@@ -9234,6 +9274,11 @@ MonoBehaviour:
     m_FullName: Juanjo, el mantecas
     m_ShortName: Juanjo
     m_Description: El agricultor malhumorado
+    hasAudio: 1
+    m_AudioID:
+      m_NameID: voice_mantecas
+      m_ID: -808427401
+      m_Initialized: 1
     m_NewspaperSprite: {fileID: 21300000, guid: 57b59e78428947c4c821038127ff95a3, type: 3}
     m_CharacterWorldPrefab: {fileID: 3193959261219538360, guid: 470a428eacc6c2848809e62753cbaec5, type: 3}
   - m_ID:
@@ -9243,6 +9288,11 @@ MonoBehaviour:
     m_FullName: narrator
     m_ShortName: narrator
     m_Description: narrator
+    hasAudio: 0
+    m_AudioID:
+      m_NameID: voice_mayor
+      m_ID: 1664147761
+      m_Initialized: 1
     m_NewspaperSprite: {fileID: 21300000, guid: f5055aeb18931e346b2c2c790def104c, type: 3}
     m_CharacterWorldPrefab: {fileID: 0}
   m_CharacterDialogueList:
