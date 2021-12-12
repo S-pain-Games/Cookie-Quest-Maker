@@ -140,6 +140,38 @@ MonoBehaviour:
     m_SimpleSprite: {fileID: 21300000, guid: 80b5879500c194c4b9257f212baf50d9, type: 3}
     m_FullCookieSprite: {fileID: 21300000, guid: 95f2385038877f64cb098fb629af4685, type: 3}
     m_QuestBuildingPrefab: {fileID: 0}
+  - m_IDName: weirdMan
+    m_SimpleSprite: {fileID: 21300000, guid: 54df7579a9d48464bb54e47ee1d7142b, type: 3}
+    m_FullCookieSprite: {fileID: 21300000, guid: c6efe40c46a011d4bb556bd4486802cf, type: 3}
+    m_QuestBuildingPrefab: {fileID: 0}
+  - m_IDName: thief
+    m_SimpleSprite: {fileID: 21300000, guid: e73dfa4568381e54d8804a42eca3ed62, type: 3}
+    m_FullCookieSprite: {fileID: 21300000, guid: 1e22b95bfbcd70443acdaf05e90c679e, type: 3}
+    m_QuestBuildingPrefab: {fileID: 0}
+  - m_IDName: dragon
+    m_SimpleSprite: {fileID: 21300000, guid: 3405d844cc4286b408bcdd443f165de4, type: 3}
+    m_FullCookieSprite: {fileID: 21300000, guid: 8d7f428729c2abc439856f11e86ffda8, type: 3}
+    m_QuestBuildingPrefab: {fileID: 0}
+  - m_IDName: monster
+    m_SimpleSprite: {fileID: 21300000, guid: 0606214ee84d9144bb747d9d239f34dc, type: 3}
+    m_FullCookieSprite: {fileID: 21300000, guid: 5b72aa8abb4acbd4bb29312e0ac3c5e3, type: 3}
+    m_QuestBuildingPrefab: {fileID: 0}
+  - m_IDName: ghost
+    m_SimpleSprite: {fileID: 21300000, guid: a776ee50b8b5bdf4d88f9fcf42146b88, type: 3}
+    m_FullCookieSprite: {fileID: 21300000, guid: 97d1b91f5800d004ba6551366e76c442, type: 3}
+    m_QuestBuildingPrefab: {fileID: 0}
+  - m_IDName: cat
+    m_SimpleSprite: {fileID: 21300000, guid: 587f26b27e522a94f8dec9b155f62b59, type: 3}
+    m_FullCookieSprite: {fileID: 21300000, guid: ca1455fa765c1c344936307b141877e3, type: 3}
+    m_QuestBuildingPrefab: {fileID: 0}
+  - m_IDName: spiders
+    m_SimpleSprite: {fileID: 21300000, guid: c1c49da3c166fc64ab678b9e57e513bc, type: 3}
+    m_FullCookieSprite: {fileID: 21300000, guid: 51906f223a78c0b42884a43b376d5977, type: 3}
+    m_QuestBuildingPrefab: {fileID: 0}
+  - m_IDName: golem
+    m_SimpleSprite: {fileID: 21300000, guid: e42435c9b53337f41af6e06abb9783d2, type: 3}
+    m_FullCookieSprite: {fileID: 21300000, guid: 4c3de01733cab12479222c486f4c4796, type: 3}
+    m_QuestBuildingPrefab: {fileID: 0}
   m_Objects:
   - m_IDName: baseball_bat
     m_SimpleSprite: {fileID: 21300000, guid: b5b3a07137f48e649a5e9543177286da, type: 3}
