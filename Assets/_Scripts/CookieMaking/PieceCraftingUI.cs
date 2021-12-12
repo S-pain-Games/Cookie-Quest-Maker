@@ -74,12 +74,16 @@ public class PieceCraftingUI : MonoBehaviour
     [SerializeField] private Animator bake_animator;
     [SerializeField] private Animator bake_animator_2;
 
-    private Color colorWhite = new Color(0.6705883f, 0.5764706f, 0.5294118f);
+    //private Color colorWhite = new Color(0.6705883f, 0.5764706f, 0.5294118f);
+    private Color colorWhite = new Color(0.3679245f, 0.30805f, 0.2794144f);
     private Color colorRed = new Color(0.7924528f, 0.242969f, 0.3250078f);
+
+    private Event<ID> _soundCmd;
 
     private void Awake()
     {
         var admin = Admin.Global;
+        var evtSys = admin.EventSystem;
         _craftRecipe = admin.EventSystem.GetCommandByName<Event<ID>>("piece_crafting_sys", "craft_recipe");
 
         //Event<ID> evt = admin.EventSystem.GetCallback<Event<ID>>(new ID("piece_crafting_sys"), new ID("update_ingredients_ui"));
@@ -104,6 +108,8 @@ public class PieceCraftingUI : MonoBehaviour
         LoadRecipeLists();
         SelectPieceUi();
         AnimateSelectedPiece();
+
+        _soundCmd = evtSys.GetCommandByName<Event<ID>>("audio_sys", "play_sound");
     }
 
     [SerializeField] private FirstDayFurnaceSequence furnaceTutorial;
@@ -542,7 +548,7 @@ public class PieceCraftingUI : MonoBehaviour
         canCraft = true;
         bake_animator.SetBool("startBake", false);
         bake_animator_2.SetBool("startBake", false);
-
+        _soundCmd.Invoke(new ID("ding_furnace"));
         coroutineActive = false;
     }
 

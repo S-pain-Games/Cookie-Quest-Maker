@@ -15,6 +15,26 @@ MonoBehaviour:
   m_AudioClips:
   - m_IDName: bell_sound_1
     m_Clip: {fileID: 8300000, guid: 61d622f6576b8d6448c6df83d0e4eae1, type: 3}
+  - m_IDName: ding_furnace
+    m_Clip: {fileID: 8300000, guid: 0e90a74fa1d5d9e4aba13e451c1d9635, type: 3}
+  - m_IDName: shop_coin
+    m_Clip: {fileID: 8300000, guid: c22a01cf5d81b3c419fb674387e28ab9, type: 3}
+  - m_IDName: voice_canela
+    m_Clip: {fileID: 8300000, guid: f2200bd71f9cff946992f3e560fc5c32, type: 3}
+  - m_IDName: voice_evith
+    m_Clip: {fileID: 8300000, guid: 71a03ee6e9f8ca2468f17c697315d9ed, type: 3}
+  - m_IDName: voice_johnny
+    m_Clip: {fileID: 8300000, guid: a9390ece6d8cf0a4bba60f3350c030d3, type: 3}
+  - m_IDName: voice_mantecas
+    m_Clip: {fileID: 8300000, guid: 19e3e127ad967074395005c4b135dfde, type: 3}
+  - m_IDName: voice_mayor
+    m_Clip: {fileID: 8300000, guid: b57ea22e1a828844394e7c627de8672a, type: 3}
+  - m_IDName: voice_meri
+    m_Clip: {fileID: 8300000, guid: 8dcb512a6b8fd824e97cc433b324da75, type: 3}
+  - m_IDName: voice_miss
+    m_Clip: {fileID: 8300000, guid: 1fa1296c49056bd43bc1e820a3545f2c, type: 3}
+  - m_IDName: voice_nu
+    m_Clip: {fileID: 8300000, guid: 262ac8e515b27774c8bd28c384cd6178, type: 3}
   m_MusicClips:
   - m_IDName: main_menu_theme
     m_Clip: {fileID: 8300000, guid: 3d007a2938dd47248bc2f1ddb554a7dc, type: 3}
