@@ -23,6 +23,8 @@ namespace CQM.UI.QuestMakingTable
         [SerializeField] private GameObject _piecePrefab;
         private List<UIStorageElement> m_SelectablePiecesOfType = new List<UIStorageElement>();
 
+        private int piecesPerRow = 4;
+        private float rowOffset = 80f;
 
         private void OnEnable()
         {
@@ -84,7 +86,11 @@ namespace CQM.UI.QuestMakingTable
             Vector3 AddPieceToUI(Vector3 pos, QuestPieceFunctionalComponent questPiece)
             {
                 // Create and position corresponding elements in UI
-                pos += new Vector3(215, 0, 0);
+                if(m_SelectablePiecesOfType.Count > 0 && (m_SelectablePiecesOfType.Count) % piecesPerRow == 0)
+                    pos = new Vector3(215, -rowOffset, 0);
+                else
+                    pos += new Vector3(215, 0, 0);
+                
                 var UIstorageElem = Instantiate(_piecePrefab, pos, Quaternion.identity, transform).GetComponent<UIStorageElement>();
                 UIstorageElem.transform.localPosition = pos;
 
