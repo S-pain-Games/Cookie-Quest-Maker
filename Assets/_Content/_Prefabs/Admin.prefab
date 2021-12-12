@@ -114,7 +114,7 @@ MonoBehaviour:
     m_CurrentLineIndex: 0
     m_CharacterImage: {fileID: 0}
   m_TownComponent:
-    m_GlobalHappiness: 0
+    m_GlobalHappiness: 50
   m_InputComponent:
     m_Character:
     - {fileID: 0}
@@ -270,6 +270,12 @@ PrefabInstance:
       value: DataBuilders
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_CookieData.Array.data[7].m_CookieDescription
+      value: "Los citrielfos son el tercer postre colosal. Siempre tienen la raz\xF3n,
+        o eso creen ellos, y da igual que est\xE9n equivocados, no tienen problemas
+        en mirarte por encima del hombro desde lo alto de su copa."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[8].m_CookieDescription
       value: "Con esta galleta puedes acariciar fuertemente al objetivo hasta que
         por un resbal\xF3n tonto caiga al suelo. Si no quer\xEDa llegar a este nivel,
@@ -279,6 +285,12 @@ PrefabInstance:
       propertyPath: m_CookieData.Array.data[9].m_CookieDescription
       value: "Hablar las cosas a veces est\xE1 bien, eso dicen\u2026 Mira, primero
         se intenta convencer, luego ya se saca a Di\xE1logo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_RecipeData.Array.data[7].m_RecipeDescription
+      value: "Los citrielfos son el tercer postre colosal. Siempre tienen la raz\xF3n,
+        o eso creen ellos, y da igual que est\xE9n equivocados, no tienen problemas
+        en mirarte por encima del hombro desde lo alto de su copa."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[8].m_RecipeDescription
@@ -304,10 +316,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_CookieData.Array.data[22].m_CookieDescription
-      value: "Es el alcalde del pueblo, y no tiene ning\xFAn problema en dejarte
-        claro dos cosas, que es el ALCALDE, y que le gusta los dineros. Posee gran
-        parte de los cultivos de trigo del pueblo, all\xE1 donde te alcance la vista
-        es propiedad suya, y tiene un sospechoso gran parentesco a Hio\u2026"
+      value: "Es el alcalde del pueblo, y no tiene ning\xFAn problema en dejar claro
+        que \xE9l es quien manda y que le gusta el dinero. Posee gran parte de los
+        cultivos de trigo del pueblo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_CookieData.Array.data[23].m_CookieDescription
+      value: "En realidad se llama Meri, la lechera, pero Hio le llam\xF3 Meri, la
+        Leches una vez y as\xED se qued\xF3. Posee la \xFAnica granja de vacas del
+        pueblo, y se le da muy bien cuidarlas si no fuera porque ocasionalmente la
+        cosa se vaya de las manos."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_CookieData.Array.data[24].m_CookieDescription
+      value: "Empresaria, exitosa, chica de portada. Salt\xF3 a la fama despu\xE9s
+        de presentar la patente de su primer extracto super concentrado de canela,
+        a partir de ah\xED el \xE9xito vino solo. \xDAltimamente se dedica a coleccionar
+        artefactos antiguos."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_CookieData.Array.data[25].m_CookieDescription
+      value: "Er Johnny vive en su mundo psicod\xE9lico todo el d\xEDa, lo que le
+        lleva a ser el mejor creador de levaduras del archipi\xE9lago. Utiliza sus
+        p\xF3cimas para ayudar a la gente del pueblo, aunque suelen tener efectos
+        inesperados."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_CookieData.Array.data[26].m_CookieDescription
+      value: "Dulce y estilosa, la maravillosa cient\xEDfica de la chocolater\xEDa
+        Miss Chocolate est\xE1 lista para seducirte con su dulce sabor hasta hacerte
+        saltar por los aires con su chocolate explosivo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_CookieData.Array.data[28].m_CookieDescription
+      value: "Son una manada de lobos, \xBFun poco violenta? Bastante, no ha sido
+        una buena idea construir el pueblo donde antes viv\xEDa la manada."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RecipeData.Array.data[18].m_RecipeDescription
@@ -319,6 +362,12 @@ PrefabInstance:
       propertyPath: m_RecipeData.Array.data[19].m_RecipeDescription
       value: "Todo ataque se magnifica con esta galleta, pero no nos pasemos, los
         trajes para funerales est\xE1n caros en esta \xE9poca del a\xF1o."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_QuestPieceUIComponent.Array.data[7].m_Description
+      value: "Los citrielfos son el tercer postre colosal. Siempre tienen la raz\xF3n,
+        o eso creen ellos, y da igual que est\xE9n equivocados, no tienen problemas
+        en mirarte por encima del hombro desde lo alto de su copa."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[8].m_Description
@@ -344,10 +393,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_QuestPieceUIComponent.Array.data[22].m_Description
-      value: "Es el alcalde del pueblo, y no tiene ning\xFAn problema en dejarte
-        claro dos cosas, que es el ALCALDE, y que le gusta los dineros. Posee gran
-        parte de los cultivos de trigo del pueblo, all\xE1 donde te alcance la vista
-        es propiedad suya, y tiene un sospechoso gran parentesco a Hio\u2026"
+      value: "Es el alcalde del pueblo, y no tiene ning\xFAn problema en dejar claro
+        que \xE9l es quien manda y que le gusta el dinero. Posee gran parte de los
+        cultivos de trigo del pueblo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_QuestPieceUIComponent.Array.data[23].m_Description
+      value: "En realidad se llama Meri, la lechera, pero Hio le llam\xF3 Meri, la
+        Leches una vez y as\xED se qued\xF3. Posee la \xFAnica granja de vacas del
+        pueblo, y se le da muy bien cuidarlas si no fuera porque ocasionalmente la
+        cosa se vaya de las manos."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_QuestPieceUIComponent.Array.data[24].m_Description
+      value: "Empresaria, exitosa, chica de portada. Salt\xF3 a la fama despu\xE9s
+        de presentar la patente de su primer extracto super concentrado de canela,
+        a partir de ah\xED el \xE9xito vino solo. \xDAltimamente se dedica a coleccionar
+        artefactos antiguos."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_QuestPieceUIComponent.Array.data[25].m_Description
+      value: "Er Johnny vive en su mundo psicod\xE9lico todo el d\xEDa, lo que le
+        lleva a ser el mejor creador de levaduras del archipi\xE9lago. Utiliza sus
+        p\xF3cimas para ayudar a la gente del pueblo, aunque suelen tener efectos
+        inesperados."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_QuestPieceUIComponent.Array.data[26].m_Description
+      value: "Dulce y estilosa, la maravillosa cient\xEDfica de la chocolater\xEDa
+        Miss Chocolate est\xE1 lista para seducirte con su dulce sabor hasta hacerte
+        saltar por los aires con su chocolate explosivo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330534342466683453, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
+      propertyPath: m_QuestPieceUIComponent.Array.data[28].m_Description
+      value: "Son una manada de lobos, \xBFun poco violenta? Bastante, no ha sido
+        una buena idea construir el pueblo donde antes viv\xEDa la manada."
       objectReference: {fileID: 0}
     - target: {fileID: 6330534342466683455, guid: 57b62b575103a7e40a8ffe4a6ab3c079, type: 3}
       propertyPath: m_RootOrder

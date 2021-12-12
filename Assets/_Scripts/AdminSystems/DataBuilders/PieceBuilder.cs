@@ -178,9 +178,9 @@ namespace CQM.DataBuilders
                 AddFunctionalTag(Tag.Convince, 3);
                 AddFunctionalTag(Tag.Help, 2);
                 SetUIData("Citrielfo en Copa",
-                    "Los citrielfos son el tercer postre colosal. Siempre tienen la razón, o eso creen ellos, y da igual que estén equivocados, no tienen problemas en mirarte por encima del hombre desde lo alto de su copa. Tan pronto como la cara de su enemigo ponga expresión de haber chupado un limón sabrá que su hechizo ha hecho efecto.");
+                    "Los citrielfos son el tercer postre colosal. Siempre tienen la razón, o eso creen ellos, y da igual que estén equivocados, no tienen problemas en mirarte por encima del hombro desde lo alto de su copa.");
                 SetRecipeData("Receta de Citrielfo en Copa",
-                    "Los citrielfos son el tercer postre colosal. Siempre tienen la razón, o eso creen ellos, y da igual que estén equivocados, no tienen problemas en mirarte por encima del hombre desde lo alto de su copa. Tan pronto como la cara de su enemigo ponga expresión de haber chupado un limón sabrá que su hechizo ha hecho efecto.",
+                    "Los citrielfos son el tercer postre colosal. Siempre tienen la razón, o eso creen ellos, y da igual que estén equivocados, no tienen problemas en mirarte por encima del hombro desde lo alto de su copa.",
                     Karma.GoodKarma, 150, 350);
                 AddIngredientToRecipe("esencia_de_limon_purificadora", 2);
                 AddIngredientToRecipe("vainilla_de_la_iluminacion", 1);
@@ -314,27 +314,27 @@ namespace CQM.DataBuilders
                 CreateNew();
                 SetIDName("mayor");
                 SetPieceType(PieceType.Target);
-                SetUIData("Alcalde", "Es el alcalde del pueblo, y no tiene ningún problema en dejarte claro dos cosas, que es el ALCALDE, y que le gusta los dineros. Posee gran parte de los cultivos de trigo del pueblo, allá donde te alcance la vista es propiedad suya, y tiene un sospechoso gran parentesco a Hio…");
+                SetUIData("Alcalde", "Es el alcalde del pueblo, y no tiene ningún problema en dejar claro que él es quien manda y que le gusta el dinero. Posee gran parte de los cultivos de trigo del pueblo.");
 
                 CreateNew();
                 SetIDName("meri");
                 SetPieceType(PieceType.Target);
-                SetUIData("Meri", "En realidad se llama Meri, la lechera, pero Hio le llamó Meri, la Leches una vez y así se quedó. Posee la única granja de vacas del pueblo, y se le da muy bien cuidarlas, pero en ocasiones… pasan cosas y no puede controlarlas, y cuando eso pasa… la cosa se le va de las manos.");
+                SetUIData("Meri", "En realidad se llama Meri, la lechera, pero Hio le llamó Meri, la Leches una vez y así se quedó. Posee la única granja de vacas del pueblo, y se le da muy bien cuidarlas si no fuera porque ocasionalmente la cosa se vaya de las manos.");
 
                 CreateNew();
                 SetIDName("canela");
                 SetPieceType(PieceType.Target);
-                SetUIData("Canela", "Empresaria, exitosa, chica de portada, todo lo que Canela N Rama quiera lo tiene. Saltó a la fama después de presentar la patente de su primer extracto super concentrado de canela, a partir de ahí el éxito vino solo.");
+                SetUIData("Canela", "Empresaria, exitosa, chica de portada. Saltó a la fama después de presentar la patente de su primer extracto super concentrado de canela, a partir de ahí el éxito vino solo. Últimamente se dedica a coleccionar artefactos antiguos.");
 
                 CreateNew();
                 SetIDName("johny_setas");
                 SetPieceType(PieceType.Target);
-                SetUIData("Er Johny el setas", "Er Johnny vive en su mundo psicodélico todo el día, lo que le lleva a ser el mejor creador de levaduras del archipiélago. Si hay alguien capaz de desvelar el secreto sobre la magia de Hio es Johnny, cuanto más se mete en su mundo, más puede interactuar con la magia del pastelero… aunque crea que son deidades galleta.");
+                SetUIData("Er Johny el setas", "Er Johnny vive en su mundo psicodélico todo el día, lo que le lleva a ser el mejor creador de levaduras del archipiélago. Utiliza sus pócimas para ayudar a la gente del pueblo, aunque suelen tener efectos inesperados.");
 
                 CreateNew();
                 SetIDName("miss_chocolate");
                 SetPieceType(PieceType.Target);
-                SetUIData("Miss Chocolate", "Dulce y estilosa, esta drag queen está lista para seducirte con su dulce sabor hasta hacerte saltar por los aires con su chocolate explosivo. Es una científica chocolatera imponente, pero cari, no te atrevas a ponerte en su camino, porque cielo, esta reina está lista para servir su lado más amargo.");
+                SetUIData("Miss Chocolate", "Dulce y estilosa, la maravillosa científica de la chocolatería Miss Chocolate está lista para seducirte con su dulce sabor hasta hacerte saltar por los aires con su chocolate explosivo.");
 
                 CreateNew();
                 SetIDName("mantecas");
@@ -345,7 +345,7 @@ namespace CQM.DataBuilders
                 SetIDName("wolves");
                 SetPieceType(PieceType.Target);
                 AddFunctionalTag(Tag.Harm, 1);
-                SetUIData("Lobos", "Son una manada de lobos, ¿un poco violenta? Pues sí chica, pero no haber construido el pueblo donde antes vivía la manada.");
+                SetUIData("Lobos", "Son una manada de lobos, ¿un poco violenta? Bastante, no ha sido una buena idea construir el pueblo donde antes vivía la manada.");
 
                 CreateNew();
                 SetIDName("rats");
