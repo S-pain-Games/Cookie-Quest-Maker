@@ -50,6 +50,12 @@ namespace CQM.Systems
                 globalBaseHapiness += lc.m_Happiness;
             }
             _townComponent.m_GlobalHappiness = globalBaseHapiness * 50 / 100;
+
+            //Make sure we get global hapiness values from 0 to 100
+            if (_townComponent.m_GlobalHappiness > 100)
+                _townComponent.m_GlobalHappiness = 100;
+            else if (_townComponent.m_GlobalHappiness < 0)
+                _townComponent.m_GlobalHappiness = 0;
         }
 
         private void CalculateLocationHappiness(LocationComponent location)
