@@ -58,12 +58,9 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5e35d512ac9364f40b9e2ba6fe9980b1, type: 3}
   - {fileID: 21300000, guid: f837aaa230588b74bb206ecd32961602, type: 3}
   - {fileID: 21300000, guid: 70822fa22a217fa488e03ce391fe0c22, type: 3}
-  - {fileID: 21300000, guid: ae160db2272fd4c4a92b3c935fa047c1, type: 3}
   - {fileID: 21300000, guid: d939d6c2b15b03e4394f1b6b5a21f3f1, type: 3}
-  - {fileID: 21300000, guid: 1d681e336e6d3e84ba01841bfa51ec03, type: 3}
   - {fileID: 21300000, guid: 59334ae335189f945a1c56d11d062ed0, type: 3}
   - {fileID: 21300000, guid: aa803b24573e9ed40bb9e977d2e0551b, type: 3}
-  - {fileID: 21300000, guid: af8e59544ada93446bd4dfe1f8cf6227, type: 3}
   - {fileID: 21300000, guid: 6bed9b84298ec7c4fa2e018bec952085, type: 3}
   - {fileID: 21300000, guid: b88c1aa4e4e0aa248a696a38fc52a1b9, type: 3}
   - {fileID: 21300000, guid: 7f934de4e39faa740bffdb7fd57ce33a, type: 3}
@@ -77,18 +74,21 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 0a3e00582e8561c4ebb3b71492730755, type: 3}
   - {fileID: 21300000, guid: 0b01fc78af86a0a4fb521de9914dcb07, type: 3}
   - {fileID: 21300000, guid: 955648f86f7437c4d83f982a26431630, type: 3}
+  - {fileID: 21300000, guid: e1f08509cb6928249b96605cd02933d4, type: 3}
   - {fileID: 21300000, guid: 59e16419a5901d745b465b8fc2eba137, type: 3}
   - {fileID: 21300000, guid: e31dab593ac501746b88e9c9fb955cc7, type: 3}
   - {fileID: 21300000, guid: 10038789df0db1d4d8e5129e38c9b215, type: 3}
-  - {fileID: 21300000, guid: f527bef99db267e47b35cb96dccf8d2e, type: 3}
-  - {fileID: 21300000, guid: 252f477affc745244af351330cbd68d1, type: 3}
+  - {fileID: 21300000, guid: 004db69a1327ec54b9584a8831cadae0, type: 3}
+  - {fileID: 21300000, guid: 2de38ddad61b1834794c2527a0aae405, type: 3}
   - {fileID: 21300000, guid: 81cd882bbc7983b4dbe74b082b9932b8, type: 3}
+  - {fileID: 21300000, guid: 5adc679bbce478846addb3b24e08ca88, type: 3}
   - {fileID: 21300000, guid: 27c2caeb9d3e26143b04bde88adbd48d, type: 3}
-  - {fileID: 21300000, guid: 9eeb118cf7bb075498dd784df9400f61, type: 3}
+  - {fileID: 21300000, guid: 4f24bb7ca61dfdc4ba50b659f9d9362b, type: 3}
   - {fileID: 21300000, guid: d25200bc21557694eac611573c437ced, type: 3}
-  - {fileID: 21300000, guid: 08a438bcbd30b6b42afb54800d45470f, type: 3}
   - {fileID: 21300000, guid: 2d08681d6b8938a4fbf38d89b575cb74, type: 3}
   - {fileID: 21300000, guid: 6d0bff9d17cf3b046bbb0db27500f081, type: 3}
+  - {fileID: 21300000, guid: 45c2b7ad01d94d84591d1435ed73ebef, type: 3}
+  - {fileID: 21300000, guid: 7d57e34e90f8c6f4f935e90fd1c731be, type: 3}
   - {fileID: 21300000, guid: f680bc7e40d2ef442af1dfe3f23f7214, type: 3}
   - {fileID: 21300000, guid: 6f5f7f2fb0ff53544ade6dca2233f3f3, type: 3}
   - {fileID: 21300000, guid: a7808b6ff2203854ca86ea9455cc7c9d, type: 3}
@@ -103,12 +103,9 @@ SpriteAtlas:
   - MissionCookie_17
   - MissionCookie_18
   - Settings_slider
-  - MissionCookieS_11
   - MissionCookie_14
-  - MissionCookieS_8
   - MissionCategory_Main
   - MissionCookie_6
-  - MissionCookieS_12
   - Settings_button
   - MissionCookieS_4
   - MissionCookieS_5
@@ -122,18 +119,21 @@ SpriteAtlas:
   - MissionCookieS_7
   - MissionCookie_5
   - MissionCookie_1
+  - MissionCookieS_11
   - MissionCookie_8
   - Language_button_ES
   - MissionCookie_15
-  - MissionCookieS_14
-  - MissionCookieS_9
-  - MissionCookieS_2
-  - Settings_background_ES
-  - MissionCookieS_13
-  - MissionCookieS_1
+  - MissionCookieS_8
   - MissionCookieS_10
+  - MissionCookieS_2
+  - MissionCookieS_9
+  - Settings_background_ES
+  - MissionCookieS_14
+  - MissionCookieS_1
   - Settings_slider_button_effects
   - MissionCategory_Secondary
+  - MissionCookieS_12
+  - MissionCookieS_13
   - MissionCookie_11
   - MissionCookie_2
   - MissionCookie_4
