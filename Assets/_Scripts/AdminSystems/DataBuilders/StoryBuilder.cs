@@ -2449,6 +2449,422 @@ namespace CQM.DataBuilders
                     AddStorySelectionUIData("Hay Que Salvar El Trigo");
                     FinishCreatingStory();
                 }
+
+                HuelgaTrabajadores();
+                void HuelgaTrabajadores()
+                {
+                    StartCreatingStory("workers_strike", "Trabajadores en Huelga", null,
+                        "Hay un grupo de trabajadores en huelga, hay que encontrar la manera de resolverlo.", new List<string>() {
+                            "Hay un grupo de trabajadores en huelga que se están manifestando en la plaza y solicitan al ayuntamiento mejores condiciones.",
+                            "¡Si no se soluciona el problema rápido, la cosecha se retrasará y se echará a perder!"
+                            });
+
+                    //HARM >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "Parece que alguien se ha enfrentado al alcalde por la noche y ha accedido a lo que solicitaban los trabajadores.",
+                            "Ahora podrán volver al trabajo con más energia y la cosecha no se retrasará."
+                            }, Tag.Harm, 1, "mayor");
+                    //HELP >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "Los trabajadores han abandonado la manifestación refunfuñando y han vuelto a los campos de trabajo malhumorados.",
+                            "Parece que en el ayuntamiento han tenido ayuda para echarlos de la plaza."
+                            }, Tag.Help, 1, "mayor");
+                    //CONVINCE >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "Hoy por la mañana el ayuntamiento ha hablado con los trabajadores y ha accedido a lo que solicitaban.",
+                            "Ahora podrán volver al trabajo con más energia y la cosecha no se retrasará."
+                            }, Tag.Convince, 1, "mayor");
+                    AddStorySelectionUIData("Trabajadores en Huelga");
+                    FinishCreatingStory();
+                }
+
+                GolemBolas();
+                void GolemBolas()
+                {
+                    StartCreatingStory("golem_attack", "El Incordio del Golem", null,
+                        "Un golem está atormentando a los vecinos del pueblo, ¡hay que hacer algo!", new List<string>() {
+                            "Ha aparecido un golem en la ciudad y está tirando bolas de barro a todo el mundo que pasa por delante.",
+                            "No hace mucho daño pero empieza a ser molesto, así que ten cuidado si pasas por delante."
+                            });
+
+                    //HARM >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "¡Hoy por la mañana el golem estaba más enfadado y ahora también lanza piedras!",
+                            "No se que habrá podido pasar para enfadarlo tanto."
+                            }, Tag.Harm, 1, "golem");
+                    //HARM >=3
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "He pasado por donde estaba el golem y no te lo vas a creer, ¡ya no estaba!",
+                            "Ahora se puede andar por el pueblo sin preocupaciones, aunque me pregunto donde habrá ido."
+                            }, Tag.Harm, 3, "golem");
+                    //HELP >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "He pasado por donde estaba el golem y no te lo vas a creer, ¡ya no estaba!",
+                            "Pero nos han llegado noticias del pueblo de al lado de que ha aparecido un golem, asi que ya sabemos donde ha ido."
+                            }, Tag.Help, 1, "golem");
+                    //CONVINCE >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "He pasado por donde estaba el golem y no te lo vas a creer, ¡no me ha atacado!",
+                            "Solo estaba ahí sentado admirando el pueblo, espero que no vuelva a atacar."
+                            }, Tag.Convince, 1, "golem");
+                    AddStorySelectionUIData("El Incordio del Golem");
+                    FinishCreatingStory();
+                }
+
+                HarrahHarrah();
+                void HarrahHarrah()
+                {
+                    StartCreatingStory("harrah_spiders", "Arañas Gigantes en el Pueblo", null,
+                        "Hay arañas gigantes en el pueblo y están asustando a los ciudadanos.", new List<string>() {
+                            "Anoche estaba dando un paseo alrededor del pueblo y se me acercaron unas arañas gigantes que ",
+                            "hacian un ruido muy raro, 'harrah harrah'. Salí corriendo en dirección contraria, pasé mucho miedo."
+                            });
+
+                    //HARM >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "Han aparecido arañas muertas por todo el pueblo, algo o alguien se ha encargado de ellas.",
+                            "Ahora tendremos que limpiarlas, pero al menos no nos asustarán más."
+                            }, Tag.Harm, 1, "spiders");
+                    //HELP >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "¡Las arañas están atacando a los animales! Muerden a todo lo que ven al grito de 'harrah harrah'.",
+                            "Deberias tener mucho cuidado si sales, no quiero imaginarme que pasará si nos muerden a alguno."
+                            }, Tag.Help, 1, "spiders");
+                    //CONVINCE >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "Anoche volví a ver a las arañas, se estaban yendo, pero, ¡gritaban que volverán con refuerzos!",
+                            "Por ahora nos hemos librado de ellas, pero tengo miedo de que vuelvan.."
+                            }, Tag.Convince, 1, "spiders");
+                    AddStorySelectionUIData("Arañas Gigantes en el Pueblo");
+                    FinishCreatingStory();
+                }
+
+                GatoArbol();
+                void GatoArbol()
+                {
+                    StartCreatingStory("cat_tree", "Gato en el Árbol", null,
+                        "Hay un gato atrapado en un árbol, ¡hay que ayudarlo!", new List<string>() {
+                            "Un gato se asustó de unas arañas y se subió a un arbol, y ahora está atrapado y no puede bajar.",
+                            "Parece que le da miedo saltar. ¡Alguien tiene que ayudarlo!"
+                            });
+
+                    //HARM >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "Alguien tiró una piedra al gato y este se asustó y ha subido más el árbol. ¡Ahora es más complicado que baje!"
+                            }, Tag.Harm, 1, "cat");
+                    //HELP >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "Alguien ayudó al gato a bajar y ahora está sano y salvo con su dueño. ¡Me alegro mucho por los dos!"
+                            }, Tag.Help, 1, "cat");
+                    //CONVINCE >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "Alguien convenció al gato para que saltara, ¡y lo hizo!",
+                            "Me asusté cuando saltó pero cayó sano y salvo y ya está con su dueño."
+                            }, Tag.Convince, 1, "cat");
+                    AddStorySelectionUIData("Gato en el Árbol");
+                    FinishCreatingStory();
+                }
+
+                FantasmaLago();
+                void FantasmaLago()
+                {
+                    StartCreatingStory("lake_ghost", "El Fantasma del Lago", null,
+                        "Se ha visto un ser en el lago. ¿Será un fantasma?", new List<string>() {
+                            "No se si me vas a creer, pero, ¡anoche vi un fantasma en el lago!",
+                            "Era borroso y translucido, pero sé lo que vi. ¿Estará relacionado con los rumores?"
+                            });
+
+                    //HARM >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "Anoche vi el fantasma en la entrada del pueblo, no se que habrá pasado, pero nunca se habia acercado tanto."
+                            }, Tag.Harm, 1, "ghost");
+                    //HELP >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "Estuve caminando por la zona del lago y se siente diferente, ya no me dan escalofríos cada vez que me acerco.",
+                            "¿Que habrá cambiado?"
+                            }, Tag.Help, 1, "ghost");
+                    //CONVINCE >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "Estuve caminando por la zona del lago y vi una sombra alejarse, ¿sería el fantasma alejandose del lago?"
+                            }, Tag.Convince, 1, "ghost");
+                    AddStorySelectionUIData("El Fantasma del Lago");
+                    FinishCreatingStory();
+                }
+
+                FantasmaLago2();
+                void FantasmaLago2()
+                {
+                    StartCreatingStory("lake_ghost_2", "El Misterio del Lago", null,
+                        "Hay rumores sobre algo que pasó en el lago. ¿Que pasaría?", new List<string>() {
+                            "¿Has ido por la zona del lago? Si te fijas está muy descuidada. Como eres nuevo en el pueblo es probable ",
+                            "que todavia no lo sepas, pero está tan descuidada porque poca gente se atreve a acercarse, ",
+                            "ya que según se cuenta en el lago murió ahogado el antiguo alcalde, pero solo son rumores.",
+                            "Se dice que las personas más influyentes de la ciudad saben qué pasó de verdad."
+                            });
+
+                    //HARM >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "Ayer por la noche oí gritos y alborotos en el ayuntamiento. Quien estuviera dentro parecía muy asustado.",
+                            "¿Que pasaría? ¿Habrá fantasmas en el ayuntamiento?"
+                            }, Tag.Harm, 1, "mayor");
+                    //HELP >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "Anoche vi a alguien andar con mucha preocupación al lago. ¿Porqué querría alguien acercarse a ese lugar?"
+                            }, Tag.Help, 1, "mayor");
+                    //CONVINCE >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "¿Has visto el tablón de anuncios? Ha aparecido una nota pidiendo perdón. ¿A que se referirá?"
+                            }, Tag.Convince, 1, "mayor");
+                    AddStorySelectionUIData("El Misterio del Lago");
+                    FinishCreatingStory();
+                }
+
+                MonstruoMontana();
+                void MonstruoMontana()
+                {
+                    StartCreatingStory("monster_mountain", "El Monstruo de la Montaña", null,
+                        "Parece que hay un monstruo en la montaña que está sembrando el terror.", new List<string>() {
+                            "¡HAY UN MONSTRUO EN LA MONTAÑA! ¡HAY UN MONSTRUO EN LA MONTAÑA! ¡HAY UN MONSTRUO EN LA MONTAÑA!",
+                            "¡ALGUIEN TIENE QUE HACER ALGO!"
+                            });
+
+                    //HARM >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "¿Te has enterado? Ha habido un alud en la montaña, espero que todo el mundo esté bien."
+                            }, Tag.Harm, 1, "monster");
+                    //HELP >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "Ha desaparecido comida del almacén, pero ya no está el monstruo de la montaña, ¿habrá sido él?"
+                            }, Tag.Help, 1, "monster");
+                    //CONVINCE >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "No he visto al monstruo de la montaña, ¿se habrá ido?"
+                            }, Tag.Convince, 1, "monster");
+                    AddStorySelectionUIData("El Monstruo de la Montaña");
+                    FinishCreatingStory();
+                }
+
+                DragonMontana();
+                void DragonMontana()
+                {
+                    StartCreatingStory("dragon_mountain", "Un Dragón en la Cima", null,
+                        "Se cree que hay un dragón en la cima de la montaña, ¿será verdad?", new List<string>() {
+                            "¿Sabías que se cree que hay un dragón en lo alto de la montaña? Eso cuentan las historias, ",
+                            "pero nadie ha subido tan alto para comprobarlo."
+                            });
+
+                    //HARM >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "¡UN DRAGÓN! ¡UN DRAGÓN! ¿Por qué hay un dragón sobrevolando el pueblo?"
+                            }, Tag.Harm, 1, "dragon");
+                    //HELP >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "Ayer por la noche decidí investigar lo del dragón y vi a unos seres diminutos curando al dragón.",
+                            "Parece que su existencia era real pero no lo habíamos visto porque estaba herido. Cuando terminaron de curarle, el dragón se fue volando.",
+                            "No sé que serían esos seres diminutos, pero después de ver a un dragón, me creo cualquier cosa."
+                            }, Tag.Help, 1, "dragon");
+                    //CONVINCE >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                            "¡UN DRAGÓN! ¡UN DRAGÓN! ¿Por qué hay un dragon sobrevolando el pueblo? ¡Y los árboles de la montaña están en llamas!"
+                            }, Tag.Convince, 1, "dragon");
+                    AddStorySelectionUIData("Un Dragón en la Cima");
+                    FinishCreatingStory();
+                }
+
+                SenorMisterioso();
+                void SenorMisterioso()
+                {
+                    StartCreatingStory("mysterious_man", "El Hombre Extraño de la Plaza", null,
+                       "Un señor con gabardina aparece todas las tardes en la plaza. Da muy mala espina...", new List<string>() {
+                            "Mira que nuestro pueblo no suele recibir visitas... pero últimamente aparece todas las tardes un señor con gabardina ",
+                            "con aire bastante sospechoso. No sabemos qué hace: simplemente se queda en la plaza, mirando fijamente a los transeúntes.",
+                            "Algunos dicen que vende cosas extrañas... otros que es un demonio que nos vigila, ¡Qué locura!",
+                            "Sea como fuere, no me da para nada buena espina, espero que se vaya pronto."
+                           });
+
+                    //HARM >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                        "Esta mañana, al pasar por la plaza, he visto huellas de barro donde se solía colocar ese señor tan misterioso.",
+                        "Es como si hubiera huido despavorido por algo.",
+                        "Lo más raro es que se le ha caído una foto, y en ella aparecían un señor mayor y un niño pequeño.",
+                        "Pobre... ¿Estaría buscando a alguien?"
+                        }, Tag.Harm, 1, "weirdMan");
+                    //HELP >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                       "¿Te acuerdas del señor misterioso? pues resulta que es nieto del viejo Tiburcio, que en paz descanse.",
+                       "Esta mañana lo han visto dirigiéndose al pequeño cementerio que está en el bosque, con unas flores.",
+                       "Aunque sea de esta forma, me alegro de que se pueda reencontrar la familia."
+                        }, Tag.Help, 1, "weirdMan");
+                    //CONVINCE >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                        "Hace un tiempo que no se ve al señor misterioso por ningún lado. Nadie del pueblo me ha dicho si hablaron con él o no.",
+                        "De la noche a la mañana desapareció, sin dejar rastro... Me pregunto qué demonios estaría haciendo aquí."
+                        }, Tag.Convince, 1, "weirdMan");
+                    AddStorySelectionUIData("El Hombre Extraño de la Plaza");
+                    FinishCreatingStory();
+                }
+                LadronFiero();
+                void LadronFiero()
+                {
+                    StartCreatingStory("thievery", "El Ladrón Fiero", null,
+                       "Un ladrón se está metiendo en las casas del pueblo a robar. ¡hay que hacer algo!", new List<string>() {
+                            "Ultimamente la gente del pueblo está reportando robos de objetos preciados en sus casas...",
+                            "¿Es que no tenemos ya suficiente con el día a día? Parece un ladrón bastante violento, pero por fortuna ningún vecino ",
+                            "ha resultado herido. Ojalá alguien pudiera darle su merecido... sea el que sea."
+                           });
+
+                    //HARM >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                        "¡Parece que por fin alguien se ha armado del suficiente valor para enfrentarse a ese dichoso ladrón!",
+                        "¡Y lo mejor de todo es que lo ha conseguido! No se sabe quién es, pero para todos los habitantes, es un héroe sin capa."
+                        }, Tag.Harm, 1, "thief");
+                    //HELP >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                        "Por fin se fue ese maldito ladrón, pero ha conseguido entrar en más casas.",
+                        "No solo eso, sino que ha robado también muchas pertenencias pequeñas, por alguna razón que no entendemos.",
+                        "Menos mal que no son tan valiosas, pero es un golpe duro para el pueblo."
+                        }, Tag.Help, 1, "thief");
+                    //CONVINCE >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                        "Sigo sin creérmelo...",
+                        "¿Quién en su sano juicio hablaría con ese ladrón para convencerlo de que devuelva las pertenencias?",
+                        "Lo peor de todo es que ha funcionado. No me quejo, pero es, sin duda, impresionante."
+                        }, Tag.Convince, 1, "thief");
+                    AddStorySelectionUIData("El Ladrón Fiero");
+                    FinishCreatingStory();
+                }
+
+                SenorMisterioso2();
+                void SenorMisterioso2()
+                {
+                    StartCreatingStory("mysterious_man_2", "El Hombre Extraño del Lago", null,
+                       "Una persona misteriosa merodea por el lago...", new List<string>() {
+                            "¿Has visto la persona misteriosa que merodea por el lago? ¿Quién será?",
+                            "¿Qué estará buscando? Me da mala espina, espero que se vaya pronto."
+                           });
+
+                    //HARM >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                        "Ayer andaba tranquilamente por las afueras del pueblo y oí alboroto en el lago, asi que me asomé y creo que me vieron, ",
+                        "asi que salí corriendo hacia el centro del pueblo. Según huia escuché como si alguien se cayera al lago.",
+                        "¿Qué habrá pasado? Ultimamente pasan cosas muy raras en el pueblo..."
+                        }, Tag.Harm, 1, "weirdMan");
+                    //HELP >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                       "¿Has visto al hombre misterioso? Al parecer era un periodista investigando los rumores del lago.",
+                       "Por eso ha estado merodeando por la zona. Parece que ya ha recabado suficiente información para su historia, ",
+                       "esta tarde se va del pueblo. Espero que hable bien de su gente."
+                        }, Tag.Help, 1, "weirdMan");
+                    //CONVINCE >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                        "¿Te has enterado? El hombre misterioso que merodeaba por el lago ya se ha ido.",
+                        "Espero que no vuelva, ese hombre me daba escalofrios."
+                        }, Tag.Convince, 1, "weirdMan");
+                    AddStorySelectionUIData("El Hombre Extraño del Lago");
+                    FinishCreatingStory();
+                }
+
+                FestivalPrimavera();
+                void FestivalPrimavera()
+                {
+                    StartCreatingStory("spring_festival", "El Festival de Primavera", null,
+                       "El festival de primavera es mañana y los preparativos no estarán listos a tiempo.", new List<string>() {
+                            "Mañana es el festival de primavera y con los recientes problemas del pueblo no hemos podido recoger suficientes flores.",
+                            "¡El festival será un fracaso! ¡Seremos el hazmerreír de la comarca!"
+                           });
+
+                    //HARM >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_negative");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                        "No se como ha podido suceder, pero hoy por la mañana todas las flores estaban destrozadas, ¡no podremos celebrar el festival!",
+                        "Los habitantes del pueblo están devastados."
+                        }, Tag.Harm, 1, "canela");
+                    //HELP >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                       "No se como ha sucedido pero hoy estaban todas las flores para el festival, ¡es el mejor festival que recuerdo!"
+                        }, Tag.Help, 1, "canela");
+                    //CONVINCE >=1
+                    StartStoryBranch();
+                    SetRepercusionToBranch("default_positive");
+                    AddBranchCompletion_NPCDialogue(new List<string>(){
+                        "Al final no se han completado todos los preparativos del festival, pero con lo que tenemos podremos celebrar el festival aunque sea pequeño.",
+                        "No será el mejor festival de la comarca, pero después de todos los problemas del pueblo se agradece un dia de celebración."
+                        }, Tag.Convince, 1, "canela");
+                    AddStorySelectionUIData("El Festival de Primavera");
+                    FinishCreatingStory();
+                }
+
             }
         }
 

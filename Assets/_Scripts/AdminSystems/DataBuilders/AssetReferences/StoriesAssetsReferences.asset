@@ -63,3 +63,27 @@ MonoBehaviour:
     m_Sprite: {fileID: 21300000, guid: 7f934de4e39faa740bffdb7fd57ce33a, type: 3}
   - m_IDName: saving_the_wheat
     m_Sprite: {fileID: 21300000, guid: b88c1aa4e4e0aa248a696a38fc52a1b9, type: 3}
+  - m_IDName: workers_strike
+    m_Sprite: {fileID: 21300000, guid: d939d6c2b15b03e4394f1b6b5a21f3f1, type: 3}
+  - m_IDName: golem_attack
+    m_Sprite: {fileID: 21300000, guid: 0a3e00582e8561c4ebb3b71492730755, type: 3}
+  - m_IDName: harrah_spiders
+    m_Sprite: {fileID: 21300000, guid: 0a3e00582e8561c4ebb3b71492730755, type: 3}
+  - m_IDName: cat_tree
+    m_Sprite: {fileID: 21300000, guid: 0a3e00582e8561c4ebb3b71492730755, type: 3}
+  - m_IDName: lake_ghost
+    m_Sprite: {fileID: 21300000, guid: 0a3e00582e8561c4ebb3b71492730755, type: 3}
+  - m_IDName: lake_ghost_2
+    m_Sprite: {fileID: 21300000, guid: 0a3e00582e8561c4ebb3b71492730755, type: 3}
+  - m_IDName: monster_mountain
+    m_Sprite: {fileID: 21300000, guid: 0a3e00582e8561c4ebb3b71492730755, type: 3}
+  - m_IDName: dragon_mountain
+    m_Sprite: {fileID: 21300000, guid: 0a3e00582e8561c4ebb3b71492730755, type: 3}
+  - m_IDName: mysterious_man
+    m_Sprite: {fileID: 21300000, guid: 0a3e00582e8561c4ebb3b71492730755, type: 3}
+  - m_IDName: thievery
+    m_Sprite: {fileID: 21300000, guid: 0a3e00582e8561c4ebb3b71492730755, type: 3}
+  - m_IDName: mysterious_man_2
+    m_Sprite: {fileID: 21300000, guid: 0a3e00582e8561c4ebb3b71492730755, type: 3}
+  - m_IDName: spring_festival
+    m_Sprite: {fileID: 21300000, guid: 0a3e00582e8561c4ebb3b71492730755, type: 3}

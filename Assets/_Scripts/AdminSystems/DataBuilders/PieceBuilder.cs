@@ -344,7 +344,6 @@ namespace CQM.DataBuilders
                 CreateNew();
                 SetIDName("wolves");
                 SetPieceType(PieceType.Target);
-                AddFunctionalTag(Tag.Harm, 1);
                 SetUIData("Lobos", "Son una manada de lobos, ¿un poco violenta? Bastante, no ha sido una buena idea construir el pueblo donde antes vivía la manada.");
 
                 CreateNew();
@@ -356,6 +355,46 @@ namespace CQM.DataBuilders
                 SetIDName("vacas");
                 SetPieceType(PieceType.Target);
                 SetUIData("Vacas", "Las vacas de Meri, la Leches, son unos animales tiernos que no paran de hacer leche, aunque a veces tienen rachas y necesitan un poco de ayuda para seguir con sus labores.");
+
+                CreateNew();
+                SetIDName("weirdMan");
+                SetPieceType(PieceType.Target);
+                SetUIData("Hombre Misterioso", "Un extraño hombre que se coloca en la plaza a vigilar a todas las personas que pasen. No tendríamos que desconfiar en él en una primera instancia, pero parece tan sospechoso… ¡Parece que va a atracar a un vecino en cualquier momento!");
+
+                CreateNew();
+                SetIDName("thief");
+                SetPieceType(PieceType.Target);
+                SetUIData("Ladrón", "Un ladrón de mala muerte que pasea por los alrededores del pueblo por la noche, esperando para realizar su próximo ataque. No parece muy listo, pero su cara de malas pulgas intimida hasta el más valiente de los aldeanos.");
+
+                CreateNew();
+                SetIDName("dragon");
+                SetPieceType(PieceType.Target);
+                SetUIData("Dragón", "¡Quién diría que, en un lugar tan recóndito del planeta, como es el archipiélago de Akalia, se pudiera encontrar un ser fantástico tan impresionante y letal como es un dragón! ¿Será tan fiero como lo describen las leyendas?");
+
+                CreateNew();
+                SetIDName("monster");
+                SetPieceType(PieceType.Target);
+                SetUIData("Monstruo de las Nieves", "Una criatura que vive en las montañas al norte del pueblo. Siempre ha salido en la prensa local lo que parecían avistamientos de este monstruo, pero nunca se ha visto de forma tan clara hasta el día de hoy.");
+
+                CreateNew();
+                SetIDName("ghost");
+                SetPieceType(PieceType.Target);
+                SetUIData("Fantasma", "Un ser espectral que merodea por las noches en el algo al sur del pueblo. Siempre se ha dicho que los fantasmas son las almas de aquellas personas que no han encontrado el descanso eterno en la muerte. ¿Qué habrá pasado para que siga aquí?");
+
+                CreateNew();
+                SetIDName("cat");
+                SetPieceType(PieceType.Target);
+                SetUIData("Gato", "Estos seres felinos son especialistas en meterse en problemas cuando menos los esperas… ¡O darte problemas a ti! Aun así… ¿quién no los querría? ¡son muy monos!");
+
+                CreateNew();
+                SetIDName("spiders");
+                SetPieceType(PieceType.Target);
+                SetUIData("Arañas", "Estas arañas no son para nada como las que conocemos: ni siquiera parecen de este mundo. Aparecen en grandes enjambres y parecen inteligentes, pero siempre gritan “harrah harrah”. ¿Qué demonios significará harrah harrah?");
+
+                CreateNew();
+                SetIDName("golem");
+                SetPieceType(PieceType.Target);
+                SetUIData("Golem", "Un ser hecho de rocas que, en un principio, no responde a ninguna clase de raciocinio: solo sabe que le gusta tirar piedras a la gente y que se divierte por ello. Pero si se divierte, es posible que se le pueda hablar.");
             }
         }
 

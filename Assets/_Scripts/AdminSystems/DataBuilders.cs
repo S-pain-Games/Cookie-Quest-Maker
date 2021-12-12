@@ -83,6 +83,18 @@ namespace CQM.DataBuilders
             AddSecondaryStory("forgotten_bell");
             AddSecondaryStory("the_beast");
             AddSecondaryStory("saving_the_wheat");
+            AddSecondaryStory("workers_strike");
+            AddSecondaryStory("golem_attack");
+            AddSecondaryStory("harrah_spiders");
+            AddSecondaryStory("cat_tree");
+            AddSecondaryStory("lake_ghost");
+            AddSecondaryStory("lake_ghost_2");
+            AddSecondaryStory("monster_mountain");
+            AddSecondaryStory("dragon_mountain");
+            AddSecondaryStory("mysterious_man");
+            AddSecondaryStory("thievery");
+            AddSecondaryStory("mysterious_man_2");
+            AddSecondaryStory("spring_festival");
 
             void AddSecondaryStory(string storyIDName)
             {
