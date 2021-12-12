@@ -60,7 +60,7 @@ public class Shop_UI : MonoBehaviour
     [SerializeField] private Image button_Recipe;
     [SerializeField] private Image button_Ingredient;
 
-    private Color colorWhite = new Color(0.5254902f, 0.3098039f, 0.1607f);
+    private Color colorWhite = new Color(0.6509804f, 0.1803922f, 0.2392157f);
     private Color colorRed = new Color(0.6320754f, 0.06857423f, 0.1578471f);
 
 
