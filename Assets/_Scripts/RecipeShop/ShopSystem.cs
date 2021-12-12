@@ -19,6 +19,7 @@ public class ShopSystem : ISystemEvents
     private Event<InventorySys_ChangeReputationEvtArgs> _changeRepCmd;
     private Event<ID> _unlockRecipeCmd;
     private Event<ItemData> _addIngredient;
+    private Event<ID> _soundCmd;
 
 
     public void RegisterEvents(out ID sysID, out EventSys commands, out EventSys callbacks)
@@ -46,6 +47,8 @@ public class ShopSystem : ISystemEvents
         _unlockRecipeCmd = evtSys.GetCommandByName<Event<ID>>("inventory_sys", "unlock_recipe");
         _addIngredient = evtSys.GetCommandByName<Event<ItemData>>("inventory_sys", "add_ingredient");
         _updateShopCallback = Admin.Global.EventSystem.GetCallbackByName<Event<bool>>("shop_sys", "update_shop_ui");
+
+        _soundCmd = evtSys.GetCommandByName<Event<ID>>("audio_sys", "play_sound");
     }
 
     public void BuyRecipe(ID selectedRecipeId)
@@ -69,7 +72,8 @@ public class ShopSystem : ISystemEvents
             if (recipe.m_Price_Evil > 0)
                 _changeRepCmd.Invoke(new InventorySys_ChangeReputationEvtArgs(Karma.EvilKarma, -recipe.m_Price_Evil));
             _unlockRecipeCmd.Invoke(recipe.m_PieceID);
-            _updateShopCallback.Invoke(true);
+            _updateShopCallback.Invoke(true); 
+            _soundCmd.Invoke(new ID("shop_coin"));
             //_buyRecipeCmdREFACTOR.Invoke();
             //UpdateTexts();
         }
@@ -103,6 +107,7 @@ public class ShopSystem : ISystemEvents
                 ItemData newIngredient = new ItemData(selectedIngredientId, 1);
                 _addIngredient.Invoke(newIngredient);
                 _updateShopCallback.Invoke(true);
+                _soundCmd.Invoke(new ID("shop_coin"));
                 //_buyRecipeCmdREFACTOR.Invoke();
                 //UpdateTexts();
             }
