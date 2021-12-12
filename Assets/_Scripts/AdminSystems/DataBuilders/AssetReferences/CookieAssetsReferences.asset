@@ -174,7 +174,7 @@ MonoBehaviour:
     m_QuestBuildingPrefab: {fileID: 0}
   m_Objects:
   - m_IDName: baseball_bat
-    m_SimpleSprite: {fileID: 21300000, guid: b5b3a07137f48e649a5e9543177286da, type: 3}
+    m_SimpleSprite: {fileID: 21300000, guid: d3f60ad83b3b25943b571bbb332eea19, type: 3}
     m_FullCookieSprite: {fileID: 21300000, guid: 28b7d793a8173cc469991ac4c93c963a, type: 3}
     m_QuestBuildingPrefab: {fileID: 0}
   - m_IDName: cake
