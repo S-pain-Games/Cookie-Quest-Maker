@@ -38,9 +38,9 @@ namespace CQM.Systems
 
             // Set Base reward amount
             if (!Admin.Global.Components.m_GameStoriesStateComponent.m_AllSecondaryStories.Contains(s.m_StoryData.m_ID))
-                rewardAmount = 300;
+                rewardAmount = 160;
             else
-                rewardAmount = 150;
+                rewardAmount = 80;
 
 
             if (s.m_QuestRepercusion.m_Value > 0)

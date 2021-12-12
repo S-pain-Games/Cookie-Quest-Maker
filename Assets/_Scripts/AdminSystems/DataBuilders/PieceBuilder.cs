@@ -282,7 +282,7 @@ namespace CQM.DataBuilders
                 AddFunctionalTag(Tag.Harm, 3);
                 SetUIData("Violentamente", "La violencia nunca es la solución, bueno si alguien se pone un poco tonto se le puede acariciar violentamente la cara hasta que entre en razón, pero sólo cuando Diálogo no ha funcionado.");
                 SetRecipeData("Receta de Violentamente", "La violencia nunca es la solución, bueno si alguien se pone un poco tonto se le puede acariciar violentamente la cara hasta que entre en razón, pero sólo cuando Diálogo no ha funcionado.", Karma.GoodKarma, 50, 10);
-                AddIngredientToRecipe("polvo_impetuoso", 3);
+                AddIngredientToRecipe("polvo_impetuoso", 6);
 
                 CreateNew();
                 SetIDName("brutally");
@@ -291,7 +291,7 @@ namespace CQM.DataBuilders
                 AddFunctionalTag(Tag.Convince, 1);
                 SetUIData("Brutalmente", "Todo ataque se magnifica con esta galleta, pero no nos pasemos, los trajes para funerales están caros en esta época del año.");
                 SetRecipeData("Receta de Brutalmente", "Todo ataque se magnifica con esta galleta, pero no nos pasemos, los trajes para funerales están caros en esta época del año.", Karma.GoodKarma, 10, 50);
-                AddIngredientToRecipe("polvo_impetuoso", 5);
+                AddIngredientToRecipe("polvo_impetuoso", 10);
 
                 CreateNew();
                 SetIDName("kindly");
@@ -299,7 +299,7 @@ namespace CQM.DataBuilders
                 AddFunctionalTag(Tag.Help, 3);
                 SetUIData("Amablemente", "Con esta galleta toda acción que hagas se suavizará, porque es por todos conocidos que atacar amablemente es más gentil que hacerlo violentamente.");
                 SetRecipeData("Receta de Amablemente", "Con esta galleta toda acción que hagas se suavizará, porque es por todos conocidos que atacar amablemente es más gentil que hacerlo violentamente.", Karma.GoodKarma, 0, 50);
-                AddIngredientToRecipe("polvo_auxilio", 3);
+                AddIngredientToRecipe("polvo_auxilio", 6);
 
                 CreateNew();
                 SetIDName("convincingly");
@@ -307,7 +307,7 @@ namespace CQM.DataBuilders
                 AddFunctionalTag(Tag.Convince, 3);
                 SetUIData("Convincentemente", "Como dice mi abuela “Más vale maña que mil pájaros volando”, bueno, esa señora nunca estuvo en sus cabales, pero lo que viene a significar es que nunca olvides el poder de la persuasión.");
                 SetRecipeData("Receta de Convincentemente", "Como dice mi abuela “Más vale maña que mil pájaros volando”, bueno, esa señora nunca estuvo en sus cabales, pero lo que viene a significar es que nunca olvides el poder de la persuasión.", Karma.GoodKarma, 0, 50);
-                AddIngredientToRecipe("polvo_persuasivo", 3);
+                AddIngredientToRecipe("polvo_persuasivo", 6);
             }
             void CreateTargets()
             {
