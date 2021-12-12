@@ -32,7 +32,9 @@ public class ToggleUIButton : MonoBehaviour
     }
 
     //Es muy horrible, pero no me queda otra
-    [SerializeField] private CharacterNavMeshAgentHandler character;
+    [SerializeField] private CharacterNavMeshAgentHandler characterDay;
+    [SerializeField] private CharacterNavMeshAgentHandler characterNight;
+    [SerializeField] private CharacterNavMeshAgentHandler characterEnd;
 
     private void ToggleUI()
     {
@@ -41,11 +43,15 @@ public class ToggleUIButton : MonoBehaviour
         if(gameObject.name == "Settings_Button")
         {
             _disableCharMovementCmd.Invoke();
-            character.InterruptAgentMovement();
+            characterDay.InterruptAgentMovement();
+            characterNight.InterruptAgentMovement();
+            characterEnd.InterruptAgentMovement();
         }
         else if(gameObject.name == "BtnBack")
         {
             _enableCharMovementCmd.Invoke();
+
+
             
         }
     }

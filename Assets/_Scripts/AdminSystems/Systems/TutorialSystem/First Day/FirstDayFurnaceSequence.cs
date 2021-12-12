@@ -6,10 +6,16 @@ public class FirstDayFurnaceSequence : MonoBehaviour
 {
     private Event<ShowDialogueEvtArgs> _showDialogueCmd;
 
+    private EventVoid _enableCharMovementCmd;
+    private EventVoid _disableCharMovementCmd;
+
     private void Awake()
     {
         GameEventSystem evtSys = Admin.Global.EventSystem;
         _showDialogueCmd = evtSys.GetCommandByName<Event<ShowDialogueEvtArgs>>("dialogue_sys", "show_dialogue");
+
+        _enableCharMovementCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "enable_movement");
+        _disableCharMovementCmd = evtSys.GetCommandByName<EventVoid>("character_sys", "disable_movement");
     }
 
     public bool RequirementsMet()
@@ -21,15 +27,16 @@ public class FirstDayFurnaceSequence : MonoBehaviour
             _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
             "¡Vamos, hornea una pieza de Héroe!"},
             new ID("evith"),
-            () => {}));
+            () => { _disableCharMovementCmd.Invoke(); }));
         }
         else if (firstActionCookieBaked)
         {
             _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(new List<string>() {
             "No tengas tanta prisa, todavía te falta hornear una pieza de Acción, escoge la que quieras."},
            new ID("evith"),
-           () => { }));
+           () => { _disableCharMovementCmd.Invoke(); }));
         }
+
             return false;
     }
 
@@ -91,6 +98,7 @@ public class FirstDayFurnaceSequence : MonoBehaviour
     private void FinishFirstSequence()
     {
         firstSequenceEnabled = false;
+        _disableCharMovementCmd.Invoke();
     }
 
     // ==============================================================================================
@@ -193,6 +201,7 @@ public class FirstDayFurnaceSequence : MonoBehaviour
     private void FinishFirstCookieBakedSequence()
     {
         firstCookieBakedSequenceEnabled = false;
+        _disableCharMovementCmd.Invoke();
     }
 
     // ==============================================================================================
@@ -244,6 +253,7 @@ public class FirstDayFurnaceSequence : MonoBehaviour
 
         //Activar tutorial de la mesa
         GetComponent<FirstDayTableSecuence>().SetTutorialActive(true);
+        _disableCharMovementCmd.Invoke();
     }
 
 }

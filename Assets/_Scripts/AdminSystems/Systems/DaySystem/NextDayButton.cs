@@ -35,5 +35,6 @@ public class NextDayButton : MonoBehaviour
     {
         _startNewDayCommand.Invoke();
         _playBakeryDayMusic.Invoke(new ID("bakery_day"));
+        gameObject.SetActive(false);
     }
 }

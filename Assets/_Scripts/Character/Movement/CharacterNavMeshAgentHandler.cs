@@ -93,6 +93,9 @@ public class CharacterNavMeshAgentHandler : MonoBehaviour
 
     public void InterruptAgentMovement()
     {
+        if (!gameObject.activeInHierarchy)
+            return;
+
         StopAgentMovement();
         ResetAgentTarget();
     }

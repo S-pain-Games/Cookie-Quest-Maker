@@ -173,8 +173,8 @@ public class FirstNightDeitiesScriptedSequence : MonoBehaviour
 
     private void FinishSequence()
     {
-        if (button_next_day != null)
-            button_next_day.SetActive(true);
+        //if (button_next_day != null)
+        //    button_next_day.SetActive(true);
         _enableMovementCmd.Invoke();
         _toggleGameplayUiCmd.Invoke();
 

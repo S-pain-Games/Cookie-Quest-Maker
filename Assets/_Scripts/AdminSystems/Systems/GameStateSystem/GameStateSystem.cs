@@ -34,10 +34,11 @@ namespace CQM.Systems
                 d.m_MainMenu);
             d.m_States.Add(State.MainMenu, gs);
 
-            gs = new GameState(callbacks.AddEvent(new ID("cookie_making_enter")),
+            /*gs = new GameState(callbacks.AddEvent(new ID("cookie_making_enter")),
                 callbacks.AddEvent(new ID("cookie_making_exit")),
                 d.m_CookieMaking);
             d.m_States.Add(State.CookieMaking, gs);
+            */
 
             gs = new GameState(callbacks.AddEvent(new ID("bakery_night_enter")),
                 callbacks.AddEvent(new ID("bakery_night_exit")),

@@ -7,11 +7,9 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class LoadGameStateButton : MonoBehaviour
 {
-    [SerializeField]
-    private GameStateSystem.State m_TargetState;
     private Button button;
 
-    private Event<GameStateSystem.State> _setGameStateCommand;
+    public EventVoid _openCookieMakingUI;
     public Event<ID> _playBakeryDayMusic;
 
 
@@ -21,7 +19,7 @@ public class LoadGameStateButton : MonoBehaviour
     {
         button = GetComponent<Button>();
         var _eventSys = Admin.Global.EventSystem;
-        _setGameStateCommand = _eventSys.GetCommandByName<Event<GameStateSystem.State>>("game_state_sys", "set_game_state");
+        _openCookieMakingUI = _eventSys.GetCommandByName<EventVoid>("ui_sys", "toggle_cookie_making");
         _playBakeryDayMusic = _eventSys.GetCommandByName<Event<ID>>("audio_sys", "play_music");
     }
 
@@ -40,7 +38,7 @@ public class LoadGameStateButton : MonoBehaviour
         if (!tutorial.RequirementsMet())
             return;
 
-        _setGameStateCommand.Invoke(m_TargetState);
+        _openCookieMakingUI.Invoke();
         _playBakeryDayMusic.Invoke(new ID("bakery_day"));
     }
 }
