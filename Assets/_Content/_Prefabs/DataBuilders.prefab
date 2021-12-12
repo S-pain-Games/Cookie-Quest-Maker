@@ -306,9 +306,7 @@ MonoBehaviour:
       m_ID: -1938852922
       m_Initialized: 1
     m_Type: 1
-    m_Tags:
-    - m_Type: 0
-      m_Value: 1
+    m_Tags: []
   - m_ID:
       m_NameID: rats
       m_ID: -1872639626
@@ -318,6 +316,54 @@ MonoBehaviour:
   - m_ID:
       m_NameID: vacas
       m_ID: 190186940
+      m_Initialized: 1
+    m_Type: 1
+    m_Tags: []
+  - m_ID:
+      m_NameID: weirdMan
+      m_ID: 678418707
+      m_Initialized: 1
+    m_Type: 1
+    m_Tags: []
+  - m_ID:
+      m_NameID: thief
+      m_ID: -791049946
+      m_Initialized: 1
+    m_Type: 1
+    m_Tags: []
+  - m_ID:
+      m_NameID: dragon
+      m_ID: -408550171
+      m_Initialized: 1
+    m_Type: 1
+    m_Tags: []
+  - m_ID:
+      m_NameID: monster
+      m_ID: -1140133236
+      m_Initialized: 1
+    m_Type: 1
+    m_Tags: []
+  - m_ID:
+      m_NameID: ghost
+      m_ID: -696951473
+      m_Initialized: 1
+    m_Type: 1
+    m_Tags: []
+  - m_ID:
+      m_NameID: cat
+      m_ID: 696029510
+      m_Initialized: 1
+    m_Type: 1
+    m_Tags: []
+  - m_ID:
+      m_NameID: spiders
+      m_ID: 838606072
+      m_Initialized: 1
+    m_Type: 1
+    m_Tags: []
+  - m_ID:
+      m_NameID: golem
+      m_ID: 1601796110
       m_Initialized: 1
     m_Type: 1
     m_Tags: []
@@ -418,9 +464,7 @@ MonoBehaviour:
     m_Name: Citrielfo en Copa
     m_Description: "Los citrielfos son el tercer postre colosal. Siempre tienen la
       raz\xF3n, o eso creen ellos, y da igual que est\xE9n equivocados, no tienen
-      problemas en mirarte por encima del hombre desde lo alto de su copa. Tan pronto
-      como la cara de su enemigo ponga expresi\xF3n de haber chupado un lim\xF3n
-      sabr\xE1 que su hechizo ha hecho efecto."
+      problemas en mirarte por encima del hombro desde lo alto de su copa."
     m_ID:
       m_NameID: citrielfo
       m_ID: 1999289801
@@ -431,7 +475,7 @@ MonoBehaviour:
     m_ShopRecipeSprite: {fileID: 21300000, guid: b51aca76c7c871941a08578d590aebb9, type: 3}
     m_Name: Atacar
     m_Description: "Con esta galleta puedes acariciar fuertemente al objetivo hasta
-      que por un resval\xF3n tonto caiga al suelo. Si no quer\xEDa llegar a este
+      que por un resbal\xF3n tonto caiga al suelo. Si no quer\xEDa llegar a este
       nivel, no s\xE9, que se hubiese portado bien."
     m_ID:
       m_NameID: attack
@@ -442,8 +486,8 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 88210d859f042ba4f9a595a71155e01a, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 85119a0d9cb3a444d9d8fc0394920391, type: 3}
     m_Name: Dialogar
-    m_Description: "Hablar las cosas a veces est\xE1 bien, eso dicen\u2026 Mira primero
-      se intenta convencer, luego ya se saca a Di\xE1logo."
+    m_Description: "Hablar las cosas a veces est\xE1 bien, eso dicen\u2026 Mira,
+      primero se intenta convencer, luego ya se saca a Di\xE1logo."
     m_ID:
       m_NameID: dialogate
       m_ID: -949047606
@@ -549,7 +593,7 @@ MonoBehaviour:
     m_ShopRecipeSprite: {fileID: 21300000, guid: 6cfd658b7d0f18c4ca8c3aae2182d699, type: 3}
     m_Name: Violentamente
     m_Description: "La violencia nunca es la soluci\xF3n, bueno si alguien se pone
-      un poco tonto se le puede acaricial violentamente la cara hasta que entre en
+      un poco tonto se le puede acariciar violentamente la cara hasta que entre en
       raz\xF3n, pero s\xF3lo cuando Di\xE1logo no ha funcionado."
     m_ID:
       m_NameID: violently
@@ -560,7 +604,7 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 3325e3174902ee84ca5567e1cb9ab96f, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: e3393412cb8a53d4fa51facf3396c935, type: 3}
     m_Name: Brutalmente
-    m_Description: "Todo ataque se magnifica con esta galleta, pero  no nos pasemos,
+    m_Description: "Todo ataque se magnifica con esta galleta, pero no nos pasemos,
       los trajes para funerales est\xE1n caros en esta \xE9poca del a\xF1o."
     m_ID:
       m_NameID: brutally
@@ -595,10 +639,9 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 5f6092fe08f678544afddc11f2f3a372, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 4150cc859f149f846a48e1010b860bbb, type: 3}
     m_Name: Alcalde
-    m_Description: "Es el alcalde del pueblo, y no tienen ning\xFAn problema en dejarte
-      claro dos cosas, que es el ALCALDE, y que le gustan los dineros. Posee gran
-      parte de los cultivos de trigo del pueblo, all\xE1 donde te alcance la vista
-      es propiedad suya, y tiene un sospechoso gran parentesco a Hio\u2026"
+    m_Description: "Es el alcalde del pueblo, y no tiene ning\xFAn problema en dejar
+      claro que \xE9l es quien manda y que le gusta el dinero. Posee gran parte de
+      los cultivos de trigo del pueblo."
     m_ID:
       m_NameID: mayor
       m_ID: 996742298
@@ -610,8 +653,8 @@ MonoBehaviour:
     m_Name: Meri
     m_Description: "En realidad se llama Meri, la lechera, pero Hio le llam\xF3 Meri,
       la Leches una vez y as\xED se qued\xF3. Posee la \xFAnica granja de vacas del
-      pueblo, y se le da muy bien cuidarlas, pero en ocasiones\u2026 pasan cosas
-      y no puede controlarlas, y cuando eso pasa\u2026 la cosa se le va de las manos."
+      pueblo, y se le da muy bien cuidarlas si no fuera porque ocasionalmente la
+      cosa se vaya de las manos."
     m_ID:
       m_NameID: meri
       m_ID: -918260377
@@ -621,10 +664,10 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: fdd8da237cda300459b69e475d759c52, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 77eaa71558755064cbca8511be04e884, type: 3}
     m_Name: Canela
-    m_Description: "Empresaria, exitosa, chica de portada, todo lo que Canela N Rama
-      quiera lo tiene. Salt\xF3 a la fama despu\xE9s de presentar la patente de su
-      primer extracto super concentrado de canela, a partir de ah\xED el \xE9xito
-      vino solo."
+    m_Description: "Empresaria, exitosa, chica de portada. Salt\xF3 a la fama despu\xE9s
+      de presentar la patente de su primer extracto super concentrado de canela,
+      a partir de ah\xED el \xE9xito vino solo. \xDAltimamente se dedica a coleccionar
+      artefactos antiguos."
     m_ID:
       m_NameID: canela
       m_ID: -619351516
@@ -635,10 +678,9 @@ MonoBehaviour:
     m_ShopRecipeSprite: {fileID: 21300000, guid: eb7fe4a73bd33a940bfcaf4f93f10ae6, type: 3}
     m_Name: Er Johny el setas
     m_Description: "Er Johnny vive en su mundo psicod\xE9lico todo el d\xEDa, lo
-      que le lleva a ser el mejor creador de levaduras del archipi\xE9lago. Si hay
-      alguien capaz de desvelar el secreto sobre la magia de Hio es Johnny, cuanto
-      m\xE1s se mete en su mundo, m\xE1s puede interactuar con la magia del pastelero\u2026
-      aunque crea que son deidades galleta."
+      que le lleva a ser el mejor creador de levaduras del archipi\xE9lago. Utiliza
+      sus p\xF3cimas para ayudar a la gente del pueblo, aunque suelen tener efectos
+      inesperados."
     m_ID:
       m_NameID: johny_setas
       m_ID: -840848411
@@ -648,11 +690,9 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: 8a88bfda9c0714d4da7df2f566c1186b, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 194898324a4688d4994fd80f5332beca, type: 3}
     m_Name: Miss Chocolate
-    m_Description: "Dulce y estilosa, esta drag queen est\xE1 lista para seducirte
-      con su dulce sabor hasta hacerte saltar por los aires con su chocolate explosivo.
-      Es una cient\xEDfica chocolatera imponente, pero cari, no te atrevas a ponerte
-      en su camino, porque cielo, esta reina est\xE1 lista para servir su lado m\xE1s
-      amargo."
+    m_Description: "Dulce y estilosa, la maravillosa cient\xEDfica de la chocolater\xEDa
+      Miss Chocolate est\xE1 lista para seducirte con su dulce sabor hasta hacerte
+      saltar por los aires con su chocolate explosivo."
     m_ID:
       m_NameID: miss_chocolate
       m_ID: -370492881
@@ -674,8 +714,8 @@ MonoBehaviour:
     m_HDSprite: {fileID: 21300000, guid: dd1495d1750d7e9459816a04e37834d2, type: 3}
     m_ShopRecipeSprite: {fileID: 21300000, guid: 403a1ba1c6f85974cbb303ca95a6312e, type: 3}
     m_Name: Lobos
-    m_Description: "Son una manada de lobos, \xBFun poco violenta? Pues s\xED chica,
-      pero no haber construido el pueblo donde antes viv\xEDa la manada."
+    m_Description: "Son una manada de lobos, \xBFun poco violenta? Bastante, no ha
+      sido una buena idea construir el pueblo donde antes viv\xEDa la manada."
     m_ID:
       m_NameID: wolves
       m_ID: -1938852922
@@ -703,6 +743,107 @@ MonoBehaviour:
     m_ID:
       m_NameID: vacas
       m_ID: 190186940
+      m_Initialized: 1
+  - m_SimpleSprite: {fileID: 21300000, guid: 54df7579a9d48464bb54e47ee1d7142b, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: c6efe40c46a011d4bb556bd4486802cf, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 54df7579a9d48464bb54e47ee1d7142b, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: c6efe40c46a011d4bb556bd4486802cf, type: 3}
+    m_Name: Hombre Misterioso
+    m_Description: "Un extra\xF1o hombre que se coloca en la plaza a vigilar a todas
+      las personas que pasen. No tendr\xEDamos que desconfiar en \xE9l en una primera
+      instancia, pero parece tan sospechoso\u2026 \xA1Parece que va a atracar a un
+      vecino en cualquier momento!"
+    m_ID:
+      m_NameID: weirdMan
+      m_ID: 678418707
+      m_Initialized: 1
+  - m_SimpleSprite: {fileID: 21300000, guid: e73dfa4568381e54d8804a42eca3ed62, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 1e22b95bfbcd70443acdaf05e90c679e, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: e73dfa4568381e54d8804a42eca3ed62, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 1e22b95bfbcd70443acdaf05e90c679e, type: 3}
+    m_Name: "Ladr\xF3n"
+    m_Description: "Un ladr\xF3n de mala muerte que pasea por los alrededores del
+      pueblo por la noche, esperando para realizar su pr\xF3ximo ataque. No parece
+      muy listo, pero su cara de malas pulgas intimida hasta el m\xE1s valiente de
+      los aldeanos."
+    m_ID:
+      m_NameID: thief
+      m_ID: -791049946
+      m_Initialized: 1
+  - m_SimpleSprite: {fileID: 21300000, guid: 3405d844cc4286b408bcdd443f165de4, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 8d7f428729c2abc439856f11e86ffda8, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 3405d844cc4286b408bcdd443f165de4, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 8d7f428729c2abc439856f11e86ffda8, type: 3}
+    m_Name: "Drag\xF3n"
+    m_Description: "\xA1Qui\xE9n dir\xEDa que, en un lugar tan rec\xF3ndito del planeta,
+      como es el archipi\xE9lago de Akalia, se pudiera encontrar un ser fant\xE1stico
+      tan impresionante y letal como es un drag\xF3n! \xBFSer\xE1 tan fiero como
+      lo describen las leyendas?"
+    m_ID:
+      m_NameID: dragon
+      m_ID: -408550171
+      m_Initialized: 1
+  - m_SimpleSprite: {fileID: 21300000, guid: 0606214ee84d9144bb747d9d239f34dc, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 5b72aa8abb4acbd4bb29312e0ac3c5e3, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 0606214ee84d9144bb747d9d239f34dc, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 5b72aa8abb4acbd4bb29312e0ac3c5e3, type: 3}
+    m_Name: Monstruo de las Nieves
+    m_Description: "Una criatura que vive en las monta\xF1as al norte del pueblo.
+      Siempre ha salido en la prensa local lo que parec\xEDan avistamientos de este
+      monstruo, pero nunca se ha visto de forma tan clara hasta el d\xEDa de hoy."
+    m_ID:
+      m_NameID: monster
+      m_ID: -1140133236
+      m_Initialized: 1
+  - m_SimpleSprite: {fileID: 21300000, guid: a776ee50b8b5bdf4d88f9fcf42146b88, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 97d1b91f5800d004ba6551366e76c442, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: a776ee50b8b5bdf4d88f9fcf42146b88, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 97d1b91f5800d004ba6551366e76c442, type: 3}
+    m_Name: Fantasma
+    m_Description: "Un ser espectral que merodea por las noches en el algo al sur
+      del pueblo. Siempre se ha dicho que los fantasmas son las almas de aquellas
+      personas que no han encontrado el descanso eterno en la muerte. \xBFQu\xE9
+      habr\xE1 pasado para que siga aqu\xED?"
+    m_ID:
+      m_NameID: ghost
+      m_ID: -696951473
+      m_Initialized: 1
+  - m_SimpleSprite: {fileID: 21300000, guid: 587f26b27e522a94f8dec9b155f62b59, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: ca1455fa765c1c344936307b141877e3, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: 587f26b27e522a94f8dec9b155f62b59, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: ca1455fa765c1c344936307b141877e3, type: 3}
+    m_Name: Gato
+    m_Description: "Estos seres felinos son especialistas en meterse en problemas
+      cuando menos los esperas\u2026 \xA1O darte problemas a ti! Aun as\xED\u2026
+      \xBFqui\xE9n no los querr\xEDa? \xA1son muy monos!"
+    m_ID:
+      m_NameID: cat
+      m_ID: 696029510
+      m_Initialized: 1
+  - m_SimpleSprite: {fileID: 21300000, guid: c1c49da3c166fc64ab678b9e57e513bc, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 51906f223a78c0b42884a43b376d5977, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: c1c49da3c166fc64ab678b9e57e513bc, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 51906f223a78c0b42884a43b376d5977, type: 3}
+    m_Name: "Ara\xF1as"
+    m_Description: "Estas ara\xF1as no son para nada como las que conocemos: ni siquiera
+      parecen de este mundo. Aparecen en grandes enjambres y parecen inteligentes,
+      pero siempre gritan \u201Charrah harrah\u201D. \xBFQu\xE9 demonios significar\xE1
+      harrah harrah?"
+    m_ID:
+      m_NameID: spiders
+      m_ID: 838606072
+      m_Initialized: 1
+  - m_SimpleSprite: {fileID: 21300000, guid: e42435c9b53337f41af6e06abb9783d2, type: 3}
+    m_CookiePieceSprite: {fileID: 21300000, guid: 4c3de01733cab12479222c486f4c4796, type: 3}
+    m_HDSprite: {fileID: 21300000, guid: e42435c9b53337f41af6e06abb9783d2, type: 3}
+    m_ShopRecipeSprite: {fileID: 21300000, guid: 4c3de01733cab12479222c486f4c4796, type: 3}
+    m_Name: Golem
+    m_Description: 'Un ser hecho de rocas que, en un principio, no responde a ninguna
+      clase de raciocinio: solo sabe que le gusta tirar piedras a la gente y que
+      se divierte por ello. Pero si se divierte, es posible que se le pueda hablar.'
+    m_ID:
+      m_NameID: golem
+      m_ID: 1601796110
       m_Initialized: 1
   m_QuestPiecePrefabComponent:
   - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
@@ -860,6 +1001,46 @@ MonoBehaviour:
       m_NameID: vacas
       m_ID: 190186940
       m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: weirdMan
+      m_ID: 678418707
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: thief
+      m_ID: -791049946
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: dragon
+      m_ID: -408550171
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: monster
+      m_ID: -1140133236
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: ghost
+      m_ID: -696951473
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: cat
+      m_ID: 696029510
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: spiders
+      m_ID: 838606072
+      m_Initialized: 1
+  - m_QuestBuildingPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
+    m_ID:
+      m_NameID: golem
+      m_ID: 1601796110
+      m_Initialized: 1
   m_CookieData:
   - m_ParentID:
       m_NameID: malvavisco_fantasma_tostado
@@ -936,9 +1117,7 @@ MonoBehaviour:
     m_CookieName: Citrielfo en Copa
     m_CookieDescription: "Los citrielfos son el tercer postre colosal. Siempre tienen
       la raz\xF3n, o eso creen ellos, y da igual que est\xE9n equivocados, no tienen
-      problemas en mirarte por encima del hombre desde lo alto de su copa. Tan pronto
-      como la cara de su enemigo ponga expresi\xF3n de haber chupado un lim\xF3n
-      sabr\xE1 que su hechizo ha hecho efecto."
+      problemas en mirarte por encima del hombro desde lo alto de su copa."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: attack
@@ -946,7 +1125,7 @@ MonoBehaviour:
       m_Initialized: 1
     m_CookieName: Atacar
     m_CookieDescription: "Con esta galleta puedes acariciar fuertemente al objetivo
-      hasta que por un resval\xF3n tonto caiga al suelo. Si no quer\xEDa llegar a
+      hasta que por un resbal\xF3n tonto caiga al suelo. Si no quer\xEDa llegar a
       este nivel, no s\xE9, que se hubiese portado bien."
     m_Image: {fileID: 0}
   - m_ParentID:
@@ -955,7 +1134,7 @@ MonoBehaviour:
       m_Initialized: 1
     m_CookieName: Dialogar
     m_CookieDescription: "Hablar las cosas a veces est\xE1 bien, eso dicen\u2026
-      Mira primero se intenta convencer, luego ya se saca a Di\xE1logo."
+      Mira, primero se intenta convencer, luego ya se saca a Di\xE1logo."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: assist
@@ -1034,7 +1213,7 @@ MonoBehaviour:
       m_Initialized: 1
     m_CookieName: Violentamente
     m_CookieDescription: "La violencia nunca es la soluci\xF3n, bueno si alguien
-      se pone un poco tonto se le puede acaricial violentamente la cara hasta que
+      se pone un poco tonto se le puede acariciar violentamente la cara hasta que
       entre en raz\xF3n, pero s\xF3lo cuando Di\xE1logo no ha funcionado."
     m_Image: {fileID: 0}
   - m_ParentID:
@@ -1042,7 +1221,7 @@ MonoBehaviour:
       m_ID: 83815085
       m_Initialized: 1
     m_CookieName: Brutalmente
-    m_CookieDescription: "Todo ataque se magnifica con esta galleta, pero  no nos
+    m_CookieDescription: "Todo ataque se magnifica con esta galleta, pero no nos
       pasemos, los trajes para funerales est\xE1n caros en esta \xE9poca del a\xF1o."
     m_Image: {fileID: 0}
   - m_ParentID:
@@ -1068,10 +1247,9 @@ MonoBehaviour:
       m_ID: 996742298
       m_Initialized: 1
     m_CookieName: Alcalde
-    m_CookieDescription: "Es el alcalde del pueblo, y no tienen ning\xFAn problema
-      en dejarte claro dos cosas, que es el ALCALDE, y que le gustan los dineros.
-      Posee gran parte de los cultivos de trigo del pueblo, all\xE1 donde te alcance
-      la vista es propiedad suya, y tiene un sospechoso gran parentesco a Hio\u2026"
+    m_CookieDescription: "Es el alcalde del pueblo, y no tiene ning\xFAn problema
+      en dejar claro que \xE9l es quien manda y que le gusta el dinero. Posee gran
+      parte de los cultivos de trigo del pueblo."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: meri
@@ -1080,18 +1258,18 @@ MonoBehaviour:
     m_CookieName: Meri
     m_CookieDescription: "En realidad se llama Meri, la lechera, pero Hio le llam\xF3
       Meri, la Leches una vez y as\xED se qued\xF3. Posee la \xFAnica granja de vacas
-      del pueblo, y se le da muy bien cuidarlas, pero en ocasiones\u2026 pasan cosas
-      y no puede controlarlas, y cuando eso pasa\u2026 la cosa se le va de las manos."
+      del pueblo, y se le da muy bien cuidarlas si no fuera porque ocasionalmente
+      la cosa se vaya de las manos."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: canela
       m_ID: -619351516
       m_Initialized: 1
     m_CookieName: Canela
-    m_CookieDescription: "Empresaria, exitosa, chica de portada, todo lo que Canela
-      N Rama quiera lo tiene. Salt\xF3 a la fama despu\xE9s de presentar la patente
-      de su primer extracto super concentrado de canela, a partir de ah\xED el \xE9xito
-      vino solo."
+    m_CookieDescription: "Empresaria, exitosa, chica de portada. Salt\xF3 a la fama
+      despu\xE9s de presentar la patente de su primer extracto super concentrado
+      de canela, a partir de ah\xED el \xE9xito vino solo. \xDAltimamente se dedica
+      a coleccionar artefactos antiguos."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: johny_setas
@@ -1099,21 +1277,18 @@ MonoBehaviour:
       m_Initialized: 1
     m_CookieName: Er Johny el setas
     m_CookieDescription: "Er Johnny vive en su mundo psicod\xE9lico todo el d\xEDa,
-      lo que le lleva a ser el mejor creador de levaduras del archipi\xE9lago. Si
-      hay alguien capaz de desvelar el secreto sobre la magia de Hio es Johnny, cuanto
-      m\xE1s se mete en su mundo, m\xE1s puede interactuar con la magia del pastelero\u2026
-      aunque crea que son deidades galleta."
+      lo que le lleva a ser el mejor creador de levaduras del archipi\xE9lago. Utiliza
+      sus p\xF3cimas para ayudar a la gente del pueblo, aunque suelen tener efectos
+      inesperados."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: miss_chocolate
       m_ID: -370492881
       m_Initialized: 1
     m_CookieName: Miss Chocolate
-    m_CookieDescription: "Dulce y estilosa, esta drag queen est\xE1 lista para seducirte
-      con su dulce sabor hasta hacerte saltar por los aires con su chocolate explosivo.
-      Es una cient\xEDfica chocolatera imponente, pero cari, no te atrevas a ponerte
-      en su camino, porque cielo, esta reina est\xE1 lista para servir su lado m\xE1s
-      amargo."
+    m_CookieDescription: "Dulce y estilosa, la maravillosa cient\xEDfica de la chocolater\xEDa
+      Miss Chocolate est\xE1 lista para seducirte con su dulce sabor hasta hacerte
+      saltar por los aires con su chocolate explosivo."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: mantecas
@@ -1129,8 +1304,8 @@ MonoBehaviour:
       m_ID: -1938852922
       m_Initialized: 1
     m_CookieName: Lobos
-    m_CookieDescription: "Son una manada de lobos, \xBFun poco violenta? Pues s\xED
-      chica, pero no haber construido el pueblo donde antes viv\xEDa la manada."
+    m_CookieDescription: "Son una manada de lobos, \xBFun poco violenta? Bastante,
+      no ha sido una buena idea construir el pueblo donde antes viv\xEDa la manada."
     m_Image: {fileID: 0}
   - m_ParentID:
       m_NameID: rats
@@ -1149,6 +1324,84 @@ MonoBehaviour:
     m_CookieDescription: Las vacas de Meri, la Leches, son unos animales tiernos
       que no paran de hacer leche, aunque a veces tienen rachas y necesitan un poco
       de ayuda para seguir con sus labores.
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: weirdMan
+      m_ID: 678418707
+      m_Initialized: 1
+    m_CookieName: Hombre Misterioso
+    m_CookieDescription: "Un extra\xF1o hombre que se coloca en la plaza a vigilar
+      a todas las personas que pasen. No tendr\xEDamos que desconfiar en \xE9l en
+      una primera instancia, pero parece tan sospechoso\u2026 \xA1Parece que va a
+      atracar a un vecino en cualquier momento!"
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: thief
+      m_ID: -791049946
+      m_Initialized: 1
+    m_CookieName: "Ladr\xF3n"
+    m_CookieDescription: "Un ladr\xF3n de mala muerte que pasea por los alrededores
+      del pueblo por la noche, esperando para realizar su pr\xF3ximo ataque. No parece
+      muy listo, pero su cara de malas pulgas intimida hasta el m\xE1s valiente de
+      los aldeanos."
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: dragon
+      m_ID: -408550171
+      m_Initialized: 1
+    m_CookieName: "Drag\xF3n"
+    m_CookieDescription: "\xA1Qui\xE9n dir\xEDa que, en un lugar tan rec\xF3ndito
+      del planeta, como es el archipi\xE9lago de Akalia, se pudiera encontrar un
+      ser fant\xE1stico tan impresionante y letal como es un drag\xF3n! \xBFSer\xE1
+      tan fiero como lo describen las leyendas?"
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: monster
+      m_ID: -1140133236
+      m_Initialized: 1
+    m_CookieName: Monstruo de las Nieves
+    m_CookieDescription: "Una criatura que vive en las monta\xF1as al norte del pueblo.
+      Siempre ha salido en la prensa local lo que parec\xEDan avistamientos de este
+      monstruo, pero nunca se ha visto de forma tan clara hasta el d\xEDa de hoy."
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: ghost
+      m_ID: -696951473
+      m_Initialized: 1
+    m_CookieName: Fantasma
+    m_CookieDescription: "Un ser espectral que merodea por las noches en el algo
+      al sur del pueblo. Siempre se ha dicho que los fantasmas son las almas de aquellas
+      personas que no han encontrado el descanso eterno en la muerte. \xBFQu\xE9
+      habr\xE1 pasado para que siga aqu\xED?"
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: cat
+      m_ID: 696029510
+      m_Initialized: 1
+    m_CookieName: Gato
+    m_CookieDescription: "Estos seres felinos son especialistas en meterse en problemas
+      cuando menos los esperas\u2026 \xA1O darte problemas a ti! Aun as\xED\u2026
+      \xBFqui\xE9n no los querr\xEDa? \xA1son muy monos!"
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: spiders
+      m_ID: 838606072
+      m_Initialized: 1
+    m_CookieName: "Ara\xF1as"
+    m_CookieDescription: "Estas ara\xF1as no son para nada como las que conocemos:
+      ni siquiera parecen de este mundo. Aparecen en grandes enjambres y parecen
+      inteligentes, pero siempre gritan \u201Charrah harrah\u201D. \xBFQu\xE9 demonios
+      significar\xE1 harrah harrah?"
+    m_Image: {fileID: 0}
+  - m_ParentID:
+      m_NameID: golem
+      m_ID: 1601796110
+      m_Initialized: 1
+    m_CookieName: Golem
+    m_CookieDescription: 'Un ser hecho de rocas que, en un principio, no responde
+      a ninguna clase de raciocinio: solo sabe que le gusta tirar piedras a la gente
+      y que se divierte por ello. Pero si se divierte, es posible que se le pueda
+      hablar.'
     m_Image: {fileID: 0}
   m_RecipeData:
   - m_ID:
@@ -1357,9 +1610,7 @@ MonoBehaviour:
     m_RecipeName: Receta de Citrielfo en Copa
     m_RecipeDescription: "Los citrielfos son el tercer postre colosal. Siempre tienen
       la raz\xF3n, o eso creen ellos, y da igual que est\xE9n equivocados, no tienen
-      problemas en mirarte por encima del hombre desde lo alto de su copa. Tan pronto
-      como la cara de su enemigo ponga expresi\xF3n de haber chupado un lim\xF3n
-      sabr\xE1 que su hechizo ha hecho efecto."
+      problemas en mirarte por encima del hombro desde lo alto de su copa."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 150
@@ -1390,7 +1641,7 @@ MonoBehaviour:
       m_Initialized: 1
     m_RecipeName: Receta de Atacar
     m_RecipeDescription: "Con esta galleta puedes acariciar fuertemente al objetivo
-      hasta que por un resval\xF3n tonto caiga al suelo. Si no quer\xEDa llegar a
+      hasta que por un resbal\xF3n tonto caiga al suelo. Si no quer\xEDa llegar a
       este nivel, no s\xE9, que se hubiese portado bien."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 1
@@ -1412,7 +1663,7 @@ MonoBehaviour:
       m_Initialized: 1
     m_RecipeName: Receta de Dialogar
     m_RecipeDescription: "Hablar las cosas a veces est\xE1 bien, eso dicen\u2026
-      Mira primero se intenta convencer, luego ya se saca a Di\xE1logo."
+      Mira, primero se intenta convencer, luego ya se saca a Di\xE1logo."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
     m_Price_Good: 0
@@ -1618,7 +1869,7 @@ MonoBehaviour:
       m_Initialized: 1
     m_RecipeName: Receta de Violentamente
     m_RecipeDescription: "La violencia nunca es la soluci\xF3n, bueno si alguien
-      se pone un poco tonto se le puede acaricial violentamente la cara hasta que
+      se pone un poco tonto se le puede acariciar violentamente la cara hasta que
       entre en raz\xF3n, pero s\xF3lo cuando Di\xE1logo no ha funcionado."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
@@ -1629,7 +1880,7 @@ MonoBehaviour:
         m_NameID: polvo_impetuoso
         m_ID: -1220311844
         m_Initialized: 1
-      m_Amount: 3
+      m_Amount: 6
     m_PieceID:
       m_NameID: violently
       m_ID: -1715915298
@@ -1639,7 +1890,7 @@ MonoBehaviour:
       m_ID: 83815085
       m_Initialized: 1
     m_RecipeName: Receta de Brutalmente
-    m_RecipeDescription: "Todo ataque se magnifica con esta galleta, pero  no nos
+    m_RecipeDescription: "Todo ataque se magnifica con esta galleta, pero no nos
       pasemos, los trajes para funerales est\xE1n caros en esta \xE9poca del a\xF1o."
     m_Image: {fileID: 0}
     m_ReputationTypePrice: 0
@@ -1650,7 +1901,7 @@ MonoBehaviour:
         m_NameID: polvo_impetuoso
         m_ID: -1220311844
         m_Initialized: 1
-      m_Amount: 5
+      m_Amount: 10
     m_PieceID:
       m_NameID: brutally
       m_ID: 83815085
@@ -1672,7 +1923,7 @@ MonoBehaviour:
         m_NameID: polvo_auxilio
         m_ID: -1647740518
         m_Initialized: 1
-      m_Amount: 3
+      m_Amount: 6
     m_PieceID:
       m_NameID: kindly
       m_ID: 2072750721
@@ -1694,7 +1945,7 @@ MonoBehaviour:
         m_NameID: polvo_persuasivo
         m_ID: -225553538
         m_Initialized: 1
-      m_Amount: 3
+      m_Amount: 6
     m_PieceID:
       m_NameID: convincingly
       m_ID: 1186496505
@@ -1833,6 +2084,126 @@ MonoBehaviour:
     m_PieceID:
       m_NameID: vacas
       m_ID: 190186940
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: weirdMan
+      m_ID: 678418707
+      m_Initialized: 1
+    m_RecipeName: Unnamed
+    m_RecipeDescription: No description
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
+    m_IngredientsList: []
+    m_PieceID:
+      m_NameID: weirdMan
+      m_ID: 678418707
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: thief
+      m_ID: -791049946
+      m_Initialized: 1
+    m_RecipeName: Unnamed
+    m_RecipeDescription: No description
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
+    m_IngredientsList: []
+    m_PieceID:
+      m_NameID: thief
+      m_ID: -791049946
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: dragon
+      m_ID: -408550171
+      m_Initialized: 1
+    m_RecipeName: Unnamed
+    m_RecipeDescription: No description
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
+    m_IngredientsList: []
+    m_PieceID:
+      m_NameID: dragon
+      m_ID: -408550171
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: monster
+      m_ID: -1140133236
+      m_Initialized: 1
+    m_RecipeName: Unnamed
+    m_RecipeDescription: No description
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
+    m_IngredientsList: []
+    m_PieceID:
+      m_NameID: monster
+      m_ID: -1140133236
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: ghost
+      m_ID: -696951473
+      m_Initialized: 1
+    m_RecipeName: Unnamed
+    m_RecipeDescription: No description
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
+    m_IngredientsList: []
+    m_PieceID:
+      m_NameID: ghost
+      m_ID: -696951473
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: cat
+      m_ID: 696029510
+      m_Initialized: 1
+    m_RecipeName: Unnamed
+    m_RecipeDescription: No description
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
+    m_IngredientsList: []
+    m_PieceID:
+      m_NameID: cat
+      m_ID: 696029510
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: spiders
+      m_ID: 838606072
+      m_Initialized: 1
+    m_RecipeName: Unnamed
+    m_RecipeDescription: No description
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
+    m_IngredientsList: []
+    m_PieceID:
+      m_NameID: spiders
+      m_ID: 838606072
+      m_Initialized: 1
+  - m_ID:
+      m_NameID: golem
+      m_ID: 1601796110
+      m_Initialized: 1
+    m_RecipeName: Unnamed
+    m_RecipeDescription: No description
+    m_Image: {fileID: 0}
+    m_ReputationTypePrice: 0
+    m_Price_Good: 0
+    m_Price_Evil: 0
+    m_IngredientsList: []
+    m_PieceID:
+      m_NameID: golem
+      m_ID: 1601796110
       m_Initialized: 1
   m_DefaultPiecePrefab: {fileID: 1951300516118146635, guid: 45bd43d029b95de468c2a58b50604b51, type: 3}
 --- !u!114 &6330534342466683452
@@ -7734,6 +8105,1576 @@ MonoBehaviour:
       m_Name: 
       m_Active: 0
       m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: workers_strike
+        m_ID: -259735712
+        m_Initialized: 1
+      m_Title: Trabajadores en Huelga
+      m_IntroductionDialogue:
+      - "Hay un grupo de trabajadores en huelga que se est\xE1n manifestando en la
+        plaza y solicitan al ayuntamiento mejores condiciones."
+      - "\xA1Si no se soluciona el problema r\xE1pido, la cosecha se retrasar\xE1
+        y se echar\xE1 a perder!"
+      m_QuestGiver: 
+      m_Description: Hay un grupo de trabajadores en huelga, hay que encontrar la
+        manera de resolverlo.
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - Parece que alguien se ha enfrentado al alcalde por la noche y ha accedido
+          a lo que solicitaban los trabajadores.
+        - "Ahora podr\xE1n volver al trabajo con m\xE1s energia y la cosecha no se
+          retrasar\xE1."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Los trabajadores han abandonado la manifestaci\xF3n refunfu\xF1ando y
+          han vuelto a los campos de trabajo malhumorados."
+        - Parece que en el ayuntamiento han tenido ayuda para echarlos de la plaza.
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
+          m_Active: 0
+          m_Value: -100
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Hoy por la ma\xF1ana el ayuntamiento ha hablado con los trabajadores y
+          ha accedido a lo que solicitaban."
+        - "Ahora podr\xE1n volver al trabajo con m\xE1s energia y la cosecha no se
+          retrasar\xE1."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      m_AllPossibleTargets:
+      - m_NameID: mayor
+        m_ID: 996742298
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: golem_attack
+        m_ID: -1841966821
+        m_Initialized: 1
+      m_Title: El Incordio del Golem
+      m_IntroductionDialogue:
+      - "Ha aparecido un golem en la ciudad y est\xE1 tirando bolas de barro a todo
+        el mundo que pasa por delante."
+      - "No hace mucho da\xF1o pero empieza a ser molesto, as\xED que ten cuidado
+        si pasas por delante."
+      m_QuestGiver: 
+      m_Description: "Un golem est\xE1 atormentando a los vecinos del pueblo, \xA1hay
+        que hacer algo!"
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: golem
+            m_ID: 1601796110
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 3
+        m_ResultNPCDialogue:
+        - "He pasado por donde estaba el golem y no te lo vas a creer, \xA1ya no
+          estaba!"
+        - "Ahora se puede andar por el pueblo sin preocupaciones, aunque me pregunto
+          donde habr\xE1 ido."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      - m_Condition:
+          m_Target:
+            m_NameID: golem
+            m_ID: 1601796110
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "He pasado por donde estaba el golem y no te lo vas a creer, \xA1no me
+          ha atacado!"
+        - "Solo estaba ah\xED sentado admirando el pueblo, espero que no vuelva a
+          atacar."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      - m_Condition:
+          m_Target:
+            m_NameID: golem
+            m_ID: 1601796110
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "He pasado por donde estaba el golem y no te lo vas a creer, \xA1ya no
+          estaba!"
+        - Pero nos han llegado noticias del pueblo de al lado de que ha aparecido
+          un golem, asi que ya sabemos donde ha ido.
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
+          m_Active: 0
+          m_Value: -100
+      - m_Condition:
+          m_Target:
+            m_NameID: golem
+            m_ID: 1601796110
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Hoy por la ma\xF1ana el golem estaba m\xE1s enfadado y ahora tambi\xE9n
+          lanza piedras!"
+        - "No se que habr\xE1 podido pasar para enfadarlo tanto."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
+          m_Active: 0
+          m_Value: -100
+      m_AllPossibleTargets:
+      - m_NameID: golem
+        m_ID: 1601796110
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: harrah_spiders
+        m_ID: -43994655
+        m_Initialized: 1
+      m_Title: "Ara\xF1as Gigantes en el Pueblo"
+      m_IntroductionDialogue:
+      - "Anoche estaba dando un paseo alrededor del pueblo y se me acercaron unas
+        ara\xF1as gigantes que "
+      - "hacian un ruido muy raro, 'harrah harrah'. Sal\xED corriendo en direcci\xF3n
+        contraria, pas\xE9 mucho miedo."
+      m_QuestGiver: 
+      m_Description: "Hay ara\xF1as gigantes en el pueblo y est\xE1n asustando a
+        los ciudadanos."
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: spiders
+            m_ID: 838606072
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Han aparecido ara\xF1as muertas por todo el pueblo, algo o alguien se
+          ha encargado de ellas."
+        - "Ahora tendremos que limpiarlas, pero al menos no nos asustar\xE1n m\xE1s."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      - m_Condition:
+          m_Target:
+            m_NameID: spiders
+            m_ID: 838606072
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Las ara\xF1as est\xE1n atacando a los animales! Muerden a todo lo
+          que ven al grito de 'harrah harrah'."
+        - "Deberias tener mucho cuidado si sales, no quiero imaginarme que pasar\xE1
+          si nos muerden a alguno."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
+          m_Active: 0
+          m_Value: -100
+      - m_Condition:
+          m_Target:
+            m_NameID: spiders
+            m_ID: 838606072
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Anoche volv\xED a ver a las ara\xF1as, se estaban yendo, pero, \xA1gritaban
+          que volver\xE1n con refuerzos!"
+        - Por ahora nos hemos librado de ellas, pero tengo miedo de que vuelvan..
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      m_AllPossibleTargets:
+      - m_NameID: spiders
+        m_ID: 838606072
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: cat_tree
+        m_ID: -715017633
+        m_Initialized: 1
+      m_Title: "Gato en el \xC1rbol"
+      m_IntroductionDialogue:
+      - "Un gato se asust\xF3 de unas ara\xF1as y se subi\xF3 a un arbol, y ahora
+        est\xE1 atrapado y no puede bajar."
+      - "Parece que le da miedo saltar. \xA1Alguien tiene que ayudarlo!"
+      m_QuestGiver: 
+      m_Description: "Hay un gato atrapado en un \xE1rbol, \xA1hay que ayudarlo!"
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: cat
+            m_ID: 696029510
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Alguien tir\xF3 una piedra al gato y este se asust\xF3 y ha subido m\xE1s
+          el \xE1rbol. \xA1Ahora es m\xE1s complicado que baje!"
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
+          m_Active: 0
+          m_Value: -100
+      - m_Condition:
+          m_Target:
+            m_NameID: cat
+            m_ID: 696029510
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Alguien ayud\xF3 al gato a bajar y ahora est\xE1 sano y salvo con su due\xF1o.
+          \xA1Me alegro mucho por los dos!"
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      - m_Condition:
+          m_Target:
+            m_NameID: cat
+            m_ID: 696029510
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Alguien convenci\xF3 al gato para que saltara, \xA1y lo hizo!"
+        - "Me asust\xE9 cuando salt\xF3 pero cay\xF3 sano y salvo y ya est\xE1 con
+          su due\xF1o."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      m_AllPossibleTargets:
+      - m_NameID: cat
+        m_ID: 696029510
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: lake_ghost
+        m_ID: 1601615287
+        m_Initialized: 1
+      m_Title: El Fantasma del Lago
+      m_IntroductionDialogue:
+      - "No se si me vas a creer, pero, \xA1anoche vi un fantasma en el lago!"
+      - "Era borroso y translucido, pero s\xE9 lo que vi. \xBFEstar\xE1 relacionado
+        con los rumores?"
+      m_QuestGiver: 
+      m_Description: "Se ha visto un ser en el lago. \xBFSer\xE1 un fantasma?"
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: ghost
+            m_ID: -696951473
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Anoche vi el fantasma en la entrada del pueblo, no se que habr\xE1 pasado,
+          pero nunca se habia acercado tanto."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
+          m_Active: 0
+          m_Value: -100
+      - m_Condition:
+          m_Target:
+            m_NameID: ghost
+            m_ID: -696951473
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Estuve caminando por la zona del lago y se siente diferente, ya no me
+          dan escalofr\xEDos cada vez que me acerco."
+        - "\xBFQue habr\xE1 cambiado?"
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      - m_Condition:
+          m_Target:
+            m_NameID: ghost
+            m_ID: -696951473
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Estuve caminando por la zona del lago y vi una sombra alejarse, \xBFser\xEDa
+          el fantasma alejandose del lago?"
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      m_AllPossibleTargets:
+      - m_NameID: ghost
+        m_ID: -696951473
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: lake_ghost_2
+        m_ID: -2006687676
+        m_Initialized: 1
+      m_Title: El Misterio del Lago
+      m_IntroductionDialogue:
+      - "\xBFHas ido por la zona del lago? Si te fijas est\xE1 muy descuidada. Como
+        eres nuevo en el pueblo es probable "
+      - "que todavia no lo sepas, pero est\xE1 tan descuidada porque poca gente se
+        atreve a acercarse, "
+      - "ya que seg\xFAn se cuenta en el lago muri\xF3 ahogado el antiguo alcalde,
+        pero solo son rumores."
+      - "Se dice que las personas m\xE1s influyentes de la ciudad saben qu\xE9 pas\xF3
+        de verdad."
+      m_QuestGiver: 
+      m_Description: "Hay rumores sobre algo que pas\xF3 en el lago. \xBFQue pasar\xEDa?"
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Ayer por la noche o\xED gritos y alborotos en el ayuntamiento. Quien estuviera
+          dentro parec\xEDa muy asustado."
+        - "\xBFQue pasar\xEDa? \xBFHabr\xE1 fantasmas en el ayuntamiento?"
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
+          m_Active: 0
+          m_Value: -100
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Anoche vi a alguien andar con mucha preocupaci\xF3n al lago. \xBFPorqu\xE9
+          querr\xEDa alguien acercarse a ese lugar?"
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      - m_Condition:
+          m_Target:
+            m_NameID: mayor
+            m_ID: 996742298
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xBFHas visto el tabl\xF3n de anuncios? Ha aparecido una nota pidiendo
+          perd\xF3n. \xBFA que se referir\xE1?"
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      m_AllPossibleTargets:
+      - m_NameID: mayor
+        m_ID: 996742298
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: monster_mountain
+        m_ID: -25164922
+        m_Initialized: 1
+      m_Title: "El Monstruo de la Monta\xF1a"
+      m_IntroductionDialogue:
+      - "\xA1HAY UN MONSTRUO EN LA MONTA\xD1A! \xA1HAY UN MONSTRUO EN LA MONTA\xD1A!
+        \xA1HAY UN MONSTRUO EN LA MONTA\xD1A!"
+      - "\xA1ALGUIEN TIENE QUE HACER ALGO!"
+      m_QuestGiver: 
+      m_Description: "Parece que hay un monstruo en la monta\xF1a que est\xE1 sembrando
+        el terror."
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: monster
+            m_ID: -1140133236
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xBFTe has enterado? Ha habido un alud en la monta\xF1a, espero que todo
+          el mundo est\xE9 bien."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
+          m_Active: 0
+          m_Value: -100
+      - m_Condition:
+          m_Target:
+            m_NameID: monster
+            m_ID: -1140133236
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Ha desaparecido comida del almac\xE9n, pero ya no est\xE1 el monstruo
+          de la monta\xF1a, \xBFhabr\xE1 sido \xE9l?"
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
+          m_Active: 0
+          m_Value: -100
+      - m_Condition:
+          m_Target:
+            m_NameID: monster
+            m_ID: -1140133236
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "No he visto al monstruo de la monta\xF1a, \xBFse habr\xE1 ido?"
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      m_AllPossibleTargets:
+      - m_NameID: monster
+        m_ID: -1140133236
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: dragon_mountain
+        m_ID: -647921147
+        m_Initialized: 1
+      m_Title: "Un Drag\xF3n en la Cima"
+      m_IntroductionDialogue:
+      - "\xBFSab\xEDas que se cree que hay un drag\xF3n en lo alto de la monta\xF1a?
+        Eso cuentan las historias, "
+      - pero nadie ha subido tan alto para comprobarlo.
+      m_QuestGiver: 
+      m_Description: "Se cree que hay un drag\xF3n en la cima de la monta\xF1a, \xBFser\xE1
+        verdad?"
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: dragon
+            m_ID: -408550171
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1UN DRAG\xD3N! \xA1UN DRAG\xD3N! \xBFPor qu\xE9 hay un drag\xF3n sobrevolando
+          el pueblo?"
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
+          m_Active: 0
+          m_Value: -100
+      - m_Condition:
+          m_Target:
+            m_NameID: dragon
+            m_ID: -408550171
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Ayer por la noche decid\xED investigar lo del drag\xF3n y vi a unos seres
+          diminutos curando al drag\xF3n."
+        - "Parece que su existencia era real pero no lo hab\xEDamos visto porque
+          estaba herido. Cuando terminaron de curarle, el drag\xF3n se fue volando."
+        - "No s\xE9 que ser\xEDan esos seres diminutos, pero despu\xE9s de ver a
+          un drag\xF3n, me creo cualquier cosa."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      - m_Condition:
+          m_Target:
+            m_NameID: dragon
+            m_ID: -408550171
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1UN DRAG\xD3N! \xA1UN DRAG\xD3N! \xBFPor qu\xE9 hay un dragon sobrevolando
+          el pueblo? \xA1Y los \xE1rboles de la monta\xF1a est\xE1n en llamas!"
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
+          m_Active: 0
+          m_Value: -100
+      m_AllPossibleTargets:
+      - m_NameID: dragon
+        m_ID: -408550171
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: mysterious_man
+        m_ID: -1663841707
+        m_Initialized: 1
+      m_Title: "El Hombre Extra\xF1o de la Plaza"
+      m_IntroductionDialogue:
+      - "Mira que nuestro pueblo no suele recibir visitas... pero \xFAltimamente
+        aparece todas las tardes un se\xF1or con gabardina "
+      - "con aire bastante sospechoso. No sabemos qu\xE9 hace: simplemente se queda
+        en la plaza, mirando fijamente a los transe\xFAntes."
+      - "Algunos dicen que vende cosas extra\xF1as... otros que es un demonio que
+        nos vigila, \xA1Qu\xE9 locura!"
+      - Sea como fuere, no me da para nada buena espina, espero que se vaya pronto.
+      m_QuestGiver: 
+      m_Description: "Un se\xF1or con gabardina aparece todas las tardes en la plaza.
+        Da muy mala espina..."
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: weirdMan
+            m_ID: 678418707
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Esta ma\xF1ana, al pasar por la plaza, he visto huellas de barro donde
+          se sol\xEDa colocar ese se\xF1or tan misterioso."
+        - Es como si hubiera huido despavorido por algo.
+        - "Lo m\xE1s raro es que se le ha ca\xEDdo una foto, y en ella aparec\xEDan
+          un se\xF1or mayor y un ni\xF1o peque\xF1o."
+        - "Pobre... \xBFEstar\xEDa buscando a alguien?"
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
+          m_Active: 0
+          m_Value: -100
+      - m_Condition:
+          m_Target:
+            m_NameID: weirdMan
+            m_ID: 678418707
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xBFTe acuerdas del se\xF1or misterioso? pues resulta que es nieto del
+          viejo Tiburcio, que en paz descanse."
+        - "Esta ma\xF1ana lo han visto dirigi\xE9ndose al peque\xF1o cementerio que
+          est\xE1 en el bosque, con unas flores."
+        - Aunque sea de esta forma, me alegro de que se pueda reencontrar la familia.
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      - m_Condition:
+          m_Target:
+            m_NameID: weirdMan
+            m_ID: 678418707
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Hace un tiempo que no se ve al se\xF1or misterioso por ning\xFAn lado.
+          Nadie del pueblo me ha dicho si hablaron con \xE9l o no."
+        - "De la noche a la ma\xF1ana desapareci\xF3, sin dejar rastro... Me pregunto
+          qu\xE9 demonios estar\xEDa haciendo aqu\xED."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      m_AllPossibleTargets:
+      - m_NameID: weirdMan
+        m_ID: 678418707
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: thievery
+        m_ID: -1084817248
+        m_Initialized: 1
+      m_Title: "El Ladr\xF3n Fiero"
+      m_IntroductionDialogue:
+      - "Ultimamente la gente del pueblo est\xE1 reportando robos de objetos preciados
+        en sus casas..."
+      - "\xBFEs que no tenemos ya suficiente con el d\xEDa a d\xEDa? Parece un ladr\xF3n
+        bastante violento, pero por fortuna ning\xFAn vecino "
+      - "ha resultado herido. Ojal\xE1 alguien pudiera darle su merecido... sea el
+        que sea."
+      m_QuestGiver: 
+      m_Description: "Un ladr\xF3n se est\xE1 metiendo en las casas del pueblo a
+        robar. \xA1hay que hacer algo!"
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: thief
+            m_ID: -791049946
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xA1Parece que por fin alguien se ha armado del suficiente valor para
+          enfrentarse a ese dichoso ladr\xF3n!"
+        - "\xA1Y lo mejor de todo es que lo ha conseguido! No se sabe qui\xE9n es,
+          pero para todos los habitantes, es un h\xE9roe sin capa."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      - m_Condition:
+          m_Target:
+            m_NameID: thief
+            m_ID: -791049946
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Por fin se fue ese maldito ladr\xF3n, pero ha conseguido entrar en m\xE1s
+          casas."
+        - "No solo eso, sino que ha robado tambi\xE9n muchas pertenencias peque\xF1as,
+          por alguna raz\xF3n que no entendemos."
+        - Menos mal que no son tan valiosas, pero es un golpe duro para el pueblo.
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
+          m_Active: 0
+          m_Value: -100
+      - m_Condition:
+          m_Target:
+            m_NameID: thief
+            m_ID: -791049946
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Sigo sin cre\xE9rmelo..."
+        - "\xBFQui\xE9n en su sano juicio hablar\xEDa con ese ladr\xF3n para convencerlo
+          de que devuelva las pertenencias?"
+        - Lo peor de todo es que ha funcionado. No me quejo, pero es, sin duda, impresionante.
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      m_AllPossibleTargets:
+      - m_NameID: thief
+        m_ID: -791049946
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: mysterious_man_2
+        m_ID: 477459862
+        m_Initialized: 1
+      m_Title: "El Hombre Extra\xF1o del Lago"
+      m_IntroductionDialogue:
+      - "\xBFHas visto la persona misteriosa que merodea por el lago? \xBFQui\xE9n
+        ser\xE1?"
+      - "\xBFQu\xE9 estar\xE1 buscando? Me da mala espina, espero que se vaya pronto."
+      m_QuestGiver: 
+      m_Description: Una persona misteriosa merodea por el lago...
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: weirdMan
+            m_ID: 678418707
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Ayer andaba tranquilamente por las afueras del pueblo y o\xED alboroto
+          en el lago, asi que me asom\xE9 y creo que me vieron, "
+        - "asi que sal\xED corriendo hacia el centro del pueblo. Seg\xFAn huia escuch\xE9
+          como si alguien se cayera al lago."
+        - "\xBFQu\xE9 habr\xE1 pasado? Ultimamente pasan cosas muy raras en el pueblo..."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
+          m_Active: 0
+          m_Value: -100
+      - m_Condition:
+          m_Target:
+            m_NameID: weirdMan
+            m_ID: 678418707
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xBFHas visto al hombre misterioso? Al parecer era un periodista investigando
+          los rumores del lago."
+        - "Por eso ha estado merodeando por la zona. Parece que ya ha recabado suficiente
+          informaci\xF3n para su historia, "
+        - esta tarde se va del pueblo. Espero que hable bien de su gente.
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      - m_Condition:
+          m_Target:
+            m_NameID: weirdMan
+            m_ID: 678418707
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "\xBFTe has enterado? El hombre misterioso que merodeaba por el lago ya
+          se ha ido."
+        - Espero que no vuelva, ese hombre me daba escalofrios.
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      m_AllPossibleTargets:
+      - m_NameID: weirdMan
+        m_ID: 678418707
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
+  - m_StoryData:
+      m_ID:
+        m_NameID: spring_festival
+        m_ID: 1250013404
+        m_Initialized: 1
+      m_Title: El Festival de Primavera
+      m_IntroductionDialogue:
+      - "Ma\xF1ana es el festival de primavera y con los recientes problemas del
+        pueblo no hemos podido recoger suficientes flores."
+      - "\xA1El festival ser\xE1 un fracaso! \xA1Seremos el hazmerre\xEDr de la comarca!"
+      m_QuestGiver: 
+      m_Description: "El festival de primavera es ma\xF1ana y los preparativos no
+        estar\xE1n listos a tiempo."
+      m_BranchOptions:
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 0
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "No se como ha podido suceder, pero hoy por la ma\xF1ana todas las flores
+          estaban destrozadas, \xA1no podremos celebrar el festival!"
+        - "Los habitantes del pueblo est\xE1n devastados."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_negative
+            m_ID: 1425642479
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Negative
+          m_Active: 0
+          m_Value: -100
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 2
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "No se como ha sucedido pero hoy estaban todas las flores para el festival,
+          \xA1es el mejor festival que recuerdo!"
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      - m_Condition:
+          m_Target:
+            m_NameID: canela
+            m_ID: -619351516
+            m_Initialized: 1
+          m_Tag: 1
+          m_Value: 1
+        m_ResultNPCDialogue:
+        - "Al final no se han completado todos los preparativos del festival, pero
+          con lo que tenemos podremos celebrar el festival aunque sea peque\xF1o."
+        - "No ser\xE1 el mejor festival de la comarca, pero despu\xE9s de todos los
+          problemas del pueblo se agradece un dia de celebraci\xF3n."
+        m_DeitiesResultDialogue: []
+        m_Repercusion:
+          m_ID:
+            m_NameID: default_positive
+            m_ID: -408600673
+            m_Initialized: 1
+          m_ParentStoryID:
+            m_NameID: fungal_metamorphosis
+            m_ID: -803286025
+            m_Initialized: 1
+          m_Name: Default Positive
+          m_Active: 0
+          m_Value: 100
+      m_AllPossibleTargets:
+      - m_NameID: canela
+        m_ID: -619351516
+        m_Initialized: 1
+    m_State: 0
+    m_QuestData:
+      m_PiecesList: []
+    m_QuestBranchResult:
+      m_Condition:
+        m_Target:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Tag: 0
+        m_Value: 1
+      m_ResultNPCDialogue: []
+      m_DeitiesResultDialogue: []
+      m_Repercusion:
+        m_ID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_ParentStoryID:
+          m_NameID: 
+          m_ID: 0
+          m_Initialized: 0
+        m_Name: 
+        m_Active: 0
+        m_Value: 0
+    m_QuestRepercusion:
+      m_ID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_ParentStoryID:
+        m_NameID: 
+        m_ID: 0
+        m_Initialized: 0
+      m_Name: 
+      m_Active: 0
+      m_Value: 0
   m_StoryUI:
   - m_ParentStoryID:
       m_NameID: mayor_problem
@@ -7879,6 +9820,78 @@ MonoBehaviour:
       m_Initialized: 1
     m_Sprite: {fileID: 21300000, guid: b88c1aa4e4e0aa248a696a38fc52a1b9, type: 3}
     m_Title: Hay Que Salvar El Trigo
+  - m_ParentStoryID:
+      m_NameID: workers_strike
+      m_ID: -259735712
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: d939d6c2b15b03e4394f1b6b5a21f3f1, type: 3}
+    m_Title: Trabajadores en Huelga
+  - m_ParentStoryID:
+      m_NameID: golem_attack
+      m_ID: -1841966821
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 0a3e00582e8561c4ebb3b71492730755, type: 3}
+    m_Title: El Incordio del Golem
+  - m_ParentStoryID:
+      m_NameID: harrah_spiders
+      m_ID: -43994655
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: af8e59544ada93446bd4dfe1f8cf6227, type: 3}
+    m_Title: "Ara\xF1as Gigantes en el Pueblo"
+  - m_ParentStoryID:
+      m_NameID: cat_tree
+      m_ID: -715017633
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: ae160db2272fd4c4a92b3c935fa047c1, type: 3}
+    m_Title: "Gato en el \xC1rbol"
+  - m_ParentStoryID:
+      m_NameID: lake_ghost
+      m_ID: 1601615287
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 08a438bcbd30b6b42afb54800d45470f, type: 3}
+    m_Title: El Fantasma del Lago
+  - m_ParentStoryID:
+      m_NameID: lake_ghost_2
+      m_ID: -2006687676
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 08a438bcbd30b6b42afb54800d45470f, type: 3}
+    m_Title: El Misterio del Lago
+  - m_ParentStoryID:
+      m_NameID: monster_mountain
+      m_ID: -25164922
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: f527bef99db267e47b35cb96dccf8d2e, type: 3}
+    m_Title: "El Monstruo de la Monta\xF1a"
+  - m_ParentStoryID:
+      m_NameID: dragon_mountain
+      m_ID: -647921147
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 252f477affc745244af351330cbd68d1, type: 3}
+    m_Title: "Un Drag\xF3n en la Cima"
+  - m_ParentStoryID:
+      m_NameID: mysterious_man
+      m_ID: -1663841707
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 1d681e336e6d3e84ba01841bfa51ec03, type: 3}
+    m_Title: "El Hombre Extra\xF1o de la Plaza"
+  - m_ParentStoryID:
+      m_NameID: thievery
+      m_ID: -1084817248
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 9eeb118cf7bb075498dd784df9400f61, type: 3}
+    m_Title: "El Ladr\xF3n Fiero"
+  - m_ParentStoryID:
+      m_NameID: mysterious_man_2
+      m_ID: 477459862
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: 1d681e336e6d3e84ba01841bfa51ec03, type: 3}
+    m_Title: "El Hombre Extra\xF1o del Lago"
+  - m_ParentStoryID:
+      m_NameID: spring_festival
+      m_ID: 1250013404
+      m_Initialized: 1
+    m_Sprite: {fileID: 21300000, guid: d25200bc21557694eac611573c437ced, type: 3}
+    m_Title: El Festival de Primavera
   m_Repercusions:
   - m_ID:
       m_NameID: wolves_gone
