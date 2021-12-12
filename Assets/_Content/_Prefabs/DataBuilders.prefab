@@ -9836,55 +9836,55 @@ MonoBehaviour:
       m_NameID: harrah_spiders
       m_ID: -43994655
       m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: af8e59544ada93446bd4dfe1f8cf6227, type: 3}
+    m_Sprite: {fileID: 21300000, guid: 45c2b7ad01d94d84591d1435ed73ebef, type: 3}
     m_Title: "Ara\xF1as Gigantes en el Pueblo"
   - m_ParentStoryID:
       m_NameID: cat_tree
       m_ID: -715017633
       m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: ae160db2272fd4c4a92b3c935fa047c1, type: 3}
+    m_Sprite: {fileID: 21300000, guid: e1f08509cb6928249b96605cd02933d4, type: 3}
     m_Title: "Gato en el \xC1rbol"
   - m_ParentStoryID:
       m_NameID: lake_ghost
       m_ID: 1601615287
       m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: 08a438bcbd30b6b42afb54800d45470f, type: 3}
+    m_Sprite: {fileID: 21300000, guid: 2de38ddad61b1834794c2527a0aae405, type: 3}
     m_Title: El Fantasma del Lago
   - m_ParentStoryID:
       m_NameID: lake_ghost_2
       m_ID: -2006687676
       m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: 08a438bcbd30b6b42afb54800d45470f, type: 3}
+    m_Sprite: {fileID: 21300000, guid: 2de38ddad61b1834794c2527a0aae405, type: 3}
     m_Title: El Misterio del Lago
   - m_ParentStoryID:
       m_NameID: monster_mountain
       m_ID: -25164922
       m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: f527bef99db267e47b35cb96dccf8d2e, type: 3}
+    m_Sprite: {fileID: 21300000, guid: 4f24bb7ca61dfdc4ba50b659f9d9362b, type: 3}
     m_Title: "El Monstruo de la Monta\xF1a"
   - m_ParentStoryID:
       m_NameID: dragon_mountain
       m_ID: -647921147
       m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: 252f477affc745244af351330cbd68d1, type: 3}
+    m_Sprite: {fileID: 21300000, guid: 5adc679bbce478846addb3b24e08ca88, type: 3}
     m_Title: "Un Drag\xF3n en la Cima"
   - m_ParentStoryID:
       m_NameID: mysterious_man
       m_ID: -1663841707
       m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: 1d681e336e6d3e84ba01841bfa51ec03, type: 3}
+    m_Sprite: {fileID: 21300000, guid: 004db69a1327ec54b9584a8831cadae0, type: 3}
     m_Title: "El Hombre Extra\xF1o de la Plaza"
   - m_ParentStoryID:
       m_NameID: thievery
       m_ID: -1084817248
       m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: 9eeb118cf7bb075498dd784df9400f61, type: 3}
+    m_Sprite: {fileID: 21300000, guid: 7d57e34e90f8c6f4f935e90fd1c731be, type: 3}
     m_Title: "El Ladr\xF3n Fiero"
   - m_ParentStoryID:
       m_NameID: mysterious_man_2
       m_ID: 477459862
       m_Initialized: 1
-    m_Sprite: {fileID: 21300000, guid: 1d681e336e6d3e84ba01841bfa51ec03, type: 3}
+    m_Sprite: {fileID: 21300000, guid: 004db69a1327ec54b9584a8831cadae0, type: 3}
     m_Title: "El Hombre Extra\xF1o del Lago"
   - m_ParentStoryID:
       m_NameID: spring_festival
@@ -11678,8 +11678,8 @@ MonoBehaviour:
     m_Name: "Harina de fuerza tit\xE1nica"
     m_Sprite: {fileID: 21300000, guid: c6c0dbea8b1cd9245a274ab113a9a19f, type: 3}
     m_ReputationTypePrice: 0
-    m_Price_Good: 15
-    m_Price_Evil: 15
+    m_Price_Good: 20
+    m_Price_Evil: 20
   - m_ID:
       m_NameID: polvo_impetuoso
       m_ID: -1220311844
