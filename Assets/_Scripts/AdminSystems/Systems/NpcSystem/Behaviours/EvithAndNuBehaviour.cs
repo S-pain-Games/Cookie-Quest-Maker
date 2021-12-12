@@ -14,6 +14,14 @@ public class EvithAndNuBehaviour : MonoBehaviour, IInteractableEntity
     [SerializeField] private EvithBehaviour _evithBehaviour;
     [SerializeField] private NuBehaviour _nuBehaviour;
 
+    private Event<ID> _soundCmd;
+
+    private void Awake()
+    {
+        var evtSys = Admin.Global.EventSystem;
+        _soundCmd = evtSys.GetCommandByName<Event<ID>>("audio_sys", "play_sound");
+    }
+
     public void OnInteract()
     {
         if (m_Interacting) return;
@@ -22,11 +30,18 @@ public class EvithAndNuBehaviour : MonoBehaviour, IInteractableEntity
         _button_next_day.SetActive(false);
 
         _nuBehaviour.ShowDialog();
+
+        //Audio
+        var cComp = Admin.Global.Components.GetComponentContainer<CharacterComponent>();
+        _soundCmd.Invoke(cComp.GetComponentByID(new ID("nu")).m_AudioID);
     }
 
     public void OnNuDialogEnded()
     {
         _evithBehaviour.ShowDialog();
+        //Audio
+        var cComp = Admin.Global.Components.GetComponentContainer<CharacterComponent>();
+        _soundCmd.Invoke(cComp.GetComponentByID(new ID("evith")).m_AudioID);
     }
 
     public void OnEvithDialogEnded()

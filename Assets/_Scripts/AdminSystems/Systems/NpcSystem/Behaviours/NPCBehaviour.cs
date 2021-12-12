@@ -13,6 +13,7 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
     private Event<ShowDialogueEvtArgs> _showDialogueCmd;
     private Event<ID> _startStoryCmd;
     private Event<ID> _finalizeStoryCmd;
+    private Event<ID> _soundCmd;
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
         _showDialogueCmd = evtSys.GetCommandByName<Event<ShowDialogueEvtArgs>>("dialogue_sys", "show_dialogue");
         _startStoryCmd = evtSys.GetCommandByName<Event<ID>>("story_sys", "start_story");
         _finalizeStoryCmd = evtSys.GetCommandByName<Event<ID>>("story_sys", "finalize_story");
+        _soundCmd = evtSys.GetCommandByName<Event<ID>>("audio_sys", "play_sound");
     }
 
     private void OnEnable()
@@ -37,6 +39,14 @@ public class NPCBehaviour : MonoBehaviour, IInteractableEntity
         if (m_Interacting) return;
 
         m_Interacting = true;
+
+        var cComp = Admin.Global.Components.GetComponentContainer<CharacterComponent>();
+
+        if (cComp.GetComponentByID(m_NpcData.m_CharacterID).hasAudio)
+        {
+            _soundCmd.Invoke(cComp.GetComponentByID(m_NpcData.m_CharacterID).m_AudioID);
+        }
+
         if (!m_NpcData.m_DontHaveImportantDialogue)
         {
             _showDialogueCmd.Invoke(new ShowDialogueEvtArgs(
