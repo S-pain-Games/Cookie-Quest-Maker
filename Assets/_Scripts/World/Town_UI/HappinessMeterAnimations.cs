@@ -15,7 +15,7 @@ namespace CQM.UI.Town
             _text.text = buildingName;
 
             Vector3 pos = buildingPos;
-            pos.y -= 150.0f;
+            pos.y -= 160.0f;
             transform.position = pos;
             transform.DOScale(1.0F, 0.3F).ChangeStartValue(new Vector3(0.5f, 0.5f, 0.5f)).SetEase(Ease.OutBounce);
         }
